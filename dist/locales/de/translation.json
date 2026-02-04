@@ -1,0 +1,295 @@
+{
+  "navigation": {
+    "cta_primary": "Mitmachen",
+    "cta_secondary": "Investieren"
+  },
+  "hero": {
+    "title": "Gemeinsam wachsen – digital, menschlich, einzigartig.",
+    "subtitle": "Wir begleiten Lern- und Beratungsprozesse mit intelligenten, vertrauenswürdigen digitalen Companions, die sich Ihren Zielen anpassen – nicht umgekehrt.",
+    "cta_primary": "Jetzt mitmachen",
+    "cta_secondary": "Für Investoren"
+  },
+  "visionMission": {
+    "visionTitle": "Vision",
+    "visionText": "Wir stellen uns eine Welt vor, in der Menschen nicht einfach lernen, sondern sich begleitet fühlen – von Technologien, die zuhören, verstehen und stärken. Eine Welt, in der Entwicklung selbstverständlich, Lernen lebensnah und Begleitung digital wie menschlich zugleich ist. Wo jeder Mensch einen Companion hat, der ihn erinnert, ermutigt und inspiriert – Tag für Tag, über Grenzen hinweg.",
+    "missionTitle": "Mission",
+    "missionText": "Eine Plattform für individuelles Lernen und Coaching: Wir vereinen Reflexion, Training, Wissensaufbau und persönliche Begleitung – sofort nutzbar, adaptiv und sicher. Unsere digitalen Companions helfen, Lernpfade zu gestalten, Fortschritt sichtbar zu machen und Entwicklung spürbar werden zu lassen."
+  },
+  "roles": {
+    "overview": {
+      "title": "Drei Rollen – ein Ziel: Entwicklung, die bleibt.",
+      "mini_cards": [
+        { "title": "Lernende", "desc": "Entdecken, was persönlich weiterbringt." },
+        { "title": "Begleiter:innen", "desc": "Coachen, reflektieren, inspirieren." },
+        { "title": "Organisationen", "desc": "Lernkultur sichtbar machen und fördern." }
+      ],
+      "points": [
+        "Die Lösungen von plinyoo bringen Lernende, Begleiter:innen und Organisationen auf einer Plattform zusammen.",
+        "Lernende starten individuell, Begleiter:innen steuern Impulse, Organisationen behalten Fortschritt und Wirkung im Blick.",
+        "Digitale Companions fördern Dialog, Reflexion und persönliches Wachstum.",
+        "Lernen wird Teil des Alltags – nahbar, motivierend und wirksam."
+      ],
+      "cta": "Digitale Companionship verbindet Lernen, Begleitung und Wirkung – zu nachhaltiger Entwicklung."
+    },
+    "leader": {
+      "title": "Lernende: Lernen, das sich anfühlt wie Begleitung",
+      "points": [
+        "Personalisierte Lernreisen – im eigenen Tempo, mit Kontext.",
+        "Reflexionsimpulse, Coaching-Fragen und Aufgaben im Alltag.",
+        "Fortschritt sichtbar: Motivation durch Klarheit.",
+        "Digitale Companions, die zuhören, erinnern und anregen.",
+        "Entwicklung mit Tiefe – statt Checklistenlernen."
+      ],
+      "cta": "So entsteht Lernen, das bleibt."
+    },
+    "creator": {
+      "title": "Begleiter:innen: Wissen und Haltung vermitteln",
+      "points": [
+        "Inhalte, Fragen und Interventionen zentral gestalten.",
+        "Individuelle Lernpfade für Personen oder Teams entwickeln.",
+        "Dialogische KI-Module ermöglichen Gespräche statt Klicks.",
+        "Echtzeit-Feedback über Engagement und Fortschritt.",
+        "Coaching-Kultur digital erlebbar machen."
+      ],
+      "cta": "Gestalte Entwicklung, die Resonanz schafft."
+    },
+    "team": {
+      "title": "Organisationen: Kultur sichtbar machen",
+      "points": [
+        "Zentrale Steuerung von Lernen und Entwicklung.",
+        "Module für Onboarding, Weiterbildung und Reflexion.",
+        "Evaluations- und Reportingfunktionen DSGVO-konform.",
+        "Integration in bestehende Lernplattformen oder HR-Systeme.",
+        "Lernkultur wird Teil der Unternehmensidentität."
+      ],
+      "cta": "So wird Lernen zum lebendigen Bestandteil der Organisation."
+    }
+  },
+  "howItWorks": {
+    "steps": [
+      { "title": "Rollen definieren", "desc": "Ziele, Kompetenzen, Werte und Lernpfade festlegen." },
+      { "title": "Content gestalten", "desc": "Micro-Module, Reflexionsübungen, Dialoge und Feedbackschleifen entwickeln." },
+      { "title": "Messen & verbessern", "desc": "Lernfortschritt und Wirksamkeit erfassen, Coaching gezielt anpassen." }
+    ]
+  },
+  "pillars": {
+    "items": [
+      { "title": "Individuell statt generisch", "desc": "Deine Wege, dein Stil, dein Ton." },
+      { "title": "Lernqualität messbar", "desc": "Ziele, Fortschritt und Wirkung verknüpfen." },
+      { "title": "Ein Tool für alles Lernen", "desc": "Onboarding, Training, Weiterbildung, Coaching." },
+      { "title": "Schnell im Einsatz", "desc": "Mobil, sicher, sofort nutzbar – für Mensch und Organisation." }
+    ]
+  },
+  "outcomes": {
+    "items": [
+      { "kpi": "-40 %", "label": "Einarbeitungszeit" },
+      { "kpi": "+25 %", "label": "Produktivität in Woche 1" },
+      { "kpi": "-30 %", "label": "Fehlerquote im Prozess" },
+      { "kpi": "+⭐", "label": "Zufriedenheit und Klarheit im Feedback" }
+    ]
+  },
+  "features": {
+    "title": "Deine Vorteile mit Digital Companionship",
+    "subtitle": "Digitale Companionship vereint personalisiertes Lernen, adaptive Begleitung und messbare Entwicklung – in einer integrierten Lösung für Menschen und Organisationen.",
+    "items": [
+      { "title": "📚 Interaktive Lerninhalte", "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant." },
+      { "title": "📊 Fortschritts-Tracking", "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform." },
+      { "title": "📱 100 % mobil & anpassbar", "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline." }
+    ]
+  },
+  "testimonials": {
+    "quotes": [
+      "„Lernen fühlt sich endlich persönlich und wirksam an.“",
+      "„Reflexion, Coaching und Wissen fließen nahtlos ineinander.“"
+    ]
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      { "q": "Passt es zu Einzelpersonen und Organisationen?", "a": "Ja – Rollen und Inhalte sind frei definierbar." },
+      { "q": "Wie bleibt unsere Lernphilosophie erhalten?", "a": "Durch modulare Inhalte, flexible Designs und anpassbare Lernpfade." },
+      { "q": "Können wir Fortschritt und Wirkung messen?", "a": "Ja, DSGVO-konform – mit individuellen oder aggregierten Auswertungen." },
+      { "q": "Braucht es lange Schulungen?", "a": "Nein – intuitive Nutzung und sofort startklar." }
+    ]
+  },
+  "cta": {
+    "title": "Bereit für den nächsten Schritt?",
+    "subtitle": "Lass uns gemeinsam herausfinden, wie plinyoo dein Team unterstützen kann.",
+    "secondary_action": "Mehr erfahren",
+    "button": "Mehr erfahren"
+  },
+  "storySketch": {
+    "title": "So wird aus Wissen Service-Qualität",
+    "subtitle": "Von der Speisekarte zum Gästeerlebnis – als schlanke Skizze gedacht.",
+    "steps": [
+      { "title": "Restaurantleiter", "desc": "Fotografiert Speisekarte & Restaurant." },
+      { "title": "SpoonUp generiert die Inhalte", "desc": "Spezifische Lern-Module entstehen." },
+      { "title": "Content-Editor", "desc": "Weinhändler ergänzt Pairings & Tipps." },
+      { "title": "Service nutzt’s", "desc": "Team greift mobil zu, arbeitet sicher." },
+      { "title": "Glückliche Gäste", "desc": "kompetenter, herzlicher Service." }
+    ]
+  },
+  "examples": {
+    "title": "Anwendungsbeispiele",
+    "spoonup": {
+      "title": "SpoonUp für die Gastronomie",
+      "desc": "Praxisnahes Training für Service-Teams."
+    },
+    "placeholder": {
+      "title": "Weitere Beispiele folgen"
+    },
+    "molly": {
+      "title": "Molly",
+      "subtitle": "Deine virtuelle Ernährungsberaterin",
+      "desc": "Individuelle Ernährungsberatung, immer verfügbar.",
+      "button": "Coming soon"
+    },
+    "james": {
+      "title": "James",
+      "subtitle": "Dein virtueller Barkeeper",
+      "desc": "Perfekte Drinks mixen, Wissen vertiefen.",
+      "button": "Coming soon"
+    },
+    "your-use-case": {
+      "title": "Dein Use Case",
+      "subtitle": "Deine spezifischen Anforderungen",
+      "desc": "Wir entwickeln individuelle Lösungen für deine Herausforderungen.",
+      "button": "Kontakt aufnehmen"
+    }
+  },
+  "forms": {
+    "validation": {
+      "error_title": "Fehler",
+      "error_generic": "Ein unerwarteter Fehler ist aufgetreten.",
+      "name_email_required": "Name und E-Mail sind erforderlich.",
+      "success_title": "Erfolgreich gesendet",
+      "success_message": "Vielen Dank! Wir haben Ihre Nachricht erhalten."
+    },
+    "success": {
+      "title": "Vielen Dank!",
+      "message": "Vielen Dank für die Interessenbekundung. Wir melden uns!"
+    },
+    "button_sending": "Sende…",
+    "button_send_interest": "Interesse senden",
+    "button_send_request": "Anfrage senden",
+    "common": {
+      "name_label": "Name*",
+      "email_label": "E‑Mail*",
+      "linkedin_label": "LinkedIn",
+      "message_label": "Nachricht"
+    },
+    "join": {
+      "title": "Mitmachen",
+      "subtitle": "100 % Produkt. 100 % Praxis. Wir entwickeln bei plinyoo Lern-Flows, die Teams wirklich unterstützen und Service messbar besser machen.",
+      "subtitle_details": "Ob Frontend, Backend, Mobile, Product oder Learning Design: Wichtig sind Produktdenken, Verantwortung und Lust, Dinge umzusetzen.",
+      "role_label": "Rolle/Skill",
+      "role_placeholder": "Frontend / Backend / Product / …",
+      "availability_label": "Verfügbarkeit",
+      "availability_placeholder": "Bitte wählen",
+      "availability_options": {
+        "fulltime": "Vollzeit",
+        "parttime": "Teilzeit",
+        "freelance": "Freelance"
+      },
+      "github_label": "GitHub",
+      "motivation_label": "Warum du & was dich reizt"
+    },
+    "privacy_notice": "Die angegebenen Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.",
+    "back_to_home": "Zurück zur Startseite",
+    "use_case": {
+      "title": "Kontakt & Use Case",
+      "subtitle": "Beschreiben Sie uns Ihre Idee oder Herausforderung. Wir finden gemeinsam eine Lösung.",
+      "message_placeholder": "Erzählen Sie uns von Ihrem Anliegen..."
+    },
+    "invest": {
+      "title": "Investieren",
+      "subtitle": "plinyoo macht Lernen wirksam, greifbar und kontinuierlich. Gemeinsam bauen wir ein Produkt, das Entwicklung langfristig unterstützt – messbar, skalierbar und praxisnah.",
+      "subtitle_details": "Wirkung im Alltag • klarer Produktfokus • skalierbares Lern-Ökosystem.",
+      "investment_range_label": "Investitionsrahmen",
+      "investment_range_placeholder": "Bitte wählen",
+      "investment_range_options": {
+        "up_to_5k": "bis 5k",
+        "5k_to_20k": "5k–20k",
+        "20k_to_100k": "20k–100k",
+        "100k_plus": "100k+"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "subtitle": "Weil jedes Lernen einzigartig ist."
+    },
+    "links": {
+      "title": "Links",
+      "imprint": "Impressum",
+      "privacy": "Datenschutz",
+      "copyright": "Urheberrecht",
+      "join": "Mitmachen",
+      "invest": "Investieren",
+      "contact": "Kontakt"
+    },
+    "copyright": "Alle Rechte vorbehalten."
+  },
+  "imprint": {
+    "title": "Impressum",
+    "stand": "Stand: 2025",
+    "disclaimer": "Diese Website wird privat und ohne Gewinnerzielungsabsicht betrieben.",
+    "angaben": {
+      "title": "Angaben gemäß § 5 TMG",
+      "name": "Name: Heiko Miertzsch",
+      "email": "E‑Mail: hmiertzsch@web.de"
+    },
+    "haftungInhalte": {
+      "title": "Haftung für Inhalte",
+      "text": "Als privater Seitenbetreiber bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Eine Verpflichtung zur Überwachung übermittelter oder gespeicherter fremder Informationen besteht nicht."
+    },
+    "haftungLinks": {
+      "title": "Haftung für Links",
+      "text": "Externe Links wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Auf die Inhalte verlinkter Seiten habe ich keinen Einfluss; für diese ist der jeweilige Anbieter verantwortlich."
+    },
+    "urheberrecht": {
+      "title": "Urheberrecht",
+      "text": "Die durch den Seitenbetreiber erstellten Inhalte unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Eine Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der Zustimmung."
+    },
+    "back_to_home": "Zur Startseite"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "stand": "Stand: 2025",
+    "intro": "Diese Website wird privat betrieben. Es werden keine personenbezogenen Daten zu Marketing- oder Analysezwecken verarbeitet.",
+    "serverLogfiles": {
+      "title": "Server-Logfiles",
+      "text": "Beim Zugriff auf diese Seiten werden technisch bedingt durch den Hosting-Provider Daten erhoben (z. B. anonymisierte IP-Adresse, Datum/Uhrzeit, aufgerufene Seiten). Diese Daten dienen ausschließlich der Sicherstellung des technischen Betriebs und werden nicht zur Profilbildung genutzt."
+    },
+    "cookiesTracking": {
+      "title": "Cookies & Tracking",
+      "text": "Es werden keine Cookies gesetzt, die nicht für den technischen Betrieb erforderlich sind. Es kommen keine Tracking- oder Analyse-Tools (z. B. Google Analytics) zum Einsatz."
+    },
+    "embeddedContent": {
+      "title": "Eingebettete Inhalte",
+      "text": "Sofern zukünftig eingebettete Inhalte Dritter (z. B. YouTube-Videos, Karten) verwendet werden, können diese Daten an den jeweiligen Anbieter übermitteln. In diesem Fall wird die Datenschutzerklärung entsprechend ergänzt."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "text": "Bei Fragen zum Datenschutz: Heiko Miertzsch - hmiertzsch@web.de"
+    },
+    "back_to_home": "Zur Startseite"
+  },
+  "copyright": {
+    "title": "Urheberrecht & Bildnachweise",
+    "stand": "Stand: 2025",
+    "urheberrecht": {
+      "title": "Urheberrecht",
+      "text": "Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) sind – sofern nicht anders gekennzeichnet – Eigentum von Heiko Miertzsch und urheberrechtlich geschützt. Jede Art der Nutzung außerhalb der gesetzlichen Schrankenbestimmungen bedarf der vorherigen Zustimmung."
+    },
+    "bildquellen": {
+      "title": "Bild-/Quellenhinweise",
+      "text": "Eigene Fotos und Grafiken: Heiko Miertzsch."
+    },
+    "kontakt": {
+      "title": "Kontakt für Nutzungsanfragen",
+      "text": "Anfragen zu Nutzungsrechten bitte an hmiertzsch@web.de."
+    },
+    "back_to_home": "Zur Startseite"
+  }
+}

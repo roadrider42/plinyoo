@@ -1,0 +1,311 @@
+{
+  "navigation": {
+    "cta_primary": "Rejoindre",
+    "cta_secondary": "Investir"
+  },
+  "hero": {
+    "title": "Grandir ensemble - numérique, humain, unique.",
+    "subtitle": "Nous accompagnons les processus d'apprentissage et de conseil avec des compagnons numériques intelligents et fiables qui s'adaptent à vos objectifs - et non l'inverse.",
+    "cta_primary": "Rejoignez-nous maintenant",
+    "cta_secondary": "Pour les investisseurs"
+  },
+  "visionMission": {
+    "visionTitle": "Vision",
+    "visionText": "Nous imaginons un monde où les gens ne se contentent pas d'apprendre, mais se sentent vraiment accompagnés - par des technologies qui écoutent, comprennent et responsabilisent. Un monde où la croissance est naturelle, l'apprentissage est humain et la compagnie est à la fois numérique et personnelle. Où chacun a un compagnon qui lui rappelle, l'encourage et l'inspire - chaque jour, au-delà des frontières.",
+    "missionTitle": "Mission",
+    "missionText": "Une plateforme d'apprentissage et de coaching personnalisés : nous unissons la réflexion, la formation, le développement des connaissances et l'accompagnement personnel - prête à l'emploi, adaptative et sécurisée. Nos compagnons numériques aident à concevoir des parcours d'apprentissage, à rendre les progrès visibles et à faire du développement une expérience tangible."
+  },
+  "roles": {
+    "overview": {
+      "title": "Trois rôles - un objectif : une croissance qui dure.",
+      "mini_cards": [
+        { "title": "Apprenants", "desc": "Découvrez ce qui vous fait vraiment avancer." },
+        { "title": "Guides & Coachs", "desc": "Coach, réfléchir, inspirer." },
+        { "title": "Organisations", "desc": "Rendre la culture de l'apprentissage visible et durable." }
+      ],
+      "points": [
+        "Les solutions de Brainbyte Buffet rassemblent les apprenants, les guides et les organisations sur une seule plateforme.",
+        "Les apprenants grandissent individuellement, les guides donnent des impulsions et les organisations suivent les progrès et l'impact.",
+        "Les compagnons numériques favorisent le dialogue, la réflexion et la croissance personnelle.",
+        "L'apprentissage fait partie de la vie quotidienne - engageant, motivant et significatif."
+      ],
+      "cta": "La compagnie numérique relie l'apprentissage, l'orientation et l'impact - pour un développement durable."
+    },
+    "leader": {
+      "title": "Apprenants : un apprentissage qui ressemble à de la compagnie",
+      "points": [
+        "Parcours d'apprentissage personnalisés - à votre propre rythme, avec un contexte réel.",
+        "Invites à la réflexion, questions de coaching et défis quotidiens.",
+        "Des progrès visibles renforcent la motivation et la clarté.",
+        "Des compagnons numériques qui écoutent, rappellent et inspirent.",
+        "Une croissance en profondeur - au-delà des listes de contrôle et des clics."
+      ],
+      "cta": "C'est un apprentissage qui dure."
+    },
+    "creator": {
+      "title": "Guides & Coachs : partager les connaissances et l'état d'esprit",
+      "points": [
+        "Concevez le contenu, les questions et les interventions en un seul endroit.",
+        "Créez des parcours d'apprentissage personnalisés pour les individus ou les équipes.",
+        "Les modules d'IA basés sur le dialogue permettent des conversations au lieu de clics.",
+        "Des informations en temps réel sur l'engagement et les progrès.",
+        "Rendre la culture du coaching tangible de manière numérique."
+      ],
+      "cta": "Façonnez un développement qui résonne."
+    },
+    "team": {
+      "title": "Organisations : rendre la culture visible",
+      "points": [
+        "Gestion centralisée de l'apprentissage et du développement.",
+        "Modules pour l'intégration, la formation et la réflexion.",
+        "Fonctionnalités d'évaluation et de reporting entièrement conformes au RGPD.",
+        "Intégration transparente avec les systèmes d'apprentissage ou de RH existants.",
+        "La culture de l'apprentissage devient partie intégrante de votre identité organisationnelle."
+      ],
+      "cta": "Faites de l'apprentissage une partie vivante de votre organisation."
+    }
+  },
+  "howItWorks": {
+    "steps": [
+      { "title": "Définir les rôles", "desc": "Fixer les objectifs, les compétences, les valeurs et les parcours d'apprentissage." },
+      { "title": "Concevoir le contenu", "desc": "Développer des micro-modules, des exercices de réflexion, des dialogues et des boucles de rétroaction."
+      },
+      { "title": "Mesurer & améliorer", "desc": "Suivre les progrès de l'apprentissage et l'efficacité, et affiner le coaching en conséquence."
+      }
+    ]
+  },
+  "pillars": {
+    "items": [
+      { "title": "Individuel plutôt que générique", "desc": "Votre chemin, votre style, votre ton." },
+      { "title": "Qualité d'apprentissage mesurable", "desc": "Relier les objectifs, les progrès et les résultats."
+      },
+      { "title": "Un outil pour tout l'apprentissage", "desc": "Intégration, formation, développement et coaching."
+      },
+      { "title": "Rapide à mettre en œuvre", "desc": "Mobile, sécurisé et prêt à l'emploi - pour les individus comme pour les organisations."
+      }
+    ]
+  },
+  "outcomes": {
+    "items": [
+      { "kpi": "-40%", "label": "Temps d'intégration" },
+      { "kpi": "+25%", "label": "Productivité la première semaine" },
+      { "kpi": "-30%", "label": "Taux d'erreur dans les processus" },
+      { "kpi": "+⭐", "label": "Clarté et satisfaction dans les commentaires" }
+    ]
+  },
+  "features": {
+    "title": "Vos avantages avec la compagnie numérique",
+    "subtitle": "La compagnie numérique combine un apprentissage personnalisé, un accompagnement adaptatif et un développement mesurable - en une seule solution intégrée pour les personnes et les organisations.",
+    "items": [
+      { "title": "📚 Contenu d'apprentissage interactif", "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement."
+      },
+      { "title": "📊 Suivi des progrès", "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD."
+      },
+      { "title": "📱 100% mobile & adaptable", "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne."
+      }
+    ]
+  },
+  "testimonials": {
+    "quotes": [
+      "« L'apprentissage est enfin personnel et efficace. »",
+      "« La réflexion, le coaching et les connaissances s'intègrent parfaitement. »"
+    ]
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "items": [
+      { "q": "Est-ce adapté aux individus et aux organisations ?", "a": "Oui - les rôles et le contenu sont entièrement personnalisables."
+      },
+      { "q": "Comment pouvons-nous préserver notre philosophie d'apprentissage ?", "a": "Grâce à une conception modulaire, des parcours d'apprentissage flexibles et des structures de contenu personnalisables."
+      },
+      { "q": "Pouvons-nous mesurer les progrès et l'impact ?", "a": "Oui, conforme au RGPD - au niveau individuel ou agrégé."
+      },
+      { "q": "Cela nécessite-t-il une longue intégration ?", "a": "Non - utilisation intuitive et prêt à être lancé instantanément."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Parce que chaque parcours d'apprentissage est unique.",
+    "subtitle": "Nos solutions de compagnie s'adaptent à vous - et non l'inverse. Pour une croissance durable qui dure et crée un impact.",
+    "button": "En savoir plus"
+  },
+  "storySketch": {
+    "title": "C'est ainsi que la connaissance devient une qualité de service",
+    "subtitle": "Du menu à l'expérience client - conçu comme une esquisse épurée.",
+    "steps": [
+      { "title": "Directeur de restaurant", "desc": "Photographie le menu et le restaurant."
+      },
+      { "title": "SpoonUp génère le contenu", "desc": "Des modules d'apprentissage spécifiques sont créés."
+      },
+      { "title": "Éditeur de contenu", "desc": "Le marchand de vin ajoute des accords et des conseils."
+      },
+      { "title": "Le service l'utilise", "desc": "L'équipe y accède sur mobile, travaille en toute sécurité."
+      },
+      { "title": "Clients satisfaits", "desc": "un service compétent et chaleureux."
+      }
+    ]
+  },
+  "forms": {
+    "validation": {
+      "error_title": "Erreur",
+      "error_generic": "Une erreur inattendue est survenue.",
+      "name_email_required": "Le nom et l'e-mail sont requis.",
+      "success_title": "Envoyé avec succès",
+      "success_message": "Merci ! Nous avons bien reçu votre message."
+    },
+    "success": {
+      "title": "Merci !",
+      "message": "Merci de votre intérêt. Nous vous contacterons !"
+    },
+    "button_sending": "Envoi en cours...",
+    "button_send_interest": "Envoyer l'intérêt",
+    "button_send_request": "Envoyer la demande",
+    "common": {
+      "name_label": "Nom*",
+      "email_label": "E-mail*",
+      "linkedin_label": "LinkedIn",
+      "message_label": "Message"
+    },
+    "join": {
+      "title": "Rejoindre",
+      "subtitle": "100% produit. 100% pratique. Chez Brainbyte Buffet, nous développons des flux d'apprentissage qui soutiennent réellement les équipes et rendent le service mesurablement meilleur.",
+      "subtitle_details": "Que ce soit Frontend, Backend, Mobile, Produit ou Conception d'apprentissage : ce qui compte, c'est la pensée produit, la responsabilité et le désir de faire avancer les choses.",
+      "role_label": "Rôle/Compétence",
+      "role_placeholder": "Frontend / Backend / Produit / ...",
+      "availability_label": "Disponibilité",
+      "availability_placeholder": "Veuillez sélectionner",
+      "availability_options": {
+        "fulltime": "Temps plein",
+        "parttime": "Temps partiel",
+        "freelance": "Freelance"
+      },
+      "github_label": "GitHub",
+      "motivation_label": "Pourquoi vous et ce qui vous passionne"
+    },
+    "privacy_notice": "Les données fournies seront utilisées exclusivement pour traiter votre demande.",
+    "back_to_home": "Retour à l'accueil",
+    "use_case": {
+      "title": "Contact et Cas d'utilisation",
+      "subtitle": "Décrivez-nous votre idée ou votre défi. Nous trouverons une solution ensemble.",
+      "message_placeholder": "Parlez-nous de votre préoccupation..."
+    },
+    "invest": {
+      "title": "Investir",
+      "subtitle": "Brainbyte Buffet rend l'apprentissage efficace, tangible et continu. Ensemble, nous construisons un produit qui soutient le développement à long terme – mesurable, évolutif et pratique.",
+      "subtitle_details": "Impact dans le monde réel • orientation produit claire • écosystème d'apprentissage évolutif.",
+      "investment_range_label": "Fourchette d'investissement",
+      "investment_range_placeholder": "Veuillez sélectionner",
+      "investment_range_options": {
+        "up_to_5k": "jusqu'à 5k",
+        "5k_to_20k": "5k–20k",
+        "20k_to_100k": "20k–100k",
+        "100k_plus": "100k+"
+      }
+    }
+  },
+  "examples": {
+    "title": "Exemples d'application",
+    "spoonup": {
+      "title": "SpoonUp pour la gastronomie",
+      "desc": "Formation pratique pour les équipes de service."
+    },
+    "placeholder": {
+      "title": "Plus d'exemples à venir"
+    },
+    "molly": {
+      "title": "Molly",
+      "subtitle": "Votre nutritionniste virtuelle",
+      "desc": "Conseils nutritionnels personnalisés, toujours disponibles.",
+      "button": "Bientôt disponible"
+    },
+    "james": {
+      "title": "James",
+      "subtitle": "Votre barman virtuel",
+      "desc": "Mixez des boissons parfaites, approfondissez vos connaissances.",
+      "button": "Bientôt disponible"
+    },
+    "your-use-case": {
+      "title": "Votre cas d'usage",
+      "subtitle": "Vos exigences spécifiques",
+      "desc": "Nous développons des solutions individuelles pour vos défis.",
+      "button": "Contactez-nous"
+    }
+  },
+  "footer": {
+    "brand": {
+      "subtitle": "Parce que chaque parcours d'apprentissage est unique."
+    },
+    "links": {
+      "title": "Liens",
+      "imprint": "Mentions légales",
+      "privacy": "Confidentialité",
+      "copyright": "Droit d'auteur",
+      "join": "Rejoindre",
+      "invest": "Investir",
+      "contact": "Contact"
+    },
+    "copyright": "Tous droits réservés."
+  },
+  "imprint": {
+    "title": "Mentions légales",
+    "stand": "En date de : 2025",
+    "disclaimer": "Ce site web est géré à titre privé et sans but lucratif.",
+    "angaben": {
+      "title": "Informations conformément à l'article 5 de la TMG",
+      "name": "Nom : Heiko Miertzsch",
+      "email": "E-mail : hmiertzsch@web.de"
+    },
+    "haftungInhalte": {
+      "title": "Responsabilité pour le contenu",
+      "text": "En tant qu'opérateur de site privé, je suis responsable de mon propre contenu sur ces pages conformément aux lois générales. Il n'y a aucune obligation de surveiller les informations de tiers transmises ou stockées."
+    },
+    "haftungLinks": {
+      "title": "Responsabilité pour les liens",
+      "text": "Les liens externes ont été vérifiés pour d'éventuelles violations de la loi au moment de leur création. Je n'ai aucune influence sur le contenu des pages liées ; le fournisseur respectif en est responsable."
+    },
+    "urheberrecht": {
+      "title": "Droit d'auteur",
+      "text": "Le contenu créé par l'opérateur du site est soumis au droit d'auteur allemand. Les contributions de tiers sont indiquées comme telles. La duplication, le traitement, la distribution et toute forme d'exploitation en dehors des limites du droit d'auteur nécessitent un consentement."
+    },
+    "back_to_home": "Retour à l'accueil"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "stand": "En date de : 2025",
+    "intro": "Ce site web est géré à titre privé. Aucune donnée personnelle n'est traitée à des fins de marketing ou d'analyse.",
+    "serverLogfiles": {
+      "title": "Fichiers journaux du serveur",
+      "text": "Lors de l'accès à ces pages, des données sont collectées par le fournisseur d'hébergement pour des raisons techniques (par exemple, adresse IP anonymisée, date/heure, pages consultées). Ces données sont utilisées exclusivement pour assurer le fonctionnement technique et non pour le profilage."
+    },
+    "cookiesTracking": {
+      "title": "Cookies et suivi",
+      "text": "Aucun cookie n'est installé qui ne soit pas nécessaire au fonctionnement technique. Aucun outil de suivi ou d'analyse (par exemple, Google Analytics) n'est utilisé."
+    },
+    "embeddedContent": {
+      "title": "Contenu intégré",
+      "text": "Si du contenu intégré de tiers (par exemple, des vidéos YouTube, des cartes) est utilisé à l'avenir, cela peut transmettre des données au fournisseur respectif. Dans ce cas, la politique de confidentialité sera mise à jour en conséquence."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "Pour toute question sur la protection des données : Heiko Miertzsch - hmiertzsch@web.de"
+    },
+    "back_to_home": "Retour à l'accueil"
+  },
+  "copyright": {
+    "title": "Droit d'auteur et crédits d'image",
+    "stand": "En date de : 2025",
+    "urheberrecht": {
+      "title": "Droit d'auteur",
+      "text": "Tout le contenu publié sur ce site web (textes, images, graphiques) est la propriété de Heiko Miertzsch et est protégé par le droit d'auteur, sauf indication contraire. Toute utilisation en dehors des limites légales nécessite un consentement préalable."
+    },
+    "bildquellen": {
+      "title": "Crédits d'image/source",
+      "text": "Photos et graphiques propres : Heiko Miertzsch."
+    },
+    "kontakt": {
+      "title": "Contact pour les droits d'utilisation",
+      "text": "Veuillez adresser les demandes de droits d'utilisation à hmiertzsch@web.de."
+    },
+    "back_to_home": "Retour à l'accueil"
+  }
+}
