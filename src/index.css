@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: theme('fontFamily.sans');
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+    @apply text-main-text bg-main-background;
+  }
+  
+  body {
+    @apply min-h-screen antialiased;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-200 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full hover:bg-primary/40;
+  }
+  
+  /* Selection Styling */
+  ::selection {
+    @apply bg-highlight/50 text-primary;
+  }
+}
+
+@layer components {
+  /* Container utilities für konsistente Layout-Abstände */
+  .container-responsive {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
+  }
+  
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-wide {
+    @apply max-w-container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-20;
+  }
+  
+  /* Spacing utilities für konsistente Abstände */
+  .spacing-section {
+    @apply py-8 lg:py-12 xl:py-16;
+  }
+  
+  .spacing-content {
+    @apply py-6 lg:py-8 xl:py-10;
+  }
+  
+  .font-headline {
+    @apply font-serif;
+  }
+
+  /* Legacy button classes - prefer ui/button.tsx */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-semibold transition-colors duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-accent hover:text-primary;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-primary border-2 border-primary hover:bg-main-background;
+  }
+  
+  /* Legacy input class - prefer ui/input.tsx oder InputField.tsx */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-300 bg-white 
+           focus:ring-2 focus:ring-accent focus:border-transparent 
+           placeholder:text-gray-400;
+  }
+}

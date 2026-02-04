@@ -1,0 +1,36 @@
+npm verbose cli /Users/heikomiertzsch/.nvm/versions/node/v18.20.8/bin/node /Users/heikomiertzsch/.nvm/versions/node/v18.20.8/bin/npm
+npm info using npm@10.8.2
+npm info using node@v18.20.8
+npm verbose title npm run start
+npm verbose argv "run" "start" "--loglevel" "verbose"
+npm verbose logfile logs-max:10 dir:/Users/heikomiertzsch/.npm/_logs/2025-08-13T08_31_02_502Z-
+npm verbose logfile /Users/heikomiertzsch/.npm/_logs/2025-08-13T08_31_02_502Z-debug-0.log
+
+> spoonup-web@0.1.0 start
+> craco start
+
+[HPM] Proxy created: /  -> http://localhost:3001
+[HPM] Subscribed to http-proxy events: [ 'proxyReq', 'proxyRes', 'error', 'close' ]
+Starting the development server...
+
+(node:13703) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:13703) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Compiled successfully!
+
+You can now view spoonup-web in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.178.87:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+Files successfully emitted, waiting for typecheck results...
+Issues checking in progress...
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.

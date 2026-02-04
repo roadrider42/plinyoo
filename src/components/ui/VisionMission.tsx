@@ -1,0 +1,40 @@
+// src/components/landing/VisionMission.tsx
+import { motion, useReducedMotion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { fadeUp, staggerList } from "../../lib/motion";
+
+export default function VisionMission() {
+  const { t } = useTranslation();
+  useReducedMotion();
+
+  return (
+    <section className="bg-main-background text-main-text px-6 md:px-12 py-16 md:py-8">
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={staggerList(0.12)}
+        >
+          <motion.div variants={fadeUp}>
+            <span className="inline-flex items-center rounded-full bg-highlight/20 text-primary px-6 py-3 text-s font-semibold uppercase tracking-wide">
+              {t('visionMission.visionTitle')}
+            </span>
+            <p className="mt-6 text-lg md:text-xl">
+              {t('visionMission.visionText')}
+            </p>
+          </motion.div>
+
+          <motion.div className="mt-8" variants={fadeUp}>
+            <span className="inline-flex items-center rounded-full bg-primary/10 text-primary px-6 py-3 text-s font-semibold uppercase tracking-wide">
+              {t('visionMission.missionTitle')}
+            </span>
+            <p className="mt-6 text-lg md:text-xl">
+              {t('visionMission.missionText')}
+            </p>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
