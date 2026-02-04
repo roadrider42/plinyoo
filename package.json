@@ -1,8 +1,8 @@
 {
-  "name": "brainbytebuffet-web",
+  "name": "plinyoo-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.brainbytebuffet.com",
+  "homepage": "https://www.plinyoo.com",
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",

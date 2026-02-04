@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // BrainByteBuffet Brand Colors
+        // plinyoo Brand Colors
         primary: '#1B2B34',       // Deep Tech Blue
         accent: '#5AD4CF',        // Soft Cyan / Digital Mint
         highlight: '#F7C948',     // Warm Yellow

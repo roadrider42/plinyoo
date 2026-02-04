@@ -4,7 +4,7 @@ import { ContactFormSchema } from '@/domain/dom.contact.zod';
 // A simple Result type for error handling
 type Result<T> = { ok: true; data: T } | { ok: false; error: { code: string; message: string } };
 
-const SUPABASE_FUNCTION_URL = 'https://ddbrdvwguyhnfvicheqn.supabase.co/functions/v1/brainbytebuffet-contact';
+const SUPABASE_FUNCTION_URL = 'https://ddbrdvwguyhnfvicheqn.supabase.co/functions/v1/plinyoo-contact';
 
 export async function sendContactForm(formData: unknown): Promise<Result<void>> {
   const validation = ContactFormSchema.safeParse(formData);

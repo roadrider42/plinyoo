@@ -34,9 +34,9 @@ client-[name]-project
 
 Schritt 2: Template-Repo klonen
 
-Du hast dein BrainByteBuffet-Projekt als Vorlage → Die richtige Vorgehensweise:
+Du hast dein plinyoo-Projekt als Vorlage → Die richtige Vorgehensweise:
 
-git clone https://github.com/roadrider42/brainbytebuffet.git bau-gutachter
+git clone https://github.com/roadrider42/plinyoo.git bau-gutachter
 
 Dann in das neue Projekt wechseln:
 

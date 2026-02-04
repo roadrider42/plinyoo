@@ -71,7 +71,7 @@ Deno.serve(async (req) => {
 
     // 2. Handle DB and Email errors properly
     const supabaseAdmin = createClient(supabaseUrl, serviceRoleKey);
-    const { error: dbError } = await supabaseAdmin.from("brainbytebuffet_contacts").insert({
+    const { error: dbError } = await supabaseAdmin.from("plinyoo_contacts").insert({
       name: formData.name,
       email: formData.email,
       message: formData.message || null,
@@ -88,7 +88,7 @@ Deno.serve(async (req) => {
 
     const resend = new Resend(resendApiKey);
     const { error: emailError } = await resend.emails.send({
-      from: 'BrainByteBuffet <noreply@email.spoonup.me>',
+      from: 'plinyoo <noreply@email.spoonup.me>',
       to: [contactReceiverEmail],
       subject: createSubject(formData.formType),
       text: createEmailBody(formData),

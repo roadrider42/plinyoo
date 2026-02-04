@@ -3,10 +3,10 @@
  * 
  * Zweck: Footer-Komponente für Landing Pages mit Marken-Information und Navigation
  * Verantwortlichkeiten:
- * - Darstellung von BrainByteBuffet-Branding und Kontaktinformationen
+ * - Darstellung von plinyoo-Branding und Kontaktinformationen
  * - Navigation zu wichtigen Seiten (Datenschutz, Impressum, etc.)
  * - Responsive Grid-Layout für verschiedene Bildschirmgrößen
- * - Konsistente Farbgebung mit BrainByteBuffet-Design-System
+ * - Konsistente Farbgebung mit plinyoo-Design-System
  * 
  * Anti-Beispiele:
  * - Geschäftslogik oder State-Management
@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
-            <h3 className="font-bold font-serif text-lg">BrainByteBuffet</h3>
+            <h3 className="font-bold font-serif text-lg">plinyoo</h3>
             <p className="text-sm text-gray-400 mt-2">{t('footer.brand.subtitle')}</p>
           </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 mt-4 md:mt-0 text-sm">
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mt-8 text-center text-xs text-gray-400">
-        &copy; {new Date().getFullYear()} BrainByteBuffet. {t('footer.copyright')}
+        &copy; {new Date().getFullYear()} plinyoo. {t('footer.copyright')}
       </div>
     </footer>
   );
