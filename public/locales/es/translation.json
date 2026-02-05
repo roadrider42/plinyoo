@@ -92,9 +92,9 @@
     "title": "Tus beneficios con el Acompañamiento Digital",
     "subtitle": "El Acompañamiento Digital combina aprendizaje personalizado, orientación adaptativa y desarrollo medible en una solución integrada para personas y organizaciones.",
     "items": [
-      { "title": "📚 Contenido de aprendizaje interactivo", "desc": "Diálogos, estímulos para la reflexión y orientación paso a paso, con apoyo digital y personalmente relevante." },
-      { "title": "📊 Seguimiento del progreso", "desc": "Supervisa el desarrollo y el impacto: transparente, motivador y conforme con el RGPD." },
-      { "title": "📱 100% móvil y adaptable", "desc": "Aprende e interactúa, en cualquier lugar, en cualquier momento, en línea o sin conexión." }
+      { "title": "Contenido de aprendizaje interactivo", "desc": "Diálogos, estímulos para la reflexión y orientación paso a paso, con apoyo digital y personalmente relevante." },
+      { "title": "Seguimiento del progreso", "desc": "Supervisa el desarrollo y el impacto: transparente, motivador y conforme con el RGPD." },
+      { "title": "100% móvil y adaptable", "desc": "Aprende e interactúa, en cualquier lugar, en cualquier momento, en línea o sin conexión." }
     ]
   },
   "testimonials": {

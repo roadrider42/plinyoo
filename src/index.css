@@ -2,8 +2,11 @@
    PLINYOO - GLOBAL STYLES
    Zentrale Stelle für alle Style-Definitionen
    ============================================================================= */
+<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/index.css
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
+=======
+>>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/index.css
 
 @tailwind base;
 @tailwind components;
@@ -16,13 +19,12 @@
   html {
     font-family: theme('fontFamily.sans'); /* IBM Plex Sans */
     -webkit-tap-highlight-color: transparent;
-    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
     @apply text-main-text bg-main-background;
   }
   
   body {
     @apply min-h-screen antialiased;
-    -webkit-text-size-adjust: 100%;
   }
   
   /* Scrollbar Styling */

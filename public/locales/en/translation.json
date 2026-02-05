@@ -92,9 +92,9 @@
     "title": "Your benefits with Digital Companionship",
     "subtitle": "Digital Companionship combines personalized learning, adaptive guidance, and measurable development – in one integrated solution for people and organizations.",
     "items": [
-      { "title": "📚 Interactive learning content", "desc": "Dialogues, reflection prompts, and step-by-step guidance – digitally supported and personally relevant." },
-      { "title": "📊 Progress tracking", "desc": "Monitor development and impact – transparent, motivating, and GDPR-compliant." },
-      { "title": "📱 100% mobile & adaptable", "desc": "Learn and engage – anywhere, anytime, online or offline." }
+      { "title": "Interactive learning content", "desc": "Dialogues, reflection prompts, and step-by-step guidance – digitally supported and personally relevant." },
+      { "title": "Progress tracking", "desc": "Monitor development and impact – transparent, motivating, and GDPR-compliant." },
+      { "title": "100% mobile & adaptable", "desc": "Learn and engage – anywhere, anytime, online or offline." }
     ]
   },
   "testimonials": {

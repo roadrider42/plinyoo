@@ -93,9 +93,15 @@
     "title": "Deine Vorteile mit Digital Companionship",
     "subtitle": "Digitale Companionship vereint personalisiertes Lernen, adaptive Begleitung und messbare Entwicklung – in einer integrierten Lösung für Menschen und Organisationen.",
     "items": [
+<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/public/locales/de/translation.json
       { "title": "📚 Interaktive Lerninhalte", "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant.", "category": "Interaktion" },
       { "title": "📊 Fortschritts-Tracking", "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform.", "category": "Messbarkeit" },
       { "title": "📱 100 % mobil & anpassbar", "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline.", "category": "Flexibilität" }
+=======
+      { "title": "Interaktive Lerninhalte", "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant.", "category": "Interaktion" },
+      { "title": "Fortschritts-Tracking", "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform.", "category": "Messbarkeit" },
+      { "title": "100 % mobil & anpassbar", "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline.", "category": "Flexibilität" }
+>>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/public/locales/de/translation.json
     ]
   },
   "testimonials": {

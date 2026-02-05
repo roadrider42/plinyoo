@@ -92,9 +92,9 @@
     "title": "Twoje korzyści z Cyfrowego Towarzyszenia",
     "subtitle": "Cyfrowe Towarzyszenie łączy spersonalizowaną naukę, adaptacyjne wsparcie i mierzalny rozwój – w jednym zintegrowanym rozwiązaniu dla ludzi i organizacji.",
     "items": [
-      { "title": "📚 Interaktywne treści edukacyjne", "desc": "Dialogi, impulsy do refleksji i prowadzenie krok po kroku – cyfrowe, a zarazem osobiste." },
-      { "title": "📊 Śledzenie postępów", "desc": "Monitoruj rozwój i wpływ – transparentnie, motywująco i zgodnie z RODO." },
-      { "title": "📱 100% mobilne i elastyczne", "desc": "Ucz się i działaj – gdziekolwiek i kiedykolwiek, online lub offline." }
+      { "title": "Interaktywne treści edukacyjne", "desc": "Dialogi, impulsy do refleksji i prowadzenie krok po kroku – cyfrowe, a zarazem osobiste." },
+      { "title": "Śledzenie postępów", "desc": "Monitoruj rozwój i wpływ – transparentnie, motywująco i zgodnie z RODO." },
+      { "title": "100% mobilne i elastyczne", "desc": "Ucz się i działaj – gdziekolwiek i kiedykolwiek, online lub offline." }
     ]
   },
   "testimonials": {

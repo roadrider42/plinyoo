@@ -14,7 +14,7 @@ i18n
   .init({
     supportedLngs: ['de', 'en', 'es', 'fr', 'pt', 'uk', 'pl'],
     fallbackLng: 'de',
-    debug: true, // Im Development nützlich
+    debug: false, // Immer deaktivieren für saubere Console
     detection: {
       order: ['queryString', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       caches: ['cookie'],
