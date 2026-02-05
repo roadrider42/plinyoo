@@ -18,6 +18,10 @@ module.exports = {
         accent: '#4A6FA5',      // Steel Blue (funktional, nicht neon)
         highlight: '#E3A72F',   // Signal Amber (sparsam, für Hinweise/CTA)
 
+        // Neue Akzentpalette - Cognitive, aber lebendig
+        'soft-teal': '#6FB3B8',    // Soft Teal (neu – Frische, ruhig)
+        'mist-green': '#E6F0EF',   // Mist Green (neu – Section-Hintergründe)
+
         // Background / text (harmonisiert, neutraler)
         'main-background': '#F4F5F7', // Off-White UI
         'main-text': '#141A1F',       // Ink Black (bessere Lesbarkeit)
@@ -89,8 +93,8 @@ module.exports = {
       fontFamily: {
         sans: ['"IBM Plex Sans"', '"Inter"', 'system-ui', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-        // serif optional, aber nicht als primäre CI-Schrift
-        serif: ['"Source Serif 4"', 'serif'],
+        // serif zeigt jetzt auch auf IBM Plex Sans für Konsistenz
+        serif: ['"IBM Plex Sans"', '"Inter"', 'system-ui', 'sans-serif'],
       },
 
       /**

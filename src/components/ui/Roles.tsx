@@ -68,7 +68,7 @@ export default function Roles() {
         <motion.article
           className="rounded-2xl border border-black/5 bg-white p-8 md:p-12 shadow-sm text-center"
         >
-          <h3 className="text-2xl md:text-3xl font-bold font-serif text-primary mb-6">
+          <h3 className="text-2xl md:text-3xl font-bold font-headline text-primary mb-6">
             {overview.title}
           </h3>
 
@@ -123,7 +123,7 @@ export default function Roles() {
             variants={r.variant}
             className="rounded-2xl border border-black/5 bg-white p-6 md:p-8 shadow-sm"
           >
-            <h4 className="text-xl md:text-2xl font-bold font-serif text-primary mb-4">{r.title}</h4>
+            <h4 className="text-xl md:text-2xl font-bold font-headline text-primary mb-4">{r.title}</h4>
 
             <motion.ul variants={staggerList(0.08)} initial="hidden" animate="show" className="grid gap-3">
               {r.points.map((p) => (

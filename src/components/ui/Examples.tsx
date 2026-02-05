@@ -9,7 +9,7 @@ const Examples = () => {
   return (
     <section className="bg-main-background py-16 md:py-12">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold font-serif text-primary mb-12">
+        <h2 className="text-3xl font-bold font-headline text-primary mb-12">
           {t('examples.title')}
         </h2>
 

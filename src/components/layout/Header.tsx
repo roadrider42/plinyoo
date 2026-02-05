@@ -18,7 +18,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold font-serif text-primary">plinyoo</Link>
+            <Link to="/" className="text-xl font-bold font-headline text-primary">plinyoo</Link>
           </div>
 
           <div className="hidden md:flex flex-grow items-center justify-end gap-8">
