@@ -4,6 +4,7 @@
     "cta_secondary": "Investir"
   },
   "hero": {
+    "eyebrow": "",
     "title": "Crescendo juntos - digital, humano, único.",
     "subtitle": "Acompanhamos processos de aprendizagem e consultoria com companheiros digitais inteligentes e confiáveis que se adaptam aos seus objetivos - e não o contrário.",
     "cta_primary": "Junte-se agora",
@@ -102,12 +103,9 @@
     "title": "Seus benefícios com a Companhia Digital",
     "subtitle": "A Companhia Digital combina aprendizado personalizado, orientação adaptativa e desenvolvimento mensurável - em uma solução integrada para pessoas e organizações.",
     "items": [
-      { "title": "Conteúdo de aprendizado interativo", "desc": "Diálogos, estímulos para reflexão e orientação passo a passo - com suporte digital e relevância pessoal."
-      },
-      { "title": "Acompanhamento de progresso", "desc": "Monitore o desenvolvimento e o impacto - transparente, motivador e compatível com o GDPR."
-      },
-      { "title": "100% móvel e adaptável", "desc": "Aprenda e interaja - em qualquer lugar, a qualquer hora, online ou offline."
-      }
+      { "title": "Conteúdo de aprendizado interativo", "desc": "Diálogos, estímulos para reflexão e orientação passo a passo - com suporte digital e relevância pessoal.", "category": "" },
+      { "title": "Acompanhamento de progresso", "desc": "Monitore o desenvolvimento e o impacto - transparente, motivador e compatível com o GDPR.", "category": "" },
+      { "title": "100% móvel e adaptável", "desc": "Aprenda e interaja - em qualquer lugar, a qualquer hora, online ou offline.", "category": "" }
     ]
   },
   "testimonials": {
@@ -118,6 +116,7 @@
   },
   "faq": {
     "title": "Perguntas frequentes",
+    "intro": "",
     "items": [
       { "q": "É adequado para indivíduos e organizações?", "a": "Sim - papéis и conteúdo são totalmente personalizáveis."
       },

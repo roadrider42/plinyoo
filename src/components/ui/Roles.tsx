@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // Icons
 function IconLeader() {
   return (
-    <svg viewBox="0 0 24 24" className="h-8 w-8 text-brainbyte-primary">
+    <svg viewBox="0 0 24 24" className="h-8 w-8 text-soft-teal">
       <path fill="currentColor" d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Zm0 2c-4 0-6 2-6 4v1h12v-1c0-2-2-4-6-4Z"/>
     </svg>
   );
@@ -66,7 +66,7 @@ export default function Roles() {
 
         {/* Übersicht */}
         <motion.article
-          className="text-center"
+          className="rounded-lg border border-border bg-surface-1 p-8 md:p-12 shadow-ci-hairline text-center"
         >
           <h2 className="text-3xl font-bold font-headline text-primary mb-12">
             {overview.title}
@@ -77,13 +77,14 @@ export default function Roles() {
             {overview.mini.map((item, index) => (
               <div
                 key={item.title}
-                className="group rounded-xl bg-white border border-border p-6 shadow-sm transition-all hover:shadow-lg hover:-translate-y-1"
+                className="group relative rounded-lg bg-surface-1 border border-border p-5 shadow-ci-hairline overflow-hidden"
               >
-                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-surface-1/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+                <div className="mx-auto h-12 w-12 rounded-lg bg-surface-2 flex items-center justify-center mb-3 relative z-10 border border-border">
                   {miniIcons[index]}
                 </div>
-                <h3 className="font-semibold text-primary text-lg">{item.title}</h3>
-                <p className="text-sm text-main-text/80 mt-1">{item.desc}</p>
+                <div className="font-semibold text-primary relative z-10">{item.title}</div>
+                <div className="text-sm text-text-muted mt-1 relative z-10">{item.desc}</div>
               </div>
             ))}
           </div>
@@ -98,11 +99,14 @@ export default function Roles() {
             ))}
           </motion.ul>
 
-          {/* Concluding Statement */}
-          <div className="mt-10">
-            <p className="max-w-xl mx-auto text-center px-6 py-3 text-base font-medium text-white bg-primary rounded-lg shadow-sm">
+          {/* CTA */}
+          <div className="mt-8">
+            <Link
+              to={overview.cta.to}
+              className="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-semibold px-5 py-2.5 rounded-xl transition"
+            >
               {overview.cta.label}
-            </p>
+            </Link>
           </div>
         </motion.article>
 
@@ -115,9 +119,9 @@ export default function Roles() {
               whileInView="show"
               viewport={{ once: true, amount: 0.25 }}
               variants={r.variant}
-              className="rounded-xl border border-border bg-white p-8 shadow-sm"
+              className="rounded-lg border border-border bg-surface-1 p-6 md:p-8 shadow-ci-hairline"
             >
-              <h3 className="text-2xl font-bold font-headline text-primary mb-5">{r.title}</h3>
+              <h4 className="text-xl md:text-2xl font-bold font-headline text-primary mb-4">{r.title}</h4>
 
               <motion.ul variants={staggerList(0.08)} initial="hidden" animate="show" className="grid gap-4">
                 {r.points.map((p) => (
@@ -131,7 +135,7 @@ export default function Roles() {
               <div className="mt-6">
                 <Link
                   to={r.cta.to}
-                  className="px-5 py-2 text-sm font-semibold text-primary bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors"
+                  className="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/90 font-semibold px-4 py-2 rounded-xl transition"
                 >
                   {r.cta.label}
                 </Link>

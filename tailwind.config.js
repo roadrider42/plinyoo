@@ -19,15 +19,6 @@ module.exports = {
         accent: '#4A6FA5',      // Steel Blue
         highlight: '#E3A72F',   // Signal Amber (sparsam!)
 
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/tailwind.config.js
-        // Fresh-but-serious accents (empfohlen für Eyebrows, Icons, Lines, Hover)
-        'soft-teal': '#6FB3B8',
-        'mist-green': '#E6F0EF',
-
-        // Base background / text (legacy-friendly)
-        'main-background': '#F4F5F7',
-        'main-text': '#141A1F',
-=======
         // Neue Akzentpalette - Cognitive, aber lebendig
         'soft-teal': '#6FB3B8',    // Soft Teal (neu – Frische, ruhig)
         'mist-green': '#E6F0EF',   // Mist Green (neu – Section-Hintergründe)
@@ -39,7 +30,6 @@ module.exports = {
         // Background / text (harmonisiert, neutraler)
         'main-background': '#F4F5F7', // Off-White UI
         'main-text': '#141A1F',       // Ink Black (bessere Lesbarkeit)
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/tailwind.config.js
 
         /**
          * System Tokens (nutze diese in Components!)
@@ -123,12 +113,8 @@ module.exports = {
       fontFamily: {
         sans: ['"IBM Plex Sans"', '"Inter"', 'system-ui', 'sans-serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/tailwind.config.js
-        serif: ['"Source Serif 4"', 'serif'],
-=======
         // serif zeigt jetzt auch auf IBM Plex Sans für Konsistenz
         serif: ['"IBM Plex Sans"', '"Inter"', 'system-ui', 'sans-serif'],
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/tailwind.config.js
       },
 
       /**

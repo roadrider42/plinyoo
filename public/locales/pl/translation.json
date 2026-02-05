@@ -4,6 +4,7 @@
     "cta_secondary": "Inwestuj"
   },
   "hero": {
+    "eyebrow": "",
     "title": "Rozwijamy się razem – cyfrowo, po ludzku, unikatowo.",
     "subtitle": "Towarzyszymy procesom uczenia się i doradztwa dzięki inteligentnym, godnym zaufania cyfrowym towarzyszom, którzy dostosowują się do Twoich celów – a nie odwrotnie.",
     "cta_primary": "Dołącz teraz",
@@ -92,9 +93,9 @@
     "title": "Twoje korzyści z Cyfrowego Towarzyszenia",
     "subtitle": "Cyfrowe Towarzyszenie łączy spersonalizowaną naukę, adaptacyjne wsparcie i mierzalny rozwój – w jednym zintegrowanym rozwiązaniu dla ludzi i organizacji.",
     "items": [
-      { "title": "Interaktywne treści edukacyjne", "desc": "Dialogi, impulsy do refleksji i prowadzenie krok po kroku – cyfrowe, a zarazem osobiste." },
-      { "title": "Śledzenie postępów", "desc": "Monitoruj rozwój i wpływ – transparentnie, motywująco i zgodnie z RODO." },
-      { "title": "100% mobilne i elastyczne", "desc": "Ucz się i działaj – gdziekolwiek i kiedykolwiek, online lub offline." }
+      { "title": "Interaktywne treści edukacyjne", "desc": "Dialogi, impulsy do refleksji i prowadzenie krok po kroku – cyfrowe, a zarazem osobiste.", "category": "" },
+      { "title": "Śledzenie postępów", "desc": "Monitoruj rozwój i wpływ – transparentnie, motywująco i zgodnie z RODO.", "category": "" },
+      { "title": "100% mobilne i elastyczne", "desc": "Ucz się i działaj – gdziekolwiek i kiedykolwiek, online lub offline.", "category": "" }
     ]
   },
   "testimonials": {
@@ -105,6 +106,7 @@
   },
   "faq": {
     "title": "Najczęściej zadawane pytania",
+    "intro": "",
     "items": [
       { "q": "Czy jest to odpowiednie dla osób i organizacji?", "a": "Tak – role i treści są w pełni konfigurowalne." },
       { "q": "Jak zachować własną filozofię uczenia się?", "a": "Dzięki modułowej budowie, elastycznym ścieżkom nauki i konfigurowalnym strukturom treści." },

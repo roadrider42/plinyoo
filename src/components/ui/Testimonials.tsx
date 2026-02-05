@@ -5,9 +5,10 @@ import { fadeUp, staggerList } from "../../lib/motion";
 
 export default function Testimonials() {
   const { t } = useTranslation();
-  const title = t('testimonials.title');
+  const title = t('testimonials.label', { defaultValue: 'Beobachtung aus der Praxis' });
   const subtitle = t('testimonials.subtitle');
-  const quotes = t('testimonials.quotes', { returnObjects: true }) as string[];
+  const quotesRaw = t('testimonials.quotes', { returnObjects: true }) as unknown;
+  const quotes = Array.isArray(quotesRaw) ? (quotesRaw as string[]) : [];
 
   return (
     <section className="bg-main-background px-6 md:px-12 py-16 md:py-12">
@@ -33,7 +34,7 @@ export default function Testimonials() {
             <motion.li
               key={q}
               variants={fadeUp}
-              className="rounded-lg border-l-2 border-accent bg-white p-6 text-left hover:shadow-ci transition-shadow duration-200"
+              className="rounded-lg border border-border border-l-2 border-soft-teal bg-surface-1 p-6 shadow-ci-hairline hover:shadow-ci transition-shadow duration-200"
             >
               <p className="text-sm text-text-muted not-italic">{q}</p>
             </motion.li>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta property="og:title" content="plinyoo | Intelligente persönliche Lernplattformen" />
     <meta name="description" content="plinyoo - intelligente persönliche digitale Lernplattformen" />
-    
+
     <!-- Critical CSS - FOUC Prevention -->
     <style>
       /* Prevent FOUC with minimal critical styles */
@@ -45,7 +45,8 @@
     <!-- PWA Manifest entfernt -->
     
     <!-- Android Theme -->
-    <meta name="theme-color" content="#3C2A1A" />
+    <meta name="theme-color" content="#F4F5F7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0F1419" media="(prefers-color-scheme: dark)" />
     <meta property="og:site_name" content="plinyoo" />
     
     <!-- iOS PWA Meta-Tags -->
@@ -60,7 +61,14 @@
     <!-- Eigenes Favicon als Data-URL -->
     <link rel="icon" href="/favicon.ico" />
 
-    <meta http-equiv="Content-Security-Policy" content="font-src 'self' data: https://fonts.gstatic.com;">
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://plausible.io 'unsafe-inline';
+    style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+    font-src 'self' data: https://fonts.gstatic.com;
+    img-src 'self' data:;
+    connect-src 'self' https://plausible.io https://*.supabase.co;
+  ">
     <title>plinyoo</title>
 
     <!-- Privacy-friendly analytics by Plausible -->

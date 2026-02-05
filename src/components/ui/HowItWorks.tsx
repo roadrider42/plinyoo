@@ -21,14 +21,10 @@ export default function HowItWorks() {
           className="grid md:grid-cols-3 gap-8 text-left"
         >
           {steps.map((s, i) => (
-            <motion.li 
-              key={s.title} 
-              variants={fadeUp} 
-              className="rounded-xl border border-border bg-white p-6 transition-all hover:shadow-lg hover:-translate-y-1"
-            >
-              <div className="text-5xl font-bold text-primary/20 mb-4">{String(i + 1).padStart(2, '0')}</div>
+            <motion.li key={s.title} variants={fadeUp} className="rounded-lg border border-border bg-surface-1 p-6 shadow-ci-hairline">
+              <div className="text-3xl font-bold text-primary">{i + 1}</div>
               <h4 className="mt-2 font-semibold text-primary">{s.title}</h4>
-              <p className="text-sm mt-1 text-main-text/80">{s.desc}</p>
+              <p className="text-sm mt-1 text-text-muted">{s.desc}</p>
             </motion.li>
           ))}
         </motion.ol>

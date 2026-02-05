@@ -80,10 +80,21 @@ Deno.serve(async (req) => {
 
     if (dbError) {
       console.error("DB Insert Error:", dbError);
-      return new Response(JSON.stringify({ error: 'Failed to save contact' }), {
+      return new Response(
+        JSON.stringify({
+          error: 'Failed to save contact',
+          dbError: {
+            code: (dbError as any).code ?? null,
+            message: (dbError as any).message ?? null,
+            details: (dbError as any).details ?? null,
+            hint: (dbError as any).hint ?? null,
+          },
+        }),
+        {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+        }
+      );
     }
 
     const resend = new Resend(resendApiKey);
@@ -96,10 +107,21 @@ Deno.serve(async (req) => {
 
     if (emailError) {
       console.error("Resend Email Error:", emailError);
-      return new Response(JSON.stringify({ error: 'Failed to send email' }), {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+      return new Response(
+        JSON.stringify({
+          error: 'Failed to send email',
+          emailError: {
+            name: (emailError as any).name ?? null,
+            message: (emailError as any).message ?? null,
+            code: (emailError as any).code ?? null,
+            statusCode: (emailError as any).statusCode ?? null,
+          },
+        }),
+        {
+          status: 500,
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        }
+      );
     }
 
     return new Response(JSON.stringify({ message: 'Form submitted successfully' }), {

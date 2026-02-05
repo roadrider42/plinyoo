@@ -21,10 +21,10 @@ export default function Outcomes() {
             <motion.li
               key={i.label}
               variants={fadeUp}
-              className="rounded-2xl border border-black/5 bg-white p-6 text-center"
+              className="rounded-lg border border-border bg-surface-1 p-6 text-center shadow-ci-hairline"
             >
               <div className="text-4xl font-extrabold text-primary">{i.kpi}</div>
-              <div className="mt-2 text-sm text-main-text/80">{i.label}</div>
+              <div className="mt-2 text-sm text-text-muted">{i.label}</div>
             </motion.li>
           ))}
         </motion.ul>

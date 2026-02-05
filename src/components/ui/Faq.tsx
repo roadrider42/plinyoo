@@ -6,11 +6,12 @@ import { fadeUp } from "../../lib/motion";
 
 export default function Faq() {
   const { t } = useTranslation();
-  const faqs = t('faq.items', { returnObjects: true }) as { q: string, a: string }[];
+  const faqsRaw = t('faq.items', { returnObjects: true }) as unknown;
+  const faqs = Array.isArray(faqsRaw) ? (faqsRaw as { q: string; a: string }[]) : [];
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-section-alternate px-6 md:px-12 py-16 md:py-12">
+    <section className="bg-surface-2 border-y border-border/60 px-6 md:px-12 py-16 md:py-12">
       <div className="max-w-3xl mx-auto py-6">
 
         {/* Intro-Satz - Knowledge Base Ton */}
@@ -23,17 +24,17 @@ export default function Faq() {
           </p>
         </div>
 
-        <ul className="divide-y divide-border rounded-lg border border-border bg-white">
+        <ul className="divide-y divide-border/70 rounded-lg border border-border/70 bg-surface-1">
           {faqs.map((f, i) => {
             const active = open === i;
             return (
               <li key={f.q}>
                 <button
                   onClick={() => setOpen(active ? null : i)}
-                  className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-mist-green transition-colors duration-150"
+                  className="w-full text-left px-5 py-4 flex items-center justify-between hover:bg-surface-tint transition-colors duration-150"
                 >
-                  <span className="font-medium text-base">{f.q}</span>
-                  <span className="ml-4 text-soft-teal text-sm">{active ? "−" : "+"}</span>
+                  <span className="font-medium text-base text-text">{f.q}</span>
+                  <span className={active ? "ml-4 text-soft-teal text-sm" : "ml-4 text-text-muted text-sm"}>{active ? "−" : "+"}</span>
                 </button>
                 <AnimatePresence initial={false}>
                   {active && (

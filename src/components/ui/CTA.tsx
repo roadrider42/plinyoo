@@ -21,9 +21,6 @@ export default function CTA() {
         <Link to="/kontakt" className="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-primary/90 transition-colors">
           {t('cta.button')}
         </Link>
-        <Link to="/mitmachen" className="text-primary font-medium py-3 px-8 rounded-lg hover:bg-primary/10 transition-colors">
-          {t('cta.secondary_action')}
-        </Link>
       </div>
     </section>
   );

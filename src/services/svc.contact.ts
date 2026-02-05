@@ -4,7 +4,10 @@ import { ContactFormSchema } from '@/domain/dom.contact.zod';
 // A simple Result type for error handling
 type Result<T> = { ok: true; data: T } | { ok: false; error: { code: string; message: string } };
 
-const SUPABASE_FUNCTION_URL = 'https://ddbrdvwguyhnfvicheqn.supabase.co/functions/v1/plinyoo-contact';
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;
+const SUPABASE_FUNCTION_URL = supabaseUrl
+  ? `${supabaseUrl.replace(/\/$/, '')}/functions/v1/plinyoo-contact`
+  : 'https://ddbrdvwguyhnfvicheqn.supabase.co/functions/v1/plinyoo-contact';
 
 export async function sendContactForm(formData: unknown): Promise<Result<void>> {
   const validation = ContactFormSchema.safeParse(formData);
@@ -21,11 +24,13 @@ export async function sendContactForm(formData: unknown): Promise<Result<void>> 
   }
 
   try {
+    const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
     const response = await fetch(SUPABASE_FUNCTION_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        apikey: anonKey,
+        Authorization: `Bearer ${anonKey}`,
       },
       body: JSON.stringify(validation.data),
     });

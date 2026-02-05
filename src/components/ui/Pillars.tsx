@@ -8,7 +8,7 @@ export default function Pillars() {
   const pillars = t('pillars.items', { returnObjects: true }) as { title: string, desc: string }[];
 
   return (
-    <section className="bg-main-background px-6 md:px-12 py-16 md:py-12">
+    <section className="bg-surface-2 border-y border-border/60 px-6 md:px-12 py-16 md:py-12">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -21,10 +21,10 @@ export default function Pillars() {
             <motion.div
               key={p.title}
               variants={fadeUp}
-              className="rounded-2xl border border-black/5 bg-white p-6 hover:shadow-md transition-shadow"
+              className="rounded-lg border border-border bg-surface-1 p-6 shadow-ci-hairline hover:shadow-ci transition-shadow"
             >
               <h4 className="font-semibold text-primary">{p.title}</h4>
-              <p className="text-sm mt-1 text-main-text/80">{p.desc}</p>
+              <p className="text-sm mt-1 text-text-muted">{p.desc}</p>
             </motion.div>
           ))}
         </motion.div>

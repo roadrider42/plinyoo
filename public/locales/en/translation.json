@@ -4,6 +4,7 @@
     "cta_secondary": "Invest"
   },
   "hero": {
+    "eyebrow": "",
     "title": "Growing together – digital, human, unique.",
     "subtitle": "We accompany learning and consulting processes with intelligent, trustworthy digital companions that adapt to your goals – not the other way around.",
     "cta_primary": "Join now",
@@ -92,9 +93,9 @@
     "title": "Your benefits with Digital Companionship",
     "subtitle": "Digital Companionship combines personalized learning, adaptive guidance, and measurable development – in one integrated solution for people and organizations.",
     "items": [
-      { "title": "Interactive learning content", "desc": "Dialogues, reflection prompts, and step-by-step guidance – digitally supported and personally relevant." },
-      { "title": "Progress tracking", "desc": "Monitor development and impact – transparent, motivating, and GDPR-compliant." },
-      { "title": "100% mobile & adaptable", "desc": "Learn and engage – anywhere, anytime, online or offline." }
+      { "title": "Interactive learning content", "desc": "Dialogues, reflection prompts, and step-by-step guidance – digitally supported and personally relevant.", "category": "" },
+      { "title": "Progress tracking", "desc": "Monitor development and impact – transparent, motivating, and GDPR-compliant.", "category": "" },
+      { "title": "100% mobile & adaptable", "desc": "Learn and engage – anywhere, anytime, online or offline.", "category": "" }
     ]
   },
   "testimonials": {
@@ -105,6 +106,7 @@
   },
   "faq": {
     "title": "Frequently Asked Questions",
+    "intro": "",
     "items": [
       { "q": "Is it suitable for individuals and organizations?", "a": "Yes – roles and content are fully customizable." },
       { "q": "How can we preserve our learning philosophy?", "a": "Through modular design, flexible learning paths, and customizable content structures." },

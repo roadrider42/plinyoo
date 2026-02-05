@@ -4,6 +4,7 @@ import { useContactForm } from '@/hooks/hook.useContactForm';
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { useToast } from "@/components/ui/use-toast";
+import { z } from 'zod';
 
 export default function KontaktPage() {
   const { t } = useTranslation();
@@ -20,6 +21,10 @@ export default function KontaktPage() {
     email: "",
     message: ""
   });
+
+  const [emailTouched, setEmailTouched] = useState(false);
+  const emailValidation = z.string().email().safeParse(form.email);
+  const showEmailError = emailTouched && form.email.length > 0 && !emailValidation.success;
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -58,7 +63,12 @@ export default function KontaktPage() {
               </div>
               <div>
                 <label className="block text-sm font-medium">{t('forms.common.email_label')}</label>
-                <input type="email" name="email" value={form.email} onChange={onChange} className="mt-1 w-full rounded-lg border p-2" required />
+                <input type="email" name="email" value={form.email} onChange={onChange} onBlur={() => setEmailTouched(true)} className="mt-1 w-full rounded-lg border p-2" required />
+                {showEmailError ? (
+                  <p className="mt-1 text-xs text-red-600">
+                    {t('forms.validation.invalid_email', { defaultValue: 'Bitte gib eine gültige E-Mail-Adresse ein.' })}
+                  </p>
+                ) : null}
               </div>
             </div>
             <div>
@@ -66,7 +76,7 @@ export default function KontaktPage() {
               <textarea name="message" value={form.message} onChange={onChange} rows={5} className="mt-1 w-full rounded-lg border p-2" placeholder={t('forms.use_case.message_placeholder')}></textarea>
             </div>
             <p className="text-xs text-gray-500">{t('forms.privacy_notice')}</p>
-            <button type="submit" disabled={contactMutation.isLoading} className="w-full bg-highlight text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition disabled:opacity-50">
+            <button type="submit" disabled={contactMutation.isLoading || showEmailError} className="w-full bg-primary text-text-inverse px-5 py-3 rounded-lg shadow-ci hover:shadow-ci-lg transition disabled:opacity-50">
               {contactMutation.isLoading ? t('forms.button_sending') : t('forms.button_send_request')}
             </button>
           </form>

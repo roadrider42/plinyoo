@@ -9,7 +9,7 @@ export default function VisionMission() {
   useReducedMotion();
 
   return (
-    <section className="bg-main-background text-main-text px-6 md:px-12 py-16 md:py-8">
+    <section className="bg-surface-2 border-y border-border/60 text-main-text px-6 md:px-12 py-16 md:py-8">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial="hidden"

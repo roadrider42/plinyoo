@@ -8,9 +8,10 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-white text-main-text py-20 md:py-28">
-      <div className="max-w-4xl mx-auto px-6 md:px-12 text-left">
-        <p className="text-sm font-medium tracking-wide text-soft-teal mb-4">
+    <section className="bg-main-background text-main-text min-h-[70vh] flex flex-col items-center justify-center px-6 md:px-12 py-16 md:py-20">
+      <div className="max-w-4xl text-center">
+        {/* Eyebrow - professioneller & moderner */}
+        <p className="text-sm font-medium tracking-wide text-soft-teal mb-4 font-sans">
           {t('hero.eyebrow')}
         </p>
 
@@ -36,6 +37,9 @@ export default function Hero() {
             {t('hero.cta_secondary')}
           </Link>
         </div>
+
+        {/* Visuelle Erdung - feine Linie unter Buttons */}
+        <div className="mt-12 h-px bg-border w-24 mx-auto"></div>
       </div>
     </section>
   );

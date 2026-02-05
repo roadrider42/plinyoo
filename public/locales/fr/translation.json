@@ -4,6 +4,7 @@
     "cta_secondary": "Investir"
   },
   "hero": {
+    "eyebrow": "",
     "title": "Grandir ensemble - numérique, humain, unique.",
     "subtitle": "Nous accompagnons les processus d'apprentissage et de conseil avec des compagnons numériques intelligents et fiables qui s'adaptent à vos objectifs - et non l'inverse.",
     "cta_primary": "Rejoignez-nous maintenant",
@@ -97,12 +98,9 @@
     "title": "Vos avantages avec la compagnie numérique",
     "subtitle": "La compagnie numérique combine un apprentissage personnalisé, un accompagnement adaptatif et un développement mesurable - en une seule solution intégrée pour les personnes et les organisations.",
     "items": [
-      { "title": "Contenu d'apprentissage interactif", "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement."
-      },
-      { "title": "Suivi des progrès", "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD."
-      },
-      { "title": "100% mobile & adaptable", "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne."
-      }
+      { "title": "Contenu d'apprentissage interactif", "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement.", "category": "" },
+      { "title": "Suivi des progrès", "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD.", "category": "" },
+      { "title": "100% mobile & adaptable", "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne.", "category": "" }
     ]
   },
   "testimonials": {
@@ -113,6 +111,7 @@
   },
   "faq": {
     "title": "Questions fréquemment posées",
+    "intro": "",
     "items": [
       { "q": "Est-ce adapté aux individus et aux organisations ?", "a": "Oui - les rôles et le contenu sont entièrement personnalisables."
       },
