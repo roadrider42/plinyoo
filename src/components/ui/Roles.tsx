@@ -68,7 +68,11 @@ export default function Roles() {
         <motion.article
           className="rounded-2xl border border-black/5 bg-white p-8 md:p-12 shadow-sm text-center"
         >
-          <h3 className="text-2xl md:text-3xl font-bold font-serif text-primary mb-6">
+<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/Roles.tsx
+          <h3 className="text-2xl md:text-3xl font-sans font-semibold text-text mb-6">
+=======
+          <h3 className="text-2xl md:text-3xl font-bold font-headline text-primary mb-6">
+>>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/Roles.tsx
             {overview.title}
           </h3>
 
@@ -123,7 +127,11 @@ export default function Roles() {
             variants={r.variant}
             className="rounded-2xl border border-black/5 bg-white p-6 md:p-8 shadow-sm"
           >
-            <h4 className="text-xl md:text-2xl font-bold font-serif text-primary mb-4">{r.title}</h4>
+<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/Roles.tsx
+            <h4 className="text-xl md:text-2xl font-sans font-semibold text-text mb-4">{r.title}</h4>
+=======
+            <h4 className="text-xl md:text-2xl font-bold font-headline text-primary mb-4">{r.title}</h4>
+>>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/Roles.tsx
 
             <motion.ul variants={staggerList(0.08)} initial="hidden" animate="show" className="grid gap-3">
               {r.points.map((p) => (

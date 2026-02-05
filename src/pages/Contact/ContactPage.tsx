@@ -43,14 +43,14 @@ export default function KontaktPage() {
           <Link to="/" className="inline-block mb-8 text-sm text-primary hover:underline"> &larr; {t('forms.back_to_home')} </Link>
         </div>
         <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold font-serif text-primary">{t('forms.use_case.title')}</h1>
+          <h1 className="text-3xl md:text-4xl font-sans font-semibold text-text">{t('forms.use_case.title')}</h1>
           <p className="mt-3 text-lg">
             {t('forms.use_case.subtitle')}
           </p>
         </div>
 
         {!contactMutation.isSuccess ? (
-          <form onSubmit={onSubmit} className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm space-y-6">
+          <form onSubmit={onSubmit} className="bg-surface-1 border border-border shadow-ci rounded-xl p-6 md:p-8 space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium">{t('forms.common.name_label')}</label>
@@ -66,15 +66,15 @@ export default function KontaktPage() {
               <textarea name="message" value={form.message} onChange={onChange} rows={5} className="mt-1 w-full rounded-lg border p-2" placeholder={t('forms.use_case.message_placeholder')}></textarea>
             </div>
             <p className="text-xs text-gray-500">{t('forms.privacy_notice')}</p>
-            <button type="submit" disabled={contactMutation.isLoading} className="w-full bg-highlight text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition disabled:opacity-50">
+            <button type="submit" disabled={contactMutation.isLoading} className="w-full bg-primary text-text-inverse px-5 py-3 rounded-lg shadow-ci hover:shadow-ci-lg transition disabled:opacity-50">
               {contactMutation.isLoading ? t('forms.button_sending') : t('forms.button_send_request')}
             </button>
           </form>
         ) : (
           <div className="text-center py-12">
-            <h2 className="text-2xl font-bold font-serif text-primary">{t('forms.success.title')}</h2>
+            <h2 className="text-2xl font-sans font-semibold text-text">{t('forms.success.title')}</h2>
             <p className="mt-2 text-lg">{t('forms.success.message')}</p>
-            <Link to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
+            <Link to="/" className="inline-block mt-8 bg-surface-1 border border-border text-text px-5 py-3 rounded-lg hover:border-border-strong transition">
               {t('forms.back_to_home')}
             </Link>
           </div>
