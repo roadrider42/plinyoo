@@ -8,17 +8,8 @@ export default function CTA() {
 
   return (
     <section className="bg-highlight text-primary py-16 md:py-12 px-6 text-center rounded-xl mx-auto max-w-4xl mt-16 md:mt-12">
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/CTA.tsx
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/CTA.tsx
-      <h2 className="text-3xl md:text-4xl font-sans font-semibold mb-4">
-=======
       {/* Sachlichere Headline */}
       <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/CTA.tsx
-=======
-      {/* Sachlichere Headline */}
-      <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/CTA.tsx
         {t('cta.title')}
       </h2>
       <p className="text-lg md:text-xl mb-8">

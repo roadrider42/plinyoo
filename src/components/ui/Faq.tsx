@@ -13,15 +13,6 @@ export default function Faq() {
     <section className="bg-section-alternate px-6 md:px-12 py-16 md:py-12">
       <div className="max-w-3xl mx-auto py-6">
 
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/Faq.tsx
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/Faq.tsx
-      <h2 className="text-3xl font-sans font-semibold text-text mb-6">
-          {t('faq.title')}
-        </h2>
-        <ul className="divide-y divide-gray-200 rounded-2xl border border-gray-200 bg-white">
-=======
-=======
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/Faq.tsx
         {/* Intro-Satz - Knowledge Base Ton */}
         <div className="mb-8 text-center">
           <h2 className="text-3xl font-bold font-headline text-primary mb-4">
@@ -33,10 +24,6 @@ export default function Faq() {
         </div>
 
         <ul className="divide-y divide-border rounded-lg border border-border bg-white">
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/Faq.tsx
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/Faq.tsx
-=======
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/Faq.tsx
           {faqs.map((f, i) => {
             const active = open === i;
             return (

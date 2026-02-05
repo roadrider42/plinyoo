@@ -25,11 +25,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div>
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/layout/Footer.tsx
-            <h3 className="font-bold font-sans text-lg">plinyoo</h3>
-=======
             <h3 className="font-bold font-headline text-lg">plinyoo</h3>
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/layout/Footer.tsx
             <p className="text-sm text-gray-400 mt-2">{t('footer.brand.subtitle')}</p>
           </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 mt-4 md:mt-0 text-sm">

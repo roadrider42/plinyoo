@@ -9,15 +9,7 @@ const Features = () => {
   return (
     <section className="bg-section-alternate py-16 md:py-12">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/Features.tsx
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/components/ui/Features.tsx
-        <h2 className="text-3xl font-sans font-semibold text-text mb-6">
-=======
         <h2 className="text-3xl font-bold font-headline text-primary mb-6">
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/Features.tsx
-=======
-        <h2 className="text-3xl font-bold font-headline text-primary mb-6">
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/components/ui/Features.tsx
           {t('features.title')}
         </h2>
         <p className="text-main-text max-w-2xl mx-auto mb-12">
