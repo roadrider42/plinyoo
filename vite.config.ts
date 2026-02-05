@@ -9,7 +9,8 @@ import path from 'node:path'
 export default defineConfig(({ command }) => {
   const repo = process.env.GITHUB_REPOSITORY?.split('/')?.[1];
   const isGitHubActionsBuild = command === 'build' && Boolean(process.env.GITHUB_ACTIONS);
-  const base = isGitHubActionsBuild && repo ? `/${repo}/` : '/';
+  const envBase = process.env.VITE_BASE;
+  const base = envBase ?? (isGitHubActionsBuild && repo ? `/${repo}/` : '/');
 
   return {
     plugins: [react()],
