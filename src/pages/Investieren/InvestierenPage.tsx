@@ -50,7 +50,7 @@ export default function InvestierenPage() {
           <Link to="/" className="inline-block mb-8 text-sm text-primary hover:underline"> &larr; {t('forms.back_to_home')} </Link>
         </div>
         <div className="text-center mb-10">
-          <h1 className="text-3xl md:text-4xl font-bold font-serif text-primary">{t('forms.invest.title')}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold font-sans text-primary">{t('forms.invest.title')}</h1>
           <p className="mt-3 text-lg">
             {t('forms.invest.subtitle')}
           </p>
@@ -104,7 +104,7 @@ export default function InvestierenPage() {
 
         ) : (
           <div className="text-center py-12">
-            <h2 className="text-2xl font-bold font-serif text-primary">{t('forms.success.title')}</h2>
+            <h2 className="text-2xl font-bold font-sans text-primary">{t('forms.success.title')}</h2>
             <p className="mt-2 text-lg">{t('forms.success.message')}</p>
             <Link to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
               {t('forms.back_to_home')}

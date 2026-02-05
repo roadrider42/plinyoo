@@ -21,25 +21,28 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-primary text-white py-12 mt-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div>
-            <h3 className="font-bold font-serif text-lg">plinyoo</h3>
-            <p className="text-sm text-gray-400 mt-2">{t('footer.brand.subtitle')}</p>
+    <footer className="bg-primary text-white">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+          {/* Branding */}
+          <div className="w-full md:w-1/3">
+            <h3 className="font-bold font-sans text-xl text-white">plinyoo</h3>
+            <p className="text-sm text-white/70 mt-2">{t('footer.brand.subtitle')}</p>
           </div>
-          <div className="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 mt-4 md:mt-0 text-sm">
-            <Link to="/impressum" className="text-gray-400 hover:text-white">{t('footer.links.imprint')}</Link>
-            <Link to="/datenschutz" className="text-gray-400 hover:text-white">{t('footer.links.privacy')}</Link>
-            <Link to="/urheberrecht" className="text-gray-400 hover:text-white">{t('footer.links.copyright')}</Link>
-            <Link to="/mitmachen" className="text-gray-400 hover:text-white">{t('footer.links.join')}</Link>
-            <Link to="/investieren" className="text-gray-400 hover:text-white">{t('footer.links.invest')}</Link>
-            <Link to="/kontakt" className="text-gray-400 hover:text-white">{t('footer.links.contact')}</Link>
+          {/* Links */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm w-full md:w-auto">
+            <Link to="/impressum" className="text-white/70 hover:text-white transition-colors">{t('footer.links.imprint')}</Link>
+            <Link to="/datenschutz" className="text-white/70 hover:text-white transition-colors">{t('footer.links.privacy')}</Link>
+            <Link to="/urheberrecht" className="text-white/70 hover:text-white transition-colors">{t('footer.links.copyright')}</Link>
+            <Link to="/mitmachen" className="text-white/70 hover:text-white transition-colors">{t('footer.links.join')}</Link>
+            <Link to="/investieren" className="text-white/70 hover:text-white transition-colors">{t('footer.links.invest')}</Link>
+            <Link to="/kontakt" className="text-white/70 hover:text-white transition-colors">{t('footer.links.contact')}</Link>
           </div>
         </div>
-      </div>
-      <div className="mt-8 text-center text-xs text-gray-400">
-        &copy; {new Date().getFullYear()} plinyoo. {t('footer.copyright')}
+        {/* Copyright */}
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs text-white/50">
+          &copy; {new Date().getFullYear()} plinyoo. {t('footer.copyright')}
+        </div>
       </div>
     </footer>
   );

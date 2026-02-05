@@ -4,7 +4,8 @@
     "cta_secondary": "Investieren"
   },
   "hero": {
-    "title": "Gemeinsam wachsen – digital, menschlich, einzigartig.",
+    "eyebrow": "Digitale Lern- und Entscheidungsbegleitung",
+    "title": "Gemeinsam wachsen – digital, menschlich, wirksam.",
     "subtitle": "Wir begleiten Lern- und Beratungsprozesse mit intelligenten, vertrauenswürdigen digitalen Companions, die sich Ihren Zielen anpassen – nicht umgekehrt.",
     "cta_primary": "Jetzt mitmachen",
     "cta_secondary": "Für Investoren"
@@ -92,12 +93,14 @@
     "title": "Deine Vorteile mit Digital Companionship",
     "subtitle": "Digitale Companionship vereint personalisiertes Lernen, adaptive Begleitung und messbare Entwicklung – in einer integrierten Lösung für Menschen und Organisationen.",
     "items": [
-      { "title": "📚 Interaktive Lerninhalte", "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant." },
-      { "title": "📊 Fortschritts-Tracking", "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform." },
-      { "title": "📱 100 % mobil & anpassbar", "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline." }
+      { "title": "Interaktive Lerninhalte", "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant.", "category": "Interaktion" },
+      { "title": "Fortschritts-Tracking", "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform.", "category": "Messbarkeit" },
+      { "title": "100 % mobil & anpassbar", "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline.", "category": "Flexibilität" }
     ]
   },
   "testimonials": {
+    "title": "Aus der Praxis",
+    "subtitle": "Lernen fühlt sich persönlich und wirksam an.",
     "quotes": [
       "„Lernen fühlt sich endlich persönlich und wirksam an.“",
       "„Reflexion, Coaching und Wissen fließen nahtlos ineinander.“"
@@ -105,6 +108,7 @@
   },
   "faq": {
     "title": "Häufige Fragen",
+    "intro": "Antworten auf typische Fragen – kurz und nachvollziehbar.",
     "items": [
       { "q": "Passt es zu Einzelpersonen und Organisationen?", "a": "Ja – Rollen und Inhalte sind frei definierbar." },
       { "q": "Wie bleibt unsere Lernphilosophie erhalten?", "a": "Durch modulare Inhalte, flexible Designs und anpassbare Lernpfade." },
@@ -113,10 +117,10 @@
     ]
   },
   "cta": {
-    "title": "Bereit für den nächsten Schritt?",
+    "title": "Wie kann plinyoo dein Team konkret unterstützen?",
     "subtitle": "Lass uns gemeinsam herausfinden, wie plinyoo dein Team unterstützen kann.",
-    "secondary_action": "Mehr erfahren",
-    "button": "Mehr erfahren"
+    "secondary_action": "Kontakt aufnehmen",
+    "button": "Kontakt aufnehmen"
   },
   "storySketch": {
     "title": "So wird aus Wissen Service-Qualität",

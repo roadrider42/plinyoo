@@ -5,11 +5,23 @@ import { fadeUp, staggerList } from "../../lib/motion";
 
 export default function Testimonials() {
   const { t } = useTranslation();
+  const title = t('testimonials.title');
+  const subtitle = t('testimonials.subtitle');
   const quotes = t('testimonials.quotes', { returnObjects: true }) as string[];
 
   return (
     <section className="bg-main-background px-6 md:px-12 py-16 md:py-12">
       <div className="max-w-4xl mx-auto">
+        {/* Beobachtungs-Frame statt Emotion */}
+        <div className="mb-8 text-center">
+          <h2 className="text-sm font-medium tracking-wide text-soft-teal mb-2 uppercase">
+            {title}
+          </h2>
+          <p className="text-lg text-text-muted">
+            {subtitle}
+          </p>
+        </div>
+
         <motion.ul
           initial="hidden"
           whileInView="show"
@@ -21,9 +33,9 @@ export default function Testimonials() {
             <motion.li
               key={q}
               variants={fadeUp}
-              className="rounded-2xl border border-gray-200 bg-white p-6 text-center"
+              className="rounded-lg border-l-2 border-accent bg-white p-6 text-left hover:shadow-ci transition-shadow duration-200"
             >
-              <p className="text-base text-main-text">{q}</p>
+              <p className="text-sm text-text-muted not-italic">{q}</p>
             </motion.li>
           ))}
         </motion.ul>

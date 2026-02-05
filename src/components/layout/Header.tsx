@@ -8,17 +8,20 @@ export default function Header() {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const linkBase =
-    'px-3 py-2 text-sm font-medium transition-colors';
-  const linkInactive = 'text-main-text hover:text-primary';
-  const linkActive = 'text-primary';
+  const desktopLinkBase = 'px-3 py-2 text-sm font-medium transition-colors border-b-2';
+  const desktopLinkInactive = 'text-main-text hover:text-primary border-transparent';
+  const desktopLinkActive = 'text-primary border-primary';
+
+  const mobileLinkBase = 'text-2xl font-medium';
+  const mobileLinkInactive = 'text-main-text hover:text-primary';
+  const mobileLinkActive = 'text-primary';
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold font-serif text-primary">plinyoo</Link>
+            <Link to="/" className="text-xl font-bold font-sans text-primary">plinyoo</Link>
           </div>
 
           <div className="hidden md:flex flex-grow items-center justify-end gap-8">
@@ -26,7 +29,7 @@ export default function Header() {
               <NavLink
                 to="/mitmachen"
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? linkActive : linkInactive}`
+                  `${desktopLinkBase} ${isActive ? desktopLinkActive : desktopLinkInactive}`
                 }
               >
                 {t('navigation.cta_primary')}
@@ -34,7 +37,7 @@ export default function Header() {
               <NavLink
                 to="/investieren"
                 className={({ isActive }) =>
-                  `${linkBase} ${isActive ? linkActive : linkInactive}`
+                  `${desktopLinkBase} ${isActive ? desktopLinkActive : desktopLinkInactive}`
                 }
               >
                 {t('navigation.cta_secondary')}
@@ -66,14 +69,14 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu overlay */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="fixed inset-0 z-40 bg-white md:hidden">
+          <div className="flex flex-col items-center justify-center h-full space-y-6">
             <NavLink
               to="/mitmachen"
               className={({ isActive }) =>
-                `block px-3 py-2 rounded-md text-base font-medium ${isActive ? linkActive : 'text-main-text hover:bg-primary/10 hover:text-primary'}`
+                `${mobileLinkBase} ${isActive ? mobileLinkActive : mobileLinkInactive}`
               }
               onClick={() => setIsMenuOpen(false)}
             >
@@ -82,16 +85,15 @@ export default function Header() {
             <NavLink
               to="/investieren"
               className={({ isActive }) =>
-                `block px-3 py-2 rounded-md text-base font-medium ${isActive ? linkActive : 'text-main-text hover:bg-primary/10 hover:text-primary'}`
+                `${mobileLinkBase} ${isActive ? mobileLinkActive : mobileLinkInactive}`
               }
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navigation.cta_secondary')}
             </NavLink>
-            <div className="mt-4 flex justify-center">
+            <div className="mt-8">
               <LanguageSwitcher />
             </div>
-            {/* Anmelde-Link entfernt */}
           </div>
         </div>
       )}

@@ -1,6 +1,6 @@
-module.exports = async () => ({
+module.exports = {
   plugins: {
-    tailwindcss: await import('tailwindcss'),
-    autoprefixer: await import('autoprefixer'),
-  }
-});
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};

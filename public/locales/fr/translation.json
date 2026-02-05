@@ -90,18 +90,18 @@
       { "kpi": "-40%", "label": "Temps d'intégration" },
       { "kpi": "+25%", "label": "Productivité la première semaine" },
       { "kpi": "-30%", "label": "Taux d'erreur dans les processus" },
-      { "kpi": "+⭐", "label": "Clarté et satisfaction dans les commentaires" }
+      { "kpi": "+", "label": "Clarté et satisfaction dans les commentaires" }
     ]
   },
   "features": {
     "title": "Vos avantages avec la compagnie numérique",
     "subtitle": "La compagnie numérique combine un apprentissage personnalisé, un accompagnement adaptatif et un développement mesurable - en une seule solution intégrée pour les personnes et les organisations.",
     "items": [
-      { "title": "📚 Contenu d'apprentissage interactif", "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement."
+      { "title": "Contenu d'apprentissage interactif", "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement."
       },
-      { "title": "📊 Suivi des progrès", "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD."
+      { "title": "Suivi des progrès", "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD."
       },
-      { "title": "📱 100% mobile & adaptable", "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne."
+      { "title": "100% mobile & adaptable", "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne."
       }
     ]
   },
