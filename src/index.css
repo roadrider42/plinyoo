@@ -1,19 +1,9 @@
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/index.css
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/index.css
-=======
-=======
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/index.css
 /* =============================================================================
    PLINYOO - GLOBAL STYLES
    Zentrale Stelle für alle Style-Definitionen
    ============================================================================= */
 
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/index.css
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap');
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/index.css
-=======
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/index.css
 
 @tailwind base;
 @tailwind components;
@@ -59,9 +49,6 @@
    COMPONENTS LAYER - Wiederverwendbare Komponenten
    ============================================================================= */
 @layer components {
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/index.css
-  /* Custom component styles can be added here if needed. */
-=======
   /* Container utilities für konsistente Layout-Abstände */
   .container-responsive {
     @apply w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
@@ -86,11 +73,7 @@
   
   /* Font utilities */
   .font-headline {
-<<<<<<< /Users/heikomiertzsch/2. Areas/plinyoo/src/index.css
-    font-family: "Source Serif 4", serif;
-=======
     font-family: "IBM Plex Sans", "Inter", system-ui, sans-serif;
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/index.css
   }
 
   .font-ibm {
@@ -119,83 +102,6 @@
     @apply w-full px-4 py-3 rounded-xl border border-gray-300 bg-white 
            focus:ring-2 focus:ring-accent focus:border-transparent 
            placeholder:text-gray-400;
-  }
->>>>>>> /Users/heikomiertzsch/.windsurf/worktrees/plinyoo/plinyoo-a7eb93d5/src/index.css
-}
-
-/* =============================================================================
-   UTILITIES LAYER - Spezielle Utility-Klassen
-   ============================================================================= */
-@layer utilities {
-  /* Cognitive Infrastructure Color Utilities */
-  .text-ci-primary {
-    @apply text-primary;
-  }
-  
-  .bg-ci-surface {
-    @apply bg-surface-1;
-  }
-  
-  .border-ci {
-    @apply border-border;
-  }
-
-  /* Neue Farbwelt Utilities */
-  .text-soft-teal {
-    color: #6FB3B8;
-  }
-
-  .bg-mist-green {
-    background-color: #E6F0EF;
-  }
-
-  .bg-section-alternate {
-    background-color: #E6F0EF;
-  }
-  
-  /* Dark Mode Utilities */
-  .dark .bg-ci-surface {
-    @apply bg-dark-surface;
-  }
-  
-  .dark .text-ci-primary {
-    @apply text-dark-text;
-  }
-  
-  .dark .border-ci {
-    @apply border-dark-border;
-  }
-  
-  /* Shadow Utilities */
-  .shadow-ci {
-    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 2px 6px rgba(16, 24, 40, 0.06);
-  }
-  
-  .shadow-ci-lg {
-    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.12);
-  }
-  
-  /* Animation Utilities */
-  .animate-lift-subtle {
-    animation: lift 0.3s ease-out;
-  }
-
-  /* Subtle hover animations */
-  .hover-lift {
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-  }
-  
-  .hover-lift:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 2px 6px rgba(16, 24, 40, 0.06);
-  }
-
-  .hover-shadow-subtle {
-    transition: box-shadow 0.2s ease-out;
-  }
-  
-  .hover-shadow-subtle:hover {
-    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 2px 6px rgba(16, 24, 40, 0.06);
   }
 }
 
