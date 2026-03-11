@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passwort zurücksetzen – SpoonUp</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        :root {
+            --spoonup-green: #4CAF50;
+            --spoonup-red: #F44336;
+            --spoonup-blue: #2196F3;
+            --spoonup-gray: #f4f4f9;
+            --spoonup-dark-gray: #333;
+            --spoonup-light-gray: #ccc;
+            --spoonup-white: #fff;
+            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            font-family: var(--font-family);
+            background-color: var(--spoonup-gray);
+            color: var(--spoonup-dark-gray);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background: var(--spoonup-white);
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--spoonup-light-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #6B8E23, #8FBC8F);
+            color: var(--spoonup-white);
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.02);
+        }
+        .message {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            display: none; /* Initially hidden */
+        }
+        .message.success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            display: block;
+        }
+        .message.error {
+            background-color: #ffebee;
+            color: var(--spoonup-red);
+            display: block;
+        }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">🥄</div>
+        <h1>Neues Passwort festlegen</h1>
+        
+        <div id="reset-form">
+            <div class="form-group">
+                <label for="password">Neues Passwort</label>
+                <input type="password" id="password" placeholder="Mindestens 12 Zeichen">
+            </div>
+            <div class="form-group">
+                <label for="password-confirm">Passwort bestätigen</label>
+                <input type="password" id="password-confirm" placeholder="Passwort wiederholen">
+            </div>
+            <button id="reset-button">Passwort speichern</button>
+        </div>
+
+        <div id="message-container" class="message"></div>
+    </div>
+
+    <div class="footer">
+        SpoonUp &copy; 2025 – Version <span id="version-placeholder">dev</span>
+    </div>
+
+    <script>
+        const SUPABASE_URL = 'https://ivvnvjndkcsxwhbcvthr.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2dm52am5ka2NzeHdoYmN2dGhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE5OTU0NDMsImV4cCI6MjAzNzU3MTQ0M30.Fp6sbr23m3sW2G2c3s9s_s2vO2Fp8g9g8Yh7b6k5A4A';
+        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        const form = document.getElementById('reset-form');
+        const passwordInput = document.getElementById('password');
+        const passwordConfirmInput = document.getElementById('password-confirm');
+        const resetButton = document.getElementById('reset-button');
+        const messageContainer = document.getElementById('message-container');
+
+        let accessToken = null;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            const params = new URLSearchParams(hash);
+            accessToken = params.get('access_token');
+
+            if (!accessToken) {
+                showMessage('error', 'Ungültiger oder fehlender Link. Bitte fordere einen neuen Passwort-Reset-Link an.');
+                form.style.display = 'none';
+            }
+        });
+
+        resetButton.addEventListener('click', async () => {
+            const password = passwordInput.value;
+            const passwordConfirm = passwordConfirmInput.value;
+
+            if (password.length < 12) {
+                return showMessage('error', 'Das Passwort muss mindestens 12 Zeichen lang sein.');
+            }
+            if (password !== passwordConfirm) {
+                return showMessage('error', 'Die Passwörter stimmen nicht überein.');
+            }
+
+            showMessage(); // Clear previous messages
+            resetButton.disabled = true;
+            resetButton.textContent = 'Speichert...';
+
+            const { data, error } = await supabase.auth.updateUser({
+                password: password
+            });
+
+            if (error) {
+                showMessage('error', `Fehler: ${error.message}`);
+                resetButton.disabled = false;
+                resetButton.textContent = 'Passwort speichern';
+            } else {
+                showMessage('success', 'Dein Passwort wurde erfolgreich geändert. Du kannst dieses Fenster schließen und dich in der App neu anmelden.');
+                form.style.display = 'none';
+            }
+        });
+
+        function showMessage(type, text) {
+            messageContainer.className = 'message'; // Reset classes
+            if (type && text) {
+                messageContainer.classList.add(type);
+                messageContainer.textContent = text;
+            } 
+        }
+    </script>
+
+</body>
+</html>
