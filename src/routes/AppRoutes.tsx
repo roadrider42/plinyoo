@@ -1,6 +1,6 @@
 // src/routes/AppRoutes.tsx
 import React from 'react';
-import { createHashRouter, Navigate, Outlet } from 'react-router-dom';
+import { createHashRouter, Navigate, Outlet, useLocation } from 'react-router-dom';
 import ScrollToTop from '@/components/ScrollToTop';
 import AppLayout from '@/components/layout/AppLayout';
 
@@ -13,32 +13,24 @@ import DatenschutzPage from '@/pages/Datenschutz/DatenschutzPage';
 import UrheberrechtPage from '@/pages/Urheberrecht/UrheberrechtPage';
 import KontaktPage from '@/pages/Contact/ContactPage';
 
-// Layout für die Startseite: kein Header (Hero hat eigenen Header), fullWidth
-const HomeLayout = () => (
-  <AppLayout showHeader={false} fullWidth>
-    <ScrollToTop />
-    <Outlet />
-  </AppLayout>
-);
+// Layout: Startseite ohne Header (Hero hat eigenen), andere Seiten mit Header
+const RootLayout = () => {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
-// Layout für alle anderen Seiten: mit Header
-const RootLayout = () => (
-  <AppLayout>
-    <ScrollToTop />
-    <Outlet />
-  </AppLayout>
-);
+  return (
+    <AppLayout showHeader={!isHome} fullWidth={isHome}>
+      <ScrollToTop />
+      <Outlet />
+    </AppLayout>
+  );
+};
 
 export const router = createHashRouter([
   {
-    element: <HomeLayout />,
-    children: [
-      { path: "/", element: <HomePage /> },
-    ],
-  },
-  {
     element: <RootLayout />,
     children: [
+      { path: "/", element: <HomePage /> },
       { path: "/mitmachen", element: <MitmachenPage /> },
       { path: "/investieren", element: <InvestierenPage /> },
       { path: "/impressum", element: <ImpressumPage /> },
