@@ -13,6 +13,15 @@ import DatenschutzPage from '@/pages/Datenschutz/DatenschutzPage';
 import UrheberrechtPage from '@/pages/Urheberrecht/UrheberrechtPage';
 import KontaktPage from '@/pages/Contact/ContactPage';
 
+// Layout für die Startseite: kein Header (Hero hat eigenen Header), fullWidth
+const HomeLayout = () => (
+  <AppLayout showHeader={false} fullWidth>
+    <ScrollToTop />
+    <Outlet />
+  </AppLayout>
+);
+
+// Layout für alle anderen Seiten: mit Header
 const RootLayout = () => (
   <AppLayout>
     <ScrollToTop />
@@ -22,9 +31,14 @@ const RootLayout = () => (
 
 export const router = createHashRouter([
   {
-    element: <RootLayout />,
+    element: <HomeLayout />,
     children: [
       { path: "/", element: <HomePage /> },
+    ],
+  },
+  {
+    element: <RootLayout />,
+    children: [
       { path: "/mitmachen", element: <MitmachenPage /> },
       { path: "/investieren", element: <InvestierenPage /> },
       { path: "/impressum", element: <ImpressumPage /> },

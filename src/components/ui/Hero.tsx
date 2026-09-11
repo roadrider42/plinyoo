@@ -1,6 +1,6 @@
 // src/components/ui/Hero.tsx
 // Neue Plinyoo Hero mit Carousel und Kennwerten
-// Angepasst für plinyoo.com (ohne Brand-spezifische Hooks)
+// Angepasst für plinyoo.com (mit eigenem Header wie app.plinyoo.com)
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -36,8 +36,23 @@ export default function Hero() {
 
   return (
     <div className="bg-main-background text-main-text">
+      {/* Header — wie app.plinyoo.com */}
+      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
+        <Link to="/" aria-label={String(t('hero.title'))} className="text-xl font-bold font-sans text-primary">
+          plinyoo
+        </Link>
+        <a
+          href="https://app.plinyoo.com/login?redirect=%2Fdashboard"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-11 items-center rounded-full border border-border bg-white px-4 text-sm font-medium text-primary transition-colors hover:bg-surface-2"
+        >
+          Login
+        </a>
+      </div>
+
       {/* Hero Section */}
-      <section className="mx-auto flex w-full max-w-5xl flex-col gap-5 px-5 pt-16 sm:px-8 sm:pt-20 lg:items-center lg:text-center">
+      <section className="mx-auto flex w-full max-w-5xl flex-col gap-5 px-5 pt-8 sm:px-8 sm:pt-14 lg:items-center lg:text-center">
         <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface-1 py-1.5 pl-3 pr-3.5 text-xs font-medium text-text-muted">
           <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
           {t('hero.eyebrow')}
@@ -47,7 +62,7 @@ export default function Hero() {
           {t('hero.title')}
         </h1>
 
-        <p className="max-w-xl text-[0.95rem] leading-relaxed text-text-muted sm:text-lg">
+        <p className="max-w-xl text-[0.95rem] leading-relaxed text-main-text sm:text-lg">
           {t('hero.subtitle')}
         </p>
 
@@ -80,7 +95,7 @@ export default function Hero() {
               <h3 className="text-2xl font-bold text-primary mb-2">
                 {values[activeCardIndex].title}
               </h3>
-              <p className="text-text-muted">
+              <p className="text-main-text">
                 {values[activeCardIndex].description}
               </p>
             </div>
