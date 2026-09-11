@@ -4,11 +4,33 @@
     "cta_secondary": "Investieren"
   },
   "hero": {
-    "eyebrow": "Digitale Lern- und Entscheidungsbegleitung",
-    "title": "Gemeinsam wachsen – digital, menschlich, wirksam.",
-    "subtitle": "Wir begleiten Lern- und Beratungsprozesse mit intelligenten, vertrauenswürdigen digitalen Companions, die sich Ihren Zielen anpassen – nicht umgekehrt.",
-    "cta_primary": "Jetzt mitmachen",
+    "eyebrow": "Lernplattform mit Wissensgraph",
+    "title": "Der Wissensraum ist unentdeckt. Dein Weg ist einzigartig.",
+    "subtitle": "Entdecke Themen, die dich interessieren. Wähle deinen eigenen Lernpfad. Wachse in deinem Tempo.",
+    "cta": "Zur App",
+    "cta_primary": "Zur App",
     "cta_secondary": "Für Investoren"
+  },
+  "hero1": {
+    "eyebrow": "Der Einstieg",
+    "title": "Jeden Tag etwas mehr können.",
+    "subtitle": "Wissen ist die Grundlage für gute Entscheidungen, wertvolle Erfahrungen und echte Kompetenz.",
+    "description": "Plinyoo hilft Menschen, die richtige Wissensbasis effizient aufzubauen – verständlich, gezielt und mit möglichst wenig Aufwand.",
+    "cta": "Wissen aufbauen"
+  },
+  "hero2": {
+    "eyebrow": "Der Kern",
+    "title": "Erfahrung kann man nicht lernen.",
+    "subtitle": "Aber man kann lernen, sie zu verstehen.",
+    "description": "Plinyoo schafft die Wissensbasis, die Menschen brauchen, um Erlebtes einzuordnen, Zusammenhänge zu erkennen und aus ihren Erfahrungen wirklich zu lernen.",
+    "cta": "Erfahrung verstehen"
+  },
+  "hero3": {
+    "eyebrow": "Das Ergebnis",
+    "title": "Wissen wird zu Können.",
+    "subtitle": "Wenn Menschen verstehen, was sie tun, wird aus Erfahrung echte Kompetenz.",
+    "description": "Plinyoo verbindet Wissen, Lernen und Anwendung zu einem kontinuierlichen Prozess – damit Menschen nicht einfach mehr wissen, sondern jeden Tag etwas mehr können.",
+    "cta": "Plinyoo entdecken"
   },
   "visionMission": {
     "visionTitle": "Vision",
