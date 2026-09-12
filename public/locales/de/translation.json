@@ -76,27 +76,63 @@
   },
   "pillars": {
     "items": [
-      { "title": "Individuell statt generisch", "desc": "Deine Wege, dein Stil, dein Ton." },
-      { "title": "Lernqualität messbar", "desc": "Ziele, Fortschritt und Wirkung verknüpfen." },
-      { "title": "Ein Tool für alles Lernen", "desc": "Onboarding, Training, Weiterbildung, Coaching." },
-      { "title": "Schnell im Einsatz", "desc": "Mobil, sicher, sofort nutzbar – für Mensch und Organisation." }
+      {
+        "title": "Individuell statt generisch",
+        "desc": "Deine Wege, dein Stil, dein Ton."
+      },
+      {
+        "title": "Lernqualität messbar",
+        "desc": "Ziele, Fortschritt und Wirkung verknüpfen."
+      },
+      {
+        "title": "Ein Tool für alles Lernen",
+        "desc": "Onboarding, Training, Weiterbildung, Coaching."
+      },
+      {
+        "title": "Schnell im Einsatz",
+        "desc": "Mobil, sicher, sofort nutzbar – für Mensch und Organisation."
+      }
     ]
   },
   "outcomes": {
     "items": [
-      { "kpi": "-40 %", "label": "Einarbeitungszeit" },
-      { "kpi": "+25 %", "label": "Produktivität in Woche 1" },
-      { "kpi": "-30 %", "label": "Fehlerquote im Prozess" },
-      { "kpi": "+⭐", "label": "Zufriedenheit und Klarheit im Feedback" }
+      {
+        "kpi": "-40 %",
+        "label": "Einarbeitungszeit"
+      },
+      {
+        "kpi": "+25 %",
+        "label": "Produktivität in Woche 1"
+      },
+      {
+        "kpi": "-30 %",
+        "label": "Fehlerquote im Prozess"
+      },
+      {
+        "kpi": "+⭐",
+        "label": "Zufriedenheit und Klarheit im Feedback"
+      }
     ]
   },
   "features": {
     "title": "Deine Vorteile mit Digital Companionship",
     "subtitle": "Digitale Companionship vereint personalisiertes Lernen, adaptive Begleitung und messbare Entwicklung – in einer integrierten Lösung für Menschen und Organisationen.",
     "items": [
-      { "title": "Interaktive Lerninhalte", "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant.", "category": "Interaktion" },
-      { "title": "Fortschritts-Tracking", "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform.", "category": "Messbarkeit" },
-      { "title": "100 % mobil & anpassbar", "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline.", "category": "Flexibilität" }
+      {
+        "title": "Interaktive Lerninhalte",
+        "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant.",
+        "category": "Interaktion"
+      },
+      {
+        "title": "Fortschritts-Tracking",
+        "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform.",
+        "category": "Messbarkeit"
+      },
+      {
+        "title": "100 % mobil & anpassbar",
+        "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline.",
+        "category": "Flexibilität"
+      }
     ]
   },
   "testimonials": {
@@ -111,10 +147,22 @@
     "title": "Häufige Fragen",
     "intro": "Antworten auf typische Fragen – kurz und nachvollziehbar.",
     "items": [
-      { "q": "Passt es zu Einzelpersonen und Organisationen?", "a": "Ja – Rollen und Inhalte sind frei definierbar." },
-      { "q": "Wie bleibt unsere Lernphilosophie erhalten?", "a": "Durch modulare Inhalte, flexible Designs und anpassbare Lernpfade." },
-      { "q": "Können wir Fortschritt und Wirkung messen?", "a": "Ja, DSGVO-konform – mit individuellen oder aggregierten Auswertungen." },
-      { "q": "Braucht es lange Schulungen?", "a": "Nein – intuitive Nutzung und sofort startklar." }
+      {
+        "q": "Passt es zu Einzelpersonen und Organisationen?",
+        "a": "Ja – Rollen und Inhalte sind frei definierbar."
+      },
+      {
+        "q": "Wie bleibt unsere Lernphilosophie erhalten?",
+        "a": "Durch modulare Inhalte, flexible Designs und anpassbare Lernpfade."
+      },
+      {
+        "q": "Können wir Fortschritt und Wirkung messen?",
+        "a": "Ja, DSGVO-konform – mit individuellen oder aggregierten Auswertungen."
+      },
+      {
+        "q": "Braucht es lange Schulungen?",
+        "a": "Nein – intuitive Nutzung und sofort startklar."
+      }
     ]
   },
   "cta": {
@@ -126,11 +174,26 @@
     "title": "So wird aus Wissen Service-Qualität",
     "subtitle": "Von der Speisekarte zum Gästeerlebnis – als schlanke Skizze gedacht.",
     "steps": [
-      { "title": "Restaurantleiter", "desc": "Fotografiert Speisekarte & Restaurant." },
-      { "title": "SpoonUp generiert die Inhalte", "desc": "Spezifische Lern-Module entstehen." },
-      { "title": "Content-Editor", "desc": "Weinhändler ergänzt Pairings & Tipps." },
-      { "title": "Service nutzt’s", "desc": "Team greift mobil zu, arbeitet sicher." },
-      { "title": "Glückliche Gäste", "desc": "kompetenter, herzlicher Service." }
+      {
+        "title": "Restaurantleiter",
+        "desc": "Fotografiert Speisekarte & Restaurant."
+      },
+      {
+        "title": "SpoonUp generiert die Inhalte",
+        "desc": "Spezifische Lern-Module entstehen."
+      },
+      {
+        "title": "Content-Editor",
+        "desc": "Weinhändler ergänzt Pairings & Tipps."
+      },
+      {
+        "title": "Service nutzt’s",
+        "desc": "Team greift mobil zu, arbeitet sicher."
+      },
+      {
+        "title": "Glückliche Gäste",
+        "desc": "kompetenter, herzlicher Service."
+      }
     ]
   },
   "examples": {
@@ -143,7 +206,7 @@
       "title": "Weitere Beispiele folgen"
     },
     "molly": {
-      "title": "Molly",
+      "title": "Ingrid",
       "subtitle": "Deine virtuelle Ernährungsberaterin",
       "desc": "Individuelle Ernährungsberatung, immer verfügbar.",
       "button": "Coming soon"

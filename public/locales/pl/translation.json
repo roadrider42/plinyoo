@@ -20,9 +20,18 @@
     "overview": {
       "title": "Trzy role – jeden cel: trwały rozwój.",
       "mini_cards": [
-        { "title": "Uczący się", "desc": "Odkrywaj, co naprawdę pcha Cię do przodu." },
-        { "title": "Przewodnicy i coachowie", "desc": "Prowadź, reflektuj, inspiruj." },
-        { "title": "Organizacje", "desc": "Uczyń kulturę uczenia się widoczną i trwałą." }
+        {
+          "title": "Uczący się",
+          "desc": "Odkrywaj, co naprawdę pcha Cię do przodu."
+        },
+        {
+          "title": "Przewodnicy i coachowie",
+          "desc": "Prowadź, reflektuj, inspiruj."
+        },
+        {
+          "title": "Organizacje",
+          "desc": "Uczyń kulturę uczenia się widoczną i trwałą."
+        }
       ],
       "points": [
         "Rozwiązania Brainbyte Buffet łączą uczących się, przewodników i organizacje na jednej platformie.",
@@ -68,34 +77,79 @@
   },
   "howItWorks": {
     "steps": [
-      { "title": "Zdefiniuj role", "desc": "Ustal cele, kompetencje, wartości i ścieżki nauki." },
-      { "title": "Projektuj treści", "desc": "Twórz mikromoduły, ćwiczenia refleksyjne, dialogi i pętle feedbacku." },
-      { "title": "Mierz i ulepszaj", "desc": "Śledź postępy i efektywność nauki oraz doskonal coaching." }
+      {
+        "title": "Zdefiniuj role",
+        "desc": "Ustal cele, kompetencje, wartości i ścieżki nauki."
+      },
+      {
+        "title": "Projektuj treści",
+        "desc": "Twórz mikromoduły, ćwiczenia refleksyjne, dialogi i pętle feedbacku."
+      },
+      {
+        "title": "Mierz i ulepszaj",
+        "desc": "Śledź postępy i efektywność nauki oraz doskonal coaching."
+      }
     ]
   },
   "pillars": {
     "items": [
-      { "title": "Indywidualność zamiast schematów", "desc": "Twoja droga, Twój styl, Twój ton." },
-      { "title": "Mierzalna jakość nauki", "desc": "Połącz cele, postępy i rezultaty." },
-      { "title": "Jedno narzędzie do całej nauki", "desc": "Onboarding, szkolenia, rozwój i coaching." },
-      { "title": "Szybkie wdrożenie", "desc": "Mobilne, bezpieczne i gotowe do użycia – dla osób i organizacji." }
+      {
+        "title": "Indywidualność zamiast schematów",
+        "desc": "Twoja droga, Twój styl, Twój ton."
+      },
+      {
+        "title": "Mierzalna jakość nauki",
+        "desc": "Połącz cele, postępy i rezultaty."
+      },
+      {
+        "title": "Jedno narzędzie do całej nauki",
+        "desc": "Onboarding, szkolenia, rozwój i coaching."
+      },
+      {
+        "title": "Szybkie wdrożenie",
+        "desc": "Mobilne, bezpieczne i gotowe do użycia – dla osób i organizacji."
+      }
     ]
   },
   "outcomes": {
     "items": [
-      { "kpi": "-40%", "label": "Czas onboardingu" },
-      { "kpi": "+25%", "label": "Produktywność w pierwszym tygodniu" },
-      { "kpi": "-30%", "label": "Liczba błędów w procesach" },
-      { "kpi": "+", "label": "Jasność i satysfakcja z feedbacku" }
+      {
+        "kpi": "-40%",
+        "label": "Czas onboardingu"
+      },
+      {
+        "kpi": "+25%",
+        "label": "Produktywność w pierwszym tygodniu"
+      },
+      {
+        "kpi": "-30%",
+        "label": "Liczba błędów w procesach"
+      },
+      {
+        "kpi": "+",
+        "label": "Jasność i satysfakcja z feedbacku"
+      }
     ]
   },
   "features": {
     "title": "Twoje korzyści z Cyfrowego Towarzyszenia",
     "subtitle": "Cyfrowe Towarzyszenie łączy spersonalizowaną naukę, adaptacyjne wsparcie i mierzalny rozwój – w jednym zintegrowanym rozwiązaniu dla ludzi i organizacji.",
     "items": [
-      { "title": "Interaktywne treści edukacyjne", "desc": "Dialogi, impulsy do refleksji i prowadzenie krok po kroku – cyfrowe, a zarazem osobiste.", "category": "" },
-      { "title": "Śledzenie postępów", "desc": "Monitoruj rozwój i wpływ – transparentnie, motywująco i zgodnie z RODO.", "category": "" },
-      { "title": "100% mobilne i elastyczne", "desc": "Ucz się i działaj – gdziekolwiek i kiedykolwiek, online lub offline.", "category": "" }
+      {
+        "title": "Interaktywne treści edukacyjne",
+        "desc": "Dialogi, impulsy do refleksji i prowadzenie krok po kroku – cyfrowe, a zarazem osobiste.",
+        "category": ""
+      },
+      {
+        "title": "Śledzenie postępów",
+        "desc": "Monitoruj rozwój i wpływ – transparentnie, motywująco i zgodnie z RODO.",
+        "category": ""
+      },
+      {
+        "title": "100% mobilne i elastyczne",
+        "desc": "Ucz się i działaj – gdziekolwiek i kiedykolwiek, online lub offline.",
+        "category": ""
+      }
     ]
   },
   "testimonials": {
@@ -108,10 +162,22 @@
     "title": "Najczęściej zadawane pytania",
     "intro": "",
     "items": [
-      { "q": "Czy jest to odpowiednie dla osób i organizacji?", "a": "Tak – role i treści są w pełni konfigurowalne." },
-      { "q": "Jak zachować własną filozofię uczenia się?", "a": "Dzięki modułowej budowie, elastycznym ścieżkom nauki i konfigurowalnym strukturom treści." },
-      { "q": "Czy możemy mierzyć postępy i wpływ?", "a": "Tak, zgodnie z RODO – indywidualnie lub zbiorczo." },
-      { "q": "Czy wymaga to długiego onboardingu?", "a": "Nie – intuicyjna obsługa i natychmiastowa gotowość do startu." }
+      {
+        "q": "Czy jest to odpowiednie dla osób i organizacji?",
+        "a": "Tak – role i treści są w pełni konfigurowalne."
+      },
+      {
+        "q": "Jak zachować własną filozofię uczenia się?",
+        "a": "Dzięki modułowej budowie, elastycznym ścieżkom nauki i konfigurowalnym strukturom treści."
+      },
+      {
+        "q": "Czy możemy mierzyć postępy i wpływ?",
+        "a": "Tak, zgodnie z RODO – indywidualnie lub zbiorczo."
+      },
+      {
+        "q": "Czy wymaga to długiego onboardingu?",
+        "a": "Nie – intuicyjna obsługa i natychmiastowa gotowość do startu."
+      }
     ]
   },
   "cta": {
@@ -123,11 +189,26 @@
     "title": "Tak wiedza staje się jakością obsługi",
     "subtitle": "Od menu po doświadczenie gościa – w formie szczupłego szkicu.",
     "steps": [
-      { "title": "Menedżer restauracji", "desc": "Fotografuje menu i restaurację." },
-      { "title": "SpoonUp generuje treści", "desc": "Powstają konkretne moduły edukacyjne." },
-      { "title": "Redaktor treści", "desc": "Sommelier dodaje rekomendacje i wskazówki." },
-      { "title": "Obsługa korzysta", "desc": "Zespół ma dostęp mobilny i pracuje bezpiecznie." },
-      { "title": "Zadowoleni goście", "desc": "kompetentna, serdeczna obsługa." }
+      {
+        "title": "Menedżer restauracji",
+        "desc": "Fotografuje menu i restaurację."
+      },
+      {
+        "title": "SpoonUp generuje treści",
+        "desc": "Powstają konkretne moduły edukacyjne."
+      },
+      {
+        "title": "Redaktor treści",
+        "desc": "Sommelier dodaje rekomendacje i wskazówki."
+      },
+      {
+        "title": "Obsługa korzysta",
+        "desc": "Zespół ma dostęp mobilny i pracuje bezpiecznie."
+      },
+      {
+        "title": "Zadowoleni goście",
+        "desc": "kompetentna, serdeczna obsługa."
+      }
     ]
   },
   "examples": {
@@ -140,7 +221,7 @@
       "title": "Więcej przykładów wkrótce"
     },
     "molly": {
-      "title": "Molly",
+      "title": "Ingrid",
       "subtitle": "Twój wirtualny dietetyk",
       "desc": "Indywidualne porady żywieniowe, zawsze dostępne.",
       "button": "Wkrótce"

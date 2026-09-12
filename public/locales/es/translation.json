@@ -20,9 +20,18 @@
     "overview": {
       "title": "Tres roles, un objetivo: un crecimiento que perdura.",
       "mini_cards": [
-        { "title": "Aprendices", "desc": "Descubre lo que realmente te hace avanzar." },
-        { "title": "Guías y Coaches", "desc": "Entrenar, reflexionar, inspirar." },
-        { "title": "Organizaciones", "desc": "Hacer visible y sostenible la cultura del aprendizaje." }
+        {
+          "title": "Aprendices",
+          "desc": "Descubre lo que realmente te hace avanzar."
+        },
+        {
+          "title": "Guías y Coaches",
+          "desc": "Entrenar, reflexionar, inspirar."
+        },
+        {
+          "title": "Organizaciones",
+          "desc": "Hacer visible y sostenible la cultura del aprendizaje."
+        }
       ],
       "points": [
         "Las soluciones de Brainbyte Buffet reúnen a aprendices, guías y organizaciones en una sola plataforma.",
@@ -68,34 +77,79 @@
   },
   "howItWorks": {
     "steps": [
-      { "title": "Definir roles", "desc": "Establecer objetivos, competencias, valores y rutas de aprendizaje." },
-      { "title": "Diseñar contenido", "desc": "Desarrollar micromódulos, ejercicios de reflexión, diálogos y bucles de retroalimentación." },
-      { "title": "Medir y mejorar", "desc": "Seguir el progreso del aprendizaje y la eficacia, y perfeccionar el coaching en consecuencia." }
+      {
+        "title": "Definir roles",
+        "desc": "Establecer objetivos, competencias, valores y rutas de aprendizaje."
+      },
+      {
+        "title": "Diseñar contenido",
+        "desc": "Desarrollar micromódulos, ejercicios de reflexión, diálogos y bucles de retroalimentación."
+      },
+      {
+        "title": "Medir y mejorar",
+        "desc": "Seguir el progreso del aprendizaje y la eficacia, y perfeccionar el coaching en consecuencia."
+      }
     ]
   },
   "pillars": {
     "items": [
-      { "title": "Individual sobre genérico", "desc": "A tu manera, con tu estilo, en tu tono." },
-      { "title": "Calidad de aprendizaje medible", "desc": "Conecta objetivos, progreso y resultados." },
-      { "title": "Una herramienta para todo el aprendizaje", "desc": "Incorporación, formación, desarrollo y coaching." },
-      { "title": "Rápido de implementar", "desc": "Móvil, seguro y listo para usar, para individuos y organizaciones por igual." }
+      {
+        "title": "Individual sobre genérico",
+        "desc": "A tu manera, con tu estilo, en tu tono."
+      },
+      {
+        "title": "Calidad de aprendizaje medible",
+        "desc": "Conecta objetivos, progreso y resultados."
+      },
+      {
+        "title": "Una herramienta para todo el aprendizaje",
+        "desc": "Incorporación, formación, desarrollo y coaching."
+      },
+      {
+        "title": "Rápido de implementar",
+        "desc": "Móvil, seguro y listo para usar, para individuos y organizaciones por igual."
+      }
     ]
   },
   "outcomes": {
     "items": [
-      { "kpi": "-40%", "label": "Tiempo de incorporación" },
-      { "kpi": "+25%", "label": "Productividad en la primera semana" },
-      { "kpi": "-30%", "label": "Tasa de error en los procesos" },
-      { "kpi": "+", "label": "Claridad y satisfacción en los comentarios" }
+      {
+        "kpi": "-40%",
+        "label": "Tiempo de incorporación"
+      },
+      {
+        "kpi": "+25%",
+        "label": "Productividad en la primera semana"
+      },
+      {
+        "kpi": "-30%",
+        "label": "Tasa de error en los procesos"
+      },
+      {
+        "kpi": "+",
+        "label": "Claridad y satisfacción en los comentarios"
+      }
     ]
   },
   "features": {
     "title": "Tus beneficios con el Acompañamiento Digital",
     "subtitle": "El Acompañamiento Digital combina aprendizaje personalizado, orientación adaptativa y desarrollo medible en una solución integrada para personas y organizaciones.",
     "items": [
-      { "title": "Contenido de aprendizaje interactivo", "desc": "Diálogos, estímulos para la reflexión y orientación paso a paso, con apoyo digital y personalmente relevante.", "category": "" },
-      { "title": "Seguimiento del progreso", "desc": "Supervisa el desarrollo y el impacto: transparente, motivador y conforme con el RGPD.", "category": "" },
-      { "title": "100% móvil y adaptable", "desc": "Aprende e interactúa, en cualquier lugar, en cualquier momento, en línea o sin conexión.", "category": "" }
+      {
+        "title": "Contenido de aprendizaje interactivo",
+        "desc": "Diálogos, estímulos para la reflexión y orientación paso a paso, con apoyo digital y personalmente relevante.",
+        "category": ""
+      },
+      {
+        "title": "Seguimiento del progreso",
+        "desc": "Supervisa el desarrollo y el impacto: transparente, motivador y conforme con el RGPD.",
+        "category": ""
+      },
+      {
+        "title": "100% móvil y adaptable",
+        "desc": "Aprende e interactúa, en cualquier lugar, en cualquier momento, en línea o sin conexión.",
+        "category": ""
+      }
     ]
   },
   "testimonials": {
@@ -108,10 +162,22 @@
     "title": "Preguntas frecuentes",
     "intro": "",
     "items": [
-      { "q": "¿Es adecuado para individuos y organizaciones?", "a": "Sí, los roles y el contenido son totalmente personalizables." },
-      { "q": "¿Cómo podemos preservar nuestra filosofía de aprendizaje?", "a": "A través del diseño modular, rutas de aprendizaje flexibles y estructuras de contenido personalizables." },
-      { "q": "¿Podemos medir el progreso y el impacto?", "a": "Sí, conforme con el RGPD, a nivel individual o agregado." },
-      { "q": "¿Requiere una larga incorporación?", "a": "No, es de uso intuitivo y está listo para lanzarse al instante." }
+      {
+        "q": "¿Es adecuado para individuos y organizaciones?",
+        "a": "Sí, los roles y el contenido son totalmente personalizables."
+      },
+      {
+        "q": "¿Cómo podemos preservar nuestra filosofía de aprendizaje?",
+        "a": "A través del diseño modular, rutas de aprendizaje flexibles y estructuras de contenido personalizables."
+      },
+      {
+        "q": "¿Podemos medir el progreso y el impacto?",
+        "a": "Sí, conforme con el RGPD, a nivel individual o agregado."
+      },
+      {
+        "q": "¿Requiere una larga incorporación?",
+        "a": "No, es de uso intuitivo y está listo para lanzarse al instante."
+      }
     ]
   },
   "cta": {
@@ -123,11 +189,26 @@
     "title": "Así es como el conocimiento se convierte en calidad de servicio",
     "subtitle": "Del menú a la experiencia del cliente, diseñado como un boceto sencillo.",
     "steps": [
-      { "title": "Gerente de restaurante", "desc": "Fotografía el menú y el restaurante." },
-      { "title": "SpoonUp genera el contenido", "desc": "Se crean módulos de aprendizaje específicos." },
-      { "title": "Editor de contenido", "desc": "El comerciante de vinos añade maridajes y consejos." },
-      { "title": "El servicio lo utiliza", "desc": "El equipo accede a él en el móvil, trabaja de forma segura." },
-      { "title": "Clientes felices", "desc": "servicio competente y cordial." }
+      {
+        "title": "Gerente de restaurante",
+        "desc": "Fotografía el menú y el restaurante."
+      },
+      {
+        "title": "SpoonUp genera el contenido",
+        "desc": "Se crean módulos de aprendizaje específicos."
+      },
+      {
+        "title": "Editor de contenido",
+        "desc": "El comerciante de vinos añade maridajes y consejos."
+      },
+      {
+        "title": "El servicio lo utiliza",
+        "desc": "El equipo accede a él en el móvil, trabaja de forma segura."
+      },
+      {
+        "title": "Clientes felices",
+        "desc": "servicio competente y cordial."
+      }
     ]
   },
   "forms": {
@@ -198,7 +279,7 @@
       "title": "Más ejemplos próximamente"
     },
     "molly": {
-      "title": "Molly",
+      "title": "Ingrid",
       "subtitle": "Tu Nutricionista virtual",
       "desc": "Asesoramiento nutricional individual, siempre disponible.",
       "button": "Próximamente"

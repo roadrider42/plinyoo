@@ -20,9 +20,18 @@
     "overview": {
       "title": "Trois rôles - un objectif : une croissance qui dure.",
       "mini_cards": [
-        { "title": "Apprenants", "desc": "Découvrez ce qui vous fait vraiment avancer." },
-        { "title": "Guides & Coachs", "desc": "Coach, réfléchir, inspirer." },
-        { "title": "Organisations", "desc": "Rendre la culture de l'apprentissage visible et durable." }
+        {
+          "title": "Apprenants",
+          "desc": "Découvrez ce qui vous fait vraiment avancer."
+        },
+        {
+          "title": "Guides & Coachs",
+          "desc": "Coach, réfléchir, inspirer."
+        },
+        {
+          "title": "Organisations",
+          "desc": "Rendre la culture de l'apprentissage visible et durable."
+        }
       ],
       "points": [
         "Les solutions de Brainbyte Buffet rassemblent les apprenants, les guides et les organisations sur une seule plateforme.",
@@ -68,39 +77,79 @@
   },
   "howItWorks": {
     "steps": [
-      { "title": "Définir les rôles", "desc": "Fixer les objectifs, les compétences, les valeurs et les parcours d'apprentissage." },
-      { "title": "Concevoir le contenu", "desc": "Développer des micro-modules, des exercices de réflexion, des dialogues et des boucles de rétroaction."
+      {
+        "title": "Définir les rôles",
+        "desc": "Fixer les objectifs, les compétences, les valeurs et les parcours d'apprentissage."
       },
-      { "title": "Mesurer & améliorer", "desc": "Suivre les progrès de l'apprentissage et l'efficacité, et affiner le coaching en conséquence."
+      {
+        "title": "Concevoir le contenu",
+        "desc": "Développer des micro-modules, des exercices de réflexion, des dialogues et des boucles de rétroaction."
+      },
+      {
+        "title": "Mesurer & améliorer",
+        "desc": "Suivre les progrès de l'apprentissage et l'efficacité, et affiner le coaching en conséquence."
       }
     ]
   },
   "pillars": {
     "items": [
-      { "title": "Individuel plutôt que générique", "desc": "Votre chemin, votre style, votre ton." },
-      { "title": "Qualité d'apprentissage mesurable", "desc": "Relier les objectifs, les progrès et les résultats."
+      {
+        "title": "Individuel plutôt que générique",
+        "desc": "Votre chemin, votre style, votre ton."
       },
-      { "title": "Un outil pour tout l'apprentissage", "desc": "Intégration, formation, développement et coaching."
+      {
+        "title": "Qualité d'apprentissage mesurable",
+        "desc": "Relier les objectifs, les progrès et les résultats."
       },
-      { "title": "Rapide à mettre en œuvre", "desc": "Mobile, sécurisé et prêt à l'emploi - pour les individus comme pour les organisations."
+      {
+        "title": "Un outil pour tout l'apprentissage",
+        "desc": "Intégration, formation, développement et coaching."
+      },
+      {
+        "title": "Rapide à mettre en œuvre",
+        "desc": "Mobile, sécurisé et prêt à l'emploi - pour les individus comme pour les organisations."
       }
     ]
   },
   "outcomes": {
     "items": [
-      { "kpi": "-40%", "label": "Temps d'intégration" },
-      { "kpi": "+25%", "label": "Productivité la première semaine" },
-      { "kpi": "-30%", "label": "Taux d'erreur dans les processus" },
-      { "kpi": "+", "label": "Clarté et satisfaction dans les commentaires" }
+      {
+        "kpi": "-40%",
+        "label": "Temps d'intégration"
+      },
+      {
+        "kpi": "+25%",
+        "label": "Productivité la première semaine"
+      },
+      {
+        "kpi": "-30%",
+        "label": "Taux d'erreur dans les processus"
+      },
+      {
+        "kpi": "+",
+        "label": "Clarté et satisfaction dans les commentaires"
+      }
     ]
   },
   "features": {
     "title": "Vos avantages avec la compagnie numérique",
     "subtitle": "La compagnie numérique combine un apprentissage personnalisé, un accompagnement adaptatif et un développement mesurable - en une seule solution intégrée pour les personnes et les organisations.",
     "items": [
-      { "title": "Contenu d'apprentissage interactif", "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement.", "category": "" },
-      { "title": "Suivi des progrès", "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD.", "category": "" },
-      { "title": "100% mobile & adaptable", "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne.", "category": "" }
+      {
+        "title": "Contenu d'apprentissage interactif",
+        "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement.",
+        "category": ""
+      },
+      {
+        "title": "Suivi des progrès",
+        "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD.",
+        "category": ""
+      },
+      {
+        "title": "100% mobile & adaptable",
+        "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne.",
+        "category": ""
+      }
     ]
   },
   "testimonials": {
@@ -113,13 +162,21 @@
     "title": "Questions fréquemment posées",
     "intro": "",
     "items": [
-      { "q": "Est-ce adapté aux individus et aux organisations ?", "a": "Oui - les rôles et le contenu sont entièrement personnalisables."
+      {
+        "q": "Est-ce adapté aux individus et aux organisations ?",
+        "a": "Oui - les rôles et le contenu sont entièrement personnalisables."
       },
-      { "q": "Comment pouvons-nous préserver notre philosophie d'apprentissage ?", "a": "Grâce à une conception modulaire, des parcours d'apprentissage flexibles et des structures de contenu personnalisables."
+      {
+        "q": "Comment pouvons-nous préserver notre philosophie d'apprentissage ?",
+        "a": "Grâce à une conception modulaire, des parcours d'apprentissage flexibles et des structures de contenu personnalisables."
       },
-      { "q": "Pouvons-nous mesurer les progrès et l'impact ?", "a": "Oui, conforme au RGPD - au niveau individuel ou agrégé."
+      {
+        "q": "Pouvons-nous mesurer les progrès et l'impact ?",
+        "a": "Oui, conforme au RGPD - au niveau individuel ou agrégé."
       },
-      { "q": "Cela nécessite-t-il une longue intégration ?", "a": "Non - utilisation intuitive et prêt à être lancé instantanément."
+      {
+        "q": "Cela nécessite-t-il une longue intégration ?",
+        "a": "Non - utilisation intuitive et prêt à être lancé instantanément."
       }
     ]
   },
@@ -132,15 +189,25 @@
     "title": "C'est ainsi que la connaissance devient une qualité de service",
     "subtitle": "Du menu à l'expérience client - conçu comme une esquisse épurée.",
     "steps": [
-      { "title": "Directeur de restaurant", "desc": "Photographie le menu et le restaurant."
+      {
+        "title": "Directeur de restaurant",
+        "desc": "Photographie le menu et le restaurant."
       },
-      { "title": "SpoonUp génère le contenu", "desc": "Des modules d'apprentissage spécifiques sont créés."
+      {
+        "title": "SpoonUp génère le contenu",
+        "desc": "Des modules d'apprentissage spécifiques sont créés."
       },
-      { "title": "Éditeur de contenu", "desc": "Le marchand de vin ajoute des accords et des conseils."
+      {
+        "title": "Éditeur de contenu",
+        "desc": "Le marchand de vin ajoute des accords et des conseils."
       },
-      { "title": "Le service l'utilise", "desc": "L'équipe y accède sur mobile, travaille en toute sécurité."
+      {
+        "title": "Le service l'utilise",
+        "desc": "L'équipe y accède sur mobile, travaille en toute sécurité."
       },
-      { "title": "Clients satisfaits", "desc": "un service compétent et chaleureux."
+      {
+        "title": "Clients satisfaits",
+        "desc": "un service compétent et chaleureux."
       }
     ]
   },
@@ -212,7 +279,7 @@
       "title": "Plus d'exemples à venir"
     },
     "molly": {
-      "title": "Molly",
+      "title": "Ingrid",
       "subtitle": "Votre nutritionniste virtuelle",
       "desc": "Conseils nutritionnels personnalisés, toujours disponibles.",
       "button": "Bientôt disponible"

@@ -20,11 +20,17 @@
     "overview": {
       "title": "Três papéis - um objetivo: crescimento que perdura.",
       "mini_cards": [
-        { "title": "Aprendizes", "desc": "Descubra o que realmente o impulsiona."
+        {
+          "title": "Aprendizes",
+          "desc": "Descubra o que realmente o impulsiona."
         },
-        { "title": "Guias e Coaches", "desc": "Treinar, refletir, inspirar."
+        {
+          "title": "Guias e Coaches",
+          "desc": "Treinar, refletir, inspirar."
         },
-        { "title": "Organizações", "desc": "Tornar a cultura de aprendizado visível e sustentável."
+        {
+          "title": "Organizações",
+          "desc": "Tornar a cultura de aprendizado visível e sustentável."
         }
       ],
       "points": [
@@ -71,41 +77,79 @@
   },
   "howItWorks": {
     "steps": [
-      { "title": "Definir papéis", "desc": "Definir metas, competências, valores e caminhos de aprendizado."
+      {
+        "title": "Definir papéis",
+        "desc": "Definir metas, competências, valores e caminhos de aprendizado."
       },
-      { "title": "Criar conteúdo", "desc": "Desenvolver micromódulos, exercícios de reflexão, diálogos e ciclos de feedback."
+      {
+        "title": "Criar conteúdo",
+        "desc": "Desenvolver micromódulos, exercícios de reflexão, diálogos e ciclos de feedback."
       },
-      { "title": "Medir e melhorar", "desc": "Acompanhar o progresso do aprendizado e a eficácia, e refinar o coaching de acordo."
+      {
+        "title": "Medir e melhorar",
+        "desc": "Acompanhar o progresso do aprendizado e a eficácia, e refinar o coaching de acordo."
       }
     ]
   },
   "pillars": {
     "items": [
-      { "title": "Individual em vez de genérico", "desc": "Seu caminho, seu estilo, seu tom."
+      {
+        "title": "Individual em vez de genérico",
+        "desc": "Seu caminho, seu estilo, seu tom."
       },
-      { "title": "Qualidade de aprendizado mensurável", "desc": "Conecte metas, progresso e resultados."
+      {
+        "title": "Qualidade de aprendizado mensurável",
+        "desc": "Conecte metas, progresso e resultados."
       },
-      { "title": "Uma ferramenta para todo o aprendizado", "desc": "Integração, treinamento, desenvolvimento e coaching."
+      {
+        "title": "Uma ferramenta para todo o aprendizado",
+        "desc": "Integração, treinamento, desenvolvimento e coaching."
       },
-      { "title": "Rápido de implementar", "desc": "Móvel, seguro e pronto para usar - para indivíduos e organizações."
+      {
+        "title": "Rápido de implementar",
+        "desc": "Móvel, seguro e pronto para usar - para indivíduos e organizações."
       }
     ]
   },
   "outcomes": {
     "items": [
-      { "kpi": "-40%", "label": "Tempo de integração" },
-      { "kpi": "+25%", "label": "Produtividade na primeira semana" },
-      { "kpi": "-30%", "label": "Taxa de erro nos processos" },
-      { "kpi": "+", "label": "Clareza e satisfação no feedback" }
+      {
+        "kpi": "-40%",
+        "label": "Tempo de integração"
+      },
+      {
+        "kpi": "+25%",
+        "label": "Produtividade na primeira semana"
+      },
+      {
+        "kpi": "-30%",
+        "label": "Taxa de erro nos processos"
+      },
+      {
+        "kpi": "+",
+        "label": "Clareza e satisfação no feedback"
+      }
     ]
   },
   "features": {
     "title": "Seus benefícios com a Companhia Digital",
     "subtitle": "A Companhia Digital combina aprendizado personalizado, orientação adaptativa e desenvolvimento mensurável - em uma solução integrada para pessoas e organizações.",
     "items": [
-      { "title": "Conteúdo de aprendizado interativo", "desc": "Diálogos, estímulos para reflexão e orientação passo a passo - com suporte digital e relevância pessoal.", "category": "" },
-      { "title": "Acompanhamento de progresso", "desc": "Monitore o desenvolvimento e o impacto - transparente, motivador e compatível com o GDPR.", "category": "" },
-      { "title": "100% móvel e adaptável", "desc": "Aprenda e interaja - em qualquer lugar, a qualquer hora, online ou offline.", "category": "" }
+      {
+        "title": "Conteúdo de aprendizado interativo",
+        "desc": "Diálogos, estímulos para reflexão e orientação passo a passo - com suporte digital e relevância pessoal.",
+        "category": ""
+      },
+      {
+        "title": "Acompanhamento de progresso",
+        "desc": "Monitore o desenvolvimento e o impacto - transparente, motivador e compatível com o GDPR.",
+        "category": ""
+      },
+      {
+        "title": "100% móvel e adaptável",
+        "desc": "Aprenda e interaja - em qualquer lugar, a qualquer hora, online ou offline.",
+        "category": ""
+      }
     ]
   },
   "testimonials": {
@@ -118,13 +162,21 @@
     "title": "Perguntas frequentes",
     "intro": "",
     "items": [
-      { "q": "É adequado para indivíduos e organizações?", "a": "Sim - papéis и conteúdo são totalmente personalizáveis."
+      {
+        "q": "É adequado para indivíduos e organizações?",
+        "a": "Sim - papéis и conteúdo são totalmente personalizáveis."
       },
-      { "q": "Como podemos preservar nossa filosofia de aprendizado?", "a": "Através de design modular, caminhos de aprendizado flexíveis e estruturas de conteúdo personalizáveis."
+      {
+        "q": "Como podemos preservar nossa filosofia de aprendizado?",
+        "a": "Através de design modular, caminhos de aprendizado flexíveis e estruturas de conteúdo personalizáveis."
       },
-      { "q": "Podemos medir o progresso e o impacto?", "a": "Sim, compatível com o GDPR - em níveis individuais ou agregados."
+      {
+        "q": "Podemos medir o progresso e o impacto?",
+        "a": "Sim, compatível com o GDPR - em níveis individuais ou agregados."
       },
-      { "q": "Requer uma longa integração?", "a": "Não - uso intuitivo e pronto para ser lançado instantaneamente."
+      {
+        "q": "Requer uma longa integração?",
+        "a": "Não - uso intuitivo e pronto para ser lançado instantaneamente."
       }
     ]
   },
@@ -137,15 +189,25 @@
     "title": "É assim que o conhecimento se torna qualidade de serviço",
     "subtitle": "Do cardápio à experiência do cliente - projetado como um esboço enxuto.",
     "steps": [
-      { "title": "Gerente de restaurante", "desc": "Fotografa o cardápio e o restaurante."
+      {
+        "title": "Gerente de restaurante",
+        "desc": "Fotografa o cardápio e o restaurante."
       },
-      { "title": "SpoonUp gera o conteúdo", "desc": "Módulos de aprendizado específicos são criados."
+      {
+        "title": "SpoonUp gera o conteúdo",
+        "desc": "Módulos de aprendizado específicos são criados."
       },
-      { "title": "Editor de conteúdo", "desc": "O comerciante de vinhos adiciona harmonizações e dicas."
+      {
+        "title": "Editor de conteúdo",
+        "desc": "O comerciante de vinhos adiciona harmonizações e dicas."
       },
-      { "title": "O serviço o utiliza", "desc": "A equipe o acessa no celular, trabalha com segurança."
+      {
+        "title": "O serviço o utiliza",
+        "desc": "A equipe o acessa no celular, trabalha com segurança."
       },
-      { "title": "Clientes felizes", "desc": "serviço competente e caloroso."
+      {
+        "title": "Clientes felizes",
+        "desc": "serviço competente e caloroso."
       }
     ]
   },
@@ -217,7 +279,7 @@
       "title": "Mais exemplos em breve"
     },
     "molly": {
-      "title": "Molly",
+      "title": "Ingrid",
       "subtitle": "Sua Nutricionista virtual",
       "desc": "Aconselhamento nutricional individual, sempre disponível.",
       "button": "Em breve"
