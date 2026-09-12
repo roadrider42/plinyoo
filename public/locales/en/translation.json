@@ -12,7 +12,7 @@
     "cta_secondary": "For Investors"
   },
   "hero1": {
-    "eyebrow": "The Entry",
+    "eyebrow": "Knowledge that lasts.",
     "title": "Grow a little every day.",
     "subtitle": "Knowledge is the foundation for good decisions, valuable experience, and real competence.",
     "description": "Plinyoo helps people build the right knowledge base efficiently – clear, targeted, and with minimal effort.",
@@ -33,123 +33,167 @@
     "cta": "Discover Plinyoo"
   },
   "visionMission": {
-    "visionTitle": "Vision",
-    "visionText": "We envision a world where people don’t just learn but feel truly accompanied – by technologies that listen, understand, and empower. A world where growth is natural, learning feels human, and companionship is both digital and personal. Where everyone has a companion who reminds, encourages, and inspires – every day, across all boundaries.",
-    "missionTitle": "Mission",
-    "missionText": "A platform for personalized learning and coaching: we unite reflection, training, knowledge building, and personal guidance – ready to use, adaptive, and secure. Our digital companions help design learning paths, make progress visible, and turn development into a tangible experience."
+    "vision": {
+      "title": "Vision",
+      "text": "We envision a world where people don’t just learn but feel truly accompanied – by technologies that listen, understand, and empower."
+    },
+    "mission": {
+      "title": "Mission",
+      "text": "A platform for personalized learning: we unite reflection, training, knowledge building, and personal guidance – ready to use, adaptive, and secure."
+    }
   },
   "roles": {
-    "overview": {
-      "title": "Three roles – one goal: growth that lasts.",
-      "mini_cards": [
-        { "title": "Learners", "desc": "Discover what truly moves you forward." },
-        { "title": "Guides & Coaches", "desc": "Coach, reflect, inspire." },
-        { "title": "Organizations", "desc": "Make learning culture visible and sustainable." }
-      ],
-      "points": [
-        "Brainbyte Buffet’s solutions bring learners, guides, and organizations together on one platform.",
-        "Learners grow individually, guides provide impulses, and organizations track progress and impact.",
-        "Digital companions foster dialogue, reflection, and personal growth.",
-        "Learning becomes part of everyday life – engaging, motivating, and meaningful."
-      ],
-      "cta": "Digital Companionship connects learning, guidance, and impact – for sustainable development."
+    "title": "Three ways in",
+    "learner": {
+      "title": "Those who learn",
+      "description": "Follow public topics, see your own progress."
     },
-    "leader": {
-      "title": "Learners: learning that feels like companionship",
-      "points": [
-        "Personalized learning journeys – at your own pace, with real-life context.",
-        "Reflection prompts, coaching questions, and everyday challenges.",
-        "Visible progress builds motivation and clarity.",
-        "Digital companions that listen, remind, and inspire.",
-        "Growth with depth – beyond checklists and clicks."
-      ],
-      "cta": "This is learning that lasts."
+    "author": {
+      "title": "Those who share knowledge",
+      "description": "Write and link cards, generate questions from them, pull content from Wikipedia or a shared page."
     },
-    "creator": {
-      "title": "Guides & Coaches: sharing knowledge and mindset",
-      "points": [
-        "Design content, questions, and interventions in one place.",
-        "Create personalized learning paths for individuals or teams.",
-        "Dialog-based AI modules enable conversations instead of clicks.",
-        "Real-time insights into engagement and progress.",
-        "Make coaching culture tangible in a digital way."
-      ],
-      "cta": "Shape development that resonates."
-    },
-    "team": {
-      "title": "Organizations: making culture visible",
-      "points": [
-        "Centralized management of learning and development.",
-        "Modules for onboarding, training, and reflection.",
-        "Evaluation and reporting features fully GDPR-compliant.",
-        "Seamless integration with existing learning or HR systems.",
-        "Learning culture becomes part of your organizational identity."
-      ],
-      "cta": "Turn learning into a living part of your organization."
+    "curator": {
+      "title": "Those who maintain a topic",
+      "description": "Bring people in via invite links, assign cards, set mandatory content with due dates."
     }
   },
   "howItWorks": {
+    "title": "Three steps",
     "steps": [
-      { "title": "Define roles", "desc": "Set goals, competencies, values, and learning paths." },
-      { "title": "Design content", "desc": "Develop micro-modules, reflection exercises, dialogues, and feedback loops." },
-      { "title": "Measure & improve", "desc": "Track learning progress and effectiveness, and refine coaching accordingly." }
+      {
+        "title": "Set two languages",
+        "description": "Your native language and the one you’re currently learning. Content appears in the learning language, one tap switches back."
+      },
+      {
+        "title": "Follow a topic",
+        "description": "Or create your own."
+      },
+      {
+        "title": "Read, answer, return",
+        "description": ""
+      }
     ]
   },
   "pillars": {
     "items": [
-      { "title": "Individual over generic", "desc": "Your way, your style, your tone." },
-      { "title": "Measurable learning quality", "desc": "Connect goals, progress, and outcomes." },
-      { "title": "One tool for all learning", "desc": "Onboarding, training, development, and coaching." },
-      { "title": "Fast to implement", "desc": "Mobile, secure, and ready to use – for individuals and organizations alike." }
+      {
+        "title": "Individual over generic",
+        "desc": "Your way, your style, your tone."
+      },
+      {
+        "title": "Measurable learning quality",
+        "desc": "Connect goals, progress, and outcomes."
+      },
+      {
+        "title": "One tool for all learning",
+        "desc": "Onboarding, training, development, and coaching."
+      },
+      {
+        "title": "Fast to implement",
+        "desc": "Mobile, secure, and ready to use – for individuals and organizations alike."
+      }
     ]
   },
   "outcomes": {
     "items": [
-      { "kpi": "-40%", "label": "Onboarding time" },
-      { "kpi": "+25%", "label": "Productivity in week one" },
-      { "kpi": "-30%", "label": "Error rate in processes" },
-      { "kpi": "+", "label": "Clarity and satisfaction in feedback" }
+      {
+        "kpi": "-40%",
+        "label": "Onboarding time"
+      },
+      {
+        "kpi": "+25%",
+        "label": "Productivity in week one"
+      },
+      {
+        "kpi": "-30%",
+        "label": "Error rate in processes"
+      },
+      {
+        "kpi": "+⭐",
+        "label": "Clarity and satisfaction in feedback"
+      }
     ]
   },
   "features": {
     "title": "Your benefits with Digital Companionship",
     "subtitle": "Digital Companionship combines personalized learning, adaptive guidance, and measurable development – in one integrated solution for people and organizations.",
     "items": [
-      { "title": "Interactive learning content", "desc": "Dialogues, reflection prompts, and step-by-step guidance – digitally supported and personally relevant.", "category": "" },
-      { "title": "Progress tracking", "desc": "Monitor development and impact – transparent, motivating, and GDPR-compliant.", "category": "" },
-      { "title": "100% mobile & adaptable", "desc": "Learn and engage – anywhere, anytime, online or offline.", "category": "" }
+      {
+        "title": "Interactive learning content",
+        "desc": "Dialogues, reflection prompts, and step-by-step guidance – digitally supported and personally relevant.",
+        "category": "Interaction"
+      },
+      {
+        "title": "Progress tracking",
+        "desc": "Monitor development and impact – transparent, motivating, and GDPR-compliant.",
+        "category": "Measurability"
+      },
+      {
+        "title": "100% mobile & adaptable",
+        "desc": "Learn and engage – anywhere, anytime, online or offline.",
+        "category": "Flexibility"
+      }
     ]
   },
   "testimonials": {
+    "label": "Observations from practice",
+    "subtitle": "Learning finally feels personal and effective.",
     "quotes": [
-      "“Learning finally feels personal and effective.”",
-      "“Reflection, coaching, and knowledge flow seamlessly together.”"
+      "Learning finally feels personal and effective.",
+      "Reflection, coaching, and knowledge flow seamlessly together."
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "intro": "",
+    "intro": "Answers to typical questions – short and understandable.",
     "items": [
-      { "q": "Is it suitable for individuals and organizations?", "a": "Yes – roles and content are fully customizable." },
-      { "q": "How can we preserve our learning philosophy?", "a": "Through modular design, flexible learning paths, and customizable content structures." },
-      { "q": "Can we measure progress and impact?", "a": "Yes, GDPR-compliant – at individual or aggregated levels." },
-      { "q": "Does it require long onboarding?", "a": "No – intuitive use and ready to launch instantly." }
+      {
+        "q": "Is it suitable for individuals and organizations?",
+        "a": "Yes – roles and content are fully customizable."
+      },
+      {
+        "q": "How can we preserve our learning philosophy?",
+        "a": "Through modular design, flexible learning paths, and customizable content structures."
+      },
+      {
+        "q": "Can we measure progress and impact?",
+        "a": "Yes, GDPR-compliant – at individual or aggregated levels."
+      },
+      {
+        "q": "Does it require long onboarding?",
+        "a": "No – intuitive use and ready to launch instantly."
+      }
     ]
   },
   "cta": {
     "title": "Because every learning journey is unique.",
     "subtitle": "Our companionship solutions adapt to you – not the other way around. For sustainable growth that lasts and creates impact.",
-    "button": "Learn more"
+    "button": "Request access"
   },
   "storySketch": {
     "title": "This is how knowledge becomes service quality",
     "subtitle": "From the menu to the guest experience – designed as a lean sketch.",
     "steps": [
-      { "title": "Restaurant Manager", "desc": "Photographs the menu & restaurant." },
-      { "title": "SpoonUp generates the content", "desc": "Specific learning modules are created." },
-      { "title": "Content Editor", "desc": "Wine merchant adds pairings & tips." },
-      { "title": "Service uses it", "desc": "Team accesses it on mobile, works safely." },
-      { "title": "Happy Guests", "desc": "competent, warm service." }
+      {
+        "title": "Restaurant Manager",
+        "desc": "Photographs the menu & restaurant."
+      },
+      {
+        "title": "SpoonUp generates the content",
+        "desc": "Specific learning modules are created."
+      },
+      {
+        "title": "Content Editor",
+        "desc": "Wine merchant adds pairings & tips."
+      },
+      {
+        "title": "Service uses it",
+        "desc": "Team accesses it on mobile, works safely."
+      },
+      {
+        "title": "Happy Guests",
+        "desc": "competent, warm service."
+      }
     ]
   },
   "examples": {
@@ -203,7 +247,7 @@
     },
     "join": {
       "title": "Join us",
-      "subtitle": "100% product. 100% practice. At Brainbyte Buffet, we develop learning flows that truly support teams and make service measurably better.",
+      "subtitle": "100% product. 100% practice. At Plinyoo, we develop learning flows that truly support teams and make service measurably better.",
       "subtitle_details": "Whether Frontend, Backend, Mobile, Product, or Learning Design: What matters is product thinking, responsibility, and a desire to get things done.",
       "role_label": "Role/Skill",
       "role_placeholder": "Frontend / Backend / Product / …",
@@ -226,7 +270,7 @@
     },
     "invest": {
       "title": "Invest",
-      "subtitle": "Brainbyte Buffet makes learning effective, tangible, and continuous. Together, we are building a product that supports long-term development – measurable, scalable, and practical.",
+      "subtitle": "Plinyoo makes learning effective, tangible, and continuous. Together, we are building a product that supports long-term development – measurable, scalable, and practical.",
       "subtitle_details": "Real-world impact • clear product focus • scalable learning ecosystem.",
       "investment_range_label": "Investment range",
       "investment_range_placeholder": "Please select",
