@@ -1,4 +1,4 @@
-// src/components/landing/Testimonials.tsx
+// src/components/ui/Testimonials.tsx
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { fadeUp, staggerList } from "../../lib/motion";
@@ -13,7 +13,6 @@ export default function Testimonials() {
   return (
     <section className="bg-main-background px-6 md:px-12 py-16 md:py-12">
       <div className="max-w-4xl mx-auto">
-        {/* Beobachtungs-Frame statt Emotion */}
         <div className="mb-8 text-center">
           <h2 className="text-sm font-medium tracking-wide text-soft-teal mb-2 uppercase">
             {title}

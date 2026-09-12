@@ -20,7 +20,6 @@ import VisionMission from "@/components/ui/VisionMission";
 import Roles from "@/components/ui/Roles";
 import HowItWorks from "@/components/ui/HowItWorks";
 import Examples from "@/components/ui/Examples";
-// import StorySketch from "@/components/ui/StorySketch";
 import Pillars from "@/components/ui/Pillars";
 import Outcomes from "@/components/ui/Outcomes";
 import Features from "@/components/ui/Features";
@@ -29,8 +28,6 @@ import Faq from "@/components/ui/Faq";
 import CTA from "@/components/ui/CTA";
 
 export default function LandingPage() {
-  // A/B Testing: Wähle eine Hero-Variante.
-  // Umgebungsvariable: VITE_HERO_VARIANT, gelesen aus der .env im Repo-Wurzel.
   const heroVariant = import.meta.env.VITE_HERO_VARIANT || 'original';
 
   const renderHero = () => {
@@ -53,7 +50,6 @@ export default function LandingPage() {
       <Roles />
       <Examples />
       <HowItWorks />
-      {/* <StorySketch /> */}
       <Pillars />
       <Outcomes />
       <Features />

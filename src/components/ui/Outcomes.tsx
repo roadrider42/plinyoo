@@ -1,11 +1,14 @@
-// src/components/landing/Outcomes.tsx
+// src/components/ui/Outcomes.tsx
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { fadeUp, staggerList } from "../../lib/motion";
 
 export default function Outcomes() {
   const { t } = useTranslation();
-  const items = t('outcomes.items', { returnObjects: true }) as { kpi: string, label: string }[];
+  const itemsData = t('outcomes.items', { returnObjects: true });
+  const items = Array.isArray(itemsData) ? itemsData : [];
+
+  if (items.length === 0) return null;
 
   return (
     <section className="bg-main-background px-6 md:px-12 py-16 md:py-12">
@@ -17,7 +20,7 @@ export default function Outcomes() {
           variants={staggerList(0.1)}
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          {items.map((i) => (
+          {items.map((i: any) => (
             <motion.li
               key={i.label}
               variants={fadeUp}

@@ -1,5 +1,5 @@
 // src/components/ui/Hero.tsx
-// Neue Plinyoo Hero mit Carousel und Kennwerten
+// Neue Plinyoo Hero mit Carousel, Sprachumschalter und Kennwerten
 // Angepasst für plinyoo.com (mit eigenem Header wie app.plinyoo.com)
 
 import React, { useState } from 'react';
@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [activeCardIndex, setActiveCardIndex] = useState(0);
 
   // Plinyoo Kennwerte
@@ -41,14 +41,44 @@ export default function Hero() {
         <Link to="/" aria-label={String(t('hero.title'))} className="text-xl font-bold font-sans text-primary">
           plinyoo
         </Link>
-        <a
-          href="https://app.plinyoo.com/login?redirect=%2Fdashboard"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex h-11 items-center rounded-full border border-border bg-white px-4 text-sm font-medium text-primary transition-colors hover:bg-surface-2"
-        >
-          Login
-        </a>
+        <div className="flex items-center gap-2.5">
+          {/* Sprachumschalter DE/EN */}
+          <div className="flex h-9 items-center overflow-hidden rounded-full border border-border bg-surface-1" role="group" aria-label="Sprache wählen">
+            <button
+              type="button"
+              onClick={() => i18n.changeLanguage('de')}
+              aria-pressed={i18n.language === 'de'}
+              className={
+                i18n.language === 'de'
+                  ? 'h-full px-3 text-xs font-semibold text-white bg-primary'
+                  : 'h-full px-3 text-xs font-medium text-text-muted hover:text-main-text'
+              }
+            >
+              DE
+            </button>
+            <button
+              type="button"
+              onClick={() => i18n.changeLanguage('en')}
+              aria-pressed={i18n.language === 'en'}
+              className={
+                i18n.language === 'en'
+                  ? 'h-full px-3 text-xs font-semibold text-white bg-primary'
+                  : 'h-full px-3 text-xs font-medium text-text-muted hover:text-main-text'
+              }
+            >
+              EN
+            </button>
+          </div>
+          {/* Login */}
+          <a
+            href="https://app.plinyoo.com/login?redirect=%2Fdashboard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex h-11 items-center rounded-full border border-border bg-surface-1 px-4 text-sm font-medium text-primary transition-colors hover:bg-surface-2"
+          >
+            Login
+          </a>
+        </div>
       </div>
 
       {/* Hero Section */}
@@ -58,7 +88,7 @@ export default function Hero() {
           {t('hero.eyebrow')}
         </span>
 
-        <h1 className="max-w-3xl font-headline text-[2.375rem] font-bold leading-[1.04] tracking-[-0.032em] text-balance sm:text-5xl lg:text-6xl text-primary">
+        <h1 className="max-w-3xl font-sans text-[2.375rem] font-bold leading-[1.04] tracking-[-0.032em] text-balance sm:text-5xl lg:text-6xl text-primary">
           {t('hero.title')}
         </h1>
 
@@ -66,14 +96,12 @@ export default function Hero() {
           {t('hero.subtitle')}
         </p>
 
-        <a
-          href="https://app.plinyoo.com/login?redirect=%2Fdashboard"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          to="/mitmachen"
           className="mt-1 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-[0.95rem] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md sm:w-auto sm:self-start lg:self-center"
         >
           {t('hero.cta')}
-        </a>
+        </Link>
       </section>
 
       {/* Carousel mit Kennwerten */}

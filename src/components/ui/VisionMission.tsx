@@ -1,4 +1,4 @@
-// src/components/landing/VisionMission.tsx
+// src/components/ui/VisionMission.tsx
 import { motion, useReducedMotion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { fadeUp, staggerList } from "../../lib/motion";
@@ -19,19 +19,19 @@ export default function VisionMission() {
         >
           <motion.div variants={fadeUp}>
             <Tag variant="highlight">
-              {t('visionMission.visionTitle')}
+              {t('visionMission.vision.title')}
             </Tag>
             <p className="mt-6 text-lg md:text-xl">
-              {t('visionMission.visionText')}
+              {t('visionMission.vision.text')}
             </p>
           </motion.div>
 
           <motion.div className="mt-8" variants={fadeUp}>
             <Tag variant="primary">
-              {t('visionMission.missionTitle')}
+              {t('visionMission.mission.title')}
             </Tag>
             <p className="mt-6 text-lg md:text-xl">
-              {t('visionMission.missionText')}
+              {t('visionMission.mission.text')}
             </p>
           </motion.div>
         </motion.div>

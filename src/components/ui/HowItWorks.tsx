@@ -1,33 +1,41 @@
-// src/components/landing/HowItWorks.tsx
-import { motion } from "framer-motion";
-import { useTranslation } from "react-i18next";
-import { fadeUp, staggerList } from "../../lib/motion";
+// src/components/ui/HowItWorks.tsx
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+interface Step {
+  title: string;
+  description: string;
+}
 
 export default function HowItWorks() {
   const { t } = useTranslation();
-  const steps = t('howItWorks.steps', { returnObjects: true }) as { title: string, desc: string }[];
+
+  const steps = t('howItWorks.steps', { returnObjects: true });
+  const stepList: Step[] = Array.isArray(steps) ? (steps as Step[]) : [];
+
+  if (stepList.length === 0) return null;
 
   return (
-    <section className="bg-section-alternate px-6 md:px-12 py-16 md:py-12">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold font-headline text-primary mb-12">
-          {t('howItWorks.title', "So einfach geht's")}
-        </h2>
-        <motion.ol
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerList(0.12)}
-          className="grid md:grid-cols-3 gap-8 text-left"
-        >
-          {steps.map((s, i) => (
-            <motion.li key={s.title} variants={fadeUp} className="rounded-lg border border-border bg-surface-1 p-6 shadow-ci-hairline">
-              <div className="text-3xl font-bold text-primary">{i + 1}</div>
-              <h4 className="mt-2 font-semibold text-primary">{s.title}</h4>
-              <p className="text-sm mt-1 text-text-muted">{s.desc}</p>
-            </motion.li>
-          ))}
-        </motion.ol>
+    <section className="mx-auto w-full max-w-5xl px-5 pb-16 sm:px-8">
+      <h2 className="mb-8 text-center font-sans text-2xl font-semibold tracking-tight text-main-text sm:text-3xl">
+        {t('howItWorks.title')}
+      </h2>
+
+      <div className="grid gap-4 sm:grid-cols-3">
+        {stepList.map((step, index) => (
+          <div
+            key={step.title}
+            className="flex flex-col gap-2.5 rounded-[18px] border border-border bg-surface-1 p-5 shadow-sm"
+          >
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-semibold text-white">
+              {index + 1}
+            </span>
+            <h3 className="font-sans text-base font-semibold text-main-text">
+              {step.title}
+            </h3>
+            <p className="text-sm leading-relaxed text-text-muted">{step.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

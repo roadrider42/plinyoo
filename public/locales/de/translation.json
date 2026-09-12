@@ -7,8 +7,8 @@
     "eyebrow": "Lernplattform mit Wissensgraph",
     "title": "Der Wissensraum ist unentdeckt. Dein Weg ist einzigartig.",
     "subtitle": "Entdecke Themen, die dich interessieren. Wähle deinen eigenen Lernpfad. Wachse in deinem Tempo.",
-    "cta": "Zur App",
-    "cta_primary": "Zur App",
+    "cta": "Zugang anfragen",
+    "cta_primary": "Zugang anfragen",
     "cta_secondary": "Für Investoren"
   },
   "hero1": {
@@ -33,66 +33,45 @@
     "cta": "Plinyoo entdecken"
   },
   "visionMission": {
-    "visionTitle": "Vision",
-    "visionText": "Wir stellen uns eine Welt vor, in der Menschen nicht einfach lernen, sondern sich begleitet fühlen – von Technologien, die zuhören, verstehen und stärken. Eine Welt, in der Entwicklung selbstverständlich, Lernen lebensnah und Begleitung digital wie menschlich zugleich ist. Wo jeder Mensch einen Companion hat, der ihn erinnert, ermutigt und inspiriert – Tag für Tag, über Grenzen hinweg.",
-    "missionTitle": "Mission",
-    "missionText": "Eine Plattform für individuelles Lernen und Coaching: Wir vereinen Reflexion, Training, Wissensaufbau und persönliche Begleitung – sofort nutzbar, adaptiv und sicher. Unsere digitalen Companions helfen, Lernpfade zu gestalten, Fortschritt sichtbar zu machen und Entwicklung spürbar werden zu lassen."
+    "vision": {
+      "title": "Vision",
+      "text": "Wir stellen uns eine Welt vor, in der Menschen nicht einfach lernen, sondern sich begleitet fühlen – von Technologien, die zuhören, verstehen und stärken."
+    },
+    "mission": {
+      "title": "Mission",
+      "text": "Eine Plattform für individuelles Lernen: Wir vereinen Reflexion, Training, Wissensaufbau und persönliche Begleitung – sofort nutzbar, adaptiv und sicher."
+    }
   },
   "roles": {
-    "overview": {
-      "title": "Drei Rollen – ein Ziel: Entwicklung, die bleibt.",
-      "mini_cards": [
-        { "title": "Lernende", "desc": "Entdecken, was persönlich weiterbringt." },
-        { "title": "Begleiter:innen", "desc": "Coachen, reflektieren, inspirieren." },
-        { "title": "Organisationen", "desc": "Lernkultur sichtbar machen und fördern." }
-      ],
-      "points": [
-        "Die Lösungen von plinyoo bringen Lernende, Begleiter:innen und Organisationen auf einer Plattform zusammen.",
-        "Lernende starten individuell, Begleiter:innen steuern Impulse, Organisationen behalten Fortschritt und Wirkung im Blick.",
-        "Digitale Companions fördern Dialog, Reflexion und persönliches Wachstum.",
-        "Lernen wird Teil des Alltags – nahbar, motivierend und wirksam."
-      ],
-      "cta": "Digitale Companionship verbindet Lernen, Begleitung und Wirkung – zu nachhaltiger Entwicklung."
+    "title": "Drei Wege hinein",
+    "learner": {
+      "title": "Wer lernt",
+      "description": "Öffentlichen Themen folgen, den eigenen Fortschritt sehen."
     },
-    "leader": {
-      "title": "Lernende: Lernen, das sich anfühlt wie Begleitung",
-      "points": [
-        "Personalisierte Lernreisen – im eigenen Tempo, mit Kontext.",
-        "Reflexionsimpulse, Coaching-Fragen und Aufgaben im Alltag.",
-        "Fortschritt sichtbar: Motivation durch Klarheit.",
-        "Digitale Companions, die zuhören, erinnern und anregen.",
-        "Entwicklung mit Tiefe – statt Checklistenlernen."
-      ],
-      "cta": "So entsteht Lernen, das bleibt."
+    "author": {
+      "title": "Wer Wissen weitergibt",
+      "description": "Karten schreiben und verlinken, Fragen dazu erzeugen lassen, Inhalte aus Wikipedia oder von einer geteilten Seite holen."
     },
-    "creator": {
-      "title": "Begleiter:innen: Wissen und Haltung vermitteln",
-      "points": [
-        "Inhalte, Fragen und Interventionen zentral gestalten.",
-        "Individuelle Lernpfade für Personen oder Teams entwickeln.",
-        "Dialogische KI-Module ermöglichen Gespräche statt Klicks.",
-        "Echtzeit-Feedback über Engagement und Fortschritt.",
-        "Coaching-Kultur digital erlebbar machen."
-      ],
-      "cta": "Gestalte Entwicklung, die Resonanz schafft."
-    },
-    "team": {
-      "title": "Organisationen: Kultur sichtbar machen",
-      "points": [
-        "Zentrale Steuerung von Lernen und Entwicklung.",
-        "Module für Onboarding, Weiterbildung und Reflexion.",
-        "Evaluations- und Reportingfunktionen DSGVO-konform.",
-        "Integration in bestehende Lernplattformen oder HR-Systeme.",
-        "Lernkultur wird Teil der Unternehmensidentität."
-      ],
-      "cta": "So wird Lernen zum lebendigen Bestandteil der Organisation."
+    "curator": {
+      "title": "Wer ein Thema betreut",
+      "description": "Menschen per Einladungslink dazuholen, ihnen Karten zuweisen, Pflichtinhalte mit Fälligkeit setzen."
     }
   },
   "howItWorks": {
+    "title": "Drei Schritte",
     "steps": [
-      { "title": "Rollen definieren", "desc": "Ziele, Kompetenzen, Werte und Lernpfade festlegen." },
-      { "title": "Content gestalten", "desc": "Micro-Module, Reflexionsübungen, Dialoge und Feedbackschleifen entwickeln." },
-      { "title": "Messen & verbessern", "desc": "Lernfortschritt und Wirksamkeit erfassen, Coaching gezielt anpassen." }
+      {
+        "title": "Zwei Sprachen setzen",
+        "description": "Deine Muttersprache und die, in der du gerade lernst. Inhalte erscheinen in der Lernsprache, ein Tipp wechselt zurück."
+      },
+      {
+        "title": "Einem Thema folgen",
+        "description": "Oder ein eigenes anlegen."
+      },
+      {
+        "title": "Lesen, antworten, wiederkommen",
+        "description": ""
+      }
     ]
   },
   "pillars": {
@@ -121,11 +100,11 @@
     ]
   },
   "testimonials": {
-    "title": "Aus der Praxis",
+    "label": "Beobachtung aus der Praxis",
     "subtitle": "Lernen fühlt sich persönlich und wirksam an.",
     "quotes": [
-      "„Lernen fühlt sich endlich persönlich und wirksam an.“",
-      "„Reflexion, Coaching und Wissen fließen nahtlos ineinander.“"
+      "Lernen fühlt sich endlich persönlich und wirksam an.",
+      "Reflexion, Coaching und Wissen fließen nahtlos ineinander."
     ]
   },
   "faq": {
@@ -139,10 +118,9 @@
     ]
   },
   "cta": {
-    "title": "Wie kann plinyoo dein Team konkret unterstützen?",
-    "subtitle": "Lass uns gemeinsam herausfinden, wie plinyoo dein Team unterstützen kann.",
-    "secondary_action": "Kontakt aufnehmen",
-    "button": "Kontakt aufnehmen"
+    "title": "Fang mit einer Karte an.",
+    "subtitle": "Du brauchst keinen Kursplan. Du brauchst eine erste Karte und den Verweis, der dich zur nächsten bringt.",
+    "button": "Zugang anfragen"
   },
   "storySketch": {
     "title": "So wird aus Wissen Service-Qualität",

@@ -4,11 +4,33 @@
     "cta_secondary": "Invest"
   },
   "hero": {
-    "eyebrow": "",
-    "title": "Growing together – digital, human, unique.",
-    "subtitle": "We accompany learning and consulting processes with intelligent, trustworthy digital companions that adapt to your goals – not the other way around.",
+    "eyebrow": "Learning platform with knowledge graph",
+    "title": "The knowledge space is undiscovered. Your path is unique.",
+    "subtitle": "Discover topics that interest you. Choose your own learning path. Grow at your own pace.",
+    "cta": "Request access",
     "cta_primary": "Join now",
     "cta_secondary": "For Investors"
+  },
+  "hero1": {
+    "eyebrow": "The Entry",
+    "title": "Grow a little every day.",
+    "subtitle": "Knowledge is the foundation for good decisions, valuable experience, and real competence.",
+    "description": "Plinyoo helps people build the right knowledge base efficiently – clear, targeted, and with minimal effort.",
+    "cta": "Build knowledge"
+  },
+  "hero2": {
+    "eyebrow": "The Core",
+    "title": "Experience cannot be learned.",
+    "subtitle": "But you can learn to understand it.",
+    "description": "Plinyoo creates the knowledge base people need to interpret what they experience, recognize connections, and truly learn from their experiences.",
+    "cta": "Understand experience"
+  },
+  "hero3": {
+    "eyebrow": "The Result",
+    "title": "Knowledge becomes ability.",
+    "subtitle": "When people understand what they do, experience turns into real competence.",
+    "description": "Plinyoo connects knowledge, learning, and application into a continuous process – so people don't just know more, but grow a little every day.",
+    "cta": "Discover Plinyoo"
   },
   "visionMission": {
     "visionTitle": "Vision",

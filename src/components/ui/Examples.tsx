@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import spoonupLogo from '@/assets/images/spoonup-logo.svg';
 
 const Examples = () => {
   const { t } = useTranslation();
@@ -14,13 +13,6 @@ const Examples = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* SpoonUp Kachel */}
-          <a href="http://spoonup.me" target="_blank" rel="noopener noreferrer" className="block p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
-            <img src={spoonupLogo} alt="SpoonUp Logo" className="h-12 w-12 mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-primary mb-2">{t('examples.spoonup.title')}</h3>
-            <p className="text-sm text-text-muted">{t('examples.spoonup.desc')}</p>
-          </a>
-
           {/* Molly Kachel */}
           <div className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline">
             <h3 className="text-lg font-semibold text-primary">{t('examples.molly.title')}</h3>
@@ -41,8 +33,20 @@ const Examples = () => {
             </button>
           </div>
 
+          {/* SpoonUp Kachel */}
+          <a href="https://spoonup.me" target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
+            <div className="h-12 w-12 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
+              <span className="text-xl font-bold text-orange-600">🥄</span>
+            </div>
+            <h3 className="text-lg font-semibold text-primary">SpoonUp</h3>
+            <p className="text-sm text-text-muted mb-2">Für Gastronomie-Teams</p>
+            <p className="text-sm text-text-muted flex-grow">Digitale Trainingslösung speziell für Restaurants und Bars.</p>
+            <button className="mt-4 w-full bg-orange-600 text-white font-semibold py-2 rounded-lg hover:bg-orange-700 transition-colors">
+              Mehr erfahren
+            </button>
+          </a>
+
           {/* Dein-Use-Case */}
-                {/* Dein-Use-Case */}
           <div className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline">
             <h3 className="text-lg font-semibold text-primary">{t('examples.your-use-case.title')}</h3>
             <p className="text-sm text-text-muted mb-2">{t('examples.your-use-case.subtitle')}</p>
