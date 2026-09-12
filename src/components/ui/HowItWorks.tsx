@@ -16,7 +16,7 @@ export default function HowItWorks() {
   if (stepList.length === 0) return null;
 
   return (
-    <section className="mx-auto w-full max-w-5xl px-5 pb-16 sm:px-8">
+    <section className="mx-auto w-full max-w-5xl px-5 py-16 sm:px-8">
       <h2 className="mb-8 text-center font-sans text-2xl font-semibold tracking-tight text-main-text sm:text-3xl">
         {t('howItWorks.title')}
       </h2>

@@ -18,16 +18,16 @@ export default function Outcomes() {
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
           variants={staggerList(0.1)}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6"
         >
           {items.map((i: any) => (
             <motion.li
               key={i.label}
               variants={fadeUp}
-              className="rounded-lg border border-border bg-surface-1 p-6 text-center shadow-ci-hairline"
+              className="rounded-lg border border-border bg-surface-1 p-4 sm:p-6 text-center shadow-ci-hairline"
             >
-              <div className="text-4xl font-extrabold text-primary">{i.kpi}</div>
-              <div className="mt-2 text-sm text-text-muted">{i.label}</div>
+              <div className="text-2xl sm:text-4xl font-extrabold text-primary">{i.kpi}</div>
+              <div className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-text-muted leading-tight">{i.label}</div>
             </motion.li>
           ))}
         </motion.ul>

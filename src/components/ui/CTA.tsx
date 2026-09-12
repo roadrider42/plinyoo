@@ -8,7 +8,7 @@ export default function CTA() {
   const { t } = useTranslation();
 
   return (
-    <section className="mx-auto w-full max-w-xl px-5 pb-16 sm:px-8">
+    <section className="mx-auto w-full max-w-xl px-5 py-16 sm:px-8">
       <div className="flex flex-col gap-3.5 rounded-[20px] border border-border bg-surface-1 p-6 shadow-sm sm:p-7">
         <h2 className="font-sans text-xl font-semibold leading-snug tracking-tight text-main-text sm:text-2xl">
           {t('cta.title')}
