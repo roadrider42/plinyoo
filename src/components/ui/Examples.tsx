@@ -38,11 +38,11 @@ const Examples = () => {
             <div className="h-12 w-12 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
               <span className="text-xl font-bold text-orange-600">🥄</span>
             </div>
-            <h3 className="text-lg font-semibold text-primary">SpoonUp</h3>
-            <p className="text-sm text-text-muted mb-2">Für Gastronomie-Teams</p>
-            <p className="text-sm text-text-muted flex-grow">Digitale Trainingslösung speziell für Restaurants und Bars.</p>
+            <h3 className="text-lg font-semibold text-primary">{t('examples.spoonup.title')}</h3>
+            <p className="text-sm text-text-muted mb-2">{t('examples.spoonup.subtitle')}</p>
+            <p className="text-sm text-text-muted flex-grow">{t('examples.spoonup.desc')}</p>
             <button className="mt-4 w-full bg-orange-600 text-white font-semibold py-2 rounded-lg hover:bg-orange-700 transition-colors">
-              Mehr erfahren
+              {t('examples.spoonup.button')}
             </button>
           </a>
 

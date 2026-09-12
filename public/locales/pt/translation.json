@@ -8,88 +8,50 @@
     "title": "Crescendo juntos - digital, humano, único.",
     "subtitle": "Acompanhamos processos de aprendizagem e consultoria com companheiros digitais inteligentes e confiáveis que se adaptam aos seus objetivos - e não o contrário.",
     "cta_primary": "Junte-se agora",
-    "cta_secondary": "Para investidores"
+    "cta_secondary": "Para investidores",
+    "cta": "Solicitar acesso"
   },
   "visionMission": {
-    "visionTitle": "Visão",
-    "visionText": "Imaginamos um mundo onde as pessoas não apenas aprendem, mas se sentem verdadeiramente acompanhadas - por tecnologias que ouvem, entendem e capacitam. Um mundo onde o crescimento é natural, o aprendizado parece humano e a companhia é digital e pessoal. Onde todos têm um companheiro que lembra, incentiva e inspira - todos os dias, através das fronteiras.",
-    "missionTitle": "Missão",
-    "missionText": "Uma plataforma para aprendizado e coaching personalizados: unimos reflexão, treinamento, construção de conhecimento e orientação pessoal - pronta para uso, adaptável e segura. Nossos companheiros digitais ajudam a projetar caminhos de aprendizado, tornar o progresso visível e transformar o desenvolvimento em uma experiência tangível."
+    "vision": {
+      "title": "Visão",
+      "text": "Imaginamos um mundo onde as pessoas não apenas aprendem, mas se sentem acompanhadas – por tecnologias que escutam, entendem e fortalecem."
+    },
+    "mission": {
+      "title": "Missão",
+      "text": "Uma plataforma para aprendizado personalizado: unimos reflexão, treinamento, construção de conhecimento e acompanhamento pessoal – pronta para usar, adaptativa e segura."
+    }
   },
   "roles": {
-    "overview": {
-      "title": "Três papéis - um objetivo: crescimento que perdura.",
-      "mini_cards": [
-        {
-          "title": "Aprendizes",
-          "desc": "Descubra o que realmente o impulsiona."
-        },
-        {
-          "title": "Guias e Coaches",
-          "desc": "Treinar, refletir, inspirar."
-        },
-        {
-          "title": "Organizações",
-          "desc": "Tornar a cultura de aprendizado visível e sustentável."
-        }
-      ],
-      "points": [
-        "As soluções do Brainbyte Buffet reúnem aprendizes, guias e organizações em uma única plataforma.",
-        "Os aprendizes crescem individualmente, os guias fornecem impulsos e as organizações acompanham o progresso e o impacto.",
-        "Companheiros digitais promovem o diálogo, a reflexão e o crescimento pessoal.",
-        "O aprendizado se torna parte da vida cotidiana - envolvente, motivador e significativo."
-      ],
-      "cta": "A Companhia Digital conecta aprendizado, orientação e impacto - para um desenvolvimento sustentável."
+    "title": "Três caminhos de entrada",
+    "learner": {
+      "title": "Quem aprende",
+      "description": "Seguir tópicos públicos, ver seu próprio progresso."
     },
-    "leader": {
-      "title": "Aprendizes: aprendizado que parece companhia",
-      "points": [
-        "Jornadas de aprendizado personalizadas - no seu próprio ritmo, com contexto da vida real.",
-        "Estímulos para reflexão, perguntas de coaching e desafios diários.",
-        "O progresso visível aumenta a motivação e a clareza.",
-        "Companheiros digitais que ouvem, lembram e inspiram.",
-        "Crescimento com profundidade - além de listas de verificação e cliques."
-      ],
-      "cta": "É assim que se cria um aprendizado que perdura."
+    "author": {
+      "title": "Quem compartilha conhecimento",
+      "description": "Escrever e vincular cartões, gerar perguntas, obter conteúdo da Wikipédia ou de uma página compartilhada."
     },
-    "creator": {
-      "title": "Guias e Coaches: compartilhando conhecimento e mentalidade",
-      "points": [
-        "Crie conteúdo, perguntas e intervenções em um só lugar.",
-        "Crie caminhos de aprendizado personalizados para indivíduos ou equipes.",
-        "Módulos de IA baseados em diálogo permitem conversas em vez de cliques.",
-        "Insights em tempo real sobre engajamento e progresso.",
-        "Tornar a cultura de coaching tangível de forma digital."
-      ],
-      "cta": "Molde um desenvolvimento que ressoa."
-    },
-    "team": {
-      "title": "Organizações: tornando a cultura visível",
-      "points": [
-        "Gerenciamento centralizado de aprendizado e desenvolvimento.",
-        "Módulos para integração, treinamento e reflexão.",
-        "Recursos de avaliação e relatórios totalmente compatíveis com o GDPR.",
-        "Integração perfeita com sistemas de aprendizado ou RH existentes.",
-        "A cultura de aprendizado se torna parte da sua identidade organizacional."
-      ],
-      "cta": "Transforme o aprendizado em uma parte viva da sua organização."
+    "curator": {
+      "title": "Quem mantém um tópico",
+      "description": "Trazer pessoas via link de convite, atribuir cartões, definir conteúdo obrigatório com prazo."
     }
   },
   "howItWorks": {
     "steps": [
       {
-        "title": "Definir papéis",
-        "desc": "Definir metas, competências, valores e caminhos de aprendizado."
+        "title": "Definir dois idiomas",
+        "description": "Seu idioma nativo e o que você está aprendendo. O conteúdo aparece no idioma de aprendizado, um toque volta."
       },
       {
-        "title": "Criar conteúdo",
-        "desc": "Desenvolver micromódulos, exercícios de reflexão, diálogos e ciclos de feedback."
+        "title": "Seguir um tópico",
+        "description": "Ou criar o seu próprio."
       },
       {
-        "title": "Medir e melhorar",
-        "desc": "Acompanhar o progresso do aprendizado e a eficácia, e refinar o coaching de acordo."
+        "title": "Ler, responder, voltar",
+        "description": ""
       }
-    ]
+    ],
+    "title": "Três passos"
   },
   "pillars": {
     "items": [
@@ -156,7 +118,9 @@
     "quotes": [
       "“O aprendizado finalmente parece pessoal e eficaz.”",
       "“Reflexão, coaching e conhecimento fluem perfeitamente juntos.”"
-    ]
+    ],
+    "label": "Observações da prática",
+    "subtitle": "O aprendizado finalmente parece pessoal e eficaz."
   },
   "faq": {
     "title": "Perguntas frequentes",
@@ -183,7 +147,7 @@
   "cta": {
     "title": "Porque cada jornada de aprendizado é única.",
     "subtitle": "Nossas soluções de companhia se adaptam a você - e não o contrário. Para um crescimento sustentável que perdura e cria impacto.",
-    "button": "Saiba mais"
+    "button": "Solicitar acesso"
   },
   "storySketch": {
     "title": "É assim que o conhecimento se torna qualidade de serviço",
@@ -273,7 +237,9 @@
     "title": "Exemplos de aplicação",
     "spoonup": {
       "title": "SpoonUp para Gastronomia",
-      "desc": "Treinamento prático para equipes de serviço."
+      "desc": "Treinamento prático para equipes de serviço.",
+      "subtitle": "Para equipes de gastronomia",
+      "button": "Saiba mais"
     },
     "placeholder": {
       "title": "Mais exemplos em breve"
@@ -373,5 +339,26 @@
       "text": "Por favor, direcione as perguntas sobre direitos de uso para hmiertzsch@web.de."
     },
     "back_to_home": "Voltar à Página Inicial"
+  },
+  "hero1": {
+    "eyebrow": "Conhecimento que perdura.",
+    "title": "Cada dia um pouco mais.",
+    "subtitle": "O conhecimento é a base para boas decisões, experiências valiosas e verdadeira competência.",
+    "description": "Plinyoo ajuda as pessoas a construir a base de conhecimento certa de forma eficiente – clara, direcionada e com o mínimo de esforço.",
+    "cta": "Construir conhecimento"
+  },
+  "hero2": {
+    "eyebrow": "O núcleo",
+    "title": "Experiência não se aprende.",
+    "subtitle": "Mas pode-se aprender a entendê-la.",
+    "description": "Plinyoo cria a base de conhecimento que as pessoas precisam para interpretar o que vivenciam, reconhecer conexões e realmente aprender com suas experiências.",
+    "cta": "Entender a experiência"
+  },
+  "hero3": {
+    "eyebrow": "O resultado",
+    "title": "Conhecimento se torna habilidade.",
+    "subtitle": "Quando as pessoas entendem o que fazem, a experiência se torna verdadeira competência.",
+    "description": "Plinyoo conecta conhecimento, aprendizado e aplicação em um processo contínuo – para que as pessoas não apenas saibam mais, mas possam um pouco mais a cada dia.",
+    "cta": "Descobrir o Plinyoo"
   }
 }

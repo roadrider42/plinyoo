@@ -8,88 +8,50 @@
     "title": "Grandir ensemble - numérique, humain, unique.",
     "subtitle": "Nous accompagnons les processus d'apprentissage et de conseil avec des compagnons numériques intelligents et fiables qui s'adaptent à vos objectifs - et non l'inverse.",
     "cta_primary": "Rejoignez-nous maintenant",
-    "cta_secondary": "Pour les investisseurs"
+    "cta_secondary": "Pour les investisseurs",
+    "cta": "Demander l’accès"
   },
   "visionMission": {
-    "visionTitle": "Vision",
-    "visionText": "Nous imaginons un monde où les gens ne se contentent pas d'apprendre, mais se sentent vraiment accompagnés - par des technologies qui écoutent, comprennent et responsabilisent. Un monde où la croissance est naturelle, l'apprentissage est humain et la compagnie est à la fois numérique et personnelle. Où chacun a un compagnon qui lui rappelle, l'encourage et l'inspire - chaque jour, au-delà des frontières.",
-    "missionTitle": "Mission",
-    "missionText": "Une plateforme d'apprentissage et de coaching personnalisés : nous unissons la réflexion, la formation, le développement des connaissances et l'accompagnement personnel - prête à l'emploi, adaptative et sécurisée. Nos compagnons numériques aident à concevoir des parcours d'apprentissage, à rendre les progrès visibles et à faire du développement une expérience tangible."
+    "vision": {
+      "title": "Vision",
+      "text": "Nous imaginons un monde où les personnes n’apprennent pas seulement, mais se sentent accompagnées – par des technologies qui écoutent, comprennent et renforcent."
+    },
+    "mission": {
+      "title": "Mission",
+      "text": "Une plateforme pour l’apprentissage personnalisé : nous unissons réflexion, formation, construction de savoir et accompagnement personnel – prête à l’emploi, adaptative et sécurisée."
+    }
   },
   "roles": {
-    "overview": {
-      "title": "Trois rôles - un objectif : une croissance qui dure.",
-      "mini_cards": [
-        {
-          "title": "Apprenants",
-          "desc": "Découvrez ce qui vous fait vraiment avancer."
-        },
-        {
-          "title": "Guides & Coachs",
-          "desc": "Coach, réfléchir, inspirer."
-        },
-        {
-          "title": "Organisations",
-          "desc": "Rendre la culture de l'apprentissage visible et durable."
-        }
-      ],
-      "points": [
-        "Les solutions de Brainbyte Buffet rassemblent les apprenants, les guides et les organisations sur une seule plateforme.",
-        "Les apprenants grandissent individuellement, les guides donnent des impulsions et les organisations suivent les progrès et l'impact.",
-        "Les compagnons numériques favorisent le dialogue, la réflexion et la croissance personnelle.",
-        "L'apprentissage fait partie de la vie quotidienne - engageant, motivant et significatif."
-      ],
-      "cta": "La compagnie numérique relie l'apprentissage, l'orientation et l'impact - pour un développement durable."
+    "title": "Trois voies d’accès",
+    "learner": {
+      "title": "Ceux qui apprennent",
+      "description": "Suivre des sujets publics, voir sa propre progression."
     },
-    "leader": {
-      "title": "Apprenants : un apprentissage qui ressemble à de la compagnie",
-      "points": [
-        "Parcours d'apprentissage personnalisés - à votre propre rythme, avec un contexte réel.",
-        "Invites à la réflexion, questions de coaching et défis quotidiens.",
-        "Des progrès visibles renforcent la motivation et la clarté.",
-        "Des compagnons numériques qui écoutent, rappellent et inspirent.",
-        "Une croissance en profondeur - au-delà des listes de contrôle et des clics."
-      ],
-      "cta": "C'est un apprentissage qui dure."
+    "author": {
+      "title": "Ceux qui partagent le savoir",
+      "description": "Écrire et lier des fiches, générer des questions, importer du contenu de Wikipédia ou d’une page partagée."
     },
-    "creator": {
-      "title": "Guides & Coachs : partager les connaissances et l'état d'esprit",
-      "points": [
-        "Concevez le contenu, les questions et les interventions en un seul endroit.",
-        "Créez des parcours d'apprentissage personnalisés pour les individus ou les équipes.",
-        "Les modules d'IA basés sur le dialogue permettent des conversations au lieu de clics.",
-        "Des informations en temps réel sur l'engagement et les progrès.",
-        "Rendre la culture du coaching tangible de manière numérique."
-      ],
-      "cta": "Façonnez un développement qui résonne."
-    },
-    "team": {
-      "title": "Organisations : rendre la culture visible",
-      "points": [
-        "Gestion centralisée de l'apprentissage et du développement.",
-        "Modules pour l'intégration, la formation et la réflexion.",
-        "Fonctionnalités d'évaluation et de reporting entièrement conformes au RGPD.",
-        "Intégration transparente avec les systèmes d'apprentissage ou de RH existants.",
-        "La culture de l'apprentissage devient partie intégrante de votre identité organisationnelle."
-      ],
-      "cta": "Faites de l'apprentissage une partie vivante de votre organisation."
+    "curator": {
+      "title": "Ceux qui gèrent un sujet",
+      "description": "Inviter des personnes par lien, attribuer des fiches, définir du contenu obligatoire avec échéance."
     }
   },
   "howItWorks": {
     "steps": [
       {
-        "title": "Définir les rôles",
-        "desc": "Fixer les objectifs, les compétences, les valeurs et les parcours d'apprentissage."
+        "title": "Définir deux langues",
+        "description": "Ta langue maternelle et celle que tu apprends. Le contenu apparaît dans la langue d’apprentissage, une touche permet de revenir."
       },
       {
-        "title": "Concevoir le contenu",
-        "desc": "Développer des micro-modules, des exercices de réflexion, des dialogues et des boucles de rétroaction."
+        "title": "Suivre un sujet",
+        "description": "Ou crée le tien."
       },
       {
-        "title": "Mesurer & améliorer",
-        "desc": "Suivre les progrès de l'apprentissage et l'efficacité, et affiner le coaching en conséquence."
+        "title": "Lire, répondre, revenir",
+        "description": ""
       }
-    ]
+    ],
+    "title": "Trois étapes"
   },
   "pillars": {
     "items": [
@@ -156,7 +118,9 @@
     "quotes": [
       "« L'apprentissage est enfin personnel et efficace. »",
       "« La réflexion, le coaching et les connaissances s'intègrent parfaitement. »"
-    ]
+    ],
+    "label": "Observations de la pratique",
+    "subtitle": "L’apprentissage se sent enfin personnel et efficace."
   },
   "faq": {
     "title": "Questions fréquemment posées",
@@ -183,7 +147,7 @@
   "cta": {
     "title": "Parce que chaque parcours d'apprentissage est unique.",
     "subtitle": "Nos solutions de compagnie s'adaptent à vous - et non l'inverse. Pour une croissance durable qui dure et crée un impact.",
-    "button": "En savoir plus"
+    "button": "Demander l’accès"
   },
   "storySketch": {
     "title": "C'est ainsi que la connaissance devient une qualité de service",
@@ -273,7 +237,9 @@
     "title": "Exemples d'application",
     "spoonup": {
       "title": "SpoonUp pour la gastronomie",
-      "desc": "Formation pratique pour les équipes de service."
+      "desc": "Formation pratique pour les équipes de service.",
+      "subtitle": "Pour équipes de restauration",
+      "button": "En savoir plus"
     },
     "placeholder": {
       "title": "Plus d'exemples à venir"
@@ -373,5 +339,26 @@
       "text": "Veuillez adresser les demandes de droits d'utilisation à hmiertzsch@web.de."
     },
     "back_to_home": "Retour à l'accueil"
+  },
+  "hero1": {
+    "eyebrow": "Le savoir qui dure.",
+    "title": "Progresser un peu chaque jour.",
+    "subtitle": "Le savoir est le fondement de bonnes décisions, d’expériences précieuses et d’une véritable compétence.",
+    "description": "Plinyoo aide les personnes à construire la bonne base de connaissances efficacement – clairement, ciblée et avec un minimum d’effort.",
+    "cta": "Construire le savoir"
+  },
+  "hero2": {
+    "eyebrow": "Le cœur",
+    "title": "L’expérience ne s’apprend pas.",
+    "subtitle": "Mais on peut apprendre à la comprendre.",
+    "description": "Plinyoo crée la base de connaissances dont les personnes ont besoin pour interpréter ce qu’elles vivent, reconnaître les liens et vraiment apprendre de leurs expériences.",
+    "cta": "Comprendre l’expérience"
+  },
+  "hero3": {
+    "eyebrow": "Le résultat",
+    "title": "Le savoir devient savoir-faire.",
+    "subtitle": "Quand les personnes comprennent ce qu’elles font, l’expérience devient une véritable compétence.",
+    "description": "Plinyoo relie savoir, apprentissage et application en un processus continu – pour que les personnes ne sachent pas simplement plus, mais progressent un peu chaque jour.",
+    "cta": "Découvrir Plinyoo"
   }
 }

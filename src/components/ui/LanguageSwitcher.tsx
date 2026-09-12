@@ -1,7 +1,17 @@
 import React, { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, Transition } from '@headlessui/react';
-import { Globe, ChevronDown } from 'lucide-react';
+import { Globe, ChevronDown, Check } from 'lucide-react';
+
+const LANGUAGE_LABELS: Record<string, string> = {
+  de: 'Deutsch',
+  en: 'English',
+  es: 'Español',
+  fr: 'Français',
+  pl: 'Polski',
+  pt: 'Português',
+  uk: 'Українська',
+};
 
 const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
@@ -14,13 +24,15 @@ const LanguageSwitcher: React.FC = () => {
     (lng) => lng !== 'cimode'
   );
 
+  const currentLng = (i18n.language || 'de').split('-')[0];
+
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-spoonup-darkgray hover:bg-spoonup-braun/10">
-          <Globe className="h-4 w-4" />
-          <span className="uppercase">{i18n.language.split('-')[0]}</span>
-          <ChevronDown className="h-4 w-4" />
+        <Menu.Button className="flex h-9 items-center gap-1.5 rounded-full border border-border bg-surface-1 px-3 text-xs font-medium text-text-muted transition-colors hover:text-main-text">
+          <Globe className="h-4 w-4" aria-hidden="true" />
+          <span className="uppercase">{currentLng}</span>
+          <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />
         </Menu.Button>
       </div>
 
@@ -33,21 +45,24 @@ const LanguageSwitcher: React.FC = () => {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 z-10 mt-2 w-32 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-1">
-            {supportedLanguages.map((lng) => (
-              <Menu.Item key={lng}>
-                {({ active }) => (
-                  <button
-                    onClick={() => changeLanguage(lng)}
-                    className={`${ active ? 'bg-spoonup-braun/10 text-spoonup-braun' : 'text-spoonup-darkgray' } group flex w-full items-center rounded-md px-4 py-2 text-sm uppercase`}
-                  >
-                    {lng}
-                  </button>
-                )}
-              </Menu.Item>
-            ))}
-          </div>
+        <Menu.Items className="absolute right-0 z-50 mt-2 w-40 origin-top-right rounded-xl border border-border bg-surface-1 py-1 shadow-lg focus:outline-none">
+          {supportedLanguages.map((lng) => (
+            <Menu.Item key={lng}>
+              {({ active }) => (
+                <button
+                  onClick={() => changeLanguage(lng)}
+                  className={`${
+                    active ? 'bg-surface-2 text-primary' : 'text-text-muted'
+                  } group flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm`}
+                >
+                  <span>{LANGUAGE_LABELS[lng] || lng}</span>
+                  {lng === currentLng && (
+                    <Check className="h-4 w-4 text-primary" aria-hidden="true" />
+                  )}
+                </button>
+              )}
+            </Menu.Item>
+          ))}
         </Menu.Items>
       </Transition>
     </Menu>

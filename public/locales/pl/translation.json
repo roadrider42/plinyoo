@@ -8,88 +8,50 @@
     "title": "Rozwijamy się razem – cyfrowo, po ludzku, unikatowo.",
     "subtitle": "Towarzyszymy procesom uczenia się i doradztwa dzięki inteligentnym, godnym zaufania cyfrowym towarzyszom, którzy dostosowują się do Twoich celów – a nie odwrotnie.",
     "cta_primary": "Dołącz teraz",
-    "cta_secondary": "Dla inwestorów"
+    "cta_secondary": "Dla inwestorów",
+    "cta": "Poproś o dostęp"
   },
   "visionMission": {
-    "visionTitle": "Wizja",
-    "visionText": "Wyobrażamy sobie świat, w którym ludzie nie tylko się uczą, ale czują się naprawdę wspierani – przez technologie, które słuchają, rozumieją i wzmacniają. Świat, w którym rozwój jest naturalny, nauka jest ludzka, a towarzyszenie cyfrowe i osobiste. Gdzie każdy ma swojego towarzysza, który przypomina, zachęca i inspiruje – każdego dnia, bez granic.",
-    "missionTitle": "Misja",
-    "missionText": "Platforma spersonalizowanej nauki i coachingu: łączymy refleksję, trening, budowanie wiedzy i osobiste wsparcie – gotowe do użycia, adaptacyjne i bezpieczne. Nasi cyfrowi towarzysze pomagają projektować ścieżki nauki, wizualizować postępy i zamieniać rozwój w realne doświadczenie."
+    "vision": {
+      "title": "Wizja",
+      "text": "Wyobrażamy sobie świat, w którym ludzie nie tylko się uczą, ale czują się towarzyszeni – przez technologie, które słuchają, rozumieją i wzmacniają."
+    },
+    "mission": {
+      "title": "Misja",
+      "text": "Platforma do spersonalizowanej nauki: łączymy refleksję, szkolenie, budowanie wiedzy i osobiste wsparcie – gotowa do użycia, adaptacyjna i bezpieczna."
+    }
   },
   "roles": {
-    "overview": {
-      "title": "Trzy role – jeden cel: trwały rozwój.",
-      "mini_cards": [
-        {
-          "title": "Uczący się",
-          "desc": "Odkrywaj, co naprawdę pcha Cię do przodu."
-        },
-        {
-          "title": "Przewodnicy i coachowie",
-          "desc": "Prowadź, reflektuj, inspiruj."
-        },
-        {
-          "title": "Organizacje",
-          "desc": "Uczyń kulturę uczenia się widoczną i trwałą."
-        }
-      ],
-      "points": [
-        "Rozwiązania Brainbyte Buffet łączą uczących się, przewodników i organizacje na jednej platformie.",
-        "Uczący się rozwijają się indywidualnie, przewodnicy dostarczają impulsów, a organizacje śledzą postępy i wpływ.",
-        "Cyfrowi towarzysze wspierają dialog, refleksję i rozwój osobisty.",
-        "Uczenie się staje się częścią codzienności – angażujące, motywujące i znaczące."
-      ],
-      "cta": "Cyfrowe towarzyszenie łączy naukę, wsparcie i wpływ – dla zrównoważonego rozwoju."
+    "title": "Trzy drogi wejścia",
+    "learner": {
+      "title": "Ci, którzy się uczą",
+      "description": "Śledzić publiczne tematy, widzieć własny postęp."
     },
-    "leader": {
-      "title": "Uczący się: nauka, która przypomina towarzyszenie",
-      "points": [
-        "Spersonalizowane ścieżki nauki – w Twoim tempie i realnym kontekście.",
-        "Impulsy do refleksji, pytania coachingowe i codzienne wyzwania.",
-        "Widoczne postępy budują motywację i klarowność.",
-        "Cyfrowi towarzysze, którzy słuchają, przypominają i inspirują.",
-        "Rozwój z głębią – poza checklistami i kliknięciami."
-      ],
-      "cta": "To jest nauka, która zostaje na długo."
+    "author": {
+      "title": "Ci, którzy dzielą się wiedzą",
+      "description": "Pisać i łączyć karty, generować pytania, pobierać treści z Wikipedii lub udostępnionej strony."
     },
-    "creator": {
-      "title": "Przewodnicy i coachowie: dzielenie się wiedzą i mindsetem",
-      "points": [
-        "Twórz treści, pytania i interwencje w jednym miejscu.",
-        "Projektuj spersonalizowane ścieżki nauki dla osób lub zespołów.",
-        "Dialogowe moduły AI umożliwiają rozmowę zamiast klikania.",
-        "Wgląd w zaangażowanie i postępy w czasie rzeczywistym.",
-        "Nadaj kulturze coachingu cyfrowy, namacalny wymiar."
-      ],
-      "cta": "Kształtuj rozwój, który rezonuje."
-    },
-    "team": {
-      "title": "Organizacje: widoczna kultura",
-      "points": [
-        "Centralne zarządzanie nauką i rozwojem.",
-        "Moduły onboardingu, szkoleń i refleksji.",
-        "Funkcje ewaluacji i raportowania w pełni zgodne z RODO.",
-        "Bezproblemowa integracja z istniejącymi systemami HR i e-learningowymi.",
-        "Kultura uczenia się staje się częścią tożsamości organizacji."
-      ],
-      "cta": "Zamień naukę w żywą część organizacji."
+    "curator": {
+      "title": "Ci, którzy opiekują się tematem",
+      "description": "Zapraszać osoby przez link, przypisywać karty, ustawiać obowiązkowe treści z terminem."
     }
   },
   "howItWorks": {
     "steps": [
       {
-        "title": "Zdefiniuj role",
-        "desc": "Ustal cele, kompetencje, wartości i ścieżki nauki."
+        "title": "Ustaw dwa języki",
+        "description": "Twój ojczysty język i ten, którego się uczysz. Treści pojawiają się w języku nauki, jedno dotknięcie przełącza z powrotem."
       },
       {
-        "title": "Projektuj treści",
-        "desc": "Twórz mikromoduły, ćwiczenia refleksyjne, dialogi i pętle feedbacku."
+        "title": "Śledź temat",
+        "description": "Lub stwórz własny."
       },
       {
-        "title": "Mierz i ulepszaj",
-        "desc": "Śledź postępy i efektywność nauki oraz doskonal coaching."
+        "title": "Czytaj, odpowiadaj, wracaj",
+        "description": ""
       }
-    ]
+    ],
+    "title": "Trzy kroki"
   },
   "pillars": {
     "items": [
@@ -156,7 +118,9 @@
     "quotes": [
       "„Nauka wreszcie jest osobista i skuteczna.”",
       "„Refleksja, coaching i wiedza płynnie się łączą.”"
-    ]
+    ],
+    "label": "Obserwacje z praktyki",
+    "subtitle": "Nauka wreszcie wydaje się osobista i skuteczna."
   },
   "faq": {
     "title": "Najczęściej zadawane pytania",
@@ -183,7 +147,7 @@
   "cta": {
     "title": "Bo każda ścieżka nauki jest unikalna.",
     "subtitle": "Nasze rozwiązania towarzyszące dostosowują się do Ciebie – nie odwrotnie. Dla trwałego rozwoju z realnym wpływem.",
-    "button": "Dowiedz się więcej"
+    "button": "Poproś o dostęp"
   },
   "storySketch": {
     "title": "Tak wiedza staje się jakością obsługi",
@@ -215,7 +179,9 @@
     "title": "Przykłady zastosowań",
     "spoonup": {
       "title": "SpoonUp dla gastronomii",
-      "desc": "Praktyczne szkolenia dla zespołów serwisowych."
+      "desc": "Praktyczne szkolenia dla zespołów serwisowych.",
+      "subtitle": "Dla zespołów gastronomicznych",
+      "button": "Dowiedz się więcej"
     },
     "placeholder": {
       "title": "Więcej przykładów wkrótce"
@@ -373,5 +339,26 @@
       "text": "Zapytania dotyczące praw do wykorzystania prosimy kierować na hmiertzsch@web.de."
     },
     "back_to_home": "Powrót na stronę główną"
+  },
+  "hero1": {
+    "eyebrow": "Wiedza, która trwa.",
+    "title": "Każdego dnia trochę więcej umieć.",
+    "subtitle": "Wiedza to podstawa dobrych decyzji, cennych doświadczeń i prawdziwej kompetencji.",
+    "description": "Plinyoo pomaga ludziom budować właściwą bazę wiedzy efektywnie – zrozumiale, celowo i z jak najmniejszym wysiłkiem.",
+    "cta": "Budować wiedzę"
+  },
+  "hero2": {
+    "eyebrow": "Rdzeń",
+    "title": "Doświadczenia nie da się nauczyć.",
+    "subtitle": "Ale można nauczyć się ją rozumieć.",
+    "description": "Plinyoo tworzy bazę wiedzy, której ludzie potrzebują, aby interpretować to, czego doświadczają, rozpoznawać związki i naprawdę uczyć się na doświadczeniach.",
+    "cta": "Zrozumieć doświadczenie"
+  },
+  "hero3": {
+    "eyebrow": "Wynik",
+    "title": "Wiedza staje się umiejętnością.",
+    "subtitle": "Kiedy ludzie rozumieją, co robią, doświadczenie staje się prawdziwą kompetencją.",
+    "description": "Plinyoo łączy wiedzę, naukę i zastosowanie w ciągły proces – aby ludzie nie tylko wiedzieli więcej, ale każdego dnia trochę więcej potrafili.",
+    "cta": "Odkryj Plinyoo"
   }
 }

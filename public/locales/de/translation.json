@@ -200,7 +200,9 @@
     "title": "Anwendungsbeispiele",
     "spoonup": {
       "title": "SpoonUp für die Gastronomie",
-      "desc": "Praxisnahes Training für Service-Teams."
+      "desc": "Praxisnahes Training für Service-Teams.",
+      "subtitle": "Für Gastronomie-Teams",
+      "button": "Mehr erfahren"
     },
     "placeholder": {
       "title": "Weitere Beispiele folgen"

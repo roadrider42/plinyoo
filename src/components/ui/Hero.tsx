@@ -5,6 +5,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
@@ -42,34 +43,7 @@ export default function Hero() {
           plinyoo
         </Link>
         <div className="flex items-center gap-2.5">
-          {/* Sprachumschalter DE/EN */}
-          <div className="flex h-9 items-center overflow-hidden rounded-full border border-border bg-surface-1" role="group" aria-label="Sprache wählen">
-            <button
-              type="button"
-              onClick={() => i18n.changeLanguage('de')}
-              aria-pressed={i18n.language === 'de'}
-              className={
-                i18n.language === 'de'
-                  ? 'h-full px-3 text-xs font-semibold text-white bg-primary'
-                  : 'h-full px-3 text-xs font-medium text-text-muted hover:text-main-text'
-              }
-            >
-              DE
-            </button>
-            <button
-              type="button"
-              onClick={() => i18n.changeLanguage('en')}
-              aria-pressed={i18n.language === 'en'}
-              className={
-                i18n.language === 'en'
-                  ? 'h-full px-3 text-xs font-semibold text-white bg-primary'
-                  : 'h-full px-3 text-xs font-medium text-text-muted hover:text-main-text'
-              }
-            >
-              EN
-            </button>
-          </div>
-          {/* Login */}
+          <LanguageSwitcher />
           <a
             href="https://app.plinyoo.com/login?redirect=%2Fdashboard"
             target="_blank"
