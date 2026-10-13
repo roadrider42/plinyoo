@@ -17,7 +17,7 @@ export default function CTA() {
           {t('cta.subtitle')}
         </p>
         <Link
-          to="/mitmachen"
+          to="/zugang"
           className="mt-1 flex min-h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 text-[0.95rem] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main-background sm:w-auto sm:self-start"
         >
           {t('cta.button')}

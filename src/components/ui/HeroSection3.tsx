@@ -47,7 +47,7 @@ export default function HeroSection3() {
             {t('hero3.description')}
           </p>
           <Link
-            to="/mitmachen"
+            to="/zugang"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >
             {t('hero3.cta')}

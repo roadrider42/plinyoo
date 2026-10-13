@@ -261,6 +261,22 @@
         "20k_to_100k": "20k–100k",
         "100k_plus": "100k+"
       }
+    },
+    "access": {
+      "title": "Tu acceso a plinyoo",
+      "subtitle": "Cuéntanos brevemente quién eres y qué quieres aprender o compartir.",
+      "subtitle_details": "Te responderemos.",
+      "role_label": "Vengo como",
+      "role_placeholder": "Por favor, elige",
+      "role_options": {
+        "learner": "Quien aprende",
+        "trainer": "Entrenador/a con equipo propio",
+        "provider": "Proveedor/a de contenidos",
+        "other": "Otra cosa"
+      },
+      "message_label": "¿Qué quieres lograr con plinyoo?",
+      "message_placeholder": "Por ejemplo: quiero entender por qué mi ciudad se calienta tanto en verano.",
+      "button": "Solicitar acceso"
     }
   },
   "examples": {

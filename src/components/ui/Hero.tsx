@@ -78,7 +78,7 @@ export default function Hero() {
         </p>
 
         <Link
-          to="/mitmachen"
+          to="/zugang"
           className="mt-1 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-[0.95rem] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md sm:w-auto sm:self-start lg:self-center"
         >
           {t('hero.cta')}
