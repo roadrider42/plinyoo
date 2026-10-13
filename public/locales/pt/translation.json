@@ -15,21 +15,21 @@
     "cards": [
       {
         "step": "Cartão",
-        "title": "A cintura escapular",
-        "text": "Clavícula (clavicula), escápula (scapula) e úmero (humerus).",
-        "chip": "2 vínculos"
+        "title": "Temperatura da superfície vs. temperatura do ar",
+        "text": "Os dados de satélite mostram temperaturas da superfície, muitas vezes mais altas que as do ar. A temperatura do ar a 2 m de altura determina mais o estresse térmico humano.",
+        "chip": "→ Análise de satélite do DLR"
       },
       {
         "step": "Pergunta",
-        "title": "Quais três ossos formam a cintura escapular?",
+        "title": "O que os dados de satélite mostram principalmente?",
         "options": [
-          "Esterno, escápula, úmero",
-          "Clavícula, escápula, úmero"
+          "A temperatura do ar a 2 metros de altura, medida em estações terrestres",
+          "As temperaturas da superfície de ruas, telhados e vegetação"
         ]
       },
       {
         "step": "Reencontro",
-        "title": "A cintura escapular volta.",
+        "title": "O cartão volta.",
         "text": "O que está firme volta mais tarde. O que vacila volta mais cedo."
       },
       {

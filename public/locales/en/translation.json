@@ -15,21 +15,21 @@
     "cards": [
       {
         "step": "Card",
-        "title": "The shoulder girdle",
-        "text": "Clavicle, scapula and humerus.",
-        "chip": "2 links"
+        "title": "Surface temperature vs. air temperature",
+        "text": "Satellite data show surface temperatures — often higher than air temperatures. The air temperature at 2 m height determines human heat stress more strongly.",
+        "chip": "→ DLR satellite analysis"
       },
       {
         "step": "Question",
-        "title": "Which three bones form the shoulder girdle?",
+        "title": "What do satellite data primarily show?",
         "options": [
-          "Sternum, scapula, humerus",
-          "Clavicle, scapula, humerus"
+          "Air temperature at 2 metres height, measured at ground stations",
+          "Surface temperatures of streets, roofs and vegetation"
         ]
       },
       {
         "step": "Second look",
-        "title": "The shoulder girdle comes back.",
+        "title": "The card comes back.",
         "text": "What sticks comes back later. What wobbles comes back sooner."
       },
       {

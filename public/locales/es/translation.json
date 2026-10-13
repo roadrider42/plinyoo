@@ -15,21 +15,21 @@
     "cards": [
       {
         "step": "Tarjeta",
-        "title": "La cintura escapular",
-        "text": "Clavícula (clavicula), omóplato (scapula) y húmero (humerus).",
-        "chip": "2 enlaces"
+        "title": "Temperatura superficial vs. temperatura del aire",
+        "text": "Los datos satelitales muestran temperaturas superficiales, a menudo más altas que las del aire. La temperatura del aire a 2 m de altura determina más el estrés térmico humano.",
+        "chip": "→ Análisis satelital del DLR"
       },
       {
         "step": "Pregunta",
-        "title": "¿Qué tres huesos forman la cintura escapular?",
+        "title": "¿Qué muestran principalmente los datos satelitales?",
         "options": [
-          "Esternón, omóplato, húmero",
-          "Clavícula, omóplato, húmero"
+          "La temperatura del aire a 2 metros de altura, medida en estaciones terrestres",
+          "Las temperaturas superficiales de calles, tejados y vegetación"
         ]
       },
       {
         "step": "Reencuentro",
-        "title": "La cintura escapular vuelve.",
+        "title": "La tarjeta vuelve.",
         "text": "Lo que se sabe vuelve más tarde. Lo que flaquea vuelve antes."
       },
       {

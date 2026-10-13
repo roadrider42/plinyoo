@@ -15,21 +15,21 @@
     "cards": [
       {
         "step": "Fiche",
-        "title": "La ceinture scapulaire",
-        "text": "Clavicule (clavicula), omoplate (scapula) et humérus (humerus).",
-        "chip": "2 renvois"
+        "title": "Température de surface vs. température de l’air",
+        "text": "Les données satellitaires montrent des températures de surface, souvent plus élevées que celles de l’air. La température de l’air à 2 m de hauteur détermine davantage le stress thermique humain.",
+        "chip": "→ Analyse satellitaire du DLR"
       },
       {
         "step": "Question",
-        "title": "Quels trois os forment la ceinture scapulaire ?",
+        "title": "Que montrent principalement les données satellitaires ?",
         "options": [
-          "Sternum, omoplate, humérus",
-          "Clavicule, omoplate, humérus"
+          "La température de l’air à 2 mètres de hauteur, mesurée par des stations au sol",
+          "Les températures de surface des rues, des toits et de la végétation"
         ]
       },
       {
         "step": "Retrouvailles",
-        "title": "La ceinture scapulaire revient.",
+        "title": "La fiche revient.",
         "text": "Ce qui est acquis revient plus tard. Ce qui vacille revient plus tôt."
       },
       {

@@ -15,21 +15,21 @@
     "cards": [
       {
         "step": "Karta",
-        "title": "Obręcz barkowa",
-        "text": "Obojczyk (clavicula), łopatka (scapula) i kość ramienna (humerus).",
-        "chip": "2 odnośniki"
+        "title": "Temperatura powierzchni a temperatura powietrza",
+        "text": "Dane satelitarne pokazują temperatury powierzchni — często wyższe niż temperatury powietrza. Temperatura powietrza na wysokości 2 m silniej decyduje o stresie cieplnym człowieka.",
+        "chip": "→ Analiza satelitarna DLR"
       },
       {
         "step": "Pytanie",
-        "title": "Które trzy kości tworzą obręcz barkową?",
+        "title": "Co pokazują przede wszystkim dane satelitarne?",
         "options": [
-          "Mostek, łopatka, kość ramienna",
-          "Obojczyk, łopatka, kość ramienna"
+          "Temperaturę powietrza na wysokości 2 metrów, mierzoną na stacjach naziemnych",
+          "Temperatury powierzchni ulic, dachów i roślinności"
         ]
       },
       {
         "step": "Powtórka",
-        "title": "Obręcz barkowa wraca.",
+        "title": "Karta wraca.",
         "text": "Co się trzyma, wraca później. Co się chwieje, wraca wcześniej."
       },
       {

@@ -15,21 +15,21 @@
     "cards": [
       {
         "step": "Karte",
-        "title": "Der Schultergürtel",
-        "text": "Schlüsselbein (Clavicula), Schulterblatt (Scapula) und Oberarmknochen (Humerus).",
-        "chip": "2 Verweise"
+        "title": "Oberflächentemperatur vs. Lufttemperatur",
+        "text": "Satellitendaten zeigen Oberflächentemperaturen — oft höher als Lufttemperaturen. Die Lufttemperatur in 2 m Höhe bestimmt den menschlichen Hitzestress stärker.",
+        "chip": "→ DLR-Satellitenanalyse"
       },
       {
         "step": "Frage",
-        "title": "Welche drei Knochen bilden den Schultergürtel?",
+        "title": "Was zeigen Satellitendaten primär?",
         "options": [
-          "Brustbein, Schulterblatt, Oberarmknochen",
-          "Schlüsselbein, Schulterblatt, Oberarmknochen"
+          "Die Lufttemperatur in 2 Metern Höhe, gemessen an Bodenstationen",
+          "Die Oberflächentemperaturen von Straßen, Dächern und Vegetation"
         ]
       },
       {
         "step": "Wiedersehen",
-        "title": "Der Schultergürtel kommt wieder.",
+        "title": "Die Karte kommt wieder.",
         "text": "Was sitzt, kommt später wieder. Was wackelt, kommt früher."
       },
       {
@@ -376,6 +376,48 @@
             "why": "Wurzeln werden nicht als Kühlmechanismus genannt."
           }
         ]
+      }
+    ]
+  },
+  "views": {
+    "title": "Ein Blick hinein",
+    "subtitle": "Drei Ansichten aus der Entwicklung von plinyoo.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Ansicht",
+        "title": "Dein Ziel, dein Weg, dein Universum",
+        "text": "Ein Blick auf das Lernfeld: Startseite mit Ziel, der Weg dorthin und der Rückblick mit deinen Sternen.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Lernfeld: Dein Universum und die Frage „Was willst du können?“"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Lernfeld: „Das ist dein Weg“ mit Stationen zum Ziel"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Lernfeld: „Das war heute“ mit gesammelten Sternen"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Zielbild",
+        "title": "Das Wissensnetz",
+        "text": "Elf Karten zum Thema Hitze mit echten Verbindungen, umgeben von weiteren Themen. Ziehen zum Umsortieren, scrollen zum Zoomen.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "Das Wissensnetz — interaktive Ansicht"
+      },
+      {
+        "id": "autor",
+        "tag": "Entwurf mit Beispieldaten",
+        "title": "Wege und Lücken sehen",
+        "text": "Für alle, die Wissen weitergeben: Du wählst Schlagwörter und siehst, wie sich Karten verbinden und wo noch eine Brücke fehlt.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Wege und Lücken — interaktive Ansicht"
       }
     ]
   },

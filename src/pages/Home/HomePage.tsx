@@ -22,6 +22,7 @@ import HowItWorks from "@/components/ui/HowItWorks";
 import Examples from "@/components/ui/Examples";
 import Features from "@/components/ui/Features";
 import Journey from "@/components/ui/Journey";
+import Views from "@/components/ui/Views";
 import CTA from "@/components/ui/CTA";
 
 export default function LandingPage() {
@@ -46,6 +47,7 @@ export default function LandingPage() {
       <VisionMission />
       <Features />
       <Journey />
+      <Views />
       <Roles />
       <Examples />
       <HowItWorks />
