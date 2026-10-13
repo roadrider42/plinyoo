@@ -382,5 +382,22 @@
       "text": "Please direct inquiries regarding usage rights to hmiertzsch@web.de."
     },
     "back_to_home": "Back to Home"
+  },
+  "journey": {
+    "title": "Try a path",
+    "subtitle": "Seven cards on urban heat, each with a question and its source. A path that draws itself with every correct answer — not a course.",
+    "label": "Example with real cards",
+    "step": "Card {{current}} of {{total}}",
+    "evidence": "Source:",
+    "next": "Next →",
+    "restart": "Start over",
+    "aria": "Example path: seven cards on urban heat",
+    "doneTitle": "Seven cards, one connected path",
+    "doneText": "You didn’t read seven separate facts — you answered seven questions and saw how the cards point to one another. That was one small path. In plinyoo you walk your own.",
+    "note": "The cards are in German."
+  },
+  "views": {
+    "title": "A look inside",
+    "subtitle": "Three views from the development of plinyoo. The texts in the views are in German."
   }
 }

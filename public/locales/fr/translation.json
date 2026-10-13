@@ -382,5 +382,22 @@
     "subtitle": "Quand les personnes comprennent ce qu’elles font, l’expérience devient une véritable compétence.",
     "description": "Plinyoo relie savoir, apprentissage et application en un processus continu – pour que les personnes ne sachent pas simplement plus, mais progressent un peu chaque jour.",
     "cta": "Découvrir Plinyoo"
+  },
+  "journey": {
+    "title": "Essaie un parcours",
+    "subtitle": "Sept fiches sur la chaleur urbaine, chacune avec une question et sa source. Un chemin qui se dessine à chaque bonne réponse — pas un cours.",
+    "label": "Exemple avec de vraies fiches",
+    "step": "Fiche {{current}} sur {{total}}",
+    "evidence": "Source :",
+    "next": "Suivant →",
+    "restart": "Recommencer",
+    "aria": "Parcours d’exemple : sept fiches sur la chaleur urbaine",
+    "doneTitle": "Sept fiches, un chemin cohérent",
+    "doneText": "Tu n’as pas lu sept faits isolés : tu as répondu à sept questions et vu comment les fiches se renvoient les unes aux autres. C’était un petit chemin. Dans plinyoo, tu suis le tien.",
+    "note": "Les fiches sont en allemand."
+  },
+  "views": {
+    "title": "Un regard à l’intérieur",
+    "subtitle": "Trois vues issues du développement de plinyoo. Les textes des vues sont en allemand."
   }
 }

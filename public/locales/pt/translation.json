@@ -382,5 +382,22 @@
     "subtitle": "Quando as pessoas entendem o que fazem, a experiência se torna verdadeira competência.",
     "description": "Plinyoo conecta conhecimento, aprendizado e aplicação em um processo contínuo – para que as pessoas não apenas saibam mais, mas possam um pouco mais a cada dia.",
     "cta": "Descobrir o Plinyoo"
+  },
+  "journey": {
+    "title": "Experimente um caminho",
+    "subtitle": "Sete cartões sobre calor urbano, cada um com pergunta e fonte. Um caminho que se desenha a cada resposta certa — não um curso.",
+    "label": "Exemplo com cartões reais",
+    "step": "Cartão {{current}} de {{total}}",
+    "evidence": "Fonte:",
+    "next": "Próximo →",
+    "restart": "Recomeçar",
+    "aria": "Caminho de exemplo: sete cartões sobre calor urbano",
+    "doneTitle": "Sete cartões, um caminho conectado",
+    "doneText": "Você não leu sete fatos soltos: respondeu a sete perguntas e viu como os cartões remetem uns aos outros. Foi um caminho pequeno. No plinyoo você segue o seu.",
+    "note": "Os cartões estão em alemão."
+  },
+  "views": {
+    "title": "Um olhar por dentro",
+    "subtitle": "Três vistas do desenvolvimento do plinyoo. Os textos das vistas estão em alemão."
   }
 }

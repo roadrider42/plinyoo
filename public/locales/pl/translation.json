@@ -382,5 +382,22 @@
     "subtitle": "Kiedy ludzie rozumieją, co robią, doświadczenie staje się prawdziwą kompetencją.",
     "description": "Plinyoo łączy wiedzę, naukę i zastosowanie w ciągły proces – aby ludzie nie tylko wiedzieli więcej, ale każdego dnia trochę więcej potrafili.",
     "cta": "Odkryj Plinyoo"
+  },
+  "journey": {
+    "title": "Wypróbuj ścieżkę",
+    "subtitle": "Siedem kart o miejskim cieple, każda z pytaniem i źródłem. Ścieżka, która rysuje się z każdą poprawną odpowiedzią — nie kurs.",
+    "label": "Przykład z prawdziwymi kartami",
+    "step": "Karta {{current}} z {{total}}",
+    "evidence": "Źródło:",
+    "next": "Dalej →",
+    "restart": "Zacznij od nowa",
+    "aria": "Przykładowa ścieżka: siedem kart o miejskim cieple",
+    "doneTitle": "Siedem kart, jedna spójna ścieżka",
+    "doneText": "Nie przeczytałeś siedmiu osobnych faktów, tylko odpowiedziałeś na siedem pytań i zobaczyłeś, jak karty odsyłają do siebie. To była mała ścieżka. W plinyoo idziesz własną.",
+    "note": "Karty są po niemiecku."
+  },
+  "views": {
+    "title": "Spojrzenie do środka",
+    "subtitle": "Trzy widoki z rozwoju plinyoo. Teksty w widokach są po niemiecku."
   }
 }

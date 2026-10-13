@@ -19,6 +19,7 @@ export default function Journey() {
   const { t, i18n } = useTranslation();
   // Nur zeigen, wenn die aktuelle Sprache den Block selbst hat — sonst käme deutscher Text über den Rückfall auf eine fremde Seite
   const hasOwnText = Boolean(i18n.getResource(i18n.resolvedLanguage || i18n.language, 'translation', 'journey'));
+  const note = String(t('journey.note', { defaultValue: '' }));
   const raw = t('journey.cards', { returnObjects: true }) as unknown;
   const cards = Array.isArray(raw) ? (raw as JourneyCard[]) : [];
 
@@ -62,7 +63,9 @@ export default function Journey() {
       <h2 className="text-center font-sans text-2xl font-semibold tracking-tight text-main-text sm:text-3xl">
         {t('journey.title')}
       </h2>
-      <p className="mx-auto mt-3 mb-8 max-w-xl text-center text-text-muted">{t('journey.subtitle')}</p>
+      <p className="mx-auto mt-3 max-w-xl text-center text-text-muted">{t('journey.subtitle')}</p>
+      {note && <p className="mx-auto mt-1 max-w-xl text-center text-sm text-text-muted">{note}</p>}
+      <div className="mb-8" />
 
       {/* Weg: ein Punkt je Karte, gelesene Karten leuchten */}
       <ol className="mb-6 flex items-center justify-between" aria-hidden="true">
