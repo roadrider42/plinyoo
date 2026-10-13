@@ -9,7 +9,35 @@
     "subtitle": "Du weißt, wo du heute stehst und wohin du willst. Den Weg dazwischen findest du auf Karten, die aufeinander verweisen — nicht in einem Kursplan.",
     "cta": "Zugang anfragen",
     "cta_primary": "Zugang anfragen",
-    "cta_secondary": "Für Investoren"
+    "cta_secondary": "Für Investoren",
+    "cardsLabel": "Beispiel",
+    "cardsAria": "Beispiel: so lernst du eine Karte",
+    "cards": [
+      {
+        "step": "Karte",
+        "title": "Der Schultergürtel",
+        "text": "Schlüsselbein (Clavicula), Schulterblatt (Scapula) und Oberarmknochen (Humerus).",
+        "chip": "2 Verweise"
+      },
+      {
+        "step": "Frage",
+        "title": "Welche drei Knochen bilden den Schultergürtel?",
+        "options": [
+          "Brustbein, Schulterblatt, Oberarmknochen",
+          "Schlüsselbein, Schulterblatt, Oberarmknochen"
+        ]
+      },
+      {
+        "step": "Wiedersehen",
+        "title": "Der Schultergürtel kommt wieder.",
+        "text": "Was sitzt, kommt später wieder. Was wackelt, kommt früher."
+      },
+      {
+        "step": "Stern",
+        "title": "Gekonnt — ein Stern.",
+        "text": "Sind alle Fragen zu einer Karte zuletzt richtig beantwortet, leuchtet sie als Stern in deinem Universum."
+      }
+    ]
   },
   "hero1": {
     "eyebrow": "Wissen, das bleibt.",

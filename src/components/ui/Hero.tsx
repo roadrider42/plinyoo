@@ -35,6 +35,13 @@ export default function Hero() {
     }
   ];
 
+  // Beispiel-Lernzyklus aus den Übersetzungen; Sprachen ohne Text behalten die Kennwerte
+  type DemoCard = { step: string; title: string; text?: string; chip?: string; options?: string[] };
+  const demoRaw = t('hero.cards', { returnObjects: true }) as unknown;
+  const demo = Array.isArray(demoRaw) && demoRaw.length > 0 ? (demoRaw as DemoCard[]) : null;
+  const count = demo ? demo.length : values.length;
+  const exampleLabel = String(t('hero.cardsLabel', { defaultValue: '' }));
+
   return (
     <div className="bg-main-background text-main-text">
       {/* Header — wie app.plinyoo.com */}
@@ -79,12 +86,12 @@ export default function Hero() {
       </section>
 
       {/* Carousel mit Kennwerten */}
-      <section className="mx-auto w-full max-w-md px-5 pt-12 pb-16 sm:px-8" aria-label="Plinyoo Kennwerte">
+      <section className="mx-auto w-full max-w-md px-5 pt-12 pb-16 sm:px-8" aria-label={demo ? String(t('hero.cardsAria', { defaultValue: '' })) : 'Plinyoo Kennwerte'}>
         <div className="mb-12">
           <div className="flex items-center justify-center gap-4 mb-6">
             {/* Carousel Navigation */}
             <button
-              onClick={() => setActiveCardIndex((activeCardIndex - 1 + values.length) % values.length)}
+              onClick={() => setActiveCardIndex((activeCardIndex - 1 + count) % count)}
               className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
               aria-label="Vorherige Karte"
             >
@@ -92,19 +99,49 @@ export default function Hero() {
             </button>
 
             {/* Aktive Karte */}
-            <div className="w-full max-w-sm bg-white rounded-xl shadow-sm border border-border p-8 text-center">
-              <div className="text-5xl mb-4">{values[activeCardIndex].icon}</div>
-              <h3 className="text-2xl font-bold text-primary mb-2">
-                {values[activeCardIndex].title}
-              </h3>
-              <p className="text-main-text">
-                {values[activeCardIndex].description}
-              </p>
-            </div>
+            {demo ? (
+              <div
+                className="w-full max-w-sm min-h-[15rem] bg-white rounded-xl shadow-sm border border-border p-6 text-left"
+                aria-live="polite"
+              >
+                <div className="mb-4 flex items-center justify-between text-xs font-medium uppercase tracking-wide">
+                  <span className="text-primary">{demo[activeCardIndex].step}</span>
+                  {exampleLabel && <span className="text-text-muted">{exampleLabel}</span>}
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-3">{demo[activeCardIndex].title}</h3>
+                {demo[activeCardIndex].text && (
+                  <p className="text-main-text">{demo[activeCardIndex].text}</p>
+                )}
+                {demo[activeCardIndex].options && (
+                  <ul className="mt-2 space-y-2">
+                    {demo[activeCardIndex].options!.map((option) => (
+                      <li key={option} className="rounded-lg border border-border px-3 py-2 text-sm text-main-text">
+                        {option}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {demo[activeCardIndex].chip && (
+                  <span className="mt-4 inline-block rounded-full bg-surface-2 px-3 py-1 text-xs font-medium text-primary">
+                    {demo[activeCardIndex].chip}
+                  </span>
+                )}
+              </div>
+            ) : (
+              <div className="w-full max-w-sm bg-white rounded-xl shadow-sm border border-border p-8 text-center">
+                <div className="text-5xl mb-4">{values[activeCardIndex].icon}</div>
+                <h3 className="text-2xl font-bold text-primary mb-2">
+                  {values[activeCardIndex].title}
+                </h3>
+                <p className="text-main-text">
+                  {values[activeCardIndex].description}
+                </p>
+              </div>
+            )}
 
             {/* Carousel Navigation */}
             <button
-              onClick={() => setActiveCardIndex((activeCardIndex + 1) % values.length)}
+              onClick={() => setActiveCardIndex((activeCardIndex + 1) % count)}
               className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
               aria-label="Nächste Karte"
             >
@@ -114,7 +151,7 @@ export default function Hero() {
 
           {/* Carousel Dots */}
           <div className="flex justify-center gap-2">
-            {values.map((_, index) => (
+            {Array.from({ length: count }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setActiveCardIndex(index)}
