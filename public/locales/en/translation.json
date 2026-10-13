@@ -4,12 +4,40 @@
     "cta_secondary": "Invest"
   },
   "hero": {
-    "eyebrow": "Learning platform with knowledge graph",
-    "title": "The knowledge space is undiscovered. Your path is unique.",
-    "subtitle": "Discover topics that interest you. Choose your own learning path. Grow at your own pace.",
+    "eyebrow": "Learning platform — coach and companion in one",
+    "title": "Your learning path is unique.",
+    "subtitle": "You know where you stand today and where you want to go. You find the way in between on cards that point to one another — not in a course plan.",
     "cta": "Request access",
     "cta_primary": "Join now",
-    "cta_secondary": "For Investors"
+    "cta_secondary": "For Investors",
+    "cardsLabel": "Example",
+    "cardsAria": "Example: how you learn a card",
+    "cards": [
+      {
+        "step": "Card",
+        "title": "The shoulder girdle",
+        "text": "Clavicle, scapula and humerus.",
+        "chip": "2 links"
+      },
+      {
+        "step": "Question",
+        "title": "Which three bones form the shoulder girdle?",
+        "options": [
+          "Sternum, scapula, humerus",
+          "Clavicle, scapula, humerus"
+        ]
+      },
+      {
+        "step": "Second look",
+        "title": "The shoulder girdle comes back.",
+        "text": "What sticks comes back later. What wobbles comes back sooner."
+      },
+      {
+        "step": "Star",
+        "title": "Learned — one star.",
+        "text": "When all questions on a card were last answered correctly, it shines as a star in your universe."
+      }
+    ]
   },
   "hero1": {
     "eyebrow": "Knowledge that lasts.",
@@ -35,15 +63,17 @@
   "visionMission": {
     "vision": {
       "title": "Vision",
-      "text": "We envision a world where people don’t just learn but feel truly accompanied – by technologies that listen, understand, and empower."
+      "text": "Everyone finds their own way to what they want to be able to do."
     },
     "mission": {
       "title": "Mission",
-      "text": "A platform for personalized learning: we unite reflection, training, knowledge building, and personal guidance – ready to use, adaptive, and secure."
+      "text": "We make knowledge so accessible that the way from here to there takes as little time as possible — and trainers and team are on the same side."
     }
   },
   "roles": {
-    "title": "Three ways in",
+    "title": "Two interests, one place",
+    "intro": "Trainers want a well-trained team. Those on the team want to learn what moves them forward. Both meet here.",
+    "waysTitle": "Three ways in",
     "learner": {
       "title": "Those who learn",
       "description": "Follow public topics, see your own progress."
@@ -53,8 +83,8 @@
       "description": "Write and link cards, generate questions from them, pull content from Wikipedia or a shared page."
     },
     "curator": {
-      "title": "Those who maintain a topic",
-      "description": "Bring people in via invite links, assign cards, set mandatory content with due dates."
+      "title": "Those who open a topic",
+      "description": "Bring others in via a link and give them cards."
     }
   },
   "howItWorks": {
@@ -115,23 +145,23 @@
     ]
   },
   "features": {
-    "title": "Your benefits with Digital Companionship",
-    "subtitle": "Digital Companionship combines personalized learning, adaptive guidance, and measurable development – in one integrated solution for people and organizations.",
+    "title": "One card, one question, a second look",
+    "subtitle": "The way emerges as you walk. Under every card are follow-ups instead of a chapter list. Which ones depends on how the cards link to each other — and on where you have gone so far.",
     "items": [
       {
-        "title": "Interactive learning content",
-        "desc": "Dialogues, reflection prompts, and step-by-step guidance – digitally supported and personally relevant.",
-        "category": "Interaction"
+        "title": "Card",
+        "desc": "A single thought, the whole screen. No chapter you scroll through.",
+        "category": "1"
       },
       {
-        "title": "Progress tracking",
-        "desc": "Monitor development and impact – transparent, motivating, and GDPR-compliant.",
-        "category": "Measurability"
+        "title": "Question",
+        "desc": "Every card comes with questions.",
+        "category": "2"
       },
       {
-        "title": "100% mobile & adaptable",
-        "desc": "Learn and engage – anywhere, anytime, online or offline.",
-        "category": "Flexibility"
+        "title": "Second look",
+        "desc": "What sticks comes back later. What wobbles comes back sooner.",
+        "category": "3"
       }
     ]
   },
@@ -166,8 +196,8 @@
     ]
   },
   "cta": {
-    "title": "Because every learning journey is unique.",
-    "subtitle": "Our companionship solutions adapt to you – not the other way around. For sustainable growth that lasts and creates impact.",
+    "title": "Start with one card.",
+    "subtitle": "You don't need a course plan. You need a first card and the link that takes you to the next.",
     "button": "Request access"
   },
   "storySketch": {
@@ -206,18 +236,6 @@
     },
     "placeholder": {
       "title": "More examples to come"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Your virtual Nutritionist",
-      "desc": "Individual nutrition advice, always available.",
-      "button": "Coming soon"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Your virtual Bartender",
-      "desc": "Mix perfect drinks, deepen your knowledge.",
-      "button": "Coming soon"
     },
     "your-use-case": {
       "title": "Your Use Case",

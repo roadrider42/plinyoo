@@ -4,25 +4,55 @@
     "cta_secondary": "Invertir"
   },
   "hero": {
-    "eyebrow": "",
-    "title": "Creciendo juntos: digital, humano, único.",
-    "subtitle": "Acompañamos procesos de aprendizaje y consultoría con compañeros digitales inteligentes y de confianza que se adaptan a tus objetivos, y no al revés.",
+    "eyebrow": "Plataforma de aprendizaje: coach y compañero en uno",
+    "title": "Tu camino de aprendizaje es único.",
+    "subtitle": "Sabes dónde estás hoy y adónde quieres llegar. El camino entre ambos puntos lo encuentras en tarjetas que se remiten entre sí, no en un plan de curso.",
     "cta_primary": "Únete ahora",
     "cta_secondary": "Para inversores",
-    "cta": "Solicitar acceso"
+    "cta": "Solicitar acceso",
+    "cardsLabel": "Ejemplo",
+    "cardsAria": "Ejemplo: así aprendes una tarjeta",
+    "cards": [
+      {
+        "step": "Tarjeta",
+        "title": "La cintura escapular",
+        "text": "Clavícula (clavicula), omóplato (scapula) y húmero (humerus).",
+        "chip": "2 enlaces"
+      },
+      {
+        "step": "Pregunta",
+        "title": "¿Qué tres huesos forman la cintura escapular?",
+        "options": [
+          "Esternón, omóplato, húmero",
+          "Clavícula, omóplato, húmero"
+        ]
+      },
+      {
+        "step": "Reencuentro",
+        "title": "La cintura escapular vuelve.",
+        "text": "Lo que se sabe vuelve más tarde. Lo que flaquea vuelve antes."
+      },
+      {
+        "step": "Estrella",
+        "title": "Dominado: una estrella.",
+        "text": "Cuando todas las preguntas de una tarjeta se respondieron bien la última vez, brilla como estrella en tu universo."
+      }
+    ]
   },
   "visionMission": {
     "vision": {
       "title": "Visión",
-      "text": "Imaginamos un mundo donde las personas no solo aprenden, sino que se sienten acompañadas – por tecnologías que escuchan, entienden y fortalecen."
+      "text": "Cada persona encuentra su propio camino hacia lo que quiere saber hacer."
     },
     "mission": {
       "title": "Misión",
-      "text": "Una plataforma para el aprendizaje personalizado: unimos reflexión, formación, construcción de conocimiento y acompañamiento personal – lista para usar, adaptativa y segura."
+      "text": "Hacemos el conocimiento tan accesible que el camino de aquí a allí cuesta el menor tiempo posible, y entrenadores y equipo están del mismo lado."
     }
   },
   "roles": {
-    "title": "Tres caminos de entrada",
+    "title": "Dos intereses, un lugar",
+    "intro": "Los entrenadores quieren un equipo bien formado. Quien está en el equipo quiere aprender lo que le hace avanzar. Ambos se encuentran aquí.",
+    "waysTitle": "Tres caminos de entrada",
     "learner": {
       "title": "Quienes aprenden",
       "description": "Seguir temas públicos, ver tu propio progreso."
@@ -32,8 +62,8 @@
       "description": "Escribir y enlazar tarjetas, generar preguntas, obtener contenidos de Wikipedia o de una página compartida."
     },
     "curator": {
-      "title": "Quienes mantienen un tema",
-      "description": "Incorporar personas mediante enlaces de invitación, asignar tarjetas, establecer contenidos obligatorios con fecha límite."
+      "title": "Quienes abren un tema",
+      "description": "Incorporar a otras personas con un enlace y darles tarjetas."
     }
   },
   "howItWorks": {
@@ -94,23 +124,23 @@
     ]
   },
   "features": {
-    "title": "Tus beneficios con el Acompañamiento Digital",
-    "subtitle": "El Acompañamiento Digital combina aprendizaje personalizado, orientación adaptativa y desarrollo medible en una solución integrada para personas y organizaciones.",
+    "title": "Una tarjeta, una pregunta, un reencuentro",
+    "subtitle": "El camino se hace al andar. Bajo cada tarjeta hay continuaciones en lugar de una lista de capítulos. Cuáles son depende de cómo se enlazan las tarjetas entre sí y de adónde has ido hasta ahora.",
     "items": [
       {
-        "title": "Contenido de aprendizaje interactivo",
-        "desc": "Diálogos, estímulos para la reflexión y orientación paso a paso, con apoyo digital y personalmente relevante.",
-        "category": ""
+        "title": "Tarjeta",
+        "desc": "Una idea, toda la pantalla. Ningún capítulo por el que desplazarse.",
+        "category": "1"
       },
       {
-        "title": "Seguimiento del progreso",
-        "desc": "Supervisa el desarrollo y el impacto: transparente, motivador y conforme con el RGPD.",
-        "category": ""
+        "title": "Pregunta",
+        "desc": "Cada tarjeta tiene sus preguntas.",
+        "category": "2"
       },
       {
-        "title": "100% móvil y adaptable",
-        "desc": "Aprende e interactúa, en cualquier lugar, en cualquier momento, en línea o sin conexión.",
-        "category": ""
+        "title": "Reencuentro",
+        "desc": "Lo que se sabe vuelve más tarde. Lo que flaquea vuelve antes.",
+        "category": "3"
       }
     ]
   },
@@ -145,8 +175,8 @@
     ]
   },
   "cta": {
-    "title": "Porque cada viaje de aprendizaje es único.",
-    "subtitle": "Nuestras soluciones de acompañamiento se adaptan a ti, y no al revés. Para un crecimiento sostenible que perdura y crea impacto.",
+    "title": "Empieza con una tarjeta.",
+    "subtitle": "No necesitas un plan de curso. Necesitas una primera tarjeta y el enlace que te lleva a la siguiente.",
     "button": "Solicitar acceso"
   },
   "storySketch": {
@@ -243,18 +273,6 @@
     },
     "placeholder": {
       "title": "Más ejemplos próximamente"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Tu Nutricionista virtual",
-      "desc": "Asesoramiento nutricional individual, siempre disponible.",
-      "button": "Próximamente"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Tu Barman virtual",
-      "desc": "Mezcla bebidas perfectas, profundiza tus conocimientos.",
-      "button": "Próximamente"
     },
     "your-use-case": {
       "title": "Tu caso de uso",

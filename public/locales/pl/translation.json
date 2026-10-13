@@ -4,25 +4,55 @@
     "cta_secondary": "Inwestuj"
   },
   "hero": {
-    "eyebrow": "",
-    "title": "Rozwijamy się razem – cyfrowo, po ludzku, unikatowo.",
-    "subtitle": "Towarzyszymy procesom uczenia się i doradztwa dzięki inteligentnym, godnym zaufania cyfrowym towarzyszom, którzy dostosowują się do Twoich celów – a nie odwrotnie.",
+    "eyebrow": "Platforma do nauki — coach i towarzysz w jednym",
+    "title": "Twoja ścieżka nauki jest wyjątkowa.",
+    "subtitle": "Wiesz, gdzie dziś jesteś i dokąd chcesz dojść. Drogę pomiędzy znajdziesz na kartach, które odsyłają do siebie nawzajem — nie w planie kursu.",
     "cta_primary": "Dołącz teraz",
     "cta_secondary": "Dla inwestorów",
-    "cta": "Poproś o dostęp"
+    "cta": "Poproś o dostęp",
+    "cardsLabel": "Przykład",
+    "cardsAria": "Przykład: tak uczysz się karty",
+    "cards": [
+      {
+        "step": "Karta",
+        "title": "Obręcz barkowa",
+        "text": "Obojczyk (clavicula), łopatka (scapula) i kość ramienna (humerus).",
+        "chip": "2 odnośniki"
+      },
+      {
+        "step": "Pytanie",
+        "title": "Które trzy kości tworzą obręcz barkową?",
+        "options": [
+          "Mostek, łopatka, kość ramienna",
+          "Obojczyk, łopatka, kość ramienna"
+        ]
+      },
+      {
+        "step": "Powtórka",
+        "title": "Obręcz barkowa wraca.",
+        "text": "Co się trzyma, wraca później. Co się chwieje, wraca wcześniej."
+      },
+      {
+        "step": "Gwiazda",
+        "title": "Opanowane — jedna gwiazda.",
+        "text": "Gdy na wszystkie pytania do karty ostatnio odpowiedziano poprawnie, świeci jako gwiazda w Twoim wszechświecie."
+      }
+    ]
   },
   "visionMission": {
     "vision": {
       "title": "Wizja",
-      "text": "Wyobrażamy sobie świat, w którym ludzie nie tylko się uczą, ale czują się towarzyszeni – przez technologie, które słuchają, rozumieją i wzmacniają."
+      "text": "Każdy znajduje własną drogę do tego, co chce umieć."
     },
     "mission": {
       "title": "Misja",
-      "text": "Platforma do spersonalizowanej nauki: łączymy refleksję, szkolenie, budowanie wiedzy i osobiste wsparcie – gotowa do użycia, adaptacyjna i bezpieczna."
+      "text": "Udostępniamy wiedzę tak, by droga stąd tam zajmowała jak najmniej czasu — a trenerzy i zespół stali po tej samej stronie."
     }
   },
   "roles": {
-    "title": "Trzy drogi wejścia",
+    "title": "Dwa interesy, jedno miejsce",
+    "intro": "Trenerzy chcą dobrze wyszkolonego zespołu. Kto jest w zespole, chce uczyć się tego, co go rozwija. Jedno i drugie spotyka się tutaj.",
+    "waysTitle": "Trzy drogi wejścia",
     "learner": {
       "title": "Ci, którzy się uczą",
       "description": "Śledzić publiczne tematy, widzieć własny postęp."
@@ -32,8 +62,8 @@
       "description": "Pisać i łączyć karty, generować pytania, pobierać treści z Wikipedii lub udostępnionej strony."
     },
     "curator": {
-      "title": "Ci, którzy opiekują się tematem",
-      "description": "Zapraszać osoby przez link, przypisywać karty, ustawiać obowiązkowe treści z terminem."
+      "title": "Ci, którzy otwierają temat",
+      "description": "Zapraszać innych przez link i dawać im karty."
     }
   },
   "howItWorks": {
@@ -94,23 +124,23 @@
     ]
   },
   "features": {
-    "title": "Twoje korzyści z Cyfrowego Towarzyszenia",
-    "subtitle": "Cyfrowe Towarzyszenie łączy spersonalizowaną naukę, adaptacyjne wsparcie i mierzalny rozwój – w jednym zintegrowanym rozwiązaniu dla ludzi i organizacji.",
+    "title": "Jedna karta, jedno pytanie, powtórka",
+    "subtitle": "Droga powstaje w marszu. Pod każdą kartą są dalsze odnośniki zamiast listy rozdziałów. Które — zależy od tego, jak karty są ze sobą powiązane, i od tego, dokąd dotąd zaszedłeś.",
     "items": [
       {
-        "title": "Interaktywne treści edukacyjne",
-        "desc": "Dialogi, impulsy do refleksji i prowadzenie krok po kroku – cyfrowe, a zarazem osobiste.",
-        "category": ""
+        "title": "Karta",
+        "desc": "Jedna myśl, cały ekran. Żadnego rozdziału do przewijania.",
+        "category": "1"
       },
       {
-        "title": "Śledzenie postępów",
-        "desc": "Monitoruj rozwój i wpływ – transparentnie, motywująco i zgodnie z RODO.",
-        "category": ""
+        "title": "Pytanie",
+        "desc": "Do każdej karty należą pytania.",
+        "category": "2"
       },
       {
-        "title": "100% mobilne i elastyczne",
-        "desc": "Ucz się i działaj – gdziekolwiek i kiedykolwiek, online lub offline.",
-        "category": ""
+        "title": "Powtórka",
+        "desc": "Co się trzyma, wraca później. Co się chwieje, wraca wcześniej.",
+        "category": "3"
       }
     ]
   },
@@ -145,8 +175,8 @@
     ]
   },
   "cta": {
-    "title": "Bo każda ścieżka nauki jest unikalna.",
-    "subtitle": "Nasze rozwiązania towarzyszące dostosowują się do Ciebie – nie odwrotnie. Dla trwałego rozwoju z realnym wpływem.",
+    "title": "Zacznij od jednej karty.",
+    "subtitle": "Nie potrzebujesz planu kursu. Potrzebujesz pierwszej karty i odnośnika, który prowadzi do następnej.",
     "button": "Poproś o dostęp"
   },
   "storySketch": {
@@ -185,18 +215,6 @@
     },
     "placeholder": {
       "title": "Więcej przykładów wkrótce"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Twój wirtualny dietetyk",
-      "desc": "Indywidualne porady żywieniowe, zawsze dostępne.",
-      "button": "Wkrótce"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Twój wirtualny barman",
-      "desc": "Mieszaj idealne drinki, pogłębiaj swoją wiedzę.",
-      "button": "Wkrótce"
     },
     "your-use-case": {
       "title": "Twój przypadek użycia",

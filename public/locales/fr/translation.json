@@ -4,25 +4,55 @@
     "cta_secondary": "Investir"
   },
   "hero": {
-    "eyebrow": "",
-    "title": "Grandir ensemble - numérique, humain, unique.",
-    "subtitle": "Nous accompagnons les processus d'apprentissage et de conseil avec des compagnons numériques intelligents et fiables qui s'adaptent à vos objectifs - et non l'inverse.",
+    "eyebrow": "Plateforme d’apprentissage — coach et compagnon en un",
+    "title": "Ton parcours d’apprentissage est unique.",
+    "subtitle": "Tu sais où tu en es aujourd’hui et où tu veux aller. Le chemin entre les deux, tu le trouves sur des fiches qui renvoient les unes aux autres — pas dans un plan de cours.",
     "cta_primary": "Rejoignez-nous maintenant",
     "cta_secondary": "Pour les investisseurs",
-    "cta": "Demander l’accès"
+    "cta": "Demander l’accès",
+    "cardsLabel": "Exemple",
+    "cardsAria": "Exemple : comment tu apprends une fiche",
+    "cards": [
+      {
+        "step": "Fiche",
+        "title": "La ceinture scapulaire",
+        "text": "Clavicule (clavicula), omoplate (scapula) et humérus (humerus).",
+        "chip": "2 renvois"
+      },
+      {
+        "step": "Question",
+        "title": "Quels trois os forment la ceinture scapulaire ?",
+        "options": [
+          "Sternum, omoplate, humérus",
+          "Clavicule, omoplate, humérus"
+        ]
+      },
+      {
+        "step": "Retrouvailles",
+        "title": "La ceinture scapulaire revient.",
+        "text": "Ce qui est acquis revient plus tard. Ce qui vacille revient plus tôt."
+      },
+      {
+        "step": "Étoile",
+        "title": "Acquis — une étoile.",
+        "text": "Quand toutes les questions d’une fiche ont été répondues juste la dernière fois, elle brille comme une étoile dans ton univers."
+      }
+    ]
   },
   "visionMission": {
     "vision": {
       "title": "Vision",
-      "text": "Nous imaginons un monde où les personnes n’apprennent pas seulement, mais se sentent accompagnées – par des technologies qui écoutent, comprennent et renforcent."
+      "text": "Chacun trouve son propre chemin vers ce qu’il veut savoir faire."
     },
     "mission": {
       "title": "Mission",
-      "text": "Une plateforme pour l’apprentissage personnalisé : nous unissons réflexion, formation, construction de savoir et accompagnement personnel – prête à l’emploi, adaptative et sécurisée."
+      "text": "Nous rendons le savoir si accessible que le chemin d’ici à là prend le moins de temps possible — et entraîneurs et équipe sont du même côté."
     }
   },
   "roles": {
-    "title": "Trois voies d’accès",
+    "title": "Deux intérêts, un lieu",
+    "intro": "Les entraîneurs veulent une équipe bien formée. Ceux qui sont dans l’équipe veulent apprendre ce qui les fait avancer. Les deux se rencontrent ici.",
+    "waysTitle": "Trois voies d’accès",
     "learner": {
       "title": "Ceux qui apprennent",
       "description": "Suivre des sujets publics, voir sa propre progression."
@@ -32,8 +62,8 @@
       "description": "Écrire et lier des fiches, générer des questions, importer du contenu de Wikipédia ou d’une page partagée."
     },
     "curator": {
-      "title": "Ceux qui gèrent un sujet",
-      "description": "Inviter des personnes par lien, attribuer des fiches, définir du contenu obligatoire avec échéance."
+      "title": "Ceux qui ouvrent un sujet",
+      "description": "Faire venir d’autres personnes par un lien et leur confier des fiches."
     }
   },
   "howItWorks": {
@@ -94,23 +124,23 @@
     ]
   },
   "features": {
-    "title": "Vos avantages avec la compagnie numérique",
-    "subtitle": "La compagnie numérique combine un apprentissage personnalisé, un accompagnement adaptatif et un développement mesurable - en une seule solution intégrée pour les personnes et les organisations.",
+    "title": "Une fiche, une question, des retrouvailles",
+    "subtitle": "Le chemin se fait en marchant. Sous chaque fiche, il y a des suites au lieu d’une liste de chapitres. Lesquelles dépend de la façon dont les fiches sont reliées entre elles — et d’où tu es déjà allé.",
     "items": [
       {
-        "title": "Contenu d'apprentissage interactif",
-        "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement.",
-        "category": ""
+        "title": "Fiche",
+        "desc": "Une idée, tout l’écran. Pas de chapitre à faire défiler.",
+        "category": "1"
       },
       {
-        "title": "Suivi des progrès",
-        "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD.",
-        "category": ""
+        "title": "Question",
+        "desc": "Chaque fiche a ses questions.",
+        "category": "2"
       },
       {
-        "title": "100% mobile & adaptable",
-        "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne.",
-        "category": ""
+        "title": "Retrouvailles",
+        "desc": "Ce qui est acquis revient plus tard. Ce qui vacille revient plus tôt.",
+        "category": "3"
       }
     ]
   },
@@ -145,8 +175,8 @@
     ]
   },
   "cta": {
-    "title": "Parce que chaque parcours d'apprentissage est unique.",
-    "subtitle": "Nos solutions de compagnie s'adaptent à vous - et non l'inverse. Pour une croissance durable qui dure et crée un impact.",
+    "title": "Commence par une fiche.",
+    "subtitle": "Tu n’as pas besoin d’un plan de cours. Tu as besoin d’une première fiche et du renvoi qui te mène à la suivante.",
     "button": "Demander l’accès"
   },
   "storySketch": {
@@ -243,18 +273,6 @@
     },
     "placeholder": {
       "title": "Plus d'exemples à venir"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Votre nutritionniste virtuelle",
-      "desc": "Conseils nutritionnels personnalisés, toujours disponibles.",
-      "button": "Bientôt disponible"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Votre barman virtuel",
-      "desc": "Mixez des boissons parfaites, approfondissez vos connaissances.",
-      "button": "Bientôt disponible"
     },
     "your-use-case": {
       "title": "Votre cas d'usage",

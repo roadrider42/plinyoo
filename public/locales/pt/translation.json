@@ -4,25 +4,55 @@
     "cta_secondary": "Investir"
   },
   "hero": {
-    "eyebrow": "",
-    "title": "Crescendo juntos - digital, humano, único.",
-    "subtitle": "Acompanhamos processos de aprendizagem e consultoria com companheiros digitais inteligentes e confiáveis que se adaptam aos seus objetivos - e não o contrário.",
+    "eyebrow": "Plataforma de aprendizagem — coach e companheiro em um",
+    "title": "Seu caminho de aprendizagem é único.",
+    "subtitle": "Você sabe onde está hoje e aonde quer chegar. O caminho entre os dois você encontra em cartões que remetem uns aos outros — não em um plano de curso.",
     "cta_primary": "Junte-se agora",
     "cta_secondary": "Para investidores",
-    "cta": "Solicitar acesso"
+    "cta": "Solicitar acesso",
+    "cardsLabel": "Exemplo",
+    "cardsAria": "Exemplo: como você aprende um cartão",
+    "cards": [
+      {
+        "step": "Cartão",
+        "title": "A cintura escapular",
+        "text": "Clavícula (clavicula), escápula (scapula) e úmero (humerus).",
+        "chip": "2 vínculos"
+      },
+      {
+        "step": "Pergunta",
+        "title": "Quais três ossos formam a cintura escapular?",
+        "options": [
+          "Esterno, escápula, úmero",
+          "Clavícula, escápula, úmero"
+        ]
+      },
+      {
+        "step": "Reencontro",
+        "title": "A cintura escapular volta.",
+        "text": "O que está firme volta mais tarde. O que vacila volta mais cedo."
+      },
+      {
+        "step": "Estrela",
+        "title": "Dominado — uma estrela.",
+        "text": "Quando todas as perguntas de um cartão foram respondidas corretamente na última vez, ele brilha como estrela no seu universo."
+      }
+    ]
   },
   "visionMission": {
     "vision": {
       "title": "Visão",
-      "text": "Imaginamos um mundo onde as pessoas não apenas aprendem, mas se sentem acompanhadas – por tecnologias que escutam, entendem e fortalecem."
+      "text": "Cada pessoa encontra seu próprio caminho até aquilo que quer saber fazer."
     },
     "mission": {
       "title": "Missão",
-      "text": "Uma plataforma para aprendizado personalizado: unimos reflexão, treinamento, construção de conhecimento e acompanhamento pessoal – pronta para usar, adaptativa e segura."
+      "text": "Tornamos o conhecimento tão acessível que o caminho daqui até lá custa o menor tempo possível — e treinadores e equipe ficam do mesmo lado."
     }
   },
   "roles": {
-    "title": "Três caminhos de entrada",
+    "title": "Dois interesses, um lugar",
+    "intro": "Treinadores querem uma equipe bem formada. Quem está na equipe quer aprender o que o faz avançar. Os dois se encontram aqui.",
+    "waysTitle": "Três caminhos de entrada",
     "learner": {
       "title": "Quem aprende",
       "description": "Seguir tópicos públicos, ver seu próprio progresso."
@@ -32,8 +62,8 @@
       "description": "Escrever e vincular cartões, gerar perguntas, obter conteúdo da Wikipédia ou de uma página compartilhada."
     },
     "curator": {
-      "title": "Quem mantém um tópico",
-      "description": "Trazer pessoas via link de convite, atribuir cartões, definir conteúdo obrigatório com prazo."
+      "title": "Quem abre um tópico",
+      "description": "Trazer outras pessoas por um link e dar cartões a elas."
     }
   },
   "howItWorks": {
@@ -94,23 +124,23 @@
     ]
   },
   "features": {
-    "title": "Seus benefícios com a Companhia Digital",
-    "subtitle": "A Companhia Digital combina aprendizado personalizado, orientação adaptativa e desenvolvimento mensurável - em uma solução integrada para pessoas e organizações.",
+    "title": "Um cartão, uma pergunta, um reencontro",
+    "subtitle": "O caminho nasce ao caminhar. Sob cada cartão há continuações em vez de uma lista de capítulos. Quais são depende de como os cartões se vinculam entre si — e de onde você já foi.",
     "items": [
       {
-        "title": "Conteúdo de aprendizado interativo",
-        "desc": "Diálogos, estímulos para reflexão e orientação passo a passo - com suporte digital e relevância pessoal.",
-        "category": ""
+        "title": "Cartão",
+        "desc": "Um pensamento, a tela inteira. Nenhum capítulo para rolar.",
+        "category": "1"
       },
       {
-        "title": "Acompanhamento de progresso",
-        "desc": "Monitore o desenvolvimento e o impacto - transparente, motivador e compatível com o GDPR.",
-        "category": ""
+        "title": "Pergunta",
+        "desc": "Cada cartão tem suas perguntas.",
+        "category": "2"
       },
       {
-        "title": "100% móvel e adaptável",
-        "desc": "Aprenda e interaja - em qualquer lugar, a qualquer hora, online ou offline.",
-        "category": ""
+        "title": "Reencontro",
+        "desc": "O que está firme volta mais tarde. O que vacila volta mais cedo.",
+        "category": "3"
       }
     ]
   },
@@ -145,8 +175,8 @@
     ]
   },
   "cta": {
-    "title": "Porque cada jornada de aprendizado é única.",
-    "subtitle": "Nossas soluções de companhia se adaptam a você - e não o contrário. Para um crescimento sustentável que perdura e cria impacto.",
+    "title": "Comece com um cartão.",
+    "subtitle": "Você não precisa de um plano de curso. Precisa de um primeiro cartão e do vínculo que leva ao próximo.",
     "button": "Solicitar acesso"
   },
   "storySketch": {
@@ -243,18 +273,6 @@
     },
     "placeholder": {
       "title": "Mais exemplos em breve"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Sua Nutricionista virtual",
-      "desc": "Aconselhamento nutricional individual, sempre disponível.",
-      "button": "Em breve"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Seu barman virtual",
-      "desc": "Misture bebidas perfeitas, aprofunde seus conhecimentos.",
-      "button": "Em breve"
     },
     "your-use-case": {
       "title": "Seu caso de uso",
