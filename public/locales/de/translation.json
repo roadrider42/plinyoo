@@ -67,24 +67,28 @@
     },
     "mission": {
       "title": "Mission",
-      "text": "Wir machen Wissen so zugänglich, dass der Weg von hier nach dort so wenig Zeit kostet wie möglich — und Trainer und Team dabei auf derselben Seite stehen."
+      "text": "Wir machen Wissen so zugänglich, dass der Weg von hier nach dort so wenig Zeit kostet wie möglich — und Trainer und Mannschaft dabei auf derselben Seite stehen."
     }
   },
   "roles": {
     "title": "Zwei Interessen, ein Platz",
-    "intro": "Trainer wollen ein gut ausgebildetes Team. Wer im Team spielt, will lernen, was ihn weiterbringt. Beides trifft sich hier.",
-    "waysTitle": "Drei Wege hinein",
+    "intro": "Trainer wollen eine gut ausgebildete Mannschaft. Wer in der Mannschaft spielt, will lernen, was ihn weiterbringt. Beides trifft sich hier.",
+    "waysTitle": "Vier Wege hinein",
+    "follower": {
+      "title": "Mitspielen",
+      "description": "Dein Trainer lädt dich ein. Du folgst den Inhalten, die er für dich bereithält, und siehst deinen Fortschritt."
+    },
     "learner": {
-      "title": "Wer lernt",
-      "description": "Öffentlichen Themen folgen, den eigenen Fortschritt sehen."
+      "title": "Entdecken",
+      "description": "Du stöberst in öffentlichen Themen, lernst in deinem Tempo und siehst deinen Fortschritt."
     },
     "author": {
-      "title": "Wer Wissen weitergibt",
-      "description": "Karten schreiben und verlinken, Fragen dazu erzeugen lassen, Inhalte aus Wikipedia oder von einer geteilten Seite holen."
+      "title": "Selbst gestalten",
+      "description": "Du schreibst und verlinkst eigene Karten, lässt Fragen dazu erzeugen, holst Inhalte aus Wikipedia — und lernst damit."
     },
     "curator": {
-      "title": "Wer ein Thema aufmacht",
-      "description": "Andere per Link dazuholen und ihnen Karten mitgeben."
+      "title": "Anleiten",
+      "description": "Du kuratierst ein Thema — als Inhaltsanbieter, der Wissen bereitstellt, oder als Trainer mit eigener Mannschaft, die du per Link einlädst."
     }
   },
   "howItWorks": {

@@ -73,18 +73,22 @@
   "roles": {
     "title": "Two interests, one place",
     "intro": "Trainers want a well-trained team. Those on the team want to learn what moves them forward. Both meet here.",
-    "waysTitle": "Three ways in",
+    "waysTitle": "Four ways in",
+    "follower": {
+      "title": "Play along",
+      "description": "Your trainer invites you. You follow the content they have ready for you — and see your progress."
+    },
     "learner": {
-      "title": "Those who learn",
-      "description": "Follow public topics, see your own progress."
+      "title": "Discover",
+      "description": "Browse public topics, learn at your own pace and see your progress."
     },
     "author": {
-      "title": "Those who share knowledge",
-      "description": "Write and link cards, generate questions from them, pull content from Wikipedia or a shared page."
+      "title": "Create your own",
+      "description": "Write and link your own cards, have questions generated, pull in content from Wikipedia — and learn with them."
     },
     "curator": {
-      "title": "Those who open a topic",
-      "description": "Bring others in via a link and give them cards."
+      "title": "Lead",
+      "description": "You curate a topic — as a content provider who shares knowledge, or as a trainer who invites and guides your own team via a link."
     }
   },
   "howItWorks": {

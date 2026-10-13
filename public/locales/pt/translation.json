@@ -52,18 +52,22 @@
   "roles": {
     "title": "Dois interesses, um lugar",
     "intro": "Treinadores querem uma equipe bem formada. Quem está na equipe quer aprender o que o faz avançar. Os dois se encontram aqui.",
-    "waysTitle": "Três caminhos de entrada",
+    "waysTitle": "Quatro caminhos de entrada",
+    "follower": {
+      "title": "Entrar na equipe",
+      "description": "Seu treinador convida você. Você acompanha o conteúdo que ele preparou para você e vê seu progresso."
+    },
     "learner": {
-      "title": "Quem aprende",
-      "description": "Seguir tópicos públicos, ver seu próprio progresso."
+      "title": "Descobrir",
+      "description": "Explore tópicos públicos, aprenda no seu ritmo e veja seu progresso."
     },
     "author": {
-      "title": "Quem compartilha conhecimento",
-      "description": "Escrever e vincular cartões, gerar perguntas, obter conteúdo da Wikipédia ou de uma página compartilhada."
+      "title": "Criar o seu",
+      "description": "Escreva e vincule seus próprios cartões, gere perguntas, traga conteúdo da Wikipédia — e aprenda com eles."
     },
     "curator": {
-      "title": "Quem abre um tópico",
-      "description": "Trazer outras pessoas por um link e dar cartões a elas."
+      "title": "Conduzir",
+      "description": "Você cura um tópico: como fornecedor de conteúdo que compartilha conhecimento ou como treinador que convida e conduz sua própria equipe por um link."
     }
   },
   "howItWorks": {

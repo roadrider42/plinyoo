@@ -52,18 +52,22 @@
   "roles": {
     "title": "Dwa interesy, jedno miejsce",
     "intro": "Trenerzy chcą dobrze wyszkolonego zespołu. Kto jest w zespole, chce uczyć się tego, co go rozwija. Jedno i drugie spotyka się tutaj.",
-    "waysTitle": "Trzy drogi wejścia",
+    "waysTitle": "Cztery drogi wejścia",
+    "follower": {
+      "title": "Dołącz do zespołu",
+      "description": "Twój trener zaprasza Cię. Podążasz za treściami, które dla Ciebie przygotował, i widzisz swój postęp."
+    },
     "learner": {
-      "title": "Ci, którzy się uczą",
-      "description": "Śledzić publiczne tematy, widzieć własny postęp."
+      "title": "Odkrywaj",
+      "description": "Przeglądaj publiczne tematy, ucz się we własnym tempie i widź swój postęp."
     },
     "author": {
-      "title": "Ci, którzy dzielą się wiedzą",
-      "description": "Pisać i łączyć karty, generować pytania, pobierać treści z Wikipedii lub udostępnionej strony."
+      "title": "Twórz własne",
+      "description": "Pisz i łącz własne karty, generuj do nich pytania, pobieraj treści z Wikipedii — i ucz się z nimi."
     },
     "curator": {
-      "title": "Ci, którzy otwierają temat",
-      "description": "Zapraszać innych przez link i dawać im karty."
+      "title": "Prowadź",
+      "description": "Opiekujesz się tematem — jako dostawca treści, który dzieli się wiedzą, albo jako trener, który zaprasza przez link własny zespół i go prowadzi."
     }
   },
   "howItWorks": {

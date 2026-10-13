@@ -52,18 +52,22 @@
   "roles": {
     "title": "Deux intérêts, un lieu",
     "intro": "Les entraîneurs veulent une équipe bien formée. Ceux qui sont dans l’équipe veulent apprendre ce qui les fait avancer. Les deux se rencontrent ici.",
-    "waysTitle": "Trois voies d’accès",
+    "waysTitle": "Quatre voies d’accès",
+    "follower": {
+      "title": "Rejoindre l’équipe",
+      "description": "Ton entraîneur t’invite. Tu suis les contenus qu’il a préparés pour toi et tu vois ta progression."
+    },
     "learner": {
-      "title": "Ceux qui apprennent",
-      "description": "Suivre des sujets publics, voir sa propre progression."
+      "title": "Découvrir",
+      "description": "Parcours des sujets publics, apprends à ton rythme et vois ta progression."
     },
     "author": {
-      "title": "Ceux qui partagent le savoir",
-      "description": "Écrire et lier des fiches, générer des questions, importer du contenu de Wikipédia ou d’une page partagée."
+      "title": "Créer les tiennes",
+      "description": "Écris et relie tes propres fiches, fais générer des questions, importe du contenu de Wikipédia — et apprends avec."
     },
     "curator": {
-      "title": "Ceux qui ouvrent un sujet",
-      "description": "Faire venir d’autres personnes par un lien et leur confier des fiches."
+      "title": "Guider",
+      "description": "Tu organises un sujet : comme fournisseur de contenus qui partage son savoir, ou comme entraîneur qui invite son équipe par un lien et la guide."
     }
   },
   "howItWorks": {

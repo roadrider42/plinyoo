@@ -52,18 +52,22 @@
   "roles": {
     "title": "Dos intereses, un lugar",
     "intro": "Los entrenadores quieren un equipo bien formado. Quien está en el equipo quiere aprender lo que le hace avanzar. Ambos se encuentran aquí.",
-    "waysTitle": "Tres caminos de entrada",
+    "waysTitle": "Cuatro caminos de entrada",
+    "follower": {
+      "title": "Jugar en equipo",
+      "description": "Tu entrenador te invita. Sigues los contenidos que ha preparado para ti y ves tu progreso."
+    },
     "learner": {
-      "title": "Quienes aprenden",
-      "description": "Seguir temas públicos, ver tu propio progreso."
+      "title": "Descubrir",
+      "description": "Explora temas públicos, aprende a tu ritmo y ve tu progreso."
     },
     "author": {
-      "title": "Quienes comparten conocimiento",
-      "description": "Escribir y enlazar tarjetas, generar preguntas, obtener contenidos de Wikipedia o de una página compartida."
+      "title": "Crear lo tuyo",
+      "description": "Escribe y enlaza tus propias tarjetas, genera preguntas, trae contenido de Wikipedia y aprende con ellas."
     },
     "curator": {
-      "title": "Quienes abren un tema",
-      "description": "Incorporar a otras personas con un enlace y darles tarjetas."
+      "title": "Guiar",
+      "description": "Curas un tema: como proveedor de contenidos que comparte conocimiento o como entrenador que invita y guía a su propio equipo con un enlace."
     }
   },
   "howItWorks": {

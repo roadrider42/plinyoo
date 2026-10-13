@@ -1,14 +1,14 @@
 // src/components/ui/Roles.tsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Compass, Users, Building2 } from 'lucide-react';
+import { UserPlus, Compass, PenLine, Users } from 'lucide-react';
 
-const ICONS = [Compass, Users, Building2];
+const ICONS = [UserPlus, Compass, PenLine, Users];
 
 export default function Roles() {
   const { t } = useTranslation();
 
-  const roleKeys = ['learner', 'author', 'curator'] as const;
+  const roleKeys = ['follower', 'learner', 'author', 'curator'] as const;
 
   const roles = roleKeys.map((key) => ({
     key,
@@ -32,7 +32,7 @@ export default function Roles() {
         <h3 className="mb-6 text-center font-sans text-lg font-semibold text-main-text">{waysTitle}</h3>
       )}
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {roles.map(({ key, title, description }, index) => {
           const Icon = ICONS[index] ?? Compass;
           return (
