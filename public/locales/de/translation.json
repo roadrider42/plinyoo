@@ -169,6 +169,216 @@
       }
     ]
   },
+  "journey": {
+    "title": "Probier einen Weg aus",
+    "subtitle": "Sieben Karten zum Thema Stadthitze, jede mit Frage und Beleg. Ein Weg, der sich mit jeder richtigen Antwort weiterzeichnet — kein Kurs.",
+    "label": "Beispiel mit echten Karten",
+    "step": "Karte {{current}} von {{total}}",
+    "evidence": "Beleg:",
+    "next": "Weiter →",
+    "restart": "Noch einmal von vorn",
+    "aria": "Beispielweg: sieben Karten zur Stadthitze",
+    "doneTitle": "Sieben Karten, ein zusammenhängender Weg",
+    "doneText": "Du hast nicht sieben einzelne Fakten gelesen, sondern sieben Fragen beantwortet — und gesehen, wie die Karten aufeinander verweisen. Das war ein kleiner Weg. In plinyoo gehst du deinen eigenen.",
+    "cards": [
+      {
+        "title": "Oberflächentemperatur vs. Lufttemperatur",
+        "body": "Satellitendaten zeigen Oberflächentemperaturen — oft höher als Lufttemperaturen. Die Lufttemperatur in 2 m Höhe bestimmt den menschlichen Hitzestress stärker.",
+        "question": "Was zeigen Satellitendaten primär?",
+        "beleg": "„Satellitendaten zeigen Oberflächentemperaturen (Straßen, Dächer, Vegetation)“",
+        "options": [
+          {
+            "text": "Die Lufttemperatur in 2 Metern Höhe, gemessen an Bodenstationen",
+            "correct": false,
+            "why": "Das misst nicht der Satellit, sondern Bodenstationen."
+          },
+          {
+            "text": "Die Oberflächentemperaturen von Straßen, Dächern und Vegetation",
+            "correct": true,
+            "why": "Genau das erfasst die Satellitenmessung primär."
+          },
+          {
+            "text": "Die Wassertemperatur von Seen, Flüssen und Kanälen der Stadt",
+            "correct": false,
+            "why": "Wassertemperatur ist kein genanntes Messziel."
+          },
+          {
+            "text": "Die gefühlte Temperatur, wie sie einzelne Passanten empfinden",
+            "correct": false,
+            "why": "Gefühlte Temperatur misst der Satellit nicht direkt."
+          }
+        ]
+      },
+      {
+        "title": "DLR-Satellitenanalyse",
+        "body": "Das DLR wertete Landsat-Satellitenaufnahmen für Städte über 100.000 Einwohner aus — erste flächendeckende, hochauflösende Hitzeanalyse für deutsche Großstädte.",
+        "question": "Welches Zeitfenster analysierte die DLR-Studie?",
+        "beleg": "„Landsat-Satellitenaufnahmen von 2013–2024“",
+        "options": [
+          {
+            "text": "2000–2010",
+            "correct": false,
+            "why": "Das liegt vor dem ausgewerteten Zeitraum."
+          },
+          {
+            "text": "2013–2024",
+            "correct": true,
+            "why": "Genau dieser Zeitraum wurde per Landsat-Satellit ausgewertet."
+          },
+          {
+            "text": "2020–2026",
+            "correct": false,
+            "why": "Der Zeitraum beginnt später als tatsächlich ausgewertet."
+          },
+          {
+            "text": "1990–2020",
+            "correct": false,
+            "why": "Dieser Zeitraum endet vor dem untersuchten Fenster."
+          }
+        ]
+      },
+      {
+        "title": "Stadt-Land-Temperaturgradienten",
+        "body": "Oberflächentemperaturdifferenzen zwischen Innenstädten und ländlichen Räumen betragen teilweise 8–10 Grad — besonders bei dichter Bebauung und hohem Versiegelungsgrad.",
+        "question": "Wie groß sind die Oberflächentemperaturdifferenzen zwischen Stadt und Land?",
+        "beleg": "„Die Differenzen betragen teilweise 8–10 Grad“",
+        "options": [
+          {
+            "text": "2–3 Grad",
+            "correct": false,
+            "why": "Deutlich unter dem gemessenen Wert."
+          },
+          {
+            "text": "4–5 Grad",
+            "correct": false,
+            "why": "Auch das liegt unter dem gemessenen Wert."
+          },
+          {
+            "text": "8–10 Grad",
+            "correct": true,
+            "why": "Genau diese Differenz dokumentiert die DLR-Studie."
+          },
+          {
+            "text": ">15 Grad",
+            "correct": false,
+            "why": "Deutlich über dem gemessenen Wert."
+          }
+        ]
+      },
+      {
+        "title": "Urban Heat Island: Fünf Mechanismen",
+        "body": "Die städtische Wärmeinsel entsteht durch fünf zusammenwirkende Prozesse: Wärmespeicherung, Versiegelung, fehlende Vegetation, Stadtgeometrie, Abwärme.",
+        "question": "Welcher Faktor hindert nächtliche Wärmestrahlung in der Stadt?",
+        "beleg": "„Stadtgeometrie — enge Straßenschluchten verringern den Sky View Factor“",
+        "options": [
+          {
+            "text": "Beton in Fassaden und Gebäudewänden",
+            "correct": false,
+            "why": "Beton speichert Wärme, hindert aber nicht die Abstrahlung."
+          },
+          {
+            "text": "Asphalt auf Straßen und Parkflächen",
+            "correct": false,
+            "why": "Speichert ebenfalls Wärme, ist aber nicht der Abstrahlungs-Faktor."
+          },
+          {
+            "text": "Enge Straßenschluchten (Stadtgeometrie)",
+            "correct": true,
+            "why": "Sie verringern den Sky View Factor und behindern die Abstrahlung."
+          },
+          {
+            "text": "Vegetation in Parks und an Straßenrändern",
+            "correct": false,
+            "why": "Fehlende Vegetation betrifft Schatten/Verdunstung, nicht Strahlung."
+          }
+        ]
+      },
+      {
+        "title": "Kaltluftprozesse",
+        "body": "Unter windschwachen, wolkenarmen Bedingungen entsteht nachts auf Freiflächen kühlere Luft, die in Siedlungen strömt — wenn man ihr die Wege dazu lässt.",
+        "question": "Wo entsteht Kaltluft nachts?",
+        "beleg": "„Auf Freiflächen entsteht nachts kühlere Luft“",
+        "options": [
+          {
+            "text": "In Gebäuden und geschlossenen Innenräumen",
+            "correct": false,
+            "why": "Freiflächen, nicht Gebäude, sind der Entstehungsort."
+          },
+          {
+            "text": "Auf Freiflächen (ländlich, Parks, Gewässer)",
+            "correct": true,
+            "why": "Genau dort entsteht die kühlere Nachtluft."
+          },
+          {
+            "text": "In engen Straßenschluchten zwischen Gebäuden",
+            "correct": false,
+            "why": "Eher Hindernis als Entstehungsort der Kaltluft."
+          },
+          {
+            "text": "Überall gleichzeitig, unabhängig vom Standort",
+            "correct": false,
+            "why": "Es gibt einen bestimmten Ort, nicht überall."
+          }
+        ]
+      },
+      {
+        "title": "Zielkonflikt: Verdichtung vs. Kühlung",
+        "body": "Kompakte Städte sind beim Flächenverbrauch effizient, heizen sich aber stärker auf. Nachverdichtung kann Grünflächen, Versickerung und Luftströmungen unter Druck setzen.",
+        "question": "Wie kann Nachverdichtung Luftströmungen beeinflussen?",
+        "beleg": "„Nachverdichtung kann lokal Luftströmungen unter Druck setzen“",
+        "options": [
+          {
+            "text": "Sie verbessert immer die Luftströmungen",
+            "correct": false,
+            "why": "Es wird vor einer Belastung gewarnt, nicht vor einer Verbesserung."
+          },
+          {
+            "text": "Sie kann Luftströmungen unter Druck setzen",
+            "correct": true,
+            "why": "Genau das wird als mögliche Folge von Nachverdichtung genannt."
+          },
+          {
+            "text": "Sie hat keine Wirkung",
+            "correct": false,
+            "why": "Es wird ausdrücklich eine mögliche Wirkung beschrieben."
+          },
+          {
+            "text": "Luftströmungen sind egal",
+            "correct": false,
+            "why": "Sie werden als einer von drei betroffenen Bereichen genannt."
+          }
+        ]
+      },
+      {
+        "title": "Blaugrüne Infrastruktur",
+        "body": "Stadtgrün und Wasserflächen erzeugen signifikante Kühlungseffekte — Vegetation kühlt durch Verdunstung, Wasserflächen wirken temperaturausgleichend.",
+        "question": "Wodurch kühlt Stadtvegetation die Lufttemperatur?",
+        "beleg": "„Vegetation senkt durch Verdunstung lokal die Lufttemperatur“",
+        "options": [
+          {
+            "text": "Durch Schatten allein",
+            "correct": false,
+            "why": "Genannt wird Verdunstung, nicht Schatten, als Mechanismus."
+          },
+          {
+            "text": "Durch Verdunstung",
+            "correct": true,
+            "why": "Genau das ist der Kühlmechanismus."
+          },
+          {
+            "text": "Durch Wasseraufnahme",
+            "correct": false,
+            "why": "Kein genannter Kühlmechanismus."
+          },
+          {
+            "text": "Durch Wurzeln",
+            "correct": false,
+            "why": "Wurzeln werden nicht als Kühlmechanismus genannt."
+          }
+        ]
+      }
+    ]
+  },
   "testimonials": {
     "label": "Beobachtung aus der Praxis",
     "subtitle": "Lernen fühlt sich persönlich und wirksam an.",

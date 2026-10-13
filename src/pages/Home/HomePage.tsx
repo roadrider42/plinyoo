@@ -21,6 +21,7 @@ import Roles from "@/components/ui/Roles";
 import HowItWorks from "@/components/ui/HowItWorks";
 import Examples from "@/components/ui/Examples";
 import Features from "@/components/ui/Features";
+import Journey from "@/components/ui/Journey";
 import CTA from "@/components/ui/CTA";
 
 export default function LandingPage() {
@@ -44,6 +45,7 @@ export default function LandingPage() {
       {renderHero()}
       <VisionMission />
       <Features />
+      <Journey />
       <Roles />
       <Examples />
       <HowItWorks />
