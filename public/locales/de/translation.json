@@ -4,12 +4,40 @@
     "cta_secondary": "Investieren"
   },
   "hero": {
-    "eyebrow": "Lernplattform mit Wissensgraph",
-    "title": "Der Wissensraum ist unentdeckt. Dein Weg ist einzigartig.",
-    "subtitle": "Entdecke Themen, die dich interessieren. Wähle deinen eigenen Lernpfad. Wachse in deinem Tempo.",
+    "eyebrow": "Lernplattform — Coach und Begleiter in einem",
+    "title": "Dein Lernpfad ist einzigartig.",
+    "subtitle": "Du weißt, wo du heute stehst und wohin du willst. Den Weg dazwischen findest du auf Karten, die aufeinander verweisen — nicht in einem Kursplan.",
     "cta": "Zugang anfragen",
     "cta_primary": "Zugang anfragen",
-    "cta_secondary": "Für Investoren"
+    "cta_secondary": "Für Investoren",
+    "cardsLabel": "Beispiel",
+    "cardsAria": "Beispiel: so lernst du eine Karte",
+    "cards": [
+      {
+        "step": "Karte",
+        "title": "Oberflächentemperatur vs. Lufttemperatur",
+        "text": "Satellitendaten zeigen Oberflächentemperaturen — oft höher als Lufttemperaturen. Die Lufttemperatur in 2 m Höhe bestimmt den menschlichen Hitzestress stärker.",
+        "chip": "→ DLR-Satellitenanalyse"
+      },
+      {
+        "step": "Frage",
+        "title": "Was zeigen Satellitendaten primär?",
+        "options": [
+          "Die Lufttemperatur in 2 Metern Höhe, gemessen an Bodenstationen",
+          "Die Oberflächentemperaturen von Straßen, Dächern und Vegetation"
+        ]
+      },
+      {
+        "step": "Wiedersehen",
+        "title": "Die Karte kommt wieder.",
+        "text": "Was sitzt, kommt später wieder. Was wackelt, kommt früher."
+      },
+      {
+        "step": "Stern",
+        "title": "Gekonnt — ein Stern.",
+        "text": "Sind alle Fragen zu einer Karte zuletzt richtig beantwortet, leuchtet sie als Stern in deinem Universum."
+      }
+    ]
   },
   "hero1": {
     "eyebrow": "Wissen, das bleibt.",
@@ -35,26 +63,32 @@
   "visionMission": {
     "vision": {
       "title": "Vision",
-      "text": "Wir stellen uns eine Welt vor, in der Menschen nicht einfach lernen, sondern sich begleitet fühlen – von Technologien, die zuhören, verstehen und stärken."
+      "text": "Jeder Mensch findet seinen eigenen Weg zu dem, was er können will."
     },
     "mission": {
       "title": "Mission",
-      "text": "Eine Plattform für individuelles Lernen: Wir vereinen Reflexion, Training, Wissensaufbau und persönliche Begleitung – sofort nutzbar, adaptiv und sicher."
+      "text": "Wir machen Wissen so zugänglich, dass der Weg von hier nach dort so wenig Zeit kostet wie möglich — und Trainer und Mannschaft dabei auf derselben Seite stehen."
     }
   },
   "roles": {
-    "title": "Drei Wege hinein",
+    "title": "Zwei Interessen, ein Platz",
+    "intro": "Trainer wollen eine gut ausgebildete Mannschaft. Wer in der Mannschaft spielt, will lernen, was ihn weiterbringt. Beides trifft sich hier.",
+    "waysTitle": "Vier Wege hinein",
+    "follower": {
+      "title": "Mitspielen",
+      "description": "Dein Trainer lädt dich ein. Du folgst den Inhalten, die er für dich bereithält, und siehst deinen Fortschritt."
+    },
     "learner": {
-      "title": "Wer lernt",
-      "description": "Öffentlichen Themen folgen, den eigenen Fortschritt sehen."
+      "title": "Entdecken",
+      "description": "Du stöberst in öffentlichen Themen, lernst in deinem Tempo und siehst deinen Fortschritt."
     },
     "author": {
-      "title": "Wer Wissen weitergibt",
-      "description": "Karten schreiben und verlinken, Fragen dazu erzeugen lassen, Inhalte aus Wikipedia oder von einer geteilten Seite holen."
+      "title": "Selbst gestalten",
+      "description": "Du schreibst und verlinkst eigene Karten, lässt Fragen dazu erzeugen, holst Inhalte aus Wikipedia — und lernst damit."
     },
     "curator": {
-      "title": "Wer ein Thema betreut",
-      "description": "Menschen per Einladungslink dazuholen, ihnen Karten zuweisen, Pflichtinhalte mit Fälligkeit setzen."
+      "title": "Anleiten",
+      "description": "Du kuratierst ein Thema — als Inhaltsanbieter, der Wissen bereitstellt, oder als Trainer mit eigener Mannschaft, die du per Link einlädst."
     }
   },
   "howItWorks": {
@@ -81,57 +115,305 @@
         "desc": "Deine Wege, dein Stil, dein Ton."
       },
       {
-        "title": "Lernqualität messbar",
-        "desc": "Ziele, Fortschritt und Wirkung verknüpfen."
+        "title": "Dein Fortschritt leuchtet",
+        "desc": "Jede gelernte Karte wird ein Stern in deinem Universum."
       },
       {
         "title": "Ein Tool für alles Lernen",
         "desc": "Onboarding, Training, Weiterbildung, Coaching."
       },
       {
-        "title": "Schnell im Einsatz",
-        "desc": "Mobil, sicher, sofort nutzbar – für Mensch und Organisation."
+        "title": "Zwei Sprachen, ein Weg",
+        "desc": "Deine Muttersprache und die, in der du lernst — ein Tipp wechselt zurück."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40 %",
-        "label": "Einarbeitungszeit"
+        "kpi": "7",
+        "label": "Sprachen"
       },
       {
-        "kpi": "+25 %",
-        "label": "Produktivität in Woche 1"
+        "kpi": "11",
+        "label": "vernetzte Karten im Thema Hitze"
       },
       {
-        "kpi": "-30 %",
-        "label": "Fehlerquote im Prozess"
-      },
-      {
-        "kpi": "+⭐",
-        "label": "Zufriedenheit und Klarheit im Feedback"
+        "kpi": "1 ★",
+        "label": "für jede gelernte Karte"
       }
     ]
   },
   "features": {
-    "title": "Deine Vorteile mit Digital Companionship",
-    "subtitle": "Digitale Companionship vereint personalisiertes Lernen, adaptive Begleitung und messbare Entwicklung – in einer integrierten Lösung für Menschen und Organisationen.",
+    "title": "Eine Karte, eine Frage, ein Wiedersehen",
+    "subtitle": "Der Weg entsteht beim Gehen. Unter jeder Karte stehen Weiterführungen statt einer Kapitelliste. Welche das sind, hängt daran, wie die Karten untereinander verlinkt sind — und daran, wohin du bisher gegangen bist.",
     "items": [
       {
-        "title": "Interaktive Lerninhalte",
-        "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant.",
-        "category": "Interaktion"
+        "title": "Karte",
+        "desc": "Ein Gedanke, ganzer Bildschirm. Kein Kapitel, durch das du scrollst.",
+        "category": "1"
       },
       {
-        "title": "Fortschritts-Tracking",
-        "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform.",
-        "category": "Messbarkeit"
+        "title": "Frage",
+        "desc": "Zu einer Karte gehören Fragen.",
+        "category": "2"
       },
       {
-        "title": "100 % mobil & anpassbar",
-        "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline.",
-        "category": "Flexibilität"
+        "title": "Wiedersehen",
+        "desc": "Was sitzt, kommt später wieder. Was wackelt, kommt früher.",
+        "category": "3"
+      }
+    ]
+  },
+  "journey": {
+    "title": "Probier einen Weg aus",
+    "subtitle": "Sieben Karten zum Thema Stadthitze, jede mit Frage und Beleg. Ein Weg, der sich mit jeder richtigen Antwort weiterzeichnet — kein Kurs.",
+    "label": "Beispiel mit echten Karten",
+    "step": "Karte {{current}} von {{total}}",
+    "evidence": "Beleg:",
+    "next": "Weiter →",
+    "restart": "Noch einmal von vorn",
+    "aria": "Beispielweg: sieben Karten zur Stadthitze",
+    "doneTitle": "Sieben Karten, ein zusammenhängender Weg",
+    "doneText": "Du hast nicht sieben einzelne Fakten gelesen, sondern sieben Fragen beantwortet — und gesehen, wie die Karten aufeinander verweisen. Das war ein kleiner Weg. In plinyoo gehst du deinen eigenen.",
+    "cards": [
+      {
+        "title": "Oberflächentemperatur vs. Lufttemperatur",
+        "body": "Satellitendaten zeigen Oberflächentemperaturen — oft höher als Lufttemperaturen. Die Lufttemperatur in 2 m Höhe bestimmt den menschlichen Hitzestress stärker.",
+        "question": "Was zeigen Satellitendaten primär?",
+        "beleg": "„Satellitendaten zeigen Oberflächentemperaturen (Straßen, Dächer, Vegetation)“",
+        "options": [
+          {
+            "text": "Die Lufttemperatur in 2 Metern Höhe, gemessen an Bodenstationen",
+            "correct": false,
+            "why": "Das misst nicht der Satellit, sondern Bodenstationen."
+          },
+          {
+            "text": "Die Oberflächentemperaturen von Straßen, Dächern und Vegetation",
+            "correct": true,
+            "why": "Genau das erfasst die Satellitenmessung primär."
+          },
+          {
+            "text": "Die Wassertemperatur von Seen, Flüssen und Kanälen der Stadt",
+            "correct": false,
+            "why": "Wassertemperatur ist kein genanntes Messziel."
+          },
+          {
+            "text": "Die gefühlte Temperatur, wie sie einzelne Passanten empfinden",
+            "correct": false,
+            "why": "Gefühlte Temperatur misst der Satellit nicht direkt."
+          }
+        ]
+      },
+      {
+        "title": "DLR-Satellitenanalyse",
+        "body": "Das DLR wertete Landsat-Satellitenaufnahmen für Städte über 100.000 Einwohner aus — erste flächendeckende, hochauflösende Hitzeanalyse für deutsche Großstädte.",
+        "question": "Welches Zeitfenster analysierte die DLR-Studie?",
+        "beleg": "„Landsat-Satellitenaufnahmen von 2013–2024“",
+        "options": [
+          {
+            "text": "2000–2010",
+            "correct": false,
+            "why": "Das liegt vor dem ausgewerteten Zeitraum."
+          },
+          {
+            "text": "2013–2024",
+            "correct": true,
+            "why": "Genau dieser Zeitraum wurde per Landsat-Satellit ausgewertet."
+          },
+          {
+            "text": "2020–2026",
+            "correct": false,
+            "why": "Der Zeitraum beginnt später als tatsächlich ausgewertet."
+          },
+          {
+            "text": "1990–2020",
+            "correct": false,
+            "why": "Dieser Zeitraum endet vor dem untersuchten Fenster."
+          }
+        ]
+      },
+      {
+        "title": "Stadt-Land-Temperaturgradienten",
+        "body": "Oberflächentemperaturdifferenzen zwischen Innenstädten und ländlichen Räumen betragen teilweise 8–10 Grad — besonders bei dichter Bebauung und hohem Versiegelungsgrad.",
+        "question": "Wie groß sind die Oberflächentemperaturdifferenzen zwischen Stadt und Land?",
+        "beleg": "„Die Differenzen betragen teilweise 8–10 Grad“",
+        "options": [
+          {
+            "text": "2–3 Grad",
+            "correct": false,
+            "why": "Deutlich unter dem gemessenen Wert."
+          },
+          {
+            "text": "4–5 Grad",
+            "correct": false,
+            "why": "Auch das liegt unter dem gemessenen Wert."
+          },
+          {
+            "text": "8–10 Grad",
+            "correct": true,
+            "why": "Genau diese Differenz dokumentiert die DLR-Studie."
+          },
+          {
+            "text": ">15 Grad",
+            "correct": false,
+            "why": "Deutlich über dem gemessenen Wert."
+          }
+        ]
+      },
+      {
+        "title": "Urban Heat Island: Fünf Mechanismen",
+        "body": "Die städtische Wärmeinsel entsteht durch fünf zusammenwirkende Prozesse: Wärmespeicherung, Versiegelung, fehlende Vegetation, Stadtgeometrie, Abwärme.",
+        "question": "Welcher Faktor hindert nächtliche Wärmestrahlung in der Stadt?",
+        "beleg": "„Stadtgeometrie — enge Straßenschluchten verringern den Sky View Factor“",
+        "options": [
+          {
+            "text": "Beton in Fassaden und Gebäudewänden",
+            "correct": false,
+            "why": "Beton speichert Wärme, hindert aber nicht die Abstrahlung."
+          },
+          {
+            "text": "Asphalt auf Straßen und Parkflächen",
+            "correct": false,
+            "why": "Speichert ebenfalls Wärme, ist aber nicht der Abstrahlungs-Faktor."
+          },
+          {
+            "text": "Enge Straßenschluchten (Stadtgeometrie)",
+            "correct": true,
+            "why": "Sie verringern den Sky View Factor und behindern die Abstrahlung."
+          },
+          {
+            "text": "Vegetation in Parks und an Straßenrändern",
+            "correct": false,
+            "why": "Fehlende Vegetation betrifft Schatten/Verdunstung, nicht Strahlung."
+          }
+        ]
+      },
+      {
+        "title": "Kaltluftprozesse",
+        "body": "Unter windschwachen, wolkenarmen Bedingungen entsteht nachts auf Freiflächen kühlere Luft, die in Siedlungen strömt — wenn man ihr die Wege dazu lässt.",
+        "question": "Wo entsteht Kaltluft nachts?",
+        "beleg": "„Auf Freiflächen entsteht nachts kühlere Luft“",
+        "options": [
+          {
+            "text": "In Gebäuden und geschlossenen Innenräumen",
+            "correct": false,
+            "why": "Freiflächen, nicht Gebäude, sind der Entstehungsort."
+          },
+          {
+            "text": "Auf Freiflächen (ländlich, Parks, Gewässer)",
+            "correct": true,
+            "why": "Genau dort entsteht die kühlere Nachtluft."
+          },
+          {
+            "text": "In engen Straßenschluchten zwischen Gebäuden",
+            "correct": false,
+            "why": "Eher Hindernis als Entstehungsort der Kaltluft."
+          },
+          {
+            "text": "Überall gleichzeitig, unabhängig vom Standort",
+            "correct": false,
+            "why": "Es gibt einen bestimmten Ort, nicht überall."
+          }
+        ]
+      },
+      {
+        "title": "Zielkonflikt: Verdichtung vs. Kühlung",
+        "body": "Kompakte Städte sind beim Flächenverbrauch effizient, heizen sich aber stärker auf. Nachverdichtung kann Grünflächen, Versickerung und Luftströmungen unter Druck setzen.",
+        "question": "Wie kann Nachverdichtung Luftströmungen beeinflussen?",
+        "beleg": "„Nachverdichtung kann lokal Luftströmungen unter Druck setzen“",
+        "options": [
+          {
+            "text": "Sie verbessert immer die Luftströmungen",
+            "correct": false,
+            "why": "Es wird vor einer Belastung gewarnt, nicht vor einer Verbesserung."
+          },
+          {
+            "text": "Sie kann Luftströmungen unter Druck setzen",
+            "correct": true,
+            "why": "Genau das wird als mögliche Folge von Nachverdichtung genannt."
+          },
+          {
+            "text": "Sie hat keine Wirkung",
+            "correct": false,
+            "why": "Es wird ausdrücklich eine mögliche Wirkung beschrieben."
+          },
+          {
+            "text": "Luftströmungen sind egal",
+            "correct": false,
+            "why": "Sie werden als einer von drei betroffenen Bereichen genannt."
+          }
+        ]
+      },
+      {
+        "title": "Blaugrüne Infrastruktur",
+        "body": "Stadtgrün und Wasserflächen erzeugen signifikante Kühlungseffekte — Vegetation kühlt durch Verdunstung, Wasserflächen wirken temperaturausgleichend.",
+        "question": "Wodurch kühlt Stadtvegetation die Lufttemperatur?",
+        "beleg": "„Vegetation senkt durch Verdunstung lokal die Lufttemperatur“",
+        "options": [
+          {
+            "text": "Durch Schatten allein",
+            "correct": false,
+            "why": "Genannt wird Verdunstung, nicht Schatten, als Mechanismus."
+          },
+          {
+            "text": "Durch Verdunstung",
+            "correct": true,
+            "why": "Genau das ist der Kühlmechanismus."
+          },
+          {
+            "text": "Durch Wasseraufnahme",
+            "correct": false,
+            "why": "Kein genannter Kühlmechanismus."
+          },
+          {
+            "text": "Durch Wurzeln",
+            "correct": false,
+            "why": "Wurzeln werden nicht als Kühlmechanismus genannt."
+          }
+        ]
+      }
+    ]
+  },
+  "views": {
+    "title": "Ein Blick hinein",
+    "subtitle": "Drei Ansichten aus der Entwicklung von plinyoo.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Ansicht",
+        "title": "Dein Ziel, dein Weg, dein Universum",
+        "text": "Ein Blick auf das Lernfeld: Startseite mit Ziel, der Weg dorthin und der Rückblick mit deinen Sternen.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Lernfeld: Dein Universum und die Frage „Was willst du können?“"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Lernfeld: „Das ist dein Weg“ mit Stationen zum Ziel"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Lernfeld: „Das war heute“ mit gesammelten Sternen"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Zielbild",
+        "title": "Das Wissensnetz",
+        "text": "Elf Karten zum Thema Hitze mit echten Verbindungen, umgeben von weiteren Themen. Ziehen zum Umsortieren, scrollen zum Zoomen.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "Das Wissensnetz — interaktive Ansicht"
+      },
+      {
+        "id": "autor",
+        "tag": "Entwurf mit Beispieldaten",
+        "title": "Wege und Lücken sehen",
+        "text": "Für alle, die Wissen weitergeben: Du wählst Schlagwörter und siehst, wie sich Karten verbinden und wo noch eine Brücke fehlt.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Wege und Lücken — interaktive Ansicht"
       }
     ]
   },
@@ -148,20 +430,20 @@
     "intro": "Antworten auf typische Fragen – kurz und nachvollziehbar.",
     "items": [
       {
-        "q": "Passt es zu Einzelpersonen und Organisationen?",
-        "a": "Ja – Rollen und Inhalte sind frei definierbar."
+        "q": "Für wen ist plinyoo?",
+        "a": "Für alle, die lernen oder Wissen weitergeben — allein, mit einem Trainer oder in einer ganzen Mannschaft."
       },
       {
-        "q": "Wie bleibt unsere Lernphilosophie erhalten?",
-        "a": "Durch modulare Inhalte, flexible Designs und anpassbare Lernpfade."
+        "q": "Wie lerne ich mit plinyoo?",
+        "a": "Du liest eine Karte, beantwortest Fragen dazu und folgst den Verweisen zur nächsten. Was sitzt, kommt später wieder, was wackelt, früher."
       },
       {
-        "q": "Können wir Fortschritt und Wirkung messen?",
-        "a": "Ja, DSGVO-konform – mit individuellen oder aggregierten Auswertungen."
+        "q": "Kann ich eigene Inhalte einbringen?",
+        "a": "Ja. Du schreibst und verlinkst eigene Karten, lässt Fragen dazu erzeugen und holst Inhalte aus Wikipedia oder von einer geteilten Seite."
       },
       {
-        "q": "Braucht es lange Schulungen?",
-        "a": "Nein – intuitive Nutzung und sofort startklar."
+        "q": "In welchen Sprachen kann ich lernen?",
+        "a": "Die Oberfläche gibt es in sieben Sprachen. Du setzt zwei: deine Muttersprache und die, in der du gerade lernst."
       }
     ]
   },
@@ -206,18 +488,6 @@
     },
     "placeholder": {
       "title": "Weitere Beispiele folgen"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Deine virtuelle Ernährungsberaterin",
-      "desc": "Individuelle Ernährungsberatung, immer verfügbar.",
-      "button": "Coming soon"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Dein virtueller Barkeeper",
-      "desc": "Perfekte Drinks mixen, Wissen vertiefen.",
-      "button": "Coming soon"
     },
     "your-use-case": {
       "title": "Dein Use Case",
@@ -282,6 +552,22 @@
         "20k_to_100k": "20k–100k",
         "100k_plus": "100k+"
       }
+    },
+    "access": {
+      "title": "Dein Zugang zu plinyoo",
+      "subtitle": "Sag uns kurz, wer du bist und was du lernen oder weitergeben möchtest.",
+      "subtitle_details": "Wir melden uns bei dir.",
+      "role_label": "Ich komme als",
+      "role_placeholder": "Bitte wählen",
+      "role_options": {
+        "learner": "Lernende:r",
+        "trainer": "Trainer:in mit eigener Mannschaft",
+        "provider": "Inhaltsanbieter:in",
+        "other": "Etwas anderes"
+      },
+      "message_label": "Was möchtest du mit plinyoo erreichen?",
+      "message_placeholder": "Zum Beispiel: Ich will verstehen, warum meine Stadt im Sommer so heiß wird.",
+      "button": "Zugang anfragen"
     }
   },
   "footer": {

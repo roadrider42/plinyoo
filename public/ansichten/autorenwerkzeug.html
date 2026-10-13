@@ -1,0 +1,1285 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wege und Lücken in einer Kartenmenge</title>
+<!--
+  Mockup zur Spec `spec-weg-von-karte-a-nach-karte-b.md` (Fassung 6).
+  Entworfen für 390 x 844. Kein Bauvorgang, kein Netz, keine Abhängigkeit.
+  Alle Beispieldaten stehen unten in SCHLAGWOERTER / KARTEN / KANTEN und sind
+  ERFUNDEN — kein Kartenbestand dieses Projekts.
+
+  Die Rechnung ist echt: Gruppen, Brückenverknüpfungen, Bodenwert, Stufen,
+  Widersprüche, Dubletten und die Schritte der Fassung „mit Bestätigung"
+  werden aus den Beispieldaten berechnet, nicht hingeschrieben. Wer eine Karte
+  verknüpft, ändert die Zahlen beider Fassungen.
+
+  Messstand-Regeln, die hier eingehalten sind:
+  - Bedienflächen >= 44 px, Schrift >= 12 px
+  - keine Auskunft nur beim Schweben
+  - kein Prozentsatz, nirgends
+  - unbekannt ist ein Strich, nie eine 0
+  - kein Element, das nichts bewirken kann
+-->
+<style>
+  :root{
+    --grund:#F2F0ED;
+    --flaeche:#FFFFFF;
+    --kante:#DAD5CE;
+    --schrift:#1C2A33;
+    --leise:#4A5A63;
+    --akzent:#2E7A80;
+    --akzent-hell:#E6F0F0;
+    --warn:#8A5A00;
+    --warn-hell:#FBF1DE;
+    --fehl:#9B2C2C;
+    --fehl-hell:#FBEAEA;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:#3A3F43;
+    color:var(--schrift);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size:15px;line-height:1.45;
+    display:flex;flex-direction:column;align-items:center;
+    padding:16px 8px 32px;
+    min-height:100vh;
+  }
+  .messstand{
+    color:#E8E4DE;font-size:13px;max-width:390px;margin:0 0 12px;text-align:center;
+  }
+  .messstand b{color:#fff}
+
+  /* ---------- Der Rahmen: 390 x 844 ---------- */
+  .rahmen{
+    width:390px;height:844px;max-width:100%;
+    background:var(--grund);
+    border-radius:26px;overflow:hidden;
+    display:flex;flex-direction:column;
+    box-shadow:0 10px 40px rgba(0,0,0,.45);
+    position:relative;
+  }
+
+  /* ---------- Kopf ---------- */
+  .kopf{
+    flex:0 0 auto;background:var(--flaeche);
+    border-bottom:1px solid var(--kante);
+    padding:14px 16px 10px; /* 14px = obere sichere Zone, nachgestellt */
+  }
+  .kopf h1{margin:0;font-size:17px;line-height:1.25;font-weight:650}
+  .kopf p{margin:3px 0 0;font-size:12px;color:var(--leise)}
+
+  /* ---------- Bühne ---------- */
+  .buehne{flex:1 1 auto;overflow-y:auto;overflow-x:hidden;padding:12px 12px 20px}
+
+  /* ---------- Untere Leiste ---------- */
+  .leiste{
+    flex:0 0 auto;display:flex;background:var(--flaeche);
+    border-top:1px solid var(--kante);
+    padding-bottom:16px; /* untere sichere Zone, nachgestellt */
+  }
+  .leiste button{
+    flex:1;min-height:52px;border:0;background:transparent;
+    font:inherit;font-size:13px;color:var(--leise);
+    padding:8px 4px;cursor:pointer;
+  }
+  .leiste button[aria-current="true"]{color:var(--akzent);font-weight:650;box-shadow:inset 0 -3px 0 var(--akzent)}
+  .leiste .zahl{display:block;font-size:12px;color:var(--leise);font-weight:400}
+
+  /* ---------- Bausteine ---------- */
+  .block{background:var(--flaeche);border:1px solid var(--kante);border-radius:12px;margin:0 0 12px;overflow:hidden}
+  .block > h2{margin:0;padding:11px 13px 9px;font-size:13px;font-weight:650;color:var(--leise);
+    text-transform:none;border-bottom:1px solid var(--kante);background:#FBFAF8}
+  .block .inhalt{padding:12px 13px}
+
+  .kennzahlen{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--kante)}
+  .kennzahl{background:var(--flaeche);padding:10px 12px}
+  .kennzahl .wert{font-size:26px;line-height:1.1;font-weight:650;font-variant-numeric:tabular-nums}
+  .kennzahl .wert.strich{color:var(--leise)}
+  .kennzahl .name{font-size:12px;color:var(--leise);margin-top:2px}
+
+  .zeile{padding:11px 13px;border-top:1px solid var(--kante);font-size:13px}
+  .zeile:first-child{border-top:0}
+
+  .hinweis{border-radius:12px;padding:11px 13px;margin:0 0 12px;font-size:13px;border:1px solid}
+  .hinweis.warn{background:var(--warn-hell);border-color:#E6CE9E;color:#5E3D00}
+  .hinweis.info{background:var(--akzent-hell);border-color:#BCD8D8;color:#14484C}
+  .hinweis.fehl{background:var(--fehl-hell);border-color:#E7BFBF;color:#6E1F1F}
+  .hinweis b{display:block;margin-bottom:2px}
+
+  /* Schlagwortzeile */
+  .tagzeile{
+    display:flex;align-items:center;gap:12px;width:100%;
+    min-height:56px;padding:8px 13px;border:0;border-top:1px solid var(--kante);
+    background:var(--flaeche);font:inherit;text-align:left;cursor:pointer;color:inherit;
+  }
+  .tagzeile:first-of-type{border-top:0}
+  .tagzeile[aria-pressed="true"]{background:var(--akzent-hell)}
+  .haken{
+    flex:0 0 auto;width:26px;height:26px;border-radius:7px;border:2px solid #A9B4B8;
+    display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;background:#fff;
+  }
+  .tagzeile[aria-pressed="true"] .haken{background:var(--akzent);border-color:var(--akzent)}
+  .tagname{flex:1 1 auto;min-width:0}
+  .tagname .t{font-size:15px;font-weight:600;overflow-wrap:anywhere}
+  .tagname .u{font-size:12px;color:var(--leise)}
+  .tagzahl{flex:0 0 auto;font-size:13px;color:var(--leise);font-variant-numeric:tabular-nums}
+
+  /* Schaltflächen */
+  .tat{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-height:44px;padding:10px 14px;border-radius:10px;
+    border:1px solid var(--akzent);background:var(--flaeche);color:var(--akzent);
+    font:inherit;font-size:14px;font-weight:600;cursor:pointer;
+  }
+  .tat.voll{background:var(--akzent);color:#fff}
+  .tat.still{border-color:#B6BEC2;color:var(--leise)}
+  .tat.breit{display:flex;width:100%}
+  .tatreihe{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .tatreihe .tat{flex:1 1 auto}
+
+  /* Umschalter */
+  .umschalter{display:flex;gap:0;background:var(--flaeche);border:1px solid var(--kante);border-radius:12px;overflow:hidden;margin:0 0 10px}
+  .umschalter button{
+    flex:1;min-height:52px;border:0;background:transparent;font:inherit;font-size:13px;
+    font-weight:600;color:var(--leise);cursor:pointer;padding:8px 6px;line-height:1.25;
+  }
+  .umschalter button + button{border-left:1px solid var(--kante)}
+  .umschalter button[aria-pressed="true"]{background:var(--akzent);color:#fff}
+
+  /* Befundzeile */
+  .befund{border-top:1px solid var(--kante);padding:12px 13px}
+  .befund:first-child{border-top:0}
+  .befund .art{font-size:12px;font-weight:700;letter-spacing:.02em;margin-bottom:5px}
+  .befund .art.a-verknuepfen{color:var(--akzent)}
+  .befund .art.a-schreiben{color:var(--warn)}
+  .befund .art.a-beliebig{color:var(--fehl)}
+  .befund .art.a-dublette{color:var(--fehl)}
+  .befund .art.a-widerspruch{color:var(--fehl)}
+  .befund .art.a-ohnewirkung{color:var(--warn)}
+  .paar{font-size:14px;font-weight:600;line-height:1.35;overflow-wrap:anywhere}
+  .paar .pfeil{color:var(--leise);font-weight:400;padding:0 4px}
+  .satz{font-size:13px;color:var(--leise);margin-top:4px;overflow-wrap:anywhere}
+  .marke{
+    display:inline-block;font-size:12px;font-weight:600;border-radius:6px;
+    padding:2px 7px;margin-top:6px;border:1px solid;
+  }
+  .marke.luecke{background:var(--fehl-hell);border-color:#E7BFBF;color:#6E1F1F}
+  .marke.stufe{background:#EFEDE9;border-color:var(--kante);color:var(--leise)}
+  .marke.gelegt{background:var(--akzent-hell);border-color:#BCD8D8;color:#14484C}
+
+  .schalter{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    width:100%;min-height:52px;padding:8px 13px;border:0;border-top:1px solid var(--kante);
+    background:var(--flaeche);font:inherit;font-size:13px;text-align:left;cursor:pointer;color:inherit;
+  }
+  .kippe{flex:0 0 auto;width:46px;height:28px;border-radius:14px;background:#C6CDD0;position:relative;transition:background .12s}
+  .kippe::after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;transition:left .12s}
+  .schalter[aria-pressed="true"] .kippe{background:var(--akzent)}
+  .schalter[aria-pressed="true"] .kippe::after{left:21px}
+
+  .leer{padding:22px 16px;text-align:center}
+  .leer .gross{font-size:16px;font-weight:650;margin-bottom:6px}
+  .leer .klein{font-size:13px;color:var(--leise)}
+
+  .fuss{font-size:12px;color:var(--leise);padding:2px 2px 0}
+
+  /* Blatt (Handgriff-Panel) */
+  .blattgrund{position:absolute;inset:0;background:rgba(28,42,51,.45);display:flex;align-items:flex-end;z-index:5}
+  .blatt{width:100%;background:var(--flaeche);border-radius:16px 16px 0 0;padding:16px 16px 20px;max-height:76%;overflow-y:auto}
+  .blatt h3{margin:0 0 6px;font-size:16px}
+  .blatt p{margin:0 0 10px;font-size:13px;color:var(--leise)}
+  .blatt .feld{border:1px solid var(--kante);border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:8px;background:#FBFAF8}
+  .blatt .feld .l{font-size:12px;color:var(--leise)}
+</style>
+</head>
+<body>
+
+<p class="messstand">
+  Entwurf in Handygröße (<b>390 &times; 844</b>). Die Beispieldaten sind erfunden; die Rechnung darin ist echt.
+</p>
+
+<div class="rahmen">
+  <header class="kopf">
+    <h1 id="kopftitel">Wege und Lücken</h1>
+    <p id="kopfzeile">Beispieldaten — erfundener Bestand</p>
+  </header>
+  <main class="buehne" id="buehne"></main>
+  <nav class="leiste" id="leiste"></nav>
+  <div id="blatt"></div>
+</div>
+
+<script id="daten">
+/* =======================================================================
+   TEIL 1 — Beispieldaten und reine Rechnung.
+   Dieser Block berührt das Dokument nicht und lässt sich außerhalb des
+   Browsers ausführen (zum Nachmessen der Zahlen).
+   ======================================================================= */
+
+/* ---- Beispieldaten (erfunden) ---------------------------------------- */
+
+const SCHLAGWOERTER = [
+  { id:'t-sauerteig',  name:'Sauerteig' },
+  { id:'t-ofen',       name:'Backen im Ofen' },
+  { id:'t-werkzeuge',  name:'Werkzeuge' },
+  { id:'t-fuehrung',   name:'Teigführung' },
+  { id:'t-grundlagen', name:'Grundlagen Brot', unter:'Oberbegriff über Sauerteig und Teigführung' },
+  { id:'t-vokabeln',   name:'Vokabelliste Backen' },
+  { id:'t-neu',        name:'Neu angelegt' },
+  { id:'t-einzel',     name:'Brotgewürz' },
+  { id:'t-gross',      name:'Große Sammlung' },
+];
+
+/* k(id, titel, x, y, tags) — x/y sind der hinterlegte Wert der Karte.
+   null statt x/y heißt: kein Wert hinterlegt (nicht Wert 0). */
+function k(id, titel, x, y, tags){ return { id, titel, wert: (x===null? null : [x,y]), tags }; }
+
+const S = 't-sauerteig', O = 't-ofen', W = 't-werkzeuge',
+      F = 't-fuehrung', G = 't-grundlagen', V = 't-vokabeln',
+      N = 't-neu', E = 't-einzel', GR = 't-gross';
+
+const KARTEN = [
+  // Sauerteig (liegt zugleich in „Grundlagen Brot")
+  k('s1','Was Sauerteig ist',                    0.10,0.90,[S,G]),
+  k('s2','Ein Anstellgut ansetzen',              0.16,0.84,[S,G]),
+  k('s3','Füttern: Rhythmus und Menge',          0.22,0.80,[S,G]),
+  k('s4','Woran man reifen Sauerteig erkennt',   0.30,0.74,[S,G]),
+  k('s5','Reifen Sauerteig erkennen',            0.3004,0.7403,[S,G]), // fast deckungsgleich zu s4
+  k('s6','Sauerteig kühl stellen',               0.12,0.66,[S,G]),
+  k('s7','Säuregrad und Geschmack',              0.34,0.62,[S,G]),
+  k('s8','Wenn der Sauerteig nicht treibt',      0.06,0.74,[S,G]),
+
+  // Backen im Ofen
+  k('o1','Hitze im Ofen verteilen',              0.62,0.70,[O]),
+  k('o2','Vorheizen',                            0.70,0.78,[O]),
+  k('o3','Mit Dampf backen',                     0.76,0.70,[O]),
+  k('o4','Backzeit und Kerntemperatur',          0.80,0.60,[O]),
+  k('o5','Kruste und Farbe',                     0.72,0.58,[O]),
+  k('o6','Brot auskühlen lassen',                0.64,0.52,[O]),
+
+  // Werkzeuge
+  k('w1','Gärkorb',                              0.46,0.22,[W]),
+  k('w2','Teigkarte und Schüssel',               0.40,0.16,[W]),
+  k('w3','Backstahl und Blech',                  0.54,0.28,[W]),
+  k('w4','Küchenwaage',                          0.36,0.26,[W]),
+  k('w5','Ofenthermometer',                      null,null,[W]),   // kein Wert hinterlegt
+
+  // Teigführung (liegt zugleich in „Grundlagen Brot")
+  k('f1','Autolyse',                             0.26,0.56,[F,G]),
+  k('f2','Dehnen und Falten',                    0.32,0.50,[F,G]),
+  k('f3','Stockgare',                            0.20,0.48,[F,G]),
+  k('f4','Stückgare',                            0.24,0.42,[F,G]),
+  k('f5','Teigtemperatur steuern',               0.34,0.44,[F,G]),
+  k('f6','Übergare erkennen',                    0.28,0.38,[F,G]),
+
+  // Grundlagen Brot, eigene Karten
+  k('g1','Was Brot zusammenhält',                0.18,0.60,[G]),
+  k('g2','Mehl, Wasser, Salz',                   0.14,0.54,[G]),
+  k('g3','Kneten oder nicht',                    0.24,0.64,[G]),
+  k('g4','Warum Brot aufgeht',                   0.20,0.70,[G]),
+  k('g5','Brot einfrieren',                      0.02,0.28,[G]),
+  k('g6','Brot aufbewahren',                     null,null,[G]),   // kein Wert hinterlegt
+
+  // Vokabelliste — Karten mit Wert, aber ohne jede Verknüpfung
+  k('v1','Krume',        0.86,0.10,[V]), k('v2','Kruste',       0.90,0.12,[V]),
+  k('v3','Gare',         0.88,0.16,[V]), k('v4','Triebkraft',   0.92,0.08,[V]),
+  k('v5','Schluss',      0.84,0.14,[V]), k('v6','Teigausbeute', 0.90,0.18,[V]),
+  k('v7','Ofentrieb',    0.86,0.06,[V]), k('v8','Anstellgut',   0.94,0.14,[V]),
+  k('v9','Schwaden',     0.82,0.10,[V]),
+
+  // Frisch angelegt — noch kein einziger Wert hinterlegt
+  k('n1','Roggen — erste Notizen',   null,null,[N]),
+  k('n2','Vollkorn — erste Notizen', null,null,[N]),
+  k('n3','Dinkel — erste Notizen',   null,null,[N]),
+
+  // Genau eine Karte
+  k('e1','Brotgewürz',   0.50,0.52,[E]),
+];
+
+/* e(a, b, art, quelle) — „voraussetzung" ist gerichtet: b setzt a voraus.
+   Die Quelle ist die dritte Herkunft einer Verbindung und wird angezeigt:
+     'hand'   — ein Mensch hat entschieden, dass hier ein Zusammenhang ist
+     'import' — beim Einlesen als Vorschlag ab einem Wert übernommen,
+                nie von Hand bestätigt. Keine Handschrift.
+     'bestaetigt' — in dieser Sitzung vom Autor bestätigt (entsteht erst
+                im Betrieb, siehe zustand.gelegt)
+   Gerechnet ist die dritte Herkunft — sie liegt in KEINER Kante, sondern
+   entsteht aus den hinterlegten Werten und stellt nur Fragen. */
+function e(a,b,art,quelle){ return { a, b, art, quelle: quelle || 'import' }; }
+
+const KANTEN = [
+  // Sauerteig
+  e('s1','s2','verwandt','import'), e('s2','s3','verwandt','import'), e('s3','s4','verwandt','import'),
+  e('s4','s5','verwandt','import'), e('s3','s6','verwandt','hand'), e('s6','s7','verwandt','hand'),
+  e('s1','s8','verwandt','hand'),
+  // Backen im Ofen — die drei Voraussetzungskanten bilden einen Widerspruch
+  e('o1','o2','verwandt','import'),
+  e('o2','o3','voraussetzung','hand'), e('o3','o4','voraussetzung','hand'), e('o4','o2','voraussetzung','hand'),
+  e('o4','o5','verwandt','import'), e('o5','o6','verwandt','import'),
+  // Werkzeuge
+  e('w1','w2','verwandt','hand'), e('w2','w3','verwandt','import'),
+  // Verknüpfung über die Schlagwortgrenze — wird erst durch Zusammenklicken sichtbar
+  e('s7','o1','verwandt','hand'),
+  // Teigführung — ebenfalls ein Widerspruch
+  e('f1','f2','verwandt','import'),
+  e('f2','f3','voraussetzung','hand'), e('f3','f4','voraussetzung','hand'), e('f4','f2','voraussetzung','hand'),
+  e('f5','f6','verwandt','import'),
+  // Grundlagen Brot
+  e('g1','g2','verwandt','import'), e('g1','g3','verwandt','import'), e('g3','g4','verwandt','hand'),
+  e('g4','s1','verwandt','hand'), e('f1','g1','verwandt','hand'),
+  // Neu angelegt
+  e('n1','n2','verwandt','hand'), e('n2','n3','verwandt','hand'),
+];
+
+/* Wie eine Herkunft heißt und was sie über sich sagt. */
+const HERKUNFT = {
+  hand:       { wort:'von Hand gelegt',
+                satz:'Ein Mensch hat entschieden, dass hier ein Zusammenhang ist.' },
+  import:     { wort:'aus einem Import übernommen',
+                satz:'Beim Einlesen als Vorschlag ab einem Rechenwert übernommen — nie von Hand bestätigt.' },
+  bestaetigt: { wort:'in dieser Sitzung bestätigt',
+                satz:'Du hast diesen Schritt ausdrücklich bestätigt.' },
+};
+
+/* Die große Sammlung wird erzeugt, nicht hingeschrieben — sie dient nur dem
+   Randfall „sehr große Menge". 600 Karten, in Blöcken von 20 verknüpft. */
+(function grosseSammlungErzeugen(){
+  for(let i=0;i<600;i++){
+    const x = ((i*37)%100)/100, y = ((i*61)%100)/100;
+    KARTEN.push(k('x'+i, 'Beispielkarte '+String(i+1).padStart(3,'0'), x, y, [GR]));
+    if(i%20 !== 0) KANTEN.push(e('x'+(i-1), 'x'+i, 'verwandt'));
+  }
+})();
+
+/* Die Kantenarten, über die ein Weg laufen darf — namentlich, nie „alle". */
+const WEGARTEN = ['verwandt','voraussetzung'];
+
+/* ---- Nachschlagewerk ------------------------------------------------- */
+
+const NACH_ID = Object.create(null);
+for(const karte of KARTEN) NACH_ID[karte.id] = karte;
+const titelVon = id => (NACH_ID[id] ? NACH_ID[id].titel : id);
+
+function kartenZuTag(tagId){ return KARTEN.filter(karte => karte.tags.includes(tagId)); }
+
+/* ---- Der Rechenwert -------------------------------------------------- */
+/* Zwei Karten mit hinterlegtem Wert ergeben einen Rechenwert. Fehlt einer
+   Seite der Wert, ist das Ergebnis `null` — „unbekannt", nicht 0. */
+const MAXABSTAND = Math.SQRT2;
+function rechenwert(a, b){
+  const ka = NACH_ID[a], kb = NACH_ID[b];
+  if(!ka || !kb || !ka.wert || !kb.wert) return null;
+  const dx = ka.wert[0]-kb.wert[0], dy = ka.wert[1]-kb.wert[1];
+  const d = Math.sqrt(dx*dx + dy*dy);
+  return Math.max(0, Math.min(1, 1 - d/MAXABSTAND));
+}
+const DUBLETTENGRENZE = 0.999;
+
+/* ---- Mengenlehre ----------------------------------------------------- */
+
+function mengeAus(tagIds, entfernteKarten){
+  const weg = new Set(entfernteKarten || []);
+  const gesehen = new Set(); const menge = [];
+  for(const tagId of tagIds){
+    for(const karte of kartenZuTag(tagId)){
+      if(weg.has(karte.id) || gesehen.has(karte.id)) continue;
+      gesehen.add(karte.id); menge.push(karte);
+    }
+  }
+  return menge;
+}
+
+function kantenIn(mengeIds, zusatzKanten, gedrehte){
+  const drin = id => mengeIds.has(id);
+  const alle = KANTEN.concat(zusatzKanten || []);
+  const gedreht = new Set(gedrehte || []);
+  return alle
+    .filter(kante => WEGARTEN.includes(kante.art) && drin(kante.a) && drin(kante.b))
+    .map(kante => gedreht.has(kanteSchluessel(kante))
+      ? { a:kante.b, b:kante.a, art:kante.art, quelle:kante.quelle }
+      : kante);
+}
+function kanteSchluessel(kante){ return kante.a+'>'+kante.b+':'+kante.art; }
+
+function gruppenBilden(mengeIds, kanten){
+  const vater = Object.create(null);
+  for(const id of mengeIds) vater[id] = id;
+  const wurzel = id => { while(vater[id] !== id) { vater[id] = vater[vater[id]]; id = vater[id]; } return id; };
+  for(const kante of kanten){
+    const wa = wurzel(kante.a), wb = wurzel(kante.b);
+    if(wa !== wb) vater[wa] = wb;
+  }
+  const nach = new Map();
+  for(const id of mengeIds){
+    const w = wurzel(id);
+    if(!nach.has(w)) nach.set(w, []);
+    nach.get(w).push(id);
+  }
+  return [...nach.values()].sort((x,y) => y.length - x.length);
+}
+
+/* Eine Verknüpfung, die in keinem der einzeln gewählten Schlagwörter lag. */
+function brueckenkanten(kanten, tagIds){
+  return kanten.filter(kante => !tagIds.some(tagId =>
+    NACH_ID[kante.a] && NACH_ID[kante.b] &&
+    NACH_ID[kante.a].tags.includes(tagId) && NACH_ID[kante.b].tags.includes(tagId)));
+}
+
+/* ---- Bodenwert: das untere Viertel der schon verknüpften Paare -------- */
+function bodenwertAus(kanten){
+  const werte = kanten.map(kante => rechenwert(kante.a, kante.b)).filter(w => w !== null);
+  if(werte.length === 0) return null;
+  werte.sort((x,y) => x-y);
+  const platz = 0.25 * (werte.length - 1);
+  const unten = Math.floor(platz), rest = platz - unten;
+  return werte[unten] + (werte[Math.min(unten+1, werte.length-1)] - werte[unten]) * rest;
+}
+
+/* ---- Stufen: höchstens drei, aus der Verteilung DIESER Menge ---------- */
+function stufenGrenzenAus(werte){
+  const w = werte.filter(x => x !== null).slice().sort((x,y)=>x-y);
+  if(w.length < 3) return null;
+  const bei = anteil => w[Math.min(w.length-1, Math.round(anteil*(w.length-1)))];
+  return { mittel: bei(1/3), nah: bei(2/3) };
+}
+function stufeVon(wert, grenzen){
+  if(wert === null) return null;
+  if(!grenzen) return null;
+  if(wert >= grenzen.nah) return 'nah';
+  if(wert >= grenzen.mittel) return 'mittel';
+  return 'fern';
+}
+
+/* ---- Widerspruch: Zyklus über gerichtete Voraussetzungskanten --------- */
+function widersprueche(kanten){
+  const nachfolger = Object.create(null);
+  for(const kante of kanten){
+    if(kante.art !== 'voraussetzung') continue;
+    (nachfolger[kante.a] = nachfolger[kante.a] || []).push(kante.b);
+  }
+  const farbe = Object.create(null); const gefunden = []; const stapel = [];
+  function lauf(id){
+    farbe[id] = 1; stapel.push(id);
+    for(const naechster of (nachfolger[id] || [])){
+      if(farbe[naechster] === 1){
+        const ab = stapel.indexOf(naechster);
+        if(ab >= 0) gefunden.push(stapel.slice(ab).concat([naechster]));
+      } else if(!farbe[naechster]) lauf(naechster);
+    }
+    stapel.pop(); farbe[id] = 2;
+  }
+  for(const id of Object.keys(nachfolger)) if(!farbe[id]) lauf(id);
+  return gefunden;
+}
+
+/* ---- Karten, die inhaltlich zwischen zwei anderen liegen -------------- */
+function zwischenkarte(a, b, mengeIds, boden){
+  if(boden === null) return null;
+  for(const id of mengeIds){
+    if(id === a || id === b) continue;
+    const links = rechenwert(a, id), rechts = rechenwert(id, b);
+    if(links !== null && rechts !== null && links >= boden && rechts >= boden) return id;
+  }
+  return null;
+}
+
+/* ---- Die Schritte der Fassung „mit Bestätigung" ----------------------- */
+/* Gierig über die Gruppen: immer das stärkste Paar zwischen zwei noch
+   getrennten Gruppen. Ist für ein Paar kein Rechenwert da, wird der Schritt
+   beliebig gewählt und trägt das als Beschriftung — ohne Wert. */
+function schritteBilden(gruppen, mengeIds, boden, grenzen, verworfen){
+  const teile = gruppen.map(g => g.slice());
+  const schritte = []; const weg = new Set(verworfen || []);
+  let schutz = 0;
+  while(teile.length > 1 && schutz++ < 60){
+    let bestes = null;
+    for(let i=0;i<teile.length;i++) for(let j=i+1;j<teile.length;j++){
+      for(const a of teile[i]) for(const b of teile[j]){
+        // Ein abgelehnter Schritt wird nicht noch einmal vorgeschlagen —
+        // „gilt nicht" heißt: such etwas anderes, nicht: ich nehme es an.
+        if(weg.has(a+'|'+b) || weg.has(b+'|'+a)) continue;
+        const wert = rechenwert(a,b);
+        if(wert === null) continue;
+        if(!bestes || wert > bestes.wert) bestes = { i, j, a, b, wert };
+      }
+    }
+    if(!bestes){
+      // Keine zwei Gruppen mehr, zwischen denen sich etwas rechnen lässt.
+      let ersatz = null;
+      for(let i=0;i<teile.length && !ersatz;i++) for(let j=i+1;j<teile.length && !ersatz;j++){
+        for(const a of teile[i]) for(const b of teile[j]){
+          if(weg.has(a+'|'+b) || weg.has(b+'|'+a)) continue;
+          ersatz = { i, j, a, b, wert:null }; break;
+        }
+      }
+      if(!ersatz) break;
+      bestes = ersatz;
+    }
+    const schritt = {
+      a: bestes.a, b: bestes.b, wert: bestes.wert,
+      stufe: stufeVon(bestes.wert, grenzen),
+      beliebig: bestes.wert === null,
+      zwischen: bestes.wert === null ? null : zwischenkarte(bestes.a, bestes.b, mengeIds, boden),
+      ueberBoden: bestes.wert !== null && boden !== null && bestes.wert >= boden,
+      schluessel: bestes.a+'|'+bestes.b,
+    };
+    schritte.push(schritt);
+    teile[bestes.i] = teile[bestes.i].concat(teile[bestes.j]);
+    teile.splice(bestes.j, 1);
+  }
+  schritte.forEach((schritt, nr) => { schritt.rang = nr + 1; });
+  // Die Lücke: die schwächste Stelle mit Wert.
+  let schwaechste = null;
+  for(const schritt of schritte)
+    if(schritt.wert !== null && (!schwaechste || schritt.wert < schwaechste.wert)) schwaechste = schritt;
+  if(schwaechste) schwaechste.luecke = true;
+  return schritte;
+}
+
+/* ---- Die Auswertung --------------------------------------------------- */
+const ZEITBUDGET_MS = 1000;
+const JE_PAAR_MIKROSEKUNDEN = 10;   // gemessener Größenwert
+const NACHBARN_JE_KARTE = 10;
+
+function auswerten(zustand){
+  const tagIds = [...zustand.tags];
+  const ergebnis = {
+    tagIds, tagNamen: tagIds.map(id => (SCHLAGWOERTER.find(t=>t.id===id)||{}).name),
+    leer:false, eineKarte:false, umgeschaltet:false,
+  };
+  const menge = mengeAus(tagIds, zustand.entfernt);
+  ergebnis.karten = menge.length;
+  if(menge.length === 0){ ergebnis.leer = true; return ergebnis; }
+
+  const mengeIds = new Set(menge.map(karte => karte.id));
+
+  // Teil 1 — die Menge
+  const groessterTeil = Math.max(0, ...tagIds.map(id =>
+    kartenZuTag(id).filter(karte => mengeIds.has(karte.id)).length));
+  ergebnis.neuHinzu = menge.length - groessterTeil;
+  ergebnis.ohneWert = menge.filter(karte => !karte.wert).length;
+  ergebnis.mitWert  = menge.length - ergebnis.ohneWert;
+
+  // Größe: umschalten statt abschneiden
+  const paare = menge.length * (menge.length - 1) / 2;
+  ergebnis.paare = paare;
+  ergebnis.geschaetzteMs = Math.round(paare * JE_PAAR_MIKROSEKUNDEN / 1000);
+  ergebnis.umgeschaltet = ergebnis.geschaetzteMs > ZEITBUDGET_MS;
+
+  // Teil 2 — der Zusammenhang
+  const kanten = kantenIn(mengeIds, zustand.gelegt, zustand.gedreht);
+  ergebnis.kanten = kanten.length;
+  ergebnis.herkunft = { hand:0, import:0, bestaetigt:0 };
+  for(const kante of kanten) ergebnis.herkunft[kante.quelle || 'import']++;
+  ergebnis.bruecken = brueckenkanten(kanten, tagIds).length;
+  const gruppen = gruppenBilden(mengeIds, kanten);
+  ergebnis.gruppen = gruppen;
+  ergebnis.gruppenZahl = gruppen.length;
+  ergebnis.groessteGruppe = gruppen.length ? gruppen[0].length : 0;
+  const mitKante = new Set(); kanten.forEach(kante => { mitKante.add(kante.a); mitKante.add(kante.b); });
+  ergebnis.ohneKante = menge.length - mitKante.size;
+
+  if(menge.length === 1){ ergebnis.eineKarte = true; return ergebnis; }
+
+  // Teil 3 — Bodenwert, Stufen, Lücken
+  ergebnis.boden = bodenwertAus(kanten);
+  ergebnis.bodenHerleitbar = ergebnis.boden !== null;
+  /* Aus welchen Herkünften der Maßstab stammt — der Bodenwert eicht sich an
+     dem, was schon verknüpft ist, und das ist nicht durchweg Handarbeit. */
+  ergebnis.bodenAus = { hand:0, import:0, bestaetigt:0, zahl:0 };
+  for(const kante of kanten){
+    if(rechenwert(kante.a, kante.b) === null) continue;
+    ergebnis.bodenAus[kante.quelle || 'import']++; ergebnis.bodenAus.zahl++;
+  }
+  ergebnis.rechenbar = ergebnis.mitWert >= 2;
+
+  let werteFuerStufen = [];
+  if(ergebnis.rechenbar && !ergebnis.umgeschaltet){
+    for(let i=0;i<menge.length;i++) for(let j=i+1;j<menge.length;j++){
+      const wert = rechenwert(menge[i].id, menge[j].id);
+      if(wert !== null) werteFuerStufen.push(wert);
+    }
+  } else if(ergebnis.rechenbar){
+    // Umgeschaltet: je Karte die nächsten Nachbarn statt aller Paare.
+    for(const karte of menge){
+      if(!karte.wert) continue;
+      const nah = [];
+      for(const andere of menge){
+        if(andere.id === karte.id || !andere.wert) continue;
+        nah.push(rechenwert(karte.id, andere.id));
+      }
+      nah.sort((x,y)=>y-x);
+      werteFuerStufen = werteFuerStufen.concat(nah.slice(0, NACHBARN_JE_KARTE));
+    }
+  }
+  ergebnis.grenzen = stufenGrenzenAus(werteFuerStufen);
+
+  // Teil 4 — die Befunde
+  const befunde = [];
+
+  if(ergebnis.neuHinzu === 0 && ergebnis.bruecken === 0 && tagIds.length > 1){
+    befunde.push({
+      art:'auswahl_ohne_wirkung',
+      a:null, b:null,
+      satz:'Keine Karte, die „'+ groessterTeilName(tagIds, mengeIds) +'" nicht schon hatte, und keine neu sichtbare Verknüpfung.',
+      handgriff:'Andere Schlagwörter wählen',
+    });
+  }
+
+  // Dubletten
+  if(ergebnis.rechenbar){
+    for(let i=0;i<menge.length;i++) for(let j=i+1;j<menge.length;j++){
+      const wert = rechenwert(menge[i].id, menge[j].id);
+      if(wert !== null && wert >= DUBLETTENGRENZE){
+        befunde.push({ art:'moegliche_dublette', a:menge[i].id, b:menge[j].id,
+          satz:'Beide Karten sagen dasselbe. Weder ein Weg noch ein Vorschlag — ein Datenfehler.',
+          handgriff:'Zusammenführen', wert });
+      }
+    }
+  }
+
+  // Widersprüche
+  for(const kette of widersprueche(kanten)){
+    const quellen = [];
+    for(let i=0;i<kette.length-1;i++){
+      const treffer = kanten.find(kante => kante.a===kette[i] && kante.b===kette[i+1] && kante.art==='voraussetzung');
+      if(treffer) quellen.push(treffer.quelle || 'import');
+    }
+    befunde.push({ art:'widerspruch', a:kette[0], b:kette[kette.length-2],
+      kette, quellen,
+      satz:'Diese Karten setzen sich im Kreis gegenseitig voraus: '+
+        kette.map(titelVon).join(' → ') + '.',
+      handgriff:'Richtung drehen' });
+  }
+
+  ergebnis.befundeFest = befunde;
+
+  // Die beiden Fassungen.
+  // Bei umgeschalteter Rechnung gibt es keinen durchgehenden Weg: Die
+  // Funktion antwortet dann aggregiert, nie mit einer Paarliste (6.4).
+  ergebnis.schritteAusgelassen = ergebnis.umgeschaltet;
+  ergebnis.schritte = ergebnis.umgeschaltet
+    ? []
+    : schritteBilden(gruppen, mengeIds, ergebnis.boden, ergebnis.grenzen, zustand.verworfen);
+  ergebnis.luecken = lueckenOhneBestaetigung(gruppen, mengeIds, ergebnis.boden, ergebnis.grenzen);
+  ergebnis.vorschlagsmenge = menge.length;   // N = eine je Karte
+  return ergebnis;
+}
+
+function groessterTeilName(tagIds, mengeIds){
+  let bester = null, groesste = -1;
+  for(const tagId of tagIds){
+    const zahl = kartenZuTag(tagId).filter(karte => mengeIds.has(karte.id)).length;
+    if(zahl > groesste){ groesste = zahl; bester = tagId; }
+  }
+  const treffer = SCHLAGWOERTER.find(t => t.id === bester);
+  return treffer ? treffer.name : '—';
+}
+
+/* Fassung ohne Bestätigung: die Lücke ist ein Paar von Hälften.
+   Der Rechenwert ordnet nur die Arbeitsliste — er benennt keine Stelle. */
+function lueckenOhneBestaetigung(gruppen, mengeIds, boden, grenzen){
+  if(gruppen.length < 2) return [];
+  const groesste = gruppen[0];
+  const reihe = [];
+  const bis = Math.min(gruppen.length, 21);   // die N stärksten, nie die ganze Paarliste
+  for(let i=1;i<bis;i++){
+    const andere = gruppen[i];
+    let bester = null;
+    for(const a of groesste) for(const b of andere){
+      const wert = rechenwert(a,b);
+      if(wert === null) continue;
+      if(!bester || wert > bester) bester = wert;
+    }
+    reihe.push({
+      ankerA: groesste[0], ankerB: andere[0],
+      groesseA: groesste.length, groesseB: andere.length,
+      ordnung: bester,
+      stufe: stufeVon(bester, grenzen),
+      ueberBoden: bester !== null && boden !== null && bester >= boden,
+      hatZwischen: bester === null ? false : !!zwischenkarte(groesste[0], andere[0], mengeIds, boden),
+    });
+  }
+  reihe.sort((x,y) => (y.ordnung === null ? -1 : y.ordnung) - (x.ordnung === null ? -1 : x.ordnung));
+  return reihe;
+}
+
+/* Für den Lauf außerhalb des Browsers */
+if(typeof module !== 'undefined') module.exports = {
+  SCHLAGWOERTER, KARTEN, KANTEN, auswerten, kartenZuTag, rechenwert, titelVon
+};
+</script>
+
+<script id="oberflaeche">
+/* =======================================================================
+   TEIL 2 — Die Oberfläche.
+   ======================================================================= */
+
+const zustand = {
+  bildschirm: 'auswahl',        // auswahl | ergebnis | zustaende
+  tags: new Set(['t-sauerteig','t-ofen','t-werkzeuge']),
+  fassung: 'ohne',              // ohne | mit
+  gelegt: [],                   // in dieser Sitzung bestätigte Verknüpfungen
+  verworfen: [],                // in dieser Sitzung abgelehnte Schritte
+  gedreht: [],                  // gedrehte Voraussetzungskanten
+  entfernt: [],                 // zusammengeführte Dubletten
+  werteZeigen: false,
+  blatt: null,
+};
+
+const buehne = document.getElementById('buehne');
+const leiste = document.getElementById('leiste');
+const blattOrt = document.getElementById('blatt');
+const kopftitel = document.getElementById('kopftitel');
+const kopfzeile = document.getElementById('kopfzeile');
+
+/* ---- kleine Helfer ---------------------------------------------------- */
+const roh = t => String(t).replace(/[&<>"]/g, z => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[z]));
+const wertText = w => (w === null || w === undefined) ? '—' : w.toFixed(3).replace('.', ',');
+/* Text wird gekürzt, nicht abgeschnitten — und nie zum Stummel. */
+function kurz(text, grenze){
+  if(text.length <= grenze) return text;
+  const schnitt = text.slice(0, grenze);
+  const letzte = schnitt.lastIndexOf(' ');
+  const rest = letzte > grenze * 0.5 ? schnitt.slice(0, letzte) : schnitt;
+  return rest + '…';
+}
+const STUFENWORT = { nah:'nah', mittel:'mittel', fern:'fern' };
+
+/* ---- Zeichnen --------------------------------------------------------- */
+function zeichnen(){
+  const erg = auswerten(zustand);
+  kopftitel.textContent = { auswahl:'Wege und Lücken', ergebnis:'Wege und Lücken', zustaende:'Zustände' }[zustand.bildschirm];
+  kopfzeile.textContent = zustand.bildschirm === 'zustaende'
+    ? 'Jeder Randfall der Spezifikation, einmal angetippt'
+    : 'Beispieldaten — erfundener Bestand';
+
+  if(zustand.bildschirm === 'auswahl')   buehne.innerHTML = auswahlBildschirm(erg);
+  if(zustand.bildschirm === 'ergebnis')  buehne.innerHTML = ergebnisBildschirm(erg);
+  if(zustand.bildschirm === 'zustaende') buehne.innerHTML = zustaendeBildschirm();
+  buehne.scrollTop = zustand.scrollHalten ? buehne.scrollTop : 0;
+  zustand.scrollHalten = false;
+
+  leiste.innerHTML = [
+    knopfLeiste('auswahl',  'Auswahl',  zustand.tags.size ? zustand.tags.size + ' gewählt' : 'nichts gewählt'),
+    knopfLeiste('ergebnis', 'Ergebnis', erg.leer ? 'leer' : erg.karten + ' Karten'),
+    knopfLeiste('zustaende','Zustände', '10 Fälle'),
+  ].join('');
+
+  blattOrt.innerHTML = zustand.blatt ? blattZeichnen(zustand.blatt) : '';
+}
+function knopfLeiste(ziel, wort, unten){
+  return '<button data-gehe="'+ziel+'" aria-current="'+(zustand.bildschirm===ziel)+'">'+
+    roh(wort)+'<span class="zahl">'+roh(unten)+'</span></button>';
+}
+
+/* ---- Bildschirm 1: Auswahl -------------------------------------------- */
+function auswahlBildschirm(erg){
+  const teile = [];
+
+  teile.push('<div class="block"><h2>Diese Auswahl</h2>' + kennzahlenBlock(erg) + '</div>');
+
+  if(erg.leer){
+    teile.push('<div class="hinweis info"><b>Noch nichts ausgewählt.</b>' +
+      'Tippe ein Schlagwort an. Die Zahlen darüber ändern sich mit jedem Antippen.</div>');
+  } else if(erg.neuHinzu === 0 && erg.bruecken === 0 && erg.tagIds.length > 1){
+    teile.push('<div class="hinweis warn"><b>Diese Auswahl bewirkt nichts.</b>' +
+      '0 Karten, die „'+roh(groessterTeilName(erg.tagIds, new Set(mengeAus(erg.tagIds, zustand.entfernt).map(karte => karte.id))))+'" nicht schon hatte, ' +
+      'und 0 neu sichtbare Verknüpfungen. Ein Schlagwort liegt hier vollständig in einem anderen.</div>');
+  }
+
+  teile.push('<div class="block"><h2>Schlagwörter — mehrfach wählbar</h2>' +
+    SCHLAGWOERTER.map(tagZeile).join('') + '</div>');
+
+  teile.push('<button class="tat voll breit" data-gehe="ergebnis">Auswertung ansehen</button>');
+  teile.push('<p class="fuss">Die Kartenzahl je Schlagwort kommt aus dem Bestand, nicht aus einer gekappten Liste.</p>');
+  return teile.join('');
+}
+
+function tagZeile(tag){
+  const gewaehlt = zustand.tags.has(tag.id);
+  const zahlKarten = kartenZuTag(tag.id).filter(karte => !zustand.entfernt.includes(karte.id)).length;
+  return '<button class="tagzeile" data-tag="'+tag.id+'" aria-pressed="'+gewaehlt+'">' +
+    '<span class="haken" aria-hidden="true">'+(gewaehlt?'✓':'')+'</span>' +
+    '<span class="tagname"><span class="t">'+roh(tag.name)+'</span>' +
+      (tag.unter ? '<span class="u">'+roh(tag.unter)+'</span>' : '') +
+    '</span>' +
+    '<span class="tagzahl">'+zahlKarten+' Karten</span></button>';
+}
+
+/* ---- Kennzahlen -------------------------------------------------------- */
+function kennzahlenBlock(erg){
+  if(erg.leer){
+    return '<div class="kennzahlen">' +
+      kennzahl('—','Karten') + kennzahl('—','Unverbundene Gruppen') +
+      kennzahl('—','Größte Gruppe') + kennzahl('—','Neu sichtbare Verknüpfungen') +
+      '</div>';
+  }
+  return '<div class="kennzahlen">' +
+    kennzahl(erg.gruppenZahl, 'Unverbundene Gruppen') +
+    kennzahl(erg.groessteGruppe, 'Größte Gruppe') +
+    kennzahl(erg.bruecken, 'Neu sichtbare Verknüpfungen') +
+    kennzahl(erg.ohneWert === 0 ? '0' : erg.ohneWert, 'Karten ohne Rechenwert') +
+    '</div>' +
+    '<div class="zeile"><b>'+erg.karten+' Karten</b>, davon <b>'+erg.neuHinzu+'</b> neu gegenüber dem größten Einzelteil · ' +
+      erg.kanten+' Verknüpfungen · '+erg.ohneKante+' Karten ohne jede Verknüpfung</div>';
+}
+
+/* Woher der Zusammenhang kommt — drei Herkünfte, nie zusammengezählt.
+   Ohne diese Zeilen liest der Autor eine Maschinenvermutung als
+   menschliche Entscheidung. */
+function herkunftBlock(erg){
+  if(!erg.herkunft) return '';
+  const h = erg.herkunft;
+  const zeile = (schluessel, wert) => {
+    const herkunft = HERKUNFT[schluessel];
+    return '<div class="zeile"><div style="display:flex;justify-content:space-between;gap:10px">' +
+      '<b>'+roh(herkunft.wort.charAt(0).toUpperCase()+herkunft.wort.slice(1))+'</b>' +
+      '<b style="font-variant-numeric:tabular-nums">'+roh(String(wert))+'</b></div>' +
+      '<div class="satz">'+roh(herkunft.satz)+'</div></div>';
+  };
+  const teile = ['<div class="block"><h2>Woher der Zusammenhang kommt</h2>'];
+  teile.push(zeile('hand', h.hand));
+  teile.push(zeile('import', h.import));
+  if(h.bestaetigt) teile.push(zeile('bestaetigt', h.bestaetigt));
+  teile.push('<div class="zeile"><div style="display:flex;justify-content:space-between;gap:10px">' +
+    '<b>Gerechnet</b><b style="font-variant-numeric:tabular-nums;color:var(--leise)">—</b></div>' +
+    '<div class="satz">Ein Rechenwert ist keine Verbindung. Er stellt nur Fragen — hier zählt er nicht mit.</div></div>');
+  if(h.import > h.hand + h.bestaetigt && erg.kanten > 0){
+    teile.push('<div class="zeile" style="background:var(--warn-hell);color:#5E3D00">' +
+      '<b>Der Zusammenhang dieser Auswahl hängt überwiegend an übernommenen Vorschlägen.</b>' +
+      '<div class="satz" style="color:#5E3D00">'+h.import+' von '+erg.kanten+' Verknüpfungen hat nie ein Mensch bestätigt. ' +
+      'Was hier „verbunden" heißt, ist zum größeren Teil eine Maschinenvermutung.</div></div>');
+  }
+  if(erg.bodenAus && erg.bodenAus.zahl > 0){
+    teile.push('<div class="zeile"><b>Der Vergleichsmaßstab</b>' +
+      '<div class="satz">Der Bodenwert für Vorschläge eicht sich an '+erg.bodenAus.zahl+
+      ' Verknüpfungen dieser Auswahl — davon '+erg.bodenAus.hand+' von Hand, '+erg.bodenAus.import+
+      ' aus einem Import'+(erg.bodenAus.bestaetigt? ', '+erg.bodenAus.bestaetigt+' in dieser Sitzung bestätigt':'')+
+      '.'+(zustand.werteZeigen && erg.boden!==null ? ' Bodenwert '+wertText(erg.boden)+'.' : '')+'</div></div>');
+  }
+  teile.push('</div>');
+  return teile.join('');
+}
+function kennzahl(wert, name){
+  const strich = (wert === '—');
+  return '<div class="kennzahl"><div class="wert'+(strich?' strich':'')+'">'+roh(String(wert))+'</div>' +
+    '<div class="name">'+roh(name)+'</div></div>';
+}
+
+/* ---- Bildschirm 2: Ergebnis ------------------------------------------- */
+function ergebnisBildschirm(erg){
+  const teile = [];
+
+  teile.push('<button class="tat still breit" data-gehe="auswahl" style="justify-content:space-between;margin-bottom:12px">' +
+    '<span>'+roh(erg.tagIds.length ? kurz(erg.tagNamen.join(' · '), 34) : 'Keine Auswahl')+'</span>' +
+    '<span>Ändern</span></button>');
+
+  // Randfall: leere Auswahl
+  if(erg.leer){
+    teile.push('<div class="block"><div class="leer">' +
+      '<div class="gross">Noch nichts ausgewählt.</div>' +
+      '<div class="klein">Die Auswertung läuft nicht — das ist kein Fehler. Wähle ein Schlagwort, dann rechnet sie.</div>' +
+      '</div></div>');
+    teile.push('<button class="tat voll breit" data-gehe="auswahl">Schlagwörter wählen</button>');
+    return teile.join('');
+  }
+
+  teile.push(umschalter());
+
+  // Randfall: genau eine Karte
+  if(erg.eineKarte){
+    teile.push('<div class="block"><div class="leer">' +
+      '<div class="gross">Eine einzelne Karte.</div>' +
+      '<div class="klein">Für einen Zusammenhang braucht es mindestens zwei. Keine Paare, keine Lücken, eine Gruppe.</div>' +
+      '</div></div>');
+    teile.push('<div class="block"><h2>Die Auswahl</h2><div class="zeile">' +
+      roh(titelVon(mengeAus(erg.tagIds, zustand.entfernt)[0].id)) + '</div></div>');
+    return teile.join('');
+  }
+
+  teile.push('<div class="block"><h2>Der Zusammenhang</h2>' + kennzahlenBlock(erg) + unvollstaendigZeilen(erg) + '</div>');
+
+  teile.push(herkunftBlock(erg));
+
+  teile.push(zustand.fassung === 'ohne' ? fassungOhne(erg) : fassungMit(erg));
+
+  teile.push(befundBlock(erg));
+
+  teile.push('<div class="block">' +
+    '<button class="schalter" data-schalter="werte" aria-pressed="'+zustand.werteZeigen+'">' +
+      '<span>Rechenwerte anzeigen<br><span style="font-size:12px;color:var(--leise)">Kein Prozentsatz und keine Note — der rohe Wert.</span></span>' +
+      '<span class="kippe" aria-hidden="true"></span></button>' +
+    sitzungsZeile() + '</div>');
+
+  return teile.join('');
+}
+
+function unvollstaendigZeilen(erg){
+  const zeilen = [];
+  if(erg.ohneWert > 0 && erg.mitWert >= 2){
+    zeilen.push('<div class="zeile"><b>Unvollständig gerechnet.</b> '+erg.ohneWert+' Karte'+(erg.ohneWert>1?'n':'')+
+      ' ohne hinterlegten Rechenwert — ihre Paare gelten als unbekannt, nicht als fern.</div>');
+  }
+  if(erg.mitWert < 2){
+    zeilen.push('<div class="zeile"><b>Nicht berechenbar.</b> In dieser Auswahl trägt keine Karte einen Rechenwert. ' +
+      'Der Teil über die Verknüpfungen läuft vollständig — das hier oben ist gerechnet. ' +
+      'Das ist <b>nicht</b> „keine Lücken gefunden".</div>');
+  }
+  if(erg.umgeschaltet){
+    zeilen.push('<div class="zeile"><b>Umgeschaltet.</b> '+erg.paare.toLocaleString('de-DE')+' Paare lägen über dem Zeitbudget ' +
+      '(geschätzt '+erg.geschaetzteMs.toLocaleString('de-DE')+' ms). Gerechnet wurden je Karte die '+
+      NACHBARN_JE_KARTE+' nächsten Nachbarn — eine andere Rechnung, kein Ausschnitt derselben.</div>');
+  }
+  if(erg.rechenbar && !erg.bodenHerleitbar){
+    zeilen.push('<div class="zeile"><b>Ohne Vergleichsmaßstab.</b> In dieser Auswahl ist noch nichts verknüpft, ' +
+      'darum gibt es keinen Bodenwert. Die Liste erscheint trotzdem — ein erfundener Maßstab wäre der schlimmere Fehler.</div>');
+  }
+  if(erg.kanten === 0){
+    zeilen.push('<div class="zeile"><b>In dieser Auswahl ist noch nichts verknüpft.</b> ' +
+      erg.karten+' Gruppen, größte Gruppe 1. Das ist ein Ergebnis, kein Fehler.</div>');
+  }
+  return zeilen.join('');
+}
+
+function umschalter(){
+  const erklaerung = zustand.fassung === 'ohne'
+    ? '<b>Gezählt wird nur, was gelegt ist</b> — von Hand oder aus einem Import übernommen. Gerechnet wird nichts davon. ' +
+      'Eine Lücke heißt: diese beiden Hälften hängen nicht zusammen. ' +
+      'Der Rechenwert ordnet nur die Arbeitsliste — er benennt keine Stelle und legt nichts an.'
+    : '<b>Das Werkzeug zeigt den besten Weg und fragt je Schritt: gilt das?</b> Erst „Gilt" legt eine Verknüpfung an, ' +
+      'und die trägt danach deine Handschrift, nicht die der Maschine. ' +
+      'Die Lücke ist punktgenau — die schwächste Stelle zwischen zwei benannten Karten.';
+  return '<div class="umschalter">' +
+    '<button data-fassung="ohne" aria-pressed="'+(zustand.fassung==='ohne')+'">Ohne Bestätigungsschritt</button>' +
+    '<button data-fassung="mit" aria-pressed="'+(zustand.fassung==='mit')+'">Mit Bestätigungsschritt</button>' +
+    '</div><div class="hinweis info">'+erklaerung+'</div>';
+}
+
+/* ---- Fassung ohne Bestätigungsschritt --------------------------------- */
+function fassungOhne(erg){
+  const teile = ['<div class="block"><h2>Die Lücken — ohne Bestätigungsschritt</h2>'];
+  if(erg.luecken.length === 0){
+    teile.push('<div class="zeile">Alle '+erg.karten+' Karten hängen zusammen. Keine Hälfte steht für sich.</div>');
+  } else {
+    const alle = erg.gruppenZahl - 1;
+    teile.push('<div class="zeile">'+alle+' Hälfte'+(alle>1?'n hängen':' hängt')+
+      ' nicht mit der größten Gruppe zusammen. <b>Wo dazwischen die dünnste Stelle liegt, sagt diese Fassung nicht.</b> ' +
+      'Die Reihenfolge unten kommt aus dem Rechenwert.' +
+      (alle > erg.luecken.length
+        ? ' Gezeigt werden die '+erg.luecken.length+' stärksten — eine Paarliste gibt das Werkzeug nie vollständig aus.'
+        : '') + '</div>');
+    for(const luecke of erg.luecken){
+      const art = luecke.hatZwischen ? 'vorhandene_karte_verknuepfen' : 'neue_karte_schreiben';
+      const satz = luecke.ordnung === null
+        ? 'Zu dieser Hälfte ist kein Rechenwert hinterlegt — die Reihenfolge lässt sich hier nicht bilden.'
+        : (luecke.hatZwischen
+            ? 'Eine Karte dieser Auswahl liegt inhaltlich zwischen den beiden Hälften.'
+            : (erg.bodenHerleitbar
+                ? 'Keine Karte dieser Auswahl liegt dazwischen. Hier fehlt eine Karte.'
+                : 'Ohne Vergleichsmaßstab lässt sich nicht sagen, ob eine Karte dazwischen liegt — in dieser Auswahl ist noch nichts verknüpft.'));
+      teile.push(befundZeile({
+        art,
+        a: luecke.ankerA, b: luecke.ankerB,
+        vorwort:'Gruppe mit '+luecke.groesseA+' Karten · Gruppe mit '+luecke.groesseB+' Karte'+(luecke.groesseB>1?'n':''),
+        satz,
+        stufe: luecke.stufe,
+        wert: luecke.ordnung,
+        unterBoden: luecke.ordnung !== null && erg.bodenHerleitbar && !luecke.ueberBoden,
+        handgriff: luecke.hatZwischen ? 'Verknüpfen' : 'Karte schreiben',
+        schluessel: luecke.ankerA+'|'+luecke.ankerB,
+      }));
+    }
+  }
+  teile.push('</div>');
+  return teile.join('');
+}
+
+/* ---- Fassung mit Bestätigungsschritt ---------------------------------- */
+function fassungMit(erg){
+  const teile = ['<div class="block"><h2>Der beste Weg — je Schritt bestätigen</h2>'];
+  if(erg.schritteAusgelassen){
+    teile.push('<div class="zeile"><b>Für diese Menge zeigt das Werkzeug keinen durchgehenden Weg.</b>' +
+      '<div class="satz">Gerechnet wurden je Karte die '+NACHBARN_JE_KARTE+' nächsten Nachbarn, nicht alle Paare — ' +
+      'ein durchgehender Weg ließe sich daraus nur behaupten, nicht messen. Die Lücken stehen in der anderen Fassung, ' +
+      'und die Auswahl lässt sich verkleinern.</div>' +
+      '<div class="tatreihe"><button class="tat" data-gehe="auswahl">Auswahl verkleinern</button></div></div></div>');
+    return teile.join('');
+  }
+  const offen = erg.schritte;
+  if(offen.length === 0){
+    teile.push('<div class="zeile">Alle '+erg.karten+' Karten hängen zusammen — es bleibt kein Schritt zu bestätigen.</div>');
+  } else {
+    const luecke = offen.find(s => s.luecke);
+    teile.push('<div class="zeile">'+offen.length+' Schritt'+(offen.length>1?'e':'')+' fehl'+(offen.length>1?'en':'t')+
+      ', damit die Auswahl durchgehend zusammenhängt.' +
+      (luecke ? ' <b>Die Lücke</b> liegt zwischen „'+roh(kurz(titelVon(luecke.a),30))+'" und „'+roh(kurz(titelVon(luecke.b),30))+'".' : '') +
+      '</div>');
+    for(const schritt of offen){
+      const art = schritt.beliebig ? 'beliebig_gewaehlt'
+        : (schritt.zwischen ? 'vorhandene_karte_verknuepfen' : 'neue_karte_schreiben');
+      const satz = schritt.beliebig
+        ? 'Zu „'+kurz(titelVon(schritt.b),28)+'" ist kein Rechenwert hinterlegt. Dieser Schritt ist beliebig gewählt — er trägt keinen Wert und geht in keine Reihenfolge ein.'
+        : (schritt.zwischen
+            ? 'Zwischen beiden liegt „'+kurz(titelVon(schritt.zwischen),28)+'" aus dieser Auswahl.'
+            : (erg.bodenHerleitbar
+                ? 'Keine Karte dieser Auswahl liegt dazwischen. Hier fehlt eine Karte.'
+                : 'Ohne Vergleichsmaßstab lässt sich nicht sagen, ob eine Karte dazwischen liegt — in dieser Auswahl ist noch nichts verknüpft.'));
+      teile.push(befundZeile({
+        art, a:schritt.a, b:schritt.b,
+        vorwort:'Schritt '+schritt.rang+' von '+erg.schritte.length,
+        satz, stufe:schritt.stufe, wert:schritt.wert,
+        luecke: !!schritt.luecke,
+        beliebig: schritt.beliebig,
+        unterBoden: schritt.wert !== null && erg.bodenHerleitbar && !schritt.ueberBoden,
+        handgriff: schritt.zwischen ? 'Verknüpfen' : (schritt.beliebig ? 'Prüfen' : 'Karte schreiben'),
+        bestaetigen: schritt.schluessel,
+      }));
+    }
+  }
+  const verworfen = zustand.verworfen.length;
+  if(verworfen) teile.push('<div class="zeile" style="color:var(--leise)">'+verworfen+
+    ' Schritt'+(verworfen>1?'e':'')+' in dieser Sitzung abgelehnt — sie werden nicht noch einmal vorgeschlagen.</div>');
+  teile.push('</div>');
+  return teile.join('');
+}
+
+/* ---- Befundliste (Vorschlag 2: Befund und Handgriff an derselben Stelle) */
+const ARTWORT = {
+  vorhandene_karte_verknuepfen: ['Vorhandene Karte verknüpfen','a-verknuepfen'],
+  neue_karte_schreiben:         ['Hier fehlt eine Karte','a-schreiben'],
+  beliebig_gewaehlt:            ['Beliebig gewählt, bitte prüfen','a-beliebig'],
+  moegliche_dublette:           ['Sagen dasselbe','a-dublette'],
+  widerspruch:                  ['Widerspruch','a-widerspruch'],
+  auswahl_ohne_wirkung:         ['Diese Auswahl bewirkt nichts','a-ohnewirkung'],
+};
+
+function befundZeile(b){
+  const [wort, klasse] = ARTWORT[b.art];
+  const teile = ['<div class="befund">'];
+  teile.push('<div class="art '+klasse+'">'+roh(wort)+'</div>');
+  if(b.vorwort) teile.push('<div class="satz" style="margin:0 0 4px">'+roh(b.vorwort)+'</div>');
+  if(b.a && b.b){
+    teile.push('<div class="paar">'+roh(kurz(titelVon(b.a), 30)) +
+      '<span class="pfeil">↔</span>' + roh(kurz(titelVon(b.b), 30)) + '</div>');
+  }
+  teile.push('<div class="satz">'+b.satz+'</div>');
+
+  const marken = [];
+  if(b.luecke) marken.push('<span class="marke luecke">Die Lücke</span>');
+  if(b.quellen && b.quellen.length){
+    const gezaehlt = {};
+    for(const q of b.quellen) gezaehlt[q] = (gezaehlt[q]||0) + 1;
+    for(const q of Object.keys(gezaehlt))
+      marken.push('<span class="marke '+(q==='hand'||q==='bestaetigt'?'gelegt':'stufe')+'">'+
+        gezaehlt[q]+' '+roh(HERKUNFT[q].wort)+'</span>');
+  }
+  if(b.beliebig) marken.push('<span class="marke stufe">Rechenwert —</span>');
+  else if(b.stufe) marken.push('<span class="marke stufe">Stufe: '+STUFENWORT[b.stufe]+'</span>');
+  if(b.unterBoden) marken.push('<span class="marke stufe">unter dem Vergleichsmaßstab</span>');
+  if(zustand.werteZeigen && !b.beliebig && b.wert !== undefined)
+    marken.push('<span class="marke stufe">Rechenwert '+wertText(b.wert)+'</span>');
+  if(marken.length) teile.push('<div>'+marken.join(' ')+'</div>');
+
+  const taten = [];
+  if(b.bestaetigen){
+    taten.push('<button class="tat voll" data-gilt="'+roh(b.bestaetigen)+'">Gilt — verknüpfen</button>');
+    taten.push('<button class="tat still" data-giltnicht="'+roh(b.bestaetigen)+'">Gilt nicht</button>');
+  }
+  if(b.handgriff){
+    taten.push('<button class="tat" data-handgriff="'+roh(b.art)+'" data-a="'+roh(b.a||'')+'" data-b="'+roh(b.b||'')+'"'+
+      (b.kette ? ' data-kette="'+roh(b.kette.join(','))+'"' : '')+'>'+roh(b.handgriff)+'</button>');
+  }
+  if(taten.length) teile.push('<div class="tatreihe">'+taten.join('')+'</div>');
+  teile.push('</div>');
+  return teile.join('');
+}
+
+function befundBlock(erg){
+  const zeilen = erg.befundeFest.map(b => befundZeile({
+    art:b.art, a:b.a, b:b.b, satz:b.satz, handgriff:b.handgriff, wert:b.wert, kette:b.kette, quellen:b.quellen,
+  }));
+  const kopf = '<div class="block"><h2>Weitere Befunde</h2>';
+  if(zeilen.length === 0){
+    return kopf + '<div class="zeile">Keine Dublette, kein Widerspruch, und die Auswahl bewirkt etwas. ' +
+      'Geprüft wurde über alle '+erg.kanten+' Verknüpfungen dieser Auswahl — nicht über einen Ausschnitt.</div></div>';
+  }
+  return kopf + zeilen.join('') + '</div>';
+}
+
+function sitzungsZeile(){
+  const n = zustand.gelegt.length;
+  const text = n === 0
+    ? 'In dieser Sitzung wurde noch nichts verknüpft. Was du bestätigst, bleibt im Bestand — auch für die andere Fassung.'
+    : n+' Verknüpfung'+(n>1?'en':'')+' in dieser Sitzung angelegt. Schalte auf „ohne Bestätigungsschritt" um: die Gruppenzahl hat sich geändert.';
+  return '<div class="zeile">'+roh(text)+
+    (n || zustand.verworfen.length || zustand.gedreht.length || zustand.entfernt.length
+      ? '<div class="tatreihe"><button class="tat still" data-zuruecksetzen="1">Sitzung zurücksetzen</button></div>' : '')+
+    '</div>';
+}
+
+/* ---- Bildschirm 3: Zustände ------------------------------------------- */
+const ZUSTAENDE = [
+  { nr:'1a', titel:'Einzelne Karten ohne Rechenwert',
+    satz:'Die Auswertung läuft, die Zahl steht als eigene Zeile, das Ergebnis ist als unvollständig gekennzeichnet.',
+    tags:['t-sauerteig','t-ofen','t-werkzeuge'], fassung:'ohne' },
+  { nr:'1b', titel:'Keine Karte hat einen Rechenwert',
+    satz:'Der Teil über Verknüpfungen läuft vollständig. Der rechnende Teil sagt „nicht berechenbar" — nicht „keine Lücken".',
+    tags:['t-neu'], fassung:'ohne' },
+  { nr:'2', titel:'Keine gelegte Verknüpfung',
+    satz:'Ein gültiges Ergebnis: in dieser Auswahl ist noch nichts verknüpft. Kein Fehler, keine leere Liste.',
+    tags:['t-vokabeln'], fassung:'ohne' },
+  { nr:'3a', titel:'Genau eine Karte',
+    satz:'Keine Paare, keine Lücken, eine Gruppe — und ein Satz, der das sagt.',
+    tags:['t-einzel'], fassung:'ohne' },
+  { nr:'3b', titel:'Leere Auswahl',
+    satz:'Die Auswertung läuft nicht, und das ist kein Fehler.',
+    tags:[], fassung:'ohne' },
+  { nr:'4', titel:'Sehr große Menge — umgeschaltet',
+    satz:'600 Karten. Nicht abgeschnitten, sondern umgeschaltet — und die Ausgabe sagt, welcher Weg gelaufen ist.',
+    tags:['t-gross'], fassung:'ohne' },
+  { nr:'5', titel:'Zwei Karten sagen dasselbe',
+    satz:'Weder Weg noch Vorschlag: eine Meldung. Sonst würde der Autor zwei Karten verknüpfen, von denen eine überflüssig ist.',
+    tags:['t-sauerteig'], fassung:'ohne' },
+  { nr:'6', titel:'Die Zusammenstellung bewirkt nichts',
+    satz:'Keine neue Karte, keine neu sichtbare Verknüpfung — mit beiden Zahlen, schon an der Auswahl.',
+    tags:['t-grundlagen','t-sauerteig'], fassung:'ohne', ziel:'auswahl' },
+  { nr:'7', titel:'Ein beliebig gewählter Schritt',
+    satz:'Trägt seinen Namen, keinen Wert, und wird nie ohne ausdrückliche Handlung zu einer Verknüpfung.',
+    tags:['t-sauerteig','t-ofen','t-werkzeuge'], fassung:'mit' },
+  { nr:'∗', titel:'Alle sechs Befundarten auf einmal',
+    satz:'Verknüpfen, Karte schreiben, beliebig gewählt, Dublette, Widerspruch und „bewirkt nichts" — in einer Auswertung.',
+    tags:['t-grundlagen','t-sauerteig','t-fuehrung'], fassung:'mit' },
+];
+
+function zustaendeBildschirm(){
+  const teile = ['<div class="hinweis info"><b>Jeder Randfall ist ein eigener Zustand.</b>' +
+    'Keiner sieht aus wie ein Ergebnis, und keiner sieht aus wie ein Fehler. Antippen führt hin.</div>'];
+  teile.push('<div class="block">');
+  ZUSTAENDE.forEach((z, i) => {
+    teile.push('<button class="tagzeile" data-zustand="'+i+'" style="align-items:flex-start">' +
+      '<span class="haken" aria-hidden="true" style="border-radius:50%;font-size:12px;color:var(--leise);border-color:var(--kante)">'+roh(z.nr)+'</span>' +
+      '<span class="tagname"><span class="t">'+roh(z.titel)+'</span><span class="u">'+roh(z.satz)+'</span></span>' +
+      '</button>');
+  });
+  teile.push('</div>');
+  teile.push('<p class="fuss">Die Nummern folgen Abschnitt 5 der Spezifikation. ∗ ist kein Randfall, sondern eine Auswahl, in der alle sechs Befundarten zugleich auftreten.</p>');
+  return teile.join('');
+}
+
+/* ---- Das Blatt (Handgriffe, die außerhalb des Mockups weitergehen) ----- */
+function blattZeichnen(b){
+  return '<div class="blattgrund" data-blattzu="1"><div class="blatt">' +
+    '<h3>'+roh(b.titel)+'</h3>' +
+    '<p>'+b.satz+'</p>' +
+    (b.felder || []).map(f => '<div class="feld"><div class="l">'+roh(f[0])+'</div>'+roh(f[1])+'</div>').join('') +
+    '<div class="tatreihe">' +
+      (b.tat ? '<button class="tat voll" data-blatttat="'+roh(b.tat.kennung)+'">'+roh(b.tat.wort)+'</button>' : '') +
+      '<button class="tat still" data-blattzu="1">Schließen</button>' +
+    '</div></div></div>';
+}
+
+/* ---- Bedienung --------------------------------------------------------- */
+document.addEventListener('click', ereignis => {
+  const ziel = ereignis.target.closest('[data-gehe],[data-tag],[data-fassung],[data-schalter],[data-gilt],[data-giltnicht],[data-handgriff],[data-zustand],[data-zuruecksetzen],[data-blattzu],[data-blatttat]');
+  if(!ziel) return;
+  // Ein Tipp neben eine Schaltfläche im Blatt schließt es nicht.
+  if(ereignis.target.closest('.blatt') && !ziel.closest('.blatt')) return;
+
+  if(ziel.dataset.blattzu){ zustand.blatt = null; zeichnen(); return; }
+
+  if(ziel.dataset.blatttat){
+    const [was, a, b] = ziel.dataset.blatttat.split('|');
+    if(was === 'zusammenfuehren'){ zustand.entfernt.push(b); }
+    if(was === 'drehen'){ zustand.gedreht.push(a); }
+    zustand.blatt = null; zustand.scrollHalten = true; zeichnen(); return;
+  }
+
+  if(ziel.dataset.gehe){ zustand.bildschirm = ziel.dataset.gehe; zeichnen(); return; }
+
+  if(ziel.dataset.tag){
+    const id = ziel.dataset.tag;
+    zustand.tags.has(id) ? zustand.tags.delete(id) : zustand.tags.add(id);
+    zustand.scrollHalten = true; zeichnen(); return;
+  }
+
+  if(ziel.dataset.fassung){ zustand.fassung = ziel.dataset.fassung; zeichnen(); return; }
+
+  if(ziel.dataset.schalter === 'werte'){ zustand.werteZeigen = !zustand.werteZeigen; zustand.scrollHalten = true; zeichnen(); return; }
+
+  if(ziel.dataset.gilt){
+    const [a,b] = ziel.dataset.gilt.split('|');
+    zustand.gelegt.push({ a, b, art:'verwandt', quelle:'bestaetigt' });
+    zustand.scrollHalten = true; zeichnen(); return;
+  }
+
+  if(ziel.dataset.giltnicht){
+    zustand.verworfen.push(ziel.dataset.giltnicht);
+    zustand.scrollHalten = true; zeichnen(); return;
+  }
+
+  if(ziel.dataset.zuruecksetzen){
+    zustand.gelegt = []; zustand.verworfen = []; zustand.gedreht = []; zustand.entfernt = [];
+    zustand.scrollHalten = true; zeichnen(); return;
+  }
+
+  if(ziel.dataset.zustand !== undefined){
+    const z = ZUSTAENDE[Number(ziel.dataset.zustand)];
+    zustand.tags = new Set(z.tags);
+    zustand.fassung = z.fassung;
+    zustand.bildschirm = z.ziel || 'ergebnis';
+    zeichnen(); return;
+  }
+
+  if(ziel.dataset.handgriff){
+    zustand.blatt = handgriffBlatt(ziel.dataset.handgriff, ziel.dataset.a, ziel.dataset.b, ziel.dataset.kette);
+    zeichnen(); return;
+  }
+});
+
+function handgriffBlatt(art, a, b, kette){
+  if(art === 'vorhandene_karte_verknuepfen') return {
+    titel:'Verknüpfen',
+    satz:'Der Verknüpfungsbildschirm öffnet mit beiden Karten. Angelegt wird die Verknüpfung erst dort — das Werkzeug legt nie selbst eine an.',
+    felder:[['Von', titelVon(a)], ['Nach', titelVon(b)], ['Art', 'verwandt (vorgeschlagen, änderbar)']],
+  };
+  if(art === 'neue_karte_schreiben') return {
+    titel:'Karte schreiben',
+    satz:'Der Karteneditor öffnet mit beiden Nachbarn als Zusammenhang. Was in der Karte steht, entscheidest du — das Werkzeug schreibt nichts.',
+    felder:[['Nachbar links', titelVon(a)], ['Nachbar rechts', titelVon(b)], ['Vorbelegt', 'zwei Verknüpfungen, je eine zu beiden Nachbarn']],
+  };
+  if(art === 'beliebig_gewaehlt') return {
+    titel:'Prüfen',
+    satz:'Zu dieser Karte ist kein Rechenwert hinterlegt. Der Schritt ist <b>beliebig gewählt</b> — er behauptet nichts. ' +
+      'Er wird nie ohne deine ausdrückliche Handlung zu einer Verknüpfung.',
+    felder:[['Karte ohne Wert', titelVon(b)], ['Rechenwert', '—'], ['Geht ein in', 'keine Reihenfolge, keine Stufe']],
+  };
+  if(art === 'moegliche_dublette') return {
+    titel:'Zusammenführen',
+    satz:'Beide Karten sagen dasselbe. Das ist ein Datenfehler, kein Vorschlag. Zusammenführen entfernt die zweite aus dieser Auswahl.',
+    felder:[['Bleibt', titelVon(a)], ['Geht auf in', titelVon(b)]],
+    tat:{ wort:'Zweite zusammenführen', kennung:'zusammenfuehren|'+a+'|'+b },
+  };
+  if(art === 'widerspruch'){
+    const ids = (kette||'').split(',').filter(Boolean);
+    return {
+      titel:'Richtung drehen',
+      satz:'Diese Karten setzen sich im Kreis gegenseitig voraus. Nichts wird still verhindert — du siehst den Widerspruch und entscheidest.',
+      felder:[['Der Kreis', ids.map(titelVon).join(' → ')], ['Drehen', titelVon(ids[0])+' → '+titelVon(ids[1])]],
+      tat:{ wort:'Erste Richtung drehen', kennung:'drehen|'+ids[0]+'>'+ids[1]+':voraussetzung|' },
+    };
+  }
+  if(art === 'auswahl_ohne_wirkung') return {
+    titel:'Andere Schlagwörter wählen',
+    satz:'Ein Schlagwort dieser Auswahl liegt vollständig in einem anderen. Die Vereinigung ergibt wieder dieselbe Menge.',
+    felder:[['Neue Karten', '0'], ['Neu sichtbare Verknüpfungen', '0']],
+  };
+  return { titel:'—', satz:'—' };
+}
+
+zeichnen();
+</script>
+</body>
+</html>

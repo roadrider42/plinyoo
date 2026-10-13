@@ -18,7 +18,7 @@ export default function Outcomes() {
           whileInView="show"
           viewport={{ once: true, amount: 0.25 }}
           variants={staggerList(0.1)}
-          className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6"
+          className={`grid gap-3 sm:gap-6 ${items.length === 3 ? "grid-cols-3" : "grid-cols-2 md:grid-cols-4"}`}
         >
           {items.map((i: any) => (
             <motion.li

@@ -4,36 +4,70 @@
     "cta_secondary": "Invertir"
   },
   "hero": {
-    "eyebrow": "",
-    "title": "Creciendo juntos: digital, humano, único.",
-    "subtitle": "Acompañamos procesos de aprendizaje y consultoría con compañeros digitales inteligentes y de confianza que se adaptan a tus objetivos, y no al revés.",
+    "eyebrow": "Plataforma de aprendizaje: coach y compañero en uno",
+    "title": "Tu camino de aprendizaje es único.",
+    "subtitle": "Sabes dónde estás hoy y adónde quieres llegar. El camino entre ambos puntos lo encuentras en tarjetas que se remiten entre sí, no en un plan de curso.",
     "cta_primary": "Únete ahora",
     "cta_secondary": "Para inversores",
-    "cta": "Solicitar acceso"
+    "cta": "Solicitar acceso",
+    "cardsLabel": "Ejemplo",
+    "cardsAria": "Ejemplo: así aprendes una tarjeta",
+    "cards": [
+      {
+        "step": "Tarjeta",
+        "title": "Temperatura superficial vs. temperatura del aire",
+        "text": "Los datos satelitales muestran temperaturas superficiales, a menudo más altas que las del aire. La temperatura del aire a 2 m de altura determina más el estrés térmico humano.",
+        "chip": "→ Análisis satelital del DLR"
+      },
+      {
+        "step": "Pregunta",
+        "title": "¿Qué muestran principalmente los datos satelitales?",
+        "options": [
+          "La temperatura del aire a 2 metros de altura, medida en estaciones terrestres",
+          "Las temperaturas superficiales de calles, tejados y vegetación"
+        ]
+      },
+      {
+        "step": "Reencuentro",
+        "title": "La tarjeta vuelve.",
+        "text": "Lo que se sabe vuelve más tarde. Lo que flaquea vuelve antes."
+      },
+      {
+        "step": "Estrella",
+        "title": "Dominado: una estrella.",
+        "text": "Cuando todas las preguntas de una tarjeta se respondieron bien la última vez, brilla como estrella en tu universo."
+      }
+    ]
   },
   "visionMission": {
     "vision": {
       "title": "Visión",
-      "text": "Imaginamos un mundo donde las personas no solo aprenden, sino que se sienten acompañadas – por tecnologías que escuchan, entienden y fortalecen."
+      "text": "Cada persona encuentra su propio camino hacia lo que quiere saber hacer."
     },
     "mission": {
       "title": "Misión",
-      "text": "Una plataforma para el aprendizaje personalizado: unimos reflexión, formación, construcción de conocimiento y acompañamiento personal – lista para usar, adaptativa y segura."
+      "text": "Hacemos el conocimiento tan accesible que el camino de aquí a allí cuesta el menor tiempo posible, y entrenadores y equipo están del mismo lado."
     }
   },
   "roles": {
-    "title": "Tres caminos de entrada",
+    "title": "Dos intereses, un lugar",
+    "intro": "Los entrenadores quieren un equipo bien formado. Quien está en el equipo quiere aprender lo que le hace avanzar. Ambos se encuentran aquí.",
+    "waysTitle": "Cuatro caminos de entrada",
+    "follower": {
+      "title": "Jugar en equipo",
+      "description": "Tu entrenador te invita. Sigues los contenidos que ha preparado para ti y ves tu progreso."
+    },
     "learner": {
-      "title": "Quienes aprenden",
-      "description": "Seguir temas públicos, ver tu propio progreso."
+      "title": "Descubrir",
+      "description": "Explora temas públicos, aprende a tu ritmo y ve tu progreso."
     },
     "author": {
-      "title": "Quienes comparten conocimiento",
-      "description": "Escribir y enlazar tarjetas, generar preguntas, obtener contenidos de Wikipedia o de una página compartida."
+      "title": "Crear lo tuyo",
+      "description": "Escribe y enlaza tus propias tarjetas, genera preguntas, trae contenido de Wikipedia y aprende con ellas."
     },
     "curator": {
-      "title": "Quienes mantienen un tema",
-      "description": "Incorporar personas mediante enlaces de invitación, asignar tarjetas, establecer contenidos obligatorios con fecha límite."
+      "title": "Guiar",
+      "description": "Curas un tema: como proveedor de contenidos que comparte conocimiento o como entrenador que invita y guía a su propio equipo con un enlace."
     }
   },
   "howItWorks": {
@@ -60,57 +94,53 @@
         "desc": "A tu manera, con tu estilo, en tu tono."
       },
       {
-        "title": "Calidad de aprendizaje medible",
-        "desc": "Conecta objetivos, progreso y resultados."
+        "title": "Tu progreso brilla",
+        "desc": "Cada tarjeta que dominas se convierte en una estrella en tu universo."
       },
       {
         "title": "Una herramienta para todo el aprendizaje",
         "desc": "Incorporación, formación, desarrollo y coaching."
       },
       {
-        "title": "Rápido de implementar",
-        "desc": "Móvil, seguro y listo para usar, para individuos y organizaciones por igual."
+        "title": "Dos idiomas, un camino",
+        "desc": "Tu idioma materno y el que estás aprendiendo: un toque cambia de vuelta."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Tiempo de incorporación"
+        "kpi": "7",
+        "label": "idiomas"
       },
       {
-        "kpi": "+25%",
-        "label": "Productividad en la primera semana"
+        "kpi": "11",
+        "label": "tarjetas enlazadas en el tema Calor urbano"
       },
       {
-        "kpi": "-30%",
-        "label": "Tasa de error en los procesos"
-      },
-      {
-        "kpi": "+",
-        "label": "Claridad y satisfacción en los comentarios"
+        "kpi": "1 ★",
+        "label": "por cada tarjeta dominada"
       }
     ]
   },
   "features": {
-    "title": "Tus beneficios con el Acompañamiento Digital",
-    "subtitle": "El Acompañamiento Digital combina aprendizaje personalizado, orientación adaptativa y desarrollo medible en una solución integrada para personas y organizaciones.",
+    "title": "Una tarjeta, una pregunta, un reencuentro",
+    "subtitle": "El camino se hace al andar. Bajo cada tarjeta hay continuaciones en lugar de una lista de capítulos. Cuáles son depende de cómo se enlazan las tarjetas entre sí y de adónde has ido hasta ahora.",
     "items": [
       {
-        "title": "Contenido de aprendizaje interactivo",
-        "desc": "Diálogos, estímulos para la reflexión y orientación paso a paso, con apoyo digital y personalmente relevante.",
-        "category": ""
+        "title": "Tarjeta",
+        "desc": "Una idea, toda la pantalla. Ningún capítulo por el que desplazarse.",
+        "category": "1"
       },
       {
-        "title": "Seguimiento del progreso",
-        "desc": "Supervisa el desarrollo y el impacto: transparente, motivador y conforme con el RGPD.",
-        "category": ""
+        "title": "Pregunta",
+        "desc": "Cada tarjeta tiene sus preguntas.",
+        "category": "2"
       },
       {
-        "title": "100% móvil y adaptable",
-        "desc": "Aprende e interactúa, en cualquier lugar, en cualquier momento, en línea o sin conexión.",
-        "category": ""
+        "title": "Reencuentro",
+        "desc": "Lo que se sabe vuelve más tarde. Lo que flaquea vuelve antes.",
+        "category": "3"
       }
     ]
   },
@@ -127,26 +157,26 @@
     "intro": "",
     "items": [
       {
-        "q": "¿Es adecuado para individuos y organizaciones?",
-        "a": "Sí, los roles y el contenido son totalmente personalizables."
+        "q": "¿Para quién es plinyoo?",
+        "a": "Para todas las personas que aprenden o comparten conocimiento: solas, con un entrenador o con todo un equipo."
       },
       {
-        "q": "¿Cómo podemos preservar nuestra filosofía de aprendizaje?",
-        "a": "A través del diseño modular, rutas de aprendizaje flexibles y estructuras de contenido personalizables."
+        "q": "¿Cómo aprendo con plinyoo?",
+        "a": "Lees una tarjeta, respondes preguntas sobre ella y sigues los enlaces a la siguiente. Lo que se sabe vuelve más tarde; lo que flaquea, antes."
       },
       {
-        "q": "¿Podemos medir el progreso y el impacto?",
-        "a": "Sí, conforme con el RGPD, a nivel individual o agregado."
+        "q": "¿Puedo aportar mis propios contenidos?",
+        "a": "Sí. Escribes y enlazas tus propias tarjetas, haces generar preguntas y traes contenido de Wikipedia o de una página compartida."
       },
       {
-        "q": "¿Requiere una larga incorporación?",
-        "a": "No, es de uso intuitivo y está listo para lanzarse al instante."
+        "q": "¿En qué idiomas puedo aprender?",
+        "a": "La interfaz está disponible en siete idiomas. Tú eliges dos: tu idioma materno y el que estás aprendiendo ahora."
       }
     ]
   },
   "cta": {
-    "title": "Porque cada viaje de aprendizaje es único.",
-    "subtitle": "Nuestras soluciones de acompañamiento se adaptan a ti, y no al revés. Para un crecimiento sostenible que perdura y crea impacto.",
+    "title": "Empieza con una tarjeta.",
+    "subtitle": "No necesitas un plan de curso. Necesitas una primera tarjeta y el enlace que te lleva a la siguiente.",
     "button": "Solicitar acceso"
   },
   "storySketch": {
@@ -231,6 +261,22 @@
         "20k_to_100k": "20k–100k",
         "100k_plus": "100k+"
       }
+    },
+    "access": {
+      "title": "Tu acceso a plinyoo",
+      "subtitle": "Cuéntanos brevemente quién eres y qué quieres aprender o compartir.",
+      "subtitle_details": "Te responderemos.",
+      "role_label": "Vengo como",
+      "role_placeholder": "Por favor, elige",
+      "role_options": {
+        "learner": "Quien aprende",
+        "trainer": "Entrenador/a con equipo propio",
+        "provider": "Proveedor/a de contenidos",
+        "other": "Otra cosa"
+      },
+      "message_label": "¿Qué quieres lograr con plinyoo?",
+      "message_placeholder": "Por ejemplo: quiero entender por qué mi ciudad se calienta tanto en verano.",
+      "button": "Solicitar acceso"
     }
   },
   "examples": {
@@ -243,18 +289,6 @@
     },
     "placeholder": {
       "title": "Más ejemplos próximamente"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Tu Nutricionista virtual",
-      "desc": "Asesoramiento nutricional individual, siempre disponible.",
-      "button": "Próximamente"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Tu Barman virtual",
-      "desc": "Mezcla bebidas perfectas, profundiza tus conocimientos.",
-      "button": "Próximamente"
     },
     "your-use-case": {
       "title": "Tu caso de uso",
@@ -360,5 +394,22 @@
     "subtitle": "Cuando las personas entienden lo que hacen, la experiencia se convierte en verdadera competencia.",
     "description": "Plinyoo conecta conocimiento, aprendizaje y aplicación en un proceso continuo – para que las personas no solo sepan más, sino que puedan un poco más cada día.",
     "cta": "Descubrir Plinyoo"
+  },
+  "journey": {
+    "title": "Prueba un camino",
+    "subtitle": "Siete tarjetas sobre el calor urbano, cada una con pregunta y fuente. Un camino que se dibuja con cada respuesta correcta, no un curso.",
+    "label": "Ejemplo con tarjetas reales",
+    "step": "Tarjeta {{current}} de {{total}}",
+    "evidence": "Fuente:",
+    "next": "Siguiente →",
+    "restart": "Empezar de nuevo",
+    "aria": "Camino de ejemplo: siete tarjetas sobre el calor urbano",
+    "doneTitle": "Siete tarjetas, un camino conectado",
+    "doneText": "No has leído siete datos sueltos: has respondido siete preguntas y has visto cómo se remiten las tarjetas entre sí. Ha sido un camino pequeño. En plinyoo recorres el tuyo.",
+    "note": "Las tarjetas están en alemán."
+  },
+  "views": {
+    "title": "Una mirada al interior",
+    "subtitle": "Tres vistas del desarrollo de plinyoo. Los textos de las vistas están en alemán."
   }
 }

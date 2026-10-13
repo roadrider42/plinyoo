@@ -12,6 +12,7 @@ import ImpressumPage from '@/pages/Impressum/ImpressumPage';
 import DatenschutzPage from '@/pages/Datenschutz/DatenschutzPage';
 import UrheberrechtPage from '@/pages/Urheberrecht/UrheberrechtPage';
 import KontaktPage from '@/pages/Contact/ContactPage';
+import ZugangPage from '@/pages/Zugang/ZugangPage';
 
 // Layout: Startseite ohne Header (Hero hat eigenen), andere Seiten mit Header
 const RootLayout = () => {
@@ -31,6 +32,7 @@ export const router = createHashRouter([
     element: <RootLayout />,
     children: [
       { path: "/", element: <HomePage /> },
+      { path: "/zugang", element: <ZugangPage /> },
       { path: "/mitmachen", element: <MitmachenPage /> },
       { path: "/investieren", element: <InvestierenPage /> },
       { path: "/impressum", element: <ImpressumPage /> },

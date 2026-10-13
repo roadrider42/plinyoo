@@ -4,36 +4,70 @@
     "cta_secondary": "Investir"
   },
   "hero": {
-    "eyebrow": "",
-    "title": "Grandir ensemble - numérique, humain, unique.",
-    "subtitle": "Nous accompagnons les processus d'apprentissage et de conseil avec des compagnons numériques intelligents et fiables qui s'adaptent à vos objectifs - et non l'inverse.",
+    "eyebrow": "Plateforme d’apprentissage — coach et compagnon en un",
+    "title": "Ton parcours d’apprentissage est unique.",
+    "subtitle": "Tu sais où tu en es aujourd’hui et où tu veux aller. Le chemin entre les deux, tu le trouves sur des fiches qui renvoient les unes aux autres — pas dans un plan de cours.",
     "cta_primary": "Rejoignez-nous maintenant",
     "cta_secondary": "Pour les investisseurs",
-    "cta": "Demander l’accès"
+    "cta": "Demander l’accès",
+    "cardsLabel": "Exemple",
+    "cardsAria": "Exemple : comment tu apprends une fiche",
+    "cards": [
+      {
+        "step": "Fiche",
+        "title": "Température de surface vs. température de l’air",
+        "text": "Les données satellitaires montrent des températures de surface, souvent plus élevées que celles de l’air. La température de l’air à 2 m de hauteur détermine davantage le stress thermique humain.",
+        "chip": "→ Analyse satellitaire du DLR"
+      },
+      {
+        "step": "Question",
+        "title": "Que montrent principalement les données satellitaires ?",
+        "options": [
+          "La température de l’air à 2 mètres de hauteur, mesurée par des stations au sol",
+          "Les températures de surface des rues, des toits et de la végétation"
+        ]
+      },
+      {
+        "step": "Retrouvailles",
+        "title": "La fiche revient.",
+        "text": "Ce qui est acquis revient plus tard. Ce qui vacille revient plus tôt."
+      },
+      {
+        "step": "Étoile",
+        "title": "Acquis — une étoile.",
+        "text": "Quand toutes les questions d’une fiche ont été répondues juste la dernière fois, elle brille comme une étoile dans ton univers."
+      }
+    ]
   },
   "visionMission": {
     "vision": {
       "title": "Vision",
-      "text": "Nous imaginons un monde où les personnes n’apprennent pas seulement, mais se sentent accompagnées – par des technologies qui écoutent, comprennent et renforcent."
+      "text": "Chacun trouve son propre chemin vers ce qu’il veut savoir faire."
     },
     "mission": {
       "title": "Mission",
-      "text": "Une plateforme pour l’apprentissage personnalisé : nous unissons réflexion, formation, construction de savoir et accompagnement personnel – prête à l’emploi, adaptative et sécurisée."
+      "text": "Nous rendons le savoir si accessible que le chemin d’ici à là prend le moins de temps possible — et entraîneurs et équipe sont du même côté."
     }
   },
   "roles": {
-    "title": "Trois voies d’accès",
+    "title": "Deux intérêts, un lieu",
+    "intro": "Les entraîneurs veulent une équipe bien formée. Ceux qui sont dans l’équipe veulent apprendre ce qui les fait avancer. Les deux se rencontrent ici.",
+    "waysTitle": "Quatre voies d’accès",
+    "follower": {
+      "title": "Rejoindre l’équipe",
+      "description": "Ton entraîneur t’invite. Tu suis les contenus qu’il a préparés pour toi et tu vois ta progression."
+    },
     "learner": {
-      "title": "Ceux qui apprennent",
-      "description": "Suivre des sujets publics, voir sa propre progression."
+      "title": "Découvrir",
+      "description": "Parcours des sujets publics, apprends à ton rythme et vois ta progression."
     },
     "author": {
-      "title": "Ceux qui partagent le savoir",
-      "description": "Écrire et lier des fiches, générer des questions, importer du contenu de Wikipédia ou d’une page partagée."
+      "title": "Créer les tiennes",
+      "description": "Écris et relie tes propres fiches, fais générer des questions, importe du contenu de Wikipédia — et apprends avec."
     },
     "curator": {
-      "title": "Ceux qui gèrent un sujet",
-      "description": "Inviter des personnes par lien, attribuer des fiches, définir du contenu obligatoire avec échéance."
+      "title": "Guider",
+      "description": "Tu organises un sujet : comme fournisseur de contenus qui partage son savoir, ou comme entraîneur qui invite son équipe par un lien et la guide."
     }
   },
   "howItWorks": {
@@ -60,57 +94,53 @@
         "desc": "Votre chemin, votre style, votre ton."
       },
       {
-        "title": "Qualité d'apprentissage mesurable",
-        "desc": "Relier les objectifs, les progrès et les résultats."
+        "title": "Ta progression brille",
+        "desc": "Chaque fiche acquise devient une étoile dans ton univers."
       },
       {
         "title": "Un outil pour tout l'apprentissage",
         "desc": "Intégration, formation, développement et coaching."
       },
       {
-        "title": "Rapide à mettre en œuvre",
-        "desc": "Mobile, sécurisé et prêt à l'emploi - pour les individus comme pour les organisations."
+        "title": "Deux langues, un chemin",
+        "desc": "Ta langue maternelle et celle que tu apprends — une touche permet de revenir."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Temps d'intégration"
+        "kpi": "7",
+        "label": "langues"
       },
       {
-        "kpi": "+25%",
-        "label": "Productivité la première semaine"
+        "kpi": "11",
+        "label": "fiches reliées dans le sujet Chaleur urbaine"
       },
       {
-        "kpi": "-30%",
-        "label": "Taux d'erreur dans les processus"
-      },
-      {
-        "kpi": "+",
-        "label": "Clarté et satisfaction dans les commentaires"
+        "kpi": "1 ★",
+        "label": "pour chaque fiche acquise"
       }
     ]
   },
   "features": {
-    "title": "Vos avantages avec la compagnie numérique",
-    "subtitle": "La compagnie numérique combine un apprentissage personnalisé, un accompagnement adaptatif et un développement mesurable - en une seule solution intégrée pour les personnes et les organisations.",
+    "title": "Une fiche, une question, des retrouvailles",
+    "subtitle": "Le chemin se fait en marchant. Sous chaque fiche, il y a des suites au lieu d’une liste de chapitres. Lesquelles dépend de la façon dont les fiches sont reliées entre elles — et d’où tu es déjà allé.",
     "items": [
       {
-        "title": "Contenu d'apprentissage interactif",
-        "desc": "Dialogues, invites à la réflexion et conseils pas à pas - soutenus numériquement et pertinents personnellement.",
-        "category": ""
+        "title": "Fiche",
+        "desc": "Une idée, tout l’écran. Pas de chapitre à faire défiler.",
+        "category": "1"
       },
       {
-        "title": "Suivi des progrès",
-        "desc": "Suivez le développement et l'impact - transparent, motivant et conforme au RGPD.",
-        "category": ""
+        "title": "Question",
+        "desc": "Chaque fiche a ses questions.",
+        "category": "2"
       },
       {
-        "title": "100% mobile & adaptable",
-        "desc": "Apprenez et engagez-vous - n'importe où, n'importe quand, en ligne ou hors ligne.",
-        "category": ""
+        "title": "Retrouvailles",
+        "desc": "Ce qui est acquis revient plus tard. Ce qui vacille revient plus tôt.",
+        "category": "3"
       }
     ]
   },
@@ -127,26 +157,26 @@
     "intro": "",
     "items": [
       {
-        "q": "Est-ce adapté aux individus et aux organisations ?",
-        "a": "Oui - les rôles et le contenu sont entièrement personnalisables."
+        "q": "Pour qui est plinyoo ?",
+        "a": "Pour toutes les personnes qui apprennent ou partagent leur savoir — seules, avec un entraîneur ou avec toute une équipe."
       },
       {
-        "q": "Comment pouvons-nous préserver notre philosophie d'apprentissage ?",
-        "a": "Grâce à une conception modulaire, des parcours d'apprentissage flexibles et des structures de contenu personnalisables."
+        "q": "Comment j’apprends avec plinyoo ?",
+        "a": "Tu lis une fiche, tu réponds aux questions et tu suis les renvois vers la suivante. Ce qui est acquis revient plus tard, ce qui vacille revient plus tôt."
       },
       {
-        "q": "Pouvons-nous mesurer les progrès et l'impact ?",
-        "a": "Oui, conforme au RGPD - au niveau individuel ou agrégé."
+        "q": "Puis-je apporter mes propres contenus ?",
+        "a": "Oui. Tu écris et relies tes propres fiches, tu fais générer des questions et tu importes du contenu de Wikipédia ou d’une page partagée."
       },
       {
-        "q": "Cela nécessite-t-il une longue intégration ?",
-        "a": "Non - utilisation intuitive et prêt à être lancé instantanément."
+        "q": "Dans quelles langues puis-je apprendre ?",
+        "a": "L’interface existe en sept langues. Tu en définis deux : ta langue maternelle et celle que tu apprends en ce moment."
       }
     ]
   },
   "cta": {
-    "title": "Parce que chaque parcours d'apprentissage est unique.",
-    "subtitle": "Nos solutions de compagnie s'adaptent à vous - et non l'inverse. Pour une croissance durable qui dure et crée un impact.",
+    "title": "Commence par une fiche.",
+    "subtitle": "Tu n’as pas besoin d’un plan de cours. Tu as besoin d’une première fiche et du renvoi qui te mène à la suivante.",
     "button": "Demander l’accès"
   },
   "storySketch": {
@@ -231,6 +261,22 @@
         "20k_to_100k": "20k–100k",
         "100k_plus": "100k+"
       }
+    },
+    "access": {
+      "title": "Ton accès à plinyoo",
+      "subtitle": "Dis-nous en quelques mots qui tu es et ce que tu veux apprendre ou partager.",
+      "subtitle_details": "Nous te répondrons.",
+      "role_label": "Je viens en tant que",
+      "role_placeholder": "Merci de choisir",
+      "role_options": {
+        "learner": "Apprenant·e",
+        "trainer": "Entraîneur·se avec sa propre équipe",
+        "provider": "Fournisseur·se de contenus",
+        "other": "Autre chose"
+      },
+      "message_label": "Que veux-tu accomplir avec plinyoo ?",
+      "message_placeholder": "Par exemple : je veux comprendre pourquoi ma ville devient si chaude l’été.",
+      "button": "Demander l’accès"
     }
   },
   "examples": {
@@ -243,18 +289,6 @@
     },
     "placeholder": {
       "title": "Plus d'exemples à venir"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Votre nutritionniste virtuelle",
-      "desc": "Conseils nutritionnels personnalisés, toujours disponibles.",
-      "button": "Bientôt disponible"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Votre barman virtuel",
-      "desc": "Mixez des boissons parfaites, approfondissez vos connaissances.",
-      "button": "Bientôt disponible"
     },
     "your-use-case": {
       "title": "Votre cas d'usage",
@@ -360,5 +394,22 @@
     "subtitle": "Quand les personnes comprennent ce qu’elles font, l’expérience devient une véritable compétence.",
     "description": "Plinyoo relie savoir, apprentissage et application en un processus continu – pour que les personnes ne sachent pas simplement plus, mais progressent un peu chaque jour.",
     "cta": "Découvrir Plinyoo"
+  },
+  "journey": {
+    "title": "Essaie un parcours",
+    "subtitle": "Sept fiches sur la chaleur urbaine, chacune avec une question et sa source. Un chemin qui se dessine à chaque bonne réponse — pas un cours.",
+    "label": "Exemple avec de vraies fiches",
+    "step": "Fiche {{current}} sur {{total}}",
+    "evidence": "Source :",
+    "next": "Suivant →",
+    "restart": "Recommencer",
+    "aria": "Parcours d’exemple : sept fiches sur la chaleur urbaine",
+    "doneTitle": "Sept fiches, un chemin cohérent",
+    "doneText": "Tu n’as pas lu sept faits isolés : tu as répondu à sept questions et vu comment les fiches se renvoient les unes aux autres. C’était un petit chemin. Dans plinyoo, tu suis le tien.",
+    "note": "Les fiches sont en allemand."
+  },
+  "views": {
+    "title": "Un regard à l’intérieur",
+    "subtitle": "Trois vues issues du développement de plinyoo. Les textes des vues sont en allemand."
   }
 }

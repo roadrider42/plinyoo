@@ -4,12 +4,40 @@
     "cta_secondary": "Invest"
   },
   "hero": {
-    "eyebrow": "Learning platform with knowledge graph",
-    "title": "The knowledge space is undiscovered. Your path is unique.",
-    "subtitle": "Discover topics that interest you. Choose your own learning path. Grow at your own pace.",
+    "eyebrow": "Learning platform — coach and companion in one",
+    "title": "Your learning path is unique.",
+    "subtitle": "You know where you stand today and where you want to go. You find the way in between on cards that point to one another — not in a course plan.",
     "cta": "Request access",
     "cta_primary": "Join now",
-    "cta_secondary": "For Investors"
+    "cta_secondary": "For Investors",
+    "cardsLabel": "Example",
+    "cardsAria": "Example: how you learn a card",
+    "cards": [
+      {
+        "step": "Card",
+        "title": "Surface temperature vs. air temperature",
+        "text": "Satellite data show surface temperatures — often higher than air temperatures. The air temperature at 2 m height determines human heat stress more strongly.",
+        "chip": "→ DLR satellite analysis"
+      },
+      {
+        "step": "Question",
+        "title": "What do satellite data primarily show?",
+        "options": [
+          "Air temperature at 2 metres height, measured at ground stations",
+          "Surface temperatures of streets, roofs and vegetation"
+        ]
+      },
+      {
+        "step": "Second look",
+        "title": "The card comes back.",
+        "text": "What sticks comes back later. What wobbles comes back sooner."
+      },
+      {
+        "step": "Star",
+        "title": "Learned — one star.",
+        "text": "When all questions on a card were last answered correctly, it shines as a star in your universe."
+      }
+    ]
   },
   "hero1": {
     "eyebrow": "Knowledge that lasts.",
@@ -35,26 +63,32 @@
   "visionMission": {
     "vision": {
       "title": "Vision",
-      "text": "We envision a world where people don’t just learn but feel truly accompanied – by technologies that listen, understand, and empower."
+      "text": "Everyone finds their own way to what they want to be able to do."
     },
     "mission": {
       "title": "Mission",
-      "text": "A platform for personalized learning: we unite reflection, training, knowledge building, and personal guidance – ready to use, adaptive, and secure."
+      "text": "We make knowledge so accessible that the way from here to there takes as little time as possible — and trainers and team are on the same side."
     }
   },
   "roles": {
-    "title": "Three ways in",
+    "title": "Two interests, one place",
+    "intro": "Trainers want a well-trained team. Those on the team want to learn what moves them forward. Both meet here.",
+    "waysTitle": "Four ways in",
+    "follower": {
+      "title": "Play along",
+      "description": "Your trainer invites you. You follow the content they have ready for you — and see your progress."
+    },
     "learner": {
-      "title": "Those who learn",
-      "description": "Follow public topics, see your own progress."
+      "title": "Discover",
+      "description": "Browse public topics, learn at your own pace and see your progress."
     },
     "author": {
-      "title": "Those who share knowledge",
-      "description": "Write and link cards, generate questions from them, pull content from Wikipedia or a shared page."
+      "title": "Create your own",
+      "description": "Write and link your own cards, have questions generated, pull in content from Wikipedia — and learn with them."
     },
     "curator": {
-      "title": "Those who maintain a topic",
-      "description": "Bring people in via invite links, assign cards, set mandatory content with due dates."
+      "title": "Lead",
+      "description": "You curate a topic — as a content provider who shares knowledge, or as a trainer who invites and guides your own team via a link."
     }
   },
   "howItWorks": {
@@ -81,57 +115,53 @@
         "desc": "Your way, your style, your tone."
       },
       {
-        "title": "Measurable learning quality",
-        "desc": "Connect goals, progress, and outcomes."
+        "title": "Your progress shines",
+        "desc": "Every card you’ve learned becomes a star in your universe."
       },
       {
         "title": "One tool for all learning",
         "desc": "Onboarding, training, development, and coaching."
       },
       {
-        "title": "Fast to implement",
-        "desc": "Mobile, secure, and ready to use – for individuals and organizations alike."
+        "title": "Two languages, one path",
+        "desc": "Your native language and the one you’re learning — one tap switches back."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Onboarding time"
+        "kpi": "7",
+        "label": "languages"
       },
       {
-        "kpi": "+25%",
-        "label": "Productivity in week one"
+        "kpi": "11",
+        "label": "linked cards in the topic Urban Heat"
       },
       {
-        "kpi": "-30%",
-        "label": "Error rate in processes"
-      },
-      {
-        "kpi": "+⭐",
-        "label": "Clarity and satisfaction in feedback"
+        "kpi": "1 ★",
+        "label": "for every card you’ve learned"
       }
     ]
   },
   "features": {
-    "title": "Your benefits with Digital Companionship",
-    "subtitle": "Digital Companionship combines personalized learning, adaptive guidance, and measurable development – in one integrated solution for people and organizations.",
+    "title": "One card, one question, a second look",
+    "subtitle": "The way emerges as you walk. Under every card are follow-ups instead of a chapter list. Which ones depends on how the cards link to each other — and on where you have gone so far.",
     "items": [
       {
-        "title": "Interactive learning content",
-        "desc": "Dialogues, reflection prompts, and step-by-step guidance – digitally supported and personally relevant.",
-        "category": "Interaction"
+        "title": "Card",
+        "desc": "A single thought, the whole screen. No chapter you scroll through.",
+        "category": "1"
       },
       {
-        "title": "Progress tracking",
-        "desc": "Monitor development and impact – transparent, motivating, and GDPR-compliant.",
-        "category": "Measurability"
+        "title": "Question",
+        "desc": "Every card comes with questions.",
+        "category": "2"
       },
       {
-        "title": "100% mobile & adaptable",
-        "desc": "Learn and engage – anywhere, anytime, online or offline.",
-        "category": "Flexibility"
+        "title": "Second look",
+        "desc": "What sticks comes back later. What wobbles comes back sooner.",
+        "category": "3"
       }
     ]
   },
@@ -148,26 +178,26 @@
     "intro": "Answers to typical questions – short and understandable.",
     "items": [
       {
-        "q": "Is it suitable for individuals and organizations?",
-        "a": "Yes – roles and content are fully customizable."
+        "q": "Who is plinyoo for?",
+        "a": "For everyone who learns or shares knowledge — alone, with a trainer, or with a whole team."
       },
       {
-        "q": "How can we preserve our learning philosophy?",
-        "a": "Through modular design, flexible learning paths, and customizable content structures."
+        "q": "How do I learn with plinyoo?",
+        "a": "You read a card, answer questions on it and follow the links to the next one. What sticks comes back later, what wobbles comes back sooner."
       },
       {
-        "q": "Can we measure progress and impact?",
-        "a": "Yes, GDPR-compliant – at individual or aggregated levels."
+        "q": "Can I bring my own content?",
+        "a": "Yes. You write and link your own cards, have questions generated for them and pull in content from Wikipedia or a shared page."
       },
       {
-        "q": "Does it require long onboarding?",
-        "a": "No – intuitive use and ready to launch instantly."
+        "q": "In which languages can I learn?",
+        "a": "The interface comes in seven languages. You set two: your native language and the one you are learning right now."
       }
     ]
   },
   "cta": {
-    "title": "Because every learning journey is unique.",
-    "subtitle": "Our companionship solutions adapt to you – not the other way around. For sustainable growth that lasts and creates impact.",
+    "title": "Start with one card.",
+    "subtitle": "You don't need a course plan. You need a first card and the link that takes you to the next.",
     "button": "Request access"
   },
   "storySketch": {
@@ -206,18 +236,6 @@
     },
     "placeholder": {
       "title": "More examples to come"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Your virtual Nutritionist",
-      "desc": "Individual nutrition advice, always available.",
-      "button": "Coming soon"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Your virtual Bartender",
-      "desc": "Mix perfect drinks, deepen your knowledge.",
-      "button": "Coming soon"
     },
     "your-use-case": {
       "title": "Your Use Case",
@@ -282,6 +300,22 @@
         "20k_to_100k": "20k–100k",
         "100k_plus": "100k+"
       }
+    },
+    "access": {
+      "title": "Your access to plinyoo",
+      "subtitle": "Tell us briefly who you are and what you want to learn or share.",
+      "subtitle_details": "We’ll get back to you.",
+      "role_label": "I’m coming as",
+      "role_placeholder": "Please choose",
+      "role_options": {
+        "learner": "Learner",
+        "trainer": "Trainer with my own team",
+        "provider": "Content provider",
+        "other": "Something else"
+      },
+      "message_label": "What do you want to achieve with plinyoo?",
+      "message_placeholder": "For example: I want to understand why my city gets so hot in summer.",
+      "button": "Request access"
     }
   },
   "footer": {
@@ -360,5 +394,22 @@
       "text": "Please direct inquiries regarding usage rights to hmiertzsch@web.de."
     },
     "back_to_home": "Back to Home"
+  },
+  "journey": {
+    "title": "Try a path",
+    "subtitle": "Seven cards on urban heat, each with a question and its source. A path that draws itself with every correct answer — not a course.",
+    "label": "Example with real cards",
+    "step": "Card {{current}} of {{total}}",
+    "evidence": "Source:",
+    "next": "Next →",
+    "restart": "Start over",
+    "aria": "Example path: seven cards on urban heat",
+    "doneTitle": "Seven cards, one connected path",
+    "doneText": "You didn’t read seven separate facts — you answered seven questions and saw how the cards point to one another. That was one small path. In plinyoo you walk your own.",
+    "note": "The cards are in German."
+  },
+  "views": {
+    "title": "A look inside",
+    "subtitle": "Three views from the development of plinyoo. The texts in the views are in German."
   }
 }

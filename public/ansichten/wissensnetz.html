@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>plinyoo — Das Wissensnetz</title>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page:           #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --grid:           #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6; /* Hitze-Cluster (Blau) */
+    --series-2:       #eb6834; /* hervorgehobener Lernpfad (Orange) */
+    --sat-fill:       #c3c2b7; /* Satelliten-Themen, neutral grau */
+    --sat-fill-dim:   #dedcd3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page:           #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --grid:           #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1:       #3987e5;
+      --series-2:       #d95926;
+      --sat-fill:       #52514e;
+      --sat-fill-dim:   #383835;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page:           #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --grid:           #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1:       #3987e5;
+    --series-2:       #d95926;
+    --sat-fill:       #52514e;
+    --sat-fill-dim:   #383835;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--page);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--text-primary);
+  }
+  .viz-root { max-width: 1040px; margin: 0 auto; padding: 28px 24px 48px; }
+
+  .head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: var(--text-secondary); font-size: 14px; margin: 0 0 18px; max-width: 640px; line-height: 1.5; }
+  .theme-toggle {
+    border: 1px solid var(--border); background: var(--surface-1); color: var(--text-secondary);
+    border-radius: 6px; padding: 6px 10px; font-size: 12px; cursor: pointer; white-space: nowrap;
+  }
+
+  .card {
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px; margin-top: 12px;
+  }
+
+  .toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .path-btn {
+    border: 1px solid var(--border); background: var(--surface-1); color: var(--text-primary);
+    border-radius: 999px; padding: 7px 14px; font-size: 12.5px; cursor: pointer;
+  }
+  .path-btn.active { background: var(--series-2); border-color: var(--series-2); color: #fff; }
+  .path-btn small { color: var(--text-muted); display: block; font-size: 10.5px; margin-top: 2px; }
+  .path-btn.active small { color: rgba(255,255,255,0.85); }
+  .path-btn[data-path="reset"] { color: var(--text-secondary); }
+
+  svg { width: 100%; height: 560px; display: block; background: var(--surface-1); border-radius: 8px; touch-action: none; }
+  .graph-wrap { position: relative; }
+  /* Rand-Verlauf: deutet an, dass das Netz über den sichtbaren Ausschnitt
+     hinausgeht, statt hart am Rand abzuschneiden — rein dekorativ. */
+  .graph-wrap::after {
+    content: ""; position: absolute; inset: 0; border-radius: 8px; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 58%, var(--surface-1) 96%);
+  }
+  .lbl-primary { fill: var(--text-primary); }
+  .lbl-secondary { fill: var(--text-secondary); }
+  .lbl-muted { fill: var(--text-muted); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12px; color: var(--text-secondary); margin-top: 10px; }
+  .legend span.dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .legend span.line { display: inline-block; width: 18px; height: 0; border-top: 2px solid var(--text-secondary); margin-right: 6px; vertical-align: middle; }
+  .legend span.line.dashed { border-top-style: dashed; }
+
+  .tooltip {
+    position: fixed; pointer-events: none; background: var(--text-primary); color: var(--surface-1);
+    padding: 7px 10px; border-radius: 6px; font-size: 12px; line-height: 1.4; max-width: 240px;
+    opacity: 0; transition: opacity 0.1s; z-index: 10;
+  }
+
+  details.fallback { margin-top: 14px; font-size: 13px; color: var(--text-secondary); }
+  details.fallback summary { cursor: pointer; color: var(--text-primary); font-weight: 600; }
+  table.data { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px; }
+  table.data th, table.data td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--grid); }
+  table.data th { color: var(--text-muted); font-weight: 600; }
+
+  .note { font-size: 12px; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="viz-root">
+
+  <div class="head">
+    <div>
+      <h1>Das Wissensnetz</h1>
+      <p class="sub">
+        Elf Karten zum Thema <strong>Hitze</strong>, verbunden durch
+        Voraussetzungen und Verwandtschaft, umgeben von 33 weiteren Themen
+        (grau). Ein Blick darauf, wie dein Netz aussehen kann.
+      </p>
+    </div>
+    
+  </div>
+
+  <div class="card">
+    <div class="toolbar" id="pathButtons"></div>
+    <div class="graph-wrap">
+      <svg id="graph" role="img" aria-label="Wissensnetz aus Lernkarten, gruppiert nach Thema"></svg>
+    </div>
+    <div class="legend">
+      <div><span class="dot" style="background:var(--series-1)"></span>Thema „Hitze" (11 Karten, voll vernetzt)</div>
+      <div><span class="dot" style="background:var(--sat-fill)"></span>Weitere Themen (33 Cluster, nur Kartenzahl real)</div>
+      <div><span class="line"></span>Voraussetzung</div>
+      <div><span class="line dashed"></span>verwandt</div>
+      <div>Ring um Knoten = 3 Quiz-Niveaus je Karte</div>
+    </div>
+    <p class="note">
+      Je mehr Verbindungen eine Karte hat, desto größer ist ihr Punkt. Ziehen
+      zum Umsortieren, scrollen zum Zoomen. Die drei Wege oben zeigen, wie du
+      von einer Karte zu einer anderen kommst — mit Abzweigungen.
+    </p>
+
+    <details class="fallback">
+      <summary>Datentabelle statt Grafik anzeigen</summary>
+      <table class="data" id="dataTable"></table>
+    </details>
+  </div>
+
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script src="d3.min.js"></script>
+<script>
+// ---------------------------------------------------------------------
+// REALE DATEN — 1:1 aus den Frontmatter-Feldern von 2-wiki/lernkarten/hitze/
+// (requires, related, schwierigkeit, niveaus) und aus den tatsächlichen
+// Dateizahlen der übrigen 2-wiki/lernkarten/<thema>/-Ordner (Stand 18.09.2026).
+// ---------------------------------------------------------------------
+
+const hitzeCards = [
+  { id: "uhi-mechanismen", title: "Urban Heat Island Effect: Fünf zusammenwirkende Mechanismen", schwierigkeit: "beginner", requires: [], related: ["oberflaechen-vs-lufttemperatur"] },
+  { id: "exposure-vulnerability", title: "Exposition vs. Vulnerabilität: Zwei unterschiedliche Risiken", schwierigkeit: "beginner", requires: [], related: [] },
+  { id: "oberflaechen-vs-lufttemperatur", title: "Oberflächentemperatur vs. Lufttemperatur: Unterschiedliche Muster", schwierigkeit: "beginner", requires: [], related: ["uhi-mechanismen"] },
+  { id: "kaltluftprozesse", title: "Kaltluftprozesse: Nächtliche Abkühlung durch Strömungen", schwierigkeit: "beginner", requires: ["uhi-mechanismen"], related: ["stadtplanung-density-tradeoff"] },
+  { id: "kit-exponierung", title: "KIT-Studie: Hitzeexposition nach Bevölkerungsgruppen", schwierigkeit: "intermediate", requires: ["exposure-vulnerability"], related: ["nachbarschaftsanalyse"] },
+  { id: "nachbarschaftsanalyse", title: "Nachbarschaftsanalyse: 243.607 Beobachtungen zu Grünungleichheit", schwierigkeit: "intermediate", requires: ["exposure-vulnerability"], related: ["kit-exponierung", "vegetation-soziale-struktur"] },
+  { id: "vegetation-soziale-struktur", title: "Vegetation und soziale Struktur im Ruhrgebiet", schwierigkeit: "intermediate", requires: ["exposure-vulnerability"], related: ["nachbarschaftsanalyse"] },
+  { id: "dlr-oberflaechen", title: "DLR Oberflächentemperatur-Analyse: Landsat-Satelliten", schwierigkeit: "beginner", requires: ["oberflaechen-vs-lufttemperatur"], related: ["stadt-land-gradienten"] },
+  { id: "stadt-land-gradienten", title: "Stadt-Land-Temperaturgradienten: 8–10 Grad Unterschied", schwierigkeit: "beginner", requires: ["uhi-mechanismen"], related: ["dlr-oberflaechen"] },
+  { id: "stadtgruen-temperaturwirkung", title: "Blaugrüne Infrastruktur: Signifikante Kühlungseffekte", schwierigkeit: "intermediate", requires: ["uhi-mechanismen"], related: ["stadtplanung-density-tradeoff"] },
+  { id: "stadtplanung-density-tradeoff", title: "Stadtplanung: Zielkonflikt zwischen Verdichtung und Kühlung", schwierigkeit: "intermediate", requires: ["kaltluftprozesse"], related: ["stadtgruen-temperaturwirkung"] },
+];
+
+// Drei real im Vault dokumentierte Lernpfade (lernfeld-hitze.md: 3 Wurzelkarten
+// + ihre requires/related-Ketten). Kein erfundener Pfad.
+const paths = [
+  { id: "mechanismus", label: "Der Mechanismus-Pfad", desc: "Grundprinzip → Nachtabkühlung → Planungskonflikt",
+    nodes: ["uhi-mechanismen", "kaltluftprozesse", "stadtplanung-density-tradeoff"] },
+  { id: "abzweigung", label: "Der Abzweigungs-Pfad", desc: "Begriffsklärung → Befund → freie Vertiefung",
+    nodes: ["exposure-vulnerability", "kit-exponierung", "nachbarschaftsanalyse", "vegetation-soziale-struktur"] },
+  { id: "messmethodik", label: "Der Messmethodik-Pfad", desc: "Methode → Satellitenstudie → Gradienten",
+    nodes: ["oberflaechen-vs-lufttemperatur", "dlr-oberflaechen", "stadt-land-gradienten"] },
+];
+
+// Satelliten: reale Themen-Ordner unter 2-wiki/lernkarten/, reale Kartenzahl,
+// aber ohne im Detail geprüfte requires/related-Kanten — deshalb nur als
+// Cluster-Masse dargestellt, nicht mit erfundener innerer Struktur.
+const satellites = [
+  ["schulter", 24], ["unternehmertum-in-deutschland", 36], ["einsamkeit", 19],
+  ["ganztagesbetreuung", 17], ["deal", 11], ["bwl", 12], ["der-loop-approach", 9],
+  ["frank-thelen", 9], ["mit-nebenwerten-zum-boersenolymp", 8], ["lernen-mit-plinyoo", 8],
+  ["schimmel", 8], ["die-kunst-ueber-geld-nachzudenken", 7], ["elon-musk", 7],
+  ["ernaehrung", 6], ["growth-hacking-mit-strategie", 6], ["kapitalismus-und-ungleichheit-die-neuen-verwerfungen", 6],
+  ["mietrecht", 6], ["ueber-die-psychologie-des-geldes", 6], ["global-hack", 5],
+  ["projekt-phoenix", 5], ["scaling-up-skalieren-auch-sie", 5], ["big-tech-muss-weg", 4],
+  ["der-almanach-von-naval-ravikant", 4], ["intelligent-investieren-in-immobilien-als-kapitalanlage-und-zur-altervorsorge", 4],
+  ["reinventing-organizations", 4], ["frag-immer-erst", 3], ["leading-change", 3],
+  ["machtbeben", 3], ["smart-services-und-internet-der-dinge", 3], ["testing-with-humans", 3],
+  ["kryptowaehrungen", 2], ["projekt-unicorn", 2], ["scrum-master", 2],
+  ["insane-mode-die-tesla-story", 1],
+];
+
+// ---------------------------------------------------------------------
+// Aufbau Knoten/Kanten
+// ---------------------------------------------------------------------
+const nodes = [];
+const links = [];
+
+hitzeCards.forEach(c => nodes.push({
+  id: c.id, title: c.title, schwierigkeit: c.schwierigkeit,
+  cluster: "hitze", isSatellite: false,
+}));
+
+hitzeCards.forEach(c => {
+  c.requires.forEach(r => links.push({ source: c.id, target: r, type: "requires" }));
+});
+const seenRelated = new Set();
+hitzeCards.forEach(c => {
+  c.related.forEach(r => {
+    const key = [c.id, r].sort().join("|");
+    if (!seenRelated.has(key)) { seenRelated.add(key); links.push({ source: c.id, target: r, type: "related" }); }
+  });
+});
+
+satellites.forEach(([name, count]) => {
+  for (let i = 0; i < count; i++) {
+    nodes.push({ id: `${name}::${i}`, cluster: name, isSatellite: true, title: name, count });
+  }
+});
+
+// Grad je Hitze-Knoten (für die Größe)
+const degree = {};
+nodes.forEach(n => degree[n.id] = 0);
+links.forEach(l => { degree[l.source] = (degree[l.source]||0)+1; degree[l.target] = (degree[l.target]||0)+1; });
+
+// ---------------------------------------------------------------------
+// Layout
+// ---------------------------------------------------------------------
+const svg = d3.select("#graph");
+const width = 1000, height = 560;
+svg.attr("viewBox", `0 0 ${width} ${height}`);
+
+const zoomLayer = svg.append("g");
+svg.call(d3.zoom().scaleExtent([0.4, 4]).on("zoom", (e) => zoomLayer.attr("transform", e.transform)));
+
+// Cluster-Anker: Hitze in der Mitte, Satelliten kreisförmig drumherum
+const clusterAnchor = { hitze: { x: width/2, y: height/2 } };
+const satNames = satellites.map(s => s[0]);
+satNames.forEach((name, i) => {
+  const angle = (i / satNames.length) * Math.PI * 2;
+  const r = 240;
+  clusterAnchor[name] = { x: width/2 + Math.cos(angle) * r, y: height/2 + Math.sin(angle) * r };
+});
+
+function nodeRadius(d) {
+  if (d.isSatellite) return 2.4;
+  return 7 + Math.min(degree[d.id] || 0, 6) * 1.6;
+}
+
+const sim = d3.forceSimulation(nodes)
+  .force("link", d3.forceLink(links).id(d => d.id)
+    .distance(l => l.type === "requires" ? 62 : 46)
+    .strength(0.5))
+  .force("charge", d3.forceManyBody().strength(d => d.isSatellite ? -6 : -140))
+  .force("collide", d3.forceCollide().radius(d => nodeRadius(d) + (d.isSatellite ? 0.6 : 3)))
+  .force("cluster", clusterForce)
+  .force("center", d3.forceCenter(width/2, height/2).strength(0.015))
+  .alphaDecay(0.028)
+  .on("tick", ticked);
+
+function clusterForce(alpha) {
+  const k = alpha * 0.28;
+  for (const n of nodes) {
+    const a = clusterAnchor[n.cluster];
+    if (!a) continue;
+    n.vx += (a.x - n.x) * k * (n.isSatellite ? 1 : 0.5);
+    n.vy += (a.y - n.y) * k * (n.isSatellite ? 1 : 0.5);
+  }
+}
+
+const linkSel = zoomLayer.append("g")
+  .selectAll("line").data(links).join("line")
+  .attr("stroke", "var(--text-secondary)")
+  .attr("stroke-opacity", 0.55)
+  .attr("stroke-width", 1.4)
+  .attr("stroke-dasharray", d => d.type === "related" ? "3,3" : null)
+  .attr("class", d => `link link-${d.type}`);
+
+const nodeGroup = zoomLayer.append("g").selectAll("g").data(nodes).join("g")
+  .attr("class", d => d.isSatellite ? "node node-sat" : "node node-hitze")
+  .call(d3.drag()
+    .on("start", (e,d) => { if (!e.active) sim.alphaTarget(0.15).restart(); d.fx=d.x; d.fy=d.y; })
+    .on("drag", (e,d) => { d.fx=e.x; d.fy=e.y; })
+    .on("end", (e,d) => { if (!e.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+
+// Niveau-Ringe (3 Quiz-Niveaus je Hitze-Karte) — rein strukturell, keine Nutzerdaten
+nodeGroup.filter(d => !d.isSatellite).each(function() {
+  const g = d3.select(this);
+  [5, 9, 13].forEach(r => g.append("circle").attr("r", r).attr("fill", "none")
+    .attr("stroke", "var(--series-1)").attr("stroke-opacity", 0.18).attr("stroke-width", 1));
+});
+
+const circles = nodeGroup.append("circle")
+  .attr("r", d => nodeRadius(d))
+  .attr("fill", d => d.isSatellite ? "var(--sat-fill)" : "var(--series-1)")
+  .attr("stroke", d => d.isSatellite ? "none" : "var(--surface-1)")
+  .attr("stroke-width", d => d.isSatellite ? 0 : 1.5);
+
+const tooltip = d3.select("#tooltip");
+nodeGroup.on("mousemove", (e, d) => {
+    const html = d.isSatellite
+      ? `<strong>${d.cluster}</strong><br>${d.count} Lernkarten (Thema, Kanten nicht im Detail erfasst)`
+      : `<strong>${d.title}</strong><br>Thema Hitze · ${d.schwierigkeit} · ${degree[d.id]} Verknüpfungen`;
+    tooltip.style("opacity", 1).html(html)
+      .style("left", (e.clientX + 14) + "px").style("top", (e.clientY + 10) + "px");
+  })
+  .on("mouseleave", () => tooltip.style("opacity", 0));
+
+function ticked() {
+  linkSel.attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+         .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+  nodeGroup.attr("transform", d => `translate(${d.x},${d.y})`);
+}
+
+// ---------------------------------------------------------------------
+// Pfad-Hervorhebung (Emphasis: ein Pfad in Akzentfarbe, Rest grau)
+// ---------------------------------------------------------------------
+const btnBar = d3.select("#pathButtons");
+const allBtns = [...paths, { id: "reset", label: "Zurücksetzen", desc: "gesamtes Netz zeigen" }];
+allBtns.forEach(p => {
+  btnBar.append("button").attr("class", "path-btn").attr("data-path", p.id)
+    .html(`${p.label}<small>${p.desc}</small>`)
+    .on("click", () => setActivePath(p.id));
+});
+
+function setActivePath(id) {
+  d3.selectAll(".path-btn").classed("active", function() { return this.dataset.path === id; });
+  if (id === "reset") {
+    circles.attr("fill", d => d.isSatellite ? "var(--sat-fill)" : "var(--series-1)").attr("opacity", 1);
+    linkSel.attr("stroke", "var(--text-secondary)").attr("stroke-opacity", 0.55);
+    return;
+  }
+  const path = paths.find(p => p.id === id);
+  const active = new Set(path.nodes);
+  circles.attr("fill", d => {
+      if (d.isSatellite) return "var(--sat-fill-dim)";
+      return active.has(d.id) ? "var(--series-2)" : "var(--series-1)";
+    })
+    .attr("opacity", d => d.isSatellite || active.has(d.id) ? 1 : 0.25);
+  linkSel
+    .attr("stroke", d => active.has(d.source.id ?? d.source) && active.has(d.target.id ?? d.target) ? "var(--series-2)" : "var(--text-secondary)")
+    .attr("stroke-opacity", d => active.has(d.source.id ?? d.source) && active.has(d.target.id ?? d.target) ? 0.9 : 0.12);
+}
+
+// ---------------------------------------------------------------------
+// Barrierefreier Tabellen-Fallback
+// ---------------------------------------------------------------------
+const table = d3.select("#dataTable");
+table.append("thead").append("tr").selectAll("th")
+  .data(["Karte", "Schwierigkeit", "Voraussetzung", "Verwandt (related)"])
+  .join("th").text(d => d);
+const tbody = table.append("tbody");
+hitzeCards.forEach(c => {
+  const tr = tbody.append("tr");
+  tr.append("td").text(c.title);
+  tr.append("td").text(c.schwierigkeit);
+  tr.append("td").text(c.requires.join(", ") || "—");
+  tr.append("td").text(c.related.join(", ") || "—");
+});
+
+// ---------------------------------------------------------------------
+// Theme Toggle
+// ---------------------------------------------------------------------
+const toggleBtn = document.getElementById("themeToggle");
+if (toggleBtn) toggleBtn.addEventListener("click", () => {
+  const root = document.documentElement;
+  const isDark = root.getAttribute("data-theme") === "dark";
+  root.setAttribute("data-theme", isDark ? "light" : "dark");
+  toggleBtn.textContent = isDark ? "Dark Mode" : "Light Mode";
+});
+</script>
+</body>
+</html>

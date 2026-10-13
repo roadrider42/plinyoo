@@ -4,36 +4,70 @@
     "cta_secondary": "Inwestuj"
   },
   "hero": {
-    "eyebrow": "",
-    "title": "Rozwijamy się razem – cyfrowo, po ludzku, unikatowo.",
-    "subtitle": "Towarzyszymy procesom uczenia się i doradztwa dzięki inteligentnym, godnym zaufania cyfrowym towarzyszom, którzy dostosowują się do Twoich celów – a nie odwrotnie.",
+    "eyebrow": "Platforma do nauki — coach i towarzysz w jednym",
+    "title": "Twoja ścieżka nauki jest wyjątkowa.",
+    "subtitle": "Wiesz, gdzie dziś jesteś i dokąd chcesz dojść. Drogę pomiędzy znajdziesz na kartach, które odsyłają do siebie nawzajem — nie w planie kursu.",
     "cta_primary": "Dołącz teraz",
     "cta_secondary": "Dla inwestorów",
-    "cta": "Poproś o dostęp"
+    "cta": "Poproś o dostęp",
+    "cardsLabel": "Przykład",
+    "cardsAria": "Przykład: tak uczysz się karty",
+    "cards": [
+      {
+        "step": "Karta",
+        "title": "Temperatura powierzchni a temperatura powietrza",
+        "text": "Dane satelitarne pokazują temperatury powierzchni — często wyższe niż temperatury powietrza. Temperatura powietrza na wysokości 2 m silniej decyduje o stresie cieplnym człowieka.",
+        "chip": "→ Analiza satelitarna DLR"
+      },
+      {
+        "step": "Pytanie",
+        "title": "Co pokazują przede wszystkim dane satelitarne?",
+        "options": [
+          "Temperaturę powietrza na wysokości 2 metrów, mierzoną na stacjach naziemnych",
+          "Temperatury powierzchni ulic, dachów i roślinności"
+        ]
+      },
+      {
+        "step": "Powtórka",
+        "title": "Karta wraca.",
+        "text": "Co się trzyma, wraca później. Co się chwieje, wraca wcześniej."
+      },
+      {
+        "step": "Gwiazda",
+        "title": "Opanowane — jedna gwiazda.",
+        "text": "Gdy na wszystkie pytania do karty ostatnio odpowiedziano poprawnie, świeci jako gwiazda w Twoim wszechświecie."
+      }
+    ]
   },
   "visionMission": {
     "vision": {
       "title": "Wizja",
-      "text": "Wyobrażamy sobie świat, w którym ludzie nie tylko się uczą, ale czują się towarzyszeni – przez technologie, które słuchają, rozumieją i wzmacniają."
+      "text": "Każdy znajduje własną drogę do tego, co chce umieć."
     },
     "mission": {
       "title": "Misja",
-      "text": "Platforma do spersonalizowanej nauki: łączymy refleksję, szkolenie, budowanie wiedzy i osobiste wsparcie – gotowa do użycia, adaptacyjna i bezpieczna."
+      "text": "Udostępniamy wiedzę tak, by droga stąd tam zajmowała jak najmniej czasu — a trenerzy i zespół stali po tej samej stronie."
     }
   },
   "roles": {
-    "title": "Trzy drogi wejścia",
+    "title": "Dwa interesy, jedno miejsce",
+    "intro": "Trenerzy chcą dobrze wyszkolonego zespołu. Kto jest w zespole, chce uczyć się tego, co go rozwija. Jedno i drugie spotyka się tutaj.",
+    "waysTitle": "Cztery drogi wejścia",
+    "follower": {
+      "title": "Dołącz do zespołu",
+      "description": "Twój trener zaprasza Cię. Podążasz za treściami, które dla Ciebie przygotował, i widzisz swój postęp."
+    },
     "learner": {
-      "title": "Ci, którzy się uczą",
-      "description": "Śledzić publiczne tematy, widzieć własny postęp."
+      "title": "Odkrywaj",
+      "description": "Przeglądaj publiczne tematy, ucz się we własnym tempie i widź swój postęp."
     },
     "author": {
-      "title": "Ci, którzy dzielą się wiedzą",
-      "description": "Pisać i łączyć karty, generować pytania, pobierać treści z Wikipedii lub udostępnionej strony."
+      "title": "Twórz własne",
+      "description": "Pisz i łącz własne karty, generuj do nich pytania, pobieraj treści z Wikipedii — i ucz się z nimi."
     },
     "curator": {
-      "title": "Ci, którzy opiekują się tematem",
-      "description": "Zapraszać osoby przez link, przypisywać karty, ustawiać obowiązkowe treści z terminem."
+      "title": "Prowadź",
+      "description": "Opiekujesz się tematem — jako dostawca treści, który dzieli się wiedzą, albo jako trener, który zaprasza przez link własny zespół i go prowadzi."
     }
   },
   "howItWorks": {
@@ -60,57 +94,53 @@
         "desc": "Twoja droga, Twój styl, Twój ton."
       },
       {
-        "title": "Mierzalna jakość nauki",
-        "desc": "Połącz cele, postępy i rezultaty."
+        "title": "Twój postęp świeci",
+        "desc": "Każda opanowana karta staje się gwiazdą w Twoim wszechświecie."
       },
       {
         "title": "Jedno narzędzie do całej nauki",
         "desc": "Onboarding, szkolenia, rozwój i coaching."
       },
       {
-        "title": "Szybkie wdrożenie",
-        "desc": "Mobilne, bezpieczne i gotowe do użycia – dla osób i organizacji."
+        "title": "Dwa języki, jedna droga",
+        "desc": "Twój ojczysty język i ten, którego się uczysz — jedno dotknięcie przełącza z powrotem."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Czas onboardingu"
+        "kpi": "7",
+        "label": "języków"
       },
       {
-        "kpi": "+25%",
-        "label": "Produktywność w pierwszym tygodniu"
+        "kpi": "11",
+        "label": "powiązanych kart w temacie Miejskie ciepło"
       },
       {
-        "kpi": "-30%",
-        "label": "Liczba błędów w procesach"
-      },
-      {
-        "kpi": "+",
-        "label": "Jasność i satysfakcja z feedbacku"
+        "kpi": "1 ★",
+        "label": "za każdą opanowaną kartę"
       }
     ]
   },
   "features": {
-    "title": "Twoje korzyści z Cyfrowego Towarzyszenia",
-    "subtitle": "Cyfrowe Towarzyszenie łączy spersonalizowaną naukę, adaptacyjne wsparcie i mierzalny rozwój – w jednym zintegrowanym rozwiązaniu dla ludzi i organizacji.",
+    "title": "Jedna karta, jedno pytanie, powtórka",
+    "subtitle": "Droga powstaje w marszu. Pod każdą kartą są dalsze odnośniki zamiast listy rozdziałów. Które — zależy od tego, jak karty są ze sobą powiązane, i od tego, dokąd dotąd zaszedłeś.",
     "items": [
       {
-        "title": "Interaktywne treści edukacyjne",
-        "desc": "Dialogi, impulsy do refleksji i prowadzenie krok po kroku – cyfrowe, a zarazem osobiste.",
-        "category": ""
+        "title": "Karta",
+        "desc": "Jedna myśl, cały ekran. Żadnego rozdziału do przewijania.",
+        "category": "1"
       },
       {
-        "title": "Śledzenie postępów",
-        "desc": "Monitoruj rozwój i wpływ – transparentnie, motywująco i zgodnie z RODO.",
-        "category": ""
+        "title": "Pytanie",
+        "desc": "Do każdej karty należą pytania.",
+        "category": "2"
       },
       {
-        "title": "100% mobilne i elastyczne",
-        "desc": "Ucz się i działaj – gdziekolwiek i kiedykolwiek, online lub offline.",
-        "category": ""
+        "title": "Powtórka",
+        "desc": "Co się trzyma, wraca później. Co się chwieje, wraca wcześniej.",
+        "category": "3"
       }
     ]
   },
@@ -127,26 +157,26 @@
     "intro": "",
     "items": [
       {
-        "q": "Czy jest to odpowiednie dla osób i organizacji?",
-        "a": "Tak – role i treści są w pełni konfigurowalne."
+        "q": "Dla kogo jest plinyoo?",
+        "a": "Dla wszystkich, którzy się uczą lub dzielą wiedzą — samodzielnie, z trenerem albo z całym zespołem."
       },
       {
-        "q": "Jak zachować własną filozofię uczenia się?",
-        "a": "Dzięki modułowej budowie, elastycznym ścieżkom nauki i konfigurowalnym strukturom treści."
+        "q": "Jak uczę się z plinyoo?",
+        "a": "Czytasz kartę, odpowiadasz na pytania i idziesz za odnośnikami do następnej. Co się trzyma, wraca później, co się chwieje — wcześniej."
       },
       {
-        "q": "Czy możemy mierzyć postępy i wpływ?",
-        "a": "Tak, zgodnie z RODO – indywidualnie lub zbiorczo."
+        "q": "Czy mogę wnieść własne treści?",
+        "a": "Tak. Piszesz i łączysz własne karty, generujesz do nich pytania i pobierasz treści z Wikipedii lub udostępnionej strony."
       },
       {
-        "q": "Czy wymaga to długiego onboardingu?",
-        "a": "Nie – intuicyjna obsługa i natychmiastowa gotowość do startu."
+        "q": "W jakich językach mogę się uczyć?",
+        "a": "Interfejs jest dostępny w siedmiu językach. Ustawiasz dwa: ojczysty i ten, którego właśnie się uczysz."
       }
     ]
   },
   "cta": {
-    "title": "Bo każda ścieżka nauki jest unikalna.",
-    "subtitle": "Nasze rozwiązania towarzyszące dostosowują się do Ciebie – nie odwrotnie. Dla trwałego rozwoju z realnym wpływem.",
+    "title": "Zacznij od jednej karty.",
+    "subtitle": "Nie potrzebujesz planu kursu. Potrzebujesz pierwszej karty i odnośnika, który prowadzi do następnej.",
     "button": "Poproś o dostęp"
   },
   "storySketch": {
@@ -185,18 +215,6 @@
     },
     "placeholder": {
       "title": "Więcej przykładów wkrótce"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Twój wirtualny dietetyk",
-      "desc": "Indywidualne porady żywieniowe, zawsze dostępne.",
-      "button": "Wkrótce"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Twój wirtualny barman",
-      "desc": "Mieszaj idealne drinki, pogłębiaj swoją wiedzę.",
-      "button": "Wkrótce"
     },
     "your-use-case": {
       "title": "Twój przypadek użycia",
@@ -261,6 +279,22 @@
         "20k_to_100k": "20k–100k",
         "100k_plus": "100k+"
       }
+    },
+    "access": {
+      "title": "Twój dostęp do plinyoo",
+      "subtitle": "Napisz krótko, kim jesteś i czego chcesz się uczyć lub czym się dzielić.",
+      "subtitle_details": "Odezwiemy się do Ciebie.",
+      "role_label": "Przychodzę jako",
+      "role_placeholder": "Wybierz",
+      "role_options": {
+        "learner": "Osoba ucząca się",
+        "trainer": "Trener/ka z własnym zespołem",
+        "provider": "Dostawca/czyni treści",
+        "other": "Coś innego"
+      },
+      "message_label": "Co chcesz osiągnąć z plinyoo?",
+      "message_placeholder": "Na przykład: chcę zrozumieć, dlaczego moje miasto tak się nagrzewa latem.",
+      "button": "Poproś o dostęp"
     }
   },
   "footer": {
@@ -360,5 +394,22 @@
     "subtitle": "Kiedy ludzie rozumieją, co robią, doświadczenie staje się prawdziwą kompetencją.",
     "description": "Plinyoo łączy wiedzę, naukę i zastosowanie w ciągły proces – aby ludzie nie tylko wiedzieli więcej, ale każdego dnia trochę więcej potrafili.",
     "cta": "Odkryj Plinyoo"
+  },
+  "journey": {
+    "title": "Wypróbuj ścieżkę",
+    "subtitle": "Siedem kart o miejskim cieple, każda z pytaniem i źródłem. Ścieżka, która rysuje się z każdą poprawną odpowiedzią — nie kurs.",
+    "label": "Przykład z prawdziwymi kartami",
+    "step": "Karta {{current}} z {{total}}",
+    "evidence": "Źródło:",
+    "next": "Dalej →",
+    "restart": "Zacznij od nowa",
+    "aria": "Przykładowa ścieżka: siedem kart o miejskim cieple",
+    "doneTitle": "Siedem kart, jedna spójna ścieżka",
+    "doneText": "Nie przeczytałeś siedmiu osobnych faktów, tylko odpowiedziałeś na siedem pytań i zobaczyłeś, jak karty odsyłają do siebie. To była mała ścieżka. W plinyoo idziesz własną.",
+    "note": "Karty są po niemiecku."
+  },
+  "views": {
+    "title": "Spojrzenie do środka",
+    "subtitle": "Trzy widoki z rozwoju plinyoo. Teksty w widokach są po niemiecku."
   }
 }
