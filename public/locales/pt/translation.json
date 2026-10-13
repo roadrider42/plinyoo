@@ -94,36 +94,32 @@
         "desc": "Seu caminho, seu estilo, seu tom."
       },
       {
-        "title": "Qualidade de aprendizado mensurável",
-        "desc": "Conecte metas, progresso e resultados."
+        "title": "Seu progresso brilha",
+        "desc": "Cada cartão dominado vira uma estrela no seu universo."
       },
       {
         "title": "Uma ferramenta para todo o aprendizado",
         "desc": "Integração, treinamento, desenvolvimento e coaching."
       },
       {
-        "title": "Rápido de implementar",
-        "desc": "Móvel, seguro e pronto para usar - para indivíduos e organizações."
+        "title": "Dois idiomas, um caminho",
+        "desc": "Seu idioma nativo e o que você está aprendendo — um toque volta."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Tempo de integração"
+        "kpi": "7",
+        "label": "idiomas"
       },
       {
-        "kpi": "+25%",
-        "label": "Produtividade na primeira semana"
+        "kpi": "11",
+        "label": "cartões vinculados no tópico Calor urbano"
       },
       {
-        "kpi": "-30%",
-        "label": "Taxa de erro nos processos"
-      },
-      {
-        "kpi": "+",
-        "label": "Clareza e satisfação no feedback"
+        "kpi": "1 ★",
+        "label": "para cada cartão dominado"
       }
     ]
   },
@@ -161,20 +157,20 @@
     "intro": "",
     "items": [
       {
-        "q": "É adequado para indivíduos e organizações?",
-        "a": "Sim - papéis и conteúdo são totalmente personalizáveis."
+        "q": "Para quem é o plinyoo?",
+        "a": "Para todas as pessoas que aprendem ou compartilham conhecimento — sozinhas, com um treinador ou com uma equipe inteira."
       },
       {
-        "q": "Como podemos preservar nossa filosofia de aprendizado?",
-        "a": "Através de design modular, caminhos de aprendizado flexíveis e estruturas de conteúdo personalizáveis."
+        "q": "Como aprendo com o plinyoo?",
+        "a": "Você lê um cartão, responde às perguntas e segue os vínculos para o próximo. O que está firme volta mais tarde, o que vacila volta mais cedo."
       },
       {
-        "q": "Podemos medir o progresso e o impacto?",
-        "a": "Sim, compatível com o GDPR - em níveis individuais ou agregados."
+        "q": "Posso trazer meus próprios conteúdos?",
+        "a": "Sim. Você escreve e vincula seus próprios cartões, gera perguntas para eles e traz conteúdo da Wikipédia ou de uma página compartilhada."
       },
       {
-        "q": "Requer uma longa integração?",
-        "a": "Não - uso intuitivo e pronto para ser lançado instantaneamente."
+        "q": "Em quais idiomas posso aprender?",
+        "a": "A interface existe em sete idiomas. Você define dois: seu idioma nativo e o que está aprendendo agora."
       }
     ]
   },

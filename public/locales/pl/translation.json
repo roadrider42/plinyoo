@@ -94,36 +94,32 @@
         "desc": "Twoja droga, Twój styl, Twój ton."
       },
       {
-        "title": "Mierzalna jakość nauki",
-        "desc": "Połącz cele, postępy i rezultaty."
+        "title": "Twój postęp świeci",
+        "desc": "Każda opanowana karta staje się gwiazdą w Twoim wszechświecie."
       },
       {
         "title": "Jedno narzędzie do całej nauki",
         "desc": "Onboarding, szkolenia, rozwój i coaching."
       },
       {
-        "title": "Szybkie wdrożenie",
-        "desc": "Mobilne, bezpieczne i gotowe do użycia – dla osób i organizacji."
+        "title": "Dwa języki, jedna droga",
+        "desc": "Twój ojczysty język i ten, którego się uczysz — jedno dotknięcie przełącza z powrotem."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Czas onboardingu"
+        "kpi": "7",
+        "label": "języków"
       },
       {
-        "kpi": "+25%",
-        "label": "Produktywność w pierwszym tygodniu"
+        "kpi": "11",
+        "label": "powiązanych kart w temacie Miejskie ciepło"
       },
       {
-        "kpi": "-30%",
-        "label": "Liczba błędów w procesach"
-      },
-      {
-        "kpi": "+",
-        "label": "Jasność i satysfakcja z feedbacku"
+        "kpi": "1 ★",
+        "label": "za każdą opanowaną kartę"
       }
     ]
   },
@@ -161,20 +157,20 @@
     "intro": "",
     "items": [
       {
-        "q": "Czy jest to odpowiednie dla osób i organizacji?",
-        "a": "Tak – role i treści są w pełni konfigurowalne."
+        "q": "Dla kogo jest plinyoo?",
+        "a": "Dla wszystkich, którzy się uczą lub dzielą wiedzą — samodzielnie, z trenerem albo z całym zespołem."
       },
       {
-        "q": "Jak zachować własną filozofię uczenia się?",
-        "a": "Dzięki modułowej budowie, elastycznym ścieżkom nauki i konfigurowalnym strukturom treści."
+        "q": "Jak uczę się z plinyoo?",
+        "a": "Czytasz kartę, odpowiadasz na pytania i idziesz za odnośnikami do następnej. Co się trzyma, wraca później, co się chwieje — wcześniej."
       },
       {
-        "q": "Czy możemy mierzyć postępy i wpływ?",
-        "a": "Tak, zgodnie z RODO – indywidualnie lub zbiorczo."
+        "q": "Czy mogę wnieść własne treści?",
+        "a": "Tak. Piszesz i łączysz własne karty, generujesz do nich pytania i pobierasz treści z Wikipedii lub udostępnionej strony."
       },
       {
-        "q": "Czy wymaga to długiego onboardingu?",
-        "a": "Nie – intuicyjna obsługa i natychmiastowa gotowość do startu."
+        "q": "W jakich językach mogę się uczyć?",
+        "a": "Interfejs jest dostępny w siedmiu językach. Ustawiasz dwa: ojczysty i ten, którego właśnie się uczysz."
       }
     ]
   },

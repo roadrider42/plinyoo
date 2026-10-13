@@ -94,36 +94,32 @@
         "desc": "A tu manera, con tu estilo, en tu tono."
       },
       {
-        "title": "Calidad de aprendizaje medible",
-        "desc": "Conecta objetivos, progreso y resultados."
+        "title": "Tu progreso brilla",
+        "desc": "Cada tarjeta que dominas se convierte en una estrella en tu universo."
       },
       {
         "title": "Una herramienta para todo el aprendizaje",
         "desc": "Incorporación, formación, desarrollo y coaching."
       },
       {
-        "title": "Rápido de implementar",
-        "desc": "Móvil, seguro y listo para usar, para individuos y organizaciones por igual."
+        "title": "Dos idiomas, un camino",
+        "desc": "Tu idioma materno y el que estás aprendiendo: un toque cambia de vuelta."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Tiempo de incorporación"
+        "kpi": "7",
+        "label": "idiomas"
       },
       {
-        "kpi": "+25%",
-        "label": "Productividad en la primera semana"
+        "kpi": "11",
+        "label": "tarjetas enlazadas en el tema Calor urbano"
       },
       {
-        "kpi": "-30%",
-        "label": "Tasa de error en los procesos"
-      },
-      {
-        "kpi": "+",
-        "label": "Claridad y satisfacción en los comentarios"
+        "kpi": "1 ★",
+        "label": "por cada tarjeta dominada"
       }
     ]
   },
@@ -161,20 +157,20 @@
     "intro": "",
     "items": [
       {
-        "q": "¿Es adecuado para individuos y organizaciones?",
-        "a": "Sí, los roles y el contenido son totalmente personalizables."
+        "q": "¿Para quién es plinyoo?",
+        "a": "Para todas las personas que aprenden o comparten conocimiento: solas, con un entrenador o con todo un equipo."
       },
       {
-        "q": "¿Cómo podemos preservar nuestra filosofía de aprendizaje?",
-        "a": "A través del diseño modular, rutas de aprendizaje flexibles y estructuras de contenido personalizables."
+        "q": "¿Cómo aprendo con plinyoo?",
+        "a": "Lees una tarjeta, respondes preguntas sobre ella y sigues los enlaces a la siguiente. Lo que se sabe vuelve más tarde; lo que flaquea, antes."
       },
       {
-        "q": "¿Podemos medir el progreso y el impacto?",
-        "a": "Sí, conforme con el RGPD, a nivel individual o agregado."
+        "q": "¿Puedo aportar mis propios contenidos?",
+        "a": "Sí. Escribes y enlazas tus propias tarjetas, haces generar preguntas y traes contenido de Wikipedia o de una página compartida."
       },
       {
-        "q": "¿Requiere una larga incorporación?",
-        "a": "No, es de uso intuitivo y está listo para lanzarse al instante."
+        "q": "¿En qué idiomas puedo aprender?",
+        "a": "La interfaz está disponible en siete idiomas. Tú eliges dos: tu idioma materno y el que estás aprendiendo ahora."
       }
     ]
   },

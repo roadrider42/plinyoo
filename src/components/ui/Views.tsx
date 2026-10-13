@@ -1,7 +1,7 @@
 // src/components/ui/Views.tsx
-// Zweck: "Ein Blick hinein" — drei Ansichten aus der Entwicklung (Lernfeld, Wissensnetz, Wege und Lücken).
-// Lernfeld: Bilder zum Durchblättern. Wissensnetz und Autorenwerkzeug: eigenständige Seiten in /public/ansichten, hier eingebettet.
-// Nur Sprachen mit eigenem views-Block zeigen den Abschnitt (die Ansichten sind deutsch).
+// Zweck: "Ein Blick hinein" — drei Ansichten aus der Entwicklung im Telefonrahmen auf dunkler Bühne.
+// Lernfeld: Bilder zum Durchblättern. Wissensnetz und Wege und Lücken: eigenständige Seiten in /public/ansichten.
+// Die Ansichten selbst sind deutsch; Überschriften und Hinweise kommen aus den Übersetzungen.
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -16,33 +16,79 @@ type View = {
   frameTitle?: string;
 };
 
-// Eingebettete Seiten sind für 390 px Breite gebaut. Der Rahmen rechnet sie auf die verfügbare Breite herunter,
-// statt sie in einer schmalen Spalte umbrechen zu lassen.
-const FRAME_WIDTH = 390;
-const FRAME_HEIGHT = 720;
+const SCREEN_WIDTH = 390;
+const SCREEN_HEIGHT = 844;
 
+// Telefonrahmen: Bildschirm im Seitenverhältnis 390 × 844, Inhalt wird hineingesetzt
+function Phone({ children, raised = false }: { children: React.ReactNode; raised?: boolean }) {
+  return (
+    <div
+      className={`mx-auto w-full max-w-[300px] rounded-[2.6rem] bg-neutral-800 p-[9px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] ring-1 ring-white/15 ${
+        raised ? 'lg:-mt-8' : ''
+      }`}
+    >
+      <div className="relative overflow-hidden rounded-[2.1rem] bg-white" style={{ aspectRatio: `${SCREEN_WIDTH} / ${SCREEN_HEIGHT}` }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+// Eingebettete Seite, für 390 px Breite gebaut, auf die Breite des Rahmens heruntergerechnet
 function ScaledFrame({ src, title }: { src: string; title: string }) {
   const box = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState(1);
+  const [scale, setScale] = useState(0.7);
 
   useEffect(() => {
     const el = box.current;
     if (!el || typeof ResizeObserver === 'undefined') return;
-    const observer = new ResizeObserver(([entry]) => setScale(Math.min(1, entry.contentRect.width / FRAME_WIDTH)));
+    const observer = new ResizeObserver(([entry]) => setScale(entry.contentRect.width / SCREEN_WIDTH));
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div ref={box} className="w-full overflow-hidden rounded-lg border border-border bg-white" style={{ height: FRAME_HEIGHT * scale }}>
+    <div ref={box} className="absolute inset-0 overflow-hidden">
       <iframe
         src={src}
         title={title}
         loading="lazy"
         sandbox="allow-scripts"
-        style={{ width: FRAME_WIDTH, height: FRAME_HEIGHT, transform: `scale(${scale})`, transformOrigin: 'top left', border: 0 }}
+        style={{ width: SCREEN_WIDTH, height: SCREEN_HEIGHT, transform: `scale(${scale})`, transformOrigin: 'top left', border: 0 }}
       />
     </div>
+  );
+}
+
+// Bilder zum Durchblättern: Bild im Telefon, Pfeile und Punkte darunter
+function SlidePhone({ images, raised }: { images: { src: string; alt: string }[]; raised: boolean }) {
+  const [index, setIndex] = useState(0);
+  const go = (delta: number) => setIndex((index + delta + images.length) % images.length);
+  const button = 'flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20';
+
+  return (
+    <>
+      <Phone raised={raised}>
+        <img
+          key={images[index].src}
+          src={images[index].src}
+          alt={images[index].alt}
+          loading="lazy"
+          width={SCREEN_WIDTH}
+          height={SCREEN_HEIGHT}
+          className="absolute inset-0 h-full w-full object-cover object-top"
+        />
+      </Phone>
+      <div className="mt-4 flex items-center justify-center gap-3">
+        <button type="button" onClick={() => go(-1)} aria-label="←" className={button}>←</button>
+        <span className="flex gap-1.5" aria-hidden="true">
+          {images.map((image, i) => (
+            <span key={image.src} className={`h-1.5 rounded-full transition-all ${i === index ? 'w-5 bg-[#FFD44D]' : 'w-1.5 bg-white/30'}`} />
+          ))}
+        </span>
+        <button type="button" onClick={() => go(1)} aria-label="→" className={button}>→</button>
+      </div>
+    </>
   );
 }
 
@@ -54,47 +100,33 @@ export default function Views() {
   if (!hasOwnText || items.length === 0) return null;
 
   return (
-    <section className="bg-surface-2 border-y border-border/60 py-16">
+    <section
+      className="relative overflow-hidden py-20 text-white"
+      style={{
+        background:
+          'radial-gradient(circle at 20% 10%, rgba(46,122,128,0.35), transparent 45%), radial-gradient(circle at 85% 90%, rgba(255,212,77,0.12), transparent 40%), #11131F',
+      }}
+    >
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <h2 className="text-center font-sans text-2xl font-semibold tracking-tight text-main-text sm:text-3xl">
-          {t('views.title')}
-        </h2>
-        <p className="mx-auto mt-3 mb-10 max-w-xl text-center text-text-muted">{t('views.subtitle')}</p>
+        <h2 className="text-center font-sans text-3xl font-semibold tracking-tight sm:text-4xl">{t('views.title')}</h2>
+        <p className="mx-auto mt-3 mb-14 max-w-xl text-center text-white/70">{t('views.subtitle')}</p>
 
-        <div className="grid gap-8 lg:grid-cols-3">
-          {items.map((item) => (
-            <article key={item.id} className="flex flex-col rounded-xl border border-border bg-white p-4 shadow-sm">
-              <div className="mb-3 flex items-center justify-between gap-2 px-1">
-                <h3 className="font-sans text-base font-bold text-primary">{item.title}</h3>
-                <span className="shrink-0 rounded-full bg-surface-2 px-2.5 py-1 text-xs font-medium text-primary">
+        <div className="grid gap-14 lg:grid-cols-3 lg:gap-8">
+          {items.map((item, index) => (
+            <article key={item.id} className="flex flex-col">
+              {item.images && <SlidePhone images={item.images} raised={index === 1} />}
+              {item.src && (
+                <Phone raised={index === 1}>
+                  <ScaledFrame src={item.src} title={item.frameTitle || item.title} />
+                </Phone>
+              )}
+              <div className="mx-auto mt-6 max-w-[300px] text-center">
+                <span className="mb-2 inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-[#FFD44D]">
                   {item.tag}
                 </span>
+                <h3 className="font-sans text-lg font-semibold">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/70">{item.text}</p>
               </div>
-
-              {item.images && (
-                <div
-                  className="flex snap-x snap-mandatory gap-3 overflow-x-auto rounded-lg"
-                  tabIndex={0}
-                  role="group"
-                  aria-label={item.title}
-                >
-                  {item.images.map((image) => (
-                    <img
-                      key={image.src}
-                      src={image.src}
-                      alt={image.alt}
-                      loading="lazy"
-                      width={390}
-                      height={844}
-                      className="w-full shrink-0 snap-center rounded-lg border border-border object-contain"
-                    />
-                  ))}
-                </div>
-              )}
-
-              {item.src && <ScaledFrame src={item.src} title={item.frameTitle || item.title} />}
-
-              <p className="mt-4 px-1 text-sm leading-relaxed text-text-muted">{item.text}</p>
             </article>
           ))}
         </div>

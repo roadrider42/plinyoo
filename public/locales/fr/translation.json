@@ -94,36 +94,32 @@
         "desc": "Votre chemin, votre style, votre ton."
       },
       {
-        "title": "Qualité d'apprentissage mesurable",
-        "desc": "Relier les objectifs, les progrès et les résultats."
+        "title": "Ta progression brille",
+        "desc": "Chaque fiche acquise devient une étoile dans ton univers."
       },
       {
         "title": "Un outil pour tout l'apprentissage",
         "desc": "Intégration, formation, développement et coaching."
       },
       {
-        "title": "Rapide à mettre en œuvre",
-        "desc": "Mobile, sécurisé et prêt à l'emploi - pour les individus comme pour les organisations."
+        "title": "Deux langues, un chemin",
+        "desc": "Ta langue maternelle et celle que tu apprends — une touche permet de revenir."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Temps d'intégration"
+        "kpi": "7",
+        "label": "langues"
       },
       {
-        "kpi": "+25%",
-        "label": "Productivité la première semaine"
+        "kpi": "11",
+        "label": "fiches reliées dans le sujet Chaleur urbaine"
       },
       {
-        "kpi": "-30%",
-        "label": "Taux d'erreur dans les processus"
-      },
-      {
-        "kpi": "+",
-        "label": "Clarté et satisfaction dans les commentaires"
+        "kpi": "1 ★",
+        "label": "pour chaque fiche acquise"
       }
     ]
   },
@@ -161,20 +157,20 @@
     "intro": "",
     "items": [
       {
-        "q": "Est-ce adapté aux individus et aux organisations ?",
-        "a": "Oui - les rôles et le contenu sont entièrement personnalisables."
+        "q": "Pour qui est plinyoo ?",
+        "a": "Pour toutes les personnes qui apprennent ou partagent leur savoir — seules, avec un entraîneur ou avec toute une équipe."
       },
       {
-        "q": "Comment pouvons-nous préserver notre philosophie d'apprentissage ?",
-        "a": "Grâce à une conception modulaire, des parcours d'apprentissage flexibles et des structures de contenu personnalisables."
+        "q": "Comment j’apprends avec plinyoo ?",
+        "a": "Tu lis une fiche, tu réponds aux questions et tu suis les renvois vers la suivante. Ce qui est acquis revient plus tard, ce qui vacille revient plus tôt."
       },
       {
-        "q": "Pouvons-nous mesurer les progrès et l'impact ?",
-        "a": "Oui, conforme au RGPD - au niveau individuel ou agrégé."
+        "q": "Puis-je apporter mes propres contenus ?",
+        "a": "Oui. Tu écris et relies tes propres fiches, tu fais générer des questions et tu importes du contenu de Wikipédia ou d’une page partagée."
       },
       {
-        "q": "Cela nécessite-t-il une longue intégration ?",
-        "a": "Non - utilisation intuitive et prêt à être lancé instantanément."
+        "q": "Dans quelles langues puis-je apprendre ?",
+        "a": "L’interface existe en sept langues. Tu en définis deux : ta langue maternelle et celle que tu apprends en ce moment."
       }
     ]
   },

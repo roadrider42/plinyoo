@@ -115,36 +115,32 @@
         "desc": "Deine Wege, dein Stil, dein Ton."
       },
       {
-        "title": "Lernqualität messbar",
-        "desc": "Ziele, Fortschritt und Wirkung verknüpfen."
+        "title": "Dein Fortschritt leuchtet",
+        "desc": "Jede gelernte Karte wird ein Stern in deinem Universum."
       },
       {
         "title": "Ein Tool für alles Lernen",
         "desc": "Onboarding, Training, Weiterbildung, Coaching."
       },
       {
-        "title": "Schnell im Einsatz",
-        "desc": "Mobil, sicher, sofort nutzbar – für Mensch und Organisation."
+        "title": "Zwei Sprachen, ein Weg",
+        "desc": "Deine Muttersprache und die, in der du lernst — ein Tipp wechselt zurück."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40 %",
-        "label": "Einarbeitungszeit"
+        "kpi": "7",
+        "label": "Sprachen"
       },
       {
-        "kpi": "+25 %",
-        "label": "Produktivität in Woche 1"
+        "kpi": "11",
+        "label": "vernetzte Karten im Thema Hitze"
       },
       {
-        "kpi": "-30 %",
-        "label": "Fehlerquote im Prozess"
-      },
-      {
-        "kpi": "+⭐",
-        "label": "Zufriedenheit und Klarheit im Feedback"
+        "kpi": "1 ★",
+        "label": "für jede gelernte Karte"
       }
     ]
   },
@@ -434,20 +430,20 @@
     "intro": "Antworten auf typische Fragen – kurz und nachvollziehbar.",
     "items": [
       {
-        "q": "Passt es zu Einzelpersonen und Organisationen?",
-        "a": "Ja – Rollen und Inhalte sind frei definierbar."
+        "q": "Für wen ist plinyoo?",
+        "a": "Für alle, die lernen oder Wissen weitergeben — allein, mit einem Trainer oder in einer ganzen Mannschaft."
       },
       {
-        "q": "Wie bleibt unsere Lernphilosophie erhalten?",
-        "a": "Durch modulare Inhalte, flexible Designs und anpassbare Lernpfade."
+        "q": "Wie lerne ich mit plinyoo?",
+        "a": "Du liest eine Karte, beantwortest Fragen dazu und folgst den Verweisen zur nächsten. Was sitzt, kommt später wieder, was wackelt, früher."
       },
       {
-        "q": "Können wir Fortschritt und Wirkung messen?",
-        "a": "Ja, DSGVO-konform – mit individuellen oder aggregierten Auswertungen."
+        "q": "Kann ich eigene Inhalte einbringen?",
+        "a": "Ja. Du schreibst und verlinkst eigene Karten, lässt Fragen dazu erzeugen und holst Inhalte aus Wikipedia oder von einer geteilten Seite."
       },
       {
-        "q": "Braucht es lange Schulungen?",
-        "a": "Nein – intuitive Nutzung und sofort startklar."
+        "q": "In welchen Sprachen kann ich lernen?",
+        "a": "Die Oberfläche gibt es in sieben Sprachen. Du setzt zwei: deine Muttersprache und die, in der du gerade lernst."
       }
     ]
   },

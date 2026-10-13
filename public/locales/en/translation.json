@@ -115,36 +115,32 @@
         "desc": "Your way, your style, your tone."
       },
       {
-        "title": "Measurable learning quality",
-        "desc": "Connect goals, progress, and outcomes."
+        "title": "Your progress shines",
+        "desc": "Every card you’ve learned becomes a star in your universe."
       },
       {
         "title": "One tool for all learning",
         "desc": "Onboarding, training, development, and coaching."
       },
       {
-        "title": "Fast to implement",
-        "desc": "Mobile, secure, and ready to use – for individuals and organizations alike."
+        "title": "Two languages, one path",
+        "desc": "Your native language and the one you’re learning — one tap switches back."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "-40%",
-        "label": "Onboarding time"
+        "kpi": "7",
+        "label": "languages"
       },
       {
-        "kpi": "+25%",
-        "label": "Productivity in week one"
+        "kpi": "11",
+        "label": "linked cards in the topic Urban Heat"
       },
       {
-        "kpi": "-30%",
-        "label": "Error rate in processes"
-      },
-      {
-        "kpi": "+⭐",
-        "label": "Clarity and satisfaction in feedback"
+        "kpi": "1 ★",
+        "label": "for every card you’ve learned"
       }
     ]
   },
@@ -182,20 +178,20 @@
     "intro": "Answers to typical questions – short and understandable.",
     "items": [
       {
-        "q": "Is it suitable for individuals and organizations?",
-        "a": "Yes – roles and content are fully customizable."
+        "q": "Who is plinyoo for?",
+        "a": "For everyone who learns or shares knowledge — alone, with a trainer, or with a whole team."
       },
       {
-        "q": "How can we preserve our learning philosophy?",
-        "a": "Through modular design, flexible learning paths, and customizable content structures."
+        "q": "How do I learn with plinyoo?",
+        "a": "You read a card, answer questions on it and follow the links to the next one. What sticks comes back later, what wobbles comes back sooner."
       },
       {
-        "q": "Can we measure progress and impact?",
-        "a": "Yes, GDPR-compliant – at individual or aggregated levels."
+        "q": "Can I bring my own content?",
+        "a": "Yes. You write and link your own cards, have questions generated for them and pull in content from Wikipedia or a shared page."
       },
       {
-        "q": "Does it require long onboarding?",
-        "a": "No – intuitive use and ready to launch instantly."
+        "q": "In which languages can I learn?",
+        "a": "The interface comes in seven languages. You set two: your native language and the one you are learning right now."
       }
     ]
   },
