@@ -12,27 +12,7 @@ const Examples = () => {
           {t('examples.title')}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Molly Kachel */}
-          <div className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline">
-            <h3 className="text-lg font-semibold text-primary">{t('examples.molly.title')}</h3>
-            <p className="text-sm text-text-muted mb-2">{t('examples.molly.subtitle')}</p>
-            <p className="text-sm text-text-muted flex-grow">{t('examples.molly.desc')}</p>
-            <button disabled className="mt-4 w-full bg-surface-2 text-text-faint font-semibold py-2 rounded-lg cursor-not-allowed border border-border">
-              {t('examples.molly.button')}
-            </button>
-          </div>
-
-          {/* James Kachel */}
-          <div className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline">
-            <h3 className="text-lg font-semibold text-primary">{t('examples.james.title')}</h3>
-            <p className="text-sm text-text-muted mb-2">{t('examples.james.subtitle')}</p>
-            <p className="text-sm text-text-muted flex-grow">{t('examples.james.desc')}</p>
-            <button disabled className="mt-4 w-full bg-surface-2 text-text-faint font-semibold py-2 rounded-lg cursor-not-allowed border border-border">
-              {t('examples.james.button')}
-            </button>
-          </div>
-
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {/* SpoonUp Kachel */}
           <a href="https://spoonup.me" target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
             <div className="h-12 w-12 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">

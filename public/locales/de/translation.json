@@ -4,9 +4,9 @@
     "cta_secondary": "Investieren"
   },
   "hero": {
-    "eyebrow": "Lernplattform mit Wissensgraph",
-    "title": "Der Wissensraum ist unentdeckt. Dein Weg ist einzigartig.",
-    "subtitle": "Entdecke Themen, die dich interessieren. Wähle deinen eigenen Lernpfad. Wachse in deinem Tempo.",
+    "eyebrow": "Lernplattform — Coach und Begleiter in einem",
+    "title": "Dein Lernpfad ist einzigartig.",
+    "subtitle": "Du weißt, wo du heute stehst und wohin du willst. Den Weg dazwischen findest du auf Karten, die aufeinander verweisen — nicht in einem Kursplan.",
     "cta": "Zugang anfragen",
     "cta_primary": "Zugang anfragen",
     "cta_secondary": "Für Investoren"
@@ -35,15 +35,17 @@
   "visionMission": {
     "vision": {
       "title": "Vision",
-      "text": "Wir stellen uns eine Welt vor, in der Menschen nicht einfach lernen, sondern sich begleitet fühlen – von Technologien, die zuhören, verstehen und stärken."
+      "text": "Jeder Mensch findet seinen eigenen Weg zu dem, was er können will."
     },
     "mission": {
       "title": "Mission",
-      "text": "Eine Plattform für individuelles Lernen: Wir vereinen Reflexion, Training, Wissensaufbau und persönliche Begleitung – sofort nutzbar, adaptiv und sicher."
+      "text": "Wir machen Wissen so zugänglich, dass der Weg von hier nach dort so wenig Zeit kostet wie möglich — und Trainer und Team dabei auf derselben Seite stehen."
     }
   },
   "roles": {
-    "title": "Drei Wege hinein",
+    "title": "Zwei Interessen, ein Platz",
+    "intro": "Trainer wollen ein gut ausgebildetes Team. Wer im Team spielt, will lernen, was ihn weiterbringt. Beides trifft sich hier.",
+    "waysTitle": "Drei Wege hinein",
     "learner": {
       "title": "Wer lernt",
       "description": "Öffentlichen Themen folgen, den eigenen Fortschritt sehen."
@@ -53,8 +55,8 @@
       "description": "Karten schreiben und verlinken, Fragen dazu erzeugen lassen, Inhalte aus Wikipedia oder von einer geteilten Seite holen."
     },
     "curator": {
-      "title": "Wer ein Thema betreut",
-      "description": "Menschen per Einladungslink dazuholen, ihnen Karten zuweisen, Pflichtinhalte mit Fälligkeit setzen."
+      "title": "Wer ein Thema aufmacht",
+      "description": "Andere per Link dazuholen und ihnen Karten mitgeben."
     }
   },
   "howItWorks": {
@@ -115,23 +117,23 @@
     ]
   },
   "features": {
-    "title": "Deine Vorteile mit Digital Companionship",
-    "subtitle": "Digitale Companionship vereint personalisiertes Lernen, adaptive Begleitung und messbare Entwicklung – in einer integrierten Lösung für Menschen und Organisationen.",
+    "title": "Eine Karte, eine Frage, ein Wiedersehen",
+    "subtitle": "Der Weg entsteht beim Gehen. Unter jeder Karte stehen Weiterführungen statt einer Kapitelliste. Welche das sind, hängt daran, wie die Karten untereinander verlinkt sind — und daran, wohin du bisher gegangen bist.",
     "items": [
       {
-        "title": "Interaktive Lerninhalte",
-        "desc": "Dialoge, Reflexionsfragen und Schritt-für-Schritt Anleitungen – digital begleitet und individuell relevant.",
-        "category": "Interaktion"
+        "title": "Karte",
+        "desc": "Ein Gedanke, ganzer Bildschirm. Kein Kapitel, durch das du scrollst.",
+        "category": "1"
       },
       {
-        "title": "Fortschritts-Tracking",
-        "desc": "Verfolge Entwicklung und Wirkung – transparent, motivierend und datenschutzkonform.",
-        "category": "Messbarkeit"
+        "title": "Frage",
+        "desc": "Zu einer Karte gehören Fragen.",
+        "category": "2"
       },
       {
-        "title": "100 % mobil & anpassbar",
-        "desc": "Lernen und Begleiten – überall, jederzeit, online oder offline.",
-        "category": "Flexibilität"
+        "title": "Wiedersehen",
+        "desc": "Was sitzt, kommt später wieder. Was wackelt, kommt früher.",
+        "category": "3"
       }
     ]
   },
@@ -206,18 +208,6 @@
     },
     "placeholder": {
       "title": "Weitere Beispiele folgen"
-    },
-    "molly": {
-      "title": "Ingrid",
-      "subtitle": "Deine virtuelle Ernährungsberaterin",
-      "desc": "Individuelle Ernährungsberatung, immer verfügbar.",
-      "button": "Coming soon"
-    },
-    "james": {
-      "title": "James",
-      "subtitle": "Dein virtueller Barkeeper",
-      "desc": "Perfekte Drinks mixen, Wissen vertiefen.",
-      "button": "Coming soon"
     },
     "your-use-case": {
       "title": "Dein Use Case",

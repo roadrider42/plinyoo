@@ -20,11 +20,7 @@ import VisionMission from "@/components/ui/VisionMission";
 import Roles from "@/components/ui/Roles";
 import HowItWorks from "@/components/ui/HowItWorks";
 import Examples from "@/components/ui/Examples";
-import Pillars from "@/components/ui/Pillars";
-import Outcomes from "@/components/ui/Outcomes";
 import Features from "@/components/ui/Features";
-import Testimonials from "@/components/ui/Testimonials";
-import Faq from "@/components/ui/Faq";
 import CTA from "@/components/ui/CTA";
 
 export default function LandingPage() {
@@ -47,14 +43,10 @@ export default function LandingPage() {
     <>
       {renderHero()}
       <VisionMission />
+      <Features />
       <Roles />
       <Examples />
       <HowItWorks />
-      <Pillars />
-      <Outcomes />
-      <Features />
-      <Testimonials />
-      <Faq />
       <CTA />
     </>
   );

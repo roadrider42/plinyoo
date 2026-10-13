@@ -16,11 +16,21 @@ export default function Roles() {
     description: t(`roles.${key}.description`),
   }));
 
+  // Optional: nur in Sprachen vorhanden, die den Text schon haben
+  const intro = String(t('roles.intro', { defaultValue: '' }));
+  const waysTitle = String(t('roles.waysTitle', { defaultValue: '' }));
+
   return (
     <section className="mx-auto w-full max-w-5xl px-5 py-16 sm:px-8">
-      <h2 className="mb-8 text-center font-sans text-2xl font-semibold tracking-tight text-main-text sm:text-3xl">
+      <h2 className="mb-4 text-center font-sans text-2xl font-semibold tracking-tight text-main-text sm:text-3xl">
         {t('roles.title')}
       </h2>
+      {intro && (
+        <p className="mx-auto mb-10 max-w-2xl text-center text-text-muted">{intro}</p>
+      )}
+      {waysTitle && (
+        <h3 className="mb-6 text-center font-sans text-lg font-semibold text-main-text">{waysTitle}</h3>
+      )}
 
       <div className="grid gap-4 sm:grid-cols-3">
         {roles.map(({ key, title, description }, index) => {
