@@ -1,16 +1,16 @@
 // src/components/ui/Features.tsx
-// Zweck: "Eine Karte, eine Frage, ein Wiedersehen" — der Lernzyklus in drei Schritten, je mit kleiner Skizze.
+// Zweck: "Dein Weg, Karte für Karte" — Karte, Wahl, Wiederholung in drei Schritten, je mit kleiner Skizze.
 // Texte aus den Übersetzungen (features.*). Die Skizzen sind reine Illustration ohne Text und ohne Zahlen.
 
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { BookOpen, CircleHelp, Repeat, ChevronRight } from 'lucide-react';
+import { BookOpen, Signpost, Repeat, ChevronRight } from 'lucide-react';
 import { fadeUp, staggerList } from '../../lib/motion';
 
 type Step = { title: string; desc: string; category: string };
 
-const ICONS = [BookOpen, CircleHelp, Repeat];
+const ICONS = [BookOpen, Signpost, Repeat];
 
 // Skizze 1: eine Karte mit Überschrift, Text und einem Verweis
 function SketchCard() {
@@ -28,24 +28,24 @@ function SketchCard() {
   );
 }
 
-// Skizze 2: eine Frage mit drei Antworten, eine davon gewählt
-function SketchQuestion() {
+// Skizze 2: das Ende einer Karte, darunter drei Kacheln nebeneinander, eine davon gewählt
+function SketchChoice() {
   return (
-    <div className="mx-auto w-40 space-y-1.5" aria-hidden="true">
-      <div className="mb-2 h-2.5 w-4/5 rounded-full bg-primary/80" />
-      {[false, true, false].map((chosen, i) => (
-        <div
-          key={i}
-          className={`flex items-center gap-2 rounded-lg border px-2.5 py-1.5 ${
-            chosen ? 'border-soft-teal bg-soft-teal/10' : 'border-border bg-white'
-          }`}
-        >
-          <span className={`flex h-3.5 w-3.5 items-center justify-center rounded-full border ${chosen ? 'border-soft-teal bg-soft-teal' : 'border-border'}`}>
-            {chosen && <span className="h-1.5 w-1.5 rounded-full bg-white" />}
-          </span>
-          <span className="h-1.5 flex-1 rounded-full bg-border" />
-        </div>
-      ))}
+    <div className="mx-auto w-44" aria-hidden="true">
+      <div className="mb-1.5 h-1.5 w-full rounded-full bg-border" />
+      <div className="mb-3 h-1.5 w-3/5 rounded-full bg-border" />
+      <div className="grid grid-cols-3 gap-1.5">
+        {[false, true, false].map((chosen, i) => (
+          <div
+            key={i}
+            className={`flex h-12 flex-col justify-end rounded-lg border p-1.5 ${
+              chosen ? 'border-soft-teal bg-soft-teal/10 ring-2 ring-soft-teal/25' : 'border-border bg-white'
+            }`}
+          >
+            <span className={`h-1.5 w-full rounded-full ${chosen ? 'bg-soft-teal' : 'bg-border'}`} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -66,7 +66,7 @@ function SketchReturn() {
   );
 }
 
-const SKETCHES = [SketchCard, SketchQuestion, SketchReturn];
+const SKETCHES = [SketchCard, SketchChoice, SketchReturn];
 
 const Features = () => {
   const { t } = useTranslation();

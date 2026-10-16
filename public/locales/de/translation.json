@@ -144,22 +144,22 @@
     ]
   },
   "features": {
-    "title": "Eine Karte, eine Frage, ein Wiedersehen",
-    "subtitle": "Der Weg entsteht beim Gehen. Unter jeder Karte stehen Weiterführungen statt einer Kapitelliste. Welche das sind, hängt daran, wie die Karten untereinander verlinkt sind — und daran, wohin du bisher gegangen bist.",
+    "title": "Dein Weg, Karte für Karte",
+    "subtitle": "Einen festen Weg gibt es nicht. Er entsteht mit jeder Karte, die du aufschlägst.",
     "items": [
       {
         "title": "Karte",
-        "desc": "Ein Gedanke, ganzer Bildschirm. Kein Kapitel, durch das du scrollst.",
+        "desc": "Eine Sache, erklärt. Darunter stehen die nächsten Karten zur Wahl.",
         "category": "1"
       },
       {
-        "title": "Frage",
-        "desc": "Zu einer Karte gehören Fragen.",
+        "title": "Wahl",
+        "desc": "Etwa Vertiefen, Weiter oder Überrasch mich: Du wählst. Angeboten wird, was noch offen ist.",
         "category": "2"
       },
       {
-        "title": "Wiedersehen",
-        "desc": "Was sitzt, kommt später wieder. Was wackelt, kommt früher.",
+        "title": "Wiederholung",
+        "desc": "Falsch beantwortet: am nächsten Tag wieder. Was sitzt, erst später.",
         "category": "3"
       }
     ]
