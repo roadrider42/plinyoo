@@ -1,0 +1,146 @@
+{
+  "slug": "dalrymple-anarchie",
+  "draft": false,
+  "autor": "William Dalrymple",
+  "titel": "Anarchie",
+  "untertitel": "Der verhängnisvolle Aufstieg der East India Company. 1600–1874",
+  "uebersetzer": "Cornelius Hartz",
+  "verlag": "Verlag C.H.Beck",
+  "erschienen": "20. März 2026",
+  "isbn": "978-3-406-83440-0",
+  "leitfrage": "Wie wurde aus einer Londoner Handelsgesellschaft der Herrscher über große Teile Indiens?",
+  "einordnung": "William Dalrymple erzählt, wie die East India Company vom Handelsunternehmen zur Macht auf dem Subkontinent wurde. Wir nehmen das Buch zum Anlass, einzelne Stationen dieser Geschichte mit eigenen Quellen aufzuschlüsseln — als Lernkarten mit Fragen und Belegen.",
+  "kartenIntro": "Die Karten stützen sich auf Quellen außerhalb des Buchs (Archive, Hochschulen, Fachlexika) und nennen sie einzeln. Du bekommst sie, wenn wir dich einladen.",
+  "karten": [
+    "Pfeffer: von 3 auf 8 Schilling",
+    "Das Handelsmonopol von 1600",
+    "Das Startkapital: 125 Anteilseigner",
+    "Wer war die erste Aktiengesellschaft?",
+    "Aus Handel wird Hoheit",
+    "Das Verbot indischer Baumwolle",
+    "Die Diwani von 1765",
+    "Die Armee der Company",
+    "Die Hungersnot von 1769/70",
+    "Wie sicher ist die Zahl?",
+    "1772: Die Company braucht Hilfe",
+    "Das Ende der Monopole 1813 und 1833",
+    "1858 und 1874: Das Ende"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat zwei bis drei Fragen. Die Quellen liegen außerhalb des Buchs.",
+  "verlagUrl": "https://www.chbeck.de/dalrymple-anarchie/product/38617938",
+  "leseprobeUrl": "https://cdn-assetservice.ecom-api.beck-shop.de/productattachment/readingsample/16052556/38617938_leseprobe%20anarchie.pdf",
+  "amazonUrl": "https://www.amazon.de/Anarchie-verh%C3%A4ngnisvolle-Aufstieg-Company-1600-1874/dp/340683440X?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=SBUDIQA74DI5&dib=eyJ2IjoiMSJ9.zA1UPTBywbQYuZIgBRxCuTrYOfMDL2P364200BPxycLHHZARUqLOd60XeAFTgDwa7aoisfGhwhXChnDFUXYC3W2yzAc3h4HqTLTi2QH4b8deCr8KFu4nQGEmoUBlWgEKszpSkFD19IX65wwAfrvI7tQLvOp6Y5rc6ztstbcaa1YWoCKKtOKa6PrzWgRirB997mNSudYHMF9Nm1NKVsYVkqRY-kSsMMRToupZ_AK2Quc.mw-X2rX_UKDcz1lozmi8NRnzZfirujXhAiwE0oaLIak&dib_tag=se&keywords=anarchie+buch&qid=1792160634&sprefix=anarchie+buch%2Cspecialty-aps%2C180&sr=8-1&linkCode=ll2&tag=hmiertzsch-21&linkId=9ded4ab67eede7440005cba1720d406e&ref_=as_li_ss_tl",
+  "cover": "cover.jpg",
+  "coverCredit": "Cover: © Verlag C.H.Beck",
+  "naechsteWoche": "",
+  "proben": [
+    {
+      "titel": "Pfeffer wurde teurer, und London gründete eine Company: von 3 auf 8 Schilling je Pfund",
+      "karte": "Die Niederländer hatten ein praktisches Monopol auf den Handel mit den Gewürzinseln und hoben den Preis für Pfeffer von 3 auf 8 Schilling je Pfund. Die englische East India Company entstand laut Britannica von 1911, um mit den niederländischen Kaufleuten zu konkurrieren.",
+      "frage": "Ein Händler kann ein Gewürz nur bei einem einzigen marktbeherrschenden Anbieter kaufen. Was droht ihm?",
+      "anzahlFragen": 3,
+      "optionen": [
+        {
+          "text": "Der Preis fällt, weil der Anbieter mehr verkaufen und Kunden halten will",
+          "ok": false,
+          "fb": "Die Quelle nennt für den Pfeffer unter dem Monopol eine Preiserhöhung, keinen Preisrückgang."
+        },
+        {
+          "text": "Nichts, denn auch ein Monopol hat keinerlei Einfluss auf die Preise",
+          "ok": false,
+          "fb": "Die Quelle zeigt das Gegenteil: Unter dem Monopol stieg der Pfefferpreis."
+        },
+        {
+          "text": "Der Anbieter kann den Preis anheben, wie beim Pfeffer von 3 auf 8 Schilling",
+          "ok": true,
+          "fb": "Richtig: Unter ihrem praktischen Monopol hoben die Niederländer laut Quelle den Pfefferpreis an."
+        },
+        {
+          "text": "Er erhält vom Anbieter automatisch einen Mengenrabatt auf jede Lieferung",
+          "ok": false,
+          "fb": "Davon steht in der Quelle nichts; genannt wird die Preiserhöhung."
+        }
+      ],
+      "beleg": "who had obtained a practical monopoly of the trade with the Spice Islands",
+      "belegDe": "die ein praktisches Monopol auf den Handel mit den Gewürzinseln erlangt hatten",
+      "quelle": {
+        "titel": "East India Company, in: Encyclopaedia Britannica, 11. Auflage (1911)",
+        "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/East_India_Company",
+        "herausgeber": "Wikisource (gemeinfreier Text von 1911)",
+        "abgerufen": "2026-10-16"
+      }
+    },
+    {
+      "titel": "Wer war die erste Aktiengesellschaft? Die VOC von 1602 war „eine der ersten“",
+      "karte": "Die niederländische Ostindien-Kompanie (VOC) wurde am 20. März 1602 gegründet: Die Generalstaaten legten bestehende Gesellschaften zusammen. Sie erhielt ein Handelsmonopol für 21 Jahre. Anteile konnte jeder Bürger der Republik kaufen, und sie wurden auf offenen Sekundärmärkten gehandelt. Wikipedia nennt sie „eine der ersten“ Joint-Stock-Gesellschaften der Welt.",
+      "frage": "Ein Bürger der Republik will 1603 Teilhaber der VOC werden. Wer durfte Anteile kaufen?",
+      "anzahlFragen": 3,
+      "optionen": [
+        {
+          "text": "Mitglieder der Generalstaaten und deren Familien",
+          "ok": false,
+          "fb": "Die Quelle nennt jeden Bürger, nicht nur Mitglieder der Generalstaaten."
+        },
+        {
+          "text": "Adlige mit Landbesitz in den Provinzen",
+          "ok": false,
+          "fb": "Von einer Beschränkung auf Adlige steht in der Quelle nichts; genannt wird jeder Bürger."
+        },
+        {
+          "text": "Jeder Bürger der Niederländischen Republik",
+          "ok": true,
+          "fb": "Richtig: Laut Wikipedia stand der Kauf von Anteilen jedem Bürger der Republik offen."
+        },
+        {
+          "text": "Nur Kaufleute aus Amsterdam und Middelburg",
+          "ok": false,
+          "fb": "Von einer Beschränkung auf Amsterdamer Kaufleute steht in der Quelle nichts; genannt wird jeder Bürger."
+        }
+      ],
+      "beleg": "Shares in the company could be purchased by any citizen of the Dutch Republic.",
+      "belegDe": "Anteile an der Gesellschaft konnte jeder Bürger der Niederländischen Republik kaufen.",
+      "quelle": {
+        "titel": "Dutch East India Company",
+        "url": "https://en.wikipedia.org/wiki/Dutch_East_India_Company",
+        "herausgeber": "Wikipedia (mit Fachliteratur belegt)",
+        "abgerufen": "2026-10-16"
+      }
+    },
+    {
+      "titel": "Die Diwani von 1765: Die Company zieht in Bengalen, Bihar und Orissa die Landsteuer ein",
+      "karte": "Nach der Schlacht von Buxar (1764/65) übertrug der Mogulkaiser Shah Alam II. der East India Company die Diwani: das Recht, die Landsteuer in Bengalen, Bihar und Orissa einzuziehen. Die Zeitleiste der Quelle nennt den 12. August 1765. Die Quelle nennt das einen großen Schritt: Er sicherte der Company reichlich Mittel, um Händler, Stützpunkte, Armeen und Schiffe auszubauen und zu schützen.",
+      "frage": "Ein Bauer in Bihar zahlt 1766 seine Abgabe auf das Land. An wen geht sie nun?",
+      "anzahlFragen": 3,
+      "optionen": [
+        {
+          "text": "An den Gouverneur der Krone in London",
+          "ok": false,
+          "fb": "Die Quelle nennt die Company als Inhaberin des Einzugsrechts, nicht einen Gouverneur der Krone."
+        },
+        {
+          "text": "An das Parlament in London",
+          "ok": false,
+          "fb": "Die Quelle nennt die Company als Inhaberin des Einzugsrechts, nicht das Parlament."
+        },
+        {
+          "text": "An die Handelskammer von Kalkutta",
+          "ok": false,
+          "fb": "Eine Handelskammer kommt in der Quelle nicht vor; das Recht erhielt die Company."
+        },
+        {
+          "text": "An die East India Company",
+          "ok": true,
+          "fb": "Richtig: Das Recht, die Landsteuer in Bihar einzuziehen, lag seit 1765 bei der Company."
+        }
+      ],
+      "beleg": "awarded the EIC the right to collect land revenue (dewani) in Bengal, Bihar, and Orissa.",
+      "belegDe": "[Shah Alam II.] sprach der Company das Recht zu, in Bengalen, Bihar und Orissa die Landsteuer (Diwani) einzuziehen.",
+      "quelle": {
+        "titel": "East India Company (Mark Cartwright)",
+        "url": "https://www.worldhistory.org/East_India_Company/",
+        "herausgeber": "World History Encyclopedia, 27.09.2022",
+        "abgerufen": "2026-10-16"
+      }
+    }
+  ]
+}

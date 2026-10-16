@@ -71,24 +71,23 @@
     }
   },
   "roles": {
-    "title": "Two interests, one place",
-    "intro": "Trainers want a well-trained team. Those on the team want to learn what moves them forward. Both meet here.",
-    "waysTitle": "Four ways in",
-    "follower": {
-      "title": "Play along",
-      "description": "Your trainer invites you. You follow the content they have ready for you — and see your progress."
-    },
+    "srTitle": "Who plinyoo is for",
+    "roleLabel": "Role",
+    "cta": "Request access",
     "learner": {
-      "title": "Discover",
-      "description": "Browse public topics, learn at your own pace and see your progress."
-    },
-    "author": {
-      "title": "Create your own",
-      "description": "Write and link your own cards, have questions generated, pull in content from Wikipedia — and learn with them."
+      "title": "Want to learn?",
+      "role": "Learner",
+      "description": "Learn what moves you forward — your way. Every card you know becomes a star in your universe."
     },
     "curator": {
-      "title": "Lead",
-      "description": "You curate a topic — as a content provider who shares knowledge, or as a trainer who invites and guides your own team via a link."
+      "title": "Want to make the world smarter?",
+      "role": "Curator",
+      "description": "Your knowledge deserves an audience. You write cards and develop topics that you share with followers, and so you make the world a smarter and better place."
+    },
+    "wegbereiter": {
+      "title": "Do you lead a team?",
+      "role": "Wegbereiter (path opener)",
+      "description": "Your team gets good because everyone learns what matters to them. You open a topic and bring people in by link. We believe: those who choose their own path also understand the mandatory programme better."
     }
   },
   "howItWorks": {
@@ -309,8 +308,8 @@
       "role_placeholder": "Please choose",
       "role_options": {
         "learner": "Learner",
-        "trainer": "Trainer with my own team",
-        "provider": "Content provider",
+        "curator": "Curator — I want to share knowledge",
+        "wegbereiter": "Wegbereiter (path opener) — I lead a team",
         "other": "Something else"
       },
       "message_label": "What do you want to achieve with plinyoo?",

@@ -67,28 +67,27 @@
     },
     "mission": {
       "title": "Mission",
-      "text": "Wir machen Wissen so zugänglich, dass der Weg von hier nach dort so wenig Zeit kostet wie möglich — und Trainer und Mannschaft dabei auf derselben Seite stehen."
+      "text": "Wir machen Wissen so zugänglich, dass der Weg von hier nach dort so wenig Zeit kostet wie möglich — und wer ein Team führt und wer im Team lernt, dabei auf derselben Seite stehen."
     }
   },
   "roles": {
-    "title": "Zwei Interessen, ein Platz",
-    "intro": "Trainer wollen eine gut ausgebildete Mannschaft. Wer in der Mannschaft spielt, will lernen, was ihn weiterbringt. Beides trifft sich hier.",
-    "waysTitle": "Vier Wege hinein",
-    "follower": {
-      "title": "Mitspielen",
-      "description": "Dein Trainer lädt dich ein. Du folgst den Inhalten, die er für dich bereithält, und siehst deinen Fortschritt."
-    },
+    "srTitle": "Für wen plinyoo gedacht ist",
+    "roleLabel": "Rolle",
+    "cta": "Zugang anfragen",
     "learner": {
-      "title": "Entdecken",
-      "description": "Du stöberst in öffentlichen Themen, lernst in deinem Tempo und siehst deinen Fortschritt."
-    },
-    "author": {
-      "title": "Selbst gestalten",
-      "description": "Du schreibst und verlinkst eigene Karten, lässt Fragen dazu erzeugen, holst Inhalte aus Wikipedia — und lernst damit."
+      "title": "Du willst lernen?",
+      "role": "Lernende:r",
+      "description": "Lern, was dich weiterbringt — auf deinem Weg. Jede Karte, die du kannst, wird ein Stern in deinem Universum."
     },
     "curator": {
-      "title": "Anleiten",
-      "description": "Du kuratierst ein Thema — als Inhaltsanbieter, der Wissen bereitstellt, oder als Trainer mit eigener Mannschaft, die du per Link einlädst."
+      "title": "Du willst die Welt klüger machen?",
+      "role": "Kurator:in",
+      "description": "Dein Wissen verdient ein Publikum. Du schreibst Karten, entwickelst Themen, die du mit Followern teilst, und machst die Welt so zu einem schlaueren und besseren Ort."
+    },
+    "wegbereiter": {
+      "title": "Du führst ein Team?",
+      "role": "Wegbereiter:in",
+      "description": "Dein Team wird gut, weil jede:r lernt, was für sie oder ihn wichtig ist. Du machst ein Thema auf und holst Leute per Link dazu. Wir glauben: Wer den eigenen Weg wählt, versteht auch das Pflichtprogramm besser."
     }
   },
   "howItWorks": {
@@ -431,7 +430,7 @@
     "items": [
       {
         "q": "Für wen ist plinyoo?",
-        "a": "Für alle, die lernen oder Wissen weitergeben — allein, mit einem Trainer oder in einer ganzen Mannschaft."
+        "a": "Für alle, die lernen oder Wissen weitergeben — allein, als Teil eines Teams oder als jemand, der ein Team führt."
       },
       {
         "q": "Wie lerne ich mit plinyoo?",
@@ -561,8 +560,8 @@
       "role_placeholder": "Bitte wählen",
       "role_options": {
         "learner": "Lernende:r",
-        "trainer": "Trainer:in mit eigener Mannschaft",
-        "provider": "Inhaltsanbieter:in",
+        "curator": "Kurator:in — ich will Wissen weitergeben",
+        "wegbereiter": "Wegbereiter:in — ich führe ein Team",
         "other": "Etwas anderes"
       },
       "message_label": "Was möchtest du mit plinyoo erreichen?",
@@ -610,7 +609,7 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "stand": "Stand: 2025",
+    "stand": "Stand: Oktober 2026",
     "intro": "Diese Website wird privat betrieben. Es werden keine personenbezogenen Daten zu Marketing- oder Analysezwecken verarbeitet.",
     "serverLogfiles": {
       "title": "Server-Logfiles",
@@ -618,11 +617,15 @@
     },
     "cookiesTracking": {
       "title": "Cookies & Tracking",
-      "text": "Es werden keine Cookies gesetzt, die nicht für den technischen Betrieb erforderlich sind. Es kommen keine Tracking- oder Analyse-Tools (z. B. Google Analytics) zum Einsatz."
+      "text": "Es werden keine Cookies gesetzt, die nicht für den technischen Betrieb erforderlich sind. Zur Reichweitenmessung nutzen wir Plausible Analytics (plausible.io), eine Statistik ohne Cookies und ohne Profilbildung über einzelne Besucher. Google Analytics kommt nicht zum Einsatz."
     },
     "embeddedContent": {
       "title": "Eingebettete Inhalte",
       "text": "Sofern zukünftig eingebettete Inhalte Dritter (z. B. YouTube-Videos, Karten) verwendet werden, können diese Daten an den jeweiligen Anbieter übermitteln. In diesem Fall wird die Datenschutzerklärung entsprechend ergänzt."
+    },
+    "affiliate": {
+      "title": "Partnerlinks (Amazon)",
+      "text": "Auf einzelnen Buchseiten verlinken wir auf Produktseiten bei Amazon. Das sind Partnerlinks: Wenn du darüber etwas kaufst, erhalten wir eine Provision; für dich ändert sich der Preis nicht. Folgst du einem solchen Link, werden Daten an Amazon übertragen, Amazon kann Cookies setzen und erkennt, dass du über unsere Seite kommst. Dafür ist Amazon verantwortlich; Näheres steht in der Datenschutzerklärung von Amazon. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen."
     },
     "contact": {
       "title": "Kontakt",

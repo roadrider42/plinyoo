@@ -1,7 +1,8 @@
 // src/routes/AppRoutes.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createHashRouter, Navigate, Outlet, useLocation } from 'react-router-dom';
 import ScrollToTop from '@/components/ScrollToTop';
+import { rememberKampagne } from '@/lib/kampagne';
 import AppLayout from '@/components/layout/AppLayout';
 
 // Import pages
@@ -18,6 +19,11 @@ import ZugangPage from '@/pages/Zugang/ZugangPage';
 const RootLayout = () => {
   const location = useLocation();
   const isHome = location.pathname === "/";
+
+  // Herkunft (Buchseite, Kanal) beim ersten Besuch merken, damit /zugang sie später mitschicken kann
+  useEffect(() => {
+    rememberKampagne();
+  }, []);
 
   return (
     <AppLayout showHeader={!isHome} fullWidth={isHome}>

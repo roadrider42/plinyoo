@@ -68,10 +68,11 @@
     <title>plinyoo</title>
 
     <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.io/js/pa-BExshcIVsLWvd6N5xURiI.js"></script>
+    <script async src="https://plausible.io/js/pa--uQFBayBpH0z77zfdWY78.js"></script>
     <script>
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
+      // Die Website nutzt einen Hash-Router (/#/zugang): ohne diese Option zählt Plausible jede Seite als "/".
+      plausible.init({ hashBasedRouting: true })
     </script>
   </head>
   <body>
