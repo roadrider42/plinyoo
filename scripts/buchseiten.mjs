@@ -51,18 +51,84 @@ const SCHRITTE = [
   { titel: 'Karte für Karte', text: 'Lies, antworte, sammle Sterne. Weitere Bücher folgen.' },
 ];
 
-// Gleichmäßig verteiltes Sternbild: gleicher Slug, gleiches Bild bei jedem Bau.
-function sternbild(slug, n) {
+// Sternenfeld: Jede Karte ist ein Stern, die Linien sind die Verweise zwischen den Karten (aus den Karten selbst),
+// dahinter eine Wolke weiteren Wissens. Der Besucher zeichnet seinen eigenen Weg von Stern zu Stern.
+// Anordnung: Federmodell (Fruchterman-Reingold), deterministisch aus dem Slug, damit jeder Bau dasselbe Bild ergibt.
+function seedRnd(slug) {
   let seed = [...slug].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7);
-  const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
-  const W = 600, H = 200;
-  const pts = Array.from({ length: n }, (_, i) => ({
-    x: Math.round(50 + (i / Math.max(n - 1, 1)) * (W - 100) + (rnd() - 0.5) * 40),
-    y: Math.round(40 + rnd() * (H - 80)),
+  return () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+}
+
+function anordnung(slug, n, kanten, W, H) {
+  const rnd = seedRnd(slug);
+  const pos = Array.from({ length: n }, (_, i) => {
+    const w = (i / n) * Math.PI * 2;
+    const r = 90 + rnd() * 90;
+    return { x: W / 2 + Math.cos(w) * r, y: H / 2 + Math.sin(w) * r * 0.7 };
+  });
+  const k = Math.sqrt((W * H) / n) * 0.62;
+  for (let it = 0; it < 500; it++) {
+    const t = 70 * (1 - it / 500) + 0.5;
+    const f = pos.map(() => ({ x: 0, y: 0 }));
+    for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) {
+      let dx = pos[i].x - pos[j].x, dy = pos[i].y - pos[j].y;
+      const d = Math.max(Math.hypot(dx, dy), 1);
+      const rep = (k * k) / d;
+      dx /= d; dy /= d;
+      f[i].x += dx * rep; f[i].y += dy * rep; f[j].x -= dx * rep; f[j].y -= dy * rep;
+    }
+    for (const [a, b] of kanten) {
+      let dx = pos[a].x - pos[b].x, dy = pos[a].y - pos[b].y;
+      const d = Math.max(Math.hypot(dx, dy), 1);
+      const att = (d * d) / k;
+      dx /= d; dy /= d;
+      f[a].x -= dx * att; f[a].y -= dy * att; f[b].x += dx * att; f[b].y += dy * att;
+    }
+    for (let i = 0; i < n; i++) {
+      f[i].x += (W / 2 - pos[i].x) * 0.35; f[i].y += (H / 2 - pos[i].y) * 0.5; // sanfte Schwerkraft zur Mitte
+      const m = Math.max(Math.hypot(f[i].x, f[i].y), 1);
+      pos[i].x += (f[i].x / m) * Math.min(m, t);
+      pos[i].y += (f[i].y / m) * Math.min(m, t);
+    }
+  }
+  // auf die Fläche einpassen
+  const xs = pos.map((p) => p.x), ys = pos.map((p) => p.y);
+  const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
+  const mx = 70, my = 60;
+  return pos.map((p) => ({
+    x: Math.round(mx + ((p.x - x0) / Math.max(x1 - x0, 1)) * (W - 2 * mx)),
+    y: Math.round(my + ((p.y - y0) / Math.max(y1 - y0, 1)) * (H - 2 * my)),
   }));
-  const lines = pts.slice(1).map((p, i) => `<line x1="${pts[i].x}" y1="${pts[i].y}" x2="${p.x}" y2="${p.y}"/>`).join('');
-  const stars = pts.map((p) => `<circle cx="${p.x}" cy="${p.y}" r="6"/>`).join('');
-  return `<svg class="stars" viewBox="0 0 ${W} ${H}" role="img" aria-label="Sternbild: ${n} Karten, untereinander verbunden"><g class="l">${lines}</g><g class="s">${stars}</g></svg>`;
+}
+
+function universum(b) {
+  const knoten = b.knoten ?? [];
+  const kanten = (b.kanten ?? []).map(([x, y, t]) => [x, y, t]);
+  const W = 800, H = 420;
+  const pos = anordnung(b.slug, knoten.length, kanten, W, H);
+  const rnd = seedRnd(b.slug + '-wolke');
+  // Wolke weiteren Wissens: schwache Punkte ohne Verbindung, nicht auf den Karten-Sternen
+  const wolke = [];
+  while (wolke.length < 110) {
+    const x = Math.round(rnd() * W), y = Math.round(rnd() * H);
+    if (pos.some((p) => Math.hypot(p.x - x, p.y - y) < 34)) continue;
+    wolke.push(`<circle cx="${x}" cy="${y}" r="${(0.9 + rnd() * 1.5).toFixed(1)}" opacity="${(0.25 + rnd() * 0.45).toFixed(2)}"/>`);
+  }
+  const kantenSvg = kanten.map(([x, y, t], i) =>
+    `<line class="e ${t}" data-a="${x}" data-b="${y}" x1="${pos[x].x}" y1="${pos[x].y}" x2="${pos[y].x}" y2="${pos[y].y}"/>`).join('');
+  const sterne = knoten.map((k, i) =>
+    `<g class="n" data-i="${i}" tabindex="0" role="button" aria-label="Karte: ${esc(k.titel)}" transform="translate(${pos[i].x} ${pos[i].y})"><circle class="hit" r="24"/><circle class="k" r="8"/><text y="26" x="${pos[i].x > W - 190 ? 14 : pos[i].x < 190 ? -14 : 0}" text-anchor="${pos[i].x > W - 190 ? 'end' : pos[i].x < 190 ? 'start' : 'middle'}">${esc(k.titel)}</text></g>`).join('');
+  const daten = JSON.stringify({ titel: knoten.map((k) => k.titel), kanten: kanten.map(([x, y]) => [x, y]) });
+  return `<div class="uni" id="uni">
+  <div class="uniscroll"><svg viewBox="0 0 ${W} ${H}" role="group" aria-label="Sternenfeld: ${knoten.length} Karten und ihre Verweise. Mit Tab und Eingabetaste lässt sich ein Weg von Karte zu Karte bilden.">
+    <g class="wolke">${wolke.join('')}</g>
+    <g class="kanten">${kantenSvg}</g>
+    <g class="sterne">${sterne}</g>
+  </svg></div>
+  <p class="weg" id="weg" aria-live="polite">Tippe einen Stern an, um deinen Weg zu beginnen.</p>
+  <p class="wegtools"><button type="button" class="teilen" id="wegreset" hidden>Neu beginnen</button></p>
+  <script type="application/json" id="uni-daten">${daten.replace(/</g, '\\u003c')}</script>
+</div>`;
 }
 
 // "So sehen Lernkarten aus" — Konzept von future-space.plinyoo.com: echte Karten, je eine ihrer Fragen,
@@ -180,9 +246,30 @@ figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:6px}
 .schritt{counter-increment:s}
 .schritt h3::before{content:counter(s);display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;margin-right:10px;border-radius:50%;background:var(--graphite);color:#fff;font-size:14px}
 .schritte{counter-reset:s}
-.stars{display:block;width:100%;height:auto;background:var(--mist);border-radius:14px}
-.stars .l line{stroke:#9CC7CA;stroke-width:1.5}
-.stars .s circle{fill:var(--teal)}
+.uni{background:var(--graphite);border-radius:14px;padding:10px 10px 4px}
+.uniscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.uni svg{display:block;width:100%;height:auto}
+@media(max-width:719px){.uni svg{min-width:620px}.uni .n .hit{transform:scale(1.35);transform-box:fill-box;transform-origin:center}}
+.uni .wolke circle{fill:#9FB6C2}
+.uni .e{stroke:#4C7A82;stroke-width:1.3;opacity:.75}
+.uni .e.voraussetzung{stroke-width:1.8}
+.uni .e.weg{stroke:var(--amber);stroke-width:3.2;opacity:1}
+.uni .n{cursor:pointer;outline:none}
+.uni .n .hit{fill:transparent}
+.uni .n .k{fill:#BDE3E6;transition:fill .2s,r .2s;filter:drop-shadow(0 0 5px rgba(160,215,220,.55))}
+.uni .n:hover .k,.uni .n:focus-visible .k{fill:#fff;r:10}
+.uni .n:focus-visible .hit{stroke:#fff;stroke-width:1.5}
+.uni .n.besucht .k{fill:var(--amber);filter:drop-shadow(0 0 7px rgba(227,167,47,.8))}
+.uni .n.nachbar .k{stroke:var(--amber);stroke-width:2.5;animation:puls 1.6s ease-in-out infinite}
+.uni .n text{display:none;fill:#E6F0EF;font-size:13px;pointer-events:none}
+.uni .weg{margin:8px 6px 4px;color:#E6F0EF;font-size:16px;min-height:3.2em}
+.uni .wegtools{margin:0 6px 8px}
+.uni .teilen{color:#BDE3E6}
+@keyframes puls{50%{stroke-opacity:.25}}
+@media(prefers-reduced-motion:reduce){.uni .n.nachbar .k{animation:none}}
+@media(min-width:720px){.uni .n.besucht text,.uni .n:hover text,.uni .n:focus-visible text{display:block}}
+details.liste{margin-top:14px;border:0;padding:0}
+details.liste summary{font-weight:500;font-size:15px;color:var(--muted)}
 ol.karten{margin:14px 0 0;padding-left:22px}
 ol.karten li{margin:4px 0}
 .status{font-size:13px;color:var(--muted);margin-top:8px}
@@ -226,7 +313,8 @@ details p{margin:10px 0 0;color:var(--muted)}
 .teilen-zeile{margin:22px 0 0;font-size:15px}
 .teilen{background:none;border:0;padding:0;font:inherit;color:#fff;text-decoration:underline;cursor:pointer}
 footer{padding:22px 0 30px;font-size:14px;color:var(--muted)}
-footer a{margin-right:14px;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:6px 14px}
+footer a{color:var(--muted)}
 @media(min-width:768px){
 body{font-size:18px}
 .meta{font-size:16px}
@@ -285,9 +373,12 @@ ${probeAbschnitt(b.proben)}
 </div></section>
 
 <section class="sek" aria-labelledby="karten-h"><div class="wrap">
-  <h2 id="karten-h">${karten.length} Karten zum Buch</h2>
-  ${sternbild(b.slug, karten.length)}
-  <ol class="karten">${karten.map((k) => `<li>${esc(k)}</li>`).join('')}</ol>
+  <h2 id="karten-h">${karten.length} Karten, viele Wege</h2>
+  <p class="lead">Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht: So erschließt du dir deinen eigenen Teil des Universums.</p>
+  ${universum(b)}
+  <details class="liste"><summary>Alle ${karten.length} Karten als Liste</summary>
+    <ol class="karten">${karten.map((k) => `<li>${esc(k)}</li>`).join('')}</ol>
+  </details>
   ${b.kartenStatus ? `<p class="status">${esc(b.kartenStatus)}</p>` : ''}
   <p class="status">${esc(b.kartenIntro)}</p>
 </div></section>
@@ -353,6 +444,52 @@ ${probeAbschnitt(b.proben)}
       });
     });
   });
+  // Sternenfeld: Weg von Stern zu Stern entlang der Verweise
+  (function(){
+    var uni=document.getElementById('uni'); if(!uni)return;
+    var D=JSON.parse(document.getElementById('uni-daten').textContent);
+    var sterne=uni.querySelectorAll('.n'), linien=uni.querySelectorAll('.e');
+    var status=document.getElementById('weg'), reset=document.getElementById('wegreset');
+    var nb=D.titel.map(function(){return []});
+    D.kanten.forEach(function(k){nb[k[0]].push(k[1]);nb[k[1]].push(k[0]);});
+    var scroller=uni.querySelector('.uniscroll');
+    if(scroller)scroller.scrollLeft=(scroller.scrollWidth-scroller.clientWidth)/2;
+    var weg=[], gemeldet=false;
+    function titel(i){return D.titel[i];}
+    function zeichne(){
+      var cur=weg.length?weg[weg.length-1]:-1;
+      sterne.forEach(function(g){
+        var i=+g.getAttribute('data-i');
+        g.classList.toggle('besucht',weg.indexOf(i)>-1);
+        g.classList.toggle('nachbar',cur>-1&&nb[cur].indexOf(i)>-1&&weg.indexOf(i)<0);
+      });
+      linien.forEach(function(l){
+        var a=+l.getAttribute('data-a'),b=+l.getAttribute('data-b'),ia=weg.indexOf(a),ib=weg.indexOf(b);
+        l.classList.toggle('weg',ia>-1&&ib>-1&&Math.abs(ia-ib)===1);
+      });
+      reset.hidden=weg.length===0;
+      if(cur<0){status.textContent='Tippe einen Stern an, um deinen Weg zu beginnen.';return;}
+      var weiter=nb[cur].filter(function(i){return weg.indexOf(i)<0}).map(titel);
+      status.textContent='Dein Weg: '+weg.map(titel).join(' → ')+'. '+
+        (weiter.length?'Von hier führt es weiter zu: '+weiter.join(', ')+'. Tippe einen leuchtenden Stern an.':'Hier endet dieser Weg. Geh zurück zu einem früheren Stern oder beginne neu.');
+    }
+    function waehle(i){
+      var cur=weg.length?weg[weg.length-1]:-1;
+      var pos=weg.indexOf(i);
+      if(cur<0){weg=[i];}
+      else if(pos>-1){weg=weg.slice(0,pos+1);}
+      else if(nb[cur].indexOf(i)>-1){weg.push(i);}
+      else{status.textContent='Von „'+titel(cur)+'" gibt es keinen direkten Verweis zu „'+titel(i)+'". Tippe einen leuchtenden Stern an.';return;}
+      zeichne();
+      if(!gemeldet&&window.plausible){gemeldet=true;window.plausible('Universum erkundet');}
+    }
+    sterne.forEach(function(g){
+      var i=+g.getAttribute('data-i');
+      g.addEventListener('click',function(){waehle(i)});
+      g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();waehle(i)}});
+    });
+    reset.addEventListener('click',function(){weg=[];zeichne();});
+  })();
   var w=document.getElementById('wasist');
   if(w)w.addEventListener('click',function(){if(window.plausible)window.plausible('Was ist plinyoo geklickt')});
   var t=document.getElementById('teilen');
