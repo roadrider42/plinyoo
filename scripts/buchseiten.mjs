@@ -206,7 +206,7 @@ function seite(b, mitCover) {
   const faq = [
     ['Stammen die Karten aus dem Buch?', `Nein. Die Karten stützen sich auf andere Quellen, jede Karte nennt ihre. Das Buch ist der Anlass, nicht die Vorlage.`],
     ['Muss ich etwas installieren?', 'Nein. plinyoo läuft im Browser, auch auf dem Telefon.'],
-    ['Was ist plinyoo?', 'Eine Lernplattform, auf der Wissen in Karten steckt, die aufeinander verweisen. Mehr dazu auf der <a href="/">Startseite</a>.'],
+    ['Was ist plinyoo?', 'Stell dir vor, alles, was ein Mensch weiß, wäre für jeden anderen begehbar: nicht als Kurs mit festem Gang, sondern als Landschaft, durch die man seinen eigenen Weg wählt. Das ist unser Ziel: Wissen von Kopf zu Kopf zu bringen, ohne dass der Weg dorthin länger, teurer oder dünner wird. plinyoo ist der erste Schritt. <a href="/">Mehr auf der Startseite</a>.'],
   ];
 
   return `<!doctype html>
@@ -355,7 +355,7 @@ details p{margin:10px 0 0;color:var(--muted)}
 .teilen{background:none;border:0;padding:0;font:inherit;color:#fff;text-decoration:underline;cursor:pointer}
 .lesetext{max-width:68ch}
 .lesetext p{margin:0 0 14px;line-height:1.65}
-.beitrag-fold{margin:2px 0 0;max-width:68ch;border-left:3px solid var(--line);padding:2px 0 2px 14px;border-bottom:0;font-size:17px}
+.beitrag-fold{margin:18px 0 0;max-width:68ch;border-left:3px solid var(--line);padding:2px 0 2px 14px;border-bottom:0;font-size:17px}
 @media(min-width:768px){.beitrag-fold{font-size:18px}}
 .beitrag-fold:first-of-type{border-top:0}
 .beitrag-fold summary{display:block;cursor:pointer;list-style:none;font-weight:400;color:var(--ink);font-size:1em;line-height:1.5}
@@ -410,7 +410,6 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
       <p class="meta"><strong>${esc(b.autor)}: ${esc(b.titel)}</strong> — ${esc(b.untertitel)}<br>
       ${b.uebersetzer ? `Aus dem Englischen von ${esc(b.uebersetzer)} · ` : ''}${esc(b.verlag)} · ${esc(b.erschienen)}${b.beitrag ? '' : ''}</p>
       <p class="lead">${esc(b.einordnung)}</p>
-      <p><a class="btn haupt" href="#karten-h">Karten ausprobieren ↓</a></p>
       ${beitragFalte(b.beitrag, b.titel, b.autor)}
     </div>
     ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="691" height="1063" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
@@ -453,10 +452,10 @@ ${kartenSektion(b)}
   <div class="kauf" aria-label="Bezugsquellen">
     <p class="meta">${esc(b.verlag)} · ISBN ${esc(b.isbn)}</p>
     <p>
-      <a class="btn" href="${esc(b.verlagUrl)}" rel="noopener">Beim Verlag ansehen</a>
-      <a class="btn" href="${esc(b.amazonUrl)}" rel="sponsored noopener" target="_blank">Bei Amazon bestellen<span class="anzeige">Anzeige</span></a>
+      <a class="btn" data-kauf="verlag" href="${esc(b.verlagUrl)}" rel="noopener">Beim Verlag ansehen</a>
+      <a class="btn" data-kauf="amazon" href="${esc(b.amazonUrl)}" rel="sponsored noopener" target="_blank">Bei Amazon bestellen<span class="anzeige">Anzeige</span></a>
     </p>
-    <p><a href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>
+    <p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>
     <p class="hinweis">Der Amazon-Link ist ein Partnerlink (Werbung). Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
   </div>
   ${b.naechsteWoche ? `<h2 style="margin-top:32px">Nächste Woche</h2><p>${esc(b.naechsteWoche)}</p>` : ''}
@@ -513,6 +512,12 @@ ${kartenSektion(b)}
     if(!ok&&gekonnt[i]){delete gekonnt[i];}
     stand();
   }
+  // Weitere Messpunkte (ohne Personenbezug): Beitrag geöffnet, Kauf-Link geklickt
+  var bf=document.querySelector('.beitrag-fold'), bfGemeldet=false;
+  if(bf)bf.addEventListener('toggle',function(){if(bf.open&&!bfGemeldet){bfGemeldet=true;ereignis('Beitrag geöffnet',{});}});
+  document.querySelectorAll('[data-kauf]').forEach(function(a){
+    a.addEventListener('click',function(){ereignis('Kauf-Link geklickt',{ziel:a.getAttribute('data-kauf')});});
+  });
   document.querySelectorAll('.frage').forEach(function(block){
     var k=block.closest('.kartek');
     var opts=block.querySelectorAll('.opt');
@@ -596,6 +601,7 @@ ${kartenSektion(b)}
   if(w)w.addEventListener('click',function(){if(window.plausible)window.plausible('Was ist plinyoo geklickt')});
   var t=document.getElementById('teilen');
   t.addEventListener('click',function(){
+    ereignis('Seite weitergegeben',{});
     var u=location.origin+location.pathname;
     if(navigator.share){navigator.share({title:document.title,url:u}).catch(function(){})}
     else if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){t.textContent='Link kopiert'})}
