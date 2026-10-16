@@ -32,7 +32,7 @@ const exists = async (p) => access(p).then(() => true, () => false);
 // Hier doppelt, weil die statischen Seiten keinen Zugriff auf die App-Texte haben.
 const TUEREN = [
   { rolle: 'learner', titel: 'Du willst lernen?', label: 'Lernende:r',
-    text: 'Lern, was dich weiterbringt — auf deinem Weg. Jede Karte, die du kannst, wird ein Stern in deinem Universum.' },
+    text: 'Lern, was dich weiterbringt — auf deinem Weg. Jede Karte, die du kannst, wird ein Stern in deinem Wissensuniversum.' },
   { rolle: 'curator', titel: 'Du willst die Welt klüger machen?', label: 'Kurator:in',
     text: 'Dein Wissen verdient ein Publikum. Du schreibst Karten, entwickelst Themen, die du mit Followern teilst, und machst die Welt so zu einem schlaueren und besseren Ort.' },
   { rolle: 'wegbereiter', titel: 'Du führst ein Team?', label: 'Wegbereiter:in',
@@ -41,7 +41,7 @@ const TUEREN = [
 
 const BEKOMMST = [
   { titel: 'Quellen unter jeder Karte', text: 'Jede Karte nennt ihre Quelle, und jede Frage belegt ihre Antwort mit einem Zitat. Du kannst alles gegenlesen.' },
-  { titel: 'Jede Karte wird ein Stern', text: 'Was du kannst, leuchtet in deinem Universum. Du siehst nicht, was dir noch fehlt, sondern was schon da ist.' },
+  { titel: 'Jede Karte wird ein Stern', text: 'Was du kannst, leuchtet in deinem Wissensuniversum. Du siehst nicht, was dir noch fehlt, sondern was schon da ist.' },
   { titel: 'Du gehst deinen Weg', text: 'Karten verweisen aufeinander, nicht auf einen Kursplan. Wohin du abbiegst, entscheidest du.' },
 ];
 
@@ -359,7 +359,7 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
 ${probeAbschnitt(b.proben)}
 
 <section class="sek" id="fuerwen" aria-labelledby="fuerwen-h"><div class="wrap">
-  <h2 id="fuerwen-h">Drei Rollen zur Erkundung des Lernuniversums</h2>
+  <h2 id="fuerwen-h">Drei Rollen zur Erkundung des Wissensuniversums</h2>
   <div class="karten3">
     ${TUEREN.map((t) => `<div class="k3"><p class="rl">${esc(t.label)}</p><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p><a class="weiter" data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">Zugang anfragen →</a></div>`).join('\n    ')}
   </div>
@@ -374,7 +374,7 @@ ${probeAbschnitt(b.proben)}
 
 <section class="sek" aria-labelledby="karten-h"><div class="wrap">
   <h2 id="karten-h">${karten.length} Karten, viele Wege</h2>
-  <p class="lead">Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht: So erschließt du dir deinen eigenen Teil des Universums.</p>
+  <p class="lead">Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht: So erschließt du dir deinen eigenen Teil des Wissensuniversums.</p>
   ${universum(b)}
   <details class="liste"><summary>Alle ${karten.length} Karten als Liste</summary>
     <ol class="karten">${karten.map((k) => `<li>${esc(k)}</li>`).join('')}</ol>
@@ -411,7 +411,7 @@ ${probeAbschnitt(b.proben)}
 
 <section class="abschluss" aria-labelledby="abschluss-h"><div class="wrap">
   <h2 id="abschluss-h">Du möchtest wissen, was hinter den Karten steckt?</h2>
-  <p>plinyoo ist die Lernplattform, auf der diese Karten laufen: Wissen in Karten, die aufeinander verweisen, und ein Universum, in dem jede gelernte Karte leuchtet.</p>
+  <p>plinyoo ist die Lernplattform, auf der diese Karten laufen: Wissen in Karten, die aufeinander verweisen, und ein Wissensuniversum, in dem jede gelernte Karte leuchtet.</p>
   <p><a class="btn haupt" data-zugang href="${zugang}">Zugang anfragen</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
   <p class="teilen-zeile">Schick es an jemanden, der es brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>
 </div></section>
@@ -481,7 +481,7 @@ ${probeAbschnitt(b.proben)}
       else if(nb[cur].indexOf(i)>-1){weg.push(i);}
       else{status.textContent='Von „'+titel(cur)+'" gibt es keinen direkten Verweis zu „'+titel(i)+'". Tippe einen leuchtenden Stern an.';return;}
       zeichne();
-      if(!gemeldet&&window.plausible){gemeldet=true;window.plausible('Universum erkundet');}
+      if(!gemeldet&&window.plausible){gemeldet=true;window.plausible('Wissensuniversum erkundet');}
     }
     sterne.forEach(function(g){
       var i=+g.getAttribute('data-i');

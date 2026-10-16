@@ -35,7 +35,7 @@
       {
         "step": "Star",
         "title": "Learned — one star.",
-        "text": "When all questions on a card were last answered correctly, it shines as a star in your universe."
+        "text": "When all questions on a card were last answered correctly, it shines as a star in your knowledge universe."
       }
     ]
   },
@@ -77,7 +77,7 @@
     "learner": {
       "title": "Want to learn?",
       "role": "Learner",
-      "description": "Learn what moves you forward — your way. Every card you know becomes a star in your universe."
+      "description": "Learn what moves you forward — your way. Every card you know becomes a star in your knowledge universe."
     },
     "curator": {
       "title": "Want to make the world smarter?",
@@ -115,7 +115,7 @@
       },
       {
         "title": "Your progress shines",
-        "desc": "Every card you’ve learned becomes a star in your universe."
+        "desc": "Every card you’ve learned becomes a star in your knowledge universe."
       },
       {
         "title": "One tool for all learning",

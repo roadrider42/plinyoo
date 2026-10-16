@@ -35,7 +35,7 @@
       {
         "step": "Stern",
         "title": "Gekonnt — ein Stern.",
-        "text": "Sind alle Fragen zu einer Karte zuletzt richtig beantwortet, leuchtet sie als Stern in deinem Universum."
+        "text": "Sind alle Fragen zu einer Karte zuletzt richtig beantwortet, leuchtet sie als Stern in deinem Wissensuniversum."
       }
     ]
   },
@@ -77,7 +77,7 @@
     "learner": {
       "title": "Du willst lernen?",
       "role": "Lernende:r",
-      "description": "Lern, was dich weiterbringt — auf deinem Weg. Jede Karte, die du kannst, wird ein Stern in deinem Universum."
+      "description": "Lern, was dich weiterbringt — auf deinem Weg. Jede Karte, die du kannst, wird ein Stern in deinem Wissensuniversum."
     },
     "curator": {
       "title": "Du willst die Welt klüger machen?",
@@ -115,7 +115,7 @@
       },
       {
         "title": "Dein Fortschritt leuchtet",
-        "desc": "Jede gelernte Karte wird ein Stern in deinem Universum."
+        "desc": "Jede gelernte Karte wird ein Stern in deinem Wissensuniversum."
       },
       {
         "title": "Ein Tool für alles Lernen",
@@ -381,7 +381,7 @@
       {
         "id": "lernfeld",
         "tag": "Ansicht",
-        "title": "Dein Ziel, dein Weg, dein Universum",
+        "title": "Dein Ziel, dein Weg, dein Wissensuniversum",
         "text": "Ein Blick auf das Lernfeld: Startseite mit Ziel, der Weg dorthin und der Rückblick mit deinen Sternen.",
         "images": [
           {
