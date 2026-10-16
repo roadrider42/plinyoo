@@ -131,43 +131,66 @@ function universum(b) {
 </div>`;
 }
 
-// "So sehen Lernkarten aus" — Konzept von future-space.plinyoo.com: echte Karten, je eine ihrer Fragen,
-// nach dem Antippen Rückmeldung, Beleg aus der Quelle und die Quellenzeile. Ohne JavaScript steht alles gleich da.
-function probeBlock(p, nr) {
-  const richtig = p.optionen.find((o) => o.ok);
-  const q = p.quelle;
-  const id = `frage-${nr}`;
-  return `<div class="probe">
-  <article class="karte">
-    <p class="kl">Karte ${nr} von ${p.gesamt}</p>
-    <h3>${esc(p.titel)}</h3>
-    <p>${esc(p.karte)}</p>
-  </article>
-  <div class="frage">
-    <p class="fl">Eine der ${p.anzahlFragen} Fragen zu dieser Karte:</p>
-    <p class="ft" id="${id}">${esc(p.frage)}</p>
+// Karten zum Durchspielen — Konzept von future-space.plinyoo.com (echte Karte, Frage, Rückmeldung, Beleg, Quelle),
+// auf alle Karten des Buchs ausgedehnt: Jede Karte ist aufklappbar, jede Frage einzeln beantwortbar (mit "Nochmal versuchen").
+// Sind alle Fragen einer Karte richtig, leuchtet ihr Stern im Sternenfeld. Der Weg im Sternenfeld bestimmt die Reihenfolge:
+// Die Karten der angetippten Sterne stehen zuerst. Ohne JavaScript stehen Antworten und Belege gleich da.
+function frageBlock(f, i, j, gesamt) {
+  const richtig = f.optionen.find((o) => o.ok);
+  const id = `f-${i}-${j}`;
+  return `<div class="frage" data-f="${j}">
+    <p class="fl">Frage ${j + 1} von ${gesamt}</p>
+    <p class="ft" id="${id}">${esc(f.frage)}</p>
     <div class="opts" role="group" aria-labelledby="${id}">
-      ${p.optionen.map((o) => `<button type="button" class="opt" data-ok="${o.ok ? 1 : 0}" data-fb="${esc(o.fb)}">${esc(o.text)}</button>`).join('\n      ')}
+      ${f.optionen.map((o) => `<button type="button" class="opt" data-ok="${o.ok ? 1 : 0}" data-fb="${esc(o.fb)}">${esc(o.text)}</button>`).join('\n      ')}
     </div>
     <p class="rueck" aria-live="polite"></p>
     <div class="nachher">
-      <noscript><p class="ohnejs">Ohne JavaScript: Die richtige Antwort und der Beleg stehen gleich da, antippen lässt sich hier nichts.</p></noscript>
       <p><strong>Richtig:</strong> ${esc(richtig.text)}</p>
-      <p class="beleg"><span class="bl">Beleg aus der Quelle:</span> „${esc(p.beleg)}“<br><span class="de">(eigene Übersetzung: „${esc(p.belegDe)}“)</span></p>
+      <p class="beleg"><span class="bl">Beleg aus der Quelle:</span> „${esc(f.beleg)}“<br><span class="de">(eigene Übersetzung: „${esc(f.belegDe)}“)</span></p>
     </div>
-    <p class="quelle">Quelle: ${esc(q.titel)} — ${esc(q.herausgeber)}, abgerufen ${esc(q.abgerufen)}. <a href="${esc(q.url)}" rel="noopener">Zur Quelle</a></p>
-  </div>
-</div>`;
+    <button type="button" class="nochmal" hidden>Nochmal versuchen</button>
+  </div>`;
 }
 
-function probeAbschnitt(proben) {
-  if (!proben || proben.length === 0) return '';
-  const n = proben.length;
+function kartenBlock(k, i) {
+  const q = k.quelle;
+  return `<details class="kartek" data-i="${i}" data-slug="${esc(k.slug)}"${i === 0 ? ' open' : ''}>
+  <summary><span class="ks" aria-hidden="true">✦</span><span class="kt">${esc(k.kurz)}</span><span class="kstatus">${k.fragen.length} Fragen</span></summary>
+  <article class="karte">
+    <p class="kl">Lernkarte</p>
+    <h3>${esc(k.titel)}</h3>
+    <p>${esc(k.karte)}</p>
+  </article>
+  ${k.fragen.map((f, j) => frageBlock(f, i, j, k.fragen.length)).join('\n  ')}
+  <p class="quelle">Quelle: ${esc(q.titel)} — ${esc(q.herausgeber)}, abgerufen ${esc(q.abgerufen)}. <a href="${esc(q.url)}" rel="noopener">Zur Quelle</a></p>
+</details>`;
+}
+
+function kartenSektion(b) {
+  const karten = b.kartenvoll ?? [];
+  if (karten.length === 0) return '';
   return `<section class="sek alt" id="probe" aria-labelledby="probe-h"><div class="wrap">
-  <h2 id="probe-h">${n === 1 ? 'So sieht eine Lernkarte aus' : 'So sehen Lernkarten aus'}</h2>
-  <p class="lead">${n === 1 ? 'Eine echte Karte' : `${n} echte Karten`} aus dem Thema, gebaut aus öffentlichen Quellen, nicht aus dem Buch. Du siehst je eine Frage dazu.</p>
-  ${proben.map((p, i) => probeBlock({ ...p, gesamt: n }, i + 1)).join('\n  ')}
+  <h2 id="probe-h">Spiel die Karten durch</h2>
+  <p class="lead">Öffne eine Karte hier oder tippe oben einen Stern an: Die Karten deines Weges stehen zuerst. Jede Karte hat zwei bis drei Fragen. Wer alle richtig beantwortet, lässt den Stern leuchten.</p>
+  <p class="stand" id="stand" aria-live="polite">Du kannst 0 von ${karten.length} Karten.</p>
+  <div id="kartenliste" data-gesamt="${karten.length}">
+  ${karten.map((k, i) => kartenBlock(k, i)).join('\n  ')}
+  </div>
 </div></section>`;
+}
+
+// Der Beitrag zum Buch als Anreißer unter den Hero-Knöpfen: eingeklappt, öffnet sich an Ort und Stelle (kein Sprung über die Seite),
+// klar als Meinungsbeitrag gekennzeichnet. Er beruht auf dem Buch; die Lernkarten stützen sich bewusst auf andere Quellen.
+function beitragFalte(bt, buchTitel, buchAutor) {
+  if (!bt || !bt.absaetze || bt.absaetze.length === 0) return '';
+  return `<details class="beitrag-fold">
+    <summary><span class="bk">${esc(bt.etikett || 'Dazu ein Beitrag')}</span><span class="bt">${esc(bt.titel)}</span>${bt.anreisser ? `<span class="anreisser">${esc(bt.anreisser)}</span>` : ''}<span class="mehr"><span class="auf">Weiterlesen ▾</span><span class="zu">Einklappen ▴</span></span></summary>
+    <div class="lesetext">
+      ${bt.absaetze.map((a) => `<p>${esc(a)}</p>`).join('\n      ')}
+      <p class="status">Meinungsbeitrag von ${esc(bt.autor)} auf Grundlage von ${esc(buchAutor)}s Buch „${esc(buchTitel)}“. Die Lernkarten auf dieser Seite stützen sich dagegen auf andere Quellen.</p>
+    </div>
+  </details>`;
 }
 
 function seite(b, mitCover) {
@@ -273,8 +296,6 @@ details.liste summary{font-weight:500;font-size:15px;color:var(--muted)}
 ol.karten{margin:14px 0 0;padding-left:22px}
 ol.karten li{margin:4px 0}
 .status{font-size:13px;color:var(--muted);margin-top:8px}
-.probe{margin:0 0 34px}
-.probe:last-child{margin-bottom:0}
 .karte{background:#fff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:14px 18px;margin:14px 0}
 .karte h3{margin:2px 0 8px;font-size:18px;color:var(--graphite)}
 .karte p{margin:6px 0}
@@ -295,6 +316,26 @@ ol.karten li{margin:4px 0}
 .nachher .de{font-size:13px}
 .ohnejs{font-size:13px;color:var(--muted)}
 .quelle{font-size:13px;color:var(--muted);margin-top:14px}
+.stand{font-weight:600;color:var(--graphite);margin:0 0 14px}
+#kartenliste{display:grid;gap:10px}
+details.kartek,details.kartek:first-of-type{background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 18px}
+details.kartek[open]{padding-bottom:10px}
+details.kartek.gewaehlt{border-left:4px solid var(--amber)}
+details.kartek.gekonnt{border-color:#2F7D4F}
+.kartek summary{display:flex;align-items:center;gap:10px;padding:14px 0;cursor:pointer;font-weight:600;color:var(--graphite);list-style:none}
+.kartek summary::-webkit-details-marker{display:none}
+.kartek .ks{color:var(--teal);font-size:18px}
+.kartek.gekonnt .ks{color:var(--amber)}
+.kartek .kt{flex:1}
+.kartek .kstatus{font-weight:400;font-size:14px;color:var(--muted);white-space:nowrap}
+.kartek.gekonnt .kstatus{color:#2F7D4F;font-weight:600}
+.kartek .karte{margin-top:0}
+.kartek .frage{margin:14px 0 4px}
+.nochmal{margin-top:10px;background:none;border:0;padding:0;font:inherit;font-size:15px;color:var(--graphite);text-decoration:underline;cursor:pointer}
+.uni .n.gekonnt .k{fill:#fff;stroke:var(--amber);stroke-width:3;filter:drop-shadow(0 0 8px rgba(255,255,255,.85))}
+.uni .n.gekonnt.besucht .k{fill:var(--amber)}
+.abschluss .rollen a{color:#fff}
+.abschluss .rollen{font-size:15px}
 .kauf{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 20px 12px}
 .kauf .meta{margin-bottom:12px}
 .anzeige{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid var(--muted);border-radius:4px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;vertical-align:middle}
@@ -312,6 +353,25 @@ details p{margin:10px 0 0;color:var(--muted)}
 .abschluss .btn.haupt:hover{background:#E6F0EF}
 .teilen-zeile{margin:22px 0 0;font-size:15px}
 .teilen{background:none;border:0;padding:0;font:inherit;color:#fff;text-decoration:underline;cursor:pointer}
+.lesetext{max-width:68ch}
+.lesetext p{margin:0 0 14px;line-height:1.65}
+.beitrag-fold{margin:2px 0 0;max-width:68ch;border-left:3px solid var(--line);padding:2px 0 2px 14px;border-bottom:0;font-size:17px}
+@media(min-width:768px){.beitrag-fold{font-size:18px}}
+.beitrag-fold:first-of-type{border-top:0}
+.beitrag-fold summary{display:block;cursor:pointer;list-style:none;font-weight:400;color:var(--ink);font-size:1em;line-height:1.5}
+.beitrag-fold summary::-webkit-details-marker{display:none}
+.beitrag-fold .bk{display:block;font-size:1em;font-weight:600;color:var(--teal-d);margin-bottom:2px}
+.beitrag-fold .bt{display:block;font-size:1em;color:var(--graphite);font-weight:700;margin-bottom:4px}
+.beitrag-fold .anreisser{display:block;font-size:1em;color:var(--ink)}
+.beitrag-fold[open] .anreisser{display:none}
+.beitrag-fold .mehr{display:inline-block;margin-top:6px;font-size:1em;font-weight:600;color:var(--graphite);text-decoration:underline;text-underline-offset:3px}
+.beitrag-fold .zu{display:none}
+.beitrag-fold[open] .auf{display:none}
+.beitrag-fold[open] .zu{display:inline}
+.beitrag-fold[open] summary{margin-bottom:14px}
+.beitrag-fold .lesetext{max-width:none}
+.beitrag-fold .lesetext p{font-size:1em;color:var(--ink);line-height:1.65}
+.beitrag-fold .lesetext p.status{font-size:.8em;color:var(--muted);margin-top:6px}
 footer{padding:22px 0 30px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:6px 14px}
 footer a{color:var(--muted)}
@@ -327,7 +387,7 @@ footer{font-size:15px}
 summary{font-size:18px}
 }
 </style>
-<script>document.documentElement.className+=' js'</script>
+<script>document.documentElement.className+=' js';try{var n=performance.getEntriesByType('navigation')[0];if(n&&n.type==='reload'&&'scrollRestoration' in history){history.scrollRestoration='manual'}}catch(e){}</script>
 <script async src="https://plausible.io/js/pa--uQFBayBpH0z77zfdWY78.js"></script>
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 </head>
@@ -348,20 +408,19 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
     <div>
       <h1>${esc(b.leitfrage)}</h1>
       <p class="meta"><strong>${esc(b.autor)}: ${esc(b.titel)}</strong> — ${esc(b.untertitel)}<br>
-      ${b.uebersetzer ? `Aus dem Englischen von ${esc(b.uebersetzer)} · ` : ''}${esc(b.verlag)} · ${esc(b.erschienen)}</p>
+      ${b.uebersetzer ? `Aus dem Englischen von ${esc(b.uebersetzer)} · ` : ''}${esc(b.verlag)} · ${esc(b.erschienen)}${b.beitrag ? '' : ''}</p>
       <p class="lead">${esc(b.einordnung)}</p>
-      <p><a class="btn haupt" id="cta" data-zugang href="${zugang}">Zugang anfragen</a>${b.proben && b.proben.length ? '<a class="btn" href="#probe">Lernkarten ansehen</a>' : ''}</p>
+      <p><a class="btn haupt" href="#karten-h">Karten ausprobieren ↓</a></p>
+      ${beitragFalte(b.beitrag, b.titel, b.autor)}
     </div>
     ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="691" height="1063" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
   </div>
 </div></section>
 
-${probeAbschnitt(b.proben)}
-
 <section class="sek" id="fuerwen" aria-labelledby="fuerwen-h"><div class="wrap">
   <h2 id="fuerwen-h">Drei Rollen zur Erkundung des Wissensuniversums</h2>
   <div class="karten3">
-    ${TUEREN.map((t) => `<div class="k3"><p class="rl">${esc(t.label)}</p><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p><a class="weiter" data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">Zugang anfragen →</a></div>`).join('\n    ')}
+    ${TUEREN.map((t) => `<div class="k3"><p class="rl">${esc(t.label)}</p><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('\n    ')}
   </div>
 </div></section>
 
@@ -376,21 +435,20 @@ ${probeAbschnitt(b.proben)}
   <h2 id="karten-h">${karten.length} Karten, viele Wege</h2>
   <p class="lead">Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht: So erschließt du dir deinen eigenen Teil des Wissensuniversums.</p>
   ${universum(b)}
-  <details class="liste"><summary>Alle ${karten.length} Karten als Liste</summary>
-    <ol class="karten">${karten.map((k) => `<li>${esc(k)}</li>`).join('')}</ol>
-  </details>
   ${b.kartenStatus ? `<p class="status">${esc(b.kartenStatus)}</p>` : ''}
   <p class="status">${esc(b.kartenIntro)}</p>
 </div></section>
 
-<section class="sek alt" aria-labelledby="start-h"><div class="wrap">
+${kartenSektion(b)}
+
+<section class="sek" aria-labelledby="start-h"><div class="wrap">
   <h2 id="start-h">So fängst du an</h2>
   <div class="karten3 schritte">
     ${SCHRITTE.map((t) => `<div class="k3 schritt"><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('\n    ')}
   </div>
 </div></section>
 
-<section class="sek" aria-labelledby="buch-h"><div class="wrap">
+<section class="sek alt" aria-labelledby="buch-h"><div class="wrap">
   <h2 id="buch-h">Das Buch</h2>
   <div class="kauf" aria-label="Bezugsquellen">
     <p class="meta">${esc(b.verlag)} · ISBN ${esc(b.isbn)}</p>
@@ -404,15 +462,17 @@ ${probeAbschnitt(b.proben)}
   ${b.naechsteWoche ? `<h2 style="margin-top:32px">Nächste Woche</h2><p>${esc(b.naechsteWoche)}</p>` : ''}
 </div></section>
 
-<section class="sek alt" aria-labelledby="faq-h"><div class="wrap">
+<section class="sek" aria-labelledby="faq-h"><div class="wrap">
   <h2 id="faq-h">Häufige Fragen</h2>
   ${faq.map(([f, a]) => `<details><summary>${esc(f)}</summary><p>${a}</p></details>`).join('\n  ')}
 </div></section>
 
 <section class="abschluss" aria-labelledby="abschluss-h"><div class="wrap">
-  <h2 id="abschluss-h">Du möchtest wissen, was hinter den Karten steckt?</h2>
-  <p>plinyoo ist die Lernplattform, auf der diese Karten laufen: Wissen in Karten, die aufeinander verweisen, und ein Wissensuniversum, in dem jede gelernte Karte leuchtet.</p>
+  <h2 id="abschluss-h">Hat dich das neugierig gemacht?</h2>
+  <p>Das hier ist ein erster Schritt. Wir sammeln gerade Rückmeldungen: Was hat dir gefallen, was hat gefehlt, was würdest du dir für dich oder dein Team wünschen? Wer Interesse hat, meldet sich hier. Wir antworten persönlich.</p>
   <p><a class="btn haupt" data-zugang href="${zugang}">Zugang anfragen</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
+  <p class="rollen">Ich komme als
+    ${TUEREN.map((t) => `<a data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">${esc(t.label)}</a>`).join(' · ')}</p>
   <p class="teilen-zeile">Schick es an jemanden, der es brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>
 </div></section>
 </main>
@@ -431,17 +491,49 @@ ${probeAbschnitt(b.proben)}
     var r=a.getAttribute('data-rolle');
     a.href='/?'+keep.toString()+'#/zugang'+(r?'?rolle='+r:'');
   });
+  // Karten zum Durchspielen: Fragen beantworten, "Nochmal versuchen", Stern leuchtet bei einer gekonnten Karte
+  var liste=document.getElementById('kartenliste');
+  var karten=liste?[].slice.call(liste.querySelectorAll('.kartek')):[];
+  var gesamt=karten.length, gekonnt={};
+  var sterneEls=document.querySelectorAll('#uni .n');
+  function sternZu(i){return [].filter.call(sterneEls,function(g){return +g.getAttribute('data-i')===i})[0]}
+  function ereignis(name,props){if(window.plausible)window.plausible(name,{props:props})}
+  function stand(){
+    var n=Object.keys(gekonnt).length, el=document.getElementById('stand');
+    if(el)el.textContent=(n===gesamt&&gesamt>0)?'Du kannst alle '+gesamt+' Karten. Dein Wissensuniversum leuchtet.':'Du kannst '+n+' von '+gesamt+' Karten.';
+  }
+  function pruefeKarte(k){
+    var bl=k.querySelectorAll('.frage'), i=+k.getAttribute('data-i'), richtig=0, beantwortet=0;
+    [].forEach.call(bl,function(b){var st=b.getAttribute('data-status'); if(st)beantwortet++; if(st==='richtig')richtig++;});
+    var ok=richtig===bl.length;
+    k.classList.toggle('gekonnt',ok);
+    var st=sternZu(i); if(st)st.classList.toggle('gekonnt',ok);
+    k.querySelector('.kstatus').textContent=ok?'gekonnt ✓':(beantwortet?richtig+' von '+bl.length+' richtig':bl.length+' Fragen');
+    if(ok&&!gekonnt[i]){gekonnt[i]=true;ereignis('Karte gekonnt',{karte:k.getAttribute('data-slug')});}
+    if(!ok&&gekonnt[i]){delete gekonnt[i];}
+    stand();
+  }
   document.querySelectorAll('.frage').forEach(function(block){
+    var k=block.closest('.kartek');
     var opts=block.querySelectorAll('.opt');
-    var rueck=block.querySelector('.rueck'), nachher=block.querySelector('.nachher');
+    var rueck=block.querySelector('.rueck'), nachher=block.querySelector('.nachher'), nochmal=block.querySelector('.nochmal');
     opts.forEach(function(o){
       o.addEventListener('click',function(){
+        var ok=o.getAttribute('data-ok')==='1';
         opts.forEach(function(x){x.disabled=true; if(x.getAttribute('data-ok')==='1')x.classList.add('richtig');});
-        if(o.getAttribute('data-ok')!=='1')o.classList.add('falsch');
-        rueck.textContent=(o.getAttribute('data-ok')==='1'?'':'Nicht ganz. ')+o.getAttribute('data-fb');
-        if(nachher)nachher.classList.add('offen');
-        if(window.plausible)window.plausible('Probe-Karte beantwortet',{props:{richtig:o.getAttribute('data-ok')==='1'?'ja':'nein'}});
+        if(!ok)o.classList.add('falsch');
+        rueck.textContent=(ok?'':'Nicht ganz. ')+o.getAttribute('data-fb');
+        nachher.classList.add('offen');
+        block.setAttribute('data-status',ok?'richtig':'falsch');
+        nochmal.hidden=ok;
+        pruefeKarte(k);
+        ereignis('Frage beantwortet',{karte:k.getAttribute('data-slug'),frage:String(+block.getAttribute('data-f')+1),richtig:ok?'ja':'nein'});
       });
+    });
+    nochmal.addEventListener('click',function(){
+      opts.forEach(function(x){x.disabled=false;x.classList.remove('richtig','falsch');});
+      rueck.textContent='';nachher.classList.remove('offen');nochmal.hidden=true;block.removeAttribute('data-status');
+      pruefeKarte(k);
     });
   });
   // Sternenfeld: Weg von Stern zu Stern entlang der Verweise
@@ -454,6 +546,14 @@ ${probeAbschnitt(b.proben)}
     D.kanten.forEach(function(k){nb[k[0]].push(k[1]);nb[k[1]].push(k[0]);});
     var scroller=uni.querySelector('.uniscroll');
     if(scroller)scroller.scrollLeft=(scroller.scrollWidth-scroller.clientWidth)/2;
+    function ordneKarten(){
+      if(!liste)return;
+      var gew=weg.map(function(i){return karten.filter(function(b){return +b.getAttribute('data-i')===i})[0]}).filter(Boolean);
+      var rest=karten.filter(function(b){return weg.indexOf(+b.getAttribute('data-i'))<0});
+      karten.forEach(function(b){b.classList.toggle('gewaehlt',weg.indexOf(+b.getAttribute('data-i'))>-1)});
+      gew.concat(rest).forEach(function(b){liste.appendChild(b)});
+      var letzte=gew[gew.length-1]; if(letzte)letzte.open=true;
+    }
     var weg=[], gemeldet=false;
     function titel(i){return D.titel[i];}
     function zeichne(){
@@ -468,10 +568,12 @@ ${probeAbschnitt(b.proben)}
         l.classList.toggle('weg',ia>-1&&ib>-1&&Math.abs(ia-ib)===1);
       });
       reset.hidden=weg.length===0;
+      ordneKarten();
       if(cur<0){status.textContent='Tippe einen Stern an, um deinen Weg zu beginnen.';return;}
       var weiter=nb[cur].filter(function(i){return weg.indexOf(i)<0}).map(titel);
-      status.textContent='Dein Weg: '+weg.map(titel).join(' → ')+'. '+
-        (weiter.length?'Von hier führt es weiter zu: '+weiter.join(', ')+'. Tippe einen leuchtenden Stern an.':'Hier endet dieser Weg. Geh zurück zu einem früheren Stern oder beginne neu.');
+      function satz(t){return /[.?!]$/.test(t)?t+' ':t+'. ';}   // kein "?." wenn ein Kartenname selbst mit Fragezeichen endet
+      status.textContent=satz('Dein Weg: '+weg.map(titel).join(' → '))+
+        (weiter.length?satz('Von hier führt es weiter zu: '+weiter.join(', '))+'Tippe einen leuchtenden Stern an.':'Hier endet dieser Weg. Geh zurück zu einem früheren Stern oder beginne neu.');
     }
     function waehle(i){
       var cur=weg.length?weg[weg.length-1]:-1;
