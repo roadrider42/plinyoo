@@ -271,8 +271,7 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
 ${probeAbschnitt(b.proben)}
 
 <section class="sek" id="fuerwen" aria-labelledby="fuerwen-h"><div class="wrap">
-  <h2 id="fuerwen-h">Für wen das ist</h2>
-  <p class="lead">Such dir die Anrede, die zu dir passt. Jede führt zum selben Zugang, mit deiner Rolle vorgemerkt.</p>
+  <h2 id="fuerwen-h">Drei Rollen zur Erkundung des Lernuniversums</h2>
   <div class="karten3">
     ${TUEREN.map((t) => `<div class="k3"><p class="rl">${esc(t.label)}</p><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p><a class="weiter" data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">Zugang anfragen →</a></div>`).join('\n    ')}
   </div>
