@@ -103,22 +103,22 @@
     ]
   },
   "features": {
-    "title": "Una tarjeta, una pregunta, un reencuentro",
-    "subtitle": "El camino se hace al andar. Bajo cada tarjeta hay continuaciones en lugar de una lista de capítulos. Cuáles son depende de cómo se enlazan las tarjetas entre sí y de adónde has ido hasta ahora.",
+    "title": "Tu camino, tarjeta a tarjeta",
+    "subtitle": "No hay un camino fijo. Se forma con cada tarjeta que abres.",
     "items": [
       {
         "title": "Tarjeta",
-        "desc": "Una idea, toda la pantalla. Ningún capítulo por el que desplazarse.",
+        "desc": "Una cosa, explicada. Debajo, las siguientes tarjetas para elegir.",
         "category": "1"
       },
       {
-        "title": "Pregunta",
-        "desc": "Cada tarjeta tiene sus preguntas.",
+        "title": "Elección",
+        "desc": "Por ejemplo profundizar, seguir o dejarte sorprender: tú eliges. Se te ofrece lo que sigue abierto.",
         "category": "2"
       },
       {
-        "title": "Reencuentro",
-        "desc": "Lo que se sabe vuelve más tarde. Lo que flaquea vuelve antes.",
+        "title": "Repaso",
+        "desc": "Respuesta incorrecta: vuelve al día siguiente. Lo que ya sabes, más tarde.",
         "category": "3"
       }
     ]

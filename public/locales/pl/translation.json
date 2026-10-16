@@ -103,22 +103,22 @@
     ]
   },
   "features": {
-    "title": "Jedna karta, jedno pytanie, powtórka",
-    "subtitle": "Droga powstaje w marszu. Pod każdą kartą są dalsze odnośniki zamiast listy rozdziałów. Które — zależy od tego, jak karty są ze sobą powiązane, i od tego, dokąd dotąd zaszedłeś.",
+    "title": "Twoja droga, karta po karcie",
+    "subtitle": "Nie ma stałej drogi. Powstaje z każdą kartą, którą otwierasz.",
     "items": [
       {
         "title": "Karta",
-        "desc": "Jedna myśl, cały ekran. Żadnego rozdziału do przewijania.",
+        "desc": "Jedna rzecz, wyjaśniona. Pod nią kolejne karty do wyboru.",
         "category": "1"
       },
       {
-        "title": "Pytanie",
-        "desc": "Do każdej karty należą pytania.",
+        "title": "Wybór",
+        "desc": "Na przykład głębiej, dalej albo coś zaskakującego: ty wybierasz. Do wyboru jest to, co jeszcze otwarte.",
         "category": "2"
       },
       {
         "title": "Powtórka",
-        "desc": "Co się trzyma, wraca później. Co się chwieje, wraca wcześniej.",
+        "desc": "Zła odpowiedź: wraca następnego dnia. Co już umiesz, później.",
         "category": "3"
       }
     ]

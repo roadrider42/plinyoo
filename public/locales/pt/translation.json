@@ -103,22 +103,22 @@
     ]
   },
   "features": {
-    "title": "Um cartão, uma pergunta, um reencontro",
-    "subtitle": "O caminho nasce ao caminhar. Sob cada cartão há continuações em vez de uma lista de capítulos. Quais são depende de como os cartões se vinculam entre si — e de onde você já foi.",
+    "title": "Seu caminho, cartão por cartão",
+    "subtitle": "Não existe um caminho fixo. Ele se forma a cada cartão que você abre.",
     "items": [
       {
         "title": "Cartão",
-        "desc": "Um pensamento, a tela inteira. Nenhum capítulo para rolar.",
+        "desc": "Uma coisa, explicada. Abaixo, os próximos cartões para escolher.",
         "category": "1"
       },
       {
-        "title": "Pergunta",
-        "desc": "Cada cartão tem suas perguntas.",
+        "title": "Escolha",
+        "desc": "Por exemplo aprofundar, seguir ou se surpreender: você escolhe. É oferecido o que ainda está em aberto.",
         "category": "2"
       },
       {
-        "title": "Reencontro",
-        "desc": "O que está firme volta mais tarde. O que vacila volta mais cedo.",
+        "title": "Revisão",
+        "desc": "Resposta errada: volta no dia seguinte. O que já sabe, só mais tarde.",
         "category": "3"
       }
     ]

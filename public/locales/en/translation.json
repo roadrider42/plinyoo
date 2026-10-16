@@ -144,22 +144,22 @@
     ]
   },
   "features": {
-    "title": "One card, one question, a second look",
-    "subtitle": "The way emerges as you walk. Under every card are follow-ups instead of a chapter list. Which ones depends on how the cards link to each other — and on where you have gone so far.",
+    "title": "Your way, card by card",
+    "subtitle": "There is no fixed way. It takes shape with every card you open.",
     "items": [
       {
         "title": "Card",
-        "desc": "A single thought, the whole screen. No chapter you scroll through.",
+        "desc": "One thing, explained. Below it, the next cards to choose from.",
         "category": "1"
       },
       {
-        "title": "Question",
-        "desc": "Every card comes with questions.",
+        "title": "Choice",
+        "desc": "For example go deeper, move on or be surprised: you choose. You’re offered what’s still open.",
         "category": "2"
       },
       {
-        "title": "Second look",
-        "desc": "What sticks comes back later. What wobbles comes back sooner.",
+        "title": "Review",
+        "desc": "Answered wrong: back the next day. What sticks comes back later.",
         "category": "3"
       }
     ]

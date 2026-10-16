@@ -103,22 +103,22 @@
     ]
   },
   "features": {
-    "title": "Une fiche, une question, des retrouvailles",
-    "subtitle": "Le chemin se fait en marchant. Sous chaque fiche, il y a des suites au lieu d’une liste de chapitres. Lesquelles dépend de la façon dont les fiches sont reliées entre elles — et d’où tu es déjà allé.",
+    "title": "Ton chemin, fiche après fiche",
+    "subtitle": "Il n’y a pas de chemin tout tracé. Il se dessine à chaque fiche que tu ouvres.",
     "items": [
       {
         "title": "Fiche",
-        "desc": "Une idée, tout l’écran. Pas de chapitre à faire défiler.",
+        "desc": "Une chose, expliquée. En dessous, les fiches suivantes au choix.",
         "category": "1"
       },
       {
-        "title": "Question",
-        "desc": "Chaque fiche a ses questions.",
+        "title": "Choix",
+        "desc": "Par exemple approfondir, avancer ou te laisser surprendre : tu choisis. On te propose ce qui reste ouvert.",
         "category": "2"
       },
       {
-        "title": "Retrouvailles",
-        "desc": "Ce qui est acquis revient plus tard. Ce qui vacille revient plus tôt.",
+        "title": "Révision",
+        "desc": "Mauvaise réponse : retour le lendemain. Ce qui est acquis, plus tard.",
         "category": "3"
       }
     ]
