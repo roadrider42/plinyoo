@@ -50,6 +50,12 @@ export default function ZugangPage() {
       { name: form.name, email: form.email, message: lines.join('\n'), formType: 'contact' },
       {
         onSuccess: () => {
+          // Messpunkt ohne Personenbezug: nur Rolle (Schlüssel) und Buch (Kennung), nie Name, E-Mail oder Nachricht
+          try {
+            (window as unknown as { plausible?: (e: string, o?: object) => void }).plausible?.('Zugang angefragt', {
+              props: { rolle: form.role || 'keine Angabe', buch: getKampagne().buch || 'ohne Buch' },
+            });
+          } catch { /* Messung darf die Anfrage nie stören */ }
           toast({ title: t('forms.validation.success_title'), description: t('forms.validation.success_message') });
         },
         onError: (error: any) => {
