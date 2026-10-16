@@ -142,5 +142,136 @@
         "abgerufen": "2026-10-16"
       }
     }
+  ],
+  "knoten": [
+    {
+      "slug": "eic-pfeffer",
+      "titel": "Pfeffer: von 3 auf 8 Schilling"
+    },
+    {
+      "slug": "eic-monopol-1600",
+      "titel": "Das Handelsmonopol von 1600"
+    },
+    {
+      "slug": "eic-startkapital",
+      "titel": "Das Startkapital: 125 Anteilseigner"
+    },
+    {
+      "slug": "eic-erste-ag",
+      "titel": "Wer war die erste Aktiengesellschaft?"
+    },
+    {
+      "slug": "eic-karl-ii",
+      "titel": "Aus Handel wird Hoheit"
+    },
+    {
+      "slug": "eic-kalikos",
+      "titel": "Das Verbot indischer Baumwolle"
+    },
+    {
+      "slug": "eic-diwani-1765",
+      "titel": "Die Diwani von 1765"
+    },
+    {
+      "slug": "eic-armee",
+      "titel": "Die Armee der Company"
+    },
+    {
+      "slug": "eic-hungersnot-1770",
+      "titel": "Die Hungersnot von 1769/70"
+    },
+    {
+      "slug": "eic-hungersnot-zahl",
+      "titel": "Wie sicher ist die Zahl?"
+    },
+    {
+      "slug": "eic-rettung-1772",
+      "titel": "1772: Die Company braucht Hilfe"
+    },
+    {
+      "slug": "eic-monopol-ende-1813",
+      "titel": "Das Ende der Monopole 1813 und 1833"
+    },
+    {
+      "slug": "eic-ende-1858",
+      "titel": "1858 und 1874: Das Ende"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      0,
+      5,
+      "verwandt"
+    ],
+    [
+      1,
+      2,
+      "verwandt"
+    ],
+    [
+      1,
+      3,
+      "verwandt"
+    ],
+    [
+      1,
+      4,
+      "voraussetzung"
+    ],
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      3,
+      10,
+      "verwandt"
+    ],
+    [
+      4,
+      6,
+      "voraussetzung"
+    ],
+    [
+      4,
+      7,
+      "voraussetzung"
+    ],
+    [
+      4,
+      10,
+      "voraussetzung"
+    ],
+    [
+      4,
+      11,
+      "voraussetzung"
+    ],
+    [
+      6,
+      7,
+      "verwandt"
+    ],
+    [
+      6,
+      8,
+      "voraussetzung"
+    ],
+    [
+      8,
+      9,
+      "voraussetzung"
+    ],
+    [
+      11,
+      12,
+      "voraussetzung"
+    ]
   ]
 }
