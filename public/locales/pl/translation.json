@@ -49,27 +49,6 @@
       "text": "Udostępniamy wiedzę tak, by droga stąd tam zajmowała jak najmniej czasu — a trenerzy i zespół stali po tej samej stronie."
     }
   },
-  "roles": {
-    "title": "Dwa interesy, jedno miejsce",
-    "intro": "Trenerzy chcą dobrze wyszkolonego zespołu. Kto jest w zespole, chce uczyć się tego, co go rozwija. Jedno i drugie spotyka się tutaj.",
-    "waysTitle": "Cztery drogi wejścia",
-    "follower": {
-      "title": "Dołącz do zespołu",
-      "description": "Twój trener zaprasza Cię. Podążasz za treściami, które dla Ciebie przygotował, i widzisz swój postęp."
-    },
-    "learner": {
-      "title": "Odkrywaj",
-      "description": "Przeglądaj publiczne tematy, ucz się we własnym tempie i widź swój postęp."
-    },
-    "author": {
-      "title": "Twórz własne",
-      "description": "Pisz i łącz własne karty, generuj do nich pytania, pobieraj treści z Wikipedii — i ucz się z nimi."
-    },
-    "curator": {
-      "title": "Prowadź",
-      "description": "Opiekujesz się tematem — jako dostawca treści, który dzieli się wiedzą, albo jako trener, który zaprasza przez link własny zespół i go prowadzi."
-    }
-  },
   "howItWorks": {
     "steps": [
       {
@@ -286,12 +265,6 @@
       "subtitle_details": "Odezwiemy się do Ciebie.",
       "role_label": "Przychodzę jako",
       "role_placeholder": "Wybierz",
-      "role_options": {
-        "learner": "Osoba ucząca się",
-        "trainer": "Trener/ka z własnym zespołem",
-        "provider": "Dostawca/czyni treści",
-        "other": "Coś innego"
-      },
       "message_label": "Co chcesz osiągnąć z plinyoo?",
       "message_placeholder": "Na przykład: chcę zrozumieć, dlaczego moje miasto tak się nagrzewa latem.",
       "button": "Poproś o dostęp"

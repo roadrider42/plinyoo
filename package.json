@@ -44,7 +44,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/404.html",
+    "build": "vite build && cp dist/index.html dist/404.html && node scripts/buchseiten.mjs",
+    "buchseiten:entwurf": "BUCHSEITEN_DRAFT=1 npm run build",
     "preview": "vite preview --port 3001"
   },
   "eslintConfig": {

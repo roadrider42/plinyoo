@@ -19,6 +19,9 @@ export default function Datenschutz() {
       <h2 className="text-2xl font-semibold mb-4">{t('privacy.embeddedContent.title')}</h2>
       <p className="mb-6">{t('privacy.embeddedContent.text')}</p>
 
+      <h2 className="text-2xl font-semibold mb-4">{t('privacy.affiliate.title')}</h2>
+      <p className="mb-6">{t('privacy.affiliate.text')}</p>
+
       <h2 className="text-2xl font-semibold mb-4">{t('privacy.contact.title')}</h2>
       <p className="mb-8">{t('privacy.contact.text')}</p>
 

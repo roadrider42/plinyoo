@@ -49,27 +49,6 @@
       "text": "Tornamos o conhecimento tão acessível que o caminho daqui até lá custa o menor tempo possível — e treinadores e equipe ficam do mesmo lado."
     }
   },
-  "roles": {
-    "title": "Dois interesses, um lugar",
-    "intro": "Treinadores querem uma equipe bem formada. Quem está na equipe quer aprender o que o faz avançar. Os dois se encontram aqui.",
-    "waysTitle": "Quatro caminhos de entrada",
-    "follower": {
-      "title": "Entrar na equipe",
-      "description": "Seu treinador convida você. Você acompanha o conteúdo que ele preparou para você e vê seu progresso."
-    },
-    "learner": {
-      "title": "Descobrir",
-      "description": "Explore tópicos públicos, aprenda no seu ritmo e veja seu progresso."
-    },
-    "author": {
-      "title": "Criar o seu",
-      "description": "Escreva e vincule seus próprios cartões, gere perguntas, traga conteúdo da Wikipédia — e aprenda com eles."
-    },
-    "curator": {
-      "title": "Conduzir",
-      "description": "Você cura um tópico: como fornecedor de conteúdo que compartilha conhecimento ou como treinador que convida e conduz sua própria equipe por um link."
-    }
-  },
   "howItWorks": {
     "steps": [
       {
@@ -268,12 +247,6 @@
       "subtitle_details": "Responderemos a você.",
       "role_label": "Venho como",
       "role_placeholder": "Por favor, escolha",
-      "role_options": {
-        "learner": "Quem aprende",
-        "trainer": "Treinador(a) com equipe própria",
-        "provider": "Fornecedor(a) de conteúdo",
-        "other": "Outra coisa"
-      },
       "message_label": "O que você quer alcançar com o plinyoo?",
       "message_placeholder": "Por exemplo: quero entender por que minha cidade fica tão quente no verão.",
       "button": "Solicitar acesso"

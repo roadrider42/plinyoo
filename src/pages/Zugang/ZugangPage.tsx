@@ -1,19 +1,21 @@
 // src/pages/Zugang/ZugangPage.tsx
-// Zweck: Zugang anfragen — für Lernende, Trainer und Inhaltsanbieter (Gegenstück zum Mitmachen-Formular für Mitentwickler).
+// Zweck: Zugang anfragen — für Lernende, Kuratoren und Wegbereiter (Gegenstück zum Mitmachen-Formular für Mitentwickler).
 // Versand: derselbe Weg wie Kontakt (Edge Function plinyoo-contact, formType 'contact'). Die Edge Function und die
 // Datenbank kennen keinen eigenen Formulartyp; die Zugangsanfrage steht deshalb als Kopfzeile in der Nachricht.
+// Herkunft (Buchseite, Kanal) kommt aus der Adresse und steht ebenfalls als Kopfzeile (src/lib/kampagne.ts).
 
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useContactForm } from '@/hooks/hook.useContactForm';
 import { useToast } from '@/components/ui/use-toast';
+import { getKampagne, kampagneZeilen } from '@/lib/kampagne';
 
 // Beschriftungen für den Posteingang — fest deutsch, unabhängig von der Sprache der Seite
 const ROLE_FOR_INBOX: Record<string, string> = {
   learner: 'Lernende:r',
-  trainer: 'Trainer:in mit eigener Mannschaft',
-  provider: 'Inhaltsanbieter:in',
+  curator: 'Kurator:in (will Wissen weitergeben)',
+  wegbereiter: 'Wegbereiter:in (führt ein Team)',
   other: 'Etwas anderes',
 };
 
@@ -24,7 +26,12 @@ export default function ZugangPage() {
 
   useEffect(() => () => dismiss(), [dismiss]);
 
-  const [form, setForm] = useState({ name: '', email: '', role: '', message: '' });
+  // Vorauswahl der Rolle, wenn der Besucher über eine der drei Türen kommt (?rolle=…)
+  const [searchParams] = useSearchParams();
+  const rolleAusAdresse = searchParams.get('rolle') ?? '';
+  const rolleStart = (['learner', 'curator', 'wegbereiter', 'other'] as string[]).includes(rolleAusAdresse) ? rolleAusAdresse : '';
+
+  const [form, setForm] = useState({ name: '', email: '', role: rolleStart, message: '' });
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -35,6 +42,7 @@ export default function ZugangPage() {
       '[Zugang anfragen]',
       `Ich komme als: ${ROLE_FOR_INBOX[form.role] ?? 'keine Angabe'}`,
       `Sprache der Seite: ${i18n.resolvedLanguage || i18n.language}`,
+      ...kampagneZeilen(getKampagne()),
       '',
       form.message,
     ];
@@ -51,7 +59,7 @@ export default function ZugangPage() {
     );
   };
 
-  const roleKeys = ['learner', 'trainer', 'provider', 'other'] as const;
+  const roleKeys = ['learner', 'curator', 'wegbereiter', 'other'] as const;
 
   return (
     <main className="bg-main-background text-main-text">

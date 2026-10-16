@@ -46,8 +46,11 @@ export default function LandingPage() {
   };
 
   return (
-    <>
+    <div className="lesbar">
       {renderHero()}
+      {/* Drei Türen direkt nach dem Hero (Heiko 16.10.2026): Wer das Beispiel im Hero gesehen hat,
+          soll gleich wissen, was er in seiner Rolle davon hat. Vorher stand der Abschnitt an achter Stelle. */}
+      <Roles />
       <Story />
       <VisionMission />
       <Features />
@@ -55,11 +58,10 @@ export default function LandingPage() {
       <Views />
       <Pillars />
       <Outcomes />
-      <Roles />
       <Examples />
       <HowItWorks />
       <Faq />
       <CTA />
-    </>
+    </div>
   );
 }
