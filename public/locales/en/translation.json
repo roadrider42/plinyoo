@@ -337,29 +337,6 @@
     },
     "copyright": "All rights reserved."
   },
-  "imprint": {
-    "title": "Imprint",
-    "stand": "As of: 2025",
-    "disclaimer": "This website is operated privately and not for profit.",
-    "angaben": {
-      "title": "Information according to § 5 TMG",
-      "name": "Name: Heiko Miertzsch",
-      "email": "E-Mail: heiko@plinyoo.com"
-    },
-    "haftungInhalte": {
-      "title": "Liability for Content",
-      "text": "As a private site operator, I am responsible for my own content on these pages in accordance with general laws. There is no obligation to monitor transmitted or stored third-party information."
-    },
-    "haftungLinks": {
-      "title": "Liability for Links",
-      "text": "External links were checked for possible legal violations at the time of linking. I have no influence on the content of linked pages; the respective provider is responsible for them."
-    },
-    "urheberrecht": {
-      "title": "Copyright",
-      "text": "The content created by the site operator is subject to German copyright law. Contributions by third parties are marked as such. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require consent."
-    },
-    "back_to_home": "Back to Home"
-  },
   "privacy": {
     "title": "Privacy Policy",
     "note": "The privacy policy below is only available in German. The German version is the binding one.",
