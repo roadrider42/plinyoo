@@ -17,6 +17,8 @@ const contentDir = path.join(root, 'content', 'buecher');
 const distDir = path.join(root, 'dist');
 const SITE = 'https://www.plinyoo.com';
 const LOGIN = 'https://app.plinyoo.com/login?redirect=%2Fdashboard';
+const INSTA = 'https://www.instagram.com/plinyoo_path/';
+const TWITTER = 'https://x.com/plinyoo_path';   // früher twitter.com, leitet auf x.com
 const mitEntwuerfen = process.env.BUCHSEITEN_DRAFT === '1';
 
 const esc = (s) =>
@@ -352,6 +354,7 @@ details p{margin:10px 0 0;color:var(--muted)}
 .abschluss .btn.haupt{background:#fff;color:var(--graphite)}
 .abschluss .btn.haupt:hover{background:#E6F0EF}
 .teilen-zeile{margin:22px 0 0;font-size:15px}
+.teilen-zeile a{color:#fff}
 .teilen{background:none;border:0;padding:0;font:inherit;color:#fff;text-decoration:underline;cursor:pointer}
 .lesetext{max-width:68ch}
 .lesetext p{margin:0 0 14px;line-height:1.65}
@@ -472,12 +475,12 @@ ${kartenSektion(b)}
   <p><a class="btn haupt" data-zugang href="${zugang}">Zugang anfragen</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
   <p class="rollen">Ich komme als
     ${TUEREN.map((t) => `<a data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">${esc(t.label)}</a>`).join(' · ')}</p>
-  <p class="teilen-zeile">Schick es an jemanden, der es brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>
+  <p class="teilen-zeile">Folge uns auf <a data-sozial="instagram" href="${INSTA}" rel="noopener me" target="_blank">Instagram</a> und <a data-sozial="twitter" href="${TWITTER}" rel="noopener me" target="_blank">X (Twitter)</a>: @plinyoo_path. Oder schick die Seite an jemanden, der sie brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <a href="/">plinyoo.com</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a>
+  <a href="/">plinyoo.com</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a><a href="${INSTA}" rel="noopener me" target="_blank">Instagram</a><a href="${TWITTER}" rel="noopener me" target="_blank">X (Twitter)</a>
 </div></footer>
 
 <script>

@@ -37,6 +37,9 @@ export default function Footer() {
             <Link to="/mitmachen" className="text-white/70 hover:text-white transition-colors">{t('footer.links.join')}</Link>
             <Link to="/investieren" className="text-white/70 hover:text-white transition-colors">{t('footer.links.invest')}</Link>
             <Link to="/kontakt" className="text-white/70 hover:text-white transition-colors">{t('footer.links.contact')}</Link>
+            {/* Soziale Konten (Markenname, keine Übersetzung nötig) */}
+            <a href="https://www.instagram.com/plinyoo_path/" target="_blank" rel="noopener me" className="text-white/70 hover:text-white transition-colors">Instagram</a>
+            <a href="https://x.com/plinyoo_path" target="_blank" rel="noopener me" className="text-white/70 hover:text-white transition-colors">X (Twitter)</a>
           </div>
         </div>
         {/* Copyright */}
