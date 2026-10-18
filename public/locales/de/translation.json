@@ -166,15 +166,38 @@
   },
   "journey": {
     "title": "Probier einen Weg aus",
-    "subtitle": "Sieben Karten zum Thema Stadthitze, jede mit Frage und Beleg. Ein Weg, der sich mit jeder richtigen Antwort weiterzeichnet — kein Kurs.",
-    "label": "Beispiel mit echten Karten",
-    "step": "Karte {{current}} von {{total}}",
+    "subtitle": "Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht — jede Karte mit Frage und Beleg, kein Kurs.",
     "evidence": "Beleg:",
-    "next": "Weiter →",
-    "restart": "Noch einmal von vorn",
-    "aria": "Beispielweg: sieben Karten zur Stadthitze",
-    "doneTitle": "Sieben Karten, ein zusammenhängender Weg",
-    "doneText": "Du hast nicht sieben einzelne Fakten gelesen, sondern sieben Fragen beantwortet — und gesehen, wie die Karten aufeinander verweisen. Das war ein kleiner Weg. In plinyoo gehst du deinen eigenen.",
+    "aria": "Wissensuniversum zum Ausprobieren",
+    "topics": "Thema wählen",
+    "topicHeat": "Stadthitze",
+    "topicEic": "East India Company",
+    "hint": "Tippe einen Stern an, um deinen Weg zu beginnen.",
+    "path": "Dein Weg:",
+    "continues": "Von hier führt es weiter zu:",
+    "tapGlow": "Tippe einen leuchtenden Stern an.",
+    "end": "Hier endet dieser Weg. Geh zurück zu einem früheren Stern oder beginne neu.",
+    "noLink": "Von „{{from}}“ gibt es keinen direkten Verweis zu „{{to}}“. Tippe einen leuchtenden Stern an.",
+    "reset": "Neu beginnen",
+    "fieldAria": "Sternenfeld: {{n}} Karten und ihre Verweise. Mit Tab und Eingabetaste lässt sich ein Weg von Karte zu Karte bilden.",
+    "card": "Lernkarte",
+    "cardsTitle": "Spiel die Karten durch",
+    "cardsLead": "Öffne eine Karte hier oder tippe oben einen Stern an: Die Karten deines Weges stehen zuerst. Wer alle Fragen einer Karte richtig beantwortet, lässt ihren Stern leuchten.",
+    "count": "Du kannst {{n}} von {{total}} Karten.",
+    "countAll": "Du kannst alle {{total}} Karten. Dein Wissensuniversum leuchtet.",
+    "mastered": "gekonnt ✓",
+    "partRight": "{{r}} von {{n}} richtig",
+    "questionCount": "Fragen: {{n}}",
+    "questionOf": "Frage {{j}} von {{n}}",
+    "right": "Richtig:",
+    "wrong": "Nicht ganz.",
+    "retry": "Nochmal versuchen",
+    "source": "Quelle:",
+    "retrieved": "abgerufen",
+    "toSource": "Zur Quelle",
+    "ownTranslation": "eigene Übersetzung",
+    "bookNote": "Diese Karten gehören zur Kampagne rund um William Dalrymples Buch „Anarchie“.",
+    "bookLink": "Zur Buchseite mit Beitrag und Verlagslinks",
     "cards": [
       {
         "title": "Oberflächentemperatur vs. Lufttemperatur",
@@ -566,8 +589,13 @@
       },
       "message_label": "Was möchtest du mit plinyoo erreichen?",
       "message_placeholder": "Zum Beispiel: Ich will verstehen, warum meine Stadt im Sommer so heiß wird.",
-      "button": "Zugang anfragen"
-    }
+      "button": "Zugang anfragen",
+      "origin_note": "Mitgesendet wird, über welchen Link du zu uns gekommen bist (zum Beispiel Buchseite oder Kanal)."
+    },
+    "social": {
+      "lead": "Du erreichst uns auch hier:"
+    },
+    "privacy_link": "Datenschutzerklärung"
   },
   "footer": {
     "brand": {
@@ -584,52 +612,49 @@
     },
     "copyright": "Alle Rechte vorbehalten."
   },
-  "imprint": {
-    "title": "Impressum",
-    "stand": "Stand: 2025",
-    "disclaimer": "Diese Website wird privat und ohne Gewinnerzielungsabsicht betrieben.",
-    "angaben": {
-      "title": "Angaben gemäß § 5 TMG",
-      "name": "Name: Heiko Miertzsch",
-      "email": "E‑Mail: hmiertzsch@web.de"
-    },
-    "haftungInhalte": {
-      "title": "Haftung für Inhalte",
-      "text": "Als privater Seitenbetreiber bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Eine Verpflichtung zur Überwachung übermittelter oder gespeicherter fremder Informationen besteht nicht."
-    },
-    "haftungLinks": {
-      "title": "Haftung für Links",
-      "text": "Externe Links wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Auf die Inhalte verlinkter Seiten habe ich keinen Einfluss; für diese ist der jeweilige Anbieter verantwortlich."
-    },
-    "urheberrecht": {
-      "title": "Urheberrecht",
-      "text": "Die durch den Seitenbetreiber erstellten Inhalte unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Eine Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der Zustimmung."
-    },
-    "back_to_home": "Zur Startseite"
-  },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "stand": "Stand: Oktober 2026",
-    "intro": "Diese Website wird privat betrieben. Es werden keine personenbezogenen Daten zu Marketing- oder Analysezwecken verarbeitet.",
-    "serverLogfiles": {
-      "title": "Server-Logfiles",
-      "text": "Beim Zugriff auf diese Seiten werden technisch bedingt durch den Hosting-Provider Daten erhoben (z. B. anonymisierte IP-Adresse, Datum/Uhrzeit, aufgerufene Seiten). Diese Daten dienen ausschließlich der Sicherstellung des technischen Betriebs und werden nicht zur Profilbildung genutzt."
+    "stand": "Stand: 18. Oktober 2026",
+    "intro": "Hier steht, welche Daten beim Besuch dieser Website und bei Anfragen über die Formulare entstehen, wozu wir sie nutzen und welche Rechte du hast. Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die Plinyoo UG (haftungsbeschränkt) i. Gr. („plinyoo“, „wir“), Theodor-Fliedner-Str. 1d, 34121 Kassel, erreichbar unter heiko@plinyoo.com. Die Angaben stehen auch im Impressum.",
+    "hosting": {
+      "title": "Hosting und Verbindungsdaten",
+      "text": "Diese Website wird über GitHub Pages ausgeliefert (GitHub Inc., USA). Bei jedem Aufruf verarbeitet der Hosting-Anbieter technisch notwendige Verbindungsdaten, nach seiner Datenschutzerklärung unter anderem die IP-Adresse sowie Datum, Uhrzeit und die verweisende Seite. Das dient dem sicheren und stabilen Betrieb; Rechtsgrundlage ist unser berechtigtes Interesse daran (Art. 6 Abs. 1 lit. f DSGVO). Nach eigenen Angaben stützt GitHub Übermittlungen in die USA auf Standardvertragsklauseln der EU-Kommission und hält das EU-U.S. Data Privacy Framework ein."
+    },
+    "analytics": {
+      "title": "Reichweitenmessung mit Plausible",
+      "text": "Wir messen mit Plausible Analytics (Plausible Insights OÜ, Estland), wie die Seite genutzt wird: welche Seiten aufgerufen werden, über welche Seite oder welchen Link Besucher kommen (z. B. Parameter wie utm_source), wie weit sie scrollen, wie lange die Seite geöffnet ist und einzelne Handlungen auf der Seite, etwa ob eine Lernkarte beantwortet, der Beitrag geöffnet oder ein Link zum Buch angeklickt wurde. Beim Absenden einer Zugangsanfrage melden wir nur, dass eine Anfrage kam, mit der gewählten Rolle und dem Buch, nicht von wem. Namen, E-Mail-Adressen und Texte, die du eingibst, werden nicht übermittelt. Das ist kein Cookie: Der Plausible-Code setzt keine Cookies und schreibt nichts in den Speicher deines Browsers. Er liest nur die Adresse der Seite, die Herkunftsseite und die Scrolltiefe und prüft, ob du in deinem Browser die Marke „plausible_ignore“ gesetzt hast. Auf dem Server von Plausible wird aus IP-Adresse und Browserkennung eine täglich wechselnde Kennung berechnet; die rohe IP-Adresse wird nach Angaben von Plausible nicht gespeichert, ein grober Standort wird abgeleitet, und die Daten werden in der EU verarbeitet. Rechtsgrundlage ist unser berechtigtes Interesse, die Wirkung unserer Seite zu verstehen (Art. 6 Abs. 1 lit. f DSGVO). Du kannst der Messung widersprechen: Setze in den Entwicklerwerkzeugen deines Browsers auf dieser Website den Eintrag „plausible_ignore“ im lokalen Speicher auf „true“ (Anleitung von Plausible: plausible.io/docs/excluding-localstorage), dann messen wir dich nicht mehr. Du kannst uns auch schreiben (siehe Kontakt)."
     },
     "cookiesTracking": {
-      "title": "Cookies & Tracking",
-      "text": "Es werden keine Cookies gesetzt, die nicht für den technischen Betrieb erforderlich sind. Zur Reichweitenmessung nutzen wir Plausible Analytics (plausible.io), eine Statistik ohne Cookies und ohne Profilbildung über einzelne Besucher. Google Analytics kommt nicht zum Einsatz."
+      "title": "Cookies und Speicher im Browser",
+      "text": "Die Seite setzt ein Cookie namens „i18next“, das deine gewählte Sprache merkt; es ist ein Sitzungs-Cookie und verfällt, wenn du den Browser schließt. Außerdem merkt sich die Seite im Speicher deines Browsers (sessionStorage, nur bis du den Tab schließt), über welchen Link du gekommen bist (Buch, Kanal), damit eine spätere Anfrage das angeben kann. Beides dient der Funktion der Seite, nicht der Werbung und nicht der Verfolgung über Websites hinweg. Plausible setzt kein Cookie (siehe oben). Es gibt keine Werbe- und keine Tracking-Cookies von Dritten; Google Analytics kommt nicht zum Einsatz."
     },
-    "embeddedContent": {
-      "title": "Eingebettete Inhalte",
-      "text": "Sofern zukünftig eingebettete Inhalte Dritter (z. B. YouTube-Videos, Karten) verwendet werden, können diese Daten an den jeweiligen Anbieter übermitteln. In diesem Fall wird die Datenschutzerklärung entsprechend ergänzt."
+    "fonts": {
+      "title": "Schriftarten",
+      "text": "Die Schriftarten (Inter, IBM Plex Sans und IBM Plex Mono) werden von unserem eigenen Server ausgeliefert. Beim Aufruf der Seite wird keine Verbindung zu Google oder anderen Schriftdiensten aufgebaut."
+    },
+    "forms": {
+      "title": "Anfragen über die Formulare",
+      "text": "Wenn du uns über eines der Formulare schreibst (Zugang anfragen, Kontakt, Mitmachen, Investieren), verarbeiten wir die Angaben, die du machst: Name, E-Mail-Adresse und deine Nachricht, je nach Formular auch Rolle, Verfügbarkeit, Profil-Links (LinkedIn, GitHub) oder Investitionsrahmen. Bei einer Zugangsanfrage senden wir außerdem mit, als welche Rolle du dich meldest, in welcher Sprache du die Seite nutzt und über welchen Link du gekommen bist (zum Beispiel Buchseite oder Kanal). Wir nutzen die Angaben, um dir zu antworten und deine Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b und f DSGVO). Technisch läuft das so: Die Angaben gehen an eine Funktion bei Supabase (Datenbankdienst), werden dort in einer Datenbank gespeichert (Name, E-Mail-Adresse, Nachricht, Art des Formulars) und über den Dienst Resend per E-Mail an uns weitergeleitet. Wir speichern die Angaben, solange wir mit dir im Austausch sind oder du ein Konto bei uns hast. Löschst du dein Konto oder bittest du uns darum, löschen wir die Angaben, soweit keine gesetzliche Aufbewahrungspflicht entgegensteht."
     },
     "affiliate": {
       "title": "Partnerlinks (Amazon)",
-      "text": "Auf einzelnen Buchseiten verlinken wir auf Produktseiten bei Amazon. Das sind Partnerlinks: Wenn du darüber etwas kaufst, erhalten wir eine Provision; für dich ändert sich der Preis nicht. Folgst du einem solchen Link, werden Daten an Amazon übertragen, Amazon kann Cookies setzen und erkennt, dass du über unsere Seite kommst. Dafür ist Amazon verantwortlich; Näheres steht in der Datenschutzerklärung von Amazon. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen."
+      "text": "Auf einzelnen Buchseiten verlinken wir auf Produktseiten bei Amazon. Das sind Partnerlinks: Wenn du darüber etwas kaufst, erhalten wir eine Provision; für dich ändert sich der Preis nicht. Folgst du einem solchen Link, werden Daten an Amazon übertragen, Amazon kann Cookies setzen und erkennt, dass du über unsere Seite kommst. Dafür ist Amazon verantwortlich; Näheres steht in der Datenschutzerklärung von Amazon. Wir nehmen am Partnerprogramm von Amazon teil und verdienen an qualifizierten Verkäufen."
+    },
+    "social": {
+      "title": "Links zu Instagram und X",
+      "text": "Wir verlinken mit einem Logo auf unsere Profile bei Instagram (Meta) und X (früher Twitter). Es ist kein Plugin und kein Inhalt dieser Anbieter eingebunden: Beim Aufruf unserer Seiten werden keine Daten an sie übertragen. Erst wenn du einen der Links anklickst, öffnet sich die Seite des Anbieters, und dessen Datenschutzerklärung gilt. Statistiken, die uns die Anbieter zu den Profilen zur Verfügung stellen, sind zusammengefasst; darüber hinaus verarbeiten die Anbieter Daten zu eigenen Zwecken, dafür sind sie verantwortlich."
+    },
+    "embeddedContent": {
+      "title": "Eingebettete Inhalte",
+      "text": "Auf dieser Website sind keine Videos, Karten oder sonstigen Inhalte Dritter eingebettet. Sollte sich das ändern, ergänzen wir diese Erklärung."
+    },
+    "rights": {
+      "title": "Deine Rechte",
+      "text": "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen eine Verarbeitung aufgrund berechtigter Interessen (Art. 21). Wende dich dafür an die Adresse unter „Kontakt“. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der für den Sitz des Betreibers zuständigen (laut Impressum Kassel, also der Hessische Beauftragte für Datenschutz und Informationsfreiheit)."
     },
     "contact": {
       "title": "Kontakt",
-      "text": "Bei Fragen zum Datenschutz: Heiko Miertzsch - hmiertzsch@web.de"
+      "text": "Bei Fragen zum Datenschutz erreichst du uns unter heiko@plinyoo.com (Plinyoo UG (haftungsbeschränkt) i. Gr., zu Händen Heiko Miertzsch)."
     },
     "back_to_home": "Zur Startseite"
   },
@@ -646,7 +671,7 @@
     },
     "kontakt": {
       "title": "Kontakt für Nutzungsanfragen",
-      "text": "Anfragen zu Nutzungsrechten bitte an hmiertzsch@web.de."
+      "text": "Anfragen zu Nutzungsrechten bitte an heiko@plinyoo.com."
     },
     "back_to_home": "Zur Startseite"
   }

@@ -21,7 +21,7 @@ import Roles from "@/components/ui/Roles";
 import HowItWorks from "@/components/ui/HowItWorks";
 import Examples from "@/components/ui/Examples";
 import Features from "@/components/ui/Features";
-import Journey from "@/components/ui/Journey";
+import Wissensuniversum from "@/components/ui/Wissensuniversum";
 import Story from "@/components/ui/Story";
 import Faq from "@/components/ui/Faq";
 import Outcomes from "@/components/ui/Outcomes";
@@ -54,7 +54,7 @@ export default function LandingPage() {
       <Story />
       <VisionMission />
       <Features />
-      <Journey />
+      <Wissensuniversum />
       <Views />
       <Pillars />
       <Outcomes />

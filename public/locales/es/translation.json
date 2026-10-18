@@ -249,8 +249,13 @@
       "role_placeholder": "Por favor, elige",
       "message_label": "¿Qué quieres lograr con plinyoo?",
       "message_placeholder": "Por ejemplo: quiero entender por qué mi ciudad se calienta tanto en verano.",
-      "button": "Solicitar acceso"
-    }
+      "button": "Solicitar acceso",
+      "origin_note": "También recibimos el enlace por el que llegaste (por ejemplo, una página de libro o un canal)."
+    },
+    "social": {
+      "lead": "También puedes encontrarnos aquí:"
+    },
+    "privacy_link": "Política de privacidad"
   },
   "examples": {
     "title": "Ejemplos de aplicación",
@@ -285,49 +290,9 @@
     },
     "copyright": "Todos los derechos reservados."
   },
-  "imprint": {
-    "title": "Aviso legal",
-    "stand": "A fecha de: 2025",
-    "disclaimer": "Este sitio web es de gestión privada y sin ánimo de lucro.",
-    "angaben": {
-      "title": "Información según § 5 TMG",
-      "name": "Nombre: Heiko Miertzsch",
-      "email": "Correo electrónico: hmiertzsch@web.de"
-    },
-    "haftungInhalte": {
-      "title": "Responsabilidad por el contenido",
-      "text": "Como operador privado del sitio, soy responsable de mi propio contenido en estas páginas de acuerdo con las leyes generales. No existe la obligación de supervisar la información de terceros transmitida o almacenada."
-    },
-    "haftungLinks": {
-      "title": "Responsabilidad por los enlaces",
-      "text": "Los enlaces externos fueron revisados en busca de posibles infracciones legales en el momento de su creación. No tengo ninguna influencia sobre el contenido de las páginas enlazadas; el proveedor respectivo es responsable de ellas."
-    },
-    "urheberrecht": {
-      "title": "Derechos de autor",
-      "text": "El contenido creado por el operador del sitio está sujeto a la ley alemana de derechos de autor. Las contribuciones de terceros están marcadas como tales. La duplicación, el procesamiento, la distribución y cualquier tipo de explotación fuera de los límites de los derechos de autor requieren consentimiento."
-    },
-    "back_to_home": "Volver al inicio"
-  },
   "privacy": {
     "title": "Política de privacidad",
-    "stand": "A fecha de: 2025",
-    "intro": "Este sitio web es de gestión privada. No se procesan datos personales con fines de marketing o análisis.",
-    "serverLogfiles": {
-      "title": "Archivos de registro del servidor",
-      "text": "Al acceder a estas páginas, el proveedor de alojamiento recopila datos por razones técnicas (por ejemplo, dirección IP anonimizada, fecha/hora, páginas visitadas). Estos datos se utilizan exclusivamente para garantizar el funcionamiento técnico y no para la elaboración de perfiles."
-    },
-    "cookiesTracking": {
-      "title": "Cookies y seguimiento",
-      "text": "No se instalan cookies que no sean necesarias para el funcionamiento técnico. No se utilizan herramientas de seguimiento o análisis (por ejemplo, Google Analytics)."
-    },
-    "embeddedContent": {
-      "title": "Contenido incrustado",
-      "text": "Si en el futuro se utiliza contenido incrustado de terceros (por ejemplo, vídeos de YouTube, mapas), esto puede transmitir datos al proveedor respectivo. En este caso, la política de privacidad se actualizará en consecuencia."
-    },
-    "contact": {
-      "title": "Contacto",
-      "text": "Para preguntas sobre protección de datos: Heiko Miertzsch - hmiertzsch@web.de"
-    },
+    "note": "La política de privacidad que sigue solo está disponible en alemán. La versión alemana es la vinculante.",
     "back_to_home": "Volver al inicio"
   },
   "copyright": {
@@ -343,7 +308,7 @@
     },
     "kontakt": {
       "title": "Contacto para derechos de uso",
-      "text": "Dirija las consultas sobre derechos de uso a hmiertzsch@web.de."
+      "text": "Dirija las consultas sobre derechos de uso a heiko@plinyoo.com."
     },
     "back_to_home": "Volver al inicio"
   },
@@ -370,15 +335,30 @@
   },
   "journey": {
     "title": "Prueba un camino",
-    "subtitle": "Siete tarjetas sobre el calor urbano, cada una con pregunta y fuente. Un camino que se dibuja con cada respuesta correcta, no un curso.",
-    "label": "Ejemplo con tarjetas reales",
-    "step": "Tarjeta {{current}} de {{total}}",
+    "subtitle": "Cada estrella es una tarjeta, cada línea un enlace. Elige una estrella y sigue adonde te lleve — cada tarjeta con pregunta y fuente, sin curso.",
     "evidence": "Fuente:",
-    "next": "Siguiente →",
-    "restart": "Empezar de nuevo",
-    "aria": "Camino de ejemplo: siete tarjetas sobre el calor urbano",
-    "doneTitle": "Siete tarjetas, un camino conectado",
-    "doneText": "No has leído siete datos sueltos: has respondido siete preguntas y has visto cómo se remiten las tarjetas entre sí. Ha sido un camino pequeño. En plinyoo recorres el tuyo.",
+    "aria": "Universo de conocimiento para probar",
+    "topicHeat": "Calor urbano",
+    "hint": "Toca una estrella para empezar tu camino.",
+    "path": "Tu camino:",
+    "continues": "Desde aquí continúa hacia:",
+    "tapGlow": "Toca una estrella brillante.",
+    "end": "Aquí termina este camino. Vuelve a una estrella anterior o empieza de nuevo.",
+    "noLink": "No hay un enlace directo de «{{from}}» a «{{to}}». Toca una estrella brillante.",
+    "reset": "Empezar de nuevo",
+    "fieldAria": "Campo de estrellas: {{n}} tarjetas y sus enlaces. Con Tab e Intro puedes formar un camino de tarjeta en tarjeta.",
+    "card": "Tarjeta de aprendizaje",
+    "cardsTitle": "Juega las tarjetas",
+    "cardsLead": "Abre una tarjeta aquí o toca arriba una estrella: las tarjetas de tu camino van primero. Quien responde bien todas las preguntas de una tarjeta hace brillar su estrella.",
+    "count": "Dominas {{n}} de {{total}} tarjetas.",
+    "countAll": "Dominas las {{total}} tarjetas. Tu universo de conocimiento brilla.",
+    "mastered": "dominada ✓",
+    "partRight": "{{r}} de {{n}} correctas",
+    "questionCount": "Preguntas: {{n}}",
+    "questionOf": "Pregunta {{j}} de {{n}}",
+    "right": "Correcta:",
+    "wrong": "No del todo.",
+    "retry": "Intentar de nuevo",
     "note": "Las tarjetas están en alemán."
   },
   "views": {

@@ -3,7 +3,7 @@
    Zentrale Stelle für alle Style-Definitionen
    ============================================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
+/* Schriftarten kommen lokal über @fontsource-Pakete (src/main.tsx), nicht von Google */
 
 /* Modern Normalize - Essential Reset */
 *, *::before, *::after {
@@ -209,4 +209,37 @@ html.loaded body {
   .lesbar .text-base { font-size: 1.1875rem; line-height: 1.65; }
   .lesbar .text-lg   { font-size: 1.3125rem; line-height: 1.55; }
   .lesbar .text-text-muted { color: #46525D; }
+}
+
+/* =============================================================================
+   WISSENSUNIVERSUM (Startseite) — Sternenfeld, dieselbe Gestalt wie auf den Buchseiten
+   Sterne = Karten, Linien = Verweise, Weg = vom Besucher gezeichnet
+   ============================================================================= */
+.wu { background: #1C2A33; border-radius: 14px; padding: 10px 10px 4px; }
+.wu-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.wu svg { display: block; width: 100%; height: auto; }
+@media (max-width: 719px) {
+  .wu svg { min-width: 620px; }
+  .wu .wu-n .hit { transform: scale(1.35); transform-box: fill-box; transform-origin: center; }
+}
+.wu .wu-wolke circle { fill: #9FB6C2; }
+.wu .wu-e { stroke: #4C7A82; stroke-width: 1.3; opacity: .75; }
+.wu .wu-e.weg { stroke: #E3A72F; stroke-width: 3.2; opacity: 1; }
+.wu .wu-n { cursor: pointer; outline: none; }
+.wu .wu-n .hit { fill: transparent; }
+.wu .wu-n .k { fill: #BDE3E6; transition: fill .2s, r .2s; filter: drop-shadow(0 0 5px rgba(160,215,220,.55)); }
+.wu .wu-n:hover .k, .wu .wu-n:focus-visible .k { fill: #fff; r: 10; }
+.wu .wu-n:focus-visible .hit { stroke: #fff; stroke-width: 1.5; }
+.wu .wu-n.besucht .k { fill: #E3A72F; filter: drop-shadow(0 0 7px rgba(227,167,47,.8)); }
+.wu .wu-n.nachbar .k { stroke: #E3A72F; stroke-width: 2.5; animation: wu-puls 1.6s ease-in-out infinite; }
+.wu .wu-n.gekonnt .k { fill: #fff; stroke: #E3A72F; stroke-width: 3; filter: drop-shadow(0 0 8px rgba(255,255,255,.85)); }
+.wu .wu-n.gekonnt.besucht .k { fill: #E3A72F; }
+.wu .wu-n text { display: none; fill: #E6F0EF; font-size: 13px; pointer-events: none; }
+.wu .wu-weg { margin: 8px 6px 4px; color: #E6F0EF; font-size: 16px; min-height: 3.2em; }
+.wu .wu-tools { margin: 0 6px 8px; min-height: 1.5em; }
+.wu .wu-reset { background: none; border: 0; padding: 0; font: inherit; color: #BDE3E6; text-decoration: underline; cursor: pointer; }
+@keyframes wu-puls { 50% { stroke-opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .wu .wu-n.nachbar .k { animation: none; } }
+@media (min-width: 720px) {
+  .wu .wu-n.besucht text, .wu .wu-n:hover text, .wu .wu-n:focus-visible text { display: block; }
 }

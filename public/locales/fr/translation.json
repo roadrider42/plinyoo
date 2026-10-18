@@ -249,8 +249,13 @@
       "role_placeholder": "Merci de choisir",
       "message_label": "Que veux-tu accomplir avec plinyoo ?",
       "message_placeholder": "Par exemple : je veux comprendre pourquoi ma ville devient si chaude l’été.",
-      "button": "Demander l’accès"
-    }
+      "button": "Demander l’accès",
+      "origin_note": "Nous recevons aussi le lien par lequel tu es arrivé (par exemple une page de livre ou un canal)."
+    },
+    "social": {
+      "lead": "Tu peux aussi nous retrouver ici :"
+    },
+    "privacy_link": "Politique de confidentialité"
   },
   "examples": {
     "title": "Exemples d'application",
@@ -285,49 +290,9 @@
     },
     "copyright": "Tous droits réservés."
   },
-  "imprint": {
-    "title": "Mentions légales",
-    "stand": "En date de : 2025",
-    "disclaimer": "Ce site web est géré à titre privé et sans but lucratif.",
-    "angaben": {
-      "title": "Informations conformément à l'article 5 de la TMG",
-      "name": "Nom : Heiko Miertzsch",
-      "email": "E-mail : hmiertzsch@web.de"
-    },
-    "haftungInhalte": {
-      "title": "Responsabilité pour le contenu",
-      "text": "En tant qu'opérateur de site privé, je suis responsable de mon propre contenu sur ces pages conformément aux lois générales. Il n'y a aucune obligation de surveiller les informations de tiers transmises ou stockées."
-    },
-    "haftungLinks": {
-      "title": "Responsabilité pour les liens",
-      "text": "Les liens externes ont été vérifiés pour d'éventuelles violations de la loi au moment de leur création. Je n'ai aucune influence sur le contenu des pages liées ; le fournisseur respectif en est responsable."
-    },
-    "urheberrecht": {
-      "title": "Droit d'auteur",
-      "text": "Le contenu créé par l'opérateur du site est soumis au droit d'auteur allemand. Les contributions de tiers sont indiquées comme telles. La duplication, le traitement, la distribution et toute forme d'exploitation en dehors des limites du droit d'auteur nécessitent un consentement."
-    },
-    "back_to_home": "Retour à l'accueil"
-  },
   "privacy": {
     "title": "Politique de confidentialité",
-    "stand": "En date de : 2025",
-    "intro": "Ce site web est géré à titre privé. Aucune donnée personnelle n'est traitée à des fins de marketing ou d'analyse.",
-    "serverLogfiles": {
-      "title": "Fichiers journaux du serveur",
-      "text": "Lors de l'accès à ces pages, des données sont collectées par le fournisseur d'hébergement pour des raisons techniques (par exemple, adresse IP anonymisée, date/heure, pages consultées). Ces données sont utilisées exclusivement pour assurer le fonctionnement technique et non pour le profilage."
-    },
-    "cookiesTracking": {
-      "title": "Cookies et suivi",
-      "text": "Aucun cookie n'est installé qui ne soit pas nécessaire au fonctionnement technique. Aucun outil de suivi ou d'analyse (par exemple, Google Analytics) n'est utilisé."
-    },
-    "embeddedContent": {
-      "title": "Contenu intégré",
-      "text": "Si du contenu intégré de tiers (par exemple, des vidéos YouTube, des cartes) est utilisé à l'avenir, cela peut transmettre des données au fournisseur respectif. Dans ce cas, la politique de confidentialité sera mise à jour en conséquence."
-    },
-    "contact": {
-      "title": "Contact",
-      "text": "Pour toute question sur la protection des données : Heiko Miertzsch - hmiertzsch@web.de"
-    },
+    "note": "La politique de confidentialité ci-dessous n’existe qu’en allemand. La version allemande fait foi.",
     "back_to_home": "Retour à l'accueil"
   },
   "copyright": {
@@ -343,7 +308,7 @@
     },
     "kontakt": {
       "title": "Contact pour les droits d'utilisation",
-      "text": "Veuillez adresser les demandes de droits d'utilisation à hmiertzsch@web.de."
+      "text": "Veuillez adresser les demandes de droits d'utilisation à heiko@plinyoo.com."
     },
     "back_to_home": "Retour à l'accueil"
   },
@@ -370,15 +335,30 @@
   },
   "journey": {
     "title": "Essaie un parcours",
-    "subtitle": "Sept fiches sur la chaleur urbaine, chacune avec une question et sa source. Un chemin qui se dessine à chaque bonne réponse — pas un cours.",
-    "label": "Exemple avec de vraies fiches",
-    "step": "Fiche {{current}} sur {{total}}",
+    "subtitle": "Chaque étoile est une carte, chaque ligne un lien. Choisis une étoile et va où elle te mène — chaque carte avec une question et sa source, pas un cours.",
     "evidence": "Source :",
-    "next": "Suivant →",
-    "restart": "Recommencer",
-    "aria": "Parcours d’exemple : sept fiches sur la chaleur urbaine",
-    "doneTitle": "Sept fiches, un chemin cohérent",
-    "doneText": "Tu n’as pas lu sept faits isolés : tu as répondu à sept questions et vu comment les fiches se renvoient les unes aux autres. C’était un petit chemin. Dans plinyoo, tu suis le tien.",
+    "aria": "Univers de connaissances à essayer",
+    "topicHeat": "Chaleur urbaine",
+    "hint": "Touche une étoile pour commencer ton chemin.",
+    "path": "Ton chemin :",
+    "continues": "D’ici, il continue vers :",
+    "tapGlow": "Touche une étoile lumineuse.",
+    "end": "Ce chemin s’arrête ici. Reviens à une étoile précédente ou recommence.",
+    "noLink": "Il n’y a pas de lien direct de « {{from}} » vers « {{to}} ». Touche une étoile lumineuse.",
+    "reset": "Recommencer",
+    "fieldAria": "Champ d’étoiles : {{n}} cartes et leurs liens. Avec Tab et Entrée, tu peux former un chemin de carte en carte.",
+    "card": "Carte d’apprentissage",
+    "cardsTitle": "Joue les cartes",
+    "cardsLead": "Ouvre une carte ici ou touche une étoile en haut : les cartes de ton chemin viennent en premier. Qui répond juste à toutes les questions d’une carte fait briller son étoile.",
+    "count": "Tu maîtrises {{n}} cartes sur {{total}}.",
+    "countAll": "Tu maîtrises les {{total}} cartes. Ton univers de connaissances brille.",
+    "mastered": "maîtrisée ✓",
+    "partRight": "{{r}} sur {{n}} justes",
+    "questionCount": "Questions : {{n}}",
+    "questionOf": "Question {{j}} sur {{n}}",
+    "right": "Bonne réponse :",
+    "wrong": "Pas tout à fait.",
+    "retry": "Réessayer",
     "note": "Les fiches sont en allemand."
   },
   "views": {

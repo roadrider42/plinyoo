@@ -314,8 +314,13 @@
       },
       "message_label": "What do you want to achieve with plinyoo?",
       "message_placeholder": "For example: I want to understand why my city gets so hot in summer.",
-      "button": "Request access"
-    }
+      "button": "Request access",
+      "origin_note": "We also receive the link you came from (for example a book page or channel)."
+    },
+    "social": {
+      "lead": "You can also reach us here:"
+    },
+    "privacy_link": "Privacy policy"
   },
   "footer": {
     "brand": {
@@ -332,49 +337,9 @@
     },
     "copyright": "All rights reserved."
   },
-  "imprint": {
-    "title": "Imprint",
-    "stand": "As of: 2025",
-    "disclaimer": "This website is operated privately and not for profit.",
-    "angaben": {
-      "title": "Information according to § 5 TMG",
-      "name": "Name: Heiko Miertzsch",
-      "email": "E-Mail: hmiertzsch@web.de"
-    },
-    "haftungInhalte": {
-      "title": "Liability for Content",
-      "text": "As a private site operator, I am responsible for my own content on these pages in accordance with general laws. There is no obligation to monitor transmitted or stored third-party information."
-    },
-    "haftungLinks": {
-      "title": "Liability for Links",
-      "text": "External links were checked for possible legal violations at the time of linking. I have no influence on the content of linked pages; the respective provider is responsible for them."
-    },
-    "urheberrecht": {
-      "title": "Copyright",
-      "text": "The content created by the site operator is subject to German copyright law. Contributions by third parties are marked as such. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require consent."
-    },
-    "back_to_home": "Back to Home"
-  },
   "privacy": {
     "title": "Privacy Policy",
-    "stand": "As of: 2025",
-    "intro": "This website is operated privately. No personal data is processed for marketing or analysis purposes.",
-    "serverLogfiles": {
-      "title": "Server Log Files",
-      "text": "When accessing these pages, data is collected by the hosting provider for technical reasons (e.g., anonymized IP address, date/time, pages accessed). This data is used exclusively to ensure technical operation and is not used for profiling."
-    },
-    "cookiesTracking": {
-      "title": "Cookies & Tracking",
-      "text": "No cookies are set that are not necessary for technical operation. No tracking or analysis tools (e.g., Google Analytics) are used."
-    },
-    "embeddedContent": {
-      "title": "Embedded Content",
-      "text": "If third-party embedded content (e.g., YouTube videos, maps) is used in the future, this may transmit data to the respective provider. In this case, the privacy policy will be updated accordingly."
-    },
-    "contact": {
-      "title": "Contact",
-      "text": "For questions about data protection: Heiko Miertzsch - hmiertzsch@web.de"
-    },
+    "note": "The privacy policy below is only available in German. The German version is the binding one.",
     "back_to_home": "Back to Home"
   },
   "copyright": {
@@ -390,21 +355,36 @@
     },
     "kontakt": {
       "title": "Contact for Usage Rights",
-      "text": "Please direct inquiries regarding usage rights to hmiertzsch@web.de."
+      "text": "Please direct inquiries regarding usage rights to heiko@plinyoo.com."
     },
     "back_to_home": "Back to Home"
   },
   "journey": {
     "title": "Try a path",
-    "subtitle": "Seven cards on urban heat, each with a question and its source. A path that draws itself with every correct answer — not a course.",
-    "label": "Example with real cards",
-    "step": "Card {{current}} of {{total}}",
+    "subtitle": "Every star is a card, every line a link. Pick a star and follow where it leads you — each card with a question and its source, not a course.",
     "evidence": "Source:",
-    "next": "Next →",
-    "restart": "Start over",
-    "aria": "Example path: seven cards on urban heat",
-    "doneTitle": "Seven cards, one connected path",
-    "doneText": "You didn’t read seven separate facts — you answered seven questions and saw how the cards point to one another. That was one small path. In plinyoo you walk your own.",
+    "aria": "Knowledge universe to try out",
+    "topicHeat": "Urban heat",
+    "hint": "Tap a star to begin your path.",
+    "path": "Your path:",
+    "continues": "From here it leads on to:",
+    "tapGlow": "Tap a glowing star.",
+    "end": "This path ends here. Go back to an earlier star or start over.",
+    "noLink": "There is no direct link from “{{from}}” to “{{to}}”. Tap a glowing star.",
+    "reset": "Start over",
+    "fieldAria": "Star field: {{n}} cards and their links. Use Tab and Enter to build a path from card to card.",
+    "card": "Learning card",
+    "cardsTitle": "Play through the cards",
+    "cardsLead": "Open a card here or tap a star above: the cards of your path come first. Answer all questions of a card correctly and its star lights up.",
+    "count": "You know {{n}} of {{total}} cards.",
+    "countAll": "You know all {{total}} cards. Your knowledge universe is glowing.",
+    "mastered": "known ✓",
+    "partRight": "{{r}} of {{n}} correct",
+    "questionCount": "Questions: {{n}}",
+    "questionOf": "Question {{j}} of {{n}}",
+    "right": "Correct:",
+    "wrong": "Not quite.",
+    "retry": "Try again",
     "note": "The cards are in German."
   },
   "views": {

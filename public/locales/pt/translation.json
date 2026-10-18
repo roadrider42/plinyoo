@@ -249,8 +249,13 @@
       "role_placeholder": "Por favor, escolha",
       "message_label": "O que você quer alcançar com o plinyoo?",
       "message_placeholder": "Por exemplo: quero entender por que minha cidade fica tão quente no verão.",
-      "button": "Solicitar acesso"
-    }
+      "button": "Solicitar acesso",
+      "origin_note": "Também recebemos o link por que chegaste (por exemplo, uma página de livro ou um canal)."
+    },
+    "social": {
+      "lead": "Também nos encontras aqui:"
+    },
+    "privacy_link": "Política de privacidade"
   },
   "examples": {
     "title": "Exemplos de aplicação",
@@ -285,49 +290,9 @@
     },
     "copyright": "Todos os direitos reservados."
   },
-  "imprint": {
-    "title": "Aviso Legal",
-    "stand": "A partir de: 2025",
-    "disclaimer": "Este site é operado de forma privada e sem fins lucrativos.",
-    "angaben": {
-      "title": "Informações de acordo com o § 5 TMG",
-      "name": "Nome: Heiko Miertzsch",
-      "email": "E-mail: hmiertzsch@web.de"
-    },
-    "haftungInhalte": {
-      "title": "Responsabilidade pelo Conteúdo",
-      "text": "Como operador privado do site, sou responsável pelo meu próprio conteúdo nestas páginas, de acordo com as leis gerais. Não há obrigação de monitorar informações de terceiros transmitidas ou armazenadas."
-    },
-    "haftungLinks": {
-      "title": "Responsabilidade por Links",
-      "text": "Os links externos foram verificados quanto a possíveis violações legais no momento da sua criação. Não tenho influência sobre o conteúdo das páginas vinculadas; o respectivo provedor é responsável por elas."
-    },
-    "urheberrecht": {
-      "title": "Direitos Autorais",
-      "text": "O conteúdo criado pelo operador do site está sujeito à lei alemã de direitos autorais. As contribuições de terceiros são marcadas como tal. A duplicação, processamento, distribuição e qualquer tipo de exploração fora dos limites dos direitos autorais exigem consentimento."
-    },
-    "back_to_home": "Voltar à Página Inicial"
-  },
   "privacy": {
-    "title": "Política de Privacidade",
-    "stand": "A partir de: 2025",
-    "intro": "Este site é operado de forma privada. Nenhum dado pessoal é processado para fins de marketing ou análise.",
-    "serverLogfiles": {
-      "title": "Arquivos de Log do Servidor",
-      "text": "Ao acessar estas páginas, os dados são coletados pelo provedor de hospedagem por motivos técnicos (por exemplo, endereço IP anonimizado, data/hora, páginas acessadas). Esses dados são usados exclusivamente para garantir a operação técnica e não para a criação de perfis."
-    },
-    "cookiesTracking": {
-      "title": "Cookies & Rastreamento",
-      "text": "Nenhum cookie é definido que não seja necessário para a operação técnica. Nenhuma ferramenta de rastreamento ou análise (por exemplo, Google Analytics) é usada."
-    },
-    "embeddedContent": {
-      "title": "Conteúdo Incorporado",
-      "text": "Se conteúdo incorporado de terceiros (por exemplo, vídeos do YouTube, mapas) for usado no futuro, isso poderá transmitir dados ao respectivo provedor. Nesse caso, a política de privacidade será atualizada em conformidade."
-    },
-    "contact": {
-      "title": "Contato",
-      "text": "Para perguntas sobre proteção de dados: Heiko Miertzsch - hmiertzsch@web.de"
-    },
+    "title": "Política de privacidade",
+    "note": "A política de privacidade abaixo só está disponível em alemão. A versão alemã é a vinculativa.",
     "back_to_home": "Voltar à Página Inicial"
   },
   "copyright": {
@@ -343,7 +308,7 @@
     },
     "kontakt": {
       "title": "Contato para Direitos de Uso",
-      "text": "Por favor, direcione as perguntas sobre direitos de uso para hmiertzsch@web.de."
+      "text": "Por favor, direcione as perguntas sobre direitos de uso para heiko@plinyoo.com."
     },
     "back_to_home": "Voltar à Página Inicial"
   },
@@ -370,15 +335,30 @@
   },
   "journey": {
     "title": "Experimente um caminho",
-    "subtitle": "Sete cartões sobre calor urbano, cada um com pergunta e fonte. Um caminho que se desenha a cada resposta certa — não um curso.",
-    "label": "Exemplo com cartões reais",
-    "step": "Cartão {{current}} de {{total}}",
+    "subtitle": "Cada estrela é um cartão, cada linha uma ligação. Escolhe uma estrela e segue para onde ela te levar — cada cartão com pergunta e fonte, não um curso.",
     "evidence": "Fonte:",
-    "next": "Próximo →",
-    "restart": "Recomeçar",
-    "aria": "Caminho de exemplo: sete cartões sobre calor urbano",
-    "doneTitle": "Sete cartões, um caminho conectado",
-    "doneText": "Você não leu sete fatos soltos: respondeu a sete perguntas e viu como os cartões remetem uns aos outros. Foi um caminho pequeno. No plinyoo você segue o seu.",
+    "aria": "Universo de conhecimento para experimentar",
+    "topicHeat": "Calor urbano",
+    "hint": "Toca numa estrela para começar o teu caminho.",
+    "path": "O teu caminho:",
+    "continues": "A partir daqui segue para:",
+    "tapGlow": "Toca numa estrela brilhante.",
+    "end": "Este caminho termina aqui. Volta a uma estrela anterior ou recomeça.",
+    "noLink": "Não há ligação direta de «{{from}}» para «{{to}}». Toca numa estrela brilhante.",
+    "reset": "Recomeçar",
+    "fieldAria": "Campo de estrelas: {{n}} cartões e as suas ligações. Com Tab e Enter podes formar um caminho de cartão em cartão.",
+    "card": "Cartão de aprendizagem",
+    "cardsTitle": "Joga os cartões",
+    "cardsLead": "Abre um cartão aqui ou toca numa estrela acima: os cartões do teu caminho vêm primeiro. Quem responde certo a todas as perguntas de um cartão faz a sua estrela brilhar.",
+    "count": "Sabes {{n}} de {{total}} cartões.",
+    "countAll": "Sabes todos os {{total}} cartões. O teu universo de conhecimento brilha.",
+    "mastered": "dominado ✓",
+    "partRight": "{{r}} de {{n}} certas",
+    "questionCount": "Perguntas: {{n}}",
+    "questionOf": "Pergunta {{j}} de {{n}}",
+    "right": "Certa:",
+    "wrong": "Não exatamente.",
+    "retry": "Tentar de novo",
     "note": "Os cartões estão em alemão."
   },
   "views": {
