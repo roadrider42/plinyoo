@@ -19,6 +19,9 @@ const SITE = 'https://www.plinyoo.com';
 const LOGIN = 'https://app.plinyoo.com/login?redirect=%2Fdashboard';
 const INSTA = 'https://www.instagram.com/plinyoo_path/';
 const TWITTER = 'https://x.com/plinyoo_path';   // früher twitter.com, leitet auf x.com
+// Logos als Inline-SVG (kein Nachladen von Dritten). Instagram nach dem Feather-Icon (MIT), X nach Simple Icons (CC0).
+const ICO_INSTA = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>';
+const ICO_X = '<svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>';
 const mitEntwuerfen = process.env.BUCHSEITEN_DRAFT === '1';
 
 const esc = (s) =>
@@ -355,6 +358,8 @@ details p{margin:10px 0 0;color:var(--muted)}
 .abschluss .btn.haupt:hover{background:#E6F0EF}
 .teilen-zeile{margin:22px 0 0;font-size:15px}
 .teilen-zeile a{color:#fff}
+.ico{width:1.1em;height:1.1em;vertical-align:-.2em;margin-right:.3em}
+a.sozial{white-space:nowrap}
 .teilen{background:none;border:0;padding:0;font:inherit;color:#fff;text-decoration:underline;cursor:pointer}
 .lesetext{max-width:68ch}
 .lesetext p{margin:0 0 14px;line-height:1.65}
@@ -475,12 +480,12 @@ ${kartenSektion(b)}
   <p><a class="btn haupt" data-zugang href="${zugang}">Zugang anfragen</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
   <p class="rollen">Ich komme als
     ${TUEREN.map((t) => `<a data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">${esc(t.label)}</a>`).join(' · ')}</p>
-  <p class="teilen-zeile">Folge uns auf <a data-sozial="instagram" href="${INSTA}" rel="noopener me" target="_blank">Instagram</a> und <a data-sozial="twitter" href="${TWITTER}" rel="noopener me" target="_blank">X (Twitter)</a>: @plinyoo_path. Oder schick die Seite an jemanden, der sie brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>
+  <p class="teilen-zeile">Folge uns auf <a class="sozial" data-sozial="instagram" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a> und <a class="sozial" data-sozial="twitter" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>: @plinyoo_path. Oder schick die Seite an jemanden, der sie brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <a href="/">plinyoo.com</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a><a href="${INSTA}" rel="noopener me" target="_blank">Instagram</a><a href="${TWITTER}" rel="noopener me" target="_blank">X (Twitter)</a>
+  <a href="/">plinyoo.com</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a><a class="sozial" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a><a class="sozial" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>
 </div></footer>
 
 <script>

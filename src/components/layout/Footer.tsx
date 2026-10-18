@@ -16,6 +16,7 @@
 
 import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
+import SocialLinks from '@/components/ui/SocialLinks';
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -28,6 +29,7 @@ export default function Footer() {
           <div className="w-full md:w-1/3">
             <h3 className="font-bold font-sans text-xl text-white">plinyoo</h3>
             <p className="text-sm text-white/70 mt-2">{t('footer.brand.subtitle')}</p>
+            <SocialLinks className="mt-4" linkClassName="text-white/70 hover:text-white" />
           </div>
           {/* Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm w-full md:w-auto">
@@ -37,9 +39,6 @@ export default function Footer() {
             <Link to="/mitmachen" className="text-white/70 hover:text-white transition-colors">{t('footer.links.join')}</Link>
             <Link to="/investieren" className="text-white/70 hover:text-white transition-colors">{t('footer.links.invest')}</Link>
             <Link to="/kontakt" className="text-white/70 hover:text-white transition-colors">{t('footer.links.contact')}</Link>
-            {/* Soziale Konten (Markenname, keine Übersetzung nötig) */}
-            <a href="https://www.instagram.com/plinyoo_path/" target="_blank" rel="noopener me" className="text-white/70 hover:text-white transition-colors">Instagram</a>
-            <a href="https://x.com/plinyoo_path" target="_blank" rel="noopener me" className="text-white/70 hover:text-white transition-colors">X (Twitter)</a>
           </div>
         </div>
         {/* Copyright */}
