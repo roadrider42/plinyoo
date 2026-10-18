@@ -395,7 +395,7 @@ footer{font-size:15px}
 summary{font-size:18px}
 }
 </style>
-<script>document.documentElement.className+=' js';try{var n=performance.getEntriesByType('navigation')[0];if(n&&n.type==='reload'&&'scrollRestoration' in history){history.scrollRestoration='manual'}}catch(e){}</script>
+<script>document.documentElement.className+=' js';try{if('scrollRestoration' in history){history.scrollRestoration='manual'}}catch(e){}</script>
 <script async src="https://plausible.io/js/pa--uQFBayBpH0z77zfdWY78.js"></script>
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
 </head>
@@ -489,6 +489,9 @@ ${kartenSektion(b)}
 </div></footer>
 
 <script>
+// Landingpage: ohne Sprungmarke immer oben beginnen. Der Browser würde sonst nach Zurück-Taste oder Tab-Wiederherstellung
+// an der alten Stelle landen (gemessen: Pixel 3141 auf dem Handy = Abschnitt "13 Karten, viele Wege"), obwohl der Besucher oben beginnen soll.
+if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
 // Herkunft (utm_*) von dieser Seite an das Formular weiterreichen; die Startseite liest sie vor dem '#'.
 (function(){
   var q=new URLSearchParams(location.search), keep=new URLSearchParams();
