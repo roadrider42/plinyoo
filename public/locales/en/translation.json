@@ -314,8 +314,13 @@
       },
       "message_label": "What do you want to achieve with plinyoo?",
       "message_placeholder": "For example: I want to understand why my city gets so hot in summer.",
-      "button": "Request access"
-    }
+      "button": "Request access",
+      "origin_note": "We also receive the link you came from (for example a book page or channel)."
+    },
+    "social": {
+      "lead": "You can also reach us here:"
+    },
+    "privacy_link": "Privacy policy"
   },
   "footer": {
     "brand": {
@@ -357,24 +362,7 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "stand": "As of: 2025",
-    "intro": "This website is operated privately. No personal data is processed for marketing or analysis purposes.",
-    "serverLogfiles": {
-      "title": "Server Log Files",
-      "text": "When accessing these pages, data is collected by the hosting provider for technical reasons (e.g., anonymized IP address, date/time, pages accessed). This data is used exclusively to ensure technical operation and is not used for profiling."
-    },
-    "cookiesTracking": {
-      "title": "Cookies & Tracking",
-      "text": "No cookies are set that are not necessary for technical operation. No tracking or analysis tools (e.g., Google Analytics) are used."
-    },
-    "embeddedContent": {
-      "title": "Embedded Content",
-      "text": "If third-party embedded content (e.g., YouTube videos, maps) is used in the future, this may transmit data to the respective provider. In this case, the privacy policy will be updated accordingly."
-    },
-    "contact": {
-      "title": "Contact",
-      "text": "For questions about data protection: Heiko Miertzsch - hmiertzsch@web.de"
-    },
+    "note": "The privacy policy below is only available in German. The German version is the binding one.",
     "back_to_home": "Back to Home"
   },
   "copyright": {

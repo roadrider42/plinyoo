@@ -249,8 +249,13 @@
       "role_placeholder": "Por favor, elige",
       "message_label": "¿Qué quieres lograr con plinyoo?",
       "message_placeholder": "Por ejemplo: quiero entender por qué mi ciudad se calienta tanto en verano.",
-      "button": "Solicitar acceso"
-    }
+      "button": "Solicitar acceso",
+      "origin_note": "También recibimos el enlace por el que llegaste (por ejemplo, una página de libro o un canal)."
+    },
+    "social": {
+      "lead": "También puedes encontrarnos aquí:"
+    },
+    "privacy_link": "Política de privacidad"
   },
   "examples": {
     "title": "Ejemplos de aplicación",
@@ -310,24 +315,7 @@
   },
   "privacy": {
     "title": "Política de privacidad",
-    "stand": "A fecha de: 2025",
-    "intro": "Este sitio web es de gestión privada. No se procesan datos personales con fines de marketing o análisis.",
-    "serverLogfiles": {
-      "title": "Archivos de registro del servidor",
-      "text": "Al acceder a estas páginas, el proveedor de alojamiento recopila datos por razones técnicas (por ejemplo, dirección IP anonimizada, fecha/hora, páginas visitadas). Estos datos se utilizan exclusivamente para garantizar el funcionamiento técnico y no para la elaboración de perfiles."
-    },
-    "cookiesTracking": {
-      "title": "Cookies y seguimiento",
-      "text": "No se instalan cookies que no sean necesarias para el funcionamiento técnico. No se utilizan herramientas de seguimiento o análisis (por ejemplo, Google Analytics)."
-    },
-    "embeddedContent": {
-      "title": "Contenido incrustado",
-      "text": "Si en el futuro se utiliza contenido incrustado de terceros (por ejemplo, vídeos de YouTube, mapas), esto puede transmitir datos al proveedor respectivo. En este caso, la política de privacidad se actualizará en consecuencia."
-    },
-    "contact": {
-      "title": "Contacto",
-      "text": "Para preguntas sobre protección de datos: Heiko Miertzsch - hmiertzsch@web.de"
-    },
+    "note": "La política de privacidad que sigue solo está disponible en alemán. La versión alemana es la vinculante.",
     "back_to_home": "Volver al inicio"
   },
   "copyright": {

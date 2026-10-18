@@ -121,7 +121,7 @@ export default function ZugangPage() {
                 {contactMutation.isLoading ? t('forms.button_sending') : t('forms.access.button')}
               </button>
             </div>
-            <p className="text-xs text-gray-500 mt-4 text-center">{t('forms.privacy_notice')}</p>
+            <p className="text-xs text-gray-500 mt-4 text-center">{t('forms.privacy_notice')} {t('forms.access.origin_note')} <Link to="/datenschutz" className="underline">{t('forms.privacy_link')}</Link></p>
           </form>
         ) : (
           <div className="text-center py-12">

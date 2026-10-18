@@ -589,8 +589,13 @@
       },
       "message_label": "Was möchtest du mit plinyoo erreichen?",
       "message_placeholder": "Zum Beispiel: Ich will verstehen, warum meine Stadt im Sommer so heiß wird.",
-      "button": "Zugang anfragen"
-    }
+      "button": "Zugang anfragen",
+      "origin_note": "Mitgesendet wird, über welchen Link du zu uns gekommen bist (zum Beispiel Buchseite oder Kanal)."
+    },
+    "social": {
+      "lead": "Du erreichst uns auch hier:"
+    },
+    "privacy_link": "Datenschutzerklärung"
   },
   "footer": {
     "brand": {
@@ -632,23 +637,43 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "stand": "Stand: Oktober 2026",
-    "intro": "Diese Website wird privat betrieben. Es werden keine personenbezogenen Daten zu Marketing- oder Analysezwecken verarbeitet.",
-    "serverLogfiles": {
-      "title": "Server-Logfiles",
-      "text": "Beim Zugriff auf diese Seiten werden technisch bedingt durch den Hosting-Provider Daten erhoben (z. B. anonymisierte IP-Adresse, Datum/Uhrzeit, aufgerufene Seiten). Diese Daten dienen ausschließlich der Sicherstellung des technischen Betriebs und werden nicht zur Profilbildung genutzt."
+    "stand": "Stand: 18. Oktober 2026",
+    "intro": "Hier steht, welche Daten beim Besuch dieser Website und bei Anfragen über die Formulare entstehen, wozu wir sie nutzen und welche Rechte du hast. Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist der im Impressum genannte Betreiber der Website.",
+    "hosting": {
+      "title": "Hosting und Verbindungsdaten",
+      "text": "Diese Website wird über GitHub Pages ausgeliefert (GitHub Inc., USA). Bei jedem Aufruf verarbeitet der Hosting-Anbieter technisch notwendige Verbindungsdaten, nach seiner Datenschutzerklärung unter anderem die IP-Adresse sowie Datum, Uhrzeit und die verweisende Seite. Das dient dem sicheren und stabilen Betrieb; Rechtsgrundlage ist unser berechtigtes Interesse daran (Art. 6 Abs. 1 lit. f DSGVO). Nach eigenen Angaben stützt GitHub Übermittlungen in die USA auf Standardvertragsklauseln der EU-Kommission und hält das EU-U.S. Data Privacy Framework ein."
+    },
+    "analytics": {
+      "title": "Reichweitenmessung mit Plausible",
+      "text": "Wir messen mit Plausible Analytics (Plausible Insights OÜ, Estland), wie die Seite genutzt wird: welche Seiten aufgerufen werden, über welchen Link Besucher kommen (z. B. Parameter wie utm_source) und einzelne Handlungen auf der Seite, etwa ob eine Lernkarte beantwortet, der Beitrag geöffnet oder ein Link zum Buch angeklickt wurde. Beim Absenden einer Zugangsanfrage wird nur gemeldet, dass eine Anfrage kam, mit der gewählten Rolle und dem Buch, nicht von wem. Namen, E-Mail-Adressen und Texte, die du eingibst, werden nicht an Plausible übermittelt. Nach Angaben von Plausible werden keine Cookies gesetzt und nichts auf deinem Gerät gespeichert; aus IP-Adresse und Browserkennung wird eine täglich wechselnde Kennung berechnet, die rohe IP-Adresse wird nicht gespeichert, ein grober Standort wird abgeleitet, und die Daten werden in der EU verarbeitet. Rechtsgrundlage ist unser berechtigtes Interesse, die Wirkung unserer Seite zu verstehen (Art. 6 Abs. 1 lit. f DSGVO). Du kannst dieser Verarbeitung widersprechen (siehe Kontakt)."
     },
     "cookiesTracking": {
-      "title": "Cookies & Tracking",
-      "text": "Es werden keine Cookies gesetzt, die nicht für den technischen Betrieb erforderlich sind. Zur Reichweitenmessung nutzen wir Plausible Analytics (plausible.io), eine Statistik ohne Cookies und ohne Profilbildung über einzelne Besucher. Google Analytics kommt nicht zum Einsatz."
+      "title": "Cookies und Speicher im Browser",
+      "text": "Die Seite setzt ein Cookie namens „i18next“, das deine gewählte Sprache merkt; es ist ein Sitzungs-Cookie und verfällt, wenn du den Browser schließt. Außerdem merkt sich die Seite im Speicher deines Browsers (sessionStorage, nur bis du den Tab schließt), über welchen Link du gekommen bist (Buch, Kanal), damit eine spätere Anfrage das angeben kann. Beides dient der Funktion der Seite, nicht der Werbung und nicht der Verfolgung über Websites hinweg. Es gibt keine Werbe- und keine Tracking-Cookies von Dritten; Google Analytics kommt nicht zum Einsatz."
     },
-    "embeddedContent": {
-      "title": "Eingebettete Inhalte",
-      "text": "Sofern zukünftig eingebettete Inhalte Dritter (z. B. YouTube-Videos, Karten) verwendet werden, können diese Daten an den jeweiligen Anbieter übermitteln. In diesem Fall wird die Datenschutzerklärung entsprechend ergänzt."
+    "fonts": {
+      "title": "Schriftarten",
+      "text": "Die Schriftarten (Inter, IBM Plex Sans und IBM Plex Mono) werden von unserem eigenen Server ausgeliefert. Beim Aufruf der Seite wird keine Verbindung zu Google oder anderen Schriftdiensten aufgebaut."
+    },
+    "forms": {
+      "title": "Anfragen über die Formulare",
+      "text": "Wenn du uns über eines der Formulare schreibst (Zugang anfragen, Kontakt, Mitmachen, Investieren), verarbeiten wir die Angaben, die du machst: Name, E-Mail-Adresse und deine Nachricht, je nach Formular auch Rolle, Verfügbarkeit, Profil-Links (LinkedIn, GitHub) oder Investitionsrahmen. Bei einer Zugangsanfrage senden wir außerdem mit, als welche Rolle du dich meldest, in welcher Sprache du die Seite nutzt und über welchen Link du gekommen bist (zum Beispiel Buchseite oder Kanal). Wir nutzen die Angaben, um dir zu antworten und deine Anfrage zu bearbeiten (Art. 6 Abs. 1 lit. b und f DSGVO). Technisch läuft das so: Die Angaben gehen an eine Funktion bei Supabase (Datenbankdienst), werden dort in einer Datenbank gespeichert (Name, E-Mail-Adresse, Nachricht, Art des Formulars) und über den Dienst Resend per E-Mail an uns weitergeleitet. Wir löschen die Angaben, wenn die Anfrage erledigt ist und keine Aufbewahrungspflicht besteht."
     },
     "affiliate": {
       "title": "Partnerlinks (Amazon)",
       "text": "Auf einzelnen Buchseiten verlinken wir auf Produktseiten bei Amazon. Das sind Partnerlinks: Wenn du darüber etwas kaufst, erhalten wir eine Provision; für dich ändert sich der Preis nicht. Folgst du einem solchen Link, werden Daten an Amazon übertragen, Amazon kann Cookies setzen und erkennt, dass du über unsere Seite kommst. Dafür ist Amazon verantwortlich; Näheres steht in der Datenschutzerklärung von Amazon. Als Amazon-Partner verdiene ich an qualifizierten Verkäufen."
+    },
+    "social": {
+      "title": "Links zu Instagram und X",
+      "text": "Wir verlinken mit einem Logo auf unsere Profile bei Instagram (Meta) und X (früher Twitter). Es ist kein Plugin und kein Inhalt dieser Anbieter eingebunden: Beim Aufruf unserer Seiten werden keine Daten an sie übertragen. Erst wenn du einen der Links anklickst, öffnet sich die Seite des Anbieters, und dessen Datenschutzerklärung gilt. Statistiken, die uns die Anbieter zu den Profilen zur Verfügung stellen, sind zusammengefasst; darüber hinaus verarbeiten die Anbieter Daten zu eigenen Zwecken, dafür sind sie verantwortlich."
+    },
+    "embeddedContent": {
+      "title": "Eingebettete Inhalte",
+      "text": "Auf dieser Website sind keine Videos, Karten oder sonstigen Inhalte Dritter eingebettet. Sollte sich das ändern, ergänzen wir diese Erklärung."
+    },
+    "rights": {
+      "title": "Deine Rechte",
+      "text": "Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen eine Verarbeitung aufgrund berechtigter Interessen (Art. 21). Wende dich dafür an die Adresse unter „Kontakt“. Außerdem kannst du dich bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der für den Sitz des Betreibers zuständigen (laut Impressum Kassel, also der Hessische Beauftragte für Datenschutz und Informationsfreiheit)."
     },
     "contact": {
       "title": "Kontakt",

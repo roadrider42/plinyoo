@@ -267,8 +267,13 @@
       "role_placeholder": "Wybierz",
       "message_label": "Co chcesz osiągnąć z plinyoo?",
       "message_placeholder": "Na przykład: chcę zrozumieć, dlaczego moje miasto tak się nagrzewa latem.",
-      "button": "Poproś o dostęp"
-    }
+      "button": "Poproś o dostęp",
+      "origin_note": "Otrzymujemy też informację, z jakiego linku przyszedłeś (np. strona książki lub kanał)."
+    },
+    "social": {
+      "lead": "Znajdziesz nas także tutaj:"
+    },
+    "privacy_link": "Polityka prywatności"
   },
   "footer": {
     "brand": {
@@ -310,24 +315,7 @@
   },
   "privacy": {
     "title": "Polityka prywatności",
-    "stand": "Stan na: 2025",
-    "intro": "Strona jest prowadzona prywatnie. Dane osobowe nie są przetwarzane w celach marketingowych ani analitycznych.",
-    "serverLogfiles": {
-      "title": "Pliki dziennika serwera",
-      "text": "Podczas korzystania ze strony dostawca hostingu zbiera dane techniczne (np. zanonimizowany adres IP, data/godzina, odwiedzane strony). Dane służą wyłącznie zapewnieniu działania technicznego."
-    },
-    "cookiesTracking": {
-      "title": "Cookies i tracking",
-      "text": "Nie są używane pliki cookies inne niż niezbędne technicznie. Nie stosujemy narzędzi analitycznych ani śledzących."
-    },
-    "embeddedContent": {
-      "title": "Treści osadzone",
-      "text": "W przypadku przyszłego użycia treści osadzonych (np. YouTube, mapy) dane mogą być przekazywane do dostawców zewnętrznych. Polityka prywatności zostanie wtedy zaktualizowana."
-    },
-    "contact": {
-      "title": "Kontakt",
-      "text": "Pytania dotyczące ochrony danych: Heiko Miertzsch – hmiertzsch@web.de"
-    },
+    "note": "Poniższa polityka prywatności jest dostępna tylko po niemiecku. Wiążąca jest wersja niemiecka.",
     "back_to_home": "Powrót na stronę główną"
   },
   "copyright": {
