@@ -265,6 +265,12 @@
       "subtitle": "Para equipos de gastronomía",
       "button": "Más información"
     },
+    "book": {
+      "title": "Anarquía — La Compañía de las Indias Orientales",
+      "desc": "13 tarjetas sobre la historia de la Compañía de las Indias Orientales con grafo de conocimiento y preguntas interactivas.",
+      "subtitle": "Presentación del libro",
+      "button": "A la página del libro"
+    },
     "placeholder": {
       "title": "Más ejemplos próximamente"
     },
