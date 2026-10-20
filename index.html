@@ -62,6 +62,15 @@
   ">
     <title>plinyoo</title>
 
+    <!-- Scroll-Restoration deaktivieren: Landingpage soll immer oben beginnen, nicht an der alten Scroll-Position -->
+    <script>
+      try {
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+      } catch (e) {}
+    </script>
+
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa--uQFBayBpH0z77zfdWY78.js"></script>
     <script>
