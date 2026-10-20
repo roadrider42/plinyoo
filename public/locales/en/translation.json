@@ -233,6 +233,12 @@
       "subtitle": "For gastronomy teams",
       "button": "Learn more"
     },
+    "book": {
+      "title": "Anarchy — The East India Company",
+      "desc": "13 cards on the history of the East India Company with knowledge graph and interactive questions.",
+      "subtitle": "Book presentation",
+      "button": "To book page"
+    },
     "placeholder": {
       "title": "More examples to come"
     },

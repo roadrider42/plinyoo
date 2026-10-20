@@ -176,7 +176,7 @@ function kartenSektion(b) {
   const karten = b.kartenvoll ?? [];
   if (karten.length === 0) return '';
   return `<section class="sek alt" id="probe" aria-labelledby="probe-h"><div class="wrap">
-  <h2 id="probe-h">Spiel die Karten durch</h2>
+  <h2 id="probe-h">Gehe deinen eigenen Weg durch die Geschichte der Company</h2>
   <p class="lead">Öffne eine Karte hier oder tippe oben einen Stern an: Die Karten deines Weges stehen zuerst. Jede Karte hat zwei bis drei Fragen. Wer alle richtig beantwortet, lässt den Stern leuchten.</p>
   <p class="stand" id="stand" aria-live="polite">Du kannst 0 von ${karten.length} Karten.</p>
   <div id="kartenliste" data-gesamt="${karten.length}">
@@ -424,22 +424,8 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
   </div>
 </div></section>
 
-<section class="sek" id="fuerwen" aria-labelledby="fuerwen-h"><div class="wrap">
-  <h2 id="fuerwen-h">Drei Rollen zur Erkundung des Wissensuniversums</h2>
-  <div class="karten3">
-    ${TUEREN.map((t) => `<div class="k3"><p class="rl">${esc(t.label)}</p><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('\n    ')}
-  </div>
-</div></section>
-
-<section class="sek alt" aria-labelledby="bekommst-h"><div class="wrap">
-  <h2 id="bekommst-h">Was du bekommst</h2>
-  <div class="karten3">
-    ${BEKOMMST.map((t) => `<div class="k3"><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('\n    ')}
-  </div>
-</div></section>
-
 <section class="sek" aria-labelledby="karten-h"><div class="wrap">
-  <h2 id="karten-h">${karten.length} Karten, viele Wege</h2>
+  <h2 id="karten-h">Der Wissensgraph über die Company</h2>
   <p class="lead">Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht: So erschließt du dir deinen eigenen Teil des Wissensuniversums.</p>
   ${universum(b)}
   ${b.kartenStatus ? `<p class="status">${esc(b.kartenStatus)}</p>` : ''}
@@ -452,6 +438,20 @@ ${kartenSektion(b)}
   <h2 id="start-h">So fängst du an</h2>
   <div class="karten3 schritte">
     ${SCHRITTE.map((t) => `<div class="k3 schritt"><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('\n    ')}
+  </div>
+</div></section>
+
+<section class="sek alt" id="fuerwen" aria-labelledby="fuerwen-h"><div class="wrap">
+  <h2 id="fuerwen-h">Drei Rollen - Fragen?</h2>
+  <div class="karten3">
+    ${TUEREN.map((t) => `<div class="k3"><p class="rl">${esc(t.label)}</p><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('\n    ')}
+  </div>
+</div></section>
+
+<section class="sek" aria-labelledby="bekommst-h"><div class="wrap">
+  <h2 id="bekommst-h">Was du bekommst</h2>
+  <div class="karten3">
+    ${BEKOMMST.map((t) => `<div class="k3"><h3>${esc(t.titel)}</h3><p>${esc(t.text)}</p></div>`).join('\n    ')}
   </div>
 </div></section>
 
