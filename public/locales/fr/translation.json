@@ -265,6 +265,12 @@
       "subtitle": "Pour équipes de restauration",
       "button": "En savoir plus"
     },
+    "book": {
+      "title": "Anarchie — La Compagnie des Indes Orientales",
+      "desc": "13 cartes sur l'histoire de la Compagnie des Indes Orientales avec graphe de connaissances et questions interactives.",
+      "subtitle": "Présentation du livre",
+      "button": "À la page du livre"
+    },
     "placeholder": {
       "title": "Plus d'exemples à venir"
     },

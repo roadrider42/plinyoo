@@ -265,6 +265,12 @@
       "subtitle": "Para equipes de gastronomia",
       "button": "Saiba mais"
     },
+    "book": {
+      "title": "Anarquia — A Companhia das Índias Orientais",
+      "desc": "13 cartões sobre a história da Companhia das Índias Orientais com grafo de conhecimento e perguntas interativas.",
+      "subtitle": "Apresentação do livro",
+      "button": "Para a página do livro"
+    },
     "placeholder": {
       "title": "Mais exemplos em breve"
     },
