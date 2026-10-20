@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 const Examples = () => {
   const { t } = useTranslation();
+  const isDev = import.meta.env.DEV;
+  const bookUrl = isDev ? 'http://localhost:3001/buch/dalrymple-anarchie/' : 'https://www.plinyoo.com/buch/dalrymple-anarchie/';
 
   return (
     <section className="bg-surface-2 border-y border-border/60 py-16 md:py-12">
@@ -12,7 +14,7 @@ const Examples = () => {
           {t('examples.title')}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {/* SpoonUp Kachel */}
           <a href="https://spoonup.me" target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
             <div className="h-12 w-12 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
@@ -23,6 +25,19 @@ const Examples = () => {
             <p className="text-sm text-text-muted flex-grow">{t('examples.spoonup.desc')}</p>
             <button className="mt-4 w-full bg-orange-600 text-white font-semibold py-2 rounded-lg hover:bg-orange-700 transition-colors">
               {t('examples.spoonup.button')}
+            </button>
+          </a>
+
+          {/* Buch: Anarchie */}
+          <a href={bookUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
+            <div className="h-12 w-12 mx-auto mb-4 bg-teal-100 rounded-full flex items-center justify-center">
+              <span className="text-xl font-bold text-teal-600">📚</span>
+            </div>
+            <h3 className="text-lg font-semibold text-primary">{t('examples.book.title')}</h3>
+            <p className="text-sm text-text-muted mb-2">{t('examples.book.subtitle')}</p>
+            <p className="text-sm text-text-muted flex-grow">{t('examples.book.desc')}</p>
+            <button className="mt-4 w-full bg-teal-600 text-white font-semibold py-2 rounded-lg hover:bg-teal-700 transition-colors">
+              {t('examples.book.button')}
             </button>
           </a>
 

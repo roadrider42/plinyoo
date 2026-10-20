@@ -508,6 +508,12 @@
       "subtitle": "Für Gastronomie-Teams",
       "button": "Mehr erfahren"
     },
+    "book": {
+      "title": "Anarchie — Die East India Company",
+      "desc": "13 Karten zur Geschichte der East India Company mit Wissensgraph und interaktiven Fragen.",
+      "subtitle": "Buchvorstellung",
+      "button": "Zur Buchseite"
+    },
     "placeholder": {
       "title": "Weitere Beispiele folgen"
     },
