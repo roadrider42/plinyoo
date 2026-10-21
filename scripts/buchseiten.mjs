@@ -11,6 +11,7 @@
 import { readdir, readFile, writeFile, mkdir, copyFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const contentDir = path.join(root, 'content', 'buecher');
@@ -140,6 +141,41 @@ function universum(b) {
 </div>`;
 }
 
+// Vorschaubild je Buch (1200×630 für og:image): Sternbild des Buchs als Hintergrund, Wortmarke, Titel, Autor, rechts das Cover.
+function zeilen(text, max) {
+  const out = [];
+  for (const wort of String(text).split(/\s+/)) {
+    const z = out.length ? out[out.length - 1] : null;
+    if (z !== null && (z + ' ' + wort).length <= max) out[out.length - 1] = z + ' ' + wort;
+    else out.push(wort);
+  }
+  return out;
+}
+
+async function vorschaubild(b, coverQuelle, ziel) {
+  const W = 1200, H = 630, CH = 530, CW = Math.round(CH * 691 / 1063), CX = W - CW - 70, CY = (H - CH) / 2;
+  const knoten = b.knoten ?? [];
+  const kanten = b.kanten ?? [];
+  const pos = knoten.length ? anordnung(b.slug, knoten.length, kanten, CX - 40, H) : [];
+  const linien = kanten.map(([x, y]) => `<line x1="${pos[x].x}" y1="${pos[x].y}" x2="${pos[y].x}" y2="${pos[y].y}"/>`).join('');
+  const punkte = pos.map((p, i) => `<circle cx="${p.x}" cy="${p.y}" r="${i % 4 === 0 ? 6 : 4.5}" fill="${i % 4 === 0 ? '#E3A72F' : '#6FB3B8'}"/>`).join('');
+  const titel = zeilen(b.titel, 16).slice(0, 3);
+  const tGroesse = titel.length > 2 ? 60 : 76;
+  const font = `font-family="Helvetica Neue, Helvetica, Arial, Liberation Sans, DejaVu Sans, sans-serif"`;
+  let y = 200;
+  const titelSvg = titel.map((z) => { const t = `<text x="80" y="${y}" font-size="${tGroesse}" font-weight="700" fill="#F4F5F7">${esc(z)}</text>`; y += tGroesse * 1.1; return t; }).join('');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <rect width="100%" height="100%" fill="#0F1419"/>
+  <g opacity="0.25"><g stroke="#6FB3B8" stroke-width="1" opacity="0.6">${linien}</g>${punkte}</g>
+  <g ${font}>${titelSvg}
+  <text x="80" y="${y + 14}" font-size="34" fill="#BDE3E6">${esc(b.autor)}</text>
+  <text x="80" y="${H - 70}" font-size="24" font-weight="600" fill="#E3A72F">Buchvorstellung mit Lernkarten <tspan fill="#FFFFFF">· made by plinyoo</tspan></text></g>
+  <rect x="${CX + 6}" y="${CY + 10}" width="${CW}" height="${CH}" rx="6" fill="#000" opacity="0.5"/>
+</svg>`;
+  const cover = await sharp(coverQuelle).resize(CW, CH, { fit: 'cover' }).toBuffer();
+  await sharp(Buffer.from(svg)).composite([{ input: cover, left: CX, top: CY }]).png().toFile(ziel);
+}
+
 // Karten zum Durchspielen — Konzept von future-space.plinyoo.com (echte Karte, Frage, Rückmeldung, Beleg, Quelle),
 // auf alle Karten des Buchs ausgedehnt: Jede Karte ist aufklappbar, jede Frage einzeln beantwortbar (mit "Nochmal versuchen").
 // Sind alle Fragen einer Karte richtig, leuchtet ihr Stern im Sternenfeld. Der Weg im Sternenfeld bestimmt die Reihenfolge:
@@ -205,7 +241,7 @@ function beitragFalte(bt, buchTitel, buchAutor) {
 function seite(b, mitCover) {
   const url = `${SITE}/buch/${b.slug}/`;
   const titelVoll = `${b.titel} — ${b.autor}`;
-  const ogBild = `${SITE}/og/buchseite.png`;
+  const ogBild = mitCover ? `${url}og.png` : `${SITE}/og/buchseite.png`;
   const titel = `${b.autor}: ${b.titel} — Buchvorstellung | plinyoo`;
   const desc = b.leitfrage;
   const karten = b.karten ?? [];
@@ -643,7 +679,10 @@ async function main() {
     await mkdir(out, { recursive: true });
     const coverQuelle = path.join(contentDir, b.slug, b.cover || 'cover.jpg');
     const mitCover = await exists(coverQuelle);
-    if (mitCover) await copyFile(coverQuelle, path.join(out, 'cover.jpg'));
+    if (mitCover) {
+      await copyFile(coverQuelle, path.join(out, 'cover.jpg'));
+      await vorschaubild(b, coverQuelle, path.join(out, 'og.png'));
+    }
     await writeFile(path.join(out, 'index.html'), seite(b, mitCover), 'utf8');
     erzeugt++;
     console.log(`Buchseite: /buch/${b.slug}/${mitCover ? ' (mit Cover)' : ' (ohne Cover)'}${b.draft ? ' [ENTWURF]' : ''}`);
