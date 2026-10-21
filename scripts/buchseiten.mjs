@@ -361,8 +361,8 @@ details p{margin:10px 0 0;color:var(--muted)}
 .ico{width:1.1em;height:1.1em;vertical-align:-.2em;margin-right:.3em}
 a.sozial{white-space:nowrap}
 .teilen{background:none;border:0;padding:0;font:inherit;color:#fff;text-decoration:underline;cursor:pointer}
-.lesetext{max-width:68ch}
-.lesetext p{margin:0 0 14px;line-height:1.65}
+.lesetext{max-width:65ch}
+.lesetext p{margin:0 0 24px;line-height:1.7}
 .beitrag-fold{margin:18px 0 0;max-width:68ch;border-left:3px solid var(--line);padding:2px 0 2px 14px;border-bottom:0;font-size:17px}
 @media(min-width:768px){.beitrag-fold{font-size:18px}}
 .beitrag-fold:first-of-type{border-top:0}
