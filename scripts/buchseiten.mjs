@@ -191,8 +191,8 @@ function beitragFalte(bt, buchTitel, buchAutor) {
   if (!bt || !bt.absaetze || bt.absaetze.length === 0) return '';
   return `<details class="beitrag-fold">
     <summary><span class="bk">${esc(bt.etikett || 'Dazu ein Beitrag')}</span><span class="bt">${esc(bt.titel)}</span>${bt.anreisser ? `<span class="anreisser">${esc(bt.anreisser)}</span>` : ''}<span class="mehr"><span class="auf">Weiterlesen ▾</span><span class="zu">Einklappen ▴</span></span></summary>
-    <div class="lesetext">
-      ${bt.absaetze.map((a) => `<p>${esc(a)}</p>`).join('\n      ')}
+    <div class="lesetext" style="max-width: 65ch !important; line-height: 1.7 !important;">
+      ${bt.absaetze.map((a) => `<p style="margin-bottom: 24px !important;">${esc(a)}</p>`).join('\n      ')}
       <p class="status">Meinungsbeitrag von ${esc(bt.autor)} auf Grundlage von ${esc(buchAutor)}s Buch „${esc(buchTitel)}“. Die Lernkarten auf dieser Seite stützen sich dagegen auf andere Quellen.</p>
     </div>
   </details>`;
