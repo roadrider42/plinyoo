@@ -31,6 +31,10 @@ const esc = (s) =>
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
 
+// Wie esc, lässt aber die Inline-Auszeichnungen <strong>/<em> durch (für Beitragsabsätze mit Hervorhebungen).
+const escInline = (s) =>
+  esc(s).replace(/&lt;(\/?(?:strong|em))&gt;/g, '<$1>');
+
 const exists = async (p) => access(p).then(() => true, () => false);
 
 // Die drei Anreden: gleiche Texte wie in public/locales/de/translation.json (roles.*).
@@ -191,8 +195,8 @@ function beitragFalte(bt, buchTitel, buchAutor) {
   if (!bt || !bt.absaetze || bt.absaetze.length === 0) return '';
   return `<details class="beitrag-fold">
     <summary><span class="bk">${esc(bt.etikett || 'Dazu ein Beitrag')}</span><span class="bt">${esc(bt.titel)}</span>${bt.anreisser ? `<span class="anreisser">${esc(bt.anreisser)}</span>` : ''}<span class="mehr"><span class="auf">Weiterlesen ▾</span><span class="zu">Einklappen ▴</span></span></summary>
-    <div class="lesetext" style="max-width: 65ch !important; line-height: 1.7 !important;">
-      ${bt.absaetze.map((a) => `<p style="margin-bottom: 24px !important;">${esc(a)}</p>`).join('\n      ')}
+    <div class="lesetext">
+      ${bt.absaetze.map((a) => `<p>${escInline(a)}</p>`).join('\n      ')}
       <p class="status">Meinungsbeitrag von ${esc(bt.autor)} auf Grundlage von ${esc(buchAutor)}s Buch „${esc(buchTitel)}“. Die Lernkarten auf dieser Seite stützen sich dagegen auf andere Quellen.</p>
     </div>
   </details>`;
@@ -345,10 +349,10 @@ details.kartek.gekonnt{border-color:#2F7D4F}
 .kauf .meta{margin-bottom:12px}
 .anzeige{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid var(--muted);border-radius:4px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;vertical-align:middle}
 .hinweis{font-size:13px;color:var(--muted);margin:4px 0 0}
-details{border-bottom:1px solid var(--line);padding:14px 0}
-details:first-of-type{border-top:1px solid var(--line)}
+details.faq{border-bottom:1px solid var(--line);padding:14px 0}
+details.faq:first-of-type{border-top:1px solid var(--line)}
 summary{cursor:pointer;font-weight:600;color:var(--graphite)}
-details p{margin:10px 0 0;color:var(--muted)}
+details.faq p{margin:10px 0 0;color:var(--muted)}
 .abschluss{background:var(--graphite);color:#fff;padding:52px 0}
 .abschluss h2{margin:0 0 10px;font-size:clamp(22px,4vw,28px);color:#fff}
 .abschluss p{margin:0 0 18px;color:#D3DEE6}
@@ -471,7 +475,7 @@ ${kartenSektion(b)}
 
 <section class="sek" aria-labelledby="faq-h"><div class="wrap">
   <h2 id="faq-h">Häufige Fragen</h2>
-  ${faq.map(([f, a]) => `<details><summary>${esc(f)}</summary><p>${a}</p></details>`).join('\n  ')}
+  ${faq.map(([f, a]) => `<details class="faq"><summary>${esc(f)}</summary><p>${a}</p></details>`).join('\n  ')}
 </div></section>
 
 <section class="abschluss" aria-labelledby="abschluss-h"><div class="wrap">
