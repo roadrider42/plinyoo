@@ -239,6 +239,12 @@
       "subtitle": "Book presentation",
       "button": "To book page"
     },
+    "book2": {
+      "title": "The Power of Geography — Borders",
+      "desc": "6 cards on who drew the borders we live with, with knowledge graph and interactive questions.",
+      "subtitle": "Book presentation",
+      "button": "To book page"
+    },
     "placeholder": {
       "title": "More examples to come"
     },

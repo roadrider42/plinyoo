@@ -515,6 +515,12 @@
       "subtitle": "Buchvorstellung",
       "button": "Zur Buchseite"
     },
+    "book2": {
+      "title": "Die Macht der Geografie — Grenzen",
+      "desc": "6 Karten dazu, wer die Grenzen zog, mit denen wir leben, mit Wissensgraph und interaktiven Fragen.",
+      "subtitle": "Buchvorstellung",
+      "button": "Zur Buchseite"
+    },
     "placeholder": {
       "title": "Weitere Beispiele folgen"
     },

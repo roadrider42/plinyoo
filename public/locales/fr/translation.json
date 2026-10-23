@@ -271,6 +271,12 @@
       "subtitle": "Présentation du livre",
       "button": "À la page du livre"
     },
+    "book2": {
+      "title": "Le pouvoir de la géographie — Frontières",
+      "desc": "6 cartes sur ceux qui ont tracé les frontières avec lesquelles nous vivons, avec graphe de connaissances et questions interactives.",
+      "subtitle": "Présentation du livre",
+      "button": "À la page du livre"
+    },
     "placeholder": {
       "title": "Plus d'exemples à venir"
     },
