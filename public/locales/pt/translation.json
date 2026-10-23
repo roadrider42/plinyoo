@@ -271,6 +271,12 @@
       "subtitle": "Apresentação do livro",
       "button": "Para a página do livro"
     },
+    "book2": {
+      "title": "O poder da geografia — Fronteiras",
+      "desc": "6 cartões sobre quem traçou as fronteiras com que vivemos, com grafo de conhecimento e perguntas interativas.",
+      "subtitle": "Apresentação do livro",
+      "button": "Para a página do livro"
+    },
     "placeholder": {
       "title": "Mais exemplos em breve"
     },

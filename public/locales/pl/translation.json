@@ -198,6 +198,12 @@
       "subtitle": "Prezentacja książki",
       "button": "Do strony książki"
     },
+    "book2": {
+      "title": "Potęga geografii — Granice",
+      "desc": "6 kart o tym, kto wytyczył granice, z którymi żyjemy, z grafem wiedzy i interaktywnymi pytaniami.",
+      "subtitle": "Prezentacja książki",
+      "button": "Do strony książki"
+    },
     "placeholder": {
       "title": "Więcej przykładów wkrótce"
     },
