@@ -1,0 +1,696 @@
+{
+  "slug": "marshall-die-macht-der-geografie",
+  "draft": false,
+  "autor": "Tim Marshall",
+  "titel": "Die Macht der Geografie",
+  "untertitel": "Wie sich Weltpolitik anhand von 10 Karten erklären lässt",
+  "uebersetzer": "Birgit Brandau und Lutz-W. Wolff",
+  "verlag": "dtv",
+  "erschienen": "Taschenbuch, erscheint am 19. November 2026",
+  "isbn": "978-3-423-35279-6",
+  "leitfrage": "Wer zog die Grenzen, mit denen wir bis heute leben, und warum dort?",
+  "einordnung": "Tim Marshall zeigt in zehn Kapiteln, wie die Geografie die Ziele der Weltmächte beeinflusst. Wir nehmen das Buch zum Anlass, einzelne Grenzen und ihre Entstehung mit eigenen Quellen aufzuschlüsseln — als Lernkarten mit Fragen und Belegen.",
+  "kartenIntro": "Die Karten stützen sich auf Quellen außerhalb des Buchs und nennen sie einzeln. Alle 6 kannst du unten durchspielen.",
+  "karten": [
+    "Tordesillas 1494",
+    "Berliner Konferenz 1884/85",
+    "Sykes–Picot 1916",
+    "Durand-Linie 1893",
+    "McMahon-Linie 1914",
+    "Radcliffe-Linie 1947"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen. Die Quellen liegen außerhalb des Buchs.",
+  "verlagUrl": "https://www.dtv.de/buch/die-macht-der-geografie-35279",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://link.amazon/B0iTCY3Q5",
+  "cover": "cover.jpg",
+  "coverBreite": 500,
+  "coverHoehe": 778,
+  "coverCredit": "Cover: © dtv Verlagsgesellschaft",
+  "naechsteWoche": "",
+  "probeTitel": "Gehe deinen eigenen Weg durch die Grenzen der Welt",
+  "graphTitel": "Der Wissensgraph über die Grenzen",
+  "knoten": [
+    {
+      "slug": "geo-tordesillas-1494",
+      "titel": "Tordesillas 1494"
+    },
+    {
+      "slug": "geo-berlin-1884",
+      "titel": "Berliner Konferenz 1884/85"
+    },
+    {
+      "slug": "geo-sykes-picot-1916",
+      "titel": "Sykes–Picot 1916"
+    },
+    {
+      "slug": "geo-durand-1893",
+      "titel": "Durand-Linie 1893"
+    },
+    {
+      "slug": "geo-mcmahon-1914",
+      "titel": "McMahon-Linie 1914"
+    },
+    {
+      "slug": "geo-radcliffe-1947",
+      "titel": "Radcliffe-Linie 1947"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      1,
+      2,
+      "verwandt"
+    ],
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      3,
+      4,
+      "verwandt"
+    ],
+    [
+      3,
+      5,
+      "verwandt"
+    ],
+    [
+      4,
+      5,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "Warum Landkarten nie neutral sind und …",
+    "titel": "Wer zog die Grenzen, mit denen wir bis heute leben – und warum dort?",
+    "anreisser": "Fünf Wochen und ein Mann, der nie in Indien gewesen war: So entstand 1947 die Grenze zwischen Indien und Pakistan. War das ein Ausreißer – oder eher die Regel?",
+    "absaetze": [
+      "Wir behandeln Grenzen wie Naturgesetze. Der Rhein, die Alpen, der Himalaya: Das sieht nach Geografie aus. Doch viele der Linien, die heute Staaten, Völker und Konflikte trennen, hat jemand gezogen, und oft ohne die, die dort leben.",
+      "1494 teilten Spanien und Portugal in Tordesillas die Welt entlang eines Meridians westlich der Kapverden. England, die Niederlande und Frankreich erkannten das nicht an. 1884/85 rief Bismarck Vertreter von 13 europäischen Staaten und der USA nach Berlin, um über Afrika zu verhandeln. Kein afrikanisches Land war eingeladen.",
+      "1916 teilten die Diplomaten Mark Sykes und François Georges-Picot in einem geheimen Abkommen osmanische Provinzen in britische und französische Zonen. 1893 legte der britische Diplomat Mortimer Durand mit dem Emir von Afghanistan die Grenze zwischen Afghanistan und Britisch-Indien fest; sie teilt bis heute Paschtunen und Belutschen. 1914 zog Henry McMahon die Grenze zwischen Tibet und Britisch-Indien. Die Republik China war daran nicht beteiligt; China lehnt die Linie ab, erkennt sie aber als Teil der Line of Actual Control an.",
+      "Und 1947 bekam Cyril Radcliffe, der vorher nie in Indien gewesen war und dort niemanden kannte, nach seiner Ankunft fünf Wochen, um die Grenze zwischen Indien und Pakistan festzulegen. Veröffentlicht wurde sie zwei Tage nach der Unabhängigkeit beider Staaten.",
+      "Heißt das, die Geografie spielt keine Rolle? Im Gegenteil. Aber zwischen dem, was Gebirge, Flüsse und Meere erlauben, und der Linie, die am Ende auf der Karte steht, liegt eine Entscheidung. Wer an ihr beteiligt war und wer nicht, prägt Konflikte bis heute. Stimmt das für jede Grenze? Das ist die eigentliche Frage.",
+      "Tim Marshall beschreibt in <em>Die Macht der Geografie</em>, wie Gebirge, Ebenen, Flüsse, Meere und Wüsten den Entscheidungsspielraum von Regierungen begrenzen (so der Verlagstext). Es lohnt sich, das Buch zu lesen und danach noch einmal auf die Karte zu schauen.",
+      "Und was weißt du über die Grenzen, die jemand für dich gezogen hat? Probier es an den Karten unten aus."
+    ],
+    "autor": "Heiko Miertzsch"
+  },
+  "kartenvoll": [
+    {
+      "slug": "geo-tordesillas-1494",
+      "kurz": "Tordesillas 1494",
+      "titel": "Tordesillas 1494: Zwei Kronen teilen die Welt",
+      "karte": "Am 7. Juni 1494 unterzeichneten die Kronen Spaniens und Portugals in Tordesillas einen Vertrag. Er teilte Länder entlang eines Meridians 370 Leguas westlich der Kapverden: Das Land östlich der Linie sollte Portugal gehören, das westliche Kastilien. England, die Niederlande und Frankreich erkannten diese Teilung der Welt zwischen zwei katholischen Nationen nicht an.",
+      "quelle": {
+        "titel": "Treaty of Tordesillas",
+        "url": "https://en.wikipedia.org/wiki/Treaty_of_Tordesillas",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-23"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wo verlief die Trennlinie von Tordesillas?",
+          "beleg": "along a meridian 370 leagues (c. 2,100 km or 1,300 mi) west of the Cape Verde islands",
+          "belegDe": "entlang eines Meridians 370 Leguas (etwa 2.100 km oder 1.300 Meilen) westlich der Kapverdischen Inseln",
+          "optionen": [
+            {
+              "text": "370 Leguas westlich der Kapverden",
+              "ok": true,
+              "fb": "Richtig: So beschreibt es Wikipedia."
+            },
+            {
+              "text": "Entlang des Äquators",
+              "ok": false,
+              "fb": "Die Quelle nennt einen Meridian, also eine Nord-Süd-Linie, nicht den Äquator."
+            },
+            {
+              "text": "Am Kap der Guten Hoffnung",
+              "ok": false,
+              "fb": "Das Kap ist in der Quelle nicht der Bezugspunkt; genannt werden die Kapverden."
+            },
+            {
+              "text": "370 Leguas östlich der Azoren",
+              "ok": false,
+              "fb": "Bezugspunkt sind die Kapverden, und die Linie liegt westlich davon."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wem sollten laut Vertrag die Länder östlich der Linie gehören?",
+          "beleg": "The lands to the east would belong to Portugal and the lands to the west to Castile",
+          "belegDe": "Die Länder im Osten sollten Portugal gehören und die im Westen Kastilien",
+          "optionen": [
+            {
+              "text": "Kastilien",
+              "ok": false,
+              "fb": "Kastilien erhielt laut Quelle die Länder westlich der Linie."
+            },
+            {
+              "text": "England",
+              "ok": false,
+              "fb": "England kommt in dieser Aussage nicht vor; es erkannte den Vertrag nicht an."
+            },
+            {
+              "text": "Portugal",
+              "ok": true,
+              "fb": "Richtig: Die Länder östlich der Linie sollten Portugal gehören."
+            },
+            {
+              "text": "Frankreich",
+              "ok": false,
+              "fb": "Frankreich erhielt nichts; es erkannte die Teilung nicht an."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie reagierten England und die Niederlande laut Quelle auf die Teilung?",
+          "beleg": "did not recognize the division of the world between only two Catholic nations brokered by the pope",
+          "belegDe": "erkannten die vom Papst vermittelte Teilung der Welt zwischen nur zwei katholischen Nationen nicht an",
+          "optionen": [
+            {
+              "text": "Sie traten dem Vertrag als weitere Parteien bei",
+              "ok": false,
+              "fb": "Die Quelle sagt das Gegenteil: Sie erkannten die Teilung nicht an."
+            },
+            {
+              "text": "Sie erkannten die Teilung nicht an",
+              "ok": true,
+              "fb": "Richtig: Beide erkannten die Teilung der Welt zwischen zwei Nationen nicht an."
+            },
+            {
+              "text": "Sie verlangten eine Linie weiter im Westen",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts; genannt wird die Nichtanerkennung."
+            },
+            {
+              "text": "Sie erkannten die Linie nur im Pazifik an",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "geo-berlin-1884",
+      "kurz": "Berliner Konferenz 1884/85",
+      "titel": "Berliner Konferenz 1884/85: Afrika wird verteilt, ohne Afrikaner",
+      "karte": "Vom 15. November 1884 bis zum 26. Februar 1885 tagte in Berlin eine Konferenz, zu der Bismarck Vertreter von 13 europäischen Staaten und der USA gerufen hatte. Kein afrikanisches Land war eingeladen. Nach der Quelle ließ sich „effektive Besetzung“ herstellen, indem ein europäischer Staat einen Stützpunkt an der Küste einrichtete.",
+      "quelle": {
+        "titel": "Berlin Conference",
+        "url": "https://en.wikipedia.org/wiki/Berlin_Conference",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-23"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wer war zur Berliner Konferenz 1884/85 eingeladen?",
+          "beleg": "called on representatives of 13 European nations, as well as the United States",
+          "belegDe": "rief Vertreter von 13 europäischen Nationen sowie der Vereinigten Staaten zusammen",
+          "optionen": [
+            {
+              "text": "Nur Großbritannien und Frankreich",
+              "ok": false,
+              "fb": "Die Quelle nennt 13 europäische Staaten und die USA."
+            },
+            {
+              "text": "Europäische Staaten und afrikanische Herrscher",
+              "ok": false,
+              "fb": "Laut Quelle war kein afrikanisches Land eingeladen."
+            },
+            {
+              "text": "Alle Staaten Europas und Afrikas",
+              "ok": false,
+              "fb": "Die Quelle nennt 13 europäische Staaten und die USA, keine afrikanischen."
+            },
+            {
+              "text": "13 europäische Staaten und die USA",
+              "ok": true,
+              "fb": "Richtig: So beschreibt es die Quelle."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie viele afrikanische Länder waren laut Quelle zur Konferenz eingeladen?",
+          "beleg": "No African countries were invited to the congress.",
+          "belegDe": "Kein afrikanisches Land war zu dem Kongress eingeladen.",
+          "optionen": [
+            {
+              "text": "Drei, darunter Äthiopien",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Alle unabhängigen Länder Afrikas",
+              "ok": false,
+              "fb": "Die Quelle sagt das Gegenteil."
+            },
+            {
+              "text": "Keines",
+              "ok": true,
+              "fb": "Richtig: Kein afrikanisches Land war eingeladen."
+            },
+            {
+              "text": "Eines, nämlich Ägypten",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts; sie sagt, kein afrikanisches Land war eingeladen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wodurch ließ sich laut Quelle „effektive Besetzung“ eines Gebiets herstellen?",
+          "beleg": "effective occupation could be established by a European state setting up a coastal base.",
+          "belegDe": "eine effektive Besetzung konnte dadurch hergestellt werden, dass ein europäischer Staat einen Küstenstützpunkt einrichtete.",
+          "optionen": [
+            {
+              "text": "Durch einen Stützpunkt an der Küste",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Durch einen Vertrag mit dem Herrscher des Gebiets",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Durch eine Abstimmung der Bewohner",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Durch die Zustimmung der USA",
+              "ok": false,
+              "fb": "Die USA waren eingeladen, ihre Zustimmung wird hier aber nicht als Bedingung genannt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "geo-sykes-picot-1916",
+      "kurz": "Sykes–Picot 1916",
+      "titel": "Sykes–Picot 1916: Geheimer Plan für das Osmanische Reich",
+      "karte": "1916 vereinbarten die britischen und französischen Diplomaten Mark Sykes und François Georges-Picot ein geheimes Abkommen zwischen dem Vereinigten Königreich und Frankreich, mit Zustimmung Russlands und Italiens. Es teilte die osmanischen Provinzen außerhalb der Arabischen Halbinsel in Zonen auf, die Großbritannien und Frankreich kontrollieren oder beeinflussen sollten.",
+      "quelle": {
+        "titel": "Sykes–Picot Agreement",
+        "url": "https://en.wikipedia.org/wiki/Sykes%E2%80%93Picot_Agreement",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-23"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche zwei Länder schlossen das geheime Abkommen von 1916?",
+          "beleg": "a 1916 secret treaty between the United Kingdom and France",
+          "belegDe": "ein geheimer Vertrag von 1916 zwischen dem Vereinigten Königreich und Frankreich",
+          "optionen": [
+            {
+              "text": "Russland und Italien",
+              "ok": false,
+              "fb": "Beide stimmten laut Quelle nur zu; geschlossen haben es zwei andere Länder."
+            },
+            {
+              "text": "Frankreich und das Osmanische Reich",
+              "ok": false,
+              "fb": "Das Osmanische Reich war das Gebiet, das aufgeteilt wurde, nicht Vertragspartei."
+            },
+            {
+              "text": "Das Vereinigte Königreich und Russland",
+              "ok": false,
+              "fb": "Russland stimmte laut Quelle nur zu."
+            },
+            {
+              "text": "Das Vereinigte Königreich und Frankreich",
+              "ok": true,
+              "fb": "Richtig: So beschreibt es die Quelle."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was teilte das Abkommen laut Quelle auf?",
+          "beleg": "divided the Ottoman provinces outside the Arabian Peninsula",
+          "belegDe": "teilte die osmanischen Provinzen außerhalb der Arabischen Halbinsel auf",
+          "optionen": [
+            {
+              "text": "Die gesamte Arabische Halbinsel mit allen Küstenstaaten",
+              "ok": false,
+              "fb": "Die Quelle nimmt die Arabische Halbinsel ausdrücklich aus."
+            },
+            {
+              "text": "Osmanische Provinzen außer der Arabischen Halbinsel",
+              "ok": true,
+              "fb": "Richtig: So beschreibt es die Quelle."
+            },
+            {
+              "text": "Die Kolonien Britisch-Indiens und Burmas",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Persien, Afghanistan und das Zarenreich",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts; aufgeteilt wurden osmanische Provinzen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wer stimmte dem Abkommen laut Quelle zu, ohne es zu schließen?",
+          "beleg": "with assent from Russia and Italy",
+          "belegDe": "mit Zustimmung von Russland und Italien",
+          "optionen": [
+            {
+              "text": "Russland und Italien",
+              "ok": true,
+              "fb": "Richtig: Beide gaben ihre Zustimmung."
+            },
+            {
+              "text": "Die USA und Japan",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Das Osmanische Reich",
+              "ok": false,
+              "fb": "Es war der Gegenstand der Aufteilung, nicht zustimmende Partei."
+            },
+            {
+              "text": "Die arabischen Führer",
+              "ok": false,
+              "fb": "Davon steht in der Quelle als Zustimmung nichts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "geo-durand-1893",
+      "kurz": "Durand-Linie 1893",
+      "titel": "Durand-Linie 1893: Grenze zwischen Afghanistan und Britisch-Indien",
+      "karte": "1893 wurde die Durand-Linie als Grenze zwischen dem Emirat Afghanistan und dem Britisch-Indischen Reich festgelegt, vereinbart vom britischen Diplomaten Mortimer Durand und Emir Abdur Rahman Khan. Heute ist sie die Grenze zwischen Afghanistan und Pakistan. Sie teilt das Volk der Paschtunen und der Belutschen.",
+      "quelle": {
+        "titel": "Durand Line",
+        "url": "https://en.wikipedia.org/wiki/Durand_Line",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-23"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Zwischen wem wurde die Durand-Linie 1893 als Grenze festgelegt?",
+          "beleg": "the Emirate of Afghanistan and the British Indian Empire",
+          "belegDe": "dem Emirat Afghanistan und dem Britisch-Indischen Reich",
+          "optionen": [
+            {
+              "text": "Zwischen Persien und dem Russischen Kaiserreich",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Zwischen dem Kaiserreich China und Tibet",
+              "ok": false,
+              "fb": "Das betrifft die McMahon-Linie, nicht die Durand-Linie."
+            },
+            {
+              "text": "Zwischen Afghanistan und Britisch-Indien",
+              "ok": true,
+              "fb": "Richtig: Das Emirat Afghanistan und das Britisch-Indische Reich."
+            },
+            {
+              "text": "Zwischen dem heutigen Indien und Pakistan",
+              "ok": false,
+              "fb": "Pakistan gab es 1893 noch nicht."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wer handelte die Durand-Linie 1893 mit dem Emir von Afghanistan aus?",
+          "beleg": "by Mortimer Durand, a British diplomat of the Indian Civil Service, and Abdur Rahman Khan",
+          "belegDe": "von Mortimer Durand, einem britischen Diplomaten im Indian Civil Service, und Abdur Rahman Khan",
+          "optionen": [
+            {
+              "text": "Der britische Verwalter Sir Henry McMahon",
+              "ok": false,
+              "fb": "McMahon zog die Linie zwischen Tibet und Britisch-Indien."
+            },
+            {
+              "text": "Der britische Diplomat Mortimer Durand",
+              "ok": true,
+              "fb": "Richtig: Die Quelle nennt Mortimer Durand und Emir Abdur Rahman Khan."
+            },
+            {
+              "text": "Cyril Radcliffe nach fünf Wochen Arbeit",
+              "ok": false,
+              "fb": "Radcliffe zog 1947 die Grenze zwischen Indien und Pakistan."
+            },
+            {
+              "text": "Der Diplomat Mark Sykes mit François Georges-Picot",
+              "ok": false,
+              "fb": "Sykes und Picot handelten 1916 ein Abkommen über osmanische Provinzen aus."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Völker teilt die Durand-Linie laut Quelle?",
+          "beleg": "Because the Durand Line divides the Pashtun and Baloch people",
+          "belegDe": "Weil die Durand-Linie das Volk der Paschtunen und Belutschen teilt",
+          "optionen": [
+            {
+              "text": "Tadschiken und Usbeken",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Sikhs und Hindus",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Kurden und Armenier",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Paschtunen und Belutschen",
+              "ok": true,
+              "fb": "Richtig: Die Quelle nennt Paschtunen und Belutschen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "geo-mcmahon-1914",
+      "kurz": "McMahon-Linie 1914",
+      "titel": "McMahon-Linie 1914: Eine Grenze, die China nie unterschrieb",
+      "karte": "Die McMahon-Linie ist eine rund 890 Kilometer lange Grenze, die der britische Verwalter Sir Henry McMahon zog. Sie bildet die Grenze zwischen Tibet und Britisch-Indien und wurde 1914 im Rahmen der Simla-Konvention durch ausgetauschte Karten und Notizen vereinbart. Die Republik China war an dieser Vereinbarung nicht beteiligt; China lehnt die Simla-Konvention und die Linie ab, erkennt sie aber als Teil der Line of Actual Control an.",
+      "quelle": {
+        "titel": "McMahon Line",
+        "url": "https://en.wikipedia.org/wiki/McMahon_Line",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-23"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Zwischen welchen Gebieten bildet die McMahon-Linie die Grenze?",
+          "beleg": "the boundary between Tibet and British India",
+          "belegDe": "die Grenze zwischen Tibet und Britisch-Indien",
+          "optionen": [
+            {
+              "text": "Zwischen Afghanistan und Britisch-Indien",
+              "ok": false,
+              "fb": "Das ist die Durand-Linie."
+            },
+            {
+              "text": "Zwischen Indien und Pakistan",
+              "ok": false,
+              "fb": "Das ist die Radcliffe-Linie von 1947."
+            },
+            {
+              "text": "Zwischen Tibet und Britisch-Indien",
+              "ok": true,
+              "fb": "Richtig: So beschreibt es die Quelle."
+            },
+            {
+              "text": "Zwischen China und Russland",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wer zog die McMahon-Linie laut Quelle?",
+          "beleg": "a 550-mile border drawn by British administrator Sir Henry McMahon",
+          "belegDe": "eine 550 Meilen lange Grenze, gezogen vom britischen Verwalter Sir Henry McMahon",
+          "optionen": [
+            {
+              "text": "Sir Henry McMahon",
+              "ok": true,
+              "fb": "Richtig: Die Quelle nennt den britischen Verwalter Sir Henry McMahon."
+            },
+            {
+              "text": "Cyril Radcliffe",
+              "ok": false,
+              "fb": "Radcliffe zog 1947 die Grenze zwischen Indien und Pakistan."
+            },
+            {
+              "text": "Mortimer Durand",
+              "ok": false,
+              "fb": "Durand handelte 1893 die Grenze zu Afghanistan aus."
+            },
+            {
+              "text": "Mark Sykes",
+              "ok": false,
+              "fb": "Sykes handelte 1916 ein Abkommen über osmanische Provinzen aus."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Rolle spielte die Republik China bei der Vereinbarung der Linie?",
+          "beleg": "The Republic of China was not a party to the McMahon Line agreement",
+          "belegDe": "Die Republik China war nicht Partei der Vereinbarung zur McMahon-Linie",
+          "optionen": [
+            {
+              "text": "Sie war Vertragspartei neben Tibet",
+              "ok": false,
+              "fb": "Die Quelle sagt, sie war keine Partei der Vereinbarung."
+            },
+            {
+              "text": "Sie hat die Linie ausgehandelt",
+              "ok": false,
+              "fb": "Die Quelle nennt Sir Henry McMahon, nicht China."
+            },
+            {
+              "text": "Sie hat die Linie 1914 unterschrieben",
+              "ok": false,
+              "fb": "Die Quelle sagt, sie war nicht beteiligt."
+            },
+            {
+              "text": "Keine: Sie war keine Vertragspartei",
+              "ok": true,
+              "fb": "Richtig: Die Republik China war an der Vereinbarung nicht beteiligt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "geo-radcliffe-1947",
+      "kurz": "Radcliffe-Linie 1947",
+      "titel": "Radcliffe-Linie 1947: Fünf Wochen für eine Grenze",
+      "karte": "Cyril Radcliffe zog die Grenze zwischen Indien und Pakistan; sie trägt seinen Namen. Nach seiner Ankunft in Indien am 8. Juli 1947 hatte er nur fünf Wochen, um über den Grenzverlauf zu entscheiden. Vor seiner Berufung war er nie in Indien gewesen und kannte dort niemanden. Die Linie wurde am 17. August 1947 veröffentlicht, zwei Tage nach der Unabhängigkeit Pakistans und Indiens.",
+      "quelle": {
+        "titel": "Radcliffe Line",
+        "url": "https://en.wikipedia.org/wiki/Radcliffe_Line",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-23"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viel Zeit hatte Radcliffe nach seiner Ankunft für die Grenzentscheidung?",
+          "beleg": "After arriving in India on 8 July 1947, Radcliffe was given just five weeks to decide on a border.",
+          "belegDe": "Nach seiner Ankunft in Indien am 8. Juli 1947 bekam Radcliffe nur fünf Wochen, um über eine Grenze zu entscheiden.",
+          "optionen": [
+            {
+              "text": "Fünf Monate",
+              "ok": false,
+              "fb": "Die Quelle nennt fünf Wochen."
+            },
+            {
+              "text": "Fünf Wochen",
+              "ok": true,
+              "fb": "Richtig: Radcliffe bekam nur fünf Wochen."
+            },
+            {
+              "text": "Fünf Tage",
+              "ok": false,
+              "fb": "Die Quelle nennt fünf Wochen."
+            },
+            {
+              "text": "Ein ganzes Jahr",
+              "ok": false,
+              "fb": "Die Quelle nennt fünf Wochen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wann wurde die Radcliffe-Linie veröffentlicht?",
+          "beleg": "The demarcation line was published on 17 August 1947, two days after the independence of Pakistan and India.",
+          "belegDe": "Die Grenzlinie wurde am 17. August 1947 veröffentlicht, zwei Tage nach der Unabhängigkeit Pakistans und Indiens.",
+          "optionen": [
+            {
+              "text": "Am 17. August 1947, zwei Tage nach der Unabhängigkeit",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Am 8. Juli 1947, bei Radcliffes Ankunft",
+              "ok": false,
+              "fb": "Am 8. Juli kam Radcliffe an; veröffentlicht wurde die Linie später."
+            },
+            {
+              "text": "Am 15. August 1947, am Tag der Unabhängigkeit beider Staaten",
+              "ok": false,
+              "fb": "Die Quelle nennt den 17. August, zwei Tage danach."
+            },
+            {
+              "text": "Erst im Jahr 1948",
+              "ok": false,
+              "fb": "Die Quelle nennt den 17. August 1947."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was war laut Quelle Radcliffes Verhältnis zu Indien vor seiner Berufung?",
+          "beleg": "Before his appointment, Radcliffe had never visited India and knew no one there.",
+          "belegDe": "Vor seiner Ernennung war Radcliffe nie in Indien gewesen und kannte dort niemanden.",
+          "optionen": [
+            {
+              "text": "Er hatte lange in Lahore gelebt",
+              "ok": false,
+              "fb": "Die Quelle sagt, er war nie in Indien gewesen."
+            },
+            {
+              "text": "Er war schon früher Vizekönig von Indien gewesen",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts; er war nie in Indien."
+            },
+            {
+              "text": "Er war nie dort gewesen und kannte niemanden",
+              "ok": true,
+              "fb": "Richtig: So beschreibt es die Quelle."
+            },
+            {
+              "text": "Er stammte aus Delhi",
+              "ok": false,
+              "fb": "Die Quelle sagt, er war nie in Indien gewesen."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

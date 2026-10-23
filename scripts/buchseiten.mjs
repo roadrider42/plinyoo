@@ -153,7 +153,7 @@ function zeilen(text, max) {
 }
 
 async function vorschaubild(b, coverQuelle, ziel) {
-  const W = 1200, H = 630, CH = 530, CW = Math.round(CH * 691 / 1063), CX = W - CW - 70, CY = (H - CH) / 2;
+  const W = 1200, H = 630, CH = 530, CW = Math.round(CH * (b.coverBreite || 691) / (b.coverHoehe || 1063)), CX = W - CW - 70, CY = (H - CH) / 2;
   const knoten = b.knoten ?? [];
   const kanten = b.kanten ?? [];
   const pos = knoten.length ? anordnung(b.slug, knoten.length, kanten, CX - 40, H) : [];
@@ -216,7 +216,7 @@ function kartenSektion(b) {
   const karten = b.kartenvoll ?? [];
   if (karten.length === 0) return '';
   return `<section class="sek alt" id="probe" aria-labelledby="probe-h"><div class="wrap">
-  <h2 id="probe-h">Gehe deinen eigenen Weg durch die Geschichte der Company</h2>
+  <h2 id="probe-h">${esc(b.probeTitel || 'Gehe deinen eigenen Weg durch die Karten')}</h2>
   <p class="lead">Öffne eine Karte hier oder tippe oben einen Stern an: Die Karten deines Weges stehen zuerst. Jede Karte hat zwei bis drei Fragen. Wer alle richtig beantwortet, lässt den Stern leuchten.</p>
   <p class="stand" id="stand" aria-live="polite">Du kannst 0 von ${karten.length} Karten.</p>
   <div id="kartenliste" data-gesamt="${karten.length}">
@@ -460,12 +460,12 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
       <p class="lead">${esc(b.einordnung)}</p>
       ${beitragFalte(b.beitrag, b.titel, b.autor)}
     </div>
-    ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="691" height="1063" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
+    ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="${b.coverBreite || 691}" height="${b.coverHoehe || 1063}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
   </div>
 </div></section>
 
 <section class="sek" aria-labelledby="karten-h"><div class="wrap">
-  <h2 id="karten-h">Der Wissensgraph über die Company</h2>
+  <h2 id="karten-h">${esc(b.graphTitel || 'Der Wissensgraph zum Buch')}</h2>
   <p class="lead">Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht: So erschließt du dir deinen eigenen Teil des Wissensuniversums.</p>
   ${universum(b)}
   ${b.kartenStatus ? `<p class="status">${esc(b.kartenStatus)}</p>` : ''}
@@ -503,7 +503,7 @@ ${kartenSektion(b)}
       <a class="btn" data-kauf="verlag" href="${esc(b.verlagUrl)}" rel="noopener">Beim Verlag ansehen</a>
       <a class="btn" data-kauf="amazon" href="${esc(b.amazonUrl)}" rel="sponsored noopener" target="_blank">Bei Amazon bestellen<span class="anzeige">Anzeige</span></a>
     </p>
-    <p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>
+    ${b.leseprobeUrl ? `<p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>` : ''}
     <p class="hinweis">Der Amazon-Link ist ein Partnerlink (Werbung). Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
   </div>
   ${b.naechsteWoche ? `<h2 style="margin-top:32px">Nächste Woche</h2><p>${esc(b.naechsteWoche)}</p>` : ''}
@@ -670,7 +670,7 @@ async function main() {
   let erzeugt = 0, uebersprungen = 0;
   for (const f of dateien) {
     const b = JSON.parse(await readFile(path.join(contentDir, f), 'utf8'));
-    for (const pflicht of ['slug', 'titel', 'autor', 'leitfrage', 'verlagUrl', 'amazonUrl', 'leseprobeUrl']) {
+    for (const pflicht of ['slug', 'titel', 'autor', 'leitfrage', 'verlagUrl', 'amazonUrl']) {
       if (!b[pflicht]) throw new Error(`${f}: Feld "${pflicht}" fehlt`);
     }
     if (!/^[a-z0-9-]+$/.test(b.slug)) throw new Error(`${f}: Slug nur a-z, 0-9, Bindestrich`);
