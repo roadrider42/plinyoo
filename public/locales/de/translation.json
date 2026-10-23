@@ -196,7 +196,7 @@
     "retrieved": "abgerufen",
     "toSource": "Zur Quelle",
     "ownTranslation": "eigene Übersetzung",
-    "bookNote": "Diese Karten gehören zur Kampagne rund um William Dalrymples Buch „Anarchie“.",
+    "bookNote": "Diese Karten gehören zu {{autor}}: „{{titel}}“.",
     "bookLink": "Zur Buchseite mit Beitrag und Verlagslinks",
     "cards": [
       {
@@ -395,7 +395,8 @@
           }
         ]
       }
-    ]
+    ],
+    "topicBorders": "Grenzen"
   },
   "views": {
     "title": "Ein Blick hinein",
