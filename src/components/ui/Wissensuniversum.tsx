@@ -1,14 +1,15 @@
 // src/components/ui/Wissensuniversum.tsx
 // Zweck: Wissensuniversum zum Ausprobieren auf der Startseite — Sterne sind Karten, Linien sind Verweise.
 // Der Besucher zeichnet seinen eigenen Weg von Stern zu Stern und spielt die Karten durch; ohne Konto, ohne Anmeldung.
-// Zwei Themen: Stadthitze (Texte aus den Übersetzungen, journey.cards) und East India Company (Daten der Buchseite,
-// content/buecher/dalrymple-anarchie.json — nur Deutsch). Dieselbe Idee wie auf der Buchseite (scripts/buchseiten.mjs).
+// Drei Themen: Stadthitze (Texte aus den Übersetzungen, journey.cards), East India Company und Grenzen (Daten der Buchseiten,
+// content/buecher/*.json — nur Deutsch). Dieselbe Idee wie auf der Buchseite (scripts/buchseiten.mjs).
 // Texte kommen aus den Übersetzungen (journey.*). Sprachen ohne Karten zeigen den Abschnitt nicht.
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import dalrymple from '../../../content/buecher/dalrymple-anarchie.json';
+import marshall from '../../../content/buecher/marshall-die-macht-der-geografie.json';
 import { ereignis } from '@/lib/messung';
 import { anordnung, FELD, wolke, type Kante } from '@/lib/universum';
 
@@ -16,7 +17,7 @@ type Option = { text: string; ok: boolean; fb: string };
 type Frage = { frage: string; optionen: Option[]; beleg: string; belegDe?: string };
 type Quelle = { titel: string; url: string; herausgeber: string; abgerufen: string };
 type Karte = { slug: string; name: string; titel: string; text: string; quelle?: Quelle; fragen: Frage[] };
-type Thema = { id: string; label: string; karten: Karte[]; kanten: Kante[]; buchUrl?: string };
+type Thema = { id: string; label: string; karten: Karte[]; kanten: Kante[]; buchUrl?: string; buchAutor?: string; buchTitel?: string };
 type Antwort = { gewaehlt: number; ok: boolean };
 
 type StadthitzeKarte = {
@@ -47,9 +48,10 @@ function gemischt<T>(items: T[]): T[] {
     .map(([, item]) => item);
 }
 
-function eicThema(label: string): Thema {
-  const d = dalrymple as unknown as {
+type BuchDaten = {
     slug: string;
+    autor: string;
+    titel: string;
     knoten: { slug: string; titel: string }[];
     kanten: [number, number, string][];
     kartenvoll: {
@@ -60,11 +62,17 @@ function eicThema(label: string): Thema {
       quelle: Quelle;
       fragen: Frage[];
     }[];
-  };
+};
+
+// Ein Thema aus den Daten einer Buchseite (content/buecher/<slug>.json); nur Deutsch
+function buchThema(daten: unknown, label: string): Thema {
+  const d = daten as BuchDaten;
   return {
     id: d.slug,
     label,
     buchUrl: `/buch/${d.slug}/`,
+    buchAutor: d.autor,
+    buchTitel: d.titel,
     kanten: d.kanten.map(([a, b]) => [a, b] as Kante),
     karten: d.kartenvoll.map((k, i) => ({
       slug: k.slug,
@@ -106,7 +114,9 @@ export default function Wissensuniversum() {
       })),
     };
     // Die Karten zur East India Company sind deutsch; Sprachen außer Deutsch zeigen nur die Stadthitze
-    return sprache === 'de' ? [hitze, eicThema(String(t('journey.topicEic')))] : [hitze];
+    return sprache === 'de'
+      ? [hitze, buchThema(dalrymple, String(t('journey.topicEic'))), buchThema(marshall, String(t('journey.topicBorders')))]
+      : [hitze];
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hitzeKarten.length, sprache]);
 
@@ -467,7 +477,7 @@ function Universum({ thema, sichtbar }: { thema: Thema; sichtbar: boolean }) {
 
       {thema.buchUrl && (
         <p className="mt-6 text-text-muted">
-          {t('journey.bookNote')}{' '}
+          {t('journey.bookNote', { autor: thema.buchAutor, titel: thema.buchTitel })}{' '}
           <a className="font-semibold text-primary underline underline-offset-2" href={thema.buchUrl}>
             {t('journey.bookLink')}
           </a>

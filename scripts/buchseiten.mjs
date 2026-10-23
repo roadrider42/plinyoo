@@ -124,6 +124,19 @@ function universum(b) {
     if (pos.some((p) => Math.hypot(p.x - x, p.y - y) < 34)) continue;
     wolke.push(`<circle cx="${x}" cy="${y}" r="${(0.9 + rnd() * 1.5).toFixed(1)}" opacity="${(0.25 + rnd() * 0.45).toFixed(2)}"/>`);
   }
+  // Türen zu anderen Büchern: blasse Randsterne mit gestrichelter Linie, ein Klick führt auf die andere Buchseite
+  // (b.bruecken: [{von: [Kartenindex, …], titel, url, ziel}]). Sie zählen nicht zum Weg und nicht zu den Karten.
+  const tueren = (b.bruecken ?? []).map((br) => {
+    const von = [].concat(br.von);
+    const ax = von.reduce((a, i) => a + pos[i].x, 0) / von.length, ay = von.reduce((a, i) => a + pos[i].y, 0) / von.length;
+    let dx = ax - W / 2, dy = ay - H / 2; const l = Math.max(Math.hypot(dx, dy), 1); dx /= l; dy /= l;
+    const x = Math.round(Math.min(W - 40, Math.max(40, ax + dx * 105))), y = Math.round(Math.min(H - 40, Math.max(40, ay + dy * 105)));
+    let links = ax > x; if (links && x < 230) links = false; if (!links && x > W - 230) links = true;
+    return { ...br, von, x, y, links };
+  });
+  const tuerKanten = tueren.map((t) => t.von.map((i) => `<line class="e bruecke" x1="${pos[i].x}" y1="${pos[i].y}" x2="${t.x}" y2="${t.y}"/>`).join('')).join('');
+  const tuerSterne = tueren.map((t) =>
+    `<g class="n tuer" tabindex="0" role="link" data-href="${esc(t.url)}" data-ziel="${esc(t.ziel || '')}" aria-label="Zu einem anderen Buch: ${esc(t.titel)}" transform="translate(${t.x} ${t.y})"><circle class="hit" r="24"/><circle class="k" r="7"/><text y="4" x="${t.links ? -14 : 14}" text-anchor="${t.links ? 'end' : 'start'}">${esc(t.titel)} →</text></g>`).join('');
   const kantenSvg = kanten.map(([x, y, t], i) =>
     `<line class="e ${t}" data-a="${x}" data-b="${y}" x1="${pos[x].x}" y1="${pos[x].y}" x2="${pos[y].x}" y2="${pos[y].y}"/>`).join('');
   const sterne = knoten.map((k, i) =>
@@ -132,8 +145,8 @@ function universum(b) {
   return `<div class="uni" id="uni">
   <div class="uniscroll"><svg viewBox="0 0 ${W} ${H}" role="group" aria-label="Sternenfeld: ${knoten.length} Karten und ihre Verweise. Mit Tab und Eingabetaste lässt sich ein Weg von Karte zu Karte bilden.">
     <g class="wolke">${wolke.join('')}</g>
-    <g class="kanten">${kantenSvg}</g>
-    <g class="sterne">${sterne}</g>
+    <g class="kanten">${kantenSvg}${tuerKanten}</g>
+    <g class="sterne">${sterne}${tuerSterne}</g>
   </svg></div>
   <p class="weg" id="weg" aria-live="polite">Tippe einen Stern an, um deinen Weg zu beginnen.</p>
   <p class="wegtools"><button type="button" class="teilen" id="wegreset" hidden>Neu beginnen</button></p>
@@ -153,7 +166,7 @@ function zeilen(text, max) {
 }
 
 async function vorschaubild(b, coverQuelle, ziel) {
-  const W = 1200, H = 630, CH = 530, CW = Math.round(CH * 691 / 1063), CX = W - CW - 70, CY = (H - CH) / 2;
+  const W = 1200, H = 630, CH = 530, CW = Math.round(CH * (b.coverBreite || 691) / (b.coverHoehe || 1063)), CX = W - CW - 70, CY = (H - CH) / 2;
   const knoten = b.knoten ?? [];
   const kanten = b.kanten ?? [];
   const pos = knoten.length ? anordnung(b.slug, knoten.length, kanten, CX - 40, H) : [];
@@ -216,7 +229,7 @@ function kartenSektion(b) {
   const karten = b.kartenvoll ?? [];
   if (karten.length === 0) return '';
   return `<section class="sek alt" id="probe" aria-labelledby="probe-h"><div class="wrap">
-  <h2 id="probe-h">Gehe deinen eigenen Weg durch die Geschichte der Company</h2>
+  <h2 id="probe-h">${esc(b.probeTitel || 'Gehe deinen eigenen Weg durch die Karten')}</h2>
   <p class="lead">Öffne eine Karte hier oder tippe oben einen Stern an: Die Karten deines Weges stehen zuerst. Jede Karte hat zwei bis drei Fragen. Wer alle richtig beantwortet, lässt den Stern leuchten.</p>
   <p class="stand" id="stand" aria-live="polite">Du kannst 0 von ${karten.length} Karten.</p>
   <div id="kartenliste" data-gesamt="${karten.length}">
@@ -324,6 +337,10 @@ figure.cover figcaption{font-size:12px;color:var(--muted);margin-top:6px}
 .uni .e.weg{stroke:var(--amber);stroke-width:3.2;opacity:1}
 .uni .n{cursor:pointer;outline:none}
 .uni .n .hit{fill:transparent}
+.uni .e.bruecke{stroke:#9FB6C2;stroke-dasharray:5 5;opacity:.55}
+.uni .n.tuer .k{fill:transparent;stroke:#BDE3E6;stroke-width:2;stroke-dasharray:3 3}
+.uni .n.tuer:hover .k,.uni .n.tuer:focus-visible .k{fill:#BDE3E6}
+.uni .n.tuer text{display:block;fill:#BDE3E6;font-size:12px}
 .uni .n .k{fill:#BDE3E6;transition:fill .2s,r .2s;filter:drop-shadow(0 0 5px rgba(160,215,220,.55))}
 .uni .n:hover .k,.uni .n:focus-visible .k{fill:#fff;r:10}
 .uni .n:focus-visible .hit{stroke:#fff;stroke-width:1.5}
@@ -460,12 +477,12 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
       <p class="lead">${esc(b.einordnung)}</p>
       ${beitragFalte(b.beitrag, b.titel, b.autor)}
     </div>
-    ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="691" height="1063" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
+    ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="${b.coverBreite || 691}" height="${b.coverHoehe || 1063}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
   </div>
 </div></section>
 
 <section class="sek" aria-labelledby="karten-h"><div class="wrap">
-  <h2 id="karten-h">Der Wissensgraph über die Company</h2>
+  <h2 id="karten-h">${esc(b.graphTitel || 'Der Wissensgraph zum Buch')}</h2>
   <p class="lead">Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht: So erschließt du dir deinen eigenen Teil des Wissensuniversums.</p>
   ${universum(b)}
   ${b.kartenStatus ? `<p class="status">${esc(b.kartenStatus)}</p>` : ''}
@@ -503,7 +520,7 @@ ${kartenSektion(b)}
       <a class="btn" data-kauf="verlag" href="${esc(b.verlagUrl)}" rel="noopener">Beim Verlag ansehen</a>
       <a class="btn" data-kauf="amazon" href="${esc(b.amazonUrl)}" rel="sponsored noopener" target="_blank">Bei Amazon bestellen<span class="anzeige">Anzeige</span></a>
     </p>
-    <p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>
+    ${b.leseprobeUrl ? `<p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>` : ''}
     <p class="hinweis">Der Amazon-Link ist ein Partnerlink (Werbung). Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
   </div>
   ${b.naechsteWoche ? `<h2 style="margin-top:32px">Nächste Woche</h2><p>${esc(b.naechsteWoche)}</p>` : ''}
@@ -545,7 +562,7 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
   var liste=document.getElementById('kartenliste');
   var karten=liste?[].slice.call(liste.querySelectorAll('.kartek')):[];
   var gesamt=karten.length, gekonnt={};
-  var sterneEls=document.querySelectorAll('#uni .n');
+  var sterneEls=document.querySelectorAll('#uni .n:not(.tuer)');
   function sternZu(i){return [].filter.call(sterneEls,function(g){return +g.getAttribute('data-i')===i})[0]}
   function ereignis(name,props){if(window.plausible)window.plausible(name,{props:props})}
   function stand(){
@@ -596,7 +613,7 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
   (function(){
     var uni=document.getElementById('uni'); if(!uni)return;
     var D=JSON.parse(document.getElementById('uni-daten').textContent);
-    var sterne=uni.querySelectorAll('.n'), linien=uni.querySelectorAll('.e');
+    var sterne=uni.querySelectorAll('.n:not(.tuer)'), linien=uni.querySelectorAll('.e:not(.bruecke)');
     var status=document.getElementById('weg'), reset=document.getElementById('wegreset');
     var nb=D.titel.map(function(){return []});
     D.kanten.forEach(function(k){nb[k[0]].push(k[1]);nb[k[1]].push(k[0]);});
@@ -647,6 +664,12 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
       g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();waehle(i)}});
     });
     reset.addEventListener('click',function(){weg=[];zeichne();});
+    // Türen zu anderen Büchern
+    uni.querySelectorAll('.n.tuer').forEach(function(g){
+      function los(){ereignis('Bruecke geklickt',{ziel:g.getAttribute('data-ziel')});setTimeout(function(){location.href=g.getAttribute('data-href')},120)}
+      g.addEventListener('click',los);
+      g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();los()}});
+    });
   })();
   var w=document.getElementById('wasist');
   if(w)w.addEventListener('click',function(){if(window.plausible)window.plausible('Was ist plinyoo geklickt')});
@@ -670,7 +693,7 @@ async function main() {
   let erzeugt = 0, uebersprungen = 0;
   for (const f of dateien) {
     const b = JSON.parse(await readFile(path.join(contentDir, f), 'utf8'));
-    for (const pflicht of ['slug', 'titel', 'autor', 'leitfrage', 'verlagUrl', 'amazonUrl', 'leseprobeUrl']) {
+    for (const pflicht of ['slug', 'titel', 'autor', 'leitfrage', 'verlagUrl', 'amazonUrl']) {
       if (!b[pflicht]) throw new Error(`${f}: Feld "${pflicht}" fehlt`);
     }
     if (!/^[a-z0-9-]+$/.test(b.slug)) throw new Error(`${f}: Slug nur a-z, 0-9, Bindestrich`);
