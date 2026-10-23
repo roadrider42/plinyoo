@@ -1319,5 +1319,23 @@
     }
   ],
   "probeTitel": "Gehe deinen eigenen Weg durch die Geschichte der Company",
-  "graphTitel": "Der Wissensgraph über die Company"
+  "graphTitel": "Der Wissensgraph über die Company",
+  "bruecken": [
+    {
+      "von": [
+        12
+      ],
+      "titel": "Marshall: Durand- und Radcliffe-Linie",
+      "url": "/buch/marshall-die-macht-der-geografie/#karten-h",
+      "ziel": "marshall-durand-radcliffe"
+    },
+    {
+      "von": [
+        1
+      ],
+      "titel": "Marshall: Tordesillas 1494",
+      "url": "/buch/marshall-die-macht-der-geografie/#karten-h",
+      "ziel": "marshall-tordesillas-1494"
+    }
+  ]
 }
