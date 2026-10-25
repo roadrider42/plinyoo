@@ -530,6 +530,18 @@
       "subtitle": "Deine spezifischen Anforderungen",
       "desc": "Wir entwickeln individuelle Lösungen für deine Herausforderungen.",
       "button": "Kontakt aufnehmen"
+    },
+    "book3": {
+      "title": "Lissabon 1941 — Stadt der Spione",
+      "subtitle": "Buchvorstellung",
+      "desc": "8 Karten zu Flucht, Wolfram und dem Seeweg nach Indien, mit Wissensgraph und interaktiven Fragen.",
+      "button": "Zur Buchseite"
+    },
+    "book4": {
+      "title": "Die Eroberer — Portugals Weltreich",
+      "subtitle": "Buchvorstellung · demnächst",
+      "desc": "Roger Crowley erzählt von Portugals Weg nach Indien und dem Reich, das daraus wurde. Der Text dazu kommt demnächst.",
+      "button": "Zur Buchseite"
     }
   },
   "forms": {

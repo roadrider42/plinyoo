@@ -285,6 +285,18 @@
       "subtitle": "Vos exigences spécifiques",
       "desc": "Nous développons des solutions individuelles pour vos défis.",
       "button": "Contactez-nous"
+    },
+    "book3": {
+      "title": "Lisbonne 1941 — Ville d’espions",
+      "subtitle": "Présentation du livre",
+      "desc": "8 cartes sur la fuite, le wolfram et la route maritime vers l’Inde, avec graphe de savoirs et questions interactives.",
+      "button": "À la page du livre"
+    },
+    "book4": {
+      "title": "Les Conquérants — L’empire portugais",
+      "subtitle": "Présentation du livre · bientôt",
+      "desc": "Roger Crowley raconte comment le Portugal a bâti un empire grâce à la route maritime vers l’Inde. Le texte suivra bientôt.",
+      "button": "À la page du livre"
     }
   },
   "footer": {

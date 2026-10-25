@@ -285,6 +285,18 @@
       "subtitle": "Tus requisitos específicos",
       "desc": "Desarrollamos soluciones individuales para tus desafíos.",
       "button": "Contáctanos"
+    },
+    "book3": {
+      "title": "Lisboa 1941 — Ciudad de espías",
+      "subtitle": "Presentación del libro",
+      "desc": "8 tarjetas sobre la huida, el wolframio y la ruta marítima a la India, con grafo de conocimiento y preguntas interactivas.",
+      "button": "A la página del libro"
+    },
+    "book4": {
+      "title": "Los conquistadores — El imperio portugués",
+      "subtitle": "Presentación del libro · próximamente",
+      "desc": "Roger Crowley cuenta cómo Portugal construyó un imperio con la ruta marítima a la India. El texto llegará pronto.",
+      "button": "A la página del libro"
     }
   },
   "footer": {

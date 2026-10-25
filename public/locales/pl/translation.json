@@ -212,6 +212,18 @@
       "subtitle": "Twoje specyficzne wymagania",
       "desc": "Opracowujemy indywidualne rozwiązania dla Twoich wyzwań.",
       "button": "Skontaktuj się z nami"
+    },
+    "book3": {
+      "title": "Lizbona 1941 — Miasto szpiegów",
+      "subtitle": "Prezentacja książki",
+      "desc": "8 kart o ucieczce, wolframie i morskiej drodze do Indii, z grafem wiedzy i interaktywnymi pytaniami.",
+      "button": "Do strony książki"
+    },
+    "book4": {
+      "title": "Zdobywcy — imperium Portugalii",
+      "subtitle": "Prezentacja książki · wkrótce",
+      "desc": "Roger Crowley opowiada, jak Portugalia zbudowała imperium dzięki morskiej drodze do Indii. Tekst pojawi się wkrótce.",
+      "button": "Do strony książki"
     }
   },
   "forms": {
