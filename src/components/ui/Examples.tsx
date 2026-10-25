@@ -32,7 +32,7 @@ const Examples = () => {
           </a>
 
           {/* Buch: Anarchie */}
-          <a href={bookUrl} target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
+          <a href={bookUrl} className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
             <div className="h-12 w-12 mx-auto mb-4 bg-teal-100 rounded-full flex items-center justify-center">
               <span className="text-xl font-bold text-teal-600">📚</span>
             </div>
@@ -45,7 +45,7 @@ const Examples = () => {
           </a>
 
           {/* Buch: Die Macht der Geografie */}
-          <a href={book2Url} target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
+          <a href={book2Url} className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
             <div className="h-12 w-12 mx-auto mb-4 bg-amber-100 rounded-full flex items-center justify-center">
               <span className="text-xl font-bold text-amber-600">🗺️</span>
             </div>
@@ -58,7 +58,7 @@ const Examples = () => {
           </a>
 
           {/* Buch: Lissabon 1941 */}
-          <a href={book3Url} target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
+          <a href={book3Url} className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
             <div className="h-12 w-12 mx-auto mb-4 bg-sky-100 rounded-full flex items-center justify-center">
               <span className="text-xl font-bold text-sky-600">⚓</span>
             </div>
@@ -71,7 +71,7 @@ const Examples = () => {
           </a>
 
           {/* Buch: Die Eroberer (demnächst) */}
-          <a href={book4Url} target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
+          <a href={book4Url} className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
             <div className="h-12 w-12 mx-auto mb-4 bg-violet-100 rounded-full flex items-center justify-center">
               <span className="text-xl font-bold text-violet-600">🧭</span>
             </div>
