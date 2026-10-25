@@ -33,8 +33,9 @@ const esc = (s) =>
     .replace(/"/g, '&quot;');
 
 // Wie esc, lässt aber die Inline-Auszeichnungen <strong>/<em> durch (für Beitragsabsätze mit Hervorhebungen).
+// Buchlinks im Text: [[buch:slug|Anzeige]] wird zum Link auf die Buchseite (nie direkt zu Amazon).
 const escInline = (s) =>
-  esc(s).replace(/&lt;(\/?(?:strong|em))&gt;/g, '<$1>');
+  esc(s).replace(/&lt;(\/?(?:strong|em))&gt;/g, '<$1>').replace(/\[\[buch:([a-z0-9-]+)\|([^\]]+)\]\]/g, '<a href="/buch/$1/">$2</a>');
 
 const exists = async (p) => access(p).then(() => true, () => false);
 
@@ -219,6 +220,7 @@ function kartenBlock(k, i) {
     <p class="kl">Lernkarte</p>
     <h3>${esc(k.titel)}</h3>
     <p>${esc(k.karte)}</p>
+    ${k.buchLink ? `<p class="buchlink"><a href="${esc(k.buchLink.url)}">${esc(k.buchLink.titel)} →</a></p>` : ''}
   </article>
   ${k.fragen.map((f, j) => frageBlock(f, i, j, k.fragen.length)).join('\n  ')}
   <p class="quelle">Quelle: ${esc(q.titel)} — ${esc(q.herausgeber)}, abgerufen ${esc(q.abgerufen)}. <a href="${esc(q.url)}" rel="noopener">Zur Quelle</a></p>
@@ -238,17 +240,19 @@ function kartenSektion(b) {
 </div></section>`;
 }
 
-// Der Beitrag zum Buch als Anreißer unter den Hero-Knöpfen: eingeklappt, öffnet sich an Ort und Stelle (kein Sprung über die Seite),
+// Der Beitrag zum Buch steht immer ausgeklappt (kein Klappen, damit er nicht überlesen wird), mit orangem Balken links,
 // klar als Meinungsbeitrag gekennzeichnet. Er beruht auf dem Buch; die Lernkarten stützen sich bewusst auf andere Quellen.
 function beitragFalte(bt, buchTitel, buchAutor) {
   if (!bt || !bt.absaetze || bt.absaetze.length === 0) return '';
-  return `<details class="beitrag-fold">
-    <summary><span class="bk">${esc(bt.etikett || 'Dazu ein Beitrag')}</span><span class="bt">${esc(bt.titel)}</span>${bt.anreisser ? `<span class="anreisser">${esc(bt.anreisser)}</span>` : ''}<span class="mehr"><span class="auf">Weiterlesen ▾</span><span class="zu">Einklappen ▴</span></span></summary>
+  return `<section class="beitrag-fold" aria-label="Meinungsbeitrag">
+    <p class="bk">${esc(bt.etikett || 'Dazu ein Beitrag')}</p>
+    <p class="bt">${esc(bt.titel)}</p>
+    ${bt.anreisser ? `<p class="anreisser">${esc(bt.anreisser)}</p>` : ''}
     <div class="lesetext">
       ${bt.absaetze.map((a) => `<p>${escInline(a)}</p>`).join('\n      ')}
       <p class="status">Meinungsbeitrag von ${esc(bt.autor)} auf Grundlage von ${esc(buchAutor)}s Buch „${esc(buchTitel)}“. Die Lernkarten auf dieser Seite stützen sich dagegen auf andere Quellen.</p>
     </div>
-  </details>`;
+  </section>`;
 }
 
 function seite(b, mitCover) {
@@ -420,20 +424,11 @@ a.sozial{white-space:nowrap}
 .teilen{background:none;border:0;padding:0;font:inherit;color:#fff;text-decoration:underline;cursor:pointer}
 .lesetext{max-width:65ch}
 .lesetext p{margin:0 0 24px;line-height:1.7}
-.beitrag-fold{margin:18px 0 0;max-width:68ch;border-left:3px solid var(--line);padding:2px 0 2px 14px;border-bottom:0;font-size:17px}
+.beitrag-fold{margin:18px 0 0;max-width:68ch;border-left:3px solid var(--amber);padding:2px 0 2px 14px;font-size:17px}
 @media(min-width:768px){.beitrag-fold{font-size:18px}}
-.beitrag-fold:first-of-type{border-top:0}
-.beitrag-fold summary{display:block;cursor:pointer;list-style:none;font-weight:400;color:var(--ink);font-size:1em;line-height:1.5}
-.beitrag-fold summary::-webkit-details-marker{display:none}
-.beitrag-fold .bk{display:block;font-size:1em;font-weight:600;color:var(--teal-d);margin-bottom:2px}
-.beitrag-fold .bt{display:block;font-size:1em;color:var(--graphite);font-weight:700;margin-bottom:4px}
-.beitrag-fold .anreisser{display:block;font-size:1em;color:var(--ink)}
-.beitrag-fold[open] .anreisser{display:none}
-.beitrag-fold .mehr{display:inline-block;margin-top:6px;font-size:1em;font-weight:600;color:var(--graphite);text-decoration:underline;text-underline-offset:3px}
-.beitrag-fold .zu{display:none}
-.beitrag-fold[open] .auf{display:none}
-.beitrag-fold[open] .zu{display:inline}
-.beitrag-fold[open] summary{margin-bottom:14px}
+.beitrag-fold .bk{display:block;font-size:1em;font-weight:600;color:var(--teal-d);margin:0 0 2px}
+.beitrag-fold .bt{display:block;font-size:1em;color:var(--graphite);font-weight:700;margin:0 0 4px}
+.beitrag-fold .anreisser{display:block;font-size:1em;color:var(--ink);margin:0 0 14px}
 .beitrag-fold .lesetext{max-width:none}
 .beitrag-fold .lesetext p{font-size:1em;color:var(--ink);line-height:1.65}
 .beitrag-fold .lesetext p.status{font-size:.8em;color:var(--muted);margin-top:6px}
@@ -481,13 +476,16 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
   </div>
 </div></section>
 
-<section class="sek" aria-labelledby="karten-h"><div class="wrap">
+${b.platzhalter ? `<section class="sek" aria-labelledby="bald-h"><div class="wrap">
+  <h2 id="bald-h">Kommt demnächst</h2>
+  <p class="lead">${esc(b.platzhalterText || 'Der Text zu diesem Buch kommt demnächst.')}</p>
+</div></section>` : `<section class="sek" aria-labelledby="karten-h"><div class="wrap">
   <h2 id="karten-h">${esc(b.graphTitel || 'Der Wissensgraph zum Buch')}</h2>
   <p class="lead">Jeder Stern ist eine Karte, jede Linie ein Verweis. Such dir einen Stern und geh von dort, wohin es dich zieht: So erschließt du dir deinen eigenen Teil des Wissensuniversums.</p>
   ${universum(b)}
   ${b.kartenStatus ? `<p class="status">${esc(b.kartenStatus)}</p>` : ''}
   <p class="status">${esc(b.kartenIntro)}</p>
-</div></section>
+</div></section>`}
 
 ${kartenSektion(b)}
 
@@ -512,19 +510,19 @@ ${kartenSektion(b)}
   </div>
 </div></section>
 
-<section class="sek alt" aria-labelledby="buch-h"><div class="wrap">
+${b.platzhalter && !b.amazonUrl ? '' : `<section class="sek alt" aria-labelledby="buch-h"><div class="wrap">
   <h2 id="buch-h">Das Buch</h2>
   <div class="kauf" aria-label="Bezugsquellen">
     <p class="meta">${esc(b.verlag)} · ISBN ${esc(b.isbn)}</p>
     <p>
-      <a class="btn" data-kauf="verlag" href="${esc(b.verlagUrl)}" rel="noopener">Beim Verlag ansehen</a>
+      ${b.verlagUrl ? `<a class="btn" data-kauf="verlag" href="${esc(b.verlagUrl)}" rel="noopener">Beim Verlag ansehen</a>` : ''}
       <a class="btn" data-kauf="amazon" href="${esc(b.amazonUrl)}" rel="sponsored noopener" target="_blank">Bei Amazon bestellen<span class="anzeige">Anzeige</span></a>
     </p>
     ${b.leseprobeUrl ? `<p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>` : ''}
     <p class="hinweis">Der Amazon-Link ist ein Partnerlink (Werbung). Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
   </div>
-  ${b.naechsteWoche ? `<h2 style="margin-top:32px">Nächste Woche</h2><p>${esc(b.naechsteWoche)}</p>` : ''}
-</div></section>
+  ${b.naechsteWoche ? `<h2 style="margin-top:32px">Ausblick</h2><p>${esc(b.naechsteWoche)}</p>` : ''}
+</div></section>`}
 
 <section class="sek" aria-labelledby="faq-h"><div class="wrap">
   <h2 id="faq-h">Häufige Fragen</h2>
@@ -580,9 +578,9 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
     if(!ok&&gekonnt[i]){delete gekonnt[i];}
     stand();
   }
-  // Weitere Messpunkte (ohne Personenbezug): Beitrag geöffnet, Kauf-Link geklickt
-  var bf=document.querySelector('.beitrag-fold'), bfGemeldet=false;
-  if(bf)bf.addEventListener('toggle',function(){if(bf.open&&!bfGemeldet){bfGemeldet=true;ereignis('Beitrag geöffnet',{});}});
+  // Weitere Messpunkte (ohne Personenbezug): Beitrag gesehen (Hälfte des Textes im Bild), Kauf-Link geklickt
+  var bf=document.querySelector('.beitrag-fold');
+  if(bf&&'IntersectionObserver' in window){var bfIO=new IntersectionObserver(function(es){if(es[0].isIntersecting){bfIO.disconnect();ereignis('Beitrag gesehen',{});}},{threshold:0.5});bfIO.observe(bf);}
   document.querySelectorAll('[data-kauf]').forEach(function(a){
     a.addEventListener('click',function(){ereignis('Kauf-Link geklickt',{ziel:a.getAttribute('data-kauf')});});
   });
@@ -694,7 +692,8 @@ async function main() {
   for (const f of dateien) {
     const b = JSON.parse(await readFile(path.join(contentDir, f), 'utf8'));
     for (const pflicht of ['slug', 'titel', 'autor', 'leitfrage', 'verlagUrl', 'amazonUrl']) {
-      if (!b[pflicht]) throw new Error(`${f}: Feld "${pflicht}" fehlt`);
+      // Platzhalter (platzhalter: true) brauchen noch keine Bezugsquellen
+      if (!b[pflicht] && !(b.platzhalter && (pflicht === 'verlagUrl' || pflicht === 'amazonUrl'))) throw new Error(`${f}: Feld "${pflicht}" fehlt`);
     }
     if (!/^[a-z0-9-]+$/.test(b.slug)) throw new Error(`${f}: Slug nur a-z, 0-9, Bindestrich`);
     if (b.draft && !mitEntwuerfen) { uebersprungen++; continue; }

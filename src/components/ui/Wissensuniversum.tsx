@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 import dalrymple from '../../../content/buecher/dalrymple-anarchie.json';
 import marshall from '../../../content/buecher/marshall-die-macht-der-geografie.json';
+import lissabon from '../../../content/buecher/lissabon-1941.json';
 import { ereignis } from '@/lib/messung';
 import { anordnung, FELD, wolke, type Kante } from '@/lib/universum';
 
@@ -113,9 +114,16 @@ export default function Wissensuniversum() {
         ],
       })),
     };
-    // Die Karten zur East India Company sind deutsch; Sprachen außer Deutsch zeigen nur die Stadthitze
+    // Die Karten zur East India Company sind deutsch; Sprachen außer Deutsch zeigen nur die Stadthitze.
+    // Entwurfsbuch (draft) nur im Entwurfsbau sichtbar (npm run buchseiten:entwurf), nie im Livebau.
+    const lissabonZeigen = !lissabon.draft || import.meta.env.VITE_BUCHSEITEN_DRAFT === '1';
     return sprache === 'de'
-      ? [hitze, buchThema(dalrymple, String(t('journey.topicEic'))), buchThema(marshall, String(t('journey.topicBorders')))]
+      ? [
+          hitze,
+          buchThema(dalrymple, String(t('journey.topicEic'))),
+          buchThema(marshall, String(t('journey.topicBorders'))),
+          ...(lissabonZeigen ? [buchThema(lissabon, String(t('journey.topicLisbon')))] : []),
+        ]
       : [hitze];
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hitzeKarten.length, sprache]);

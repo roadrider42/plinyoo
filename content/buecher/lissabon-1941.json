@@ -1,0 +1,936 @@
+{
+  "slug": "lissabon-1941",
+  "draft": false,
+  "autor": "Alexander Smoltczyk",
+  "titel": "Lissabon 1941",
+  "untertitel": "Stadt der Spione, Hafen der Hoffnung",
+  "uebersetzer": "",
+  "verlag": "dtv",
+  "erschienen": "17. September 2026, 3. Auflage",
+  "isbn": "978-3-423-28551-3",
+  "leitfrage": "Wer spionierte 1941 in Lissabon – und gegen wen?",
+  "einordnung": "Alexander Smoltczyk beschreibt Lissabon 1940/41 als Wartesaal für Flüchtlinge und Agenten (Verlag). Wir nehmen das Buch zum Anlass, drei Karten aus anderen Quellen zu bauen.",
+  "kartenIntro": "Die Karten stützen sich auf Quellen außerhalb des Buchs und nennen sie einzeln. Alle 8 kannst du unten durchspielen.",
+  "karten": [
+    "Wolfram 1941",
+    "Granatkerne",
+    "Fluchtweg Juni 1940",
+    "Arendt 1941",
+    "Mann 1940",
+    "Hafen am Tejo",
+    "Seeweg 1498",
+    "Geopolitik"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen. Die Quellen liegen außerhalb des Buchs.",
+  "verlagUrl": "https://www.dtv.de/buch/lissabon-1941-28551",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://link.amazon/B0dFjHowJ",
+  "cover": "cover.jpg",
+  "coverBreite": 500,
+  "coverHoehe": 820,
+  "coverCredit": "Cover: © dtv Verlagsgesellschaft",
+  "naechsteWoche": "Als Nächstes: Roger Crowleys „Die Eroberer. Portugals Kampf um ein Weltreich“ über Portugals Weg nach Indien. Der Text dazu kommt demnächst.",
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph über Lissabon 1941",
+  "knoten": [
+    {
+      "slug": "lis-wolfram-1941",
+      "titel": "Wolfram 1941"
+    },
+    {
+      "slug": "lis-wolfram-granaten",
+      "titel": "Granatkerne"
+    },
+    {
+      "slug": "lis-fluchtweg-1940",
+      "titel": "Fluchtweg Juni 1940"
+    },
+    {
+      "slug": "lis-arendt-1941",
+      "titel": "Arendt 1941"
+    },
+    {
+      "slug": "lis-mann-1940",
+      "titel": "Mann 1940"
+    },
+    {
+      "slug": "lis-hafen-tejo",
+      "titel": "Hafen am Tejo"
+    },
+    {
+      "slug": "lis-seeweg-1498",
+      "titel": "Seeweg 1498"
+    },
+    {
+      "slug": "geografie-geopolitik",
+      "titel": "Geopolitik"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      0,
+      7,
+      "verwandt"
+    ],
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      2,
+      4,
+      "verwandt"
+    ],
+    [
+      3,
+      4,
+      "verwandt"
+    ],
+    [
+      2,
+      5,
+      "verwandt"
+    ],
+    [
+      5,
+      6,
+      "verwandt"
+    ],
+    [
+      5,
+      7,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "Wer spionierte in Lissabon?",
+    "titel": "Wer spionierte 1941 in Lissabon – und gegen wen?",
+    "anreisser": "Britische Agenten beobachteten deutsche Einkäufer, die Wolfram wollten. Mitten darin warteten Flüchtlinge auf ein Schiff. Und Ian Fleming war dabei.",
+    "absaetze": [
+      "Lissabon, 1940/41: ein Wartesaal am Atlantik. Wer aus Europa hinauswollte, brauchte Visa und einen Schiffsplatz – und vor allem Geduld. Hier wurde man zum Wartenden, bevor man zum Reisenden werden konnte.",
+      "Portugal war neutral, und die Stadt war voller Agenten, sagt der Verlag. Neutralität hieß hier nicht Stillstand. Nach seinen Angaben suchten deutsche Einkäufer Wolfram, das für Granatkerne der Panzerabwehr gebraucht wurde; britische Agenten beobachteten sie und wollten die Käufe verhindern.",
+      "Ein Name aus dieser Zeit ist bis heute bekannt: Ian Fleming, der Autor der James-Bond-Romane. Nach Angaben des Verlags sammelte er 1941 in Lissabon Material für seine Bond-Figur. Ob eine Stadt die Fantasie eines Erzählers formt, lässt sich nicht beweisen. Dass er dort Material sammelte, sagt der Verlag – mehr lässt sich hier nicht sagen.",
+      "Am Anfang dieser Geschichte steht ein Doppelagent: Dusko Popov arbeitete für den britischen Geheimdienst gegen Deutschland. Im Casino Estoril setzte er Geld des Dienstes ein – ein Spiel, in dem Vertrauen und Täuschung dasselbe Gesicht tragen. Die Szene soll in „Casino Royale“ eingegangen sein.",
+      "<em>Unsere Einordnung:</em> In <em>Die Macht der Geografie</em> von Tim Marshall geht es, dem Verlagstext nach, darum, wie Gebirge, Ebenen, Flüsse, Meere, Wüsten und der Zugang zu natürlichen Ressourcen den Entscheidungsspielraum von Regierungen begrenzen. Lissabon zeigt die andere Seite derselben Frage: Die Geografie machte die Stadt zum Ausgang. Der Landweg führte über Spanien an die Atlantikküste, und von Lissabon aus ging es aufs Meer. Welche Wege die Geografie öffnete, ist das eine. Welcher davon übrig blieb, entschieden Papiere und Menschen.",
+      "Lissabon liegt am Tejo, und dieser Fluss hat eine ungewöhnliche Form: Er mündet als umgekehrtes Delta. Innen wird er breit und bildet eine große Lagune, zur Ausfahrt hin verengt er sich auf rund zwei Kilometer. Für Schiffe heißt das: ein weiter Raum im Inneren und ein Nadelöhr am Ausgang. Die Stadt liegt am großen natürlichen Hafen auf der Nordseite, und über dieses Nadelöhr führte der Weg hinaus.",
+      "Von Lissabon aus suchte man den Seeweg zur Quelle des lukrativen Gewürzhandels. Vasco da Gama erreichte im Mai 1498 die Küste Südwestindiens. Wikipedia bezeichnet das Reich, das daraus wuchs, als das erste und am längsten bestehende der europäischen Kolonialreiche. Roger Crowley spricht in seinem Buch [[buch:crowley-die-eroberer|Die Eroberer]] über Portugal vom ersten globalen Weltreich. Dass gerade dieser Hafen am Rand Europas das Tor war, sagt die Geografie nicht von allein – aber sie machte es möglich.",
+      "Und wer war auf diesem Weg? Hannah Arendt reiste im Januar 1941 mit dem Zug durch Spanien nach Lissabon und kam im Mai 1941 in New York an. Heinrich Mann bestieg im Oktober 1940, nach einem Aufenthalt in Estoril bei Lissabon, ein Schiff nach New York. Was entschied mehr über diesen Weg: der Ort oder das Papier in der Hand?",
+      "Wer Alexander Smoltczyks <em>Lissabon 1941</em> liest, sieht mehr als Spione und Stars. Es erzählt von Menschen, die warteten, und von einer Stadt, die für viele ein Symbol der Hoffnung war. Probier es an den Karten aus."
+    ],
+    "autor": "Heiko Miertzsch"
+  },
+  "kartenvoll": [
+    {
+      "slug": "lis-wolfram-1941",
+      "kurz": "Wolfram 1941",
+      "titel": "Wolfram 1941: Deutschland hängt an Portugal und Spanien",
+      "karte": "Im Zweiten Weltkrieg war Deutschland bei seiner Wolframversorgung auf Portugal und Spanien angewiesen. Portugal führte 1942 ein striktes Exportquotensystem ein.",
+      "quelle": {
+        "titel": "Portugal during World War II",
+        "url": "https://en.wikipedia.org/wiki/Portugal_during_World_War_II",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-25"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Von wem war Deutschland bei seiner Wolframversorgung abhängig?",
+          "beleg": "Germany became dependent on Portugal and Spain for their wolfram supplies.",
+          "belegDe": "Deutschland wurde bei seiner Wolframversorgung von Portugal und Spanien abhängig.",
+          "optionen": [
+            {
+              "text": "Von Portugal und Spanien",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Von Großbritannien und den USA",
+              "ok": false,
+              "fb": "Die Quelle nennt Portugal und Spanien."
+            },
+            {
+              "text": "Von Schweden und der Türkei",
+              "ok": false,
+              "fb": "Die Quelle nennt Portugal und Spanien."
+            },
+            {
+              "text": "Von Japan und China",
+              "ok": false,
+              "fb": "Die Quelle nennt Portugal und Spanien."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was führte Portugal 1942 für seinen Wolframexport ein?",
+          "beleg": "Portugal set up a strict export quota system in 1942.",
+          "belegDe": "Portugal richtete 1942 ein striktes Exportquotensystem ein.",
+          "optionen": [
+            {
+              "text": "Ein striktes Exportquotensystem",
+              "ok": true,
+              "fb": "Richtig: So beschreibt es die Quelle."
+            },
+            {
+              "text": "Ein vollständiges Exportverbot",
+              "ok": false,
+              "fb": "Die Quelle spricht von einem Quotensystem, nicht von einem Verbot."
+            },
+            {
+              "text": "Freie Ausfuhr ohne Kontrolle",
+              "ok": false,
+              "fb": "Die Quelle nennt ein striktes Quotensystem."
+            },
+            {
+              "text": "Einen Zoll auf Gold",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum war Portugal für Deutschland wichtig?",
+          "beleg": "Germany became dependent on Portugal and Spain for their wolfram supplies.",
+          "belegDe": "Deutschland wurde bei seiner Wolframversorgung von Portugal und Spanien abhängig.",
+          "optionen": [
+            {
+              "text": "Portugal hatte die größte Armee in Europa",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Portugal und Spanien lieferten das Wolfram, das Deutschland brauchte",
+              "ok": true,
+              "fb": "Richtig: Deutschland war für seine Wolframversorgung von beiden abhängig."
+            },
+            {
+              "text": "Portugal war Mitglied der Achsenmächte",
+              "ok": false,
+              "fb": "Die Quelle beschreibt Portugal als neutral; das ist hier nicht die Antwort."
+            },
+            {
+              "text": "Portugal exportierte Gold nach Deutschland",
+              "ok": false,
+              "fb": "Die Quelle nennt diesen Zusammenhang nicht."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lis-wolfram-granaten",
+      "kurz": "Granatkerne",
+      "titel": "Wolfram: Granatkerne und Werkzeugspitzen",
+      "karte": "Deutschland nutzte Wolfram im Zweiten Weltkrieg, um Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen herzustellen. Wolfram hat eine hohe Härte und eine hohe Dichte und eignet sich deshalb für durchschlagende Geschosse.",
+      "quelle": {
+        "titel": "Tungsten",
+        "url": "https://en.wikipedia.org/wiki/Tungsten",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-25"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wofür nutzte Deutschland im Zweiten Weltkrieg Wolfram laut dieser Quelle?",
+          "beleg": "Germany used tungsten during World War II to produce cores of shells for anti-tank guns and tips for machine tools.",
+          "belegDe": "Deutschland nutzte Wolfram im Zweiten Weltkrieg, um Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen herzustellen.",
+          "optionen": [
+            {
+              "text": "Für Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Für Kupferleitungen in Funkgeräten",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Für Treibstoff von U-Booten",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Für Konservendosen",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Eigenschaften machen Wolfram laut Quelle für militärische Geschosse geeignet?",
+          "beleg": "Tungsten's hardness and high density make it suitable for military applications in penetrating projectiles.",
+          "belegDe": "Die Härte und die hohe Dichte von Wolfram machen es für militärische Anwendungen in durchschlagenden Geschossen geeignet.",
+          "optionen": [
+            {
+              "text": "Härte und hohe Dichte",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Geringes Gewicht und Biegsamkeit",
+              "ok": false,
+              "fb": "Die Quelle nennt Härte und Dichte, nicht Gewicht und Biegsamkeit."
+            },
+            {
+              "text": "Hohe Leitfähigkeit und Korrosionsfreiheit",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Niedriger Schmelzpunkt",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wozu ist Wolfram in Durchschlagsgeschossen laut Quelle eine Alternative?",
+          "beleg": "is used in kinetic energy penetrators as an alternative to depleted uranium.",
+          "belegDe": "wird in Durchschlagsgeschossen (kinetische Penetratoren) als Alternative zu abgereichertem Uran verwendet.",
+          "optionen": [
+            {
+              "text": "Zu abgereichertem Uran",
+              "ok": true,
+              "fb": "Richtig: Die Quelle nennt abgereichertes Uran als Alternative."
+            },
+            {
+              "text": "Zu Blei in Schrotkugeln",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Zu Kupfer in Stromkabeln",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Zu Glas in Zielfernrohren",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lis-fluchtweg-1940",
+      "kurz": "Fluchtweg Juni 1940",
+      "titel": "Juni 1940: Der Weg über Spanien wird für viele versperrt",
+      "karte": "Flüchtlinge, die aus Frankreich über Spanien nach Portugal wollten, kamen im Juni 1940 nicht weiter. Wikipedia nennt dafür eine Meldung der New York Times vom 26. Juni 1940: Rund 10.000 Menschen wurden an der spanischen Grenze abgewiesen. Gleichzeitig erklärte Portugal die in Bordeaux erteilten portugiesischen Visa für ungültig.",
+      "quelle": {
+        "titel": "Aristides de Sousa Mendes",
+        "url": "https://en.wikipedia.org/wiki/Aristides_de_Sousa_Mendes",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-25"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viele Menschen wurden laut dieser Quelle an der spanischen Grenze abgewiesen?",
+          "beleg": "some 10,000 persons attempting to cross over into Spain were excluded",
+          "belegDe": "Rund 10.000 Personen, die nach Spanien hinüberwollten, wurden abgewiesen.",
+          "optionen": [
+            {
+              "text": "Rund 10.000",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Rund 1.000",
+              "ok": false,
+              "fb": "Die Quelle nennt etwa 10.000."
+            },
+            {
+              "text": "Rund 100.000",
+              "ok": false,
+              "fb": "Die Quelle nennt etwa 10.000."
+            },
+            {
+              "text": "Niemand",
+              "ok": false,
+              "fb": "Die Quelle nennt eine große Zahl Abgewiesener."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was erklärte Portugal laut dieser Quelle über die in Bordeaux erteilten Visa?",
+          "beleg": "Portugal announced that Portuguese visas granted at Bordeaux were invalid",
+          "belegDe": "Portugal erklärte, dass die in Bordeaux erteilten portugiesischen Visa ungültig seien.",
+          "optionen": [
+            {
+              "text": "Sie seien ungültig",
+              "ok": true,
+              "fb": "Richtig: So beschreibt es die Quelle."
+            },
+            {
+              "text": "Sie seien für Kinder kostenlos",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Sie gelten für die USA",
+              "ok": false,
+              "fb": "Die Quelle nennt die Ungültigkeit der Visa aus Bordeaux."
+            },
+            {
+              "text": "Sie seien unbefristet",
+              "ok": false,
+              "fb": "Die Quelle nennt die Ungültigkeit."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was zeigt die Quelle über den Weg über Spanien nach Portugal im Juni 1940?",
+          "beleg": "some 10,000 persons attempting to cross over into Spain were excluded; Portugal announced that Portuguese visas granted at Bordeaux were invalid",
+          "belegDe": "Rund 10.000 Personen, die nach Spanien hinüberwollten, wurden abgewiesen; Portugal erklärte, dass die in Bordeaux erteilten portugiesischen Visa ungültig seien.",
+          "optionen": [
+            {
+              "text": "Auch Menschen mit Visa kamen nicht weiter, weil Spanien abwies und Portugal die Visa für ungültig erklärte",
+              "ok": true,
+              "fb": "Richtig: Beide Aussagen zusammen."
+            },
+            {
+              "text": "Der Weg war offen, weil Portugal alle Visa anerkannte",
+              "ok": false,
+              "fb": "Die Quelle sagt das Gegenteil."
+            },
+            {
+              "text": "Spanien hat alle Flüchtlinge aufgenommen",
+              "ok": false,
+              "fb": "Die Quelle nennt Abweisungen an der spanischen Grenze."
+            },
+            {
+              "text": "Der Weg führte über die USA",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lis-arendt-1941",
+      "kurz": "Arendt 1941",
+      "titel": "Hannah Arendt: Zug nach Lissabon, Schiff nach New York",
+      "karte": "Im Januar 1941 erhielt Hannah Arendt die nötigen Genehmigungen, um mit dem Zug durch Spanien nach Lissabon zu reisen. Im Mai sicherte sich die Familie die Überfahrt nach New York. Am 22. Mai 1941 kam die Familie dort mit sehr wenig an.",
+      "quelle": {
+        "titel": "Hannah Arendt",
+        "url": "https://en.wikipedia.org/wiki/Hannah_Arendt",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-25"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie reiste Hannah Arendt im Januar 1941 nach Lissabon?",
+          "beleg": "managed to secure the requisite permits to travel by train in January 1941 through Spain to Lisbon, Portugal",
+          "belegDe": "erhielt die nötigen Genehmigungen, um im Januar 1941 mit dem Zug durch Spanien nach Lissabon zu reisen.",
+          "optionen": [
+            {
+              "text": "Mit dem Zug durch Spanien",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Mit dem Flugzeug über die Azoren",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Mit einem Frachter von Marseille",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Zu Fuß über die Pyrenäen",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wann sicherte sich die Familie laut Quelle die Überfahrt nach New York?",
+          "beleg": "They eventually secured passage to New York in May",
+          "belegDe": "Schließlich sicherten sie sich im Mai die Überfahrt nach New York.",
+          "optionen": [
+            {
+              "text": "Im Mai",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Im Januar",
+              "ok": false,
+              "fb": "Im Januar war die Reise durch Spanien, die Überfahrt nennt die Quelle für den Mai."
+            },
+            {
+              "text": "Im Oktober",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Im September",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wann kam die Familie laut Quelle in New York an?",
+          "beleg": "Upon arriving in New York City on 22 May 1941 with very little",
+          "belegDe": "Bei der Ankunft in New York City am 22. Mai 1941 mit sehr wenig.",
+          "optionen": [
+            {
+              "text": "Am 22. Mai 1941",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Am 22. Januar 1941",
+              "ok": false,
+              "fb": "Die Quelle nennt den 22. Mai."
+            },
+            {
+              "text": "Am 4. Oktober 1940",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Am 22. Juni 1941",
+              "ok": false,
+              "fb": "Die Quelle nennt den 22. Mai."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lis-mann-1940",
+      "kurz": "Mann 1940",
+      "titel": "Heinrich Mann: von Estoril nach New York",
+      "karte": "Im September 1940 half ihm Varian Fry bei der Flucht nach Spanien. Die Gruppe wanderte sechs Stunden und überquerte die Grenze schließlich bei Port Bou. Vom 18. September bis zum 4. Oktober 1940 wohnte sie im Grande Hotel D'Itália in Monte Estoril bei Lissabon. Am 4. Oktober bestiegen sie die S.S. Nea Hellas nach New York.",
+      "quelle": {
+        "titel": "Heinrich Mann",
+        "url": "https://en.wikipedia.org/wiki/Heinrich_Mann",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-25"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wo überquerte Heinrich Mann laut Quelle die Grenze nach Spanien?",
+          "beleg": "finally crossing the border at Port Bou",
+          "belegDe": "überquerte die Grenze schließlich bei Port Bou.",
+          "optionen": [
+            {
+              "text": "Bei Port Bou",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Bei Irun",
+              "ok": false,
+              "fb": "Die Quelle nennt Port Bou."
+            },
+            {
+              "text": "Bei Hendaye",
+              "ok": false,
+              "fb": "Die Quelle nennt Port Bou."
+            },
+            {
+              "text": "Bei Lissabon",
+              "ok": false,
+              "fb": "Lissabon liegt in Portugal. Die Grenze nach Spanien nennt die Quelle bei Port Bou."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wo wohnte die Gruppe laut Quelle nach der Ankunft in Portugal?",
+          "beleg": "stayed in Monte Estoril at the Grande Hotel D'Itália between September 18 and October 4, 1940",
+          "belegDe": "wohnte zwischen dem 18. September und dem 4. Oktober 1940 im Grande Hotel D'Itália in Monte Estoril.",
+          "optionen": [
+            {
+              "text": "Im Grande Hotel D'Itália in Monte Estoril",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "In einem Kloster in Sintra",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "In einem Lager in Marseille",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "In Madrid",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welches Schiff bestieg die Gruppe am 4. Oktober 1940?",
+          "beleg": "On October 4, 1940, they boarded the S.S. Nea Hellas, headed for New York City.",
+          "belegDe": "Am 4. Oktober 1940 bestiegen sie die S.S. Nea Hellas nach New York City.",
+          "optionen": [
+            {
+              "text": "Die S.S. Nea Hellas nach New York",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Ein Zug nach Madrid",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Ein Flugzeug nach Lissabon",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Ein Frachter nach Buenos Aires",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "lis-hafen-tejo",
+      "kurz": "Hafen am Tejo",
+      "titel": "Lissabons Hafen am Tejo",
+      "karte": "Lissabon liegt am großen natürlichen Hafen des Tejo, überwiegend an dessen Nordseite. Der Hafen öffnet sich nach Westen durch eine kurze Meerenge zum Atlantik. In der Zeit der Entdeckungen wurde Lissabon zu einem großen Knotenpunkt.",
+      "quelle": {
+        "titel": "Port of Lisbon",
+        "url": "https://en.wikipedia.org/wiki/Port_of_Lisbon",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-25"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Auf welcher Seite des Hafens am Tejo liegt Lissabon überwiegend?",
+          "beleg": "north sides of the Tagus's large natural harbour that opens west, through a short strait, onto the Atlantic Ocean",
+          "belegDe": "überwiegend an der Nordseite des großen natürlichen Hafens des Tejo, der sich nach Westen durch eine kurze Meerenge zum Atlantischen Ozean öffnet.",
+          "optionen": [
+            {
+              "text": "Überwiegend an der Nordseite",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Überwiegend am Südufer",
+              "ok": false,
+              "fb": "Die Quelle nennt die Nordseite."
+            },
+            {
+              "text": "Auf einer Insel im Atlantik",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Direkt an der offenen Atlantikküste",
+              "ok": false,
+              "fb": "Die Quelle nennt eine kurze Meerenge zum Atlantik."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie öffnet sich der Hafen laut Quelle zum Atlantik?",
+          "beleg": "opens west, through a short strait, onto the Atlantic Ocean",
+          "belegDe": "öffnet sich nach Westen durch eine kurze Meerenge zum Atlantischen Ozean.",
+          "optionen": [
+            {
+              "text": "Nach Westen durch eine kurze Meerenge",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Nach Süden über ein offenes Delta",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Nach Norden über einen Kanal",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Gar nicht, der Hafen ist von Land umschlossen",
+              "ok": false,
+              "fb": "Die Quelle nennt eine Verbindung zum Atlantik."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Rolle hatte Lissabon laut Quelle in der Zeit der Entdeckungen?",
+          "beleg": "During Alfonso III's reign and the Age of Exploration, Lisbon became a major hub.",
+          "belegDe": "Während der Regierungszeit Alfons III. und im Zeitalter der Entdeckungen wurde Lissabon zu einem großen Knotenpunkt.",
+          "optionen": [
+            {
+              "text": "Ein großer Knotenpunkt",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Ein Fischerdorf ohne Schiffsverkehr",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Eine Festung ohne Hafen",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Eine Sommerresidenz ohne Handel",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        }
+      ],
+      "buchLink": {
+        "url": "/buch/crowley-die-eroberer/",
+        "titel": "Zum Buch: Die Eroberer (Crowley)"
+      }
+    },
+    {
+      "slug": "lis-seeweg-1498",
+      "kurz": "Seeweg 1498",
+      "titel": "Der Seeweg zum Gewürzhandel",
+      "karte": "Portugal suchte einen Seeweg zur Quelle des lukrativen Gewürzhandels. Bartolomeu Dias umrundete 1488 das Kap der Guten Hoffnung. Im Mai 1498 erreichte Vasco da Gama Calicut im Südwesten Indiens.",
+      "quelle": {
+        "titel": "Portuguese Empire",
+        "url": "https://en.wikipedia.org/wiki/Portuguese_Empire",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-25"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welches Ziel hatte die Suche nach dem Seeweg laut Quelle?",
+          "beleg": "with the aim of finding a sea route to the source of the lucrative spice trade",
+          "belegDe": "mit dem Ziel, einen Seeweg zur Quelle des lukrativen Gewürzhandels zu finden.",
+          "optionen": [
+            {
+              "text": "Einen Seeweg zur Quelle des lukrativen Gewürzhandels",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Einen Landweg auf der Seidenstraße",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Die Entdeckung eines neuen Kontinents",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Die Eroberung Marokkos",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wann und wo erreichte Vasco da Gama laut Quelle Indien?",
+          "beleg": "reaching Calicut (Kozhikode), the capital of the kingdom ruled by Zamorins, in south-western India in May 1498",
+          "belegDe": "Sie erreichten Calicut (Kozhikode), die Hauptstadt des Königreichs der Zamorine, im Südwesten Indiens im Mai 1498.",
+          "optionen": [
+            {
+              "text": "Im Mai 1498 im Südwesten Indiens",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Im Mai 1492 in Westafrika",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Im Mai 1510 in Goa",
+              "ok": false,
+              "fb": "Die Quelle nennt Mai 1498 und Südwestindien."
+            },
+            {
+              "text": "Im Mai 1488 am Kap der Guten Hoffnung",
+              "ok": false,
+              "fb": "1488 umrundete Dias das Kap. Für Indien nennt die Quelle Mai 1498."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Umrundung ging laut Quelle der Reise von da Gama voraus?",
+          "beleg": "In 1488, Bartolomeu Dias rounded the Cape of Good Hope and Cape Agulhas, and in 1498 Vasco da Gama finally reached India.",
+          "belegDe": "1488 umrundete Bartolomeu Dias das Kap der Guten Hoffnung und das Kap Agulhas, und 1498 erreichte Vasco da Gama schließlich Indien.",
+          "optionen": [
+            {
+              "text": "Die des Kaps der Guten Hoffnung durch Bartolomeu Dias",
+              "ok": true,
+              "fb": "Richtig: Die Quelle nennt 1488 Dias und das Kap."
+            },
+            {
+              "text": "Die der Magellanstraße durch Ferdinand Magellan",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Die der Nordwestpassage durch John Franklin",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Die der Straße von Gibraltar durch Kolumbus",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "geografie-geopolitik",
+      "kurz": "Geopolitik",
+      "titel": "Geopolitik: Wie Geografie Politik beeinflusst",
+      "karte": "Geopolitik untersucht die Wirkung der Erdgeografie auf Politik und internationale Beziehungen. Zum geografischen Raum zählt die Quelle Territorialgewässer, Landgebiet und den Reichtum an natürlichen Ressourcen. Zu den geografischen Variablen gehören unter anderem Klima, Topografie, Demografie und natürliche Ressourcen.",
+      "quelle": {
+        "titel": "Geopolitics",
+        "url": "https://en.wikipedia.org/wiki/Geopolitics",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-25"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was untersucht Geopolitik laut dieser Quelle?",
+          "beleg": "is the study of the effects of Earth's geography on politics and international relations",
+          "belegDe": "untersucht die Auswirkungen der Erdgeografie auf Politik und internationale Beziehungen.",
+          "optionen": [
+            {
+              "text": "Den Einfluss der Erdgeografie auf Politik und internationale Beziehungen",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Die Bevölkerungsentwicklung einzelner Länder",
+              "ok": false,
+              "fb": "Die Quelle nennt die Erdgeografie als Gegenstand."
+            },
+            {
+              "text": "Die Börsenkurse von Rohstoffen",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Die Religion der Staaten",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Räume zählt die Quelle zum geografischen Raum?",
+          "beleg": "geographic space, in particular, territorial waters, land territory and wealth of natural resources",
+          "belegDe": "geografischer Raum, insbesondere Territorialgewässer, Landgebiet und Reichtum an natürlichen Ressourcen.",
+          "optionen": [
+            {
+              "text": "Territorialgewässer, Landgebiet und Reichtum an natürlichen Ressourcen",
+              "ok": true,
+              "fb": "Richtig: So nennt es die Quelle."
+            },
+            {
+              "text": "Nur Landgrenzen",
+              "ok": false,
+              "fb": "Die Quelle nennt Landgebiet und Gewässer, nicht nur Grenzen."
+            },
+            {
+              "text": "Nur Bevölkerungszahlen",
+              "ok": false,
+              "fb": "Davon steht in der Quelle nichts."
+            },
+            {
+              "text": "Nur Handelsrouten",
+              "ok": false,
+              "fb": "Die Quelle nennt Handelsrouten nicht."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche der folgenden Größen nennt die Quelle als geografische Variable?",
+          "beleg": "through geographical variables. These include area studies, climate, topography, demography, natural resources",
+          "belegDe": "durch geografische Variablen. Dazu gehören unter anderem Gebietsstudien, Klima, Topografie, Demografie und natürliche Ressourcen.",
+          "optionen": [
+            {
+              "text": "Klima",
+              "ok": true,
+              "fb": "Richtig: Klima steht in der Liste der geografischen Variablen."
+            },
+            {
+              "text": "Staatsverschuldung",
+              "ok": false,
+              "fb": "Die Quelle nennt sie nicht."
+            },
+            {
+              "text": "Parteiprogramme",
+              "ok": false,
+              "fb": "Die Quelle nennt sie nicht."
+            },
+            {
+              "text": "Wechselkurse",
+              "ok": false,
+              "fb": "Die Quelle nennt sie nicht."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [
+    {
+      "von": [
+        7
+      ],
+      "titel": "Marshall: Tordesillas 1494",
+      "url": "/buch/marshall-die-macht-der-geografie/#karten-h",
+      "ziel": "geo-tordesillas-1494"
+    },
+    {
+      "von": [
+        5
+      ],
+      "titel": "Crowley: Die Eroberer",
+      "url": "/buch/crowley-die-eroberer/",
+      "ziel": "crowley-die-eroberer"
+    }
+  ]
+}
