@@ -7,6 +7,8 @@ const Examples = () => {
   const isDev = import.meta.env.DEV;
   const bookUrl = isDev ? 'http://localhost:3001/buch/dalrymple-anarchie/' : 'https://www.plinyoo.com/buch/dalrymple-anarchie/';
   const book2Url = isDev ? 'http://localhost:3001/buch/marshall-die-macht-der-geografie/' : 'https://www.plinyoo.com/buch/marshall-die-macht-der-geografie/';
+  const book3Url = isDev ? 'http://localhost:3001/buch/lissabon-1941/' : 'https://www.plinyoo.com/buch/lissabon-1941/';
+  const book4Url = isDev ? 'http://localhost:3001/buch/crowley-die-eroberer/' : 'https://www.plinyoo.com/buch/crowley-die-eroberer/';
 
   return (
     <section className="bg-surface-2 border-y border-border/60 py-16 md:py-12">
@@ -15,7 +17,7 @@ const Examples = () => {
           {t('examples.title')}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* SpoonUp Kachel */}
           <a href="https://spoonup.me" target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
             <div className="h-12 w-12 mx-auto mb-4 bg-orange-100 rounded-full flex items-center justify-center">
@@ -52,6 +54,32 @@ const Examples = () => {
             <p className="text-sm text-text-muted flex-grow">{t('examples.book2.desc')}</p>
             <button className="mt-4 w-full bg-teal-600 text-white font-semibold py-2 rounded-lg hover:bg-teal-700 transition-colors">
               {t('examples.book2.button')}
+            </button>
+          </a>
+
+          {/* Buch: Lissabon 1941 */}
+          <a href={book3Url} target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
+            <div className="h-12 w-12 mx-auto mb-4 bg-sky-100 rounded-full flex items-center justify-center">
+              <span className="text-xl font-bold text-sky-600">⚓</span>
+            </div>
+            <h3 className="text-lg font-semibold text-primary">{t('examples.book3.title')}</h3>
+            <p className="text-sm text-text-muted mb-2">{t('examples.book3.subtitle')}</p>
+            <p className="text-sm text-text-muted flex-grow">{t('examples.book3.desc')}</p>
+            <button className="mt-4 w-full bg-teal-600 text-white font-semibold py-2 rounded-lg hover:bg-teal-700 transition-colors">
+              {t('examples.book3.button')}
+            </button>
+          </a>
+
+          {/* Buch: Die Eroberer (demnächst) */}
+          <a href={book4Url} target="_blank" rel="noopener noreferrer" className="flex flex-col p-6 rounded-lg border border-border bg-surface-1 shadow-ci-hairline hover:shadow-ci transition-shadow">
+            <div className="h-12 w-12 mx-auto mb-4 bg-violet-100 rounded-full flex items-center justify-center">
+              <span className="text-xl font-bold text-violet-600">🧭</span>
+            </div>
+            <h3 className="text-lg font-semibold text-primary">{t('examples.book4.title')}</h3>
+            <p className="text-sm text-text-muted mb-2">{t('examples.book4.subtitle')}</p>
+            <p className="text-sm text-text-muted flex-grow">{t('examples.book4.desc')}</p>
+            <button className="mt-4 w-full bg-teal-600 text-white font-semibold py-2 rounded-lg hover:bg-teal-700 transition-colors">
+              {t('examples.book4.button')}
             </button>
           </a>
 

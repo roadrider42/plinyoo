@@ -285,6 +285,18 @@
       "subtitle": "Seus requisitos específicos",
       "desc": "Desenvolvemos soluções individuais para seus desafios.",
       "button": "Contate-nos"
+    },
+    "book3": {
+      "title": "Lisboa 1941 — Cidade de espiões",
+      "subtitle": "Apresentação do livro",
+      "desc": "8 cartões sobre a fuga, o volfrâmio e a rota marítima para a Índia, com grafo de conhecimento e perguntas interativas.",
+      "button": "Para a página do livro"
+    },
+    "book4": {
+      "title": "Os Conquistadores — O império português",
+      "subtitle": "Apresentação do livro · em breve",
+      "desc": "Roger Crowley conta como Portugal construiu um império com a rota marítima para a Índia. O texto chega em breve.",
+      "button": "Para a página do livro"
     }
   },
   "footer": {

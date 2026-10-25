@@ -253,6 +253,18 @@
       "subtitle": "Your specific requirements",
       "desc": "We develop individual solutions for your challenges.",
       "button": "Contact us"
+    },
+    "book3": {
+      "title": "Lisbon 1941 — City of Spies",
+      "subtitle": "Book presentation",
+      "desc": "8 cards on flight, wolfram and the sea route to India, with knowledge graph and interactive questions.",
+      "button": "To book page"
+    },
+    "book4": {
+      "title": "The Conquerors — Portugal’s Empire",
+      "subtitle": "Book presentation · coming soon",
+      "desc": "Roger Crowley tells how Portugal built an empire along the sea route to India. The text will follow soon.",
+      "button": "To book page"
     }
   },
   "forms": {
