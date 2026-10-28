@@ -403,7 +403,7 @@
         "id": "netz",
         "tag": "Ansicht mit Beispieldaten",
         "title": "Das Wissensnetz",
-        "text": "Elf Karten zum Thema Hitze mit echten Verbindungen, umgeben von weiteren Themen. Ziehen zum Umsortieren, scrollen zum Zoomen.",
+        "text": "Elf Karten zum Thema Hitze, miteinander verbunden, umgeben von weiteren Themen. Ziehen zum Umsortieren, scrollen zum Zoomen.",
         "src": "/ansichten/wissensnetz.html",
         "frameTitle": "Das Wissensnetz — interaktive Ansicht"
       },
