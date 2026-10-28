@@ -34,8 +34,8 @@
       },
       {
         "step": "Stern",
-        "title": "Gekonnt — ein Stern.",
-        "text": "Sind alle Fragen zu einer Karte zuletzt richtig beantwortet, leuchtet sie als Stern in deinem Universum."
+        "title": "Gelernt — ein Stern.",
+        "text": "Sind alle Fragen zu einer Karte zuletzt richtig beantwortet, leuchtet sie als Stern in deinem Wissensuniversum."
       }
     ]
   },
@@ -76,7 +76,7 @@
     "waysTitle": "Vier Wege hinein",
     "follower": {
       "title": "Mitspielen",
-      "description": "Dein Trainer lädt dich ein. Du folgst den Inhalten, die er für dich bereithält, und siehst deinen Fortschritt."
+      "description": "Dein Trainer lädt dich ein, per Link oder QR-Code. Du folgst den Inhalten, die er für dich bereithält, und siehst deinen Fortschritt."
     },
     "learner": {
       "title": "Entdecken",
@@ -84,11 +84,11 @@
     },
     "author": {
       "title": "Selbst gestalten",
-      "description": "Du schreibst und verlinkst eigene Karten, lässt Fragen dazu erzeugen, holst Inhalte aus Wikipedia — und lernst damit."
+      "description": "Du schreibst und verlinkst eigene Karten, holst Inhalte aus Wikipedia, Obsidian oder Markdown-Dateien — und lernst damit."
     },
     "curator": {
       "title": "Anleiten",
-      "description": "Du kuratierst ein Thema — als Inhaltsanbieter, der Wissen bereitstellt, oder als Trainer mit eigener Mannschaft, die du per Link einlädst."
+      "description": "Du kuratierst ein Thema — als Inhaltsanbieter, der Wissen bereitstellt, oder als Trainer mit eigener Mannschaft, die du per Link oder QR-Code einlädst. Wer in der App dein Thema sieht, bestimmst du: „Privat“, „Nur für Follower“ oder „Öffentlich“."
     }
   },
   "howItWorks": {
@@ -96,7 +96,7 @@
     "steps": [
       {
         "title": "Zwei Sprachen setzen",
-        "description": "Deine Muttersprache und die, in der du gerade lernst. Inhalte erscheinen in der Lernsprache, ein Tipp wechselt zurück."
+        "description": "Deine Muttersprache und die, in der du gerade lernst."
       },
       {
         "title": "Einem Thema folgen",
@@ -116,7 +116,7 @@
       },
       {
         "title": "Dein Fortschritt leuchtet",
-        "desc": "Jede gelernte Karte wird ein Stern in deinem Universum."
+        "desc": "Jede gelernte Karte wird ein Stern in deinem Wissensuniversum."
       },
       {
         "title": "Ein Tool für alles Lernen",
@@ -124,15 +124,15 @@
       },
       {
         "title": "Zwei Sprachen, ein Weg",
-        "desc": "Deine Muttersprache und die, in der du lernst — ein Tipp wechselt zurück."
+        "desc": "Deine Muttersprache und die, in der du lernst."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "Sprachen"
+        "kpi": "2",
+        "label": "Sprachen, die du setzt"
       },
       {
         "kpi": "11",
@@ -382,7 +382,7 @@
       {
         "id": "lernfeld",
         "tag": "Ansicht",
-        "title": "Dein Ziel, dein Weg, dein Universum",
+        "title": "Dein Ziel, dein Weg, dein Wissensuniversum",
         "text": "Ein Blick auf das Lernfeld: Startseite mit Ziel, der Weg dorthin und der Rückblick mit deinen Sternen.",
         "images": [
           {
@@ -401,7 +401,7 @@
       },
       {
         "id": "netz",
-        "tag": "Zielbild",
+        "tag": "Ansicht mit Beispieldaten",
         "title": "Das Wissensnetz",
         "text": "Elf Karten zum Thema Hitze mit echten Verbindungen, umgeben von weiteren Themen. Ziehen zum Umsortieren, scrollen zum Zoomen.",
         "src": "/ansichten/wissensnetz.html",
@@ -409,7 +409,7 @@
       },
       {
         "id": "autor",
-        "tag": "Entwurf mit Beispieldaten",
+        "tag": "Ansicht mit Beispieldaten",
         "title": "Wege und Lücken sehen",
         "text": "Für alle, die Wissen weitergeben: Du wählst Schlagwörter und siehst, wie sich Karten verbinden und wo noch eine Brücke fehlt.",
         "src": "/ansichten/autorenwerkzeug.html",
@@ -439,11 +439,11 @@
       },
       {
         "q": "Kann ich eigene Inhalte einbringen?",
-        "a": "Ja. Du schreibst und verlinkst eigene Karten, lässt Fragen dazu erzeugen und holst Inhalte aus Wikipedia oder von einer geteilten Seite."
+        "a": "Ja. Du schreibst und verlinkst eigene Karten und holst Inhalte aus Wikipedia oder von einer geteilten Seite. Auch Karten aus Obsidian und aus Markdown-Dateien sowie Vokabeln aus Dateien holst du in deine eigenen Themen. Beim Import von Markdown-Dateien kannst du Quizfragen gleich miterzeugen lassen."
       },
       {
         "q": "In welchen Sprachen kann ich lernen?",
-        "a": "Die Oberfläche gibt es in sieben Sprachen. Du setzt zwei: deine Muttersprache und die, in der du gerade lernst."
+        "a": "Du setzt zwei Sprachen: deine Muttersprache und die, in der du gerade lernst."
       }
     ]
   },

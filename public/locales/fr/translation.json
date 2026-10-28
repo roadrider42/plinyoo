@@ -34,8 +34,8 @@
       },
       {
         "step": "Étoile",
-        "title": "Acquis — une étoile.",
-        "text": "Quand toutes les questions d’une fiche ont été répondues juste la dernière fois, elle brille comme une étoile dans ton univers."
+        "title": "Appris — une étoile.",
+        "text": "Quand toutes les questions d’une fiche ont été répondues juste la dernière fois, elle brille comme une étoile dans ton univers de connaissances."
       }
     ]
   },
@@ -55,7 +55,7 @@
     "waysTitle": "Quatre voies d’accès",
     "follower": {
       "title": "Rejoindre l’équipe",
-      "description": "Ton entraîneur t’invite. Tu suis les contenus qu’il a préparés pour toi et tu vois ta progression."
+      "description": "Ton entraîneur t’invite, par lien ou par code QR. Tu suis les contenus qu’il a préparés pour toi et tu vois ta progression."
     },
     "learner": {
       "title": "Découvrir",
@@ -63,18 +63,18 @@
     },
     "author": {
       "title": "Créer les tiennes",
-      "description": "Écris et relie tes propres fiches, fais générer des questions, importe du contenu de Wikipédia — et apprends avec."
+      "description": "Tu écris et relies tes propres fiches, tu importes du contenu de Wikipédia, d’Obsidian ou de fichiers Markdown — et tu apprends ainsi."
     },
     "curator": {
       "title": "Guider",
-      "description": "Tu organises un sujet : comme fournisseur de contenus qui partage son savoir, ou comme entraîneur qui invite son équipe par un lien et la guide."
+      "description": "Tu organises un sujet : comme fournisseur de contenus qui partage son savoir, ou comme entraîneur qui invite son équipe par un lien ou un code QR et la guide. Tu décides qui voit ton thème dans l’app : privé, réservé aux followers ou public."
     }
   },
   "howItWorks": {
     "steps": [
       {
         "title": "Définir deux langues",
-        "description": "Ta langue maternelle et celle que tu apprends. Le contenu apparaît dans la langue d’apprentissage, une touche permet de revenir."
+        "description": "Ta langue maternelle et celle que tu apprends en ce moment."
       },
       {
         "title": "Suivre un sujet",
@@ -95,7 +95,7 @@
       },
       {
         "title": "Ta progression brille",
-        "desc": "Chaque fiche acquise devient une étoile dans ton univers."
+        "desc": "Chaque fiche apprise devient une étoile dans ton univers de connaissances."
       },
       {
         "title": "Un outil pour tout l'apprentissage",
@@ -103,15 +103,15 @@
       },
       {
         "title": "Deux langues, un chemin",
-        "desc": "Ta langue maternelle et celle que tu apprends — une touche permet de revenir."
+        "desc": "Ta langue maternelle et celle que tu apprends."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "langues"
+        "kpi": "2",
+        "label": "langues que tu définis"
       },
       {
         "kpi": "11",
@@ -166,11 +166,11 @@
       },
       {
         "q": "Puis-je apporter mes propres contenus ?",
-        "a": "Oui. Tu écris et relies tes propres fiches, tu fais générer des questions et tu importes du contenu de Wikipédia ou d’une page partagée."
+        "a": "Oui. Tu écris et relies tes propres fiches et tu importes du contenu de Wikipédia ou d’une page partagée. Tu fais aussi entrer dans tes propres thèmes des fiches d’Obsidian et de fichiers Markdown, ainsi que du vocabulaire issu de fichiers. À l’import de fichiers Markdown, tu peux faire créer des questions de quiz en même temps."
       },
       {
         "q": "Dans quelles langues puis-je apprendre ?",
-        "a": "L’interface existe en sept langues. Tu en définis deux : ta langue maternelle et celle que tu apprends en ce moment."
+        "a": "Tu définis deux langues : ta langue maternelle et celle que tu apprends en ce moment."
       }
     ]
   },

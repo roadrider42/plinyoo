@@ -34,8 +34,8 @@
       },
       {
         "step": "Estrela",
-        "title": "Dominado — uma estrela.",
-        "text": "Quando todas as perguntas de um cartão foram respondidas corretamente na última vez, ele brilha como estrela no seu universo."
+        "title": "Aprendido — uma estrela.",
+        "text": "Quando todas as perguntas de um cartão foram respondidas corretamente na última vez, ele brilha como estrela no seu universo do conhecimento."
       }
     ]
   },
@@ -55,7 +55,7 @@
     "waysTitle": "Quatro caminhos de entrada",
     "follower": {
       "title": "Entrar na equipe",
-      "description": "Seu treinador convida você. Você acompanha o conteúdo que ele preparou para você e vê seu progresso."
+      "description": "Seu treinador convida você, por link ou código QR. Você acompanha o conteúdo que ele preparou para você e vê seu progresso."
     },
     "learner": {
       "title": "Descobrir",
@@ -63,18 +63,18 @@
     },
     "author": {
       "title": "Criar o seu",
-      "description": "Escreva e vincule seus próprios cartões, gere perguntas, traga conteúdo da Wikipédia — e aprenda com eles."
+      "description": "Você escreve e vincula seus próprios cartões, traz conteúdo da Wikipédia, do Obsidian ou de arquivos Markdown — e aprende com isso."
     },
     "curator": {
       "title": "Conduzir",
-      "description": "Você cura um tópico: como fornecedor de conteúdo que compartilha conhecimento ou como treinador que convida e conduz sua própria equipe por um link."
+      "description": "Você cura um tópico: como fornecedor de conteúdo que compartilha conhecimento ou como treinador que convida e conduz sua própria equipe por um link ou código QR. Você decide quem vê o seu tópico no app: privado, só para followers ou público."
     }
   },
   "howItWorks": {
     "steps": [
       {
         "title": "Definir dois idiomas",
-        "description": "Seu idioma nativo e o que você está aprendendo. O conteúdo aparece no idioma de aprendizado, um toque volta."
+        "description": "Sua língua materna e a que você está aprendendo agora."
       },
       {
         "title": "Seguir um tópico",
@@ -95,7 +95,7 @@
       },
       {
         "title": "Seu progresso brilha",
-        "desc": "Cada cartão dominado vira uma estrela no seu universo."
+        "desc": "Cada cartão aprendido vira uma estrela no seu universo do conhecimento."
       },
       {
         "title": "Uma ferramenta para todo o aprendizado",
@@ -103,15 +103,15 @@
       },
       {
         "title": "Dois idiomas, um caminho",
-        "desc": "Seu idioma nativo e o que você está aprendendo — um toque volta."
+        "desc": "Sua língua materna e a que você está aprendendo."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "idiomas"
+        "kpi": "2",
+        "label": "idiomas que você define"
       },
       {
         "kpi": "11",
@@ -166,11 +166,11 @@
       },
       {
         "q": "Posso trazer meus próprios conteúdos?",
-        "a": "Sim. Você escreve e vincula seus próprios cartões, gera perguntas para eles e traz conteúdo da Wikipédia ou de uma página compartilhada."
+        "a": "Sim. Você escreve e vincula seus próprios cartões e traz conteúdo da Wikipédia ou de uma página compartilhada. Cartões do Obsidian e de arquivos Markdown, e vocabulário de arquivos, você também traz para os seus próprios temas. Ao importar arquivos Markdown, você pode gerar perguntas de quiz ao mesmo tempo."
       },
       {
         "q": "Em quais idiomas posso aprender?",
-        "a": "A interface existe em sete idiomas. Você define dois: seu idioma nativo e o que está aprendendo agora."
+        "a": "Você define dois idiomas: sua língua materna e a que está aprendendo agora."
       }
     ]
   },

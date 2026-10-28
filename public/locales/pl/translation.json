@@ -34,8 +34,8 @@
       },
       {
         "step": "Gwiazda",
-        "title": "Opanowane — jedna gwiazda.",
-        "text": "Gdy na wszystkie pytania do karty ostatnio odpowiedziano poprawnie, świeci jako gwiazda w Twoim wszechświecie."
+        "title": "Nauczone — jedna gwiazda.",
+        "text": "Gdy na wszystkie pytania do karty ostatnio odpowiedziano poprawnie, świeci jako gwiazda w Twoim wszechświecie wiedzy."
       }
     ]
   },
@@ -55,7 +55,7 @@
     "waysTitle": "Cztery drogi wejścia",
     "follower": {
       "title": "Dołącz do zespołu",
-      "description": "Twój trener zaprasza Cię. Podążasz za treściami, które dla Ciebie przygotował, i widzisz swój postęp."
+      "description": "Twój trener zaprasza Cię linkiem lub kodem QR. Podążasz za treściami, które dla Ciebie przygotował, i widzisz swój postęp."
     },
     "learner": {
       "title": "Odkrywaj",
@@ -63,18 +63,18 @@
     },
     "author": {
       "title": "Twórz własne",
-      "description": "Pisz i łącz własne karty, generuj do nich pytania, pobieraj treści z Wikipedii — i ucz się z nimi."
+      "description": "Piszesz i łączysz własne karty, pobierasz treści z Wikipedii, Obsidiana lub plików Markdown — i dzięki temu się uczysz."
     },
     "curator": {
       "title": "Prowadź",
-      "description": "Opiekujesz się tematem — jako dostawca treści, który dzieli się wiedzą, albo jako trener, który zaprasza przez link własny zespół i go prowadzi."
+      "description": "Opiekujesz się tematem — jako dostawca treści, który dzieli się wiedzą, albo jako trener, który zaprasza przez link lub kod QR własny zespół i go prowadzi. Sam decydujesz, kto widzi twój temat w aplikacji: prywatny, tylko dla followers albo publiczny."
     }
   },
   "howItWorks": {
     "steps": [
       {
         "title": "Ustaw dwa języki",
-        "description": "Twój ojczysty język i ten, którego się uczysz. Treści pojawiają się w języku nauki, jedno dotknięcie przełącza z powrotem."
+        "description": "Twój język ojczysty i ten, którego teraz się uczysz."
       },
       {
         "title": "Śledź temat",
@@ -95,7 +95,7 @@
       },
       {
         "title": "Twój postęp świeci",
-        "desc": "Każda opanowana karta staje się gwiazdą w Twoim wszechświecie."
+        "desc": "Każda nauczona karta staje się gwiazdą w Twoim wszechświecie wiedzy."
       },
       {
         "title": "Jedno narzędzie do całej nauki",
@@ -103,15 +103,15 @@
       },
       {
         "title": "Dwa języki, jedna droga",
-        "desc": "Twój ojczysty język i ten, którego się uczysz — jedno dotknięcie przełącza z powrotem."
+        "desc": "Twój język ojczysty i ten, którego się uczysz."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "języków"
+        "kpi": "2",
+        "label": "języki, które ustawiasz"
       },
       {
         "kpi": "11",
@@ -166,11 +166,11 @@
       },
       {
         "q": "Czy mogę wnieść własne treści?",
-        "a": "Tak. Piszesz i łączysz własne karty, generujesz do nich pytania i pobierasz treści z Wikipedii lub udostępnionej strony."
+        "a": "Tak. Piszesz i łączysz własne karty i pobierasz treści z Wikipedii lub udostępnionej strony. Karty z Obsidiana i z plików Markdown oraz słownictwo z plików też wprowadzasz do swoich własnych tematów. Przy imporcie plików Markdown możesz od razu wygenerować pytania do quizu."
       },
       {
         "q": "W jakich językach mogę się uczyć?",
-        "a": "Interfejs jest dostępny w siedmiu językach. Ustawiasz dwa: ojczysty i ten, którego właśnie się uczysz."
+        "a": "Ustawiasz dwa języki: ojczysty i ten, którego aktualnie się uczysz."
       }
     ]
   },

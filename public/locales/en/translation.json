@@ -35,7 +35,7 @@
       {
         "step": "Star",
         "title": "Learned — one star.",
-        "text": "When all questions on a card were last answered correctly, it shines as a star in your universe."
+        "text": "When all questions on a card were last answered correctly, it shines as a star in your knowledge universe."
       }
     ]
   },
@@ -76,7 +76,7 @@
     "waysTitle": "Four ways in",
     "follower": {
       "title": "Play along",
-      "description": "Your trainer invites you. You follow the content they have ready for you — and see your progress."
+      "description": "Your trainer invites you, by link or QR code. You follow the content they have ready for you — and see your progress."
     },
     "learner": {
       "title": "Discover",
@@ -84,11 +84,11 @@
     },
     "author": {
       "title": "Create your own",
-      "description": "Write and link your own cards, have questions generated, pull in content from Wikipedia — and learn with them."
+      "description": "You write and link your own cards, pull in content from Wikipedia, Obsidian or Markdown files — and learn with them."
     },
     "curator": {
       "title": "Lead",
-      "description": "You curate a topic — as a content provider who shares knowledge, or as a trainer who invites and guides your own team via a link."
+      "description": "You curate a topic — as a content provider who shares knowledge, or as a trainer who invites and guides your own team via a link or QR code. You decide who sees your topic in the app: private, followers only or public."
     }
   },
   "howItWorks": {
@@ -96,7 +96,7 @@
     "steps": [
       {
         "title": "Set two languages",
-        "description": "Your native language and the one you’re currently learning. Content appears in the learning language, one tap switches back."
+        "description": "Your native language and the one you’re currently learning."
       },
       {
         "title": "Follow a topic",
@@ -116,7 +116,7 @@
       },
       {
         "title": "Your progress shines",
-        "desc": "Every card you’ve learned becomes a star in your universe."
+        "desc": "Every card you’ve learned becomes a star in your knowledge universe."
       },
       {
         "title": "One tool for all learning",
@@ -124,15 +124,15 @@
       },
       {
         "title": "Two languages, one path",
-        "desc": "Your native language and the one you’re learning — one tap switches back."
+        "desc": "Your native language and the one you’re learning."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "languages"
+        "kpi": "2",
+        "label": "languages you set"
       },
       {
         "kpi": "11",
@@ -187,11 +187,11 @@
       },
       {
         "q": "Can I bring my own content?",
-        "a": "Yes. You write and link your own cards, have questions generated for them and pull in content from Wikipedia or a shared page."
+        "a": "Yes. You write and link your own cards and pull in content from Wikipedia or a shared page. Cards from Obsidian and from Markdown files, and vocabulary from files, you bring into your own topics, too. When you import Markdown files, you can have quiz questions created along with the cards."
       },
       {
         "q": "In which languages can I learn?",
-        "a": "The interface comes in seven languages. You set two: your native language and the one you are learning right now."
+        "a": "You set two languages: your native language and the one you are learning right now."
       }
     ]
   },

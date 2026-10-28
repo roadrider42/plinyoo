@@ -34,8 +34,8 @@
       },
       {
         "step": "Estrella",
-        "title": "Dominado: una estrella.",
-        "text": "Cuando todas las preguntas de una tarjeta se respondieron bien la última vez, brilla como estrella en tu universo."
+        "title": "Aprendido: una estrella.",
+        "text": "Cuando todas las preguntas de una tarjeta se respondieron bien la última vez, brilla como estrella en tu universo del conocimiento."
       }
     ]
   },
@@ -55,7 +55,7 @@
     "waysTitle": "Cuatro caminos de entrada",
     "follower": {
       "title": "Jugar en equipo",
-      "description": "Tu entrenador te invita. Sigues los contenidos que ha preparado para ti y ves tu progreso."
+      "description": "Tu entrenador te invita, por enlace o código QR. Sigues los contenidos que ha preparado para ti y ves tu progreso."
     },
     "learner": {
       "title": "Descubrir",
@@ -63,18 +63,18 @@
     },
     "author": {
       "title": "Crear lo tuyo",
-      "description": "Escribe y enlaza tus propias tarjetas, genera preguntas, trae contenido de Wikipedia y aprende con ellas."
+      "description": "Escribes y enlazas tus propias tarjetas, traes contenido de Wikipedia, Obsidian o archivos Markdown — y aprendes con ello."
     },
     "curator": {
       "title": "Guiar",
-      "description": "Curas un tema: como proveedor de contenidos que comparte conocimiento o como entrenador que invita y guía a su propio equipo con un enlace."
+      "description": "Curas un tema: como proveedor de contenidos que comparte conocimiento o como entrenador que invita y guía a su propio equipo con un enlace o código QR. Tú decides quién ve tu tema en la app: privado, solo para followers o público."
     }
   },
   "howItWorks": {
     "steps": [
       {
         "title": "Configurar dos idiomas",
-        "description": "Tu idioma materno y el que estás aprendiendo. Los contenidos aparecen en el idioma de aprendizaje, un toque cambia de vuelta."
+        "description": "Tu lengua materna y la que estás aprendiendo ahora."
       },
       {
         "title": "Seguir un tema",
@@ -95,7 +95,7 @@
       },
       {
         "title": "Tu progreso brilla",
-        "desc": "Cada tarjeta que dominas se convierte en una estrella en tu universo."
+        "desc": "Cada tarjeta que aprendes se convierte en una estrella en tu universo del conocimiento."
       },
       {
         "title": "Una herramienta para todo el aprendizaje",
@@ -103,15 +103,15 @@
       },
       {
         "title": "Dos idiomas, un camino",
-        "desc": "Tu idioma materno y el que estás aprendiendo: un toque cambia de vuelta."
+        "desc": "Tu lengua materna y la que estás aprendiendo."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "idiomas"
+        "kpi": "2",
+        "label": "idiomas que fijas tú"
       },
       {
         "kpi": "11",
@@ -166,11 +166,11 @@
       },
       {
         "q": "¿Puedo aportar mis propios contenidos?",
-        "a": "Sí. Escribes y enlazas tus propias tarjetas, haces generar preguntas y traes contenido de Wikipedia o de una página compartida."
+        "a": "Sí. Escribes y enlazas tus propias tarjetas y traes contenido de Wikipedia o de una página compartida. También traes a tus propios temas tarjetas de Obsidian y de archivos Markdown, y vocabulario de archivos. Al importar archivos Markdown, puedes generar preguntas de quiz a la vez."
       },
       {
         "q": "¿En qué idiomas puedo aprender?",
-        "a": "La interfaz está disponible en siete idiomas. Tú eliges dos: tu idioma materno y el que estás aprendiendo ahora."
+        "a": "Tú fijas dos idiomas: tu lengua materna y la que estás aprendiendo ahora."
       }
     ]
   },
