@@ -71,6 +71,14 @@ function seedRnd(slug) {
 }
 
 function anordnung(slug, n, kanten, W, H) {
+  // Wenige Karten: fester Kreis. Die Kraft-Anordnung unten fällt bei vier Karten auf eine Linie am oberen Rand,
+  // dann liegen zwei Sterne außerhalb des Sichtbaren (Befund Buch 04, 30.10.).
+  if (n < 6) {
+    return Array.from({ length: n }, (_, i) => {
+      const w = Math.PI + (i / n) * Math.PI * 2; // erste Karte links, letzte unten (dort hängt die Brücke, Platz fürs Label)
+      return { x: W / 2 + Math.cos(w) * 270, y: H / 2 + Math.sin(w) * 135 };
+    });
+  }
   const rnd = seedRnd(slug);
   const pos = Array.from({ length: n }, (_, i) => {
     const w = (i / n) * Math.PI * 2;
@@ -127,14 +135,38 @@ function universum(b) {
   }
   // Türen zu anderen Büchern: blasse Randsterne mit gestrichelter Linie, ein Klick führt auf die andere Buchseite
   // (b.bruecken: [{von: [Kartenindex, …], titel, url, ziel}]). Sie zählen nicht zum Weg und nicht zu den Karten.
-  const tueren = (b.bruecken ?? []).map((br) => {
+  // Brücken: Position so suchen, dass Türen, Sterne und Beschriftungen sich nicht treffen (Befund Buch 04, 30.10.).
+  // Erste Wahl bleibt, wenn sie frei ist; sonst Winkel, Abstand und Beschriftungsseite variieren.
+  const tueren = [];
+  const breiteText = (s) => Math.round(s.length * 7.2) + 12;
+  const kreuzt = (a, c) => a.x0 < c.x1 && c.x0 < a.x1 && a.y0 < c.y1 && c.y0 < a.y1;
+  for (const br of b.bruecken ?? []) {
     const von = [].concat(br.von);
     const ax = von.reduce((a, i) => a + pos[i].x, 0) / von.length, ay = von.reduce((a, i) => a + pos[i].y, 0) / von.length;
-    let dx = ax - W / 2, dy = ay - H / 2; const l = Math.max(Math.hypot(dx, dy), 1); dx /= l; dy /= l;
-    const x = Math.round(Math.min(W - 40, Math.max(40, ax + dx * 105))), y = Math.round(Math.min(H - 40, Math.max(40, ay + dy * 105)));
-    let links = ax > x; if (links && x < 230) links = false; if (!links && x > W - 230) links = true;
-    return { ...br, von, x, y, links };
-  });
+    const basis = Math.atan2(ay - H / 2, ax - W / 2);
+    const text = `${br.titel} →`;
+    let bestCost = Infinity, best = null;
+    for (const r of [105, 130]) for (const off of [0, 20, -20, 40, -40, 60, -60, 90, -90, 120, -120, 150, -150, 180]) {
+      const w = basis + (off * Math.PI) / 180;
+      const rx = ax + Math.cos(w) * r, ry = ay + Math.sin(w) * r;
+      const x = Math.round(Math.min(W - 40, Math.max(40, rx))), y = Math.round(Math.min(H - 40, Math.max(40, ry)));
+      const basisCost = Math.abs(off) / 40 + (r - 105) / 30 + (Math.round(rx) !== x || Math.round(ry) !== y ? 3 : 0);
+      const auto = ax > x; // wie bisher: Beschriftung nach außen
+      for (const links of [auto, !auto]) {
+        const bw = breiteText(text);
+        const x0 = links ? x - 14 - bw : x + 14, x1 = links ? x - 14 : x + 14 + bw;
+        const box = { x0, x1, y0: y - 11, y1: y + 7 };
+        let c = basisCost + (links === auto ? 0 : 0.5);
+        if (box.x0 < 4 || box.x1 > W - 4) c += 100;
+        if (tueren.some((o) => kreuzt(box, o.box))) c += 30;
+        if (pos.some((p) => p.x > box.x0 - 12 && p.x < box.x1 + 12 && p.y > box.y0 - 12 && p.y < box.y1 + 12)) c += 12;
+        if (pos.some((p) => Math.hypot(p.x - x, p.y - y) < 34)) c += 15;
+        if (tueren.some((o) => Math.hypot(o.x - x, o.y - y) < 60)) c += 15;
+        if (c < bestCost) { bestCost = c; best = { x, y, links, box }; }
+      }
+    }
+    tueren.push({ ...br, von, x: best.x, y: best.y, links: best.links, box: best.box });
+  }
   const tuerKanten = tueren.map((t) => t.von.map((i) => `<line class="e bruecke" x1="${pos[i].x}" y1="${pos[i].y}" x2="${t.x}" y2="${t.y}"/>`).join('')).join('');
   const tuerSterne = tueren.map((t) =>
     `<g class="n tuer" tabindex="0" role="link" data-href="${esc(t.url)}" data-ziel="${esc(t.ziel || '')}" aria-label="Zu einem anderen Buch: ${esc(t.titel)}" transform="translate(${t.x} ${t.y})"><circle class="hit" r="24"/><circle class="k" r="7"/><text y="4" x="${t.links ? -14 : 14}" text-anchor="${t.links ? 'end' : 'start'}">${esc(t.titel)} →</text></g>`).join('');
@@ -241,7 +273,7 @@ function kartenSektion(b) {
 }
 
 // Der Beitrag zum Buch steht immer ausgeklappt (kein Klappen, damit er nicht überlesen wird), mit orangem Balken links,
-// klar als Meinungsbeitrag gekennzeichnet. Er beruht auf dem Buch; die Lernkarten stützen sich bewusst auf andere Quellen.
+// klar als Meinungsbeitrag gekennzeichnet. Ohne Feld grundlage steht der Zusatz „auf Grundlage von …“; grundlage: "" lässt ihn weg.
 function beitragFalte(bt, buchTitel, buchAutor) {
   if (!bt || !bt.absaetze || bt.absaetze.length === 0) return '';
   return `<section class="beitrag-fold" aria-label="Meinungsbeitrag">
@@ -250,7 +282,7 @@ function beitragFalte(bt, buchTitel, buchAutor) {
     ${bt.anreisser ? `<p class="anreisser">${esc(bt.anreisser)}</p>` : ''}
     <div class="lesetext">
       ${bt.absaetze.map((a) => `<p>${escInline(a)}</p>`).join('\n      ')}
-      <p class="status">Meinungsbeitrag von ${esc(bt.autor)} auf Grundlage von ${esc(buchAutor)}s Buch „${esc(buchTitel)}“. Die Lernkarten auf dieser Seite stützen sich dagegen auf andere Quellen.</p>
+      ${bt.grundlage === undefined ? `<p class="status">Meinungsbeitrag von ${esc(bt.autor)} auf Grundlage von ${esc(buchAutor)}s Buch „${esc(buchTitel)}“.</p>` : `<p class="status">Meinungsbeitrag von ${esc(bt.autor)}${bt.grundlage ? `. ${esc(bt.grundlage)}` : '.'}</p>`}
     </div>
   </section>`;
 }
@@ -266,7 +298,7 @@ function seite(b, mitCover) {
   const zugang = `/?buch=${slugQ}#/zugang`;
 
   const faq = [
-    ['Stammen die Karten aus dem Buch?', `Nein. Die Karten stützen sich auf andere Quellen, jede Karte nennt ihre. Das Buch ist der Anlass, nicht die Vorlage.`],
+    ['Stammen die Karten aus dem Buch?', `Nein. Das Buch ist der Anlass, nicht die Vorlage.`],
     ['Muss ich etwas installieren?', 'Nein. plinyoo läuft im Browser, auch auf dem Telefon.'],
     ['Was ist plinyoo?', 'Stell dir vor, alles, was ein Mensch weiß, wäre für jeden anderen begehbar: nicht als Kurs mit festem Gang, sondern als Landschaft, durch die man seinen eigenen Weg wählt. Das ist unser Ziel: Wissen von Kopf zu Kopf zu bringen, ohne dass der Weg dorthin länger, teurer oder dünner wird. plinyoo ist der erste Schritt. <a href="/">Mehr auf der Startseite</a>.'],
   ];
@@ -691,10 +723,11 @@ async function main() {
   let erzeugt = 0, uebersprungen = 0;
   for (const f of dateien) {
     const b = JSON.parse(await readFile(path.join(contentDir, f), 'utf8'));
-    for (const pflicht of ['slug', 'titel', 'autor', 'leitfrage', 'verlagUrl', 'amazonUrl']) {
-      // Platzhalter (platzhalter: true) brauchen noch keine Bezugsquellen
-      if (!b[pflicht] && !(b.platzhalter && (pflicht === 'verlagUrl' || pflicht === 'amazonUrl'))) throw new Error(`${f}: Feld "${pflicht}" fehlt`);
+    for (const pflicht of ['slug', 'titel', 'autor', 'leitfrage']) {
+      if (!b[pflicht]) throw new Error(`${f}: Feld "${pflicht}" fehlt`);
     }
+    // Mindestens eine Bezugsquelle (Verlag oder Amazon), außer bei Platzhaltern
+    if (!b.platzhalter && !b.verlagUrl && !b.amazonUrl) throw new Error(`${f}: Bezugsquelle fehlt (verlagUrl oder amazonUrl)`);
     if (!/^[a-z0-9-]+$/.test(b.slug)) throw new Error(`${f}: Slug nur a-z, 0-9, Bindestrich`);
     if (b.draft && !mitEntwuerfen) { uebersprungen++; continue; }
     const out = path.join(distDir, 'buch', b.slug);

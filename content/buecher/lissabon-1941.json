@@ -10,7 +10,7 @@
   "isbn": "978-3-423-28551-3",
   "leitfrage": "Wer spionierte 1941 in Lissabon – und gegen wen?",
   "einordnung": "Alexander Smoltczyk beschreibt Lissabon 1940/41 als Wartesaal für Flüchtlinge und Agenten (Verlag). Wir nehmen das Buch zum Anlass, drei Karten aus anderen Quellen zu bauen.",
-  "kartenIntro": "Die Karten stützen sich auf Quellen außerhalb des Buchs und nennen sie einzeln. Alle 8 kannst du unten durchspielen.",
+  "kartenIntro": "Alle 8 kannst du unten durchspielen.",
   "karten": [
     "Wolfram 1941",
     "Granatkerne",
@@ -21,7 +21,7 @@
     "Seeweg 1498",
     "Geopolitik"
   ],
-  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen. Die Quellen liegen außerhalb des Buchs.",
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
   "verlagUrl": "https://www.dtv.de/buch/lissabon-1941-28551",
   "leseprobeUrl": "",
   "amazonUrl": "https://link.amazon/B0dFjHowJ",
@@ -29,7 +29,7 @@
   "coverBreite": 500,
   "coverHoehe": 820,
   "coverCredit": "Cover: © dtv Verlagsgesellschaft",
-  "naechsteWoche": "Als Nächstes: Roger Crowleys „Die Eroberer. Portugals Kampf um ein Weltreich“ über Portugals Weg nach Indien. Der Text dazu kommt demnächst.",
+  "naechsteWoche": "Als Nächstes: Roger Crowleys „Die Eroberer. Portugals Kampf um ein Weltreich“ über die Frage, wie Portugals Weltreich begann, mit vier Lernkarten.",
   "probeTitel": "Probier es an den Karten aus",
   "graphTitel": "Der Wissensgraph über Lissabon 1941",
   "knoten": [
@@ -123,7 +123,8 @@
       "Und wer war auf diesem Weg? Hannah Arendt reiste im Januar 1941 mit dem Zug durch Spanien nach Lissabon und kam im Mai 1941 in New York an. Heinrich Mann bestieg im Oktober 1940, nach einem Aufenthalt in Estoril bei Lissabon, ein Schiff nach New York. Was entschied mehr über diesen Weg: der Ort oder das Papier in der Hand?",
       "Wer Alexander Smoltczyks <em>Lissabon 1941</em> liest, sieht mehr als Spione und Stars. Es erzählt von Menschen, die warteten, und von einer Stadt, die für viele ein Symbol der Hoffnung war. Probier es an den Karten aus."
     ],
-    "autor": "Heiko Miertzsch"
+    "autor": "Heiko Miertzsch",
+    "grundlage": ""
   },
   "kartenvoll": [
     {
@@ -145,24 +146,24 @@
           "belegDe": "Deutschland wurde bei seiner Wolframversorgung von Portugal und Spanien abhängig.",
           "optionen": [
             {
-              "text": "Von Portugal und Spanien",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Von Großbritannien und den USA",
               "ok": false,
-              "fb": "Die Quelle nennt Portugal und Spanien."
+              "fb": "Falsch: Deutschland war bei seiner Wolframversorgung auf Portugal und Spanien angewiesen."
             },
             {
               "text": "Von Schweden und der Türkei",
               "ok": false,
-              "fb": "Die Quelle nennt Portugal und Spanien."
+              "fb": "Falsch: Deutschland war bei seiner Wolframversorgung auf Portugal und Spanien angewiesen."
             },
             {
               "text": "Von Japan und China",
               "ok": false,
-              "fb": "Die Quelle nennt Portugal und Spanien."
+              "fb": "Falsch: Deutschland war bei seiner Wolframversorgung auf Portugal und Spanien angewiesen."
+            },
+            {
+              "text": "Von Portugal und Spanien",
+              "ok": true,
+              "fb": "Richtig: Deutschland war bei seiner Wolframversorgung auf Portugal und Spanien angewiesen."
             }
           ]
         },
@@ -175,22 +176,22 @@
             {
               "text": "Ein striktes Exportquotensystem",
               "ok": true,
-              "fb": "Richtig: So beschreibt es die Quelle."
+              "fb": "Richtig: Portugal führte 1942 ein striktes Exportquotensystem ein."
             },
             {
               "text": "Ein vollständiges Exportverbot",
               "ok": false,
-              "fb": "Die Quelle spricht von einem Quotensystem, nicht von einem Verbot."
+              "fb": "Falsch: Portugal führte 1942 ein striktes Exportquotensystem ein, kein Verbot."
             },
             {
               "text": "Freie Ausfuhr ohne Kontrolle",
               "ok": false,
-              "fb": "Die Quelle nennt ein striktes Quotensystem."
+              "fb": "Falsch: Portugal führte 1942 ein striktes Exportquotensystem ein."
             },
             {
               "text": "Einen Zoll auf Gold",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Portugal führte 1942 ein striktes Exportquotensystem ein."
             }
           ]
         },
@@ -201,9 +202,9 @@
           "belegDe": "Deutschland wurde bei seiner Wolframversorgung von Portugal und Spanien abhängig.",
           "optionen": [
             {
-              "text": "Portugal hatte die größte Armee in Europa",
+              "text": "Portugal hatte die größte Armee in Europa und schickte Truppen an die Front",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Deutschland war bei seiner Wolframversorgung von Portugal und Spanien abhängig."
             },
             {
               "text": "Portugal und Spanien lieferten das Wolfram, das Deutschland brauchte",
@@ -211,14 +212,14 @@
               "fb": "Richtig: Deutschland war für seine Wolframversorgung von beiden abhängig."
             },
             {
-              "text": "Portugal war Mitglied der Achsenmächte",
+              "text": "Portugal war Mitglied der Achsenmächte und kämpfte an der Seite Deutschlands",
               "ok": false,
-              "fb": "Die Quelle beschreibt Portugal als neutral; das ist hier nicht die Antwort."
+              "fb": "Falsch: Portugal war neutral. Wichtig war es, weil Deutschland bei seiner Wolframversorgung von Portugal und Spanien abhängig war."
             },
             {
               "text": "Portugal exportierte Gold nach Deutschland",
               "ok": false,
-              "fb": "Die Quelle nennt diesen Zusammenhang nicht."
+              "fb": "Falsch: Deutschland war bei seiner Wolframversorgung von Portugal und Spanien abhängig."
             }
           ]
         }
@@ -238,85 +239,85 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Wofür nutzte Deutschland im Zweiten Weltkrieg Wolfram laut dieser Quelle?",
+          "frage": "Wofür nutzte Deutschland im Zweiten Weltkrieg Wolfram?",
           "beleg": "Germany used tungsten during World War II to produce cores of shells for anti-tank guns and tips for machine tools.",
           "belegDe": "Deutschland nutzte Wolfram im Zweiten Weltkrieg, um Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen herzustellen.",
           "optionen": [
             {
+              "text": "Für Kupferleitungen in Funkgeräten und Stecker für Telefonanlagen der Deutschen Post",
+              "ok": false,
+              "fb": "Falsch: Deutschland nutzte Wolfram für Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen."
+            },
+            {
+              "text": "Für Treibstoff von U-Booten und Filter für Dieselmotoren in Lastwagen",
+              "ok": false,
+              "fb": "Falsch: Deutschland nutzte Wolfram für Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen."
+            },
+            {
               "text": "Für Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: Deutschland nutzte Wolfram für Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen."
             },
             {
-              "text": "Für Kupferleitungen in Funkgeräten",
+              "text": "Für Konservendosen aus Weißblech und Deckel für Einmachgläser in Küchen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
-            },
-            {
-              "text": "Für Treibstoff von U-Booten",
-              "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
-            },
-            {
-              "text": "Für Konservendosen",
-              "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Deutschland nutzte Wolfram für Kerne von Granaten für Panzerabwehrkanonen und Spitzen für Werkzeugmaschinen."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Welche Eigenschaften machen Wolfram laut Quelle für militärische Geschosse geeignet?",
+          "frage": "Welche Eigenschaften machen Wolfram für militärische Geschosse geeignet?",
           "beleg": "Tungsten's hardness and high density make it suitable for military applications in penetrating projectiles.",
           "belegDe": "Die Härte und die hohe Dichte von Wolfram machen es für militärische Anwendungen in durchschlagenden Geschossen geeignet.",
           "optionen": [
             {
-              "text": "Härte und hohe Dichte",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Geringes Gewicht und Biegsamkeit",
               "ok": false,
-              "fb": "Die Quelle nennt Härte und Dichte, nicht Gewicht und Biegsamkeit."
+              "fb": "Falsch: Entscheidend sind Härte und hohe Dichte, nicht geringes Gewicht und Biegsamkeit."
             },
             {
               "text": "Hohe Leitfähigkeit und Korrosionsfreiheit",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Wolfram eignet sich wegen seiner Härte und hohen Dichte für durchschlagende Geschosse."
             },
             {
               "text": "Niedriger Schmelzpunkt",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Wolfram eignet sich wegen seiner Härte und hohen Dichte für durchschlagende Geschosse."
+            },
+            {
+              "text": "Härte und hohe Dichte",
+              "ok": true,
+              "fb": "Richtig: Wolfram eignet sich wegen seiner Härte und hohen Dichte für durchschlagende Geschosse."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Wozu ist Wolfram in Durchschlagsgeschossen laut Quelle eine Alternative?",
+          "frage": "Wozu ist Wolfram in Durchschlagsgeschossen eine Alternative?",
           "beleg": "is used in kinetic energy penetrators as an alternative to depleted uranium.",
           "belegDe": "wird in Durchschlagsgeschossen (kinetische Penetratoren) als Alternative zu abgereichertem Uran verwendet.",
           "optionen": [
             {
               "text": "Zu abgereichertem Uran",
               "ok": true,
-              "fb": "Richtig: Die Quelle nennt abgereichertes Uran als Alternative."
+              "fb": "Richtig: In Durchschlagsgeschossen wird Wolfram als Alternative zu abgereichertem Uran verwendet."
             },
             {
               "text": "Zu Blei in Schrotkugeln",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: In Durchschlagsgeschossen ist Wolfram eine Alternative zu abgereichertem Uran."
             },
             {
               "text": "Zu Kupfer in Stromkabeln",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: In Durchschlagsgeschossen ist Wolfram eine Alternative zu abgereichertem Uran."
             },
             {
               "text": "Zu Glas in Zielfernrohren",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: In Durchschlagsgeschossen ist Wolfram eine Alternative zu abgereichertem Uran."
             }
           ]
         }
@@ -336,85 +337,85 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Wie viele Menschen wurden laut dieser Quelle an der spanischen Grenze abgewiesen?",
+          "frage": "Wie viele Menschen wurden im Juni 1940 an der spanischen Grenze abgewiesen?",
           "beleg": "some 10,000 persons attempting to cross over into Spain were excluded",
           "belegDe": "Rund 10.000 Personen, die nach Spanien hinüberwollten, wurden abgewiesen.",
           "optionen": [
             {
-              "text": "Rund 10.000",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Rund 1.000",
               "ok": false,
-              "fb": "Die Quelle nennt etwa 10.000."
+              "fb": "Falsch: Rund 10.000 Menschen wurden an der spanischen Grenze abgewiesen."
             },
             {
               "text": "Rund 100.000",
               "ok": false,
-              "fb": "Die Quelle nennt etwa 10.000."
+              "fb": "Falsch: Rund 10.000 Menschen wurden an der spanischen Grenze abgewiesen."
             },
             {
               "text": "Niemand",
               "ok": false,
-              "fb": "Die Quelle nennt eine große Zahl Abgewiesener."
+              "fb": "Falsch: Rund 10.000 Menschen wurden an der spanischen Grenze abgewiesen."
+            },
+            {
+              "text": "Rund 10.000",
+              "ok": true,
+              "fb": "Richtig: Rund 10.000 Menschen wurden an der spanischen Grenze abgewiesen."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Was erklärte Portugal laut dieser Quelle über die in Bordeaux erteilten Visa?",
+          "frage": "Was erklärte Portugal im Juni 1940 über die in Bordeaux erteilten Visa?",
           "beleg": "Portugal announced that Portuguese visas granted at Bordeaux were invalid",
           "belegDe": "Portugal erklärte, dass die in Bordeaux erteilten portugiesischen Visa ungültig seien.",
           "optionen": [
             {
               "text": "Sie seien ungültig",
               "ok": true,
-              "fb": "Richtig: So beschreibt es die Quelle."
+              "fb": "Richtig: Portugal erklärte die in Bordeaux erteilten portugiesischen Visa für ungültig."
             },
             {
               "text": "Sie seien für Kinder kostenlos",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Portugal erklärte die in Bordeaux erteilten portugiesischen Visa für ungültig."
             },
             {
               "text": "Sie gelten für die USA",
               "ok": false,
-              "fb": "Die Quelle nennt die Ungültigkeit der Visa aus Bordeaux."
+              "fb": "Falsch: Portugal erklärte die in Bordeaux erteilten portugiesischen Visa für ungültig."
             },
             {
               "text": "Sie seien unbefristet",
               "ok": false,
-              "fb": "Die Quelle nennt die Ungültigkeit."
+              "fb": "Falsch: Portugal erklärte die in Bordeaux erteilten portugiesischen Visa für ungültig."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Was zeigt die Quelle über den Weg über Spanien nach Portugal im Juni 1940?",
+          "frage": "Was zeigte sich im Juni 1940 am Weg über Spanien nach Portugal?",
           "beleg": "some 10,000 persons attempting to cross over into Spain were excluded; Portugal announced that Portuguese visas granted at Bordeaux were invalid",
           "belegDe": "Rund 10.000 Personen, die nach Spanien hinüberwollten, wurden abgewiesen; Portugal erklärte, dass die in Bordeaux erteilten portugiesischen Visa ungültig seien.",
           "optionen": [
             {
-              "text": "Auch Menschen mit Visa kamen nicht weiter, weil Spanien abwies und Portugal die Visa für ungültig erklärte",
-              "ok": true,
-              "fb": "Richtig: Beide Aussagen zusammen."
+              "text": "Der Weg war offen, weil Portugal alle Visa anerkannte und Spanien die Grenze für alle öffnete",
+              "ok": false,
+              "fb": "Falsch: Der Weg war nicht offen. An der spanischen Grenze wurden rund 10.000 Menschen abgewiesen, und Portugal erklärte die in Bordeaux erteilten Visa für ungültig."
             },
             {
-              "text": "Der Weg war offen, weil Portugal alle Visa anerkannte",
-              "ok": false,
-              "fb": "Die Quelle sagt das Gegenteil."
+              "text": "Auch mit Visa kam man nicht weiter: Spanien wies ab, Portugal erklärte die Visa für ungültig",
+              "ok": true,
+              "fb": "Richtig: An der spanischen Grenze wurden rund 10.000 Menschen abgewiesen, und Portugal erklärte die in Bordeaux erteilten Visa für ungültig."
             },
             {
               "text": "Spanien hat alle Flüchtlinge aufgenommen",
               "ok": false,
-              "fb": "Die Quelle nennt Abweisungen an der spanischen Grenze."
+              "fb": "Falsch: An der spanischen Grenze wurden rund 10.000 Menschen abgewiesen."
             },
             {
               "text": "Der Weg führte über die USA",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Der Weg führte aus Frankreich über Spanien nach Portugal."
             }
           ]
         }
@@ -441,78 +442,78 @@
             {
               "text": "Mit dem Zug durch Spanien",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: Hannah Arendt reiste mit dem Zug durch Spanien nach Lissabon."
             },
             {
               "text": "Mit dem Flugzeug über die Azoren",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Hannah Arendt reiste mit dem Zug durch Spanien nach Lissabon."
             },
             {
               "text": "Mit einem Frachter von Marseille",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Hannah Arendt reiste mit dem Zug durch Spanien nach Lissabon."
             },
             {
               "text": "Zu Fuß über die Pyrenäen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Hannah Arendt reiste mit dem Zug durch Spanien nach Lissabon."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Wann sicherte sich die Familie laut Quelle die Überfahrt nach New York?",
+          "frage": "Wann sicherte sich Hannah Arendts Familie die Überfahrt nach New York?",
           "beleg": "They eventually secured passage to New York in May",
           "belegDe": "Schließlich sicherten sie sich im Mai die Überfahrt nach New York.",
           "optionen": [
             {
-              "text": "Im Mai",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Im Januar",
               "ok": false,
-              "fb": "Im Januar war die Reise durch Spanien, die Überfahrt nennt die Quelle für den Mai."
+              "fb": "Falsch: Im Januar war die Reise durch Spanien; die Überfahrt sicherte sich die Familie im Mai."
+            },
+            {
+              "text": "Im Mai",
+              "ok": true,
+              "fb": "Richtig: Im Mai sicherte sich die Familie die Überfahrt nach New York."
             },
             {
               "text": "Im Oktober",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Die Familie sicherte sich die Überfahrt nach New York im Mai."
             },
             {
               "text": "Im September",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Die Familie sicherte sich die Überfahrt nach New York im Mai."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Wann kam die Familie laut Quelle in New York an?",
+          "frage": "Wann kam Hannah Arendts Familie in New York an?",
           "beleg": "Upon arriving in New York City on 22 May 1941 with very little",
           "belegDe": "Bei der Ankunft in New York City am 22. Mai 1941 mit sehr wenig.",
           "optionen": [
             {
-              "text": "Am 22. Mai 1941",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Am 22. Januar 1941",
               "ok": false,
-              "fb": "Die Quelle nennt den 22. Mai."
+              "fb": "Falsch: Die Familie kam am 22. Mai 1941 in New York an."
             },
             {
               "text": "Am 4. Oktober 1940",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Die Familie kam am 22. Mai 1941 in New York an."
+            },
+            {
+              "text": "Am 22. Mai 1941",
+              "ok": true,
+              "fb": "Richtig: Die Familie kam am 22. Mai 1941 in New York an."
             },
             {
               "text": "Am 22. Juni 1941",
               "ok": false,
-              "fb": "Die Quelle nennt den 22. Mai."
+              "fb": "Falsch: Die Familie kam am 22. Mai 1941 in New York an."
             }
           ]
         }
@@ -532,85 +533,85 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Wo überquerte Heinrich Mann laut Quelle die Grenze nach Spanien?",
+          "frage": "Wo überquerte Heinrich Mann 1940 die Grenze nach Spanien?",
           "beleg": "finally crossing the border at Port Bou",
           "belegDe": "überquerte die Grenze schließlich bei Port Bou.",
           "optionen": [
             {
-              "text": "Bei Port Bou",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Bei Irun",
               "ok": false,
-              "fb": "Die Quelle nennt Port Bou."
+              "fb": "Falsch: Heinrich Mann überquerte die Grenze nach Spanien bei Port Bou."
+            },
+            {
+              "text": "Bei Port Bou",
+              "ok": true,
+              "fb": "Richtig: Heinrich Mann überquerte die Grenze nach Spanien schließlich bei Port Bou."
             },
             {
               "text": "Bei Hendaye",
               "ok": false,
-              "fb": "Die Quelle nennt Port Bou."
+              "fb": "Falsch: Heinrich Mann überquerte die Grenze nach Spanien bei Port Bou."
             },
             {
               "text": "Bei Lissabon",
               "ok": false,
-              "fb": "Lissabon liegt in Portugal. Die Grenze nach Spanien nennt die Quelle bei Port Bou."
+              "fb": "Falsch: Lissabon liegt in Portugal. Die Grenze nach Spanien überquerte Heinrich Mann bei Port Bou."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Wo wohnte die Gruppe laut Quelle nach der Ankunft in Portugal?",
+          "frage": "Wo wohnte Heinrich Manns Gruppe nach der Ankunft in Portugal?",
           "beleg": "stayed in Monte Estoril at the Grande Hotel D'Itália between September 18 and October 4, 1940",
           "belegDe": "wohnte zwischen dem 18. September und dem 4. Oktober 1940 im Grande Hotel D'Itália in Monte Estoril.",
           "optionen": [
             {
+              "text": "In einem Kloster in Sintra am Stadtrand",
+              "ok": false,
+              "fb": "Falsch: Heinrich Manns Gruppe wohnte im Grande Hotel D'Itália in Monte Estoril."
+            },
+            {
+              "text": "In einem Lager für Flüchtlinge in Marseille",
+              "ok": false,
+              "fb": "Falsch: Heinrich Manns Gruppe wohnte im Grande Hotel D'Itália in Monte Estoril."
+            },
+            {
               "text": "Im Grande Hotel D'Itália in Monte Estoril",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: Heinrich Manns Gruppe wohnte vom 18. September bis zum 4. Oktober 1940 im Grande Hotel D'Itália in Monte Estoril."
             },
             {
-              "text": "In einem Kloster in Sintra",
+              "text": "In einem Hotel in Madrid, nahe dem Bahnhof",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
-            },
-            {
-              "text": "In einem Lager in Marseille",
-              "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
-            },
-            {
-              "text": "In Madrid",
-              "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Heinrich Manns Gruppe wohnte im Grande Hotel D'Itália in Monte Estoril."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Welches Schiff bestieg die Gruppe am 4. Oktober 1940?",
+          "frage": "Welches Schiff bestieg Heinrich Manns Gruppe am 4. Oktober 1940?",
           "beleg": "On October 4, 1940, they boarded the S.S. Nea Hellas, headed for New York City.",
           "belegDe": "Am 4. Oktober 1940 bestiegen sie die S.S. Nea Hellas nach New York City.",
           "optionen": [
             {
-              "text": "Die S.S. Nea Hellas nach New York",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Ein Zug nach Madrid",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Heinrich Manns Gruppe bestieg am 4. Oktober 1940 die S.S. Nea Hellas nach New York."
             },
             {
               "text": "Ein Flugzeug nach Lissabon",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Heinrich Manns Gruppe bestieg am 4. Oktober 1940 die S.S. Nea Hellas nach New York."
             },
             {
               "text": "Ein Frachter nach Buenos Aires",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Heinrich Manns Gruppe bestieg am 4. Oktober 1940 die S.S. Nea Hellas nach New York."
+            },
+            {
+              "text": "Die S.S. Nea Hellas nach New York",
+              "ok": true,
+              "fb": "Richtig: Heinrich Manns Gruppe bestieg am 4. Oktober 1940 die S.S. Nea Hellas nach New York."
             }
           ]
         }
@@ -635,80 +636,80 @@
           "belegDe": "überwiegend an der Nordseite des großen natürlichen Hafens des Tejo, der sich nach Westen durch eine kurze Meerenge zum Atlantischen Ozean öffnet.",
           "optionen": [
             {
-              "text": "Überwiegend an der Nordseite",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Überwiegend am Südufer",
               "ok": false,
-              "fb": "Die Quelle nennt die Nordseite."
+              "fb": "Falsch: Lissabon liegt überwiegend an der Nordseite des großen natürlichen Hafens des Tejo."
             },
             {
               "text": "Auf einer Insel im Atlantik",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Lissabon liegt überwiegend an der Nordseite des großen natürlichen Hafens des Tejo."
+            },
+            {
+              "text": "Überwiegend an der Nordseite",
+              "ok": true,
+              "fb": "Richtig: Lissabon liegt überwiegend an der Nordseite des großen natürlichen Hafens des Tejo."
             },
             {
               "text": "Direkt an der offenen Atlantikküste",
               "ok": false,
-              "fb": "Die Quelle nennt eine kurze Meerenge zum Atlantik."
+              "fb": "Falsch: Lissabon liegt am Hafen des Tejo, der sich durch eine kurze Meerenge zum Atlantik öffnet."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Wie öffnet sich der Hafen laut Quelle zum Atlantik?",
+          "frage": "Wie öffnet sich Lissabons Hafen am Tejo zum Atlantik?",
           "beleg": "opens west, through a short strait, onto the Atlantic Ocean",
           "belegDe": "öffnet sich nach Westen durch eine kurze Meerenge zum Atlantischen Ozean.",
           "optionen": [
             {
-              "text": "Nach Westen durch eine kurze Meerenge",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Nach Süden über ein offenes Delta",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Der Hafen öffnet sich nach Westen durch eine kurze Meerenge zum Atlantik."
             },
             {
               "text": "Nach Norden über einen Kanal",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Der Hafen öffnet sich nach Westen durch eine kurze Meerenge zum Atlantik."
             },
             {
               "text": "Gar nicht, der Hafen ist von Land umschlossen",
               "ok": false,
-              "fb": "Die Quelle nennt eine Verbindung zum Atlantik."
+              "fb": "Falsch: Der Hafen öffnet sich nach Westen durch eine kurze Meerenge zum Atlantik."
+            },
+            {
+              "text": "Nach Westen durch eine kurze Meerenge",
+              "ok": true,
+              "fb": "Richtig: Der Hafen öffnet sich nach Westen durch eine kurze Meerenge zum Atlantik."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Welche Rolle hatte Lissabon laut Quelle in der Zeit der Entdeckungen?",
+          "frage": "Welche Rolle hatte Lissabon in der Zeit der Entdeckungen?",
           "beleg": "During Alfonso III's reign and the Age of Exploration, Lisbon became a major hub.",
           "belegDe": "Während der Regierungszeit Alfons III. und im Zeitalter der Entdeckungen wurde Lissabon zu einem großen Knotenpunkt.",
           "optionen": [
             {
               "text": "Ein großer Knotenpunkt",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: In der Zeit der Entdeckungen wurde Lissabon zu einem großen Knotenpunkt."
             },
             {
               "text": "Ein Fischerdorf ohne Schiffsverkehr",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: In der Zeit der Entdeckungen wurde Lissabon zu einem großen Knotenpunkt."
             },
             {
               "text": "Eine Festung ohne Hafen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: In der Zeit der Entdeckungen wurde Lissabon zu einem großen Knotenpunkt."
             },
             {
               "text": "Eine Sommerresidenz ohne Handel",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: In der Zeit der Entdeckungen wurde Lissabon zu einem großen Knotenpunkt."
             }
           ]
         }
@@ -732,85 +733,85 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Welches Ziel hatte die Suche nach dem Seeweg laut Quelle?",
+          "frage": "Welches Ziel hatte Portugals Suche nach einem Seeweg?",
           "beleg": "with the aim of finding a sea route to the source of the lucrative spice trade",
           "belegDe": "mit dem Ziel, einen Seeweg zur Quelle des lukrativen Gewürzhandels zu finden.",
           "optionen": [
             {
-              "text": "Einen Seeweg zur Quelle des lukrativen Gewürzhandels",
+              "text": "Einen Seeweg zum Ursprung des lukrativen Gewürzhandels",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: Portugal suchte einen Seeweg zum Ursprung des lukrativen Gewürzhandels."
             },
             {
-              "text": "Einen Landweg auf der Seidenstraße",
+              "text": "Einen Landweg auf der Seidenstraße nach Venedig",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Portugal suchte einen Seeweg zum Ursprung des lukrativen Gewürzhandels."
             },
             {
-              "text": "Die Entdeckung eines neuen Kontinents",
+              "text": "Die Entdeckung eines neuen Kontinents im Atlantik",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Portugal suchte einen Seeweg zum Ursprung des lukrativen Gewürzhandels."
             },
             {
-              "text": "Die Eroberung Marokkos",
+              "text": "Die Eroberung Marokkos und der Kanarischen Inseln",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Portugal suchte einen Seeweg zum Ursprung des lukrativen Gewürzhandels."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Wann und wo erreichte Vasco da Gama laut Quelle Indien?",
+          "frage": "Wann und wo erreichte Vasco da Gama Indien?",
           "beleg": "reaching Calicut (Kozhikode), the capital of the kingdom ruled by Zamorins, in south-western India in May 1498",
           "belegDe": "Sie erreichten Calicut (Kozhikode), die Hauptstadt des Königreichs der Zamorine, im Südwesten Indiens im Mai 1498.",
           "optionen": [
             {
-              "text": "Im Mai 1498 im Südwesten Indiens",
-              "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
-            },
-            {
               "text": "Im Mai 1492 in Westafrika",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Vasco da Gama erreichte im Mai 1498 Calicut im Südwesten Indiens."
+            },
+            {
+              "text": "Im Mai 1498 im Südwesten Indiens",
+              "ok": true,
+              "fb": "Richtig: Vasco da Gama erreichte im Mai 1498 Calicut im Südwesten Indiens."
             },
             {
               "text": "Im Mai 1510 in Goa",
               "ok": false,
-              "fb": "Die Quelle nennt Mai 1498 und Südwestindien."
+              "fb": "Falsch: Vasco da Gama erreichte im Mai 1498 Calicut im Südwesten Indiens."
             },
             {
               "text": "Im Mai 1488 am Kap der Guten Hoffnung",
               "ok": false,
-              "fb": "1488 umrundete Dias das Kap. Für Indien nennt die Quelle Mai 1498."
+              "fb": "Falsch: 1488 umrundete Bartolomeu Dias das Kap der Guten Hoffnung. Indien erreichte Vasco da Gama im Mai 1498."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Welche Umrundung ging laut Quelle der Reise von da Gama voraus?",
+          "frage": "Welche Umrundung ging Vasco da Gamas Indienreise voraus?",
           "beleg": "In 1488, Bartolomeu Dias rounded the Cape of Good Hope and Cape Agulhas, and in 1498 Vasco da Gama finally reached India.",
           "belegDe": "1488 umrundete Bartolomeu Dias das Kap der Guten Hoffnung und das Kap Agulhas, und 1498 erreichte Vasco da Gama schließlich Indien.",
           "optionen": [
             {
-              "text": "Die des Kaps der Guten Hoffnung durch Bartolomeu Dias",
-              "ok": true,
-              "fb": "Richtig: Die Quelle nennt 1488 Dias und das Kap."
-            },
-            {
               "text": "Die der Magellanstraße durch Ferdinand Magellan",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Vor Vasco da Gamas Indienreise umrundete Bartolomeu Dias 1488 das Kap der Guten Hoffnung."
             },
             {
               "text": "Die der Nordwestpassage durch John Franklin",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Vor Vasco da Gamas Indienreise umrundete Bartolomeu Dias 1488 das Kap der Guten Hoffnung."
+            },
+            {
+              "text": "Die des Kaps der Guten Hoffnung durch Dias",
+              "ok": true,
+              "fb": "Richtig: Bartolomeu Dias umrundete 1488 das Kap der Guten Hoffnung."
             },
             {
               "text": "Die der Straße von Gibraltar durch Kolumbus",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Vor Vasco da Gamas Indienreise umrundete Bartolomeu Dias 1488 das Kap der Guten Hoffnung."
             }
           ]
         }
@@ -820,7 +821,7 @@
       "slug": "geografie-geopolitik",
       "kurz": "Geopolitik",
       "titel": "Geopolitik: Wie Geografie Politik beeinflusst",
-      "karte": "Geopolitik untersucht die Wirkung der Erdgeografie auf Politik und internationale Beziehungen. Zum geografischen Raum zählt die Quelle Territorialgewässer, Landgebiet und den Reichtum an natürlichen Ressourcen. Zu den geografischen Variablen gehören unter anderem Klima, Topografie, Demografie und natürliche Ressourcen.",
+      "karte": "Geopolitik untersucht die Wirkung der Erdgeografie auf Politik und internationale Beziehungen. Zum geografischen Raum zählen Territorialgewässer, Landgebiet und der Reichtum an natürlichen Ressourcen. Zu den geografischen Variablen gehören unter anderem Klima, Topografie, Demografie und natürliche Ressourcen.",
       "quelle": {
         "titel": "Geopolitics",
         "url": "https://en.wikipedia.org/wiki/Geopolitics",
@@ -830,85 +831,85 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Was untersucht Geopolitik laut dieser Quelle?",
+          "frage": "Was untersucht Geopolitik?",
           "beleg": "is the study of the effects of Earth's geography on politics and international relations",
           "belegDe": "untersucht die Auswirkungen der Erdgeografie auf Politik und internationale Beziehungen.",
           "optionen": [
             {
               "text": "Den Einfluss der Erdgeografie auf Politik und internationale Beziehungen",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: Geopolitik untersucht die Wirkung der Erdgeografie auf Politik und internationale Beziehungen."
             },
             {
               "text": "Die Bevölkerungsentwicklung einzelner Länder",
               "ok": false,
-              "fb": "Die Quelle nennt die Erdgeografie als Gegenstand."
+              "fb": "Falsch: Geopolitik untersucht die Wirkung der Erdgeografie auf Politik und internationale Beziehungen."
             },
             {
               "text": "Die Börsenkurse von Rohstoffen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Geopolitik untersucht die Wirkung der Erdgeografie auf Politik und internationale Beziehungen."
             },
             {
               "text": "Die Religion der Staaten",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Geopolitik untersucht die Wirkung der Erdgeografie auf Politik und internationale Beziehungen."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Welche Räume zählt die Quelle zum geografischen Raum?",
+          "frage": "Was zählt die Geopolitik zum geografischen Raum?",
           "beleg": "geographic space, in particular, territorial waters, land territory and wealth of natural resources",
           "belegDe": "geografischer Raum, insbesondere Territorialgewässer, Landgebiet und Reichtum an natürlichen Ressourcen.",
           "optionen": [
             {
               "text": "Territorialgewässer, Landgebiet und Reichtum an natürlichen Ressourcen",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: Zum geografischen Raum zählen Territorialgewässer, Landgebiet und der Reichtum an natürlichen Ressourcen."
             },
             {
               "text": "Nur Landgrenzen",
               "ok": false,
-              "fb": "Die Quelle nennt Landgebiet und Gewässer, nicht nur Grenzen."
+              "fb": "Falsch: Zum geografischen Raum zählen Landgebiet und Gewässer, nicht nur Grenzen."
             },
             {
               "text": "Nur Bevölkerungszahlen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Zum geografischen Raum zählen Territorialgewässer, Landgebiet und der Reichtum an natürlichen Ressourcen."
             },
             {
               "text": "Nur Handelsrouten",
               "ok": false,
-              "fb": "Die Quelle nennt Handelsrouten nicht."
+              "fb": "Falsch: Zum geografischen Raum zählen Territorialgewässer, Landgebiet und der Reichtum an natürlichen Ressourcen."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Welche der folgenden Größen nennt die Quelle als geografische Variable?",
+          "frage": "Welche der folgenden Größen zählt zu den geografischen Variablen der Geopolitik?",
           "beleg": "through geographical variables. These include area studies, climate, topography, demography, natural resources",
           "belegDe": "durch geografische Variablen. Dazu gehören unter anderem Gebietsstudien, Klima, Topografie, Demografie und natürliche Ressourcen.",
           "optionen": [
             {
               "text": "Klima",
               "ok": true,
-              "fb": "Richtig: Klima steht in der Liste der geografischen Variablen."
+              "fb": "Richtig: Klima gehört zu den geografischen Variablen, ebenso Topografie, Demografie und natürliche Ressourcen."
             },
             {
               "text": "Staatsverschuldung",
               "ok": false,
-              "fb": "Die Quelle nennt sie nicht."
+              "fb": "Falsch: Geografische Variablen sind unter anderem Klima, Topografie, Demografie und natürliche Ressourcen."
             },
             {
               "text": "Parteiprogramme",
               "ok": false,
-              "fb": "Die Quelle nennt sie nicht."
+              "fb": "Falsch: Geografische Variablen sind unter anderem Klima, Topografie, Demografie und natürliche Ressourcen."
             },
             {
               "text": "Wechselkurse",
               "ok": false,
-              "fb": "Die Quelle nennt sie nicht."
+              "fb": "Falsch: Geografische Variablen sind unter anderem Klima, Topografie, Demografie und natürliche Ressourcen."
             }
           ]
         }

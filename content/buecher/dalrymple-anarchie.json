@@ -10,7 +10,7 @@
   "isbn": "978-3-406-83440-0",
   "leitfrage": "Wie wurde aus einer Londoner Handelsgesellschaft der Herrscher über große Teile Indiens?",
   "einordnung": "William Dalrymple erzählt, wie die East India Company vom Handelsunternehmen zur Macht auf dem Subkontinent wurde. Wir nehmen das Buch zum Anlass, einzelne Stationen dieser Geschichte mit eigenen Quellen aufzuschlüsseln — als Lernkarten mit Fragen und Belegen.",
-  "kartenIntro": "Die Karten stützen sich auf Quellen außerhalb des Buchs (Archive, Hochschulen, Fachlexika) und nennen sie einzeln. Alle 13 kannst du unten durchspielen.",
+  "kartenIntro": "Alle 13 kannst du unten durchspielen.",
   "karten": [
     "Pfeffer: von 3 auf 8 Schilling",
     "Das Handelsmonopol von 1600",
@@ -26,7 +26,7 @@
     "Das Ende der Monopole 1813 und 1833",
     "1858 und 1874: Das Ende"
   ],
-  "kartenStatus": "Jede Karte nennt ihre Quelle und hat zwei bis drei Fragen. Die Quellen liegen außerhalb des Buchs.",
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat zwei bis drei Fragen.",
   "verlagUrl": "https://www.chbeck.de/dalrymple-anarchie/product/38617938",
   "leseprobeUrl": "https://cdn-assetservice.ecom-api.beck-shop.de/productattachment/readingsample/16052556/38617938_leseprobe%20anarchie.pdf",
   "amazonUrl": "https://www.amazon.de/Anarchie-verh%C3%A4ngnisvolle-Aufstieg-Company-1600-1874/dp/340683440X?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=SBUDIQA74DI5&dib=eyJ2IjoiMSJ9.zA1UPTBywbQYuZIgBRxCuTrYOfMDL2P364200BPxycLHHZARUqLOd60XeAFTgDwa7aoisfGhwhXChnDFUXYC3W2yzAc3h4HqTLTi2QH4b8deCr8KFu4nQGEmoUBlWgEKszpSkFD19IX65wwAfrvI7tQLvOp6Y5rc6ztstbcaa1YWoCKKtOKa6PrzWgRirB997mNSudYHMF9Nm1NKVsYVkqRY-kSsMMRToupZ_AK2Quc.mw-X2rX_UKDcz1lozmi8NRnzZfirujXhAiwE0oaLIak&dib_tag=se&keywords=anarchie+buch&qid=1792160634&sprefix=anarchie+buch%2Cspecialty-aps%2C180&sr=8-1&linkCode=ll2&tag=hmiertzsch-21&linkId=9ded4ab67eede7440005cba1720d406e&ref_=as_li_ss_tl",
@@ -197,7 +197,7 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Von welchem auf welchen Preis hob sich laut Britannica von 1911 der Pfefferpreis je Pfund?",
+          "frage": "Von welchem auf welchen Preis hoben die Niederländer den Pfefferpreis je Pfund an?",
           "beleg": "had raised the price of pepper from 3s. to 8s. per ℔",
           "belegDe": "hatten den Pfefferpreis von 3 auf 8 Schilling je Pfund angehoben",
           "optionen": [
@@ -209,17 +209,17 @@
             {
               "text": "Von 3 auf 8 Schilling",
               "ok": true,
-              "fb": "Richtig: So steht es in der Encyclopaedia Britannica von 1911."
+              "fb": "Richtig: Die Niederländer hoben den Pfefferpreis von 3 auf 8 Schilling je Pfund an."
             },
             {
               "text": "Von 1 auf 2 Schilling",
               "ok": false,
-              "fb": "Beide Zahlen weichen ab; genannt werden 3 und 8 Schilling."
+              "fb": "Beide Zahlen weichen ab; der Preis stieg von 3 auf 8 Schilling."
             },
             {
               "text": "Von 3 auf 30 Schilling",
               "ok": false,
-              "fb": "Der Anstieg war kleiner; genannt werden 3 und 8 Schilling."
+              "fb": "Der Anstieg war kleiner; der Preis stieg von 3 auf 8 Schilling."
             }
           ]
         },
@@ -232,50 +232,50 @@
             {
               "text": "Der Preis fällt, weil der Anbieter mehr verkaufen und Kunden halten will",
               "ok": false,
-              "fb": "Die Quelle nennt für den Pfeffer unter dem Monopol eine Preiserhöhung, keinen Preisrückgang."
+              "fb": "Falsch: Unter dem praktischen Monopol der Niederländer stieg der Pfefferpreis, er fiel nicht."
             },
             {
               "text": "Nichts, denn auch ein Monopol hat keinerlei Einfluss auf die Preise",
               "ok": false,
-              "fb": "Die Quelle zeigt das Gegenteil: Unter dem Monopol stieg der Pfefferpreis."
+              "fb": "Falsch: Ein Monopol beeinflusst den Preis; unter dem Monopol stieg der Pfefferpreis."
             },
             {
               "text": "Der Anbieter kann den Preis anheben, wie beim Pfeffer von 3 auf 8 Schilling",
               "ok": true,
-              "fb": "Richtig: Unter ihrem praktischen Monopol hoben die Niederländer laut Quelle den Pfefferpreis an."
+              "fb": "Richtig: Unter ihrem praktischen Monopol hoben die Niederländer den Pfefferpreis an."
             },
             {
               "text": "Er erhält vom Anbieter automatisch einen Mengenrabatt auf jede Lieferung",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird die Preiserhöhung."
+              "fb": "Falsch: Unter dem Monopol kam es zur Preiserhöhung, nicht zu einem Mengenrabatt."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Was war laut Britannica von 1911 der Anlass, die englische East India Company zu gründen?",
+          "frage": "Was war der Anlass, die englische East India Company zu gründen?",
           "beleg": "who had obtained a practical monopoly of the trade with the Spice Islands",
           "belegDe": "die ein praktisches Monopol auf den Handel mit den Gewürzinseln erlangt hatten",
           "optionen": [
             {
               "text": "Der Wunsch der Krone, in Indien möglichst rasch eigene Gebiete zu erobern und zu halten",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird der Wettbewerb mit den Niederländern."
+              "fb": "Falsch: Anlass war der Wettbewerb mit den niederländischen Kaufleuten."
             },
             {
               "text": "Ein staatliches Importverbot für Pfeffer und andere Gewürze, das Händler zur Gründung zwang",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird der Wettbewerb mit den Niederländern."
+              "fb": "Falsch: Anlass war der Wettbewerb mit den niederländischen Kaufleuten."
             },
             {
               "text": "Eine schwere Missernte in England, die Händler zu neuen Handelswegen zwang",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird der Wettbewerb mit den Niederländern."
+              "fb": "Falsch: Anlass war der Wettbewerb mit den niederländischen Kaufleuten."
             },
             {
               "text": "Der Wettbewerb mit niederländischen Kaufleuten, die den Pfefferhandel beherrschten",
               "ok": true,
-              "fb": "Richtig: Die Quelle nennt die Konkurrenz zu den niederländischen Kaufleuten mit ihrem praktischen Monopol."
+              "fb": "Richtig: Die englische Company entstand, um mit den niederländischen Kaufleuten und ihrem praktischen Monopol zu konkurrieren."
             }
           ]
         }
@@ -302,22 +302,22 @@
             {
               "text": "Elisabeth I.",
               "ok": true,
-              "fb": "Richtig: Die World History Encyclopedia nennt Elisabeth I. von England (Regierungszeit 1558–1603) als Verleiherin der Charter."
+              "fb": "Richtig: Elisabeth I. von England (Regierungszeit 1558–1603) verlieh die Charter."
             },
             {
               "text": "Maria I.",
               "ok": false,
-              "fb": "Maria I. nennt die Quelle nicht; die Charter von 1600 stammt laut World History Encyclopedia von Elisabeth I."
+              "fb": "Falsch: Die Charter von 1600 stammt von Elisabeth I."
             },
             {
               "text": "Viktoria",
               "ok": false,
-              "fb": "Viktoria wird in der Quelle nicht genannt; verliehen hat die Charter Elisabeth I."
+              "fb": "Falsch: Verliehen hat die Charter Elisabeth I."
             },
             {
               "text": "Anne",
               "ok": false,
-              "fb": "Anne wird in der Quelle nicht genannt; die Charter wurde von Elisabeth I. verliehen."
+              "fb": "Falsch: Die Charter wurde von Elisabeth I. verliehen."
             }
           ]
         },
@@ -330,22 +330,22 @@
             {
               "text": "Er darf frei handeln, weil das Monopol nur für einzelne Gewürze und Seide galt",
               "ok": false,
-              "fb": "Die Quelle spricht vom gesamten Handel östlich des Kaps, nicht von einzelnen Waren."
+              "fb": "Falsch: Das Monopol galt für den gesamten Handel östlich des Kaps, nicht für einzelne Waren."
             },
             {
               "text": "Er darf nicht frei handeln, denn das Alleinrecht liegt bei der Company",
               "ok": true,
-              "fb": "Richtig: Das Monopol galt laut World History Encyclopedia für den gesamten Handel östlich des Kaps der Guten Hoffnung."
+              "fb": "Richtig: Das Monopol galt für den gesamten Handel östlich des Kaps der Guten Hoffnung."
             },
             {
               "text": "Er darf handeln, wenn er zuvor in Indien selbst Aktien erworben hat",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; das Monopol galt für den gesamten Handel."
+              "fb": "Falsch: Das Monopol galt für den gesamten Handel östlich des Kaps der Guten Hoffnung."
             },
             {
               "text": "Er darf handeln, solange er seinen Sitz außerhalb von London nimmt",
               "ok": false,
-              "fb": "Die Quelle nennt eine räumliche Grenze (östlich des Kaps), keine Beschränkung auf London."
+              "fb": "Falsch: Die Grenze des Monopols war räumlich (östlich des Kaps), nicht auf London beschränkt."
             }
           ]
         },
@@ -358,22 +358,22 @@
             {
               "text": "Die Händler vereinbarten das Monopol untereinander, die Krone beurkundete es nur",
               "ok": false,
-              "fb": "Laut World History Encyclopedia verlieh die Charter das Recht; von einer Vereinbarung der Händler untereinander steht dort nichts."
+              "fb": "Falsch: Das Alleinrecht beruhte auf einem Rechtsakt der Krone, nicht auf einer Vereinbarung der Händler."
             },
             {
               "text": "Das Parlament beschloss ein Gesetz, das die Händler zur Gründung verpflichtete",
               "ok": false,
-              "fb": "Die Quelle nennt eine königliche Charter, kein Parlamentsgesetz."
+              "fb": "Falsch: Die Company entstand durch eine königliche Charter, nicht durch ein Parlamentsgesetz."
             },
             {
               "text": "Die Krone schuf die Gesellschaft per Rechtsakt und verlieh ihr das Alleinrecht selbst",
               "ok": true,
-              "fb": "Richtig: Laut Quelle schuf eine königliche Charter die Company und gewährte das ausschließliche Handelsrecht."
+              "fb": "Richtig: Eine königliche Charter schuf die Company und gewährte ihr das ausschließliche Handelsrecht."
             },
             {
               "text": "Die Company gehörte der Krone und wurde von Hofbeamten geführt",
               "ok": false,
-              "fb": "Die Quelle beschreibt eine Joint-Stock-Gesellschaft, keine Behörde der Krone."
+              "fb": "Falsch: Die Company war eine Joint-Stock-Gesellschaft, keine Behörde der Krone."
             }
           ]
         }
@@ -400,22 +400,22 @@
             {
               "text": "12 Anteilseigner, 7.200 Pfund",
               "ok": false,
-              "fb": "Beide Zahlen sind zu klein; die Quelle nennt 125 Anteilseigner und 72.000 Pfund."
+              "fb": "Beide Zahlen sind zu klein; die Britannica von 1911 nennt 125 Anteilseigner und 72.000 Pfund."
             },
             {
               "text": "1.250 Anteilseigner, 720.000 Pfund",
               "ok": false,
-              "fb": "Beide Zahlen sind zu groß; die Quelle nennt 125 Anteilseigner und 72.000 Pfund."
+              "fb": "Beide Zahlen sind zu groß; die Britannica von 1911 nennt 125 Anteilseigner und 72.000 Pfund."
             },
             {
               "text": "25 Anteilseigner, 72 Millionen Pfund",
               "ok": false,
-              "fb": "Weder Zahl der Anteilseigner noch Summe stimmen; genannt werden 125 Anteilseigner und 72.000 Pfund."
+              "fb": "Weder Zahl der Anteilseigner noch Summe stimmen; die Britannica von 1911 nennt 125 Anteilseigner und 72.000 Pfund."
             },
             {
               "text": "125 Anteilseigner, 72.000 Pfund",
               "ok": true,
-              "fb": "Richtig: So steht es in der Encyclopaedia Britannica von 1911."
+              "fb": "Richtig: Die Britannica von 1911 nennt 125 Anteilseigner und ein Kapital von 72.000 Pfund."
             }
           ]
         },
@@ -428,22 +428,22 @@
             {
               "text": "Sir Thomas Smythe",
               "ok": true,
-              "fb": "Richtig: Die Encyclopaedia Britannica von 1911 nennt ihn als ersten Gouverneur."
+              "fb": "Richtig: Sir Thomas Smythe war der erste Gouverneur der East India Company."
             },
             {
               "text": "Robert Clive",
               "ok": false,
-              "fb": "Robert Clive wird in der Quelle an dieser Stelle nicht genannt; erster Gouverneur war Sir Thomas Smythe."
+              "fb": "Falsch: Erster Gouverneur war Sir Thomas Smythe, nicht Robert Clive."
             },
             {
               "text": "Sir Walter Raleigh",
               "ok": false,
-              "fb": "Raleigh wird in der Quelle nicht als Gouverneur genannt; es war Sir Thomas Smythe."
+              "fb": "Falsch: Nicht Sir Walter Raleigh, sondern Sir Thomas Smythe war der erste Gouverneur."
             },
             {
               "text": "Lord Burghley",
               "ok": false,
-              "fb": "Lord Burghley wird in der Quelle nicht als Gouverneur genannt; es war Sir Thomas Smythe."
+              "fb": "Falsch: Nicht Lord Burghley, sondern Sir Thomas Smythe war der erste Gouverneur."
             }
           ]
         }
@@ -470,22 +470,22 @@
             {
               "text": "Am 31. Dezember 1600",
               "ok": false,
-              "fb": "Dieses Datum nennt die Quelle nicht für die VOC; die VOC entstand am 20. März 1602."
+              "fb": "Falsch: Die VOC entstand am 20. März 1602."
             },
             {
               "text": "Am 20. März 1602",
               "ok": true,
-              "fb": "Richtig: So steht es bei Wikipedia."
+              "fb": "Richtig: Die Generalstaaten gründeten die VOC am 20. März 1602, indem sie bestehende Gesellschaften zusammenlegten."
             },
             {
               "text": "Am 1. Mai 1555",
               "ok": false,
-              "fb": "Dieses Datum nennt die Quelle nicht; die VOC entstand am 20. März 1602."
+              "fb": "Falsch: Die VOC entstand am 20. März 1602."
             },
             {
               "text": "Am 4. Juli 1648",
               "ok": false,
-              "fb": "Dieses Datum nennt die Quelle nicht; die VOC entstand am 20. März 1602."
+              "fb": "Falsch: Die VOC entstand am 20. März 1602."
             }
           ]
         },
@@ -498,50 +498,50 @@
             {
               "text": "Mitglieder der Generalstaaten und deren Familien",
               "ok": false,
-              "fb": "Die Quelle nennt jeden Bürger, nicht nur Mitglieder der Generalstaaten."
+              "fb": "Falsch: Anteile konnte jeder Bürger der Republik kaufen, nicht nur Mitglieder der Generalstaaten."
             },
             {
               "text": "Adlige mit Landbesitz in den Provinzen",
               "ok": false,
-              "fb": "Von einer Beschränkung auf Adlige steht in der Quelle nichts; genannt wird jeder Bürger."
+              "fb": "Falsch: Anteile konnte jeder Bürger der Republik kaufen, ohne Beschränkung auf Adlige."
             },
             {
               "text": "Jeder Bürger der Niederländischen Republik",
               "ok": true,
-              "fb": "Richtig: Laut Wikipedia stand der Kauf von Anteilen jedem Bürger der Republik offen."
+              "fb": "Richtig: Der Kauf von Anteilen stand jedem Bürger der Republik offen."
             },
             {
               "text": "Nur Kaufleute aus Amsterdam und Middelburg",
               "ok": false,
-              "fb": "Von einer Beschränkung auf Amsterdamer Kaufleute steht in der Quelle nichts; genannt wird jeder Bürger."
+              "fb": "Falsch: Anteile konnte jeder Bürger der Republik kaufen, ohne Beschränkung auf Kaufleute aus Amsterdam und Middelburg."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Warum nennt Wikipedia die VOC „eine der ersten“ und nicht „die erste“ Joint-Stock-Gesellschaft?",
+          "frage": "Warum gilt die VOC nur als „eine der ersten“ und nicht als „die erste“ Joint-Stock-Gesellschaft?",
           "beleg": "one of the first joint-stock companies in the world",
           "belegDe": "eine der ersten Joint-Stock-Gesellschaften der Welt",
           "optionen": [
             {
               "text": "Weil die VOC ihre Anteile nie an Außenstehende ausgegeben und nur intern gehalten hat",
               "ok": false,
-              "fb": "Das Gegenteil steht in der Quelle: Anteile konnte jeder Bürger der Republik kaufen."
+              "fb": "Falsch: Das Gegenteil gilt: Anteile konnte jeder Bürger der Republik kaufen."
             },
             {
               "text": "Weil die Generalstaaten die Bezeichnung „erste“ für die VOC ausdrücklich verboten haben",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Der Grund ist, dass die englische Company schon am 31. Dezember 1600 als Joint-Stock-Gesellschaft geschaffen wurde, die VOC erst 1602."
             },
             {
               "text": "Weil die VOC erst im Jahr 1700 gegründet wurde und deshalb gar nicht früh war",
               "ok": false,
-              "fb": "Die Quelle nennt den 20. März 1602 als Gründungsdatum."
+              "fb": "Falsch: Die VOC wurde am 20. März 1602 gegründet, nicht erst 1700."
             },
             {
               "text": "Weil die englische Company schon 1600 als Joint-Stock-Gesellschaft geschaffen wurde",
               "ok": true,
-              "fb": "Richtig: Die World History Encyclopedia nennt für die englische Company den 31. Dezember 1600, zwei Jahre vor der VOC. Die Folgerung zur Formulierung ist die Lesart dieser Karte."
+              "fb": "Richtig: Die englische Company wurde am 31. Dezember 1600 geschaffen, zwei Jahre vor der VOC. Die Folgerung zur Formulierung ist die Lesart dieser Karte."
             }
           ]
         }
@@ -568,22 +568,22 @@
             {
               "text": "Fünf",
               "ok": true,
-              "fb": "Richtig: Karl II. gewährte der Company laut Britannica von 1911 fünf wichtige Charters."
+              "fb": "Richtig: Karl II. gewährte der Company fünf wichtige Charters."
             },
             {
               "text": "Eine",
               "ok": false,
-              "fb": "Die Britannica von 1911 nennt fünf wichtige Charters, nicht eine."
+              "fb": "Falsch: Karl II. gewährte fünf wichtige Charters, nicht eine."
             },
             {
               "text": "Drei",
               "ok": false,
-              "fb": "Die Britannica von 1911 nennt fünf wichtige Charters, nicht drei."
+              "fb": "Falsch: Karl II. gewährte fünf wichtige Charters, nicht drei."
             },
             {
               "text": "Zehn",
               "ok": false,
-              "fb": "Die Britannica von 1911 nennt fünf wichtige Charters, nicht zehn."
+              "fb": "Falsch: Karl II. gewährte fünf wichtige Charters, nicht zehn."
             }
           ]
         },
@@ -596,22 +596,22 @@
             {
               "text": "Auf Grund eines Beschlusses des Mogulkaisers in Delhi",
               "ok": false,
-              "fb": "Die Quelle nennt die Charters Karls II. als Grundlage, nicht einen Beschluss des Kaisers."
+              "fb": "Falsch: Grundlage sind die Charters Karls II., nicht ein Beschluss des Kaisers."
             },
             {
               "text": "Auf der Grundlage der Rechte aus den Charters Karls II.",
               "ok": true,
-              "fb": "Richtig: Das Recht, Bündnisse zu schließen, gehört laut Britannica von 1911 zu den Rechten aus Karls Charters."
+              "fb": "Richtig: Das Recht, Bündnisse zu schließen, gehört zu den Rechten aus den Charters Karls II."
             },
             {
               "text": "Auf Grund einer Erlaubnis der niederländischen Generalstaaten",
               "ok": false,
-              "fb": "Die Generalstaaten spielen in der Quelle keine Rolle; genannt werden die Charters Karls II."
+              "fb": "Falsch: Grundlage sind die Charters Karls II., nicht eine Erlaubnis der niederländischen Generalstaaten."
             },
             {
               "text": "Auf Grund des Rechts jedes englischen Kaufmanns, Verträge zu schließen",
               "ok": false,
-              "fb": "Die Quelle bindet das Recht an die Company und ihre Charters, nicht an Kaufleute allgemein."
+              "fb": "Falsch: Das Recht ist an die Company und ihre Charters gebunden, nicht an Kaufleute allgemein."
             }
           ]
         },
@@ -624,22 +624,22 @@
             {
               "text": "Sie betreffen vor allem Preise, Handelsmengen und Lieferzeiten",
               "ok": false,
-              "fb": "Die genannten Rechte gehen über Preise und Mengen hinaus; sie betreffen Gebiete, Münzen, Truppen und Gerichtsbarkeit."
+              "fb": "Die Rechte aus Karls Charters gehen über Preise und Mengen hinaus; sie betreffen Gebiete, Münzen, Truppen und Gerichtsbarkeit."
             },
             {
               "text": "Sie erlauben den Handel mit einer größeren Zahl von Waren aus mehr Ländern",
               "ok": false,
-              "fb": "Von zusätzlichen Waren steht in der Quelle nichts; genannt werden Gebiete, Münzen, Truppen und Gerichtsbarkeit."
+              "fb": "Falsch: Die Rechte betreffen Gebiete, Münzen, Truppen und Gerichtsbarkeit, nicht zusätzliche Waren."
             },
             {
               "text": "Sie betreffen Gebiet, Geld, Militär und Gericht, nicht nur den Handel",
               "ok": true,
-              "fb": "Richtig: Die Quelle nennt Gebiete, Münzen, Festungen und Truppen, Krieg und Frieden sowie Gerichtsbarkeit. Dass das staatsähnliche Befugnisse sind, ist die Einordnung dieser Karte."
+              "fb": "Richtig: Die Rechte umfassen Gebiete, Münzen, Festungen und Truppen, Krieg und Frieden sowie Gerichtsbarkeit. Dass das staatsähnliche Befugnisse sind, ist die Einordnung dieser Karte."
             },
             {
               "text": "Sie gelten für Schiffe, Besatzungen und Ladungen auf hoher See",
               "ok": false,
-              "fb": "Die Quelle nennt Festungen, Gebiete und Gerichtsbarkeit, nicht nur Schiffe."
+              "fb": "Falsch: Die Rechte betreffen Festungen, Gebiete und Gerichtsbarkeit, nicht nur Schiffe."
             }
           ]
         }
@@ -666,78 +666,78 @@
             {
               "text": "Rohe Schafwolle aus den Highlands",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt werden bedruckte Kattune."
+              "fb": "Falsch: Das Gesetz von 1700 betraf bedruckte Kattune."
             },
             {
               "text": "Rohseide aus China und Persien",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt werden bedruckte Kattune."
+              "fb": "Falsch: Das Gesetz von 1700 betraf bedruckte Kattune."
             },
             {
               "text": "Leinenstoffe aus irischer Produktion",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt werden bedruckte Kattune."
+              "fb": "Falsch: Das Gesetz von 1700 betraf bedruckte Kattune."
             },
             {
               "text": "Bedruckte Baumwollstoffe (Kattun)",
               "ok": true,
-              "fb": "Richtig: Das Gesetz von 1700 betraf laut Wikipedia bedruckte Kattune."
+              "fb": "Richtig: Das Gesetz von 1700 betraf bedruckte Kattune."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Ein Land verbietet ausländische Stoffe zum Schutz eigener Hersteller. Wie nennt Wikipedia das hier?",
+          "frage": "Ein Land verbietet ausländische Stoffe zum Schutz eigener Hersteller. Wie lässt sich das einordnen?",
           "beleg": "It was a form of economic protectionism",
           "belegDe": "Es war eine Form des wirtschaftlichen Protektionismus.",
           "optionen": [
             {
               "text": "Eine Form des wirtschaftlichen Protektionismus",
               "ok": true,
-              "fb": "Richtig: So bezeichnet Wikipedia die Calico Acts."
+              "fb": "Richtig: Die Calico Acts waren eine Form des wirtschaftlichen Protektionismus."
             },
             {
               "text": "Eine Form des völlig unbeschränkten Freihandels",
               "ok": false,
-              "fb": "Das Gegenteil: Die Quelle spricht von Protektionismus."
+              "fb": "Falsch: Das Gegenteil; die Calico Acts waren eine Form des wirtschaftlichen Protektionismus."
             },
             {
               "text": "Eine Steuerreform zugunsten der Händler",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird Protektionismus."
+              "fb": "Falsch: Die Calico Acts waren eine Form des wirtschaftlichen Protektionismus."
             },
             {
               "text": "Eine Form staatlicher Entwicklungshilfe",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird Protektionismus."
+              "fb": "Falsch: Die Calico Acts waren eine Form des wirtschaftlichen Protektionismus."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Was folgte laut Wikipedia auf die Aufhebung der Calico Acts im Jahr 1774?",
+          "frage": "Was folgte auf die Aufhebung der Calico Acts im Jahr 1774?",
           "beleg": "a wave of investment in mill based cotton spinning and production",
           "belegDe": "eine Investitionswelle in Mühlen-basierte Baumwollspinnerei und -produktion",
           "optionen": [
             {
               "text": "Ein vollständiger Zusammenbruch der englischen Textilindustrie",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird eine Investitionswelle."
+              "fb": "Falsch: Es folgte eine Investitionswelle in mühlenbasierte Spinnerei und Produktion."
             },
             {
               "text": "Eine Investitionswelle in mechanische Baumwollspinnerei",
               "ok": true,
-              "fb": "Richtig: Wikipedia nennt eine Investitionswelle in mühlenbasierte Spinnerei und Produktion."
+              "fb": "Richtig: Nach der Aufhebung folgte eine Investitionswelle in mühlenbasierte Spinnerei und Produktion."
             },
             {
               "text": "Ein allgemeines Verbot sämtlicher Wollstoffe aus England",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird eine Investitionswelle."
+              "fb": "Falsch: Es folgte eine Investitionswelle in mühlenbasierte Spinnerei und Produktion."
             },
             {
               "text": "Eine Verdopplung der Einfuhrzölle auf Rohbaumwolle und Stoffe",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird eine Investitionswelle."
+              "fb": "Falsch: Es folgte eine Investitionswelle in mühlenbasierte Spinnerei und Produktion."
             }
           ]
         }
@@ -747,7 +747,7 @@
       "slug": "eic-diwani-1765",
       "kurz": "Die Diwani von 1765",
       "titel": "Die Diwani von 1765: Die Company zieht in Bengalen, Bihar und Orissa die Landsteuer ein",
-      "karte": "Nach der Schlacht von Buxar (1764/65) übertrug der Mogulkaiser Shah Alam II. der East India Company die Diwani: das Recht, die Landsteuer in Bengalen, Bihar und Orissa einzuziehen. Die Zeitleiste der Quelle nennt den 12. August 1765. Die Quelle nennt das einen großen Schritt: Er sicherte der Company reichlich Mittel, um Händler, Stützpunkte, Armeen und Schiffe auszubauen und zu schützen.",
+      "karte": "Nach der Schlacht von Buxar (1764/65) übertrug der Mogulkaiser Shah Alam II. der East India Company die Diwani: das Recht, die Landsteuer in Bengalen, Bihar und Orissa einzuziehen. Die Zeitleiste der World History Encyclopedia nennt den 12. August 1765. Die World History Encyclopedia nennt das einen großen Schritt: Er sicherte der Company reichlich Mittel, um Händler, Stützpunkte, Armeen und Schiffe auszubauen und zu schützen.",
       "quelle": {
         "titel": "East India Company (Mark Cartwright)",
         "url": "https://www.worldhistory.org/East_India_Company/",
@@ -764,7 +764,7 @@
             {
               "text": "Münzen im Namen des Kaisers prägen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; verliehen wurde das Recht zum Einzug der Landsteuer."
+              "fb": "Falsch: Verliehen wurde das Recht, die Landsteuer einzuziehen."
             },
             {
               "text": "Den Mogulkaiser absetzen",
@@ -774,12 +774,12 @@
             {
               "text": "Abgaben auf Grund und Boden einsammeln",
               "ok": true,
-              "fb": "Richtig: Verliehen wurde laut World History Encyclopedia das Recht, die Landsteuer einzuziehen."
+              "fb": "Richtig: Verliehen wurde das Recht, die Landsteuer einzuziehen."
             },
             {
               "text": "Zölle auf den Seehandel festsetzen",
               "ok": false,
-              "fb": "Die Quelle nennt die Landsteuer, nicht Seezölle."
+              "fb": "Falsch: Verliehen wurde das Recht auf die Landsteuer, nicht auf Seezölle."
             }
           ]
         },
@@ -792,17 +792,17 @@
             {
               "text": "An den Gouverneur der Krone in London",
               "ok": false,
-              "fb": "Die Quelle nennt die Company als Inhaberin des Einzugsrechts, nicht einen Gouverneur der Krone."
+              "fb": "Falsch: Die Company besaß das Recht, die Landsteuer einzuziehen, nicht ein Gouverneur der Krone."
             },
             {
               "text": "An das Parlament in London",
               "ok": false,
-              "fb": "Die Quelle nennt die Company als Inhaberin des Einzugsrechts, nicht das Parlament."
+              "fb": "Falsch: Die Company besaß das Einzugsrecht, nicht das Parlament."
             },
             {
               "text": "An die Handelskammer von Kalkutta",
               "ok": false,
-              "fb": "Eine Handelskammer kommt in der Quelle nicht vor; das Recht erhielt die Company."
+              "fb": "Falsch: Das Recht zum Einzug erhielt die Company, nicht eine Handelskammer."
             },
             {
               "text": "An die East India Company",
@@ -813,29 +813,29 @@
         },
         {
           "n": 3,
-          "frage": "Welche Folge hatte die Diwani laut World History Encyclopedia für die Mittel der Company?",
+          "frage": "Welche Folge hatte die Diwani von 1765 für die Mittel der East India Company?",
           "beleg": "This was a major step and ensured the company had vast resources to expand and protect its traders, bases, armies, and ships.",
           "belegDe": "Das war ein großer Schritt und sicherte der Company reichlich Mittel, um Händler, Stützpunkte, Armeen und Schiffe auszubauen und zu schützen.",
           "optionen": [
             {
               "text": "Sie sicherte ihr reichlich Mittel für den Ausbau von Handel, Armeen und Schiffen",
               "ok": true,
-              "fb": "Richtig: Genau das nennt die Quelle als Folge des Schritts."
+              "fb": "Richtig: Die Diwani war ein großer Schritt und sicherte der Company reichlich Mittel, um Händler, Stützpunkte, Armeen und Schiffe auszubauen und zu schützen."
             },
             {
               "text": "Sie nahm der Company ihre Mittel, weil der Kaiser alle Einnahmen für sich beanspruchte",
               "ok": false,
-              "fb": "Die Quelle nennt das Gegenteil: reichliche Mittel für die Company."
+              "fb": "Falsch: Das Gegenteil: Die Diwani sicherte der Company reichlich Mittel."
             },
             {
               "text": "Sie änderte an den Mitteln der Company nichts, nur an ihren Zuständigkeiten",
               "ok": false,
-              "fb": "Die Quelle nennt den Schritt einen großen, der der Company reichlich Mittel sicherte."
+              "fb": "Falsch: Die Diwani war ein großer Schritt, der der Company reichlich Mittel sicherte."
             },
             {
               "text": "Sie machte die Company von regelmäßigen Zuschüssen der Krone in London abhängig",
               "ok": false,
-              "fb": "Von Zuschüssen der Krone steht in der Quelle nichts; genannt werden reichliche eigene Mittel."
+              "fb": "Falsch: Die Diwani sicherte der Company reichlich Mittel für ihren Ausbau."
             }
           ]
         }
@@ -862,22 +862,22 @@
             {
               "text": "Etwa 25.000 Mann",
               "ok": false,
-              "fb": "Zu klein; das National Army Museum nennt 250.000 Mann."
+              "fb": "Zu klein; die Armee zählte Anfang des 19. Jahrhunderts 250.000 Mann."
             },
             {
               "text": "Etwa 250.000 Mann",
               "ok": true,
-              "fb": "Richtig: So nennt es das National Army Museum für das frühe 19. Jahrhundert."
+              "fb": "Richtig: Anfang des 19. Jahrhunderts zählte die Company-Armee 250.000 Mann, mehr als die vieler Staaten."
             },
             {
               "text": "Etwa 2,5 Millionen Mann",
               "ok": false,
-              "fb": "Zu groß; das National Army Museum nennt 250.000 Mann."
+              "fb": "Zu groß; die Armee zählte Anfang des 19. Jahrhunderts 250.000 Mann."
             },
             {
               "text": "Etwa 60.000 Mann",
               "ok": false,
-              "fb": "Zu klein; das National Army Museum nennt 250.000 Mann."
+              "fb": "Zu klein; die Armee zählte Anfang des 19. Jahrhunderts 250.000 Mann."
             }
           ]
         },
@@ -890,22 +890,22 @@
             {
               "text": "Britische Linientruppen der Krone",
               "ok": false,
-              "fb": "Die große Mehrheit war laut National Army Museum indisch, nicht britisch."
+              "fb": "Falsch: Die große Mehrheit der Company-Soldaten war indisch, nicht britisch."
             },
             {
               "text": "Söldner vom europäischen Festland",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; die große Mehrheit war indisch."
+              "fb": "Falsch: Die große Mehrheit der Company-Soldaten war indisch."
             },
             {
               "text": "Soldaten aus Indien",
               "ok": true,
-              "fb": "Richtig: Laut National Army Museum war die große Mehrheit der Company-Soldaten indisch."
+              "fb": "Richtig: Die große Mehrheit der Company-Soldaten war indisch."
             },
             {
               "text": "Verschleppte aus Afrika",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; die große Mehrheit war indisch."
+              "fb": "Falsch: Die große Mehrheit der Company-Soldaten war indisch."
             }
           ]
         }
@@ -925,29 +925,29 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Welcher Bevölkerungsanteil Bengalens starb 1769/70 laut verbreiteter Schätzung?",
+          "frage": "Welcher Bevölkerungsanteil Bengalens starb 1769/70 nach verbreiteter Schätzung?",
           "beleg": "It is thought that one third of Bengal's population, or a staggering 10 million people, perished.",
           "belegDe": "Man nimmt an, dass ein Drittel der Bevölkerung Bengalens, erschütternde 10 Millionen Menschen, starb.",
           "optionen": [
             {
               "text": "Etwa ein Zehntel",
               "ok": false,
-              "fb": "Zu wenig; das Kapitel nennt ein Drittel der Bevölkerung."
+              "fb": "Zu wenig; nach verbreiteter Schätzung starb ein Drittel der Bevölkerung."
             },
             {
               "text": "Etwa ein Zwanzigstel",
               "ok": false,
-              "fb": "Zu wenig; das Kapitel nennt ein Drittel der Bevölkerung."
+              "fb": "Zu wenig; nach verbreiteter Schätzung starb ein Drittel der Bevölkerung."
             },
             {
               "text": "Etwa die Hälfte",
               "ok": false,
-              "fb": "Zu viel; das Kapitel nennt ein Drittel der Bevölkerung."
+              "fb": "Zu viel; nach verbreiteter Schätzung starb ein Drittel der Bevölkerung."
             },
             {
               "text": "Etwa ein Drittel",
               "ok": true,
-              "fb": "Richtig: Das Kapitel nennt ein Drittel der Bevölkerung, rund 10 Millionen Menschen, als verbreitete Annahme."
+              "fb": "Richtig: Nach verbreiteter Annahme starb ein Drittel der Bevölkerung, rund 10 Millionen Menschen."
             }
           ]
         },
@@ -960,22 +960,22 @@
             {
               "text": "Ungebremste Profitmacherei mit Getreide",
               "ok": true,
-              "fb": "Richtig: Das Kapitel nennt ungebremste Profitmacherei auf den Getreidemärkten."
+              "fb": "Richtig: Ungebremste Profitmacherei auf den Getreidemärkten verschärfte die Not."
             },
             {
               "text": "Ein Ausfuhrverbot für Getreide",
               "ok": false,
-              "fb": "Davon steht im Kapitel nichts; genannt wird Profitmacherei auf den Märkten."
+              "fb": "Falsch: Verschärft wurde die Not durch ungebremste Profitmacherei auf den Getreidemärkten."
             },
             {
               "text": "Überfüllte Lager, die die Preise drückten",
               "ok": false,
-              "fb": "Das Kapitel nennt das Gegenteil: ungebremste Profitmacherei."
+              "fb": "Falsch: Das Gegenteil: Ungebremste Profitmacherei verschärfte die Not."
             },
             {
               "text": "Kostenlose Getreideverteilung an die Bauern",
               "ok": false,
-              "fb": "Davon steht im Kapitel nichts; genannt wird Profitmacherei auf den Märkten."
+              "fb": "Falsch: Verschärft wurde die Not durch ungebremste Profitmacherei auf den Getreidemärkten."
             }
           ]
         },
@@ -988,22 +988,22 @@
             {
               "text": "Sie wurde mitten in der Krise über Nacht auf das Doppelte angehoben",
               "ok": false,
-              "fb": "Von einer Verdopplung steht im Kapitel nichts; beschrieben wird die starre Durchsetzung."
+              "fb": "Falsch: Die Steuerforderung wurde trotz sinkender Einkommen starr durchgesetzt."
             },
             {
               "text": "Sie blieb starr, obwohl Dürre und Flut die Einkommen schrumpfen ließen",
               "ok": true,
-              "fb": "Richtig: So beschreibt es das Kapitel."
+              "fb": "Richtig: Die Steuerforderung wurde starr durchgesetzt, obwohl Dürre und Flut die Einkommen schrumpfen ließen."
             },
             {
               "text": "Sie betraf nur die wohlhabenden Grundbesitzer und Kaufleute des Landes",
               "ok": false,
-              "fb": "Davon steht im Kapitel nichts; beschrieben wird die starre Durchsetzung bei sinkenden Einkommen."
+              "fb": "Falsch: Die Steuerforderung wurde trotz sinkender Einkommen starr durchgesetzt."
             },
             {
               "text": "Sie musste vollständig in Naturalien statt in Geld geleistet werden",
               "ok": false,
-              "fb": "Davon steht im Kapitel nichts; beschrieben wird die starre Durchsetzung."
+              "fb": "Falsch: Die Steuerforderung wurde trotz sinkender Einkommen starr durchgesetzt."
             }
           ]
         }
@@ -1030,40 +1030,40 @@
             {
               "text": "Weil die Company nachträglich alle Totenlisten vernichtet hat",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt werden fehlende Bevölkerungsdaten."
+              "fb": "Falsch: Der Grund sind fehlende verlässliche Bevölkerungsdaten."
             },
             {
               "text": "Weil die Hungersnot in Wahrheit nur eine einzige Provinz betraf",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt werden fehlende Bevölkerungsdaten."
+              "fb": "Falsch: Der Grund sind fehlende verlässliche Bevölkerungsdaten."
             },
             {
               "text": "Weil 1770 verlässliche Daten über die Bevölkerung fehlten",
               "ok": true,
-              "fb": "Richtig: Wikipedia nennt fehlende demografische Informationen als Grund."
+              "fb": "Richtig: Verlässliche demografische Informationen fehlten 1770."
             },
             {
               "text": "Weil alle Zeitzeugen die Zahl deutlich niedriger angegeben haben",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt werden fehlende Bevölkerungsdaten."
+              "fb": "Falsch: Der Grund sind fehlende verlässliche Bevölkerungsdaten."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Welche überarbeitete Opferzahl der Hungersnot von Bengalen 1770 nennt Wikipedia?",
+          "frage": "Auf wie viele Tote kommt die überarbeitete Schätzung zur Hungersnot in Bengalen 1770?",
           "beleg": "a revised toll of 1.2 million dead (~ 4-5% of the population) was put forward.",
           "belegDe": "eine überarbeitete Schätzung von 1,2 Millionen Toten (etwa 4–5 % der Bevölkerung) wurde vorgelegt.",
           "optionen": [
             {
               "text": "120.000 Tote",
               "ok": false,
-              "fb": "Zu niedrig; genannt wird eine überarbeitete Schätzung von 1,2 Millionen."
+              "fb": "Zu niedrig; die überarbeitete Schätzung liegt bei 1,2 Millionen."
             },
             {
               "text": "12 Millionen Tote",
               "ok": false,
-              "fb": "Zu hoch; genannt wird eine überarbeitete Schätzung von 1,2 Millionen."
+              "fb": "Zu hoch; die überarbeitete Schätzung liegt bei 1,2 Millionen."
             },
             {
               "text": "30 Millionen Tote",
@@ -1073,7 +1073,7 @@
             {
               "text": "1,2 Millionen Tote",
               "ok": true,
-              "fb": "Richtig: Wikipedia nennt 1,2 Millionen, etwa 4–5 % der Bevölkerung."
+              "fb": "Richtig: Die überarbeitete Schätzung kommt auf 1,2 Millionen Tote, etwa 4–5 % der Bevölkerung."
             }
           ]
         },
@@ -1086,22 +1086,22 @@
             {
               "text": "Weil viele Menschen abwanderten statt zu sterben",
               "ok": true,
-              "fb": "Richtig: Wikipedia nennt die Abwanderung der Bauern. Dass das Bevölkerungsrückgänge zu Totenzahlen aufbläht, ist der Schluss dieser Karte."
+              "fb": "Richtig: Es heißt, viele Bauern seien nicht gestorben, sondern in besser gestellte Gebiete abgewandert. Dass das Bevölkerungsrückgänge zu Totenzahlen aufbläht, ist der Schluss dieser Karte."
             },
             {
               "text": "Weil alle Abgewanderten später zurückkehrten",
               "ok": false,
-              "fb": "Von einer Rückkehr steht in der Quelle nichts; genannt wird die Abwanderung."
+              "fb": "Falsch: Es heißt, viele Bauern seien nicht gestorben, sondern in besser gestellte Gebiete abgewandert."
             },
             {
               "text": "Weil Neugeborene doppelt gezählt wurden",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird die Abwanderung."
+              "fb": "Falsch: Es heißt, viele Bauern seien nicht gestorben, sondern in besser gestellte Gebiete abgewandert."
             },
             {
               "text": "Weil die Company die Zahlen absichtlich erhöhte",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird die Abwanderung."
+              "fb": "Falsch: Es heißt, viele Bauern seien nicht gestorben, sondern in besser gestellte Gebiete abgewandert."
             }
           ]
         }
@@ -1128,22 +1128,22 @@
             {
               "text": "Den Verkauf von Aktien der Company",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird die Verlängerung eines Kredits."
+              "fb": "Falsch: Die Bank verweigerte die Verlängerung eines Kredits."
             },
             {
               "text": "Die Verlängerung eines Kredits",
               "ok": true,
-              "fb": "Richtig: So berichtet es American Heritage."
+              "fb": "Richtig: Die Bank verweigerte die Verlängerung des im September aufgenommenen Kredits."
             },
             {
               "text": "Die Lagerung von Tee in ihren Tresoren",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird die Verlängerung eines Kredits."
+              "fb": "Falsch: Die Bank verweigerte die Verlängerung eines Kredits."
             },
             {
               "text": "Die Annahme von Pfund-Münzen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird die Verlängerung eines Kredits."
+              "fb": "Falsch: Die Bank verweigerte die Verlängerung eines Kredits."
             }
           ]
         },
@@ -1156,22 +1156,22 @@
             {
               "text": "Es verbot ihr den Verkauf von Tee in den Kolonien vollständig",
               "ok": false,
-              "fb": "Das Gegenteil steht in der Quelle: Sie durfte den Zwischenhändler ausschalten."
+              "fb": "Falsch: Das Gegenteil: Die Company durfte den Zwischenhändler ausschalten."
             },
             {
               "text": "Es verstaatlichte die Lagerhäuser und übernahm die gesamte Ware",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird das Ausschalten des Zwischenhändlers."
+              "fb": "Falsch: Das Parlament ließ die Company den Zwischenhändler ausschalten."
             },
             {
               "text": "Sie durfte den Zwischenhändler ausschalten und selbst verkaufen",
               "ok": true,
-              "fb": "Richtig: So beschreibt es American Heritage für den Mai 1773."
+              "fb": "Richtig: Im Mai 1773 ließ das Parlament die Company den Zwischenhändler ausschalten."
             },
             {
               "text": "Es erhöhte die Einfuhrzölle auf Tee für alle Händler deutlich",
               "ok": false,
-              "fb": "Laut Quelle wurden der Company bezahlte Zölle erstattet, nicht erhöht."
+              "fb": "Falsch: Der Company wurden bezahlte Zölle erstattet, nicht erhöht."
             }
           ]
         }
@@ -1198,50 +1198,50 @@
             {
               "text": "Das Monopol im Gewürzhandel der Gewürzinseln",
               "ok": false,
-              "fb": "Davon steht in der Quelle zu 1813 nichts; genannt wird der Chinahandel."
+              "fb": "Falsch: Nach dem Gesetz von 1813 blieb ihr das Monopol im Chinahandel."
             },
             {
               "text": "Das Monopol im Handel mit Amerika",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird der Chinahandel."
+              "fb": "Falsch: Nach dem Gesetz von 1813 blieb ihr das Monopol im Chinahandel."
             },
             {
               "text": "Gar kein Monopol mehr",
               "ok": false,
-              "fb": "Das Indienmonopol fiel, das Monopol im Chinahandel blieb laut Quelle bis 1833."
+              "fb": "Falsch: Das Indienmonopol fiel, das Monopol im Chinahandel blieb bis 1833."
             },
             {
               "text": "Das Monopol im Chinahandel",
               "ok": true,
-              "fb": "Richtig: Laut Britannica von 1911 blieb ihr das Monopol im wertvollen Chinahandel."
+              "fb": "Richtig: Das Gesetz schaffte das Indienmonopol ab; das Monopol im wertvollen Chinahandel blieb ihr."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Was war die East India Company nach dem Gesetz von 1833 laut Britannica nur noch?",
+          "frage": "Was war die East India Company nach dem Gesetz von 1833 nur noch?",
           "beleg": "Henceforward the East India Company ceased to be a trading concern and exercised only administrative functions.",
           "belegDe": "Von da an war die East India Company kein Handelsunternehmen mehr und übte nur noch Verwaltungsaufgaben aus.",
           "optionen": [
             {
               "text": "Eine Verwaltung ohne Handelsgeschäft",
               "ok": true,
-              "fb": "Richtig: Die Quelle sagt, sie habe nur noch Verwaltungsaufgaben ausgeübt."
+              "fb": "Richtig: Sie war kein Handelsunternehmen mehr und übte nur noch Verwaltungsaufgaben aus."
             },
             {
               "text": "Ein reines Bankhaus",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt werden Verwaltungsaufgaben."
+              "fb": "Falsch: Sie übte nur noch Verwaltungsaufgaben aus."
             },
             {
               "text": "Eine Reederei für den Chinahandel",
               "ok": false,
-              "fb": "Der Chinahandel war ihr 1833 genommen worden; genannt werden Verwaltungsaufgaben."
+              "fb": "Der Chinahandel war ihr 1833 genommen worden; sie übte nur noch Verwaltungsaufgaben aus."
             },
             {
               "text": "Ein Zusammenschluss von Gewürzhändlern",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt werden Verwaltungsaufgaben."
+              "fb": "Falsch: Sie übte nur noch Verwaltungsaufgaben aus."
             }
           ]
         }
@@ -1261,29 +1261,29 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "In welchem Jahr übernahm die britische Krone laut Wikipedia die direkte Herrschaft von der Company?",
+          "frage": "In welchem Jahr übernahm die britische Krone die direkte Herrschaft von der East India Company?",
           "beleg": "the Government of India Act 1858 led to the British Crown assuming direct control",
           "belegDe": "der Government of India Act von 1858 führte dazu, dass die britische Krone die direkte Kontrolle übernahm",
           "optionen": [
             {
               "text": "1757",
               "ok": false,
-              "fb": "Das Jahr nennt die Quelle für diese Übernahme nicht; genannt wird der Government of India Act von 1858."
+              "fb": "Falsch: Der Government of India Act von 1858 führte zur direkten Herrschaft der Krone."
             },
             {
               "text": "1858",
               "ok": true,
-              "fb": "Richtig: Der Government of India Act von 1858 führte laut Wikipedia zur direkten Herrschaft der Krone."
+              "fb": "Richtig: Der Government of India Act von 1858 führte zur direkten Herrschaft der Krone."
             },
             {
               "text": "1813",
               "ok": false,
-              "fb": "Das Jahr nennt die Quelle für diese Übernahme nicht; genannt wird 1858."
+              "fb": "Falsch: Die Krone übernahm die direkte Herrschaft 1858."
             },
             {
               "text": "1947",
               "ok": false,
-              "fb": "Das Jahr nennt die Quelle für diese Übernahme nicht; genannt wird 1858."
+              "fb": "Falsch: Die Krone übernahm die direkte Herrschaft 1858."
             }
           ]
         },
@@ -1296,22 +1296,22 @@
             {
               "text": "1858, gemeinsam mit der Übernahme durch die Krone",
               "ok": false,
-              "fb": "Die Übernahme war 1858; aufgelöst wurde die Company laut Quelle erst 1874."
+              "fb": "Die Übernahme war 1858; aufgelöst wurde die Company erst 1874."
             },
             {
               "text": "1833, als sie ihr letztes Monopol verlor",
               "ok": false,
-              "fb": "1833 verlor sie das Chinamonopol; aufgelöst wurde sie laut Quelle erst 1874."
+              "fb": "1833 verlor sie das Chinamonopol; aufgelöst wurde sie erst 1874."
             },
             {
               "text": "1874",
               "ok": true,
-              "fb": "Richtig: Laut Wikipedia wurde die Company 1874 aufgelöst."
+              "fb": "Richtig: Die Company wurde 1874 durch den East India Stock Dividend Redemption Act aufgelöst."
             },
             {
               "text": "Sie besteht bis heute unverändert fort",
               "ok": false,
-              "fb": "Die Quelle nennt die Auflösung 1874."
+              "fb": "Falsch: Die Company wurde 1874 aufgelöst."
             }
           ]
         }
