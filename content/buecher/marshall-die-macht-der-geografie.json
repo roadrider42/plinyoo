@@ -10,7 +10,7 @@
   "isbn": "978-3-423-35279-6",
   "leitfrage": "Wer zog die Grenzen, mit denen wir bis heute leben, und warum dort?",
   "einordnung": "Tim Marshall zeigt in zehn Kapiteln, wie die Geografie die Ziele der Weltmächte beeinflusst. Wir nehmen das Buch zum Anlass, einzelne Grenzen und ihre Entstehung mit eigenen Quellen aufzuschlüsseln — als Lernkarten mit Fragen und Belegen.",
-  "kartenIntro": "Die Karten stützen sich auf Quellen außerhalb des Buchs und nennen sie einzeln. Alle 6 kannst du unten durchspielen.",
+  "kartenIntro": "Alle 6 kannst du unten durchspielen.",
   "karten": [
     "Tordesillas 1494",
     "Berliner Konferenz 1884/85",
@@ -19,7 +19,7 @@
     "McMahon-Linie 1914",
     "Radcliffe-Linie 1947"
   ],
-  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen. Die Quellen liegen außerhalb des Buchs.",
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
   "verlagUrl": "https://www.dtv.de/buch/die-macht-der-geografie-35279",
   "leseprobeUrl": "",
   "amazonUrl": "https://link.amazon/B0iTCY3Q5",
@@ -125,17 +125,17 @@
             {
               "text": "370 Leguas westlich der Kapverden",
               "ok": true,
-              "fb": "Richtig: So beschreibt es Wikipedia."
+              "fb": "Richtig: Die Trennlinie verlief 370 Leguas westlich der Kapverden."
             },
             {
               "text": "Entlang des Äquators",
               "ok": false,
-              "fb": "Die Quelle nennt einen Meridian, also eine Nord-Süd-Linie, nicht den Äquator."
+              "fb": "Falsch: Die Trennlinie war ein Meridian, also eine Nord-Süd-Linie, nicht der Äquator."
             },
             {
               "text": "Am Kap der Guten Hoffnung",
               "ok": false,
-              "fb": "Das Kap ist in der Quelle nicht der Bezugspunkt; genannt werden die Kapverden."
+              "fb": "Falsch: Bezugspunkt der Trennlinie waren die Kapverden, nicht das Kap der Guten Hoffnung."
             },
             {
               "text": "370 Leguas östlich der Azoren",
@@ -146,19 +146,19 @@
         },
         {
           "n": 2,
-          "frage": "Wem sollten laut Vertrag die Länder östlich der Linie gehören?",
+          "frage": "Wem sollten nach dem Vertrag von Tordesillas die Länder östlich der Trennlinie gehören?",
           "beleg": "The lands to the east would belong to Portugal and the lands to the west to Castile",
           "belegDe": "Die Länder im Osten sollten Portugal gehören und die im Westen Kastilien",
           "optionen": [
             {
               "text": "Kastilien",
               "ok": false,
-              "fb": "Kastilien erhielt laut Quelle die Länder westlich der Linie."
+              "fb": "Falsch: Kastilien erhielt die Länder westlich der Linie, Portugal die östlichen."
             },
             {
               "text": "England",
               "ok": false,
-              "fb": "England kommt in dieser Aussage nicht vor; es erkannte den Vertrag nicht an."
+              "fb": "Falsch: England erkannte die Teilung nicht an; die Länder östlich der Linie sollten Portugal gehören."
             },
             {
               "text": "Portugal",
@@ -174,14 +174,14 @@
         },
         {
           "n": 3,
-          "frage": "Wie reagierten England und die Niederlande laut Quelle auf die Teilung?",
+          "frage": "Wie reagierten England und die Niederlande auf die Teilung der Welt im Vertrag von Tordesillas?",
           "beleg": "did not recognize the division of the world between only two Catholic nations brokered by the pope",
           "belegDe": "erkannten die vom Papst vermittelte Teilung der Welt zwischen nur zwei katholischen Nationen nicht an",
           "optionen": [
             {
               "text": "Sie traten dem Vertrag als weitere Parteien bei",
               "ok": false,
-              "fb": "Die Quelle sagt das Gegenteil: Sie erkannten die Teilung nicht an."
+              "fb": "Falsch: England und die Niederlande erkannten die Teilung nicht an."
             },
             {
               "text": "Sie erkannten die Teilung nicht an",
@@ -191,12 +191,12 @@
             {
               "text": "Sie verlangten eine Linie weiter im Westen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; genannt wird die Nichtanerkennung."
+              "fb": "Falsch: England und die Niederlande erkannten die Teilung nicht an."
             },
             {
               "text": "Sie erkannten die Linie nur im Pazifik an",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: England und die Niederlande erkannten die Teilung nicht an."
             }
           ]
         }
@@ -206,7 +206,7 @@
       "slug": "geo-berlin-1884",
       "kurz": "Berliner Konferenz 1884/85",
       "titel": "Berliner Konferenz 1884/85: Afrika wird verteilt, ohne Afrikaner",
-      "karte": "Vom 15. November 1884 bis zum 26. Februar 1885 tagte in Berlin eine Konferenz, zu der Bismarck Vertreter von 13 europäischen Staaten und der USA gerufen hatte. Kein afrikanisches Land war eingeladen. Nach der Quelle ließ sich „effektive Besetzung“ herstellen, indem ein europäischer Staat einen Stützpunkt an der Küste einrichtete.",
+      "karte": "Vom 15. November 1884 bis zum 26. Februar 1885 tagte in Berlin eine Konferenz, zu der Bismarck Vertreter von 13 europäischen Staaten und der USA gerufen hatte. Kein afrikanisches Land war eingeladen. Laut Wikipedia ließ sich „effektive Besetzung“ herstellen, indem ein europäischer Staat einen Stützpunkt an der Küste einrichtete.",
       "quelle": {
         "titel": "Berlin Conference",
         "url": "https://en.wikipedia.org/wiki/Berlin_Conference",
@@ -223,40 +223,40 @@
             {
               "text": "Nur Großbritannien und Frankreich",
               "ok": false,
-              "fb": "Die Quelle nennt 13 europäische Staaten und die USA."
+              "fb": "Falsch: Eingeladen waren 13 europäische Staaten und die USA."
             },
             {
               "text": "Europäische Staaten und afrikanische Herrscher",
               "ok": false,
-              "fb": "Laut Quelle war kein afrikanisches Land eingeladen."
+              "fb": "Falsch: Kein afrikanisches Land war eingeladen."
             },
             {
               "text": "Alle Staaten Europas und Afrikas",
               "ok": false,
-              "fb": "Die Quelle nennt 13 europäische Staaten und die USA, keine afrikanischen."
+              "fb": "Falsch: Eingeladen waren 13 europäische Staaten und die USA, aber kein afrikanisches Land."
             },
             {
               "text": "13 europäische Staaten und die USA",
               "ok": true,
-              "fb": "Richtig: So beschreibt es die Quelle."
+              "fb": "Richtig: Bismarck rief Vertreter von 13 europäischen Staaten und der USA zusammen."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Wie viele afrikanische Länder waren laut Quelle zur Konferenz eingeladen?",
+          "frage": "Wie viele afrikanische Länder waren zur Berliner Konferenz 1884/85 eingeladen?",
           "beleg": "No African countries were invited to the congress.",
           "belegDe": "Kein afrikanisches Land war zu dem Kongress eingeladen.",
           "optionen": [
             {
               "text": "Drei, darunter Äthiopien",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Kein afrikanisches Land war eingeladen."
             },
             {
               "text": "Alle unabhängigen Länder Afrikas",
               "ok": false,
-              "fb": "Die Quelle sagt das Gegenteil."
+              "fb": "Falsch: Kein afrikanisches Land war eingeladen."
             },
             {
               "text": "Keines",
@@ -266,35 +266,35 @@
             {
               "text": "Eines, nämlich Ägypten",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; sie sagt, kein afrikanisches Land war eingeladen."
+              "fb": "Falsch: Kein afrikanisches Land war eingeladen."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Wodurch ließ sich laut Quelle „effektive Besetzung“ eines Gebiets herstellen?",
+          "frage": "Wodurch ließ sich nach der Berliner Konferenz 1884/85 „effektive Besetzung“ eines Gebiets herstellen?",
           "beleg": "effective occupation could be established by a European state setting up a coastal base.",
           "belegDe": "eine effektive Besetzung konnte dadurch hergestellt werden, dass ein europäischer Staat einen Küstenstützpunkt einrichtete.",
           "optionen": [
             {
               "text": "Durch einen Stützpunkt an der Küste",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: Effektive Besetzung ließ sich herstellen, indem ein europäischer Staat einen Stützpunkt an der Küste einrichtete."
             },
             {
               "text": "Durch einen Vertrag mit dem Herrscher des Gebiets",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Effektive Besetzung ließ sich herstellen, indem ein europäischer Staat einen Stützpunkt an der Küste einrichtete."
             },
             {
               "text": "Durch eine Abstimmung der Bewohner",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Effektive Besetzung ließ sich herstellen, indem ein europäischer Staat einen Stützpunkt an der Küste einrichtete."
             },
             {
               "text": "Durch die Zustimmung der USA",
               "ok": false,
-              "fb": "Die USA waren eingeladen, ihre Zustimmung wird hier aber nicht als Bedingung genannt."
+              "fb": "Falsch: Die USA waren zur Konferenz eingeladen; effektive Besetzung ließ sich aber durch einen Stützpunkt an der Küste herstellen."
             }
           ]
         }
@@ -314,14 +314,14 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Welche zwei Länder schlossen das geheime Abkommen von 1916?",
+          "frage": "Welche zwei Länder schlossen das geheime Sykes-Picot-Abkommen von 1916?",
           "beleg": "a 1916 secret treaty between the United Kingdom and France",
           "belegDe": "ein geheimer Vertrag von 1916 zwischen dem Vereinigten Königreich und Frankreich",
           "optionen": [
             {
               "text": "Russland und Italien",
               "ok": false,
-              "fb": "Beide stimmten laut Quelle nur zu; geschlossen haben es zwei andere Länder."
+              "fb": "Falsch: Russland und Italien stimmten nur zu; geschlossen haben es das Vereinigte Königreich und Frankreich."
             },
             {
               "text": "Frankreich und das Osmanische Reich",
@@ -331,46 +331,46 @@
             {
               "text": "Das Vereinigte Königreich und Russland",
               "ok": false,
-              "fb": "Russland stimmte laut Quelle nur zu."
+              "fb": "Falsch: Russland stimmte nur zu; geschlossen haben es das Vereinigte Königreich und Frankreich."
             },
             {
               "text": "Das Vereinigte Königreich und Frankreich",
               "ok": true,
-              "fb": "Richtig: So beschreibt es die Quelle."
+              "fb": "Richtig: Das Abkommen wurde zwischen dem Vereinigten Königreich und Frankreich geschlossen."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Was teilte das Abkommen laut Quelle auf?",
+          "frage": "Was teilte das Sykes-Picot-Abkommen von 1916 auf?",
           "beleg": "divided the Ottoman provinces outside the Arabian Peninsula",
           "belegDe": "teilte die osmanischen Provinzen außerhalb der Arabischen Halbinsel auf",
           "optionen": [
             {
               "text": "Die gesamte Arabische Halbinsel mit allen Küstenstaaten",
               "ok": false,
-              "fb": "Die Quelle nimmt die Arabische Halbinsel ausdrücklich aus."
+              "fb": "Falsch: Aufgeteilt wurden osmanische Provinzen außerhalb der Arabischen Halbinsel."
             },
             {
               "text": "Osmanische Provinzen außer der Arabischen Halbinsel",
               "ok": true,
-              "fb": "Richtig: So beschreibt es die Quelle."
+              "fb": "Richtig: Das Abkommen teilte die osmanischen Provinzen außerhalb der Arabischen Halbinsel in Zonen auf."
             },
             {
               "text": "Die Kolonien Britisch-Indiens und Burmas",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Aufgeteilt wurden osmanische Provinzen außerhalb der Arabischen Halbinsel."
             },
             {
               "text": "Persien, Afghanistan und das Zarenreich",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; aufgeteilt wurden osmanische Provinzen."
+              "fb": "Falsch: Aufgeteilt wurden osmanische Provinzen außerhalb der Arabischen Halbinsel."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Wer stimmte dem Abkommen laut Quelle zu, ohne es zu schließen?",
+          "frage": "Wer stimmte dem Sykes-Picot-Abkommen von 1916 zu, ohne es zu schließen?",
           "beleg": "with assent from Russia and Italy",
           "belegDe": "mit Zustimmung von Russland und Italien",
           "optionen": [
@@ -382,7 +382,7 @@
             {
               "text": "Die USA und Japan",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Russland und Italien gaben ihre Zustimmung."
             },
             {
               "text": "Das Osmanische Reich",
@@ -392,7 +392,7 @@
             {
               "text": "Die arabischen Führer",
               "ok": false,
-              "fb": "Davon steht in der Quelle als Zustimmung nichts."
+              "fb": "Falsch: Russland und Italien gaben ihre Zustimmung."
             }
           ]
         }
@@ -419,7 +419,7 @@
             {
               "text": "Zwischen Persien und dem Russischen Kaiserreich",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Die Durand-Linie wurde zwischen dem Emirat Afghanistan und dem Britisch-Indischen Reich festgelegt."
             },
             {
               "text": "Zwischen dem Kaiserreich China und Tibet",
@@ -452,7 +452,7 @@
             {
               "text": "Der britische Diplomat Mortimer Durand",
               "ok": true,
-              "fb": "Richtig: Die Quelle nennt Mortimer Durand und Emir Abdur Rahman Khan."
+              "fb": "Richtig: Mortimer Durand vereinbarte die Linie mit Emir Abdur Rahman Khan."
             },
             {
               "text": "Cyril Radcliffe nach fünf Wochen Arbeit",
@@ -468,29 +468,29 @@
         },
         {
           "n": 3,
-          "frage": "Welche Völker teilt die Durand-Linie laut Quelle?",
+          "frage": "Welche Völker teilt die Durand-Linie?",
           "beleg": "Because the Durand Line divides the Pashtun and Baloch people",
           "belegDe": "Weil die Durand-Linie das Volk der Paschtunen und Belutschen teilt",
           "optionen": [
             {
               "text": "Tadschiken und Usbeken",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Die Durand-Linie teilt die Paschtunen und die Belutschen."
             },
             {
               "text": "Sikhs und Hindus",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Die Durand-Linie teilt die Paschtunen und die Belutschen."
             },
             {
               "text": "Kurden und Armenier",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Die Durand-Linie teilt die Paschtunen und die Belutschen."
             },
             {
               "text": "Paschtunen und Belutschen",
               "ok": true,
-              "fb": "Richtig: Die Quelle nennt Paschtunen und Belutschen."
+              "fb": "Richtig: Die Durand-Linie teilt die Paschtunen und die Belutschen."
             }
           ]
         }
@@ -527,25 +527,25 @@
             {
               "text": "Zwischen Tibet und Britisch-Indien",
               "ok": true,
-              "fb": "Richtig: So beschreibt es die Quelle."
+              "fb": "Richtig: Die McMahon-Linie bildet die Grenze zwischen Tibet und Britisch-Indien."
             },
             {
               "text": "Zwischen China und Russland",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts."
+              "fb": "Falsch: Die McMahon-Linie bildet die Grenze zwischen Tibet und Britisch-Indien."
             }
           ]
         },
         {
           "n": 2,
-          "frage": "Wer zog die McMahon-Linie laut Quelle?",
+          "frage": "Wer zog die McMahon-Linie?",
           "beleg": "a 550-mile border drawn by British administrator Sir Henry McMahon",
           "belegDe": "eine 550 Meilen lange Grenze, gezogen vom britischen Verwalter Sir Henry McMahon",
           "optionen": [
             {
               "text": "Sir Henry McMahon",
               "ok": true,
-              "fb": "Richtig: Die Quelle nennt den britischen Verwalter Sir Henry McMahon."
+              "fb": "Richtig: Der britische Verwalter Sir Henry McMahon zog die Linie."
             },
             {
               "text": "Cyril Radcliffe",
@@ -566,24 +566,24 @@
         },
         {
           "n": 3,
-          "frage": "Welche Rolle spielte die Republik China bei der Vereinbarung der Linie?",
+          "frage": "Welche Rolle spielte die Republik China bei der Vereinbarung der McMahon-Linie 1914?",
           "beleg": "The Republic of China was not a party to the McMahon Line agreement",
           "belegDe": "Die Republik China war nicht Partei der Vereinbarung zur McMahon-Linie",
           "optionen": [
             {
               "text": "Sie war Vertragspartei neben Tibet",
               "ok": false,
-              "fb": "Die Quelle sagt, sie war keine Partei der Vereinbarung."
+              "fb": "Falsch: Die Republik China war keine Partei der Vereinbarung."
             },
             {
               "text": "Sie hat die Linie ausgehandelt",
               "ok": false,
-              "fb": "Die Quelle nennt Sir Henry McMahon, nicht China."
+              "fb": "Falsch: Die Linie zog der britische Verwalter Sir Henry McMahon, nicht China."
             },
             {
               "text": "Sie hat die Linie 1914 unterschrieben",
               "ok": false,
-              "fb": "Die Quelle sagt, sie war nicht beteiligt."
+              "fb": "Falsch: Die Republik China war an der Vereinbarung nicht beteiligt."
             },
             {
               "text": "Keine: Sie war keine Vertragspartei",
@@ -608,14 +608,14 @@
       "fragen": [
         {
           "n": 1,
-          "frage": "Wie viel Zeit hatte Radcliffe nach seiner Ankunft für die Grenzentscheidung?",
+          "frage": "Wie viel Zeit hatte Radcliffe nach der Ankunft in Indien für die Entscheidung über den Grenzverlauf?",
           "beleg": "After arriving in India on 8 July 1947, Radcliffe was given just five weeks to decide on a border.",
           "belegDe": "Nach seiner Ankunft in Indien am 8. Juli 1947 bekam Radcliffe nur fünf Wochen, um über eine Grenze zu entscheiden.",
           "optionen": [
             {
               "text": "Fünf Monate",
               "ok": false,
-              "fb": "Die Quelle nennt fünf Wochen."
+              "fb": "Falsch: Radcliffe bekam nur fünf Wochen."
             },
             {
               "text": "Fünf Wochen",
@@ -625,12 +625,12 @@
             {
               "text": "Fünf Tage",
               "ok": false,
-              "fb": "Die Quelle nennt fünf Wochen."
+              "fb": "Falsch: Radcliffe bekam nur fünf Wochen."
             },
             {
               "text": "Ein ganzes Jahr",
               "ok": false,
-              "fb": "Die Quelle nennt fünf Wochen."
+              "fb": "Falsch: Radcliffe bekam nur fünf Wochen."
             }
           ]
         },
@@ -643,7 +643,7 @@
             {
               "text": "Am 17. August 1947, zwei Tage nach der Unabhängigkeit",
               "ok": true,
-              "fb": "Richtig: So nennt es die Quelle."
+              "fb": "Richtig: Die Linie wurde am 17. August 1947 veröffentlicht, zwei Tage nach der Unabhängigkeit."
             },
             {
               "text": "Am 8. Juli 1947, bei Radcliffes Ankunft",
@@ -653,40 +653,40 @@
             {
               "text": "Am 15. August 1947, am Tag der Unabhängigkeit beider Staaten",
               "ok": false,
-              "fb": "Die Quelle nennt den 17. August, zwei Tage danach."
+              "fb": "Falsch: Die Linie wurde am 17. August 1947 veröffentlicht, zwei Tage nach der Unabhängigkeit."
             },
             {
               "text": "Erst im Jahr 1948",
               "ok": false,
-              "fb": "Die Quelle nennt den 17. August 1947."
+              "fb": "Falsch: Die Linie wurde am 17. August 1947 veröffentlicht."
             }
           ]
         },
         {
           "n": 3,
-          "frage": "Was war laut Quelle Radcliffes Verhältnis zu Indien vor seiner Berufung?",
+          "frage": "Was war Radcliffes Verhältnis zu Indien vor seiner Berufung?",
           "beleg": "Before his appointment, Radcliffe had never visited India and knew no one there.",
           "belegDe": "Vor seiner Ernennung war Radcliffe nie in Indien gewesen und kannte dort niemanden.",
           "optionen": [
             {
               "text": "Er hatte lange in Lahore gelebt",
               "ok": false,
-              "fb": "Die Quelle sagt, er war nie in Indien gewesen."
+              "fb": "Falsch: Radcliffe war vor seiner Berufung nie in Indien gewesen."
             },
             {
               "text": "Er war schon früher Vizekönig von Indien gewesen",
               "ok": false,
-              "fb": "Davon steht in der Quelle nichts; er war nie in Indien."
+              "fb": "Falsch: Radcliffe war vor seiner Berufung nie in Indien gewesen."
             },
             {
               "text": "Er war nie dort gewesen und kannte niemanden",
               "ok": true,
-              "fb": "Richtig: So beschreibt es die Quelle."
+              "fb": "Richtig: Radcliffe war vor seiner Berufung nie in Indien gewesen und kannte dort niemanden."
             },
             {
               "text": "Er stammte aus Delhi",
               "ok": false,
-              "fb": "Die Quelle sagt, er war nie in Indien gewesen."
+              "fb": "Falsch: Radcliffe war vor seiner Berufung nie in Indien gewesen."
             }
           ]
         }

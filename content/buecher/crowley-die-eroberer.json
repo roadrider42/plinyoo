@@ -1,7 +1,7 @@
 {
   "slug": "crowley-die-eroberer",
   "draft": false,
-  "platzhalter": true,
+  "platzhalter": false,
   "platzhalterText": "Der Text zu diesem Buch kommt demnächst.",
   "autor": "Roger Crowley",
   "titel": "Die Eroberer",
@@ -12,21 +12,1349 @@
   "isbn": "978-3-8062-2769-7",
   "leitfrage": "Wie begann Portugals Weltreich?",
   "einordnung": "Roger Crowley erzählt von Portugals Weg nach Indien und dem Reich, das daraus wurde.",
-  "kartenIntro": "",
-  "kartenStatus": "",
-  "karten": [],
-  "knoten": [],
-  "kanten": [],
-  "kartenvoll": [],
-  "bruecken": [],
+  "kartenIntro": "Alle 12 kannst du unten durchspielen.",
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
+  "karten": [
+    "Ceuta 1415",
+    "Heinrich der Seefahrer",
+    "Madeira und Azoren",
+    "Kap Bojador 1434",
+    "Kongo 1482",
+    "Indienhandel vor 1498",
+    "Dias: stürmisches Kap",
+    "Dias: Sturm 1500",
+    "Gama bis zum Vizekönig",
+    "Calicut 1502",
+    "Goa und Malakka",
+    "Das Monopol der Krone"
+  ],
+  "knoten": [
+    {
+      "slug": "cro-ceuta-1415",
+      "titel": "Ceuta 1415"
+    },
+    {
+      "slug": "cro-heinrich-sagres",
+      "titel": "Heinrich der Seefahrer"
+    },
+    {
+      "slug": "cro-atlantik-inseln",
+      "titel": "Madeira und Azoren"
+    },
+    {
+      "slug": "cro-kap-bojador-1434",
+      "titel": "Kap Bojador 1434"
+    },
+    {
+      "slug": "cro-kongo-1482",
+      "titel": "Kongo 1482"
+    },
+    {
+      "slug": "cro-indienhandel-muslime",
+      "titel": "Indienhandel vor 1498"
+    },
+    {
+      "slug": "cro-stuermisches-kap",
+      "titel": "Dias: stürmisches Kap"
+    },
+    {
+      "slug": "cro-schiffbruch-1500",
+      "titel": "Dias: Sturm 1500"
+    },
+    {
+      "slug": "cro-gama-vizekoenig",
+      "titel": "Gama bis zum Vizekönig"
+    },
+    {
+      "slug": "cro-calicut-1502",
+      "titel": "Calicut 1502"
+    },
+    {
+      "slug": "cro-goa-malakka",
+      "titel": "Goa und Malakka"
+    },
+    {
+      "slug": "cro-monopol-krone",
+      "titel": "Das Monopol der Krone"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      1,
+      2,
+      "verwandt"
+    ],
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      3,
+      4,
+      "verwandt"
+    ],
+    [
+      4,
+      6,
+      "verwandt"
+    ],
+    [
+      6,
+      7,
+      "verwandt"
+    ],
+    [
+      6,
+      8,
+      "verwandt"
+    ],
+    [
+      8,
+      9,
+      "verwandt"
+    ],
+    [
+      9,
+      10,
+      "verwandt"
+    ],
+    [
+      10,
+      11,
+      "verwandt"
+    ],
+    [
+      5,
+      11,
+      "verwandt"
+    ]
+  ],
+  "kartenvoll": [
+    {
+      "slug": "cro-ceuta-1415",
+      "kurz": "Ceuta 1415",
+      "titel": "Ceuta 1415: Hier beginnt das portugiesische Reich",
+      "karte": "Am 21. August 1415 eroberten portugiesische Truppen unter König Johann I. die nordafrikanische Stadt Ceuta. Heinrich, einer der Söhne des Königs, zeichnete sich in der Schlacht aus und wurde verwundet. Die Eroberung gilt als Beginn des portugiesischen Reiches. Ceuta sollte Portugal außerdem ermöglichen, Kastilien, seinen gefährlichsten Rivalen, in die Flanke zu fallen.",
+      "quelle": {
+        "titel": "Conquest of Ceuta",
+        "url": "https://en.wikipedia.org/wiki/Conquest_of_Ceuta",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wann eroberten die Portugiesen Ceuta?",
+          "beleg": "Portuguese forces under the command of King John I conquered the North African city of Ceuta … from the Marinid Sultanate on 21 August 1415.",
+          "belegDe": "Portugiesische Truppen unter König Johann I. eroberten die nordafrikanische Stadt Ceuta … vom Sultanat der Meriniden am 21. August 1415.",
+          "optionen": [
+            {
+              "text": "21. August 1385",
+              "ok": false,
+              "fb": "Falsch: Ceuta fiel am 21. August 1415."
+            },
+            {
+              "text": "1. Mai 1420",
+              "ok": false,
+              "fb": "Falsch: Ceuta fiel am 21. August 1415."
+            },
+            {
+              "text": "21. August 1415",
+              "ok": true,
+              "fb": "Richtig: Ceuta fiel am 21. August 1415."
+            },
+            {
+              "text": "21. August 1492",
+              "ok": false,
+              "fb": "Falsch: Ceuta fiel am 21. August 1415."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welchen strategischen Zweck hatte die Eroberung Ceutas 1415?",
+          "beleg": "it could enable Portugal to flank its most dangerous rival, Castile.",
+          "belegDe": "Es könnte Portugal erlauben, Kastilien, seinen gefährlichsten Rivalen, in die Flanke zu fallen.",
+          "optionen": [
+            {
+              "text": "Portugal sollte Kastilien, seinen gefährlichsten Rivalen, in die Flanke fallen können",
+              "ok": true,
+              "fb": "Richtig: So sollte Portugal Kastilien von der Flanke angreifen können."
+            },
+            {
+              "text": "Es sollte den Seeweg nach Indien öffnen, damit der Gewürzhandel über Ceuta läuft",
+              "ok": false,
+              "fb": "Falsch: Der Seeweg nach Indien wurde erst 1498 erreicht."
+            },
+            {
+              "text": "Es sollte die Handelswege nach Venedig sperren und den Mittelmeerhandel kontrollieren",
+              "ok": false,
+              "fb": "Falsch: Der Zweck richtete sich gegen Kastilien."
+            },
+            {
+              "text": "Es sollte die Azoren als Stützpunkt sichern, bevor die Flotte nach Westen aufbricht",
+              "ok": false,
+              "fb": "Falsch: Die Azoren wurden erst 1427 erreicht, nach Ceuta."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Folge hatte der Besitz von Ceuta für die portugiesische Expansion?",
+          "beleg": "Possession of Ceuta would indirectly lead to further Portuguese expansion.",
+          "belegDe": "Der Besitz von Ceuta würde indirekt zu weiterer portugiesischer Expansion führen.",
+          "optionen": [
+            {
+              "text": "Das Ende der portugiesischen Afrikafahrten",
+              "ok": false,
+              "fb": "Falsch: Die Fahrten gingen danach weiter."
+            },
+            {
+              "text": "Der sofortige Seeweg nach Indien",
+              "ok": false,
+              "fb": "Falsch: Der Seeweg nach Indien wurde erst 1498 erreicht."
+            },
+            {
+              "text": "Der Verzicht auf weitere Eroberungen",
+              "ok": false,
+              "fb": "Falsch: Ceuta war der Auftakt weiterer Eroberungen."
+            },
+            {
+              "text": "Indirekt weitere portugiesische Expansion",
+              "ok": true,
+              "fb": "Richtig: Der Besitz führte indirekt zu weiterer Expansion."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-heinrich-sagres",
+      "kurz": "Heinrich der Seefahrer",
+      "titel": "Heinrich der Seefahrer: Förderer der Fahrten, Mythos Sagres",
+      "karte": "Heinrich (1394–1460), Sohn König Johanns I., trägt den Beinamen „der Seefahrer“. Er förderte Entdeckungsfahrten, die meist aus ein oder zwei Schiffen bestanden und der Küste folgten. Die Vorstellung einer Seefahrerschule in Sagres sehen moderne Historiker als Irrtum. Der Mythos entstand im 18. Jahrhundert.",
+      "quelle": {
+        "titel": "Prince Henry the Navigator",
+        "url": "https://en.wikipedia.org/wiki/Prince_Henry_the_Navigator",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was unterstützte Prinz Heinrich der Seefahrer?",
+          "beleg": "Henry sponsored voyages",
+          "belegDe": "Heinrich förderte Fahrten.",
+          "optionen": [
+            {
+              "text": "Er gründete eine Seefahrerschule in Sagres",
+              "ok": false,
+              "fb": "Falsch: Die Seefahrerschule in Sagres ist ein Mythos des 18. Jahrhunderts."
+            },
+            {
+              "text": "Er förderte Entdeckungsfahrten",
+              "ok": true,
+              "fb": "Richtig: Er förderte Fahrten entlang der Küste."
+            },
+            {
+              "text": "Er führte selbst die Flotte nach Indien",
+              "ok": false,
+              "fb": "Falsch: Heinrich starb 1460, Calicut erreichte Gama erst 1498."
+            },
+            {
+              "text": "Er baute die erste Karavelle der Welt",
+              "ok": false,
+              "fb": "Falsch: Heinrich wird als Förderer der Fahrten beschrieben."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie steht es um den Mythos der Seefahrerschule in Sagres?",
+          "beleg": "The myth of the \"Sagres school\" allegedly founded by Prince Henry was created in the 18th century.",
+          "belegDe": "Der Mythos einer angeblich von Prinz Heinrich gegründeten Seefahrerschule in Sagres entstand im 18. Jahrhundert.",
+          "optionen": [
+            {
+              "text": "Er ist durch Schiffslisten aus dem 15. Jahrhundert belegt",
+              "ok": false,
+              "fb": "Falsch: Der Mythos entstand im 18. Jahrhundert."
+            },
+            {
+              "text": "Er stammt aus Heinrichs eigener Zeit",
+              "ok": false,
+              "fb": "Falsch: Er entstand erst nach Heinrichs Tod 1460."
+            },
+            {
+              "text": "Er wurde von Vasco da Gama erfunden",
+              "ok": false,
+              "fb": "Falsch: Er entstand im 18. Jahrhundert, nicht unter Vasco da Gama."
+            },
+            {
+              "text": "Er entstand erst im 18. Jahrhundert",
+              "ok": true,
+              "fb": "Richtig: Er entstand erst im 18. Jahrhundert."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was lässt sich über Sagres als Zentrum der Navigationswissenschaft sagen?",
+          "beleg": "there was no center of navigation science or observatory in the modern sense of the word.",
+          "belegDe": "Es gab kein Zentrum der Navigationswissenschaft oder Sternwarte im heutigen Sinn.",
+          "optionen": [
+            {
+              "text": "Es gab kein Zentrum der Navigationswissenschaft im heutigen Sinn",
+              "ok": true,
+              "fb": "Richtig: Ein Zentrum im heutigen Sinn gab es nicht."
+            },
+            {
+              "text": "Dort gab es nur eine Kapelle für die Seeleute und einen Hafen für die Karavellen",
+              "ok": false,
+              "fb": "Falsch: Eine Kapelle ersetzt kein Zentrum der Navigationswissenschaft."
+            },
+            {
+              "text": "Heinrich lehrte dort selbst Latein, Mathematik und Kartografie an seine Schüler",
+              "ok": false,
+              "fb": "Falsch: Die Lehre in Sagres ist ein Mythos."
+            },
+            {
+              "text": "Die Schule wurde nach 1500 geschlossen, weil die Seefahrer nach Indien zogen",
+              "ok": false,
+              "fb": "Falsch: Eine Schule in diesem Sinn gab es in Sagres nicht."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-atlantik-inseln",
+      "kurz": "Madeira und Azoren",
+      "titel": "Madeira und Azoren: Die ersten Siedlungen im Atlantik",
+      "karte": "Kurz nach der Eroberung Ceutas erreichten portugiesische Fahrer die Atlantikinseln. Madeira wurde 1419 erreicht, die Azoren 1427. Heinrich ließ Porto Santo besiedeln; 1420 zogen Siedler nach Madeira. Das Jahr 1427 für die Azoren ist unsicher: Es stützt sich auf eine Karte.",
+      "quelle": {
+        "titel": "Portuguese Empire",
+        "url": "https://en.wikipedia.org/wiki/Portuguese_Empire",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche Atlantikinsel wurde 1419 erreicht?",
+          "beleg": "the Atlantic islands of Madeira (1419) and Azores (1427) were reached and started to be settled",
+          "belegDe": "Die Atlantikinseln Madeira (1419) und die Azoren (1427) wurden erreicht und begannen besiedelt zu werden.",
+          "optionen": [
+            {
+              "text": "Die Azoren",
+              "ok": false,
+              "fb": "Falsch: Die Azoren wurden 1427 erreicht."
+            },
+            {
+              "text": "Die Kanaren",
+              "ok": false,
+              "fb": "Falsch: Die Kanaren werden hier nicht genannt; 1419 wurde Madeira erreicht."
+            },
+            {
+              "text": "Madeira",
+              "ok": true,
+              "fb": "Richtig: Madeira wurde 1419 erreicht."
+            },
+            {
+              "text": "Die Kapverden",
+              "ok": false,
+              "fb": "Falsch: 1419 wurde Madeira erreicht."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Inselgruppe wurde 1427 erreicht?",
+          "beleg": "the Atlantic islands of Madeira (1419) and Azores (1427) were reached and started to be settled",
+          "belegDe": "Die Atlantikinseln Madeira (1419) und die Azoren (1427) wurden erreicht und begannen besiedelt zu werden.",
+          "optionen": [
+            {
+              "text": "Madeira",
+              "ok": false,
+              "fb": "Falsch: Madeira wurde 1419 erreicht."
+            },
+            {
+              "text": "Die Azoren",
+              "ok": true,
+              "fb": "Richtig: Die Azoren wurden 1427 erreicht."
+            },
+            {
+              "text": "Die Kanaren",
+              "ok": false,
+              "fb": "Falsch: 1427 wurden die Azoren erreicht."
+            },
+            {
+              "text": "Porto Santo",
+              "ok": false,
+              "fb": "Falsch: 1427 wurden die Azoren erreicht."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was geschah mit Madeira und den Azoren nach ihrer Erreichung?",
+          "beleg": "were reached and started to be settled",
+          "belegDe": "… wurden erreicht und begannen besiedelt zu werden.",
+          "optionen": [
+            {
+              "text": "Sie blieben unbewohnt und wurden als Schutzgebiet für seltene Vogelarten geschützt",
+              "ok": false,
+              "fb": "Falsch: Sie blieben nicht unbewohnt, sie wurden besiedelt."
+            },
+            {
+              "text": "Sie wurden sofort an Kastilien abgetreten, das damals die Seewege im Atlantik kontrollierte",
+              "ok": false,
+              "fb": "Falsch: Sie wurden nicht an Kastilien abgetreten, sondern besiedelt."
+            },
+            {
+              "text": "Sie wurden nur als Fischereihäfen genutzt und nie dauerhaft von Siedlern bewohnt",
+              "ok": false,
+              "fb": "Falsch: Sie wurden nicht nur als Fischereihäfen genutzt, sondern besiedelt."
+            },
+            {
+              "text": "Sie wurden erreicht und begannen besiedelt zu werden",
+              "ok": true,
+              "fb": "Richtig: Sie wurden erreicht und besiedelt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-kap-bojador-1434",
+      "kurz": "Kap Bojador 1434",
+      "titel": "Kap Bojador: Die Fahrt nach Süden in Etappen",
+      "karte": "Für 1422 ist überliefert, dass Kap Nun überschritten und Kap Bojador erreicht wurde. Gil Eanes umrundete das Kap Bojador 1434. Zwischen diesen beiden Stationen liegen zwölf Jahre, in denen die Fahrt nach Süden voranging.",
+      "quelle": {
+        "titel": "Chronologie der portugiesischen Entdeckungen",
+        "url": "https://de.wikipedia.org/wiki/Chronologie_der_portugiesischen_Entdeckungen",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welches Kap umrundete Gil Eanes 1434?",
+          "beleg": "Gil Eanes umrundet das Kap Bojador",
+          "belegDe": "„Gil Eanes umrundet das Kap Bojador“",
+          "optionen": [
+            {
+              "text": "Kap Nun",
+              "ok": false,
+              "fb": "Falsch: Kap Nun wurde 1422 überschritten."
+            },
+            {
+              "text": "Kap der Guten Hoffnung",
+              "ok": false,
+              "fb": "Falsch: Das Kap der Guten Hoffnung umrundete Dias 1488."
+            },
+            {
+              "text": "Kap Bojador",
+              "ok": true,
+              "fb": "Richtig: Gil Eanes umrundete das Kap Bojador."
+            },
+            {
+              "text": "Kap Verde",
+              "ok": false,
+              "fb": "Falsch: Gil Eanes umrundete 1434 das Kap Bojador."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was gelang den Seefahrern 1422?",
+          "beleg": "Kap Nun wird überschritten und Kap Bojador wird erreicht",
+          "belegDe": "„Kap Nun wird überschritten und Kap Bojador wird erreicht“",
+          "optionen": [
+            {
+              "text": "Sie überschritten Kap Nun und erreichten Kap Bojador",
+              "ok": true,
+              "fb": "Richtig: Kap Nun wurde überschritten, Kap Bojador erreicht."
+            },
+            {
+              "text": "Sie erreichten die Kapverden und ließen dort eine Siedlung zurück",
+              "ok": false,
+              "fb": "Falsch: Die Kapverden erreichte Dinis Dias 1444."
+            },
+            {
+              "text": "Sie fanden die Azoren und begannen sofort mit dem Bau einer Festung",
+              "ok": false,
+              "fb": "Falsch: Die Azoren fand Diogo de Silves 1427."
+            },
+            {
+              "text": "Sie erreichten die Mündung des Kongo und stellten dort einen Pfeiler auf",
+              "ok": false,
+              "fb": "Falsch: Die Mündung des Kongo erreichte Diogo Cão 1482 bis 1484."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was zeigt die Abfolge der Stationen zwischen 1422 und 1434?",
+          "beleg": "Kap Nun wird überschritten und Kap Bojador wird erreicht",
+          "belegDe": "„Kap Nun wird überschritten und Kap Bojador wird erreicht“ und „Gil Eanes umrundet das Kap Bojador“",
+          "optionen": [
+            {
+              "text": "Die Seefahrer kehrten 1422 um und gaben die Fahrt nach Süden für Jahrzehnte auf",
+              "ok": false,
+              "fb": "Falsch: 1422 erreichten die Seefahrer Kap Bojador."
+            },
+            {
+              "text": "Die Fahrt nach Süden kam in Etappen voran, zwischen 1422 und 1434 liegen zwölf Jahre",
+              "ok": true,
+              "fb": "Richtig: Zwischen 1422 und 1434 liegen zwölf Jahre."
+            },
+            {
+              "text": "Das Kap wurde schon 1422 umrundet und die Fahrt damit abgeschlossen",
+              "ok": false,
+              "fb": "Falsch: Umrundet wurde Kap Bojador erst 1434."
+            },
+            {
+              "text": "Das Kap blieb bis 1500 unerreicht, weil die Seefahrer die Küste mieden",
+              "ok": false,
+              "fb": "Falsch: Gil Eanes umrundete das Kap 1434."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-kongo-1482",
+      "kurz": "Kongo 1482",
+      "titel": "Diogo Cão: Die Mündung des Kongo",
+      "karte": "Diogo Cão erreichte die Mündung des Kongo. Danach nahmen die Portugiesen mit dem Königreich Benin Kontakt auf. Beide Stationen fallen in die Jahre 1482 bis 1486.",
+      "quelle": {
+        "titel": "Chronologie der portugiesischen Entdeckungen",
+        "url": "https://de.wikipedia.org/wiki/Chronologie_der_portugiesischen_Entdeckungen",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welchen Fluss erreichte Diogo Cão?",
+          "beleg": "Diogo Cão erreicht die Mündung des Kongo",
+          "belegDe": "„Diogo Cão erreicht die Mündung des Kongo“",
+          "optionen": [
+            {
+              "text": "Den Nil",
+              "ok": false,
+              "fb": "Falsch: Diogo Cão erreichte die Mündung des Kongo."
+            },
+            {
+              "text": "Den Niger",
+              "ok": false,
+              "fb": "Falsch: Diogo Cão erreichte die Mündung des Kongo."
+            },
+            {
+              "text": "Den Sambesi",
+              "ok": false,
+              "fb": "Falsch: Diogo Cão erreichte die Mündung des Kongo."
+            },
+            {
+              "text": "Den Kongo",
+              "ok": true,
+              "fb": "Richtig: Er erreichte die Mündung des Kongo."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Mit welchem Reich nahmen die Portugiesen nach der Kongo-Mündung Kontakt auf?",
+          "beleg": "nehmen mit dem Königreich Benin Kontakt auf",
+          "belegDe": "„nehmen mit dem Königreich Benin Kontakt auf“",
+          "optionen": [
+            {
+              "text": "Mit dem Königreich Kongo",
+              "ok": false,
+              "fb": "Falsch: Der Kontakt ging zum Königreich Benin."
+            },
+            {
+              "text": "Mit dem Osmanischen Reich",
+              "ok": false,
+              "fb": "Falsch: Der Kontakt ging zum Königreich Benin."
+            },
+            {
+              "text": "Mit dem Königreich Benin",
+              "ok": true,
+              "fb": "Richtig: Mit Benin nahmen sie Kontakt auf."
+            },
+            {
+              "text": "Mit dem Sultanat Malakka",
+              "ok": false,
+              "fb": "Falsch: Malakka eroberten die Portugiesen 1511."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Station folgte nach der Kongo-Mündung?",
+          "beleg": "Diogo Cão erreicht die Mündung des Kongo",
+          "belegDe": "„Diogo Cão erreicht die Mündung des Kongo“ und „nehmen mit dem Königreich Benin Kontakt auf“",
+          "optionen": [
+            {
+              "text": "Kontakt mit dem Königreich Benin",
+              "ok": true,
+              "fb": "Richtig: Benin folgte nach dem Kongo."
+            },
+            {
+              "text": "Eine Landung in Brasilien an der Küste bei Porto Seguro",
+              "ok": false,
+              "fb": "Falsch: Brasilien wurde 1500 erreicht."
+            },
+            {
+              "text": "Die Umrundung des Kaps der Stürme im Südatlantik",
+              "ok": false,
+              "fb": "Falsch: Die Umrundung des Kaps geschah 1488."
+            },
+            {
+              "text": "Die Ankunft in Calicut an der Malabarküste im Mai",
+              "ok": false,
+              "fb": "Falsch: Calicut erreichte Gama 1498."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-indienhandel-muslime",
+      "kurz": "Indienhandel vor 1498",
+      "titel": "Indienhandel vor dem Seeweg: Muslime, Pfeffer, Venedig",
+      "karte": "Im Mittelalter kontrollierten muslimische Händler den Indienhandel mit dem Westen. Pfeffer war im 15. Jahrhundert eines der gefragtesten Gewürze in Europa. Die Waren gelangten vor allem über den Knotenpunkt Venedig nach Europa.",
+      "quelle": {
+        "titel": "Indienhandel",
+        "url": "https://de.wikipedia.org/wiki/Indienhandel",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wer kontrollierte im Mittelalter den Indienhandel mit dem Westen?",
+          "beleg": "Der Indienhandel mit dem Westen befand sich während des Mittelalters unter Kontrolle muslimischer Händler.",
+          "belegDe": "„Der Indienhandel mit dem Westen befand sich während des Mittelalters unter Kontrolle muslimischer Händler.“",
+          "optionen": [
+            {
+              "text": "Venezianische Kaufleute",
+              "ok": false,
+              "fb": "Falsch: Venedig war der Knotenpunkt für die Weiterleitung."
+            },
+            {
+              "text": "Die Portugiesen",
+              "ok": false,
+              "fb": "Falsch: Die Portugiesen erreichten Calicut erst im Mai 1498."
+            },
+            {
+              "text": "Muslimische Händler",
+              "ok": true,
+              "fb": "Richtig: Muslimische Händler kontrollierten den Indienhandel im Mittelalter."
+            },
+            {
+              "text": "Die Republik Genua",
+              "ok": false,
+              "fb": "Falsch: Muslimische Händler kontrollierten den Handel, nicht Genua."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welches Gewürz war im 15. Jahrhundert in Europa besonders gefragt?",
+          "beleg": "Pfeffer war im 15. Jahrhundert eines der gefragtesten Gewürze in Europa.",
+          "belegDe": "„Pfeffer war im 15. Jahrhundert eines der gefragtesten Gewürze in Europa.“",
+          "optionen": [
+            {
+              "text": "Zimt",
+              "ok": false,
+              "fb": "Falsch: Gefragt war Pfeffer."
+            },
+            {
+              "text": "Pfeffer",
+              "ok": true,
+              "fb": "Richtig: Pfeffer war im 15. Jahrhundert eines der gefragtesten Gewürze."
+            },
+            {
+              "text": "Muskatnuss",
+              "ok": false,
+              "fb": "Falsch: Gefragt war Pfeffer."
+            },
+            {
+              "text": "Safran",
+              "ok": false,
+              "fb": "Falsch: Gefragt war Pfeffer."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Über welchen Knotenpunkt gelangten die Waren vor allem nach Europa?",
+          "beleg": "Die Waren gelangten dann vor allem über den Knotenpunkt Venedig weiter in das christliche lateinische Europa.",
+          "belegDe": "„Die Waren gelangten dann vor allem über den Knotenpunkt Venedig weiter in das christliche lateinische Europa.“",
+          "optionen": [
+            {
+              "text": "Lissabon",
+              "ok": false,
+              "fb": "Falsch: Der Knotenpunkt war Venedig."
+            },
+            {
+              "text": "Antwerpen",
+              "ok": false,
+              "fb": "Falsch: Der Knotenpunkt war Venedig."
+            },
+            {
+              "text": "Genua",
+              "ok": false,
+              "fb": "Falsch: Der Knotenpunkt war Venedig."
+            },
+            {
+              "text": "Venedig",
+              "ok": true,
+              "fb": "Richtig: Über Venedig gelangten die Waren vor allem nach Europa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-stuermisches-kap",
+      "kurz": "Dias: stürmisches Kap",
+      "titel": "Dias und der Name des Kaps: erst „stürmisch“, dann „Gute Hoffnung“",
+      "karte": "Bartolomeu Dias umrundete 1488 die Südspitze Afrikas. Er taufte das Kap „stürmisches Kap“ (portugiesisch cabo tormentoso). König Johann II. benannte es euphemistisch in „Kap der Guten Hoffnung“ um. Die Fahrt endete Ende Dezember 1488 in Lissabon.",
+      "quelle": {
+        "titel": "Bartolomeu Dias",
+        "url": "https://de.wikipedia.org/wiki/Bartolomeu_Dias",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie taufte Dias das Kap zuerst?",
+          "beleg": "Dias taufte das Kap ‚stürmisches Kap‘ (portugiesisch cabo tormentoso)",
+          "belegDe": "„Dias taufte das Kap ‚stürmisches Kap‘ (portugiesisch cabo tormentoso)“",
+          "optionen": [
+            {
+              "text": "Kap der Guten Hoffnung",
+              "ok": false,
+              "fb": "Falsch: Diesen Namen gab König Johann II."
+            },
+            {
+              "text": "Kap Bojador",
+              "ok": false,
+              "fb": "Falsch: Kap Bojador umrundete Gil Eanes 1434."
+            },
+            {
+              "text": "Stürmisches Kap",
+              "ok": true,
+              "fb": "Richtig: Dias nannte es „stürmisches Kap“."
+            },
+            {
+              "text": "Kap der Winde",
+              "ok": false,
+              "fb": "Falsch: Dias nannte es „stürmisches Kap“."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wer gab dem Kap den Namen „Kap der Guten Hoffnung“?",
+          "beleg": "Johann II. benannte es euphemistisch ‚Kap der Guten Hoffnung‘",
+          "belegDe": "„Johann II. benannte es euphemistisch ‚Kap der Guten Hoffnung‘“",
+          "optionen": [
+            {
+              "text": "Bartolomeu Dias",
+              "ok": false,
+              "fb": "Falsch: Dias nannte das Kap zuerst „stürmisches Kap“."
+            },
+            {
+              "text": "König Johann II.",
+              "ok": true,
+              "fb": "Richtig: König Johann II. benannte das Kap."
+            },
+            {
+              "text": "Vasco da Gama",
+              "ok": false,
+              "fb": "Falsch: König Johann II. benannte das Kap."
+            },
+            {
+              "text": "Heinrich der Seefahrer",
+              "ok": false,
+              "fb": "Falsch: König Johann II. benannte das Kap."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie weit kam die Flotte von Bartolomeu Dias 1488 höchstens?",
+          "beleg": "Weitester Punkt der Reise war der im März 1488 erreichte Große Fischfluss",
+          "belegDe": "„Weitester Punkt der Reise war der im März 1488 erreichte Große Fischfluss“",
+          "optionen": [
+            {
+              "text": "Bis nach Calicut",
+              "ok": false,
+              "fb": "Falsch: Calicut erreichte Gama 1498."
+            },
+            {
+              "text": "Bis nach Brasilien",
+              "ok": false,
+              "fb": "Falsch: Brasilien wurde 1500 erreicht."
+            },
+            {
+              "text": "Bis zur Mündung des Kongo",
+              "ok": false,
+              "fb": "Falsch: Die Kongo-Mündung erreichte Diogo Cão."
+            },
+            {
+              "text": "Bis zum Großen Fischfluss",
+              "ok": true,
+              "fb": "Richtig: Der weiteste Punkt war der Große Fischfluss im März 1488."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-schiffbruch-1500",
+      "kurz": "Dias: Sturm 1500",
+      "titel": "Dias' letzte Fahrt: Sturm am Kap, 1500",
+      "karte": "Am 29. Mai 1500 sanken während eines Sturms vor dem Kap der Guten Hoffnung vier Schiffe. Das Flaggschiff des Bartolomeu Dias versank am Kap. Wie Dias selbst ums Leben kam, wird nicht ausdrücklich genannt.",
+      "quelle": {
+        "titel": "Bartolomeu Dias",
+        "url": "https://de.wikipedia.org/wiki/Bartolomeu_Dias",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viele Schiffe sanken am 29. Mai 1500 vor dem Kap der Guten Hoffnung?",
+          "beleg": "Während eines Sturms vor dem Kap der Guten Hoffnung sanken am 29. Mai 1500 vier Schiffe",
+          "belegDe": "„Während eines Sturms vor dem Kap der Guten Hoffnung sanken am 29. Mai 1500 vier Schiffe“",
+          "optionen": [
+            {
+              "text": "Vier Schiffe",
+              "ok": true,
+              "fb": "Richtig: Vier Schiffe sanken während des Sturms."
+            },
+            {
+              "text": "Zwei Schiffe",
+              "ok": false,
+              "fb": "Falsch: Es waren vier Schiffe."
+            },
+            {
+              "text": "Drei Schiffe",
+              "ok": false,
+              "fb": "Falsch: Es waren vier Schiffe."
+            },
+            {
+              "text": "Fünf Schiffe",
+              "ok": false,
+              "fb": "Falsch: Es waren vier Schiffe."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was geschah mit dem Flaggschiff des Bartolomeu Dias?",
+          "beleg": "sein Flaggschiff versank am Kap der Guten Hoffnung",
+          "belegDe": "„sein Flaggschiff versank am Kap der Guten Hoffnung“",
+          "optionen": [
+            {
+              "text": "Es wurde an Johann II. übergeben",
+              "ok": false,
+              "fb": "Falsch: Es wurde nicht übergeben, sondern versank am Kap."
+            },
+            {
+              "text": "Es kehrte unbeschädigt nach Lissabon zurück",
+              "ok": false,
+              "fb": "Falsch: Es kehrte nicht unbeschädigt zurück, es versank am Kap."
+            },
+            {
+              "text": "Es versank am Kap der Guten Hoffnung",
+              "ok": true,
+              "fb": "Richtig: Es versank am Kap der Guten Hoffnung."
+            },
+            {
+              "text": "Es wurde in Calicut verkauft",
+              "ok": false,
+              "fb": "Falsch: Es wurde nicht in Calicut verkauft, es versank am Kap."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wodurch sanken die Schiffe am 29. Mai 1500?",
+          "beleg": "Während eines Sturms vor dem Kap der Guten Hoffnung sanken am 29. Mai 1500 vier Schiffe",
+          "belegDe": "„Während eines Sturms vor dem Kap der Guten Hoffnung sanken am 29. Mai 1500 vier Schiffe“",
+          "optionen": [
+            {
+              "text": "Durch ein Gefecht mit arabischen Schiffen",
+              "ok": false,
+              "fb": "Falsch: Die Schiffe sanken nicht in einem Gefecht, sondern im Sturm."
+            },
+            {
+              "text": "Durch einen Sturm vor dem Kap der Guten Hoffnung",
+              "ok": true,
+              "fb": "Richtig: Sie sanken in einem Sturm vor dem Kap."
+            },
+            {
+              "text": "Durch eine Meuterei an Bord, die den Kurs der Flotte änderte",
+              "ok": false,
+              "fb": "Falsch: Die Schiffe sanken im Sturm, nicht durch eine Meuterei."
+            },
+            {
+              "text": "Durch Schiffbruch in Calicut nach einem Gefecht im Hafen",
+              "ok": false,
+              "fb": "Falsch: Die Schiffe sanken vor dem Kap, nicht in Calicut."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-gama-vizekoenig",
+      "kurz": "Gama bis zum Vizekönig",
+      "titel": "Vasco da Gama: Von Calicut bis zum Vizekönig",
+      "karte": "Die Verhandlungen mit dem Zamorin von Calicut verliefen nicht wie erhofft. Am 5. April 1524 brach Gama von Lissabon nach Indien auf, als zum Vizekönig von Indien ernannter Mann.",
+      "quelle": {
+        "titel": "Vasco da Gama",
+        "url": "https://de.wikipedia.org/wiki/Vasco_da_Gama",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie verliefen die Verhandlungen zwischen Vasco da Gama und dem Zamorin von Calicut?",
+          "beleg": "Die Verhandlungen mit dem Zamorin von Calicut verliefen zwar nicht wie erhofft",
+          "belegDe": "„Die Verhandlungen mit dem Zamorin von Calicut verliefen zwar nicht wie erhofft“",
+          "optionen": [
+            {
+              "text": "Sie waren ein voller Erfolg für beide Seiten",
+              "ok": false,
+              "fb": "Falsch: Sie verliefen nicht wie erhofft."
+            },
+            {
+              "text": "Sie wurden sofort und ohne Ergebnis abgebrochen",
+              "ok": false,
+              "fb": "Falsch: Sie verliefen nicht wie erhofft."
+            },
+            {
+              "text": "Sie verliefen zwar nicht wie erhofft",
+              "ok": true,
+              "fb": "Richtig: Sie verliefen nicht wie erhofft."
+            },
+            {
+              "text": "Sie führten schnell zu einem festen Bündnis",
+              "ok": false,
+              "fb": "Falsch: Sie verliefen nicht wie erhofft."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wann brach Gama als Vizekönig nach Indien auf?",
+          "beleg": "Am 5. April 1524 verließ der zum Vizekönig von Indien ernannte da Gama auf seinem Flaggschiff",
+          "belegDe": "„Am 5. April 1524 verließ der zum Vizekönig von Indien ernannte da Gama auf seinem Flaggschiff“",
+          "optionen": [
+            {
+              "text": "Am 24. Dezember 1524",
+              "ok": false,
+              "fb": "Falsch: Er brach am 5. April 1524 auf."
+            },
+            {
+              "text": "Am 29. Mai 1500",
+              "ok": false,
+              "fb": "Falsch: Er brach am 5. April 1524 auf."
+            },
+            {
+              "text": "Am 20. Mai 1498",
+              "ok": false,
+              "fb": "Falsch: Er brach am 5. April 1524 auf."
+            },
+            {
+              "text": "Am 5. April 1524",
+              "ok": true,
+              "fb": "Richtig: Am 5. April 1524 brach er auf."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welchen Titel trug Vasco da Gama bei der Abreise 1524?",
+          "beleg": "zum Vizekönig von Indien ernannte da Gama",
+          "belegDe": "„zum Vizekönig von Indien ernannte da Gama“",
+          "optionen": [
+            {
+              "text": "Vizekönig von Indien",
+              "ok": true,
+              "fb": "Richtig: Er war zum Vizekönig von Indien ernannt."
+            },
+            {
+              "text": "Gouverneur von Malakka",
+              "ok": false,
+              "fb": "Falsch: Er war zum Vizekönig von Indien ernannt."
+            },
+            {
+              "text": "Kapitän der Karavelle",
+              "ok": false,
+              "fb": "Falsch: Er war zum Vizekönig von Indien ernannt."
+            },
+            {
+              "text": "Admiral der Ozeane",
+              "ok": false,
+              "fb": "Falsch: Er war zum Vizekönig von Indien ernannt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-calicut-1502",
+      "kurz": "Calicut 1502",
+      "titel": "Calicut 1502: Die Artillerie entscheidet",
+      "karte": "1502 stand Vasco da Gama wieder an der Spitze der vierten Fahrt. Vor Calicut traf die Flotte auf eine weit größere Flotte indischer und arabischer Schiffe. Die Portugiesen setzten ihr Geschützfeuer ein und vernichteten die gegnerische Flotte fast völlig.",
+      "quelle": {
+        "titel": "Vasco da Gama",
+        "url": "https://de.wikipedia.org/wiki/Vasco_da_Gama",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wodurch vernichteten die Portugiesen 1502 vor Calicut die gegnerische Flotte?",
+          "beleg": "konnten die Portugiesen durch ihr wirksames Geschützfeuer die gegnerische Flotte fast völlig vernichten.",
+          "belegDe": "„konnten die Portugiesen durch ihr wirksames Geschützfeuer die gegnerische Flotte fast völlig vernichten.“",
+          "optionen": [
+            {
+              "text": "Durch Enterangriffe an Bord",
+              "ok": false,
+              "fb": "Falsch: Sie setzten Geschützfeuer ein, keine Enterangriffe."
+            },
+            {
+              "text": "Durch wirksames Geschützfeuer",
+              "ok": true,
+              "fb": "Richtig: Sie setzten wirksames Geschützfeuer ein."
+            },
+            {
+              "text": "Durch einen Brand im Hafen",
+              "ok": false,
+              "fb": "Falsch: Die Flotte wurde durch Geschützfeuer vernichtet, nicht durch einen Brand."
+            },
+            {
+              "text": "Durch Verhandlungen mit dem Zamorin",
+              "ok": false,
+              "fb": "Falsch: Die Flotte wurde durch Geschützfeuer vernichtet."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Fahrt führte Vasco da Gama 1502 an?",
+          "beleg": "Die vierte Fahrt 1502 stand wieder unter dem Kommando Vasco da Gamas",
+          "belegDe": "„Die vierte Fahrt 1502 stand wieder unter dem Kommando Vasco da Gamas“",
+          "optionen": [
+            {
+              "text": "Die vierte Fahrt",
+              "ok": true,
+              "fb": "Richtig: 1502 war es die vierte Fahrt."
+            },
+            {
+              "text": "Die erste Fahrt",
+              "ok": false,
+              "fb": "Falsch: 1502 war es die vierte Fahrt."
+            },
+            {
+              "text": "Die Rückreise von Indien",
+              "ok": false,
+              "fb": "Falsch: 1502 war es die vierte Fahrt."
+            },
+            {
+              "text": "Die Fahrt zum Kap",
+              "ok": false,
+              "fb": "Falsch: 1502 war es die vierte Fahrt."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Folge hatte das Geschützfeuer vor Calicut 1502?",
+          "beleg": "konnten die Portugiesen durch ihr wirksames Geschützfeuer die gegnerische Flotte fast völlig vernichten.",
+          "belegDe": "„konnten die Portugiesen durch ihr wirksames Geschützfeuer die gegnerische Flotte fast völlig vernichten.“",
+          "optionen": [
+            {
+              "text": "Die Portugiesen zogen sich nach Goa zurück und gaben die Fahrt auf",
+              "ok": false,
+              "fb": "Falsch: Die Flotte wurde vernichtet, die Portugiesen zogen nicht nach Goa ab."
+            },
+            {
+              "text": "Der Zamorin schloss sofort einen Frieden mit Gama und Lissabon ab",
+              "ok": false,
+              "fb": "Falsch: Es gab keinen Frieden, die gegnerische Flotte wurde vernichtet."
+            },
+            {
+              "text": "Die gegnerische Flotte wurde fast völlig vernichtet",
+              "ok": true,
+              "fb": "Richtig: Die gegnerische Flotte wurde fast völlig vernichtet."
+            },
+            {
+              "text": "Die Flotte entkam unbeschädigt und kehrte ohne Verluste zurück",
+              "ok": false,
+              "fb": "Falsch: Die Flotte wurde nicht unbeschädigt, sondern fast völlig vernichtet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-goa-malakka",
+      "kurz": "Goa und Malakka",
+      "titel": "Vizekönig und Eroberer: Goa 1510, Malakka 1511",
+      "karte": "König Manuel I. ernannte 1505 Francisco de Almeida zum ersten Vizekönig des portugiesischen Indiens. Afonso de Albuquerque führte die portugiesischen Truppen in zahlreichen Schlachten, darunter die Eroberung von Goa 1510 und die Einnahme von Malakka 1511. In Malakka war der Sultan vor dem zweiten Angriff aus der Stadt geflohen.",
+      "quelle": {
+        "titel": "Afonso de Albuquerque",
+        "url": "https://en.wikipedia.org/wiki/Afonso_de_Albuquerque",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wer wurde 1505 erster Vizekönig des portugiesischen Indiens?",
+          "beleg": "In 1505 King Manuel I of Portugal appointed Francisco de Almeida first Viceroy of Portuguese India",
+          "belegDe": "1505 ernannte König Manuel I. von Portugal Francisco de Almeida zum ersten Vizekönig des portugiesischen Indiens.",
+          "optionen": [
+            {
+              "text": "Pedro Álvares Cabral",
+              "ok": false,
+              "fb": "Falsch: Cabral führte 1500 die zweite Reise nach Indien."
+            },
+            {
+              "text": "Francisco de Almeida",
+              "ok": true,
+              "fb": "Richtig: Francisco de Almeida wurde 1505 erster Vizekönig."
+            },
+            {
+              "text": "Vasco da Gama",
+              "ok": false,
+              "fb": "Falsch: Gama erreichte Calicut 1498."
+            },
+            {
+              "text": "Afonso de Albuquerque",
+              "ok": false,
+              "fb": "Falsch: Albuquerque eroberte Goa 1510, ernannt wurde 1505 Almeida."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Stadt eroberte Afonso de Albuquerque 1510?",
+          "beleg": "led the Portuguese forces in numerous battles, including the conquest of Goa in 1510 and the capture of Malacca in 1511",
+          "belegDe": "… führte die portugiesischen Truppen in zahlreichen Schlachten, darunter die Eroberung von Goa 1510 und die Einnahme von Malakka 1511.",
+          "optionen": [
+            {
+              "text": "Malakka",
+              "ok": false,
+              "fb": "Falsch: Malakka eroberte er 1511."
+            },
+            {
+              "text": "Calicut",
+              "ok": false,
+              "fb": "Falsch: Calicut erreichte Gama 1498."
+            },
+            {
+              "text": "Ceuta",
+              "ok": false,
+              "fb": "Falsch: Ceuta eroberte Portugal bereits 1415."
+            },
+            {
+              "text": "Goa",
+              "ok": true,
+              "fb": "Richtig: Goa wurde 1510 erobert."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was geschah 1511 in Malakka?",
+          "beleg": "On 15 August, the Portuguese attacked again, but the Sultan had fled the city.",
+          "belegDe": "Am 15. August griffen die Portugiesen erneut an, doch der Sultan war aus der Stadt geflohen.",
+          "optionen": [
+            {
+              "text": "Die Portugiesen nahmen die Stadt, der Sultan war geflohen",
+              "ok": true,
+              "fb": "Richtig: Die Portugiesen nahmen die Stadt, der Sultan war geflohen."
+            },
+            {
+              "text": "Der Sultan ergab sich nach langen Verhandlungen und blieb als Herrscher in der Stadt",
+              "ok": false,
+              "fb": "Falsch: Der Sultan war geflohen, er ergab sich nicht."
+            },
+            {
+              "text": "Die Portugiesen zogen nach einem ersten Angriff wieder ab, ohne die Stadt zu nehmen",
+              "ok": false,
+              "fb": "Falsch: Die Stadt wurde 1511 eingenommen."
+            },
+            {
+              "text": "Gama blieb nach der Einnahme als unabhängiger Herrscher in der Stadt zurück",
+              "ok": false,
+              "fb": "Falsch: Die Stadt wurde 1511 eingenommen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cro-monopol-krone",
+      "kurz": "Das Monopol der Krone",
+      "titel": "Das Monopol der Krone: Pfeffer und Gewürze",
+      "karte": "Die portugiesische Krone wollte von Beginn an den Pfeffer- und Gewürzhandel in Asien monopolisieren, um auch den Levantehandel zu unterbinden. Nach der Eroberung Malakkas 1511 kontrollierten die Portugiesen zudem den westlichen Seeweg zu den Gewürzinseln. Das königliche Monopol fiel offiziell erst 1570.",
+      "quelle": {
+        "titel": "Indienhandel",
+        "url": "https://de.wikipedia.org/wiki/Indienhandel",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-10-30"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was war das Ziel der portugiesischen Krone im Gewürzhandel?",
+          "beleg": "Ziel der portugiesischen Krone war von Beginn an die Monopolisierung des Pfeffer- und Gewürzhandels in Asien,",
+          "belegDe": "„Ziel der portugiesischen Krone war von Beginn an die Monopolisierung des Pfeffer- und Gewürzhandels in Asien,“",
+          "optionen": [
+            {
+              "text": "Die Monopolisierung des Pfeffer- und Gewürzhandels in Asien",
+              "ok": true,
+              "fb": "Richtig: Das war das Ziel: die Monopolisierung des Gewürzhandels in Asien."
+            },
+            {
+              "text": "Den gesamten Handel mit Europa vollständig einzustellen und zu verbieten",
+              "ok": false,
+              "fb": "Falsch: Ziel war das Monopol im Gewürzhandel in Asien."
+            },
+            {
+              "text": "Den Seeweg nach Afrika zu sichern und die Küsten zu befestigen",
+              "ok": false,
+              "fb": "Falsch: Ziel war das Monopol im Gewürzhandel in Asien."
+            },
+            {
+              "text": "Die Missionierung Indiens und die Bekehrung der lokalen Herrscher",
+              "ok": false,
+              "fb": "Falsch: Ziel war das Monopol im Gewürzhandel in Asien."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welchen Handel sollte das Monopol zusätzlich unterbinden?",
+          "beleg": "um so den Levantehandel zu unterbinden.",
+          "belegDe": "„um so den Levantehandel zu unterbinden.“",
+          "optionen": [
+            {
+              "text": "Den Handel mit Brasilien",
+              "ok": false,
+              "fb": "Falsch: Unterbunden werden sollte der Levantehandel."
+            },
+            {
+              "text": "Den Handel mit Afrika",
+              "ok": false,
+              "fb": "Falsch: Unterbunden werden sollte der Levantehandel."
+            },
+            {
+              "text": "Den Handel mit der Hanse",
+              "ok": false,
+              "fb": "Falsch: Unterbunden werden sollte der Levantehandel."
+            },
+            {
+              "text": "Den Levantehandel",
+              "ok": true,
+              "fb": "Richtig: Unterbunden werden sollte der Levantehandel."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wann fiel das königliche Monopol offiziell?",
+          "beleg": "Das königliche Monopol fiel offiziell erst 1570",
+          "belegDe": "„Das königliche Monopol fiel offiziell erst 1570“",
+          "optionen": [
+            {
+              "text": "1498",
+              "ok": false,
+              "fb": "Falsch: Das Monopol fiel 1570."
+            },
+            {
+              "text": "1570",
+              "ok": true,
+              "fb": "Richtig: Es fiel offiziell 1570."
+            },
+            {
+              "text": "1511",
+              "ok": false,
+              "fb": "Falsch: Das Monopol fiel 1570."
+            },
+            {
+              "text": "1622",
+              "ok": false,
+              "fb": "Falsch: Das Monopol fiel 1570."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [
+    {
+      "von": [
+        10
+      ],
+      "titel": "Lissabon 1941",
+      "url": "/buch/lissabon-1941/",
+      "ziel": "lissabon-1941"
+    },
+    {
+      "von": [
+        11
+      ],
+      "titel": "Dalrymple: Die Anarchie",
+      "url": "/buch/dalrymple-anarchie/",
+      "ziel": "dalrymple-anarchie"
+    }
+  ],
   "verlagUrl": "",
   "leseprobeUrl": "",
-  "amazonUrl": "https://link.amazon/B02gWjpRE",
-  "cover": "",
-  "coverBreite": 0,
-  "coverHoehe": 0,
-  "coverCredit": "",
+  "amazonUrl": "https://link.amazon/B0iEf5fz0",
+  "cover": "cover.jpg",
+  "coverBreite": 976,
+  "coverHoehe": 1500,
+  "coverCredit": "Cover der englischen Originalausgabe „Conquerors“ (Amazon-Produktbild)",
   "naechsteWoche": "",
-  "probeTitel": "",
-  "graphTitel": ""
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph zu Portugals Weltreich",
+  "beitrag": {
+    "etikett": "Die Frage",
+    "titel": "Wie begann Portugals Weltreich?",
+    "anreisser": "Am 21. August 1415 eroberten portugiesische Truppen Ceuta in Nordafrika. Die Quelle nennt dieses Datum den Beginn des portugiesischen Reiches.",
+    "absaetze": [
+      "Die Antwort beginnt nicht in Indien, sondern in Nordafrika. König Johann I. ließ 1415 Ceuta erobern, mit dabei waren seine Söhne, unter ihnen Heinrich. Die Quelle nennt zwei Gründe: Für die Prinzen lockten Reichtum und Ruhm, und Ceuta konnte Portugal erlauben, Kastilien, seinen gefährlichsten Rivalen, in die Flanke zu fallen.",
+      "Heinrich ist als „der Seefahrer“ bekannt. Die Quelle sieht in ihm vor allem einen Förderer: Er unterstützte Fahrten, meist mit ein oder zwei Schiffen, die der Küste folgten. Die Seefahrerschule in Sagres, die man ihm zuschreibt, halten moderne Historiker für einen Irrtum. Den Mythos gibt es erst seit dem 18. Jahrhundert.",
+      "Der Schritt in den Atlantik folgte bald. Madeira wurde 1419 erreicht, die Azoren 1427. Heinrich ließ Porto Santo besiedeln, 1420 zogen Siedler nach Madeira. Das Jahr für die Azoren ist nach Wikipedia unsicher.",
+      "Das eigentliche Ziel war Indien und sein Gewürzhandel. 1488 umrundete Bartolomeu Dias die Südspitze Afrikas. Im Mai 1498 erreichte Vasco da Gama Calicut im Südwesten Indiens. Die Seeweg-Karte im Buch [[buch:lissabon-1941|Lissabon 1941]] zeigt diese Fahrt.",
+      "1505 ernannte König Manuel I. Francisco de Almeida zum ersten Vizekönig des portugiesischen Indiens. Afonso de Albuquerque führte die Truppen in zahlreichen Schlachten, darunter die Eroberung von Goa 1510 und die Einnahme von Malakka 1511. Dort war der Sultan vor dem zweiten Angriff aus der Stadt geflohen.",
+      "Unsere Einordnung: Das Reich begann nicht mit einem großen Plan, sondern mit einer Eroberung in Afrika und einer Reihe von Fahrten, die Jahr für Jahr weiter reichten. Ob es von Anfang an ein Plan für die Welt war, lässt sich mit diesen Karten nicht entscheiden.",
+      "Wer die Karten durchspielt, sieht die Stationen: Ceuta, die Atlantikinseln, Kongo, das Kap, Indien, Goa und Malakka."
+    ],
+    "autor": "Heiko Miertzsch",
+    "grundlage": "Grundlage sind die Wikipedia-Artikel, die jede Karte nennt."
+  }
 }
