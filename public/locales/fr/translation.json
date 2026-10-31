@@ -49,6 +49,28 @@
       "text": "Nous rendons le savoir si accessible que le chemin d’ici à là prend le moins de temps possible — et entraîneurs et équipe sont du même côté."
     }
   },
+  "roles": {
+    "srTitle": "Pour qui est plinyoo",
+    "roleLabel": "Rôle",
+    "cta": "Demander un accès",
+    "learner": {
+      "title": "Tu veux apprendre ?",
+      "role": "Apprenant·e",
+      "description": "Apprends ce qui te fait avancer, à ta manière. Chaque carte que tu maîtrises devient une étoile dans ton univers de savoir."
+    },
+    "curator": {
+      "title": "Tu veux rendre le monde plus intelligent ?",
+      "role": "Curateur·rice",
+      "description": "Ton savoir mérite un public. Tu écris des cartes, tu développes des thèmes que tu partages avec tes abonnés, et tu rends ainsi le monde plus intelligent et meilleur."
+    },
+    "wegbereiter": {
+      "title": "Tu diriges une équipe ?",
+      "role": "Wegbereiter (ouvreur de chemin)",
+      "description": "Ton équipe progresse parce que chacun apprend ce qui compte pour lui. Tu ouvres un thème et tu invites les gens par lien. Nous croyons que celui qui choisit son propre chemin comprend aussi mieux le programme obligatoire.",
+      "more": "En savoir plus pour formateurs et équipes",
+      "moreHref": "/fr/pour-formateurs/"
+    }
+  },
   "howItWorks": {
     "steps": [
       {

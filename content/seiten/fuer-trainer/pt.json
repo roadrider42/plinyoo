@@ -1,0 +1,159 @@
+{
+  "lang": "pt",
+  "sprachname": "Português",
+  "pfad": "/pt/para-formadores/",
+  "ogLocale": "pt_BR",
+  "entwurfHinweis": "RASCUNHO — não publicado",
+  "meta": {
+    "title": "Plataforma de aprendizagem para formadores | plinyoo",
+    "description": "Dê aos seus participantes uma ferramenta para o próprio caminho: cartões e perguntas, no próprio ritmo, antes e depois do treinamento. Pedir acesso."
+  },
+  "og": {
+    "zeile": "Para formadores, coaches e equipes",
+    "titel": "Seu treinamento como universo de conhecimento para preparação e revisão."
+  },
+  "nav": {
+    "sprache": "Idioma",
+    "haupt": "Navegação principal",
+    "startseite": "plinyoo, para a página inicial",
+    "login": "Entrar",
+    "zugang": "Pedir acesso"
+  },
+  "hero": {
+    "eyebrow": "Para formadores, coaches e equipes",
+    "h1": "Seu treinamento como universo de conhecimento para preparação e revisão.",
+    "lead": "Com o plinyoo, seus conteúdos viram cartões e perguntas. Seus participantes entram por link ou QR code e seguem o próprio caminho: no próprio ritmo, para se preparar e para revisar depois.",
+    "cta": "Pedir acesso",
+    "hinweis": "Responderemos a você pessoalmente.",
+    "sprung": "Veja como é um tema ↓"
+  },
+  "problem": {
+    "h2": "Seu treinamento é uma parte do caminho",
+    "intro": "O importante acontece antes e depois, sem você na sala.",
+    "punkte": [
+      "Alguns participantes chegam bem preparados, outros não conhecem o básico.",
+      "Depois do encontro, os slides ficam na caixa de e-mail, e as perguntas chegam semanas depois.",
+      "Você explica o básico do zero para cada novo grupo."
+    ],
+    "schluss": "Por isso, no plinyoo você dá aos seus participantes uma ferramenta: cada pessoa segue o próprio caminho pelo seu tema, no próprio ritmo, antes do treinamento e depois."
+  },
+  "schritte": {
+    "h2": "Seu tema em três passos",
+    "items": [
+      {
+        "titel": "Criar cartões",
+        "text": "Um cartão, uma ideia, com perguntas. Você os escreve direto no plinyoo ou traz textos de arquivos, páginas da Wikipédia ou do Obsidian. Com vínculos como “base para isto” e “se apoia nisto”, você conecta os cartões em uma rede – ou o plinyoo faz isso por você. Reúna cartões em um tema e crie assim um universo de conhecimento."
+      },
+      {
+        "titel": "Convidar participantes",
+        "text": "Por link, e-mail ou QR code, por exemplo no último slide ou na folha de exercícios. Você decide quem vê o quê: privado, só para seguidores ou público."
+      },
+      {
+        "titel": "Cada pessoa segue seu caminho",
+        "text": "Seus participantes se preparam e revisam, cada um no próprio ritmo e no próprio caminho. Eles leem um cartão, respondem às perguntas e decidem sozinhos para onde ir depois. “Continuar aprendendo” retoma de onde pararam."
+      }
+    ]
+  },
+  "weg": {
+    "h2": "Seu programa como universo de conhecimento",
+    "lead": "Seus cartões e vínculos viram um universo que cada pessoa explora do seu jeito.",
+    "absaetze": [
+      "Seus participantes não seguem capítulo após capítulo. Eles decidem para onde ir: abaixo de cada cartão há caminhos para o próximo e para um cartão relacionado. Cada cartão aprendido vira uma estrela no seu universo de conhecimento, e a nuvem mostra todos os cartões do seu tema de uma vez.",
+      "O que já está firme volta mais tarde. O que ainda está fraco volta antes. Quando um cartão se apoia em outro, o quiz pergunta primeiro pela base."
+    ],
+    "schluss": "Você define as conexões. Cada pessoa define seu caminho."
+  },
+  "fuerwen": {
+    "h2": "Para todos que compartilham conhecimento",
+    "intro": "No plinyoo, <strong>curador</strong> é quem monta um tema e convida pessoas para ele. Não importa se você é formadora, coach, professor ou líder de equipe.",
+    "items": [
+      {
+        "titel": "Formadores e coaches",
+        "text": "Dê aos seus grupos uma ferramenta para se preparar para o seu encontro e revisá-lo depois: cartões, perguntas e um caminho próprio."
+      },
+      {
+        "titel": "Escolas de formação e academias",
+        "text": "Complemente seus seminários com um tema que os participantes podem abrir a qualquer momento, antes do seminário e depois."
+      },
+      {
+        "titel": "Equipes e formação na empresa",
+        "text": "Integre novos colaboradores com um tema. E também antes de treinamentos obrigatórios, cada pessoa pode se preparar voluntariamente, no próprio ritmo."
+      }
+    ]
+  },
+  "experte": {
+    "h2": "Você continua sendo o especialista",
+    "absaetze": [
+      "Experiência, julgamento e acompanhamento vêm de você. O plinyoo dá aos seus participantes a ferramenta para o próprio caminho, antes do seu treinamento e depois.",
+      "Hoje, o aprendizado está no centro. Outras possibilidades para curadores surgem passo a passo, junto com quem usa o plinyoo."
+    ]
+  },
+  "vertrauen": {
+    "h2": "Quando confiança e segurança importam",
+    "absaetze": [
+      "Algumas organizações querem saber exatamente onde está seu conhecimento e quem o opera. O plinyoo foi pensado como plataforma white label, para ser usado com a sua própria marca. Conversamos com prazer sobre como isso pode ser para você."
+    ],
+    "cta": "Fale com a gente"
+  },
+  "beispiel": {
+    "h2": "Um tema para conhecer",
+    "text": "É assim que um tema se parece: {karten} cartões sobre “A Anarquia”, de William Dalrymple, com {fragen} perguntas. Você pode percorrê-los sem se cadastrar. (A página está em alemão.)",
+    "link": "Ver o tema de exemplo",
+    "href": "/buch/dalrymple-anarchie/"
+  },
+  "faq": {
+    "h2": "Perguntas frequentes",
+    "items": [
+      {
+        "f": "O que é o plinyoo?",
+        "a": "Uma plataforma de aprendizagem em que o conhecimento está em cartões. Cada cartão tem suas perguntas, e os cartões se referem uns aos outros. Cada pessoa segue o próprio caminho pelos cartões. Quem monta um tema se chama curador. Quem o segue se chama seguidor."
+      },
+      {
+        "f": "Como meus participantes entram no meu tema?",
+        "a": "Por link de convite, e-mail ou QR code. Ao entrar, uma conta é criada. O plinyoo funciona no navegador, também no celular. Para o QR code, seu tema precisa de pelo menos cinco cartões liberados para seguidores."
+      },
+      {
+        "f": "Como funciona a revisão?",
+        "a": "Cada pergunta que alguém responde recebe uma data para voltar. Resposta errada: já no dia seguinte. Resposta certa: depois de um dia, depois de seis dias e então em intervalos cada vez maiores, no máximo depois de meio ano. Isso se chama repetição espaçada. Perguntas que alguém deixou de lado ou denunciou não voltam mais."
+      },
+      {
+        "f": "Quanto custa o plinyoo?",
+        "a": "Quem você convida não paga nada. Para curadores, está previsto um preço mensal fixo, independentemente de quantos participantes você tenha. Configuramos tudo com você pessoalmente e combinamos as condições."
+      },
+      {
+        "f": "Posso aproveitar meus textos existentes?",
+        "a": "Sim, de arquivos, páginas da Wikipédia e do Obsidian. Antes da importação você vê o que é novo e o que muda. Cartões novos do Obsidian chegam como rascunho; os alunos só os veem quando você os libera. A importação do Obsidian ainda não traz imagens."
+      },
+      {
+        "f": "Posso liberar conteúdo só para o meu grupo?",
+        "a": "Sim. Coloque seu tema em “Só para seguidores”. Assim, todos que o seguem o veem, com os cartões marcados como “Só para seguidores” ou “Público”. “Privado” é só para você."
+      },
+      {
+        "f": "Consigo ver o que meus participantes aprenderam?",
+        "a": "Cada pessoa vê o próprio progresso: cada cartão aprendido vira uma estrela no seu universo de conhecimento. O que você, como curador, vê do progresso dos participantes está sendo ampliado agora."
+      },
+      {
+        "f": "Posso usar o plinyoo para que participantes se preparem para treinamentos obrigatórios?",
+        "a": "Sim. Seus participantes se preparam voluntariamente, no próprio ritmo e no próprio caminho pelos seus cartões. Acreditamos que quem aprende assim tem mais chances de passar em um treinamento obrigatório."
+      },
+      {
+        "f": "Posso usar o plinyoo com a minha própria marca?",
+        "a": "O plinyoo foi pensado como plataforma white label, para ser usado com a sua própria marca. Fale com a gente se isso for importante para você; conversamos com prazer sobre como pode ser."
+      }
+    ]
+  },
+  "abschluss": {
+    "h2": "Seu primeiro tema",
+    "absaetze": [
+      "O plinyoo está em construção. Você monta seu primeiro tema junto com a gente, e o que você precisar no caminho ajuda a decidir o que construímos em seguida.",
+      "Você conduz grupos, seminários ou uma equipe e quer ver como seu conhecimento fica como tema? Peça acesso. Responderemos pessoalmente e convidaremos você pelo app."
+    ],
+    "cta": "Pedir acesso",
+    "pilot": "Procuramos parceiros piloto: um tema, um grupo, um período definido."
+  },
+  "footer": {
+    "impressum": "Aviso Legal",
+    "datenschutz": "Privacidade",
+    "urheberrecht": "Direitos Autorais"
+  }
+}

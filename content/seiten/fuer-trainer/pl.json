@@ -1,0 +1,159 @@
+{
+  "lang": "pl",
+  "sprachname": "Polski",
+  "pfad": "/pl/dla-trenerow/",
+  "ogLocale": "pl_PL",
+  "entwurfHinweis": "WERSJA ROBOCZA — nieopublikowana",
+  "meta": {
+    "title": "Platforma do nauki dla trenerów: przed i po szkoleniu | plinyoo",
+    "description": "Daj uczestnikom narzędzie do własnej ścieżki: karty i pytania, we własnym tempie, przed szkoleniem i po nim. Poproś o dostęp."
+  },
+  "og": {
+    "zeile": "Dla trenerów, coachów i zespołów",
+    "titel": "Twoje szkolenie jako wszechświat wiedzy do przygotowania i utrwalenia."
+  },
+  "nav": {
+    "sprache": "Język",
+    "haupt": "Nawigacja główna",
+    "startseite": "plinyoo, do strony głównej",
+    "login": "Zaloguj się",
+    "zugang": "Poproś o dostęp"
+  },
+  "hero": {
+    "eyebrow": "Dla trenerów, coachów i zespołów",
+    "h1": "Twoje szkolenie jako wszechświat wiedzy do przygotowania i utrwalenia.",
+    "lead": "Dzięki plinyoo Twoje treści stają się kartami i pytaniami. Uczestnicy dołączają przez link lub kod QR i idą własną ścieżką: we własnym tempie, żeby się przygotować i żeby utrwalić wiedzę po szkoleniu.",
+    "cta": "Poproś o dostęp",
+    "hinweis": "Odezwiemy się do Ciebie osobiście.",
+    "sprung": "Zobacz, jak wygląda temat ↓"
+  },
+  "problem": {
+    "h2": "Twoje szkolenie to część drogi",
+    "intro": "Ważne rzeczy dzieją się przed nim i po nim, bez Ciebie na sali.",
+    "punkte": [
+      "Niektórzy uczestnicy przychodzą dobrze przygotowani, inni nie znają podstaw.",
+      "Po spotkaniu slajdy leżą w skrzynce, a pytania pojawiają się tygodnie później.",
+      "Każdej nowej grupie tłumaczysz podstawy od nowa."
+    ],
+    "schluss": "Dlatego w plinyoo dajesz uczestnikom narzędzie: każda osoba idzie własną ścieżką przez Twój temat, we własnym tempie, przed szkoleniem i po nim."
+  },
+  "schritte": {
+    "h2": "Twój temat w trzech krokach",
+    "items": [
+      {
+        "titel": "Utwórz karty",
+        "text": "Jedna karta, jedna myśl, do tego pytania. Piszesz je bezpośrednio w plinyoo albo importujesz teksty z plików, stron Wikipedii lub Obsidiana. Odnośnikami takimi jak „podstawa dla tego” i „opiera się na tym” łączysz karty w sieć – albo plinyoo zrobi to za Ciebie. Zbierz karty w temat i stwórz w ten sposób wszechświat wiedzy."
+      },
+      {
+        "titel": "Zaproś uczestników",
+        "text": "Przez link, e-mail lub kod QR, na przykład na ostatnim slajdzie albo na karcie pracy. Ty decydujesz, kto co widzi: prywatne, tylko dla obserwujących albo publiczne."
+      },
+      {
+        "titel": "Każdy idzie swoją ścieżką",
+        "text": "Uczestnicy przygotowują się i utrwalają wiedzę, każdy we własnym tempie i na własnej ścieżce. Czytają kartę, odpowiadają na pytania i sami decydują, dokąd iść dalej. „Ucz się dalej” wraca tam, gdzie skończyli."
+      }
+    ]
+  },
+  "weg": {
+    "h2": "Twój program jako wszechświat wiedzy",
+    "lead": "Twoje karty i odnośniki tworzą wszechświat, który każdy odkrywa po swojemu.",
+    "absaetze": [
+      "Uczestnicy nie przerabiają rozdział po rozdziale. Sami decydują, dokąd iść dalej: pod każdą kartą prowadzą ścieżki do następnej i do karty powiązanej. Każda nauczona karta staje się gwiazdą w ich wszechświecie wiedzy, a chmura pokazuje wszystkie karty Twojego tematu naraz.",
+      "To, co już siedzi w głowie, wraca później. To, co jeszcze się chwieje, wraca wcześniej. Gdy jedna karta opiera się na innej, quiz najpierw pyta o podstawę."
+    ],
+    "schluss": "Ty wyznaczasz połączenia. Każdy wyznacza swoją ścieżkę."
+  },
+  "fuerwen": {
+    "h2": "Dla wszystkich, którzy przekazują wiedzę",
+    "intro": "W plinyoo <strong>kurator</strong> to ktoś, kto układa temat i zaprasza do niego ludzi. Nie ma znaczenia, czy jesteś trenerką, coachem, wykładowcą czy liderem zespołu.",
+    "items": [
+      {
+        "titel": "Trenerzy i coachowie",
+        "text": "Daj swoim grupom narzędzie do przygotowania się do spotkania i utrwalenia go potem: karty, pytania i własna ścieżka."
+      },
+      {
+        "titel": "Firmy szkoleniowe i akademie",
+        "text": "Uzupełnij seminaria o temat, który uczestnicy mogą otworzyć w każdej chwili, przed seminarium i po nim."
+      },
+      {
+        "titel": "Zespoły i szkolenia w firmie",
+        "text": "Wprowadzaj nowych pracowników przez temat. Również przed szkoleniami obowiązkowymi każdy może przygotować się dobrowolnie, we własnym tempie."
+      }
+    ]
+  },
+  "experte": {
+    "h2": "Ty pozostajesz ekspertem",
+    "absaetze": [
+      "Doświadczenie, osąd i wsparcie pochodzą od Ciebie. plinyoo daje uczestnikom narzędzie do własnej ścieżki, przed Twoim szkoleniem i po nim.",
+      "Dziś w centrum jest nauka. Kolejne możliwości dla kuratorów powstają krok po kroku, razem z osobami, które korzystają z plinyoo."
+    ]
+  },
+  "vertrauen": {
+    "h2": "Gdy liczą się zaufanie i bezpieczeństwo",
+    "absaetze": [
+      "Niektóre organizacje chcą dokładnie wiedzieć, gdzie znajduje się ich wiedza i kto ją obsługuje. plinyoo jest zaprojektowane jako platforma white label, do używania pod własną marką. Chętnie porozmawiamy z Tobą, jak mogłoby to wyglądać."
+    ],
+    "cta": "Porozmawiaj z nami"
+  },
+  "beispiel": {
+    "h2": "Temat do obejrzenia",
+    "text": "Tak wygląda temat: {karten} kart o książce Williama Dalrymple’a „Anarchia”, z {fragen} pytaniami. Możesz je przejść bez rejestracji. (Strona jest po niemiecku.)",
+    "link": "Zobacz przykładowy temat",
+    "href": "/buch/dalrymple-anarchie/"
+  },
+  "faq": {
+    "h2": "Częste pytania",
+    "items": [
+      {
+        "f": "Czym jest plinyoo?",
+        "a": "Platformą do nauki, na której wiedza mieści się w kartach. Do każdej karty należą pytania, a karty odsyłają do siebie nawzajem. Każda osoba idzie własną ścieżką przez karty. Kto układa temat, to kurator. Kto go obserwuje, to obserwujący."
+      },
+      {
+        "f": "Jak uczestnicy dołączają do mojego tematu?",
+        "a": "Przez link z zaproszeniem, e-mail lub kod QR. Przy dołączeniu powstaje konto. plinyoo działa w przeglądarce, także na telefonie. Do kodu QR Twój temat potrzebuje co najmniej pięciu kart udostępnionych obserwującym."
+      },
+      {
+        "f": "Jak działają powtórki?",
+        "a": "Każde pytanie, na które ktoś odpowie, dostaje termin powrotu. Zła odpowiedź: już następnego dnia. Dobra odpowiedź: po jednym dniu, potem po sześciu dniach, a dalej w coraz dłuższych odstępach, najpóźniej po pół roku. Nazywa się to powtórkami rozłożonymi w czasie (spaced repetition). Pytania, które ktoś odłożył lub zgłosił, już nie wracają."
+      },
+      {
+        "f": "Ile kosztuje plinyoo?",
+        "a": "Osoby, które zapraszasz, nie płacą nic. Dla kuratorów planowana jest stała cena miesięczna, niezależna od liczby uczestników. Konfigurujemy wszystko z Tobą osobiście i uzgadniamy warunki."
+      },
+      {
+        "f": "Czy mogę wykorzystać swoje istniejące teksty?",
+        "a": "Tak, z plików, stron Wikipedii i Obsidiana. Przed importem widzisz, co jest nowe, a co się zmienia. Nowe karty z Obsidiana trafiają jako wersje robocze; uczący się widzą je dopiero, gdy je udostępnisz. Import z Obsidiana nie przenosi jeszcze obrazów."
+      },
+      {
+        "f": "Czy mogę udostępnić treści tylko mojej grupie?",
+        "a": "Tak. Ustaw temat na „Tylko dla obserwujących”. Wtedy widzą go wszyscy, którzy go obserwują, razem z kartami ustawionymi na „Tylko dla obserwujących” lub „Publiczne”. „Prywatne” jest tylko dla Ciebie."
+      },
+      {
+        "f": "Czy widzę, czego nauczyli się moi uczestnicy?",
+        "a": "Każda osoba widzi własne postępy: każda nauczona karta staje się gwiazdą w jej wszechświecie wiedzy. To, co jako kurator widzisz o postępach uczestników, właśnie rozbudowujemy."
+      },
+      {
+        "f": "Czy mogę używać plinyoo, żeby uczestnicy przygotowywali się do szkoleń obowiązkowych?",
+        "a": "Tak. Uczestnicy przygotowują się dobrowolnie, we własnym tempie i własną ścieżką przez Twoje karty. Wierzymy, że kto uczy się w ten sposób, ma większe szanse zaliczyć szkolenie obowiązkowe."
+      },
+      {
+        "f": "Czy mogę używać plinyoo pod własną marką?",
+        "a": "plinyoo jest zaprojektowane jako platforma white label, do używania pod własną marką. Napisz do nas, jeśli to dla Ciebie ważne; chętnie omówimy, jak mogłoby to wyglądać."
+      }
+    ]
+  },
+  "abschluss": {
+    "h2": "Twój pierwszy temat",
+    "absaetze": [
+      "plinyoo jest w budowie. Swój pierwszy temat konfigurujesz razem z nami, a to, czego przy tym potrzebujesz, pomaga zdecydować, co zbudujemy w następnej kolejności.",
+      "Prowadzisz grupy, seminaria lub zespół i chcesz zobaczyć, jak Twoja wiedza wygląda jako temat? Poproś o dostęp. Odezwiemy się osobiście i zaprosimy Cię z aplikacji."
+    ],
+    "cta": "Poproś o dostęp",
+    "pilot": "Szukamy partnerów pilotażowych: jeden temat, jedna grupa, określony czas."
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "datenschutz": "Polityka prywatności",
+    "urheberrecht": "Prawa autorskie"
+  }
+}

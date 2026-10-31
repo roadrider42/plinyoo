@@ -87,7 +87,9 @@
     "wegbereiter": {
       "title": "Du führst ein Team?",
       "role": "Wegbereiter:in",
-      "description": "Dein Team wird gut, weil jede:r lernt, was für sie oder ihn wichtig ist. Du machst ein Thema auf und holst Leute per Link dazu. Wir glauben: Wer den eigenen Weg wählt, versteht auch das Pflichtprogramm besser."
+      "description": "Dein Team wird gut, weil jede:r lernt, was für sie oder ihn wichtig ist. Du machst ein Thema auf und holst Leute per Link dazu. Wir glauben: Wer den eigenen Weg wählt, versteht auch das Pflichtprogramm besser.",
+      "more": "Mehr für Trainer und Teams",
+      "moreHref": "/fuer-trainer/"
     }
   },
   "howItWorks": {

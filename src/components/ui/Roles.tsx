@@ -42,6 +42,15 @@ export default function Roles() {
             >
               {t('roles.cta')} &rarr;
             </Link>
+            {/* Zweiter Link auf die statische Trainer-Seite in der passenden Sprache (kein Router-Link: liegt außerhalb der App) */}
+            {key === 'wegbereiter' && (
+              <a
+                href={t('roles.wegbereiter.moreHref')}
+                className="inline-block text-sm font-semibold text-primary underline-offset-4 hover:underline"
+              >
+                {t('roles.wegbereiter.more')} &rarr;
+              </a>
+            )}
           </div>
         ))}
       </div>

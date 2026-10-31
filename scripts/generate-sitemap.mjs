@@ -41,6 +41,22 @@ async function generateSitemap() {
     console.warn('Buchseiten konnten nicht gelesen werden:', e.message);
   }
 
+  // Statische Unterseiten (content/seiten/<seite>/), je Sprache eine Adresse; Entwürfe nicht
+  const seitenDir = path.join(root, 'content', 'seiten');
+  try {
+    for (const name of await readdir(seitenDir)) {
+      const dir = path.join(seitenDir, name);
+      const meta = JSON.parse(await readFile(path.join(dir, 'seite.json'), 'utf-8'));
+      if (meta.draft) continue;
+      for (const file of (await readdir(dir)).filter((f) => /^[a-z]{2}\.json$/.test(f))) {
+        const t = JSON.parse(await readFile(path.join(dir, file), 'utf-8'));
+        urls.push({ loc: `${SITE}${t.pfad}`, changefreq: 'monthly', priority: '0.8', lastmod: new Date().toISOString().split('T')[0] });
+      }
+    }
+  } catch (e) {
+    console.warn('Unterseiten konnten nicht gelesen werden:', e.message);
+  }
+
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url>
