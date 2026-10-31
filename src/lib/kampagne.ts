@@ -9,9 +9,10 @@ export interface Kampagne {
   utm_source?: string;
   utm_medium?: string;
   utm_campaign?: string;
+  utm_content?: string;
 }
 
-const KEYS = ['buch', 'utm_source', 'utm_medium', 'utm_campaign'] as const;
+const KEYS = ['buch', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content'] as const;
 const STORAGE_KEY = 'plinyoo.kampagne';
 
 // Nur harmlose Zeichen und begrenzte Länge: Der Wert landet in einer E-Mail.
@@ -63,7 +64,7 @@ export function getKampagne(): Kampagne {
 export function kampagneZeilen(k: Kampagne): string[] {
   const zeilen: string[] = [];
   if (k.buch) zeilen.push(`Buch: ${k.buch}`);
-  const quelle = [k.utm_source, k.utm_medium, k.utm_campaign].filter(Boolean).join(' / ');
+  const quelle = [k.utm_source, k.utm_medium, k.utm_campaign, k.utm_content].filter(Boolean).join(' / ');
   if (quelle) zeilen.push(`Quelle: ${quelle}`);
   return zeilen;
 }

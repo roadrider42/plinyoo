@@ -87,7 +87,9 @@
     "wegbereiter": {
       "title": "Do you lead a team?",
       "role": "Wegbereiter (path opener)",
-      "description": "Your team gets good because everyone learns what matters to them. You open a topic and bring people in by link. We believe: those who choose their own path also understand the mandatory programme better."
+      "description": "Your team gets good because everyone learns what matters to them. You open a topic and bring people in by link. We believe: those who choose their own path also understand the mandatory programme better.",
+      "more": "More for trainers and teams",
+      "moreHref": "/en/for-trainers/"
     }
   },
   "howItWorks": {

@@ -47,7 +47,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/404.html && node scripts/buchseiten.mjs && node scripts/generate-sitemap.mjs",
+    "build": "vite build && cp dist/index.html dist/404.html && node scripts/buchseiten.mjs && node scripts/seiten.mjs && node scripts/generate-sitemap.mjs",
+    "seiten:dev": "node scripts/seiten-dev.mjs",
     "buchseiten:entwurf": "VITE_BUCHSEITEN_DRAFT=1 BUCHSEITEN_DRAFT=1 npm run build",
     "preview": "vite preview --port 3001"
   },

@@ -1,0 +1,159 @@
+{
+  "lang": "en",
+  "sprachname": "English",
+  "pfad": "/en/for-trainers/",
+  "ogLocale": "en_GB",
+  "entwurfHinweis": "DRAFT — not published",
+  "meta": {
+    "title": "Learning platform for trainers: before and after | plinyoo",
+    "description": "Give your participants a tool for their own path: cards and questions, at their own pace, before and after your training. Request access."
+  },
+  "og": {
+    "zeile": "For trainers, coaches and teams",
+    "titel": "Your training as a knowledge universe for preparation and follow-up."
+  },
+  "nav": {
+    "sprache": "Language",
+    "haupt": "Main navigation",
+    "startseite": "plinyoo, to the home page",
+    "login": "Log in",
+    "zugang": "Request access"
+  },
+  "hero": {
+    "eyebrow": "For trainers, coaches and teams",
+    "h1": "Your training as a knowledge universe for preparation and follow-up.",
+    "lead": "With plinyoo, your content becomes cards and questions. Your participants join via link or QR code and take their own path: at their own pace, to prepare and to follow up.",
+    "cta": "Request access",
+    "hinweis": "We will get back to you personally.",
+    "sprung": "See what a topic looks like ↓"
+  },
+  "problem": {
+    "h2": "Your training is one part of the path",
+    "intro": "Important things happen before and after, without you in the room.",
+    "punkte": [
+      "Some participants arrive well prepared, others don't know the basics.",
+      "After the session, the slides sit in an inbox, and the questions come weeks later.",
+      "You explain the basics from scratch to every new group."
+    ],
+    "schluss": "That's why you give your participants a tool in plinyoo: each person takes their own path through your topic, at their own pace, before the training and after it."
+  },
+  "schritte": {
+    "h2": "Your topic in three steps",
+    "items": [
+      {
+        "titel": "Create cards",
+        "text": "One card, one idea, with questions. You write them directly in plinyoo or bring in texts from files, Wikipedia pages or Obsidian. With links such as “basis for this” and “builds on this”, you connect the cards into a network – or plinyoo does it for you. Group cards into a topic and create a knowledge universe."
+      },
+      {
+        "titel": "Invite participants",
+        "text": "By link, email or QR code, for example on your last slide or on the worksheet. You decide who sees what: private, followers only or public."
+      },
+      {
+        "titel": "Each person takes their own path",
+        "text": "Your participants prepare and follow up, each at their own pace and on their own path. They read a card, answer its questions and decide for themselves where to go next. “Continue learning” picks up where they left off."
+      }
+    ]
+  },
+  "weg": {
+    "h2": "Your syllabus as a knowledge universe",
+    "lead": "Your cards and links become a universe that each person explores in their own way.",
+    "absaetze": [
+      "Your participants don't work through chapter after chapter. They decide for themselves where to go next: below every card, paths lead to the next card and to a related one. Every card they learn becomes a star in their knowledge universe, and the cloud shows all the cards of your topic at a glance.",
+      "What has stuck comes back later. What is still shaky comes back sooner. Where one card builds on another, the quiz asks about the basis first."
+    ],
+    "schluss": "You set the connections. Each person sets their own path."
+  },
+  "fuerwen": {
+    "h2": "For everyone who passes on knowledge",
+    "intro": "In plinyoo, a <strong>curator</strong> is someone who puts together a topic and invites people to it. Whether you are a trainer, coach, lecturer or team lead makes no difference.",
+    "items": [
+      {
+        "titel": "Trainers and coaches",
+        "text": "Give your groups a tool to prepare for your session and follow up on it: cards, questions and a path of their own."
+      },
+      {
+        "titel": "Training providers and academies",
+        "text": "Add a topic to your seminars that participants can open at any time, before the seminar and after."
+      },
+      {
+        "titel": "Teams and corporate learning",
+        "text": "Bring new colleagues on board with a topic. And before mandatory training, too, everyone can prepare voluntarily, at their own pace."
+      }
+    ]
+  },
+  "experte": {
+    "h2": "You remain the expert",
+    "absaetze": [
+      "Experience, judgement and guidance come from you. plinyoo gives your participants the tool for their own path, before your training and after it.",
+      "Today, learning is at the centre. More options for curators are developing step by step, together with the people who use plinyoo."
+    ]
+  },
+  "vertrauen": {
+    "h2": "When trust and security matter",
+    "absaetze": [
+      "Some organisations want to know exactly where their knowledge lives and who runs it. plinyoo is designed as a white-label platform, meant to be used under your own brand. We'd be happy to talk through what that could look like for you."
+    ],
+    "cta": "Talk to us"
+  },
+  "beispiel": {
+    "h2": "A topic to look at",
+    "text": "This is what a topic looks like: {karten} cards on William Dalrymple's “The Anarchy”, with {fragen} questions. You can play through them without signing up. (The page is in German.)",
+    "link": "Open the example topic",
+    "href": "/buch/dalrymple-anarchie/"
+  },
+  "faq": {
+    "h2": "Frequently asked questions",
+    "items": [
+      {
+        "f": "What is plinyoo?",
+        "a": "A learning platform where knowledge lives in cards. Every card comes with questions, and the cards link to one another. Each person takes their own path through the cards. Whoever puts together a topic is called a curator. Whoever follows it is called a follower."
+      },
+      {
+        "f": "How do my participants get into my topic?",
+        "a": "By invitation link, email or QR code. Joining creates an account. plinyoo runs in the browser, on phones too. For the QR code, your topic needs at least five cards shared with followers."
+      },
+      {
+        "f": "How does review work?",
+        "a": "Every question someone answers gets a date on which it comes back. Answered wrongly: the very next day. Answered correctly: after one day, then after six days, then at ever longer intervals, at most after half a year. This is called spaced repetition. Questions someone has set aside or reported don't come back."
+      },
+      {
+        "f": "What does plinyoo cost?",
+        "a": "The people you invite pay nothing. For curators, a fixed monthly price is planned, regardless of how many participants you have. We set you up personally and agree the terms with you."
+      },
+      {
+        "f": "Can I use my existing texts?",
+        "a": "Yes, from files, Wikipedia pages and Obsidian. Before importing, you see what is new and what changes. New cards from Obsidian arrive as drafts; learners only see them once you release them. The Obsidian import doesn't bring in images yet."
+      },
+      {
+        "f": "Can I share content with my group only?",
+        "a": "Yes. Set your topic to “Followers only”. Then everyone who follows it sees it, with the cards set to “Followers only” or “Public”. “Private” is for you alone."
+      },
+      {
+        "f": "Can I see what my participants have learned?",
+        "a": "Each person sees their own progress: every card they learn becomes a star in their knowledge universe. What you as a curator see about your participants' progress is something we are expanding right now."
+      },
+      {
+        "f": "Can I use plinyoo so participants prepare for mandatory training?",
+        "a": "Yes. Your participants prepare voluntarily, at their own pace and on their own path through your cards. We believe: those who learn this way have a better chance of passing mandatory training."
+      },
+      {
+        "f": "Can I use plinyoo under my own brand?",
+        "a": "plinyoo is designed as a white-label platform, meant to be used under your own brand. Talk to us if that matters to you; we're happy to discuss what it could look like."
+      }
+    ]
+  },
+  "abschluss": {
+    "h2": "Your first topic",
+    "absaetze": [
+      "plinyoo is being built. You set up your first topic together with us, and what you need along the way helps decide what we build next.",
+      "You lead groups, seminars or a team and want to see what your knowledge looks like as a topic? Request access. We'll get back to you personally and invite you from the app."
+    ],
+    "cta": "Request access",
+    "pilot": "We are looking for pilot partners: one topic, one group, a manageable period of time."
+  },
+  "footer": {
+    "impressum": "Imprint",
+    "datenschutz": "Privacy",
+    "urheberrecht": "Copyright"
+  }
+}
