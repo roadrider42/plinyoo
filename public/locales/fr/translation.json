@@ -287,38 +287,11 @@
       "subtitle": "Pour équipes de restauration",
       "button": "En savoir plus"
     },
-    "book": {
-      "title": "Anarchie — La Compagnie des Indes Orientales",
-      "desc": "13 cartes sur l'histoire de la Compagnie des Indes Orientales avec graphe de connaissances et questions interactives.",
-      "subtitle": "Présentation du livre",
-      "button": "À la page du livre"
-    },
-    "book2": {
-      "title": "Le pouvoir de la géographie — Frontières",
-      "desc": "6 cartes sur ceux qui ont tracé les frontières avec lesquelles nous vivons, avec graphe de connaissances et questions interactives.",
-      "subtitle": "Présentation du livre",
-      "button": "À la page du livre"
-    },
-    "placeholder": {
-      "title": "Plus d'exemples à venir"
-    },
     "your-use-case": {
       "title": "Votre cas d'usage",
       "subtitle": "Vos exigences spécifiques",
       "desc": "Nous développons des solutions individuelles pour vos défis.",
       "button": "Contactez-nous"
-    },
-    "book3": {
-      "title": "Lisbonne 1941 — Ville d’espions",
-      "subtitle": "Présentation du livre",
-      "desc": "8 cartes sur la fuite, le wolfram et la route maritime vers l’Inde, avec graphe de savoirs et questions interactives.",
-      "button": "À la page du livre"
-    },
-    "book4": {
-      "title": "Les Conquérants — L’empire portugais",
-      "subtitle": "Présentation du livre · bientôt",
-      "desc": "Roger Crowley raconte comment le Portugal a bâti un empire grâce à la route maritime vers l’Inde. Le texte suivra bientôt.",
-      "button": "À la page du livre"
     }
   },
   "footer": {

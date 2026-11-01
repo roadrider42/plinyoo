@@ -29,7 +29,7 @@
   "coverBreite": 500,
   "coverHoehe": 820,
   "coverCredit": "Cover: © dtv Verlagsgesellschaft",
-  "naechsteWoche": "Als Nächstes: Roger Crowleys „Die Eroberer. Portugals Kampf um ein Weltreich“ über die Frage, wie Portugals Weltreich begann, mit vier Lernkarten.",
+  "naechsteWoche": "",
   "probeTitel": "Probier es an den Karten aus",
   "graphTitel": "Der Wissensgraph über Lissabon 1941",
   "knoten": [
@@ -933,5 +933,9 @@
       "url": "/buch/crowley-die-eroberer/",
       "ziel": "crowley-die-eroberer"
     }
-  ]
+  ],
+  "nr": 3,
+  "kachelTitel": "Lissabon 1941 — Stadt der Spione",
+  "kachelText": "zu Flucht, Wolfram und dem Seeweg nach Indien, mit Wissensgraph und interaktiven Fragen.",
+  "symbol": "⚓"
 }

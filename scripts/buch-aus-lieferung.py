@@ -209,7 +209,9 @@ def main():
 
     d = dict(vorhanden)
     d.update({
-        "slug": slug, "draft": False,
+        "slug": slug, "draft": False, "nr": int(meta["buch_nr"]),
+        "kachelTitel": str(meta.get("kachel_titel") or "").strip(), "kachelText": str(meta.get("kachel_text") or "").strip(),
+        "symbol": str(meta.get("symbol") or "📚").strip(),
         "autor": str(meta["autor"]).strip(), "titel": str(meta["titel_buch"]).strip(),
         "untertitel": str(meta.get("untertitel") or "").strip(),
         "uebersetzer": str(meta.get("uebersetzer") or "").strip(),

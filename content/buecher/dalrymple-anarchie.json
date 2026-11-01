@@ -1336,6 +1336,26 @@
       "titel": "Marshall: Tordesillas 1494",
       "url": "/buch/marshall-die-macht-der-geografie/",
       "ziel": "marshall-tordesillas-1494"
+    },
+    {
+      "von": [
+        0
+      ],
+      "titel": "Crowley: Indienhandel vor 1498",
+      "url": "/buch/crowley-die-eroberer/",
+      "ziel": "crowley-die-eroberer"
+    },
+    {
+      "von": [
+        1
+      ],
+      "titel": "Crowley: Das Monopol der Krone",
+      "url": "/buch/crowley-die-eroberer/",
+      "ziel": "crowley-die-eroberer"
     }
-  ]
+  ],
+  "nr": 1,
+  "kachelTitel": "Anarchie — Die East India Company",
+  "kachelText": "zur Geschichte der East India Company mit Wissensgraph und interaktiven Fragen.",
+  "symbol": "📚"
 }

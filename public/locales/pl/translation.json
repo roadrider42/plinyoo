@@ -214,38 +214,11 @@
       "subtitle": "Dla zespołów gastronomicznych",
       "button": "Dowiedz się więcej"
     },
-    "book": {
-      "title": "Anarchia — Kompania Wschodnioindyjska",
-      "desc": "13 kart o historii Kompanii Wschodnioindyjskiej z grafem wiedzy i interaktywnymi pytaniami.",
-      "subtitle": "Prezentacja książki",
-      "button": "Do strony książki"
-    },
-    "book2": {
-      "title": "Potęga geografii — Granice",
-      "desc": "6 kart o tym, kto wytyczył granice, z którymi żyjemy, z grafem wiedzy i interaktywnymi pytaniami.",
-      "subtitle": "Prezentacja książki",
-      "button": "Do strony książki"
-    },
-    "placeholder": {
-      "title": "Więcej przykładów wkrótce"
-    },
     "your-use-case": {
       "title": "Twój przypadek użycia",
       "subtitle": "Twoje specyficzne wymagania",
       "desc": "Opracowujemy indywidualne rozwiązania dla Twoich wyzwań.",
       "button": "Skontaktuj się z nami"
-    },
-    "book3": {
-      "title": "Lizbona 1941 — Miasto szpiegów",
-      "subtitle": "Prezentacja książki",
-      "desc": "8 kart o ucieczce, wolframie i morskiej drodze do Indii, z grafem wiedzy i interaktywnymi pytaniami.",
-      "button": "Do strony książki"
-    },
-    "book4": {
-      "title": "Zdobywcy — imperium Portugalii",
-      "subtitle": "Prezentacja książki · wkrótce",
-      "desc": "Roger Crowley opowiada, jak Portugalia zbudowała imperium dzięki morskiej drodze do Indii. Tekst pojawi się wkrótce.",
-      "button": "Do strony książki"
     }
   },
   "forms": {
