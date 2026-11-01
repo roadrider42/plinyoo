@@ -1,0 +1,814 @@
+{
+  "slug": "der-almanach-von-naval-ravikant",
+  "draft": false,
+  "nr": 5,
+  "kachelTitel": "Der Almanach von Naval Ravikant — Lesen und Wissen",
+  "kachelText": "zu Lesen als Gewohnheit, mentalen Modellen und spezifischem Wissen, mit Wissensgraph und interaktiven Fragen.",
+  "symbol": "💡",
+  "autor": "Eric Jorgenson",
+  "titel": "Der Almanach von Naval Ravikant",
+  "untertitel": "Ein Leitfaden auf dem Weg zu Reichtum und Glücklichsein",
+  "uebersetzer": "",
+  "verlag": "FinanzBuch Verlag",
+  "erschienen": "2021",
+  "isbn": "978-3-95972-494-4",
+  "leitfrage": "Wie kommt Wissen vom Buch in den Kopf?",
+  "einordnung": "Eric Jorgenson hat Naval Ravikants Gedanken zu Wohlstand, Wissen und einem erfüllten Leben gesammelt.",
+  "kartenIntro": "Alle 7 kannst du unten durchspielen.",
+  "karten": [
+    "Lesen als Gewohnheit",
+    "Die Eitelkeitskennzahl",
+    "Mentale Modelle",
+    "Spezifisches Wissen",
+    "Authentizität",
+    "Hebel und Renditen",
+    "Die besten Jobs"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
+  "verlagUrl": "",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://link.amazon/B007cKWbk",
+  "cover": "cover.jpg",
+  "coverCredit": "Cover der deutschen Ausgabe (Amazon-Produktbild)",
+  "naechsteWoche": "",
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph zu Navals Almanach",
+  "knoten": [
+    {
+      "slug": "naval-lesen-gewohnheit",
+      "titel": "Lesen als Gewohnheit"
+    },
+    {
+      "slug": "naval-eitelkeitskennzahl",
+      "titel": "Die Eitelkeitskennzahl"
+    },
+    {
+      "slug": "naval-mentale-modelle",
+      "titel": "Mentale Modelle"
+    },
+    {
+      "slug": "naval-spezifisches-wissen",
+      "titel": "Spezifisches Wissen"
+    },
+    {
+      "slug": "naval-authentizitaet-statt-wettbewerb",
+      "titel": "Authentizität"
+    },
+    {
+      "slug": "naval-hebel-exponentielle-renditen",
+      "titel": "Hebel und Renditen"
+    },
+    {
+      "slug": "naval-beste-jobs-unreguliert",
+      "titel": "Die besten Jobs"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      0,
+      2,
+      "verwandt"
+    ],
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      3,
+      4,
+      "verwandt"
+    ],
+    [
+      3,
+      5,
+      "verwandt"
+    ],
+    [
+      5,
+      6,
+      "verwandt"
+    ],
+    [
+      4,
+      6,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "Die Frage",
+    "titel": "Wie kommt Wissen vom Buch in den Kopf?",
+    "anreisser": "Naval Ravikant hält die Zahl ganz gelesener Bücher für eine Kennzahl der Eitelkeit. Was zählt dann beim Lesen?",
+    "absaetze": [
+      "Naval Ravikant ist ein indisch-US-amerikanischer Unternehmer, Investor und moderner Philosoph. Weltweit bekannt wurde er als Mitbegründer von AngelList, einer führenden Plattform für Start-ups und Investoren, und durch seine prägnanten Einsichten zu Vermögensaufbau, geistiger Freiheit und langfristigem Glück. In der Tech- und Investment-Szene des Silicon Valley gilt er als Kultfigur und Vordenker. Seine Gedanken hat Eric Jorgenson im „Almanach“ gesammelt.",
+      "Naval sieht Lesen als tägliche Gewohnheit. Nach eigener Aussage liest er ein bis zwei Stunden am Tag. Das Wichtigste sei, Lesen zu einer echten Gewohnheit zu machen. Er empfiehlt Grundlagen wie Mathematik, Naturwissenschaft und Philosophie sowie Originalwerke, Darwin vor Dawkins. Auch nur Teile zu lesen ist für ihn in Ordnung.",
+      "Die wichtigste Fähigkeit, um reich zu werden, sei laut ihm, „ein ewig Lernender zu werden“. Sein eigenes „spezifisches Wissen“ findet man über Neugier und Begabung, nicht über eine Ausbildung. Hilfreich ist ein Blick zurück: Was fiel mir als Kind fast mühelos? Was er sich merken will, packt er in mentale Modelle, kompakte Möglichkeiten, sich an das eigene Wissen zu erinnern.",
+      "Zugleich warnt er: Weisheiten in kleinen, knackigen Häppchen auf Twitter und Facebook sind schwer aufzunehmen, und Bücher zu lesen fällt modernen Menschen schwer, weil sie nicht mehr darauf trainiert sind.",
+      "Das sind Ravikants Überzeugungen, keine Studienergebnisse. Aber sie führen zu einer Frage, die jeder kennt, der viel liest: Was bleibt davon im Kopf, wenn das Buch zugeklappt ist?",
+      "Unsere Einordnung: Lesen bringt Wissen ins Regal, nicht automatisch in den Kopf. Navals Antwort heißt: wenige Bücher, die tragen, und kleine Modelle, die man abrufen kann. Genau hier setzt plinyoo an. Die Plattform verbindet zwei Dinge.",
+      "Erstens leicht lesen. Wissen steckt in kleinen Lernkarten, jede mit einem Gedanken und einer Quelle. Weil einzelne Häppchen schwer hängen bleiben, sind die Karten miteinander verbunden. Du entscheidest, wohin du als Nächstes gehst.",
+      "Zweitens gezielt abfragen. Du wählst Themen, die dich interessieren. Das Quiz fragt dich dazu ab, auf drei Niveaus vom Erinnern bis zum Analysieren. Die Wiederholung richtet sich nach deinen Antworten, so festigt sich, was dich wirklich interessiert.",
+      "Dein Lernpfad ist einzigartig, so wie nach Naval auch das spezifische Wissen persönlich ist. Hinter plinyoo steht ein Ziel: Wissen soll von einem Kopf in den nächsten kommen, und das soll so wenig Zeit, Aufmerksamkeit und Mühe kosten wie möglich.",
+      "Den Almanach gibt es gebunden, als E-Book und als Hörbuch.",
+      "Probier es an den Karten aus: Was ist spezifisches Wissen, und woran erkennst du deins?"
+    ],
+    "autor": "Heiko Miertzsch"
+  },
+  "kartenvoll": [
+    {
+      "slug": "naval-lesen-gewohnheit",
+      "kurz": "Lesen als Gewohnheit",
+      "titel": "Lesen als Gewohnheit: Ravikants wichtigster Rat",
+      "karte": "Laut Ravikant ist es das Wichtigste, Lesen zu einer echten Gewohnheit zu machen. Wer eine Stunde pro Tag über Wissenschaft, Mathematik und Philosophie liest, gelangt nach seiner Einschätzung innerhalb von sieben Jahren wahrscheinlich in die oberen Ränge des menschlichen Erfolgs. Er selbst liest nach eigener Aussage eine oder zwei Stunden am Tag und führt darauf allein seinen materiellen Erfolg und jede Intelligenz zurück, über die er vielleicht verfügt. Das sind seine Überzeugungen, keine Studienergebnisse.",
+      "quelle": {
+        "titel": "Der Almanach von Naval Ravikant",
+        "url": "https://www.amazon.de/dp/3959724942",
+        "herausgeber": "Eric Jorgenson, FinanzBuch Verlag",
+        "abgerufen": "2026-11-01"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was ist nach Ravikant beim Lesen das Wichtigste?",
+          "beleg": "Lesen zu einer echten Gewohnheit zu machen, ist das Wichtigste.",
+          "belegDe": "„Lesen zu einer echten Gewohnheit zu machen, ist das Wichtigste.“",
+          "optionen": [
+            {
+              "text": "Jede Woche ein Buch ganz zu Ende zu lesen",
+              "ok": false,
+              "fb": "Falsch: Das Wichtigste ist, Lesen zu einer echten Gewohnheit zu machen."
+            },
+            {
+              "text": "Lesen zu einer echten Gewohnheit zu machen",
+              "ok": true,
+              "fb": "Richtig: Das Wichtigste ist, Lesen zu einer echten Gewohnheit zu machen."
+            },
+            {
+              "text": "Möglichst viele aktuelle Bestseller zu lesen",
+              "ok": false,
+              "fb": "Falsch: Das Wichtigste ist, Lesen zu einer echten Gewohnheit zu machen."
+            },
+            {
+              "text": "Vorab eine Liste aller empfohlenen Bücher anzulegen",
+              "ok": false,
+              "fb": "Falsch: Das Wichtigste ist, Lesen zu einer echten Gewohnheit zu machen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was bringt nach Ravikant täglich eine Stunde Lesen über Wissenschaft, Mathematik und Philosophie?",
+          "beleg": "Wenn Sie eine Stunde pro Tag über Wissenschaft, Mathematik und Philosophie lesen, werden Sie innerhalb der nächsten sieben Jahre wahrscheinlich in die oberen Ränge des menschlichen Erfolgs gelangen.",
+          "belegDe": "„Wenn Sie eine Stunde pro Tag über Wissenschaft, Mathematik und Philosophie lesen, werden Sie innerhalb der nächsten sieben Jahre wahrscheinlich in die oberen Ränge des menschlichen Erfolgs gelangen.“",
+          "optionen": [
+            {
+              "text": "Schon nach einem Jahr sicher ein dauerhaftes Millionenvermögen",
+              "ok": false,
+              "fb": "Falsch: Nach seiner Einschätzung gelangt man innerhalb von sieben Jahren wahrscheinlich in die oberen Ränge des Erfolgs."
+            },
+            {
+              "text": "Nach sieben Jahren einen anerkannten Abschluss und bessere Gehaltsstufen",
+              "ok": false,
+              "fb": "Falsch: Nach seiner Einschätzung gelangt man innerhalb von sieben Jahren wahrscheinlich in die oberen Ränge des Erfolgs."
+            },
+            {
+              "text": "Innerhalb von zwanzig Jahren wahrscheinlich einen Platz im oberen Mittelfeld",
+              "ok": false,
+              "fb": "Falsch: Nach seiner Einschätzung gelangt man innerhalb von sieben Jahren wahrscheinlich in die oberen Ränge des Erfolgs."
+            },
+            {
+              "text": "Innerhalb von sieben Jahren wahrscheinlich die oberen Ränge des Erfolgs",
+              "ok": true,
+              "fb": "Richtig: Man gelangt nach seiner Einschätzung innerhalb von sieben Jahren wahrscheinlich in die oberen Ränge des Erfolgs."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Worauf führt Ravikant seinen materiellen Erfolg nach eigener Aussage zurück?",
+          "beleg": "Wahrscheinlich lese ich eine oder zwei Stunden pro Tag. Damit gehöre ich zu den oberen 0,00001 Prozent. Ich glaube, alleine das macht jeglichen materiellen Erfolg aus, den ich in meinem Leben gehabt habe, und jede Intelligenz, über die ich vielleicht verfüge.",
+          "belegDe": "„Wahrscheinlich lese ich eine oder zwei Stunden pro Tag. Damit gehöre ich zu den oberen 0,00001 Prozent. Ich glaube, alleine das macht jeglichen materiellen Erfolg aus, den ich in meinem Leben gehabt habe, und jede Intelligenz, über die ich vielleicht verfüge.“",
+          "optionen": [
+            {
+              "text": "Allein auf sein Lesen von ein bis zwei Stunden pro Tag",
+              "ok": true,
+              "fb": "Richtig: Nach eigener Aussage macht allein sein Lesen von ein bis zwei Stunden täglich jeden materiellen Erfolg aus."
+            },
+            {
+              "text": "Auf sein Studium an einer renommierten Spitzenuniversität",
+              "ok": false,
+              "fb": "Falsch: Nach eigener Aussage führt er seinen materiellen Erfolg allein auf sein Lesen von ein bis zwei Stunden täglich zurück."
+            },
+            {
+              "text": "Auf ein Netzwerk aus einflussreichen Investoren und Gründern",
+              "ok": false,
+              "fb": "Falsch: Nach eigener Aussage führt er seinen materiellen Erfolg allein auf sein Lesen von ein bis zwei Stunden täglich zurück."
+            },
+            {
+              "text": "Auf hartes Arbeiten mit mehr als zwölf Stunden Einsatz pro Tag",
+              "ok": false,
+              "fb": "Falsch: Nach eigener Aussage führt er seinen materiellen Erfolg allein auf sein Lesen von ein bis zwei Stunden täglich zurück."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "naval-eitelkeitskennzahl",
+      "kurz": "Die Eitelkeitskennzahl",
+      "titel": "Wie Ravikant mit Büchern umgeht: auswählen statt abhaken",
+      "karte": "Ravikant hält die Zahl der Bücher, die man ganz durchgelesen hat, für eine Kennzahl für Eitelkeit. Wer mehr weiß, liest mehr Bücher unvollständig und fokussiert sich auf neue Konzepte mit Prognosekraft. Er findet die Idee gut, nur die 100 hervorragenden Bücher immer wieder zu lesen; entscheidend sei, die für einen selbst hervorragenden Bücher zu identifizieren, denn für verschiedene Menschen sind verschiedene Bücher die richtigen. Außerdem rät er zu Originalwerken: Wer sich für Evolution interessiert, liest zuerst Charles Darwin und erst später Richard Dawkins.",
+      "quelle": {
+        "titel": "Der Almanach von Naval Ravikant",
+        "url": "https://www.amazon.de/dp/3959724942",
+        "herausgeber": "Eric Jorgenson, FinanzBuch Verlag",
+        "abgerufen": "2026-11-01"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wofür ist die Zahl der ganz gelesenen Bücher nach Ravikant eine Kennzahl?",
+          "beleg": "Die Zahl der Bücher, die Sie ganz durchgelesen haben, ist eine Kennzahl für Eitelkeit.",
+          "belegDe": "„Die Zahl der Bücher, die Sie ganz durchgelesen haben, ist eine Kennzahl für Eitelkeit.“",
+          "optionen": [
+            {
+              "text": "Es ist eine Kennzahl für Bildung",
+              "ok": false,
+              "fb": "Falsch: Die Zahl ganz durchgelesener Bücher ist eine Kennzahl für Eitelkeit."
+            },
+            {
+              "text": "Es ist eine Kennzahl für Disziplin",
+              "ok": false,
+              "fb": "Falsch: Die Zahl ganz durchgelesener Bücher ist eine Kennzahl für Eitelkeit."
+            },
+            {
+              "text": "Es ist eine Kennzahl für Eitelkeit",
+              "ok": true,
+              "fb": "Richtig: Die Zahl ganz durchgelesener Bücher ist eine Kennzahl für Eitelkeit."
+            },
+            {
+              "text": "Es ist eine Kennzahl für Prognosekraft",
+              "ok": false,
+              "fb": "Falsch: Die Zahl ganz durchgelesener Bücher ist eine Kennzahl für Eitelkeit."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Ravikant mag die Idee, nur 100 hervorragende Bücher immer wieder zu lesen. Worauf kommt es an?",
+          "beleg": "Es geht wirklich eher darum, die für Sie selbst hervorragenden Bücher zu identifizieren, denn für verschiedene Menschen sind verschiedene Bücher die richtigen.",
+          "belegDe": "„Es geht wirklich eher darum, die für Sie selbst hervorragenden Bücher zu identifizieren, denn für verschiedene Menschen sind verschiedene Bücher die richtigen.“",
+          "optionen": [
+            {
+              "text": "Darauf, die für einen selbst hervorragenden Bücher zu identifizieren",
+              "ok": true,
+              "fb": "Richtig: Es kommt darauf an, die für einen selbst hervorragenden Bücher zu identifizieren."
+            },
+            {
+              "text": "Darauf, die 100 Bücher zu lesen, die Bestenlisten am häufigsten nennen",
+              "ok": false,
+              "fb": "Falsch: Für verschiedene Menschen sind verschiedene Bücher die richtigen; man muss die eigenen hervorragenden Bücher finden."
+            },
+            {
+              "text": "Darauf, jedes Jahr eine feste Zahl neuer Bücher ganz zu Ende zu lesen",
+              "ok": false,
+              "fb": "Falsch: Für verschiedene Menschen sind verschiedene Bücher die richtigen; man muss die eigenen hervorragenden Bücher finden."
+            },
+            {
+              "text": "Darauf, dieselben 100 Bücher zu lesen, die auch Ravikant hervorragend findet",
+              "ok": false,
+              "fb": "Falsch: Für verschiedene Menschen sind verschiedene Bücher die richtigen; man muss die eigenen hervorragenden Bücher finden."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was rät Ravikant jemandem, der sich für Evolution interessiert?",
+          "beleg": "Wenn Sie sich für Evolution interessieren, lesen Sie Charles Darwin. Fangen Sie nicht bei Richard Dawkins an (obwohl ich den sehr gut finde). Lesen Sie ihn später, und zuerst Darwin.",
+          "belegDe": "„Wenn Sie sich für Evolution interessieren, lesen Sie Charles Darwin. Fangen Sie nicht bei Richard Dawkins an (obwohl ich den sehr gut finde). Lesen Sie ihn später, und zuerst Darwin.“",
+          "optionen": [
+            {
+              "text": "Mit Richard Dawkins beginnen und Darwin später als Vertiefung lesen",
+              "ok": false,
+              "fb": "Falsch: Er rät, zuerst Charles Darwin zu lesen und Richard Dawkins erst später; Dawkins findet er sehr gut."
+            },
+            {
+              "text": "Darwin und Dawkins gleichzeitig lesen und beide Positionen vergleichen",
+              "ok": false,
+              "fb": "Falsch: Er rät, zuerst Charles Darwin zu lesen und Richard Dawkins erst später; Dawkins findet er sehr gut."
+            },
+            {
+              "text": "Nur Darwin lesen und Richard Dawkins wegen mangelnder Seriosität meiden",
+              "ok": false,
+              "fb": "Falsch: Er rät, zuerst Charles Darwin zu lesen und Richard Dawkins erst später; Dawkins findet er sehr gut."
+            },
+            {
+              "text": "Zuerst das Original von Charles Darwin lesen und Richard Dawkins erst später",
+              "ok": true,
+              "fb": "Richtig: Er rät, zuerst Charles Darwin zu lesen und Richard Dawkins erst später."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "naval-mentale-modelle",
+      "kurz": "Mentale Modelle",
+      "titel": "Mentale Modelle: Wissen kompakt im Kopf halten",
+      "karte": "Ravikant lädt nach eigener Aussage im Grunde seinen Kopf voller mentaler Modelle. Er nennt Charlie Munger, den Partner von Warren Buffett und sehr guten Anleger, der tonnenweise hervorragende mentale Modelle hat. Ebenfalls hervorragende mentale Modelle haben seiner Aussage nach der Autor und Händler Nassim Taleb und Benjamin Franklin. Mentale Modelle sind eigentlich nur kompakte Möglichkeiten, um sich an das eigene Wissen zu erinnern.",
+      "quelle": {
+        "titel": "Der Almanach von Naval Ravikant",
+        "url": "https://www.amazon.de/dp/3959724942",
+        "herausgeber": "Eric Jorgenson, FinanzBuch Verlag",
+        "abgerufen": "2026-11-01"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was sind mentale Modelle nach Ravikant eigentlich?",
+          "beleg": "Mentale Modelle sind eigentlich nur kompakte Möglichkeiten, um sich an das eigene Wissen zu erinnern.",
+          "belegDe": "„Mentale Modelle sind eigentlich nur kompakte Möglichkeiten, um sich an das eigene Wissen zu erinnern.“",
+          "optionen": [
+            {
+              "text": "Kompakte Möglichkeiten, sich an das eigene Wissen zu erinnern",
+              "ok": true,
+              "fb": "Richtig: Mentale Modelle sind kompakte Möglichkeiten, um sich an das eigene Wissen zu erinnern."
+            },
+            {
+              "text": "Formeln, mit denen sich künftige Marktentwicklungen berechnen lassen",
+              "ok": false,
+              "fb": "Falsch: Mentale Modelle sind nur kompakte Möglichkeiten, um sich an das eigene Wissen zu erinnern."
+            },
+            {
+              "text": "Ausführliche Lehrbücher, die das gesamte Wissen eines Fachs abdecken",
+              "ok": false,
+              "fb": "Falsch: Mentale Modelle sind nur kompakte Möglichkeiten, um sich an das eigene Wissen zu erinnern."
+            },
+            {
+              "text": "Persönliche Vorbilder, deren Entscheidungen man in Krisen nachahmt",
+              "ok": false,
+              "fb": "Falsch: Mentale Modelle sind nur kompakte Möglichkeiten, um sich an das eigene Wissen zu erinnern."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie geht Ravikant selbst mit mentalen Modellen um?",
+          "beleg": "Im Grunde lade ich meinen Kopf voller mentaler Modelle.",
+          "belegDe": "„Im Grunde lade ich meinen Kopf voller mentaler Modelle.“",
+          "optionen": [
+            {
+              "text": "Er hält sie in einem Notizbuch fest und schlägt dort nach",
+              "ok": false,
+              "fb": "Falsch: Er lädt seinen Kopf im Grunde voller mentaler Modelle."
+            },
+            {
+              "text": "Er meidet sie, weil sie Entscheidungen unnötig vereinfachen",
+              "ok": false,
+              "fb": "Falsch: Er lädt seinen Kopf im Grunde voller mentaler Modelle."
+            },
+            {
+              "text": "Er lädt seinen Kopf im Grunde voller mentaler Modelle",
+              "ok": true,
+              "fb": "Richtig: Er lädt seinen Kopf im Grunde voller mentaler Modelle."
+            },
+            {
+              "text": "Er überlässt sie Beratern, die Entscheidungen für ihn vorbereiten",
+              "ok": false,
+              "fb": "Falsch: Er lädt seinen Kopf im Grunde voller mentaler Modelle."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wer hat nach Ravikant hervorragende mentale Modelle?",
+          "beleg": "Munger ist ein sehr guter Anleger. Er hat tonnenweise, hervorragende mentale Modelle. Der Autor und Händler Nassim Taleb hat ebenfalls hervorragende mentale Modelle. Benjamin Franklin hatte sie.",
+          "belegDe": "„Munger ist ein sehr guter Anleger. Er hat tonnenweise, hervorragende mentale Modelle. Der Autor und Händler Nassim Taleb hat ebenfalls hervorragende mentale Modelle. Benjamin Franklin hatte sie.“",
+          "optionen": [
+            {
+              "text": "Charles Darwin, Nassim Taleb und Benjamin Franklin",
+              "ok": false,
+              "fb": "Falsch: Hervorragende mentale Modelle haben Charlie Munger, Nassim Taleb und Benjamin Franklin."
+            },
+            {
+              "text": "Charlie Munger, Nassim Taleb und Benjamin Franklin",
+              "ok": true,
+              "fb": "Richtig: Hervorragende mentale Modelle haben Charlie Munger, Nassim Taleb und Benjamin Franklin."
+            },
+            {
+              "text": "Charlie Munger, Richard Feynman und Benjamin Franklin",
+              "ok": false,
+              "fb": "Falsch: Hervorragende mentale Modelle haben Charlie Munger, Nassim Taleb und Benjamin Franklin."
+            },
+            {
+              "text": "Charlie Munger, Nassim Taleb und Richard Dawkins",
+              "ok": false,
+              "fb": "Falsch: Hervorragende mentale Modelle haben Charlie Munger, Nassim Taleb und Benjamin Franklin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "naval-spezifisches-wissen",
+      "kurz": "Spezifisches Wissen",
+      "titel": "Spezifisches Wissen: Der Blick zurück auf Kindheit und Jugend",
+      "karte": "Nach Ravikant erkennt man spezifisches Wissen am ehesten, indem man angeborenen Talenten, echter Neugier und Leidenschaft folgt. Es geht nicht darum, eine Ausbildung für den gerade heißesten Job zu machen. Spezifisches Wissen setzt sich aus Eigenschaften der eigenen DNA, der individuellen Kindheit und dem Umgang damit zusammen. Sein Hinweis: herausfinden, was man als Kind oder Teenager fast mühelos gemacht hat. Es kann beinahe ein Jahrzehnt dauern, bis man weiß, was man Einzigartiges anzubieten hat. Auch Verkaufsfähigkeiten sind eine Form davon und lassen sich verbessern: durch Robert Cialdini, ein Verkaufstraining oder Haustürverkauf.",
+      "quelle": {
+        "titel": "Der Almanach von Naval Ravikant",
+        "url": "https://www.amazon.de/dp/3959724942",
+        "herausgeber": "Eric Jorgenson, FinanzBuch Verlag",
+        "abgerufen": "2026-11-01"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wonach soll man nach Ravikant suchen, um sein spezifisches Wissen zu finden?",
+          "beleg": "Wenn ich von spezifischem Wissen spreche, meine ich: Finden Sie heraus, was Sie als Kind oder Teenager fast mühelos gemacht haben.",
+          "belegDe": "„Wenn ich von spezifischem Wissen spreche, meine ich: Finden Sie heraus, was Sie als Kind oder Teenager fast mühelos gemacht haben.“",
+          "optionen": [
+            {
+              "text": "Nach dem Studienfach, das die höchsten Einstiegsgehälter verspricht",
+              "ok": false,
+              "fb": "Falsch: Man soll herausfinden, was man als Kind oder Teenager fast mühelos gemacht hat."
+            },
+            {
+              "text": "Nach dem Abschluss, der in der Gesellschaft das meiste Ansehen bringt",
+              "ok": false,
+              "fb": "Falsch: Man soll herausfinden, was man als Kind oder Teenager fast mühelos gemacht hat."
+            },
+            {
+              "text": "Nach dem, was man als Kind oder Teenager fast mühelos gemacht hat",
+              "ok": true,
+              "fb": "Richtig: Man soll herausfinden, was man als Kind oder Teenager fast mühelos gemacht hat."
+            },
+            {
+              "text": "Nach dem, was die Wettbewerber im eigenen Feld gerade erfolgreich tun",
+              "ok": false,
+              "fb": "Falsch: Man soll herausfinden, was man als Kind oder Teenager fast mühelos gemacht hat."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Eine Berufsanfängerin will besser verkaufen. Was empfiehlt Ravikant?",
+          "beleg": "Sie können Robert Cialdini lesen oder zu einem Verkaufstraining gehen oder sich im Haustürverkauf versuchen.",
+          "belegDe": "„Sie können Robert Cialdini lesen oder zu einem Verkaufstraining gehen oder sich im Haustürverkauf versuchen.“",
+          "optionen": [
+            {
+              "text": "Robert Cialdini lesen, ein Verkaufstraining besuchen oder Haustürverkauf versuchen",
+              "ok": true,
+              "fb": "Richtig: Man kann Robert Cialdini lesen, ein Verkaufstraining besuchen oder sich im Haustürverkauf versuchen."
+            },
+            {
+              "text": "Ein betriebswirtschaftliches Studium abschließen und danach eine Zertifizierung ablegen",
+              "ok": false,
+              "fb": "Falsch: Verkaufsfähigkeiten lassen sich verbessern, etwa durch Robert Cialdini, ein Verkaufstraining oder Haustürverkauf."
+            },
+            {
+              "text": "Abwarten, denn Verkaufsfähigkeiten sind angeboren und lassen sich kaum verbessern",
+              "ok": false,
+              "fb": "Falsch: Verkaufsfähigkeiten lassen sich verbessern, etwa durch Robert Cialdini, ein Verkaufstraining oder Haustürverkauf."
+            },
+            {
+              "text": "Erfolgreiche Verkäufer beobachten und deren Gesprächsführung Wort für Wort übernehmen",
+              "ok": false,
+              "fb": "Falsch: Verkaufsfähigkeiten lassen sich verbessern, etwa durch Robert Cialdini, ein Verkaufstraining oder Haustürverkauf."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Woraus setzt sich spezifisches Wissen nach Ravikant zusammen?",
+          "beleg": "Spezifisches Wissen setzt sich aus dieser merkwürdigen Kombination aus besonderen Eigenschaften aus Ihrer DNA, Ihrer individuellen Kindheit und Ihrem Umgang damit zusammen.",
+          "belegDe": "„Spezifisches Wissen setzt sich aus dieser merkwürdigen Kombination aus besonderen Eigenschaften aus Ihrer DNA, Ihrer individuellen Kindheit und Ihrem Umgang damit zusammen.“",
+          "optionen": [
+            {
+              "text": "Aus der Ausbildung für den Beruf, der gerade als der heißeste Job gilt",
+              "ok": false,
+              "fb": "Falsch: Es setzt sich aus Eigenschaften der DNA, der individuellen Kindheit und dem Umgang damit zusammen."
+            },
+            {
+              "text": "Aus dem Bereich, den Investoren als den am meisten gefragten bezeichnen",
+              "ok": false,
+              "fb": "Falsch: Es setzt sich aus Eigenschaften der DNA, der individuellen Kindheit und dem Umgang damit zusammen."
+            },
+            {
+              "text": "Aus Fachkenntnissen, die man im Studium und in Zertifikatslehrgängen erwirbt",
+              "ok": false,
+              "fb": "Falsch: Es setzt sich aus Eigenschaften der DNA, der individuellen Kindheit und dem Umgang damit zusammen."
+            },
+            {
+              "text": "Aus Eigenschaften der DNA, der individuellen Kindheit und dem Umgang damit",
+              "ok": true,
+              "fb": "Richtig: Es setzt sich aus Eigenschaften der DNA, der individuellen Kindheit und dem Umgang damit zusammen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "naval-authentizitaet-statt-wettbewerb",
+      "kurz": "Authentizität",
+      "titel": "Authentizität als Ausweg aus dem Wettbewerb",
+      "karte": "Ravikant sagt: Wer mit anderen Menschen konkurriert, tut es, weil er sie kopiert und versucht, das Gleiche wie sie zu machen. Aber jeder Mensch ist anders, deshalb lautet sein Rat: nicht kopieren. Stattdessen soll man sich auf das konzentrieren, was einen wirklich begeistert. Den Sinn des Lebens sieht er darin, Dinge um ihrer selbst willen zu tun. Ironischerweise wird daraus hervorragende Arbeit, und selbst wer nur Geld verdienen will, ist auf diese Weise am erfolgreichsten.",
+      "quelle": {
+        "titel": "Der Almanach von Naval Ravikant",
+        "url": "https://www.amazon.de/dp/3959724942",
+        "herausgeber": "Eric Jorgenson, FinanzBuch Verlag",
+        "abgerufen": "2026-11-01"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wodurch entsteht nach Ravikant Konkurrenz mit anderen Menschen?",
+          "beleg": "Wenn Sie mit Menschen konkurrieren, dann weil Sie sie kopieren. Weil Sie versuchen, das Gleiche wie sie zu machen.",
+          "belegDe": "„Wenn Sie mit Menschen konkurrieren, dann weil Sie sie kopieren. Weil Sie versuchen, das Gleiche wie sie zu machen.“",
+          "optionen": [
+            {
+              "text": "Dadurch, dass man versucht, das Gleiche zu machen wie die anderen",
+              "ok": true,
+              "fb": "Richtig: Wer mit Menschen konkurriert, kopiert sie und versucht, das Gleiche wie sie zu machen."
+            },
+            {
+              "text": "Dadurch, dass man sich auf sein spezifisches Wissen konzentriert",
+              "ok": false,
+              "fb": "Falsch: Konkurrenz entsteht dadurch, dass man andere kopiert und das Gleiche wie sie zu machen versucht."
+            },
+            {
+              "text": "Dadurch, dass die Märkte zu stark reguliert und abgeschottet sind",
+              "ok": false,
+              "fb": "Falsch: Konkurrenz entsteht dadurch, dass man andere kopiert und das Gleiche wie sie zu machen versucht."
+            },
+            {
+              "text": "Dadurch, dass man zu wenig Software-Code und Medien als Hebel nutzt",
+              "ok": false,
+              "fb": "Falsch: Konkurrenz entsteht dadurch, dass man andere kopiert und das Gleiche wie sie zu machen versucht."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Eine Gründerin will dem Wettbewerb entgehen. Was rät ihr Ravikant?",
+          "beleg": "Aber jeder Mensch ist anders. Kopieren Sie nicht.",
+          "belegDe": "„Aber jeder Mensch ist anders. Kopieren Sie nicht.“",
+          "optionen": [
+            {
+              "text": "Die besten Wettbewerber genau zu studieren und ihre Methoden zu übernehmen",
+              "ok": false,
+              "fb": "Falsch: Ravikant rät: Kopieren Sie nicht, denn jeder Mensch ist anders."
+            },
+            {
+              "text": "Einen Beruf zu lernen, den Investoren gerade als am gefragtesten bezeichnen",
+              "ok": false,
+              "fb": "Falsch: Ravikant rät: Kopieren Sie nicht, denn jeder Mensch ist anders."
+            },
+            {
+              "text": "Nicht zu kopieren, denn jeder Mensch ist anders und Kopieren schafft Konkurrenz",
+              "ok": true,
+              "fb": "Richtig: Ravikant rät: Kopieren Sie nicht, denn jeder Mensch ist anders."
+            },
+            {
+              "text": "Möglichst viele Wettbewerber zu vergleichen und deren Stärken zu kombinieren",
+              "ok": false,
+              "fb": "Falsch: Ravikant rät: Kopieren Sie nicht, denn jeder Mensch ist anders."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was folgt nach Ravikant daraus, Dinge um ihrer selbst willen zu tun, auch wenn es nur ums Geld geht?",
+          "beleg": "Ironischerweise wird, wenn Sie so vorgehen, hervorragende Arbeit daraus. Selbst wenn es Ihnen nur ums Geldverdienen geht, werden Sie auf diese Weise am erfolgreichsten sein.",
+          "belegDe": "„Ironischerweise wird, wenn Sie so vorgehen, hervorragende Arbeit daraus. Selbst wenn es Ihnen nur ums Geldverdienen geht, werden Sie auf diese Weise am erfolgreichsten sein.“",
+          "optionen": [
+            {
+              "text": "Der Verdienst sinkt, weil das Geld nicht mehr das erste Ziel ist",
+              "ok": false,
+              "fb": "Falsch: Daraus wird hervorragende Arbeit, und selbst bei reinem Geldinteresse ist man so am erfolgreichsten."
+            },
+            {
+              "text": "Es entsteht hervorragende Arbeit, und man ist so am erfolgreichsten",
+              "ok": true,
+              "fb": "Richtig: Daraus wird hervorragende Arbeit, und selbst bei reinem Geldinteresse ist man so am erfolgreichsten."
+            },
+            {
+              "text": "Es entsteht mehr Konkurrenz, weil viele Menschen dasselbe tun wollen",
+              "ok": false,
+              "fb": "Falsch: Daraus wird hervorragende Arbeit, und selbst bei reinem Geldinteresse ist man so am erfolgreichsten."
+            },
+            {
+              "text": "Man braucht zusätzliches Personal, um den Erfolg dauerhaft zu halten",
+              "ok": false,
+              "fb": "Falsch: Daraus wird hervorragende Arbeit, und selbst bei reinem Geldinteresse ist man so am erfolgreichsten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "naval-hebel-exponentielle-renditen",
+      "kurz": "Hebel und Renditen",
+      "titel": "Hebel und Exponentialeffekt: Wo Renditen entstehen",
+      "karte": "Nach Ravikant braucht man Hebelung, um reich zu werden: Sie gibt es als Personal, Kapital, Software-Code und Medien. Arbeit und Kapital müssen einem andere Menschen geben. Alle Renditen im Leben, ob bei Vermögen, Beziehungen oder Wissen, entstehen durch den Exponentialeffekt. Technologie definiert er mit Danny Hillis als die Gesamtheit dessen, was noch nicht richtig funktioniert; sobald etwas funktioniert, ist es keine Technologie mehr. Der neue Hebel-Effekt begann mit der Druckerpresse, beschleunigte sich mit Rundfunkmedien und explodierte mit Internet und Programmierung.",
+      "quelle": {
+        "titel": "Der Almanach von Naval Ravikant",
+        "url": "https://www.amazon.de/dp/3959724942",
+        "herausgeber": "Eric Jorgenson, FinanzBuch Verlag",
+        "abgerufen": "2026-11-01"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie definiert Ravikant Technologie in Anlehnung an Danny Hillis?",
+          "beleg": "Technologie ist also, wie Alan Kay sagte, die Gesamtheit dessen, was noch nicht richtig funktioniert [Korrektur: es war Danny Hillis].",
+          "belegDe": "„Technologie ist also, wie Alan Kay sagte, die Gesamtheit dessen, was noch nicht richtig funktioniert [Korrektur: es war Danny Hillis].“",
+          "optionen": [
+            {
+              "text": "Als alles, was ausschließlich auf Software und Computern beruht",
+              "ok": false,
+              "fb": "Falsch: Technologie ist die Gesamtheit dessen, was noch nicht richtig funktioniert; was funktioniert, ist keine mehr."
+            },
+            {
+              "text": "Als die Gesamtheit dessen, was noch nicht richtig funktioniert",
+              "ok": true,
+              "fb": "Richtig: Technologie ist die Gesamtheit dessen, was noch nicht richtig funktioniert."
+            },
+            {
+              "text": "Als jede Erfindung, die seit dem Jahr 1990 auf den Markt gekommen ist",
+              "ok": false,
+              "fb": "Falsch: Technologie ist die Gesamtheit dessen, was noch nicht richtig funktioniert; was funktioniert, ist keine mehr."
+            },
+            {
+              "text": "Als alles, was bereits zuverlässig und vollständig ausgereift ist",
+              "ok": false,
+              "fb": "Falsch: Technologie ist die Gesamtheit dessen, was noch nicht richtig funktioniert; was funktioniert, ist keine mehr."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Formen der Hebelung müssen einem nach Ravikant andere Menschen geben?",
+          "beleg": "Das meiste davon, Arbeit und Kapital, müssen Ihnen andere Menschen geben.",
+          "belegDe": "„Das meiste davon, Arbeit und Kapital, müssen Ihnen andere Menschen geben.“",
+          "optionen": [
+            {
+              "text": "Die Hebel Software-Code und Medien",
+              "ok": false,
+              "fb": "Falsch: Arbeit und Kapital müssen einem andere Menschen geben; Software-Code und Medien dagegen nicht."
+            },
+            {
+              "text": "Die Hebel Kapital und Software-Code",
+              "ok": false,
+              "fb": "Falsch: Arbeit und Kapital müssen einem andere Menschen geben; Software-Code und Medien dagegen nicht."
+            },
+            {
+              "text": "Die Hebel Arbeit und Medien",
+              "ok": false,
+              "fb": "Falsch: Arbeit und Kapital müssen einem andere Menschen geben; Software-Code und Medien dagegen nicht."
+            },
+            {
+              "text": "Die Hebel Arbeit und Kapital",
+              "ok": true,
+              "fb": "Richtig: Arbeit und Kapital müssen einem andere Menschen geben; Personal muss einem folgen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Reihenfolge nennt Ravikant für die Entwicklung des neuen Hebel-Effekts?",
+          "beleg": "Es begann mit der Druckerpresse. Mit Rundfunkmedien beschleunigte sich der Effekt, und mit dem Internet und der Programmierung begann eine Explosion.",
+          "belegDe": "„Es begann mit der Druckerpresse. Mit Rundfunkmedien beschleunigte sich der Effekt, und mit dem Internet und der Programmierung begann eine Explosion.“",
+          "optionen": [
+            {
+              "text": "Druckerpresse, dann Rundfunkmedien, dann Internet und Programmierung",
+              "ok": true,
+              "fb": "Richtig: Es begann mit der Druckerpresse, Rundfunkmedien beschleunigten ihn, Internet und Programmierung ließen ihn explodieren."
+            },
+            {
+              "text": "Rundfunkmedien, dann Druckerpresse, dann Internet und Programmierung",
+              "ok": false,
+              "fb": "Falsch: Es begann mit der Druckerpresse, Rundfunkmedien beschleunigten ihn, Internet und Programmierung ließen ihn explodieren."
+            },
+            {
+              "text": "Druckerpresse, dann Internet und Programmierung, dann Rundfunkmedien",
+              "ok": false,
+              "fb": "Falsch: Es begann mit der Druckerpresse, Rundfunkmedien beschleunigten ihn, Internet und Programmierung ließen ihn explodieren."
+            },
+            {
+              "text": "Internet und Programmierung, dann Rundfunkmedien, dann Druckerpresse",
+              "ok": false,
+              "fb": "Falsch: Es begann mit der Druckerpresse, Rundfunkmedien beschleunigten ihn, Internet und Programmierung ließen ihn explodieren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "naval-beste-jobs-unreguliert",
+      "kurz": "Die besten Jobs",
+      "titel": "Die besten Jobs: ohne feste Regeln, ohne Diplom",
+      "karte": "Nach Ravikant sind die besten Jobs weder fest geregelt noch erfordern sie ein Diplom. Er versteht sie als kreativen Ausdruck lebenslangen Lernens auf freien Märkten. Die wichtigste Fähigkeit zum Reichwerden sei, ein ewig Lernender zu werden und zu wissen, wie man alles lernt, was man lernen will. Außerdem werde man nie reich, indem man seine Zeit vermietet. Erstrebenswert sei Kontrolle über die eigene Zeit: ein gehebelter Job, in dem man selbst über seine Zeit bestimmt und nach Ergebnissen bewertet wird.",
+      "quelle": {
+        "titel": "Der Almanach von Naval Ravikant",
+        "url": "https://www.amazon.de/dp/3959724942",
+        "herausgeber": "Eric Jorgenson, FinanzBuch Verlag",
+        "abgerufen": "2026-11-01"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was sind die besten Jobs nach Ravikant im Kern?",
+          "beleg": "Die besten Jobs sind weder fest geregelt noch erfordern sie ein Diplom. Sie sind der kreative Ausdruck lebenslangen Lernens auf freien Märkten.",
+          "belegDe": "„Die besten Jobs sind weder fest geregelt noch erfordern sie ein Diplom. Sie sind der kreative Ausdruck lebenslangen Lernens auf freien Märkten.“",
+          "optionen": [
+            {
+              "text": "Der sichere Aufstieg auf festen Karrierepfaden mit klaren Titeln",
+              "ok": false,
+              "fb": "Falsch: Die besten Jobs sind weder fest geregelt noch erfordern sie ein Diplom."
+            },
+            {
+              "text": "Stellen, die ein Diplom voraussetzen und ein Zertifikat verlangen",
+              "ok": false,
+              "fb": "Falsch: Die besten Jobs sind weder fest geregelt noch erfordern sie ein Diplom."
+            },
+            {
+              "text": "Eine staatlich geregelte Laufbahn mit festem Gehalt und Pensionsanspruch",
+              "ok": false,
+              "fb": "Falsch: Die besten Jobs sind weder fest geregelt noch erfordern sie ein Diplom."
+            },
+            {
+              "text": "Der kreative Ausdruck lebenslangen Lernens auf freien Märkten",
+              "ok": true,
+              "fb": "Richtig: Die besten Jobs sind der kreative Ausdruck lebenslangen Lernens auf freien Märkten."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Fähigkeit nennt Ravikant als die wichtigste zum Reichwerden?",
+          "beleg": "Die wichtigste Fähigkeit zum Reichwerden ist, ein ewig Lernender zu werden. Sie müssen wissen, wie Sie all das lernen können, was Sie lernen wollen.",
+          "belegDe": "„Die wichtigste Fähigkeit zum Reichwerden ist, ein ewig Lernender zu werden. Sie müssen wissen, wie Sie all das lernen können, was Sie lernen wollen.“",
+          "optionen": [
+            {
+              "text": "Ein Diplom an einer renommierten Universität mit Bestnote zu erwerben",
+              "ok": false,
+              "fb": "Falsch: Die wichtigste Fähigkeit zum Reichwerden ist, ein ewig Lernender zu werden."
+            },
+            {
+              "text": "Ein ewig Lernender zu werden, der alles lernen kann, was er will",
+              "ok": true,
+              "fb": "Richtig: Die wichtigste Fähigkeit zum Reichwerden ist, ein ewig Lernender zu werden."
+            },
+            {
+              "text": "Gedichte zu schreiben und sieben Fremdsprachen fließend zu sprechen",
+              "ok": false,
+              "fb": "Falsch: Die wichtigste Fähigkeit zum Reichwerden ist, ein ewig Lernender zu werden."
+            },
+            {
+              "text": "Die eigene Zeit möglichst teuer an einen Arbeitgeber zu vermieten",
+              "ok": false,
+              "fb": "Falsch: Die wichtigste Fähigkeit zum Reichwerden ist, ein ewig Lernender zu werden."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum will man nach Ravikant einen gehebelten Job?",
+          "beleg": "Im Leben ist es erstrebenswert, Kontrolle über die eigene Zeit zu haben. Deshalb wollen Sie einen gehebelten Job, indem Sie über Ihre Zeit selbst bestimmen und nach Ergebnissen bewertet werden.",
+          "belegDe": "„Im Leben ist es erstrebenswert, Kontrolle über die eigene Zeit zu haben. Deshalb wollen Sie einen gehebelten Job, indem Sie über Ihre Zeit selbst bestimmen und nach Ergebnissen bewertet werden.“",
+          "optionen": [
+            {
+              "text": "Weil er ein sicheres Gehalt und feste Arbeitszeiten ohne Risiko garantiert",
+              "ok": false,
+              "fb": "Falsch: Man will Kontrolle über die eigene Zeit haben und nach Ergebnissen bewertet werden."
+            },
+            {
+              "text": "Weil er durch ein Diplom und ein Zertifikat vor Konkurrenz geschützt ist",
+              "ok": false,
+              "fb": "Falsch: Man will Kontrolle über die eigene Zeit haben und nach Ergebnissen bewertet werden."
+            },
+            {
+              "text": "Weil man Kontrolle über die eigene Zeit hat und nach Ergebnissen bewertet wird",
+              "ok": true,
+              "fb": "Richtig: Man will Kontrolle über die eigene Zeit haben und nach Ergebnissen bewertet werden."
+            },
+            {
+              "text": "Weil man als Vorgesetzter möglichst viel Personal für sich arbeiten lässt",
+              "ok": false,
+              "fb": "Falsch: Man will Kontrolle über die eigene Zeit haben und nach Ergebnissen bewertet werden."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [],
+  "platzhalter": false,
+  "coverBreite": 1711,
+  "coverHoehe": 2560
+}
