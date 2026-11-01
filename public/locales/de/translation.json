@@ -15,16 +15,16 @@
     "cards": [
       {
         "step": "Karte",
-        "title": "Oberflächentemperatur vs. Lufttemperatur",
-        "text": "Satellitendaten zeigen Oberflächentemperaturen — oft höher als Lufttemperaturen. Die Lufttemperatur in 2 m Höhe bestimmt den menschlichen Hitzestress stärker.",
-        "chip": "→ DLR-Satellitenanalyse"
+        "title": "Auswählen statt abhaken",
+        "text": "Wer mehr weiß, liest mehr Bücher unvollständig und konzentriert sich auf neue Konzepte. Die Zahl ganz gelesener Bücher hält Naval Ravikant für eine Kennzahl der Eitelkeit.",
+        "chip": "→ Der Almanach von Naval Ravikant"
       },
       {
         "step": "Frage",
-        "title": "Was zeigen Satellitendaten primär?",
+        "title": "Wofür ist die Zahl ganz gelesener Bücher nach Ravikant eine Kennzahl?",
         "options": [
-          "Die Lufttemperatur in 2 Metern Höhe, gemessen an Bodenstationen",
-          "Die Oberflächentemperaturen von Straßen, Dächern und Vegetation"
+          "Eine Kennzahl für Bildung",
+          "Eine Kennzahl für Eitelkeit"
         ]
       },
       {
@@ -402,8 +402,8 @@
     "topicLisbon": "Lissabon 1941"
   },
   "views": {
-    "title": "Ein Blick hinein",
-    "subtitle": "Drei Ansichten aus der Entwicklung von plinyoo.",
+    "title": "Dein Wissensuniversum in der App",
+    "subtitle": "So sieht Lernen auf Karten aus: dein Ziel, dein Weg, deine Sterne.",
     "items": [
       {
         "id": "lernfeld",
@@ -512,39 +512,19 @@
       "subtitle": "Für Gastronomie-Teams",
       "button": "Mehr erfahren"
     },
-    "book": {
-      "title": "Anarchie — Die East India Company",
-      "desc": "13 Karten zur Geschichte der East India Company mit Wissensgraph und interaktiven Fragen.",
-      "subtitle": "Buchvorstellung",
-      "button": "Zur Buchseite"
-    },
-    "book2": {
-      "title": "Die Macht der Geografie — Grenzen",
-      "desc": "6 Karten dazu, wer die Grenzen zog, mit denen wir leben, mit Wissensgraph und interaktiven Fragen.",
-      "subtitle": "Buchvorstellung",
-      "button": "Zur Buchseite"
-    },
-    "placeholder": {
-      "title": "Weitere Beispiele folgen"
-    },
     "your-use-case": {
       "title": "Dein Use Case",
       "subtitle": "Deine spezifischen Anforderungen",
       "desc": "Wir entwickeln individuelle Lösungen für deine Herausforderungen.",
       "button": "Kontakt aufnehmen"
     },
-    "book3": {
-      "title": "Lissabon 1941 — Stadt der Spione",
-      "subtitle": "Buchvorstellung",
-      "desc": "8 Karten zu Flucht, Wolfram und dem Seeweg nach Indien, mit Wissensgraph und interaktiven Fragen.",
-      "button": "Zur Buchseite"
-    },
-    "book4": {
-      "title": "Die Eroberer — Portugals Weltreich",
-      "subtitle": "Buchvorstellung · demnächst",
-      "desc": "Roger Crowley erzählt von Portugals Weg nach Indien und dem Reich, das daraus wurde. Der Text dazu kommt demnächst.",
-      "button": "Zur Buchseite"
-    }
+    "books_title": "Bücher zum Durchspielen",
+    "books_intro": "Aus jedem Buch wird ein Wissensgraph: Karten, Verbindungen und Fragen. Such dir eins aus.",
+    "new_badge": "Neu",
+    "book_subtitle": "Buchvorstellung",
+    "book_button": "Zur Buchseite",
+    "all_books": "Alle Bücher ansehen",
+    "all_books_count": "Alle {{count}} Bücher ansehen"
   },
   "forms": {
     "validation": {

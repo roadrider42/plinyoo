@@ -287,41 +287,133 @@ function beitragFalte(bt, buchTitel, buchAutor) {
   </section>`;
 }
 
-function seite(b, mitCover) {
-  const url = `${SITE}/buch/${b.slug}/`;
-  const titelVoll = `${b.titel} — ${b.autor}`;
-  const ogBild = mitCover ? `${url}og.png` : `${SITE}/og/buchseite.png`;
-  const titel = `${b.autor}: ${b.titel} — Buchvorstellung | plinyoo`;
-  const desc = b.leitfrage;
-  const karten = b.karten ?? [];
-  const slugQ = encodeURIComponent(b.slug);
-  const zugang = `/?buch=${slugQ}#/zugang`;
+// Text der Kachel auf der Startseite und im „Neu“-Kasten: "<n> Karten <kachelText>". Die Zahl kommt aus den Karten,
+// damit sie nicht veraltet. Fehlt kachelText, steht die Einordnung des Buchs.
+function kachelBeschreibung(b) {
+  const n = (b.kartenvoll ?? []).length;
+  return b.kachelText ? `${n} Karten ${b.kachelText}` : b.einordnung;
+}
 
-  const faq = [
-    ['Stammen die Karten aus dem Buch?', `Nein. Das Buch ist der Anlass, nicht die Vorlage.`],
-    ['Muss ich etwas installieren?', 'Nein. plinyoo läuft im Browser, auch auf dem Telefon.'],
-    ['Was ist plinyoo?', 'Stell dir vor, alles, was ein Mensch weiß, wäre für jeden anderen begehbar: nicht als Kurs mit festem Gang, sondern als Landschaft, durch die man seinen eigenen Weg wählt. Das ist unser Ziel: Wissen von Kopf zu Kopf zu bringen, ohne dass der Weg dorthin länger, teurer oder dünner wird. plinyoo ist der erste Schritt. <a href="/">Mehr auf der Startseite</a>.'],
-  ];
+// Neu-Kasten: Auf jeder Buchseite außer der des neuesten Buchs. Ersetzt den Handtext "naechsteWoche", der veraltete.
+function neuKasten(b, neu) {
+  if (neu && neu.slug !== b.slug) {
+    return `<aside class="neu-kasten" aria-labelledby="neu-h" style="margin-top:32px;padding:18px 20px;border:1px solid #d6e4e2;border-left:4px solid #e8a838;border-radius:8px;background:#fff">
+    <p style="margin:0 0 4px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b9791a" id="neu-h">Neu auf plinyoo</p>
+    <p style="margin:0 0 4px;font-weight:700"><a href="/buch/${esc(neu.slug)}/" data-neu="${esc(neu.slug)}">${esc(neu.kachelTitel || neu.titel)}</a></p>
+    <p style="margin:0 0 12px">${esc(kachelBeschreibung(neu))}</p>
+    <p style="margin:0"><a class="btn" data-neu="${esc(neu.slug)}" href="/buch/${esc(neu.slug)}/">Zur Buchseite</a></p>
+  </aside>`;
+  }
+  return b.naechsteWoche ? `<h2 style="margin-top:32px">Ausblick</h2><p>${esc(b.naechsteWoche)}</p>` : '';
+}
 
+// Übersichtsseite /buch/: alle veröffentlichten Bücher, das neueste zuerst, mit Cover (kleine Fassung, siehe main).
+function uebersicht(buecher, covers) {
+  const cover = (b, klasse) => {
+    const c = covers[b.slug];
+    if (!c) return `<div class="${klasse} ohne" aria-hidden="true"><span>${esc(b.symbol || '📚')}</span></div>`;
+    return `<img class="${klasse}" src="/buch/${esc(b.slug)}/cover-klein.jpg" width="${c.w}" height="${c.h}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}" loading="${klasse === 'cv gross' ? 'eager' : 'lazy'}">`;
+  };
+  const [neuestes, ...rest] = buecher;
+  const gross = `<article class="gross-karte">
+    <a class="cv-link" href="/buch/${esc(neuestes.slug)}/" tabindex="-1" aria-hidden="true">${cover(neuestes, 'cv gross')}</a>
+    <div class="gross-text">
+      <p class="neu-label">Neu</p>
+      <h2><a href="/buch/${esc(neuestes.slug)}/">${esc(neuestes.kachelTitel || neuestes.titel)}</a></h2>
+      <p class="autor">${esc(neuestes.autor)}</p>
+      <p>${esc(kachelBeschreibung(neuestes))}</p>
+      <p class="aktion"><a class="btn haupt" href="/buch/${esc(neuestes.slug)}/">Zur Buchseite</a></p>
+    </div>
+  </article>`;
+  const kacheln = rest.map((b) => `<li class="karte">
+    <a class="cv-link" href="/buch/${esc(b.slug)}/" tabindex="-1" aria-hidden="true">${cover(b, 'cv')}</a>
+    <h2><a href="/buch/${esc(b.slug)}/">${esc(b.kachelTitel || b.titel)}</a></h2>
+    <p class="autor">${esc(b.autor)}</p>
+    <p class="text">${esc(kachelBeschreibung(b))}</p>
+    <p class="aktion"><a class="btn" href="/buch/${esc(b.slug)}/">Zur Buchseite</a></p>
+  </li>`).join('\n  ');
+  const liste = buecher.map((b, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/buch/${b.slug}/`, name: b.kachelTitel || b.titel }));
+  const krumen = { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Startseite', item: `${SITE}/` }, { '@type': 'ListItem', position: 2, name: 'Bücher', item: `${SITE}/buch/` }] };
+  const ld = JSON.stringify({ '@context': 'https://schema.org', '@graph': [krumen, { '@type': 'CollectionPage', name: 'Alle Bücher bei plinyoo', url: `${SITE}/buch/`, mainEntity: { '@type': 'ItemList', itemListElement: liste } }] }).replace(/</g, '\\u003c');
   return `<!doctype html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(titel)}</title>
-<meta name="description" content="${esc(desc)}">
-<link rel="canonical" href="${url}">
-${b.draft ? '<meta name="robots" content="noindex, nofollow">' : ''}
-<meta property="og:site_name" content="plinyoo">
-<meta property="og:type" content="article">
-<meta property="og:locale" content="de_DE">
-<meta property="og:title" content="${esc(titelVoll)}">
-<meta property="og:description" content="${esc(desc)}">
-<meta property="og:url" content="${url}">
-<meta property="og:image" content="${ogBild}">
-<meta name="twitter:card" content="summary_large_image">
+<title>Lernkarten zu Büchern: Wissensgraphen zum Durchspielen | plinyoo</title>
+<meta name="description" content="Aus jedem Buch wird ein Wissensgraph: Lernkarten, Verbindungen und Fragen zum Durchspielen. ${buecher.length} Bücher, das neueste zuerst.">
+<link rel="canonical" href="${SITE}/buch/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lernkarten zu Büchern: Wissensgraphen zum Durchspielen | plinyoo">
+<meta property="og:url" content="${SITE}/buch/">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://plausible.io; base-uri 'self'; form-action 'self'">
+${CSS}
 <style>
+.uebersicht .kopf{padding:32px 0 8px}
+.krumen{display:flex;align-items:center;gap:8px;margin:0 0 20px;font-size:15px;color:#5a6b77}
+.krumen a{font-weight:600}
+.uebersicht .kopf h1{margin:0 0 12px}
+.uebersicht .kopf p{max-width:640px;margin:0;color:#3d4d58}
+.gross-karte{display:grid;grid-template-columns:minmax(150px,240px) 1fr;gap:32px;align-items:center;margin:32px 0 40px;padding:28px;border:1px solid #d6e4e2;border-left:6px solid #e8a838;border-radius:14px;background:#fff;box-shadow:0 18px 50px -28px rgba(17,19,31,.45)}
+.gross-text h2{margin:0 0 6px;font-size:26px;line-height:1.2}
+.gross-text .autor,.karte .autor{margin:0 0 12px;color:#5a6b77}
+.gross-text p{margin:0 0 12px}
+.neu-label{display:inline-block;margin:0 0 10px!important;padding:3px 12px;border-radius:999px;background:#e8a838;color:#fff;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.raster{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px;padding:0;margin:0;list-style:none}
+.karte{display:flex;flex-direction:column;padding:22px;border:1px solid #d6e4e2;border-radius:12px;background:#fff;transition:box-shadow .2s,transform .2s}
+.karte:hover{box-shadow:0 16px 40px -24px rgba(17,19,31,.5);transform:translateY(-2px)}
+.karte h2{margin:16px 0 4px;font-size:19px;line-height:1.25}
+.karte .text{flex-grow:1;margin:0 0 16px;font-size:16px;color:#3d4d58}
+.karte .aktion,.gross-text .aktion{margin:0}
+.cv-link{display:flex;align-items:center;justify-content:center;height:270px;text-decoration:none}
+.gross-karte .cv-link{height:auto}
+.cv{display:block;width:auto;max-width:100%;max-height:270px;height:auto;margin:0 auto;border:1px solid #d6e4e2;border-radius:6px;box-shadow:0 12px 28px -14px rgba(17,19,31,.55);background:#fff}
+.cv.gross{width:100%;max-width:240px;max-height:none}
+.cv.ohne{display:flex;align-items:center;justify-content:center;aspect-ratio:2/3;background:#e6f1ef;font-size:48px}
+.abschluss{margin:48px 0 8px;padding:32px;border-radius:14px;background:#11131F;color:#fff;text-align:center}
+.abschluss h2{margin:0 0 8px;color:#fff}
+.abschluss p{margin:0 0 18px;color:#cbd5db}
+@media(max-width:640px){.gross-karte{grid-template-columns:1fr;gap:20px;padding:20px;text-align:center}.cv.gross{max-width:200px}.gross-text h2{font-size:22px}}
+</style>
+<script type="application/ld+json">${ld}</script>
+<script async src="https://plausible.io/js/pa--uQFBayBpH0z77zfdWY78.js"></script>
+<script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+</head>
+<body class="uebersicht">
+<header class="top"><div class="wrap">
+  <a class="logo" href="/" aria-label="plinyoo, zur Startseite">plinyoo</a>
+  <nav aria-label="Hauptnavigation">
+    <a class="login" href="${LOGIN}">Anmelden</a>
+    <a class="btn haupt" href="/#/zugang">Zugang anfragen</a>
+  </nav>
+</div></header>
+<main>
+<section class="sek"><div class="wrap">
+  <div class="kopf">
+    <nav class="krumen" aria-label="Brotkrumen"><a href="/">← Startseite</a><span aria-hidden="true">›</span><span aria-current="page">Bücher</span></nav>
+    <h1>Lernkarten zu Büchern</h1>
+    <p>Aus jedem Buch wird ein Wissensgraph: Karten, Verbindungen und Fragen. Such dir ein Buch aus und spiel es durch. Das neueste steht oben.</p>
+  </div>
+  ${gross}
+  ${rest.length ? `<ul class="raster">
+  ${kacheln}
+  </ul>` : ''}
+  <div class="abschluss">
+    <h2>Was willst du als Nächstes können?</h2>
+    <p>Sag uns, was dich interessiert. Wir zeigen dir den Weg, allein oder mit deinem Team.</p>
+    <p style="margin:0"><a class="btn haupt" href="/#/zugang">Zugang anfragen</a></p>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <a href="/">Startseite</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a>
+</div></footer>
+</body>
+</html>
+`;
+}
+
+const CSS = `<style>
 :root{--bg:#F4F5F7;--ink:#141A1F;--muted:#5B6672;--line:#D7DEE6;--teal:#6FB3B8;--teal-d:#3E8A90;--mist:#E6F0EF;--amber:#E3A72F;--graphite:#1C2A33;--surface2:#F8FAFC}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -478,7 +570,43 @@ body{font-size:18px}
 footer{font-size:15px}
 summary{font-size:18px}
 }
-</style>
+</style>`;
+
+function seite(b, mitCover, neu) {
+  const url = `${SITE}/buch/${b.slug}/`;
+  const titelVoll = `${b.titel} — ${b.autor}`;
+  const ogBild = mitCover ? `${url}og.png` : `${SITE}/og/buchseite.png`;
+  const titel = `${b.autor}: ${b.titel} — Buchvorstellung | plinyoo`;
+  const desc = b.leitfrage;
+  const karten = b.karten ?? [];
+  const slugQ = encodeURIComponent(b.slug);
+  const zugang = `/?buch=${slugQ}#/zugang`;
+
+  const faq = [
+    ['Stammen die Karten aus dem Buch?', `Nein. Das Buch ist der Anlass, nicht die Vorlage.`],
+    ['Muss ich etwas installieren?', 'Nein. plinyoo läuft im Browser, auch auf dem Telefon.'],
+    ['Was ist plinyoo?', 'Stell dir vor, alles, was ein Mensch weiß, wäre für jeden anderen begehbar: nicht als Kurs mit festem Gang, sondern als Landschaft, durch die man seinen eigenen Weg wählt. Das ist unser Ziel: Wissen von Kopf zu Kopf zu bringen, ohne dass der Weg dorthin länger, teurer oder dünner wird. plinyoo ist der erste Schritt. <a href="/">Mehr auf der Startseite</a>.'],
+  ];
+
+  return `<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(titel)}</title>
+<meta name="description" content="${esc(desc)}">
+<link rel="canonical" href="${url}">
+${b.draft ? '<meta name="robots" content="noindex, nofollow">' : ''}
+<meta property="og:site_name" content="plinyoo">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="${esc(titelVoll)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${ogBild}">
+<meta name="twitter:card" content="summary_large_image">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://plausible.io; base-uri 'self'; form-action 'self'">
+${CSS}
 <script>document.documentElement.className+=' js';try{if('scrollRestoration' in history){history.scrollRestoration='manual'}}catch(e){}</script>
 <script async src="https://plausible.io/js/pa--uQFBayBpH0z77zfdWY78.js"></script>
 <script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
@@ -495,6 +623,7 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
 
 <main>
 <section class="hero"><div class="wrap">
+  <p style="margin:0 0 16px;font-size:15px"><a data-alle-buecher href="/buch/" style="font-weight:600">← Alle Bücher</a></p>
   <p class="eyebrow">Buchvorstellung</p>
   <div class="grid${mitCover ? ' mit-cover' : ''}">
     <div>
@@ -553,7 +682,7 @@ ${b.platzhalter && !b.amazonUrl ? '' : `<section class="sek alt" aria-labelledby
     ${b.leseprobeUrl ? `<p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>` : ''}
     <p class="hinweis">Der Amazon-Link ist ein Partnerlink (Werbung). Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
   </div>
-  ${b.naechsteWoche ? `<h2 style="margin-top:32px">Ausblick</h2><p>${esc(b.naechsteWoche)}</p>` : ''}
+  ${neuKasten(b, neu)}
 </div></section>`}
 
 <section class="sek" aria-labelledby="faq-h"><div class="wrap">
@@ -720,7 +849,7 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
 async function main() {
   if (!(await exists(contentDir))) return;
   const dateien = (await readdir(contentDir)).filter((f) => f.endsWith('.json'));
-  let erzeugt = 0, uebersprungen = 0;
+  const alle = [];
   for (const f of dateien) {
     const b = JSON.parse(await readFile(path.join(contentDir, f), 'utf8'));
     for (const pflicht of ['slug', 'titel', 'autor', 'leitfrage']) {
@@ -729,6 +858,14 @@ async function main() {
     // Mindestens eine Bezugsquelle (Verlag oder Amazon), außer bei Platzhaltern
     if (!b.platzhalter && !b.verlagUrl && !b.amazonUrl) throw new Error(`${f}: Bezugsquelle fehlt (verlagUrl oder amazonUrl)`);
     if (!/^[a-z0-9-]+$/.test(b.slug)) throw new Error(`${f}: Slug nur a-z, 0-9, Bindestrich`);
+    alle.push(b);
+  }
+  // Veröffentlichte Bücher, das neueste (höchste nr) zuerst. Ohne nr zählt die Dateireihenfolge.
+  const sichtbar = alle.filter((b) => !b.draft || mitEntwuerfen).sort((x, y) => (y.nr ?? 0) - (x.nr ?? 0));
+  const neu = sichtbar[0];
+  let erzeugt = 0, uebersprungen = 0;
+  const covers = {};
+  for (const b of alle) {
     if (b.draft && !mitEntwuerfen) { uebersprungen++; continue; }
     const out = path.join(distDir, 'buch', b.slug);
     await mkdir(out, { recursive: true });
@@ -737,10 +874,21 @@ async function main() {
     if (mitCover) {
       await copyFile(coverQuelle, path.join(out, 'cover.jpg'));
       await vorschaubild(b, coverQuelle, path.join(out, 'og.png'));
+      // Kleine Fassung für die Übersicht (480 px breit), damit die Seite schnell lädt
+      const klein = await sharp(coverQuelle).resize({ width: 480, withoutEnlargement: true }).jpeg({ quality: 82 }).toBuffer({ resolveWithObject: true });
+      await writeFile(path.join(out, 'cover-klein.jpg'), klein.data);
+      covers[b.slug] = { w: klein.info.width, h: klein.info.height };
     }
-    await writeFile(path.join(out, 'index.html'), seite(b, mitCover), 'utf8');
+    await writeFile(path.join(out, 'index.html'), seite(b, mitCover, neu), 'utf8');
     erzeugt++;
     console.log(`Buchseite: /buch/${b.slug}/${mitCover ? ' (mit Cover)' : ' (ohne Cover)'}${b.draft ? ' [ENTWURF]' : ''}`);
+  }
+  if (sichtbar.length) {
+    await writeFile(path.join(distDir, 'buch', 'index.html'), uebersicht(sichtbar, covers), 'utf8');
+    // Liste für die Kacheln der Startseite (die App lädt sie zur Laufzeit; so veraltet nichts von Hand)
+    const liste = sichtbar.map((b, i) => ({ nr: b.nr ?? null, slug: b.slug, titel: b.kachelTitel || b.titel, text: kachelBeschreibung(b), symbol: b.symbol || '📚', neu: i === 0 }));
+    await writeFile(path.join(distDir, 'buecher.json'), JSON.stringify({ buecher: liste }), 'utf8');
+    console.log(`Übersicht: /buch/ und buecher.json (${liste.length} Bücher, neuestes: ${neu.slug})`);
   }
   console.log(`Buchseiten: ${erzeugt} erzeugt, ${uebersprungen} Entwürfe übersprungen`);
 }

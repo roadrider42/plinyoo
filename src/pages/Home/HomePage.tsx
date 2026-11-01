@@ -19,7 +19,7 @@ import HeroSection3 from "@/components/ui/HeroSection3";
 import VisionMission from "@/components/ui/VisionMission";
 import Roles from "@/components/ui/Roles";
 import HowItWorks from "@/components/ui/HowItWorks";
-import Examples from "@/components/ui/Examples";
+import Examples, { Books } from "@/components/ui/Examples";
 import Features from "@/components/ui/Features";
 import Wissensuniversum from "@/components/ui/Wissensuniversum";
 import Story from "@/components/ui/Story";
@@ -48,14 +48,15 @@ export default function LandingPage() {
   return (
     <div className="lesbar">
       {renderHero()}
-      {/* Drei Türen direkt nach dem Hero (Heiko 16.10.2026): Wer das Beispiel im Hero gesehen hat,
-          soll gleich wissen, was er in seiner Rolle davon hat. Vorher stand der Abschnitt an achter Stelle. */}
+      {/* Entwurf 01.11.2026 (Heiko): Der Blick in die App steht direkt unter dem Hero, dann die Drei Türen
+          (Entscheidung 16.10.2026: Rollen früh), dann die Bücher zum Durchspielen. */}
+      <Views />
       <Roles />
+      <Books />
       <Story />
       <VisionMission />
       <Features />
       <Wissensuniversum />
-      <Views />
       <Pillars />
       <Outcomes />
       <Examples />

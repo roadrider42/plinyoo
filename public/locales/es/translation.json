@@ -287,38 +287,11 @@
       "subtitle": "Para equipos de gastronomía",
       "button": "Más información"
     },
-    "book": {
-      "title": "Anarquía — La Compañía de las Indias Orientales",
-      "desc": "13 tarjetas sobre la historia de la Compañía de las Indias Orientales con grafo de conocimiento y preguntas interactivas.",
-      "subtitle": "Presentación del libro",
-      "button": "A la página del libro"
-    },
-    "book2": {
-      "title": "El poder de la geografía — Fronteras",
-      "desc": "6 tarjetas sobre quién trazó las fronteras con las que vivimos, con grafo de conocimiento y preguntas interactivas.",
-      "subtitle": "Presentación del libro",
-      "button": "A la página del libro"
-    },
-    "placeholder": {
-      "title": "Más ejemplos próximamente"
-    },
     "your-use-case": {
       "title": "Tu caso de uso",
       "subtitle": "Tus requisitos específicos",
       "desc": "Desarrollamos soluciones individuales para tus desafíos.",
       "button": "Contáctanos"
-    },
-    "book3": {
-      "title": "Lisboa 1941 — Ciudad de espías",
-      "subtitle": "Presentación del libro",
-      "desc": "8 tarjetas sobre la huida, el wolframio y la ruta marítima a la India, con grafo de conocimiento y preguntas interactivas.",
-      "button": "A la página del libro"
-    },
-    "book4": {
-      "title": "Los conquistadores — El imperio portugués",
-      "subtitle": "Presentación del libro · próximamente",
-      "desc": "Roger Crowley cuenta cómo Portugal construyó un imperio con la ruta marítima a la India. El texto llegará pronto.",
-      "button": "A la página del libro"
     }
   },
   "footer": {

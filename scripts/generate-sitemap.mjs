@@ -21,6 +21,9 @@ async function generateSitemap() {
     { loc: `${SITE}/#/kontakt`, changefreq: 'monthly', priority: '0.5' },
   ];
 
+  // Übersicht aller Bücher (erzeugt scripts/buchseiten.mjs)
+  urls.push({ loc: `${SITE}/buch/`, changefreq: 'weekly', priority: '0.8', lastmod: new Date().toISOString().split('T')[0] });
+
   // Buchseiten aus content/buecher/ lesen
   try {
     const files = await readdir(contentDir);

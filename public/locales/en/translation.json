@@ -235,38 +235,11 @@
       "subtitle": "For gastronomy teams",
       "button": "Learn more"
     },
-    "book": {
-      "title": "Anarchy — The East India Company",
-      "desc": "13 cards on the history of the East India Company with knowledge graph and interactive questions.",
-      "subtitle": "Book presentation",
-      "button": "To book page"
-    },
-    "book2": {
-      "title": "The Power of Geography — Borders",
-      "desc": "6 cards on who drew the borders we live with, with knowledge graph and interactive questions.",
-      "subtitle": "Book presentation",
-      "button": "To book page"
-    },
-    "placeholder": {
-      "title": "More examples to come"
-    },
     "your-use-case": {
       "title": "Your Use Case",
       "subtitle": "Your specific requirements",
       "desc": "We develop individual solutions for your challenges.",
       "button": "Contact us"
-    },
-    "book3": {
-      "title": "Lisbon 1941 — City of Spies",
-      "subtitle": "Book presentation",
-      "desc": "8 cards on flight, wolfram and the sea route to India, with knowledge graph and interactive questions.",
-      "button": "To book page"
-    },
-    "book4": {
-      "title": "The Conquerors — Portugal’s Empire",
-      "subtitle": "Book presentation · coming soon",
-      "desc": "Roger Crowley tells how Portugal built an empire along the sea route to India. The text will follow soon.",
-      "button": "To book page"
     }
   },
   "forms": {
