@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>plinyoo</title>
+  <script>
+    // SPA Fallback für GitHub Pages - leitet alle 404s an index.html
+    // Damit BrowserRouter auch auf GitHub Pages funktioniert
+    var segmentCount = 0;
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
+      l.pathname.slice(1).split('/').slice(segmentCount).join('/') +
+      (l.search ? '&' + l.search.slice(1) : '')
+    );
+  </script>
+</head>
+<body>
+</body>
+</html>

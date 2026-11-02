@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://www.plinyoo.com",
   "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
     "@radix-ui/react-progress": "^1.1.7",
@@ -44,7 +47,9 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp dist/index.html dist/404.html",
+    "build": "vite build && cp dist/index.html dist/404.html && node scripts/buchseiten.mjs && node scripts/seiten.mjs && node scripts/generate-sitemap.mjs",
+    "seiten:dev": "node scripts/seiten-dev.mjs",
+    "buchseiten:entwurf": "VITE_BUCHSEITEN_DRAFT=1 BUCHSEITEN_DRAFT=1 npm run build",
     "preview": "vite preview --port 3001"
   },
   "eslintConfig": {
@@ -88,6 +93,7 @@
     "jest": "^27.5.1",
     "jsdom": "^26.1.0",
     "postcss": "^8.5.6",
+    "sharp": "0.35.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.9.2",
     "vite": "^7.1.3"

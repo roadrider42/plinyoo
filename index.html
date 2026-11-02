@@ -4,7 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta property="og:title" content="plinyoo | Intelligente persönliche Lernplattformen" />
-    <meta name="description" content="plinyoo - intelligente persönliche digitale Lernplattformen" />
+    <meta property="og:description" content="Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.plinyoo.com/" />
+    <meta property="og:image" content="https://www.plinyoo.com/og-image.png" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="plinyoo" />
+    <meta name="description" content="plinyoo - intelligente persönliche digitale Lernplattformen. Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan." />
+    <meta name="keywords" content="Lernplattform, personalisiertes Lernen, Wissensmanagement, digitales Lernen, Mikro-Learning, Karteikarten, spaced repetition" />
+    <meta name="author" content="plinyoo UG" />
+    <link rel="canonical" href="https://www.plinyoo.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="plinyoo | Intelligente persönliche Lernplattformen" />
+    <meta name="twitter:description" content="Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan." />
+    <meta name="twitter:image" content="https://www.plinyoo.com/og-image.png" />
+    <meta name="twitter:site" content="@plinyoo_path" />
 
     <!-- Critical CSS - FOUC Prevention -->
     <style>
@@ -37,11 +51,6 @@
       }
     </style>
     
-    <!-- Font Preloading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
     <!-- PWA Manifest entfernt -->
     
     <!-- Android Theme -->
@@ -60,18 +69,28 @@
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' https://plausible.io 'unsafe-inline';
-    style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
-    font-src 'self' data: https://fonts.gstatic.com;
+    style-src 'self' 'unsafe-inline';
+    font-src 'self' data:;
     img-src 'self' data:;
     connect-src 'self' https://plausible.io https://*.supabase.co;
   ">
     <title>plinyoo</title>
 
+    <!-- Scroll-Restoration deaktivieren: Landingpage soll immer oben beginnen, nicht an der alten Scroll-Position -->
+    <script>
+      try {
+        if ('scrollRestoration' in history) {
+          history.scrollRestoration = 'manual';
+        }
+      } catch (e) {}
+    </script>
+
     <!-- Privacy-friendly analytics by Plausible -->
-    <script async src="https://plausible.io/js/pa-BExshcIVsLWvd6N5xURiI.js"></script>
+    <script async src="https://plausible.io/js/pa--uQFBayBpH0z77zfdWY78.js"></script>
     <script>
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      plausible.init()
+      // Die Website nutzt einen Hash-Router (/#/zugang): ohne diese Option zählt Plausible jede Seite als "/".
+      plausible.init({ hashBasedRouting: true })
     </script>
   </head>
   <body>
