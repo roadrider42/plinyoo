@@ -34,7 +34,7 @@
       },
       {
         "step": "Étoile",
-        "title": "Acquis — une étoile.",
+        "title": "Apprise — une étoile.",
         "text": "Quand toutes les questions d’une fiche ont été répondues juste la dernière fois, elle brille comme une étoile dans ton univers."
       }
     ]
@@ -95,7 +95,7 @@
       },
       {
         "title": "Ta progression brille",
-        "desc": "Chaque fiche acquise devient une étoile dans ton univers."
+        "desc": "Chaque fiche apprise devient une étoile dans ton univers."
       },
       {
         "title": "Un outil pour tout l'apprentissage",
