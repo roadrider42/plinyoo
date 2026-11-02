@@ -34,7 +34,7 @@
       },
       {
         "step": "Estrela",
-        "title": "Dominado — uma estrela.",
+        "title": "Aprendido — uma estrela.",
         "text": "Quando todas as perguntas de um cartão foram respondidas corretamente na última vez, ele brilha como estrela no seu universo."
       }
     ]
@@ -96,7 +96,7 @@
       },
       {
         "title": "Seu progresso brilha",
-        "desc": "Cada cartão dominado vira uma estrela no seu universo."
+        "desc": "Cada cartão aprendido vira uma estrela no seu universo."
       },
       {
         "title": "Uma ferramenta para todo o aprendizado",
