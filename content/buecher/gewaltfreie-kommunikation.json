@@ -1,0 +1,1488 @@
+{
+  "slug": "gewaltfreie-kommunikation",
+  "draft": false,
+  "nr": 6,
+  "kachelTitel": "Gewaltfreie Kommunikation — Sprechen und Zuhören",
+  "kachelText": "zu Beobachten, Bedürfnissen und Bitten, mit Wissensgraph und interaktiven Fragen.",
+  "symbol": "💬",
+  "autor": "Marshall B. Rosenberg",
+  "titel": "Gewaltfreie Kommunikation",
+  "untertitel": "Eine Sprache des Lebens",
+  "uebersetzer": "Ingrid Holler",
+  "verlag": "Junfermann Verlag",
+  "erschienen": "2016",
+  "isbn": "978-3-95571-572-4",
+  "leitfrage": "Wie diskutieren wir, ohne dass der andere dichtmacht?",
+  "einordnung": "Der Konfliktmediator Marshall B. Rosenberg zeigt, wie man spricht und zuhört, damit Gespräche nicht im Vorwurf enden.",
+  "kartenIntro": "Alle 13 kannst du unten durchspielen.",
+  "karten": [
+    "Urteile und Bedürfnisse",
+    "Zwei Fragen im Konflikt",
+    "Vier Komponenten",
+    "Beobachten",
+    "Kamera-Test",
+    "Prüfbar oder Wertung?",
+    "Bewertungen trennen",
+    "Urteile befragen",
+    "Auslöser und Ursache",
+    "Bitte statt Forderung",
+    "Empathie",
+    "Vier Reaktionen",
+    "Vom Müssen zum Wählen"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
+  "verlagUrl": "",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://link.amazon/B0dJEd54l",
+  "cover": "cover.jpg",
+  "coverCredit": "Cover der deutschen Ausgabe (Amazon-Produktbild)",
+  "naechsteWoche": "",
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph zu Rosenbergs Gewaltfreier Kommunikation",
+  "knoten": [
+    {
+      "slug": "gfk-urteile-und-beduerfnisse",
+      "titel": "Urteile und Bedürfnisse"
+    },
+    {
+      "slug": "gfk-zwei-fragen-im-konflikt",
+      "titel": "Zwei Fragen im Konflikt"
+    },
+    {
+      "slug": "gfk-vier-komponenten",
+      "titel": "Vier Komponenten"
+    },
+    {
+      "slug": "gfk-beobachten-ohne-bewerten",
+      "titel": "Beobachten"
+    },
+    {
+      "slug": "gfk-kamera-test",
+      "titel": "Kamera-Test"
+    },
+    {
+      "slug": "gfk-pruefbar-oder-wertung",
+      "titel": "Prüfbar oder Wertung?"
+    },
+    {
+      "slug": "gfk-bewertungen-trennen",
+      "titel": "Bewertungen trennen"
+    },
+    {
+      "slug": "gfk-urteile-befragen",
+      "titel": "Urteile befragen"
+    },
+    {
+      "slug": "gfk-ausloeser-und-ursache",
+      "titel": "Auslöser und Ursache"
+    },
+    {
+      "slug": "gfk-bitte-statt-forderung",
+      "titel": "Bitte statt Forderung"
+    },
+    {
+      "slug": "gfk-empathie",
+      "titel": "Empathie"
+    },
+    {
+      "slug": "gfk-vier-reaktionen",
+      "titel": "Vier Reaktionen"
+    },
+    {
+      "slug": "gfk-muessen-in-frei-waehlen",
+      "titel": "Vom Müssen zum Wählen"
+    }
+  ],
+  "kanten": [
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      2,
+      8,
+      "verwandt"
+    ],
+    [
+      2,
+      0,
+      "verwandt"
+    ],
+    [
+      2,
+      9,
+      "verwandt"
+    ],
+    [
+      8,
+      11,
+      "verwandt"
+    ],
+    [
+      8,
+      12,
+      "verwandt"
+    ],
+    [
+      0,
+      10,
+      "verwandt"
+    ],
+    [
+      0,
+      12,
+      "verwandt"
+    ],
+    [
+      10,
+      11,
+      "verwandt"
+    ],
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      9,
+      1,
+      "verwandt"
+    ],
+    [
+      3,
+      4,
+      "verwandt"
+    ],
+    [
+      3,
+      6,
+      "verwandt"
+    ],
+    [
+      4,
+      6,
+      "verwandt"
+    ],
+    [
+      4,
+      5,
+      "verwandt"
+    ],
+    [
+      6,
+      5,
+      "verwandt"
+    ],
+    [
+      0,
+      7,
+      "verwandt"
+    ],
+    [
+      6,
+      7,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "Die Frage",
+    "titel": "Wie diskutieren wir, ohne dass der andere dichtmacht?",
+    "anreisser": "Mit zwei Fragen begann der Mediator Marshall Rosenberg Vermittlungen in feindseligen Konflikten: Was braucht jeder von euch? Worum möchtet ihr die anderen bitten?",
+    "absaetze": [
+      "Marshall B. Rosenberg (1934 bis 2015) war US-amerikanischer Psychologe und international tätiger Mediator. Er studierte bei Carl Rogers, promovierte 1961 als klinischer Psychologe, entwickelte ab 1963 die Gewaltfreie Kommunikation, kurz GFK, und gründete 1984 das Center for Nonviolent Communication.",
+      "Seine Wurzeln liegen in der Vermittlung. In den frühen sechziger Jahren unterstützte er mit Mediationsprogrammen und Trainings Gemeinden in den USA, die die Rassentrennung an Schulen und anderen öffentlichen Einrichtungen überwinden wollten. Später war er auch in Kriegs- und Krisengebieten aktiv, und Friedensteams nutzen die GFK dort, etwa in Ruanda, Burundi, Nigeria, Serbien, Kroatien, Israel und Palästina. In seinem Buch schildert er, wie er in Südkalifornien zwischen Grundbesitzern und eingewanderten Farmarbeitern vermittelte, deren Konflikte immer feindseliger und gewalttätiger geworden waren.",
+      "Beide Seiten riefen einander Urteile zu. Rosenberg fiel auf: Die Menschen waren geübter darin, die vermuteten Fehler anderer zu analysieren, als klar und deutlich ihre eigenen Bedürfnisse auszudrücken.",
+      "Er eröffnete das Treffen mit zwei Fragen: „Was ist es, was jeder von euch braucht? Um was – in Bezug auf eure Bedürfnisse – möchtet ihr die anderen bitten?“ Mit denselben Fragen begann er auch eine Runde mit Israelis und Palästinensern.",
+      "Dahinter steht sein Kerngedanke: Urteile, Kritik und Interpretationen sind für Rosenberg Äußerungen eigener, unerfüllter Bedürfnisse. „Du verstehst mich nie“ heißt in Wirklichkeit, dass sich das Bedürfnis nach Verständnis nicht erfüllt. Und wer etwas hört, das auch nur entfernt nach Kritik klingt, neigt dazu, sich zu verteidigen oder zurückzuschlagen.",
+      "Daraus macht er ein Werkzeug mit vier Komponenten: beobachten, ohne zu bewerten, das Gefühl benennen, das Bedürfnis dahinter erkennen und eine Bitte aussprechen, keine Forderung. Auch beim Zuhören gilt: Egal, was jemand sagt, man hört nur darauf, was er beobachtet, fühlt, braucht und erbittet.",
+      "Ob ein Satz eine Beobachtung ist, lässt sich prüfen. Eine Frage aus der Trainingspraxis lautet: Was würde eine Kamera aufnehmen? Sie hält fest, was geschieht, aber weder Deutungen noch Urteile. „Dein Zimmer ist nicht aufgeräumt“ ist demnach eine Bewertung, „In deinem Zimmer liegt Wäsche auf dem Boden und am Bett stehen leere Flaschen“ eine Beobachtung (Beispiel aus einem Coaching-Brief des Junfermann Verlags). Rosenberg verlangt dabei nicht, auf Bewertungen zu verzichten, sondern sie von Beobachtungen zu trennen.",
+      "Das sind Rosenbergs Überzeugungen, keine Studienergebnisse. Aber sie treffen einen Nerv unserer Zeit.",
+      "Unsere Einordnung: Gerade wenn Debatten hitzig werden, über Bildung, Politik oder die Frage, wie wir leben wollen, entscheidet die Sprache, ob man einander noch erreicht. Wer Vorwürfe macht, bekommt Verteidigung. Wer sagt, was er braucht und worum er bittet, gibt dem anderen etwas, worauf er antworten kann. Eine gute Diskussion braucht deshalb zweierlei: die richtige Sprache und Werkzeuge, die man üben kann.",
+      "Zu den Gedanken des Buchs gibt es bei plinyoo Lernkarten mit Fragen zum Ausprobieren. Du suchst dir aus, wo du anfängst.",
+      "Das Buch gibt es gedruckt, als E-Book und als Hörbuch.",
+      "Probier es an den Karten aus: Was sagt jemand wirklich, der „Du verstehst mich nie“ sagt?"
+    ],
+    "autor": "Heiko Miertzsch"
+  },
+  "kartenvoll": [
+    {
+      "slug": "gfk-urteile-und-beduerfnisse",
+      "kurz": "Urteile und Bedürfnisse",
+      "titel": "Urteile als Ausdruck unerfüllter Bedürfnisse",
+      "karte": "Wer andere kritisiert, sagt damit nach Rosenberg etwas über sich selbst. Urteile, Kritik, Diagnosen und Interpretationen des Verhaltens anderer sind für ihn entfremdete Äußerungen eigener Bedürfnisse. Hinter „Du verstehst mich nie“ steht ein Bedürfnis nach Verständnis, das sich nicht erfüllt. Wer sein Kind faul nennt, weil der Mantel auf der Couch liegt, möchte in Wirklichkeit, dass der Mantel im Schrank hängt. Solche Urteile erzeugen bei den Menschen, an deren Verhalten uns etwas liegt, Abwehr und Widerstand: Wer etwas hört, das auch nur entfernt nach Kritik klingt, neigt zu Verteidigung oder Gegenangriff.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was teilt jemand nach Rosenberg in Wirklichkeit mit, der sagt: „Du verstehst mich nie“?",
+          "beleg": "Sagt jemand: „Du verstehst mich nie",
+          "belegDe": "„Sagt jemand: „Du verstehst mich nie“, dann teilt er uns in Wirklichkeit mit, dass sich sein Bedürfnis nach Verständnis nicht erfüllt.“",
+          "optionen": [
+            {
+              "text": "Dass er den anderen für gleichgültig und unfähig hält",
+              "ok": false,
+              "fb": "Falsch: Wer sagt „Du verstehst mich nie“, teilt in Wirklichkeit mit, dass sich sein Bedürfnis nach Verständnis nicht erfüllt."
+            },
+            {
+              "text": "Dass er einen konkreten Vorschlag zur Lösung erwartet",
+              "ok": false,
+              "fb": "Falsch: Wer sagt „Du verstehst mich nie“, teilt in Wirklichkeit mit, dass sich sein Bedürfnis nach Verständnis nicht erfüllt."
+            },
+            {
+              "text": "Dass sich sein Bedürfnis nach Verständnis nicht erfüllt",
+              "ok": true,
+              "fb": "Richtig: Wer sagt „Du verstehst mich nie“, teilt in Wirklichkeit mit, dass sich sein Bedürfnis nach Verständnis nicht erfüllt."
+            },
+            {
+              "text": "Dass er sich selbst für den Streit verantwortlich macht",
+              "ok": false,
+              "fb": "Falsch: Wer sagt „Du verstehst mich nie“, teilt in Wirklichkeit mit, dass sich sein Bedürfnis nach Verständnis nicht erfüllt."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Du nennst dein Kind faul, weil der Mantel auf der Couch liegt. Was steckt nach Rosenberg dahinter?",
+          "beleg": "Deshalb kritisieren wir vielleicht unsere Kinder als faul, wenn sie die Mäntel auf der Couch liegen lassen, nur weil wir gerne möchten, dass die Mäntel im Schrank hängen.",
+          "belegDe": "„Deshalb kritisieren wir vielleicht unsere Kinder als faul, wenn sie die Mäntel auf der Couch liegen lassen, nur weil wir gerne möchten, dass die Mäntel im Schrank hängen.“",
+          "optionen": [
+            {
+              "text": "Du möchtest gern, dass der Mantel im Schrank hängt",
+              "ok": true,
+              "fb": "Richtig: Wir kritisieren das Kind als faul, weil wir gerne möchten, dass der Mantel im Schrank hängt."
+            },
+            {
+              "text": "Dein Kind hat tatsächlich ein Problem mit Fleiß und Ordnung",
+              "ok": false,
+              "fb": "Falsch: Wir kritisieren das Kind als faul, weil wir gerne möchten, dass der Mantel im Schrank hängt."
+            },
+            {
+              "text": "Du beschreibst sachlich, was im Zimmer geschehen ist",
+              "ok": false,
+              "fb": "Falsch: Wir kritisieren das Kind als faul, weil wir gerne möchten, dass der Mantel im Schrank hängt."
+            },
+            {
+              "text": "Du bittest dein Kind klar darum, den Mantel aufzuhängen",
+              "ok": false,
+              "fb": "Falsch: Wir kritisieren das Kind als faul, weil wir gerne möchten, dass der Mantel im Schrank hängt."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum erreicht man mit Urteilen über andere oft das Gegenteil dessen, was man sich wünscht?",
+          "beleg": "Wenn wir unsere Werte und Bedürfnisse auf diese Weise ausdrücken, erzeugen wir genau bei den Menschen Abwehr und Widerstand, an deren Verhalten uns etwas liegt.",
+          "belegDe": "„Wenn wir unsere Werte und Bedürfnisse auf diese Weise ausdrücken, erzeugen wir genau bei den Menschen Abwehr und Widerstand, an deren Verhalten uns etwas liegt.“",
+          "optionen": [
+            {
+              "text": "Sie werden als Lob verstanden und nicht ernst genommen",
+              "ok": false,
+              "fb": "Falsch: Wer so seine Werte und Bedürfnisse ausdrückt, erzeugt genau bei den Menschen Abwehr und Widerstand, an deren Verhalten ihm etwas liegt."
+            },
+            {
+              "text": "Sie wirken so sachlich, dass sie niemanden berühren",
+              "ok": false,
+              "fb": "Falsch: Wer so seine Werte und Bedürfnisse ausdrückt, erzeugt genau bei den Menschen Abwehr und Widerstand, an deren Verhalten ihm etwas liegt."
+            },
+            {
+              "text": "Sie werden vergessen, bevor der andere reagieren kann",
+              "ok": false,
+              "fb": "Falsch: Wer so seine Werte und Bedürfnisse ausdrückt, erzeugt genau bei den Menschen Abwehr und Widerstand, an deren Verhalten ihm etwas liegt."
+            },
+            {
+              "text": "Sie erzeugen bei den Menschen Abwehr und Widerstand",
+              "ok": true,
+              "fb": "Richtig: Wer so seine Werte und Bedürfnisse ausdrückt, erzeugt genau bei den Menschen Abwehr und Widerstand, an deren Verhalten ihm etwas liegt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-zwei-fragen-im-konflikt",
+      "kurz": "Zwei Fragen im Konflikt",
+      "titel": "Zwei Fragen am Anfang einer feindseligen Vermittlung",
+      "karte": "In Südkalifornien sollte Rosenberg zwischen Grundbesitzern und eingewanderten Farmarbeitern vermitteln, deren Konflikte immer feindseliger und gewalttätiger geworden waren. Beide Gruppen riefen einander Urteile zu. Rosenberg bemerkt, solche Menschen seien oft geübter darin, die vermuteten Fehler anderer zu analysieren, als klar und deutlich ihre eigenen Bedürfnisse auszudrücken. Er eröffnete das Treffen mit zwei Fragen: Was braucht jeder, und worum möchte er die anderen bitten? Mit denselben Fragen begann er eine Runde mit Israelis und Palästinensern.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche zwei Fragen stellte Rosenberg zu Beginn der Vermittlung in Südkalifornien?",
+          "beleg": "Was ist es, was jeder von euch braucht? Um was – in Bezug auf eure Bedürfnisse – möchtet ihr die anderen bitten?",
+          "belegDe": "„Was ist es, was jeder von euch braucht? Um was – in Bezug auf eure Bedürfnisse – möchtet ihr die anderen bitten?“",
+          "optionen": [
+            {
+              "text": "Wer von beiden Seiten zuerst Unrecht begangen und angefangen hat",
+              "ok": false,
+              "fb": "Falsch: Rosenberg fragte, was jeder braucht und worum er die anderen bitten möchte."
+            },
+            {
+              "text": "Welche Forderungen jede Seite gegen die andere durchsetzen möchte",
+              "ok": false,
+              "fb": "Falsch: Rosenberg fragte, was jeder braucht und worum er die anderen bitten möchte."
+            },
+            {
+              "text": "Was jeder braucht und worum er die anderen bitten möchte",
+              "ok": true,
+              "fb": "Richtig: Rosenberg fragte, was jeder braucht und worum er die anderen bitten möchte."
+            },
+            {
+              "text": "Welche Fehler die anderen gemacht haben und warum es dazu kam",
+              "ok": false,
+              "fb": "Falsch: Rosenberg fragte, was jeder braucht und worum er die anderen bitten möchte."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Zwei Gruppen geben sich gegenseitig die Schuld an einem Problem. Womit beginnst du nach Rosenberg?",
+          "beleg": "Was ist es, was jeder von euch braucht? Um was – in Bezug auf eure Bedürfnisse – möchtet ihr die anderen bitten?",
+          "belegDe": "„Was ist es, was jeder von euch braucht? Um was – in Bezug auf eure Bedürfnisse – möchtet ihr die anderen bitten?“",
+          "optionen": [
+            {
+              "text": "Mit der Frage, was jede Gruppe braucht und worum sie die andere bittet",
+              "ok": true,
+              "fb": "Richtig: Rosenberg beginnt mit den Fragen, was jeder braucht und worum er die anderen bittet."
+            },
+            {
+              "text": "Mit der Frage, wer das Problem zuerst verursacht hat und wie es dazu kam",
+              "ok": false,
+              "fb": "Falsch: Rosenberg beginnt mit den Fragen, was jeder braucht und worum er die anderen bittet."
+            },
+            {
+              "text": "Mit der Frage, welche Strafe das Problem für die Schuldigen nach sich zieht",
+              "ok": false,
+              "fb": "Falsch: Rosenberg beginnt mit den Fragen, was jeder braucht und worum er die anderen bittet."
+            },
+            {
+              "text": "Mit der Bitte, dass beide Gruppen zunächst ihre eigenen Fehler offen zugeben",
+              "ok": false,
+              "fb": "Falsch: Rosenberg beginnt mit den Fragen, was jeder braucht und worum er die anderen bittet."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was fiel Rosenberg bei den Streitenden in Südkalifornien auf?",
+          "beleg": "Wie es oft der Fall ist, waren diese Menschen geübter darin, die vermuteten Fehler anderer zu analysieren, als klar und deutlich ihre eigenen Bedürfnisse auszudrücken.",
+          "belegDe": "„Wie es oft der Fall ist, waren diese Menschen geübter darin, die vermuteten Fehler anderer zu analysieren, als klar und deutlich ihre eigenen Bedürfnisse auszudrücken.“",
+          "optionen": [
+            {
+              "text": "Sie erkannten die Bedürfnisse der anderen gut, äußerten aber ihre eigenen nicht",
+              "ok": false,
+              "fb": "Falsch: Die Menschen waren geübter darin, vermutete Fehler anderer zu analysieren, als ihre eigenen Bedürfnisse auszudrücken."
+            },
+            {
+              "text": "Sie analysierten lieber vermutete Fehler anderer, als eigene Bedürfnisse zu äußern",
+              "ok": true,
+              "fb": "Richtig: Die Menschen waren geübter darin, vermutete Fehler anderer zu analysieren, als ihre eigenen Bedürfnisse auszudrücken."
+            },
+            {
+              "text": "Sie äußerten ihre Bedürfnisse klar und deutlich, wurden aber vom Gegenüber nicht gehört",
+              "ok": false,
+              "fb": "Falsch: Die Menschen waren geübter darin, vermutete Fehler anderer zu analysieren, als ihre eigenen Bedürfnisse auszudrücken."
+            },
+            {
+              "text": "Sie waren sich über die Ursachen des Streits einig und stritten bloß über die Lösung",
+              "ok": false,
+              "fb": "Falsch: Die Menschen waren geübter darin, vermutete Fehler anderer zu analysieren, als ihre eigenen Bedürfnisse auszudrücken."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-vier-komponenten",
+      "kurz": "Vier Komponenten",
+      "titel": "Die vier Komponenten der Gewaltfreien Kommunikation",
+      "karte": "Was jemand auch sagt: Nach Rosenbergs Modell hört man nur darauf, was er beobachtet, wie er sich fühlt, was er braucht und worum er bittet. Das sind die vier Komponenten. Nach dem Gefühl fragt Rosenberg zum Beispiel so: „Wie fühlst du dich?“",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche vier Komponenten hat die Gewaltfreie Kommunikation nach Rosenberg?",
+          "beleg": "Egal, was jemand sagt, wir hören nur darauf, was er 1) beobachtet, 2) fühlt, 3) braucht und 4) erbittet.",
+          "belegDe": "„Egal, was jemand sagt, wir hören nur darauf, was er 1) beobachtet, 2) fühlt, 3) braucht und 4) erbittet.“",
+          "optionen": [
+            {
+              "text": "Beobachtung, Urteil, Gefühl und Forderung",
+              "ok": false,
+              "fb": "Falsch: Die vier Komponenten sind Beobachtung, Gefühl, Bedürfnis und Bitte."
+            },
+            {
+              "text": "Tatsache, Meinung, Gefühl und Lösungsvorschlag",
+              "ok": false,
+              "fb": "Falsch: Die vier Komponenten sind Beobachtung, Gefühl, Bedürfnis und Bitte."
+            },
+            {
+              "text": "Beobachtung, Gefühl, Bedürfnis und Bitte",
+              "ok": true,
+              "fb": "Richtig: Die vier Komponenten sind Beobachtung, Gefühl, Bedürfnis und Bitte."
+            },
+            {
+              "text": "Beobachtung, Bewertung, Bedürfnis und Bitte",
+              "ok": false,
+              "fb": "Falsch: Die vier Komponenten sind Beobachtung, Gefühl, Bedürfnis und Bitte."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Eine Kollegin schimpft über das Projekt. Worauf hörst du nach Rosenberg, egal wie sie es sagt?",
+          "beleg": "Egal, was jemand sagt, wir hören nur darauf, was er 1) beobachtet, 2) fühlt, 3) braucht und 4) erbittet.",
+          "belegDe": "„Egal, was jemand sagt, wir hören nur darauf, was er 1) beobachtet, 2) fühlt, 3) braucht und 4) erbittet.“",
+          "optionen": [
+            {
+              "text": "Darauf, was sie beobachtet, fühlt, braucht und erbittet",
+              "ok": true,
+              "fb": "Richtig: Man hört darauf, was jemand beobachtet, fühlt, braucht und erbittet, egal, was er sagt."
+            },
+            {
+              "text": "Darauf, welche Fehler sie anderen vorwirft und ob das stimmt",
+              "ok": false,
+              "fb": "Falsch: Man hört darauf, was jemand beobachtet, fühlt, braucht und erbittet, egal, was er sagt."
+            },
+            {
+              "text": "Darauf, ob sie sich im Ton vergreift und wer schuld ist",
+              "ok": false,
+              "fb": "Falsch: Man hört darauf, was jemand beobachtet, fühlt, braucht und erbittet, egal, was er sagt."
+            },
+            {
+              "text": "Darauf, welche Lösung sie vorschlägt und ob sie machbar ist",
+              "ok": false,
+              "fb": "Falsch: Man hört darauf, was jemand beobachtet, fühlt, braucht und erbittet, egal, was er sagt."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Mit welcher Frage hört man nach Rosenberg auf die Bitte des anderen?",
+          "beleg": "Achten Sie bitte auf den Unterschied zwischen diesen Fragen und den nun folgenden: „Was habe ich gemacht, worauf beziehst du dich?",
+          "belegDe": "„Achten Sie bitte auf den Unterschied zwischen diesen Fragen und den nun folgenden: „Was habe ich gemacht, worauf beziehst du dich?“ „Wie fühlst du dich?“ „Warum fühlst du dich so?“ „Was möchtest du von mir, was soll ich tun?““",
+          "optionen": [
+            {
+              "text": "Warum fühlst du dich so?",
+              "ok": false,
+              "fb": "Falsch: Auf die Bitte des anderen zielt die Frage „Was möchtest du von mir, was soll ich tun?“."
+            },
+            {
+              "text": "Was möchtest du von mir, was soll ich tun?",
+              "ok": true,
+              "fb": "Richtig: Auf die Bitte des anderen zielt die Frage „Was möchtest du von mir, was soll ich tun?“."
+            },
+            {
+              "text": "Wie fühlst du dich?",
+              "ok": false,
+              "fb": "Falsch: Auf die Bitte des anderen zielt die Frage „Was möchtest du von mir, was soll ich tun?“."
+            },
+            {
+              "text": "Was habe ich gemacht, worauf beziehst du dich?",
+              "ok": false,
+              "fb": "Falsch: Auf die Bitte des anderen zielt die Frage „Was möchtest du von mir, was soll ich tun?“."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-beobachten-ohne-bewerten",
+      "kurz": "Beobachten",
+      "titel": "Beobachten, ohne zu bewerten",
+      "karte": "Rosenberg führt den indischen Philosophen J. Krishnamurti an: Die höchste Form menschlicher Intelligenz sei es, zu beobachten, ohne zu bewerten. Im Buch steht dazu auch der Ruf „BEOBACHTE!!“, denn es gebe wenige Dinge, die so wichtig, so spirituell seien wie Beobachten. Dazu passt ein Satz Epiktets: Nicht die Tatsachen selbst machten das Leben schwer, sondern unsere Bewertung der Tatsachen.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was nannte der Philosoph J. Krishnamurti die höchste Form menschlicher Intelligenz?",
+          "beleg": "Der indische Philosoph J. Krishnamurti stellte einmal fest, dass es die höchste Form menschlicher Intelligenz ist zu beobachten, ohne zu bewerten.",
+          "belegDe": "„Der indische Philosoph J. Krishnamurti stellte einmal fest, dass es die höchste Form menschlicher Intelligenz ist zu beobachten, ohne zu bewerten.“",
+          "optionen": [
+            {
+              "text": "Urteile rasch und treffend zu fällen",
+              "ok": false,
+              "fb": "Falsch: Krishnamurti nennt es die höchste Form menschlicher Intelligenz, zu beobachten, ohne zu bewerten."
+            },
+            {
+              "text": "Gefühle zu unterdrücken, um klar zu denken",
+              "ok": false,
+              "fb": "Falsch: Krishnamurti nennt es die höchste Form menschlicher Intelligenz, zu beobachten, ohne zu bewerten."
+            },
+            {
+              "text": "Fehler zu erkennen und klar zu benennen",
+              "ok": false,
+              "fb": "Falsch: Krishnamurti nennt es die höchste Form menschlicher Intelligenz, zu beobachten, ohne zu bewerten."
+            },
+            {
+              "text": "Zu beobachten, ohne dabei zu bewerten",
+              "ok": true,
+              "fb": "Richtig: Krishnamurti nennt es die höchste Form menschlicher Intelligenz, zu beobachten, ohne zu bewerten."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Ein Kollege verpasst dreimal die Besprechung. Was entspricht Rosenbergs Rat zum Beobachten?",
+          "beleg": "Der indische Philosoph J. Krishnamurti stellte einmal fest, dass es die höchste Form menschlicher Intelligenz ist zu beobachten, ohne zu bewerten.",
+          "belegDe": "„Der indische Philosoph J. Krishnamurti stellte einmal fest, dass es die höchste Form menschlicher Intelligenz ist zu beobachten, ohne zu bewerten.“",
+          "optionen": [
+            {
+              "text": "Ihm sagen, dass er unzuverlässig ist, damit er es versteht",
+              "ok": false,
+              "fb": "Falsch: Rosenberg rät, zu beobachten, ohne zu bewerten, also zu beschreiben, was geschehen ist."
+            },
+            {
+              "text": "Beschreiben, was geschehen ist, ohne es zu bewerten",
+              "ok": true,
+              "fb": "Richtig: Rosenberg rät, zu beobachten, ohne zu bewerten, also zu beschreiben, was geschehen ist."
+            },
+            {
+              "text": "Ihn fragen, warum er sich so rücksichtslos verhält",
+              "ok": false,
+              "fb": "Falsch: Rosenberg rät, zu beobachten, ohne zu bewerten, also zu beschreiben, was geschehen ist."
+            },
+            {
+              "text": "Vermuten, dass er das Projekt für unwichtig hält",
+              "ok": false,
+              "fb": "Falsch: Rosenberg rät, zu beobachten, ohne zu bewerten, also zu beschreiben, was geschehen ist."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Woran liegt es nach Epiktet, wenn uns eine Lage das Leben schwer macht?",
+          "beleg": "Nicht die Tatsachen selbst machen das Leben schwer, sondern unsere Bewertung der Tatsachen.",
+          "belegDe": "„Nicht die Tatsachen selbst machen das Leben schwer, sondern unsere Bewertung der Tatsachen.“",
+          "optionen": [
+            {
+              "text": "An den Tatsachen selbst, die wir leider nicht ändern können",
+              "ok": false,
+              "fb": "Falsch: Nach Epiktet machen nicht die Tatsachen selbst das Leben schwer, sondern unsere Bewertung der Tatsachen."
+            },
+            {
+              "text": "An Menschen, die uns wichtige Tatsachen absichtlich verschweigen",
+              "ok": false,
+              "fb": "Falsch: Nach Epiktet machen nicht die Tatsachen selbst das Leben schwer, sondern unsere Bewertung der Tatsachen."
+            },
+            {
+              "text": "An unserer Bewertung der Lage, nicht an den Tatsachen selbst",
+              "ok": true,
+              "fb": "Richtig: Nach Epiktet machen nicht die Tatsachen selbst das Leben schwer, sondern unsere Bewertung der Tatsachen."
+            },
+            {
+              "text": "An fehlender Erfahrung im Umgang mit solchen schwierigen Lagen",
+              "ok": false,
+              "fb": "Falsch: Nach Epiktet machen nicht die Tatsachen selbst das Leben schwer, sondern unsere Bewertung der Tatsachen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-kamera-test",
+      "kurz": "Kamera-Test",
+      "titel": "Der Kamera-Test für Beobachtungen",
+      "karte": "Ob eine Aussage eine reine Beobachtung ist, lässt sich prüfen: Man fragt, welches Verhalten eine Kamera in der Situation aufnehmen würde. Eine Kamera hält Fakten fest, aber keine Interpretationen, Bewertungen, Annahmen oder Urteile. Aus „Dein Zimmer ist nicht aufgeräumt.“ wird so die Beobachtung, dass auf dem Boden Wäsche liegt und am Bett leere Flaschen stehen. Ein zweiter Test steckt im Gespräch: Widerspricht das Gegenüber auf eine Beobachtung mit „Nein, das sehe ich anders …“ oder „Ja, aber …“, haben sich vermutlich Bewertungen eingeschlichen, die es nicht teilt.",
+      "quelle": {
+        "titel": "Beobachtungen statt Bewertungen (Gewaltfreie Kommunikation, Coaching-Brief 2)",
+        "url": "https://junfermann.de/_files_media/downloads/3301752FC44186CE4ABBC6D/beobachtungen.pdf",
+        "herausgeber": "Anja Palitza, Olaf Hartke, Junfermann Verlag (kostenloser Coaching-Brief, 2012)",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche Frage hilft in einem Konflikt, Beobachtung und Bewertung zu trennen?",
+          "beleg": "Achten Sie in Konflikten darauf, welches Verhalten eine Kamera in dieser Situation aufnehmen würde. Eine Kamera nimmt keine Interpretationen, Bewertungen, Annahmen oder Urteile auf, sondern lediglich die Fakten.",
+          "belegDe": "„Achten Sie in Konflikten darauf, welches Verhalten eine Kamera in dieser Situation aufnehmen würde. Eine Kamera nimmt keine Interpretationen, Bewertungen, Annahmen oder Urteile auf, sondern lediglich die Fakten.“",
+          "optionen": [
+            {
+              "text": "Welche Absicht steckt wahrscheinlich hinter dem Verhalten der Person?",
+              "ok": false,
+              "fb": "Falsch: Hilfreich ist die Frage, welches Verhalten eine Kamera in dieser Situation aufnehmen würde."
+            },
+            {
+              "text": "Wie würden die meisten anderen Menschen dieses Verhalten beurteilen?",
+              "ok": false,
+              "fb": "Falsch: Hilfreich ist die Frage, welches Verhalten eine Kamera in dieser Situation aufnehmen würde."
+            },
+            {
+              "text": "Was hätte die Person in dieser Situation besser tun sollen?",
+              "ok": false,
+              "fb": "Falsch: Hilfreich ist die Frage, welches Verhalten eine Kamera in dieser Situation aufnehmen würde."
+            },
+            {
+              "text": "Welches Verhalten würde eine Kamera in dieser Situation aufnehmen?",
+              "ok": true,
+              "fb": "Richtig: Hilfreich ist die Frage, welches Verhalten eine Kamera in dieser Situation aufnehmen würde."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Aussage macht aus „Dein Zimmer ist nicht aufgeräumt“ eine reine Beobachtung?",
+          "beleg": "In deinem Zimmer liegt Wäsche auf dem Boden und am Bett stehen leere Flaschen.",
+          "belegDe": "„In deinem Zimmer liegt Wäsche auf dem Boden und am Bett stehen leere Flaschen.“",
+          "optionen": [
+            {
+              "text": "In deinem Zimmer liegt Wäsche auf dem Boden und am Bett stehen leere Flaschen.",
+              "ok": true,
+              "fb": "Richtig: Als Beobachtung passt: In deinem Zimmer liegt Wäsche auf dem Boden und am Bett stehen leere Flaschen."
+            },
+            {
+              "text": "Dein Zimmer sieht aus wie nach einem Bombeneinschlag und das ist eine Zumutung",
+              "ok": false,
+              "fb": "Falsch: Als Beobachtung passt: In deinem Zimmer liegt Wäsche auf dem Boden und am Bett stehen leere Flaschen."
+            },
+            {
+              "text": "Du bist faul und lässt dein Zimmer jeden Tag absichtlich ein Stück mehr verkommen",
+              "ok": false,
+              "fb": "Falsch: Als Beobachtung passt: In deinem Zimmer liegt Wäsche auf dem Boden und am Bett stehen leere Flaschen."
+            },
+            {
+              "text": "In deinem Zimmer herrscht ein schreckliches Chaos und das stört jeden im Haus",
+              "ok": false,
+              "fb": "Falsch: Als Beobachtung passt: In deinem Zimmer liegt Wäsche auf dem Boden und am Bett stehen leere Flaschen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Woran erkennt man im Gespräch, dass sich in eine Beobachtung Bewertungen eingeschlichen haben?",
+          "beleg": "Antwortet er auf Ihre Beobachtungen mit „Nein, das sehe ich anders…",
+          "belegDe": "„Antwortet er auf Ihre Beobachtungen mit „Nein, das sehe ich anders…“, mit „Ja, aber…“ oder „Für mich stellt sich das so dar… “, dann scheinen sich in Ihre Beobachtungen Bewertungen eingeschlichen zu haben, die Ihr Gegenüber nicht teilt.“",
+          "optionen": [
+            {
+              "text": "Das Gegenüber stimmt sofort zu und wiederholt die Aussage noch einmal mit eigenen Worten",
+              "ok": false,
+              "fb": "Falsch: Antwortet das Gegenüber mit „Nein, das sehe ich anders …“ oder „Ja, aber …“, haben sich Bewertungen eingeschlichen, die es nicht teilt."
+            },
+            {
+              "text": "Die Aussage enthält Zahlen, Daten und genaue Uhrzeiten und ist deshalb zu lang geraten",
+              "ok": false,
+              "fb": "Falsch: Antwortet das Gegenüber mit „Nein, das sehe ich anders …“ oder „Ja, aber …“, haben sich Bewertungen eingeschlichen, die es nicht teilt."
+            },
+            {
+              "text": "Das Gegenüber widerspricht, etwa mit „Nein, das sehe ich anders“ oder „Ja, aber“",
+              "ok": true,
+              "fb": "Richtig: Antwortet das Gegenüber mit „Nein, das sehe ich anders …“ oder „Ja, aber …“, haben sich Bewertungen eingeschlichen, die es nicht teilt."
+            },
+            {
+              "text": "Das Gegenüber fragt höflich nach, was genau man mit der Aussage meint und warum",
+              "ok": false,
+              "fb": "Falsch: Antwortet das Gegenüber mit „Nein, das sehe ich anders …“ oder „Ja, aber …“, haben sich Bewertungen eingeschlichen, die es nicht teilt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-pruefbar-oder-wertung",
+      "kurz": "Prüfbar oder Wertung?",
+      "titel": "Prüfbar oder Wertung? Der Beweis-Test",
+      "karte": "Eine Tatsachenbehauptung bezieht sich auf objektive Umstände, die man bestätigen oder widerlegen kann, etwa durch Urkunden, Zeugen oder Sachverständige. Der Begriff stammt aus der Rechtssprache. Eine Meinungsäußerung oder sonstige Wertung oder Prognose gilt dagegen als subjektive Äußerung, die sich nicht verifizieren lässt. Als Prüffrage taugt deshalb: Kann man die Aussage beweisen oder widerlegen?",
+      "quelle": {
+        "titel": "Tatsachenbehauptung (Wikipedia, CC BY-SA 4.0)",
+        "url": "https://de.wikipedia.org/w/index.php?title=Tatsachenbehauptung&oldid=252184429",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was kennzeichnet eine Tatsachenbehauptung?",
+          "beleg": "Eine Tatsachenbehauptung bezieht sich auf objektive Umstände in der Wirklichkeit, die dem Beweis vor einem Gericht zugänglich sind, also etwa durch Urkunden, Zeugen oder Sachverständige bestätigt oder widerlegt werden können.",
+          "belegDe": "„Eine Tatsachenbehauptung bezieht sich auf objektive Umstände in der Wirklichkeit, die dem Beweis vor einem Gericht zugänglich sind, also etwa durch Urkunden, Zeugen oder Sachverständige bestätigt oder widerlegt werden können.“",
+          "optionen": [
+            {
+              "text": "Sie drückt aus, wie jemand eine Sache persönlich einschätzt und für sich bewertet",
+              "ok": false,
+              "fb": "Falsch: Eine Tatsachenbehauptung bezieht sich auf objektive Umstände, die sich durch Urkunden, Zeugen oder Sachverständige bestätigen oder widerlegen lassen."
+            },
+            {
+              "text": "Sie bezieht sich auf objektive Umstände, die sich bestätigen oder widerlegen lassen",
+              "ok": true,
+              "fb": "Richtig: Eine Tatsachenbehauptung bezieht sich auf objektive Umstände, die sich durch Urkunden, Zeugen oder Sachverständige bestätigen oder widerlegen lassen."
+            },
+            {
+              "text": "Sie ist wahr, weil sie von einer Behörde oder einem Gericht ausgesprochen wurde",
+              "ok": false,
+              "fb": "Falsch: Eine Tatsachenbehauptung bezieht sich auf objektive Umstände, die sich durch Urkunden, Zeugen oder Sachverständige bestätigen oder widerlegen lassen."
+            },
+            {
+              "text": "Sie sagt voraus, wie sich eine Lage in der Zukunft voraussichtlich entwickeln wird",
+              "ok": false,
+              "fb": "Falsch: Eine Tatsachenbehauptung bezieht sich auf objektive Umstände, die sich durch Urkunden, Zeugen oder Sachverständige bestätigen oder widerlegen lassen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Frage zeigt, ob eine Aussage eine Tatsachenbehauptung ist und keine Wertung?",
+          "beleg": "Eine Tatsachenbehauptung bezieht sich auf objektive Umstände in der Wirklichkeit, die dem Beweis vor einem Gericht zugänglich sind, also etwa durch Urkunden, Zeugen oder Sachverständige bestätigt oder widerlegt werden können.",
+          "belegDe": "„Eine Tatsachenbehauptung bezieht sich auf objektive Umstände in der Wirklichkeit, die dem Beweis vor einem Gericht zugänglich sind, also etwa durch Urkunden, Zeugen oder Sachverständige bestätigt oder widerlegt werden können.“",
+          "optionen": [
+            {
+              "text": "Wie viele Menschen glauben diese Aussage und wie überzeugt sind sie?",
+              "ok": false,
+              "fb": "Falsch: Eine Tatsachenbehauptung ist dem Beweis zugänglich: Sie lässt sich durch Urkunden, Zeugen oder Sachverständige bestätigen oder widerlegen."
+            },
+            {
+              "text": "Klingt die Aussage höflich und sachlich und gut durchdacht formuliert?",
+              "ok": false,
+              "fb": "Falsch: Eine Tatsachenbehauptung ist dem Beweis zugänglich: Sie lässt sich durch Urkunden, Zeugen oder Sachverständige bestätigen oder widerlegen."
+            },
+            {
+              "text": "Stammt die Aussage von einer bekannten und überall beliebten Person?",
+              "ok": false,
+              "fb": "Falsch: Eine Tatsachenbehauptung ist dem Beweis zugänglich: Sie lässt sich durch Urkunden, Zeugen oder Sachverständige bestätigen oder widerlegen."
+            },
+            {
+              "text": "Lässt sich die Aussage durch Beweise bestätigen oder widerlegen?",
+              "ok": true,
+              "fb": "Richtig: Eine Tatsachenbehauptung ist dem Beweis zugänglich: Sie lässt sich durch Urkunden, Zeugen oder Sachverständige bestätigen oder widerlegen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie unterscheidet sich eine Meinungsäußerung oder Wertung von einer Tatsachenbehauptung?",
+          "beleg": "In Abgrenzung dazu ist eine Meinungsäußerung oder eine sonstige Wertung oder Prognose eine subjektive, nicht verifizierbare Äußerung, die grundsätzlich der Meinungsfreiheit unterfällt.",
+          "belegDe": "„In Abgrenzung dazu ist eine Meinungsäußerung oder eine sonstige Wertung oder Prognose eine subjektive, nicht verifizierbare Äußerung, die grundsätzlich der Meinungsfreiheit unterfällt.“",
+          "optionen": [
+            {
+              "text": "Sie ist subjektiv und lässt sich nicht verifizieren",
+              "ok": true,
+              "fb": "Richtig: Eine Meinungsäußerung oder Wertung ist subjektiv und nicht verifizierbar."
+            },
+            {
+              "text": "Sie ist objektiv und lässt sich vor Gericht überprüfen",
+              "ok": false,
+              "fb": "Falsch: Eine Meinungsäußerung oder Wertung ist subjektiv und nicht verifizierbar."
+            },
+            {
+              "text": "Sie ist subjektiv und lässt sich durch Zeugen eindeutig bestätigen",
+              "ok": false,
+              "fb": "Falsch: Eine Meinungsäußerung oder Wertung ist subjektiv und nicht verifizierbar."
+            },
+            {
+              "text": "Sie ist objektiv und wird durch Urkunden belegt",
+              "ok": false,
+              "fb": "Falsch: Eine Meinungsäußerung oder Wertung ist subjektiv und nicht verifizierbar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-bewertungen-trennen",
+      "kurz": "Bewertungen trennen",
+      "titel": "Bewertungen trennen, nicht verbieten",
+      "karte": "Ein häufiges Missverständnis: Die Gewaltfreie Kommunikation lehne Bewertungen ab. Rosenberg tritt nicht dafür ein, objektiv zu bleiben. Er will objektiv prüfbare Beobachtungen und subjektive Bewertungen trennen. Als hilfreich gilt es sogar, Handlungen anderer zu bewerten, aber mit Bezug auf die eigenen Gefühle und Bedürfnisse und nicht auf moralische Kategorien, etwa gut oder böse.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation (Wikipedia, CC BY-SA 4.0)",
+        "url": "https://de.wikipedia.org/w/index.php?title=Gewaltfreie_Kommunikation&oldid=270210104",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was ist ein häufiges Missverständnis über Bewertungen in der Gewaltfreien Kommunikation?",
+          "beleg": "Wichtig ist, dass in der GFK Bewertungen nicht abgelehnt werden (ein häufiges Missverständnis).",
+          "belegDe": "„Wichtig ist, dass in der GFK Bewertungen nicht abgelehnt werden (ein häufiges Missverständnis).“",
+          "optionen": [
+            {
+              "text": "Dass die Gewaltfreie Kommunikation Gefühle für unwichtig hält",
+              "ok": false,
+              "fb": "Falsch: Ein häufiges Missverständnis ist, die Gewaltfreie Kommunikation lehne Bewertungen ab; das tut sie nicht."
+            },
+            {
+              "text": "Dass die Gewaltfreie Kommunikation Bitten mit Forderungen gleichsetzt",
+              "ok": false,
+              "fb": "Falsch: Ein häufiges Missverständnis ist, die Gewaltfreie Kommunikation lehne Bewertungen ab; das tut sie nicht."
+            },
+            {
+              "text": "Dass die Gewaltfreie Kommunikation Bewertungen ablehnt",
+              "ok": true,
+              "fb": "Richtig: Ein häufiges Missverständnis ist, die Gewaltfreie Kommunikation lehne Bewertungen ab; das tut sie nicht."
+            },
+            {
+              "text": "Dass die Gewaltfreie Kommunikation auf Konflikte in der Familie beschränkt ist",
+              "ok": false,
+              "fb": "Falsch: Ein häufiges Missverständnis ist, die Gewaltfreie Kommunikation lehne Bewertungen ab; das tut sie nicht."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie bewertet man das Verhalten anderer nach Rosenberg, ohne es moralisch zu verurteilen?",
+          "beleg": "Es wird vielmehr als hilfreich angesehen, Handlungen anderer zwar zu bewerten, aber mit Bezug auf die eigenen Gefühle und Bedürfnisse und nicht mit Bezug auf moralische Kategorien.",
+          "belegDe": "„Es wird vielmehr als hilfreich angesehen, Handlungen anderer zwar zu bewerten, aber mit Bezug auf die eigenen Gefühle und Bedürfnisse und nicht mit Bezug auf moralische Kategorien.“",
+          "optionen": [
+            {
+              "text": "Mit Bezug auf allgemein anerkannte Regeln des Anstands, nicht auf eigene Gefühle",
+              "ok": false,
+              "fb": "Falsch: Handlungen anderer zu bewerten ist hilfreich, wenn es mit Bezug auf die eigenen Gefühle und Bedürfnisse geschieht und nicht moralisch."
+            },
+            {
+              "text": "Mit Bezug auf die eigenen Gefühle und Bedürfnisse, nicht auf moralische Kategorien",
+              "ok": true,
+              "fb": "Richtig: Handlungen anderer zu bewerten ist hilfreich, wenn es mit Bezug auf die eigenen Gefühle und Bedürfnisse geschieht und nicht moralisch."
+            },
+            {
+              "text": "Mit Bezug auf die Meinung der Mehrheit, nicht auf persönliche Maßstäbe und Bedürfnisse",
+              "ok": false,
+              "fb": "Falsch: Handlungen anderer zu bewerten ist hilfreich, wenn es mit Bezug auf die eigenen Gefühle und Bedürfnisse geschieht und nicht moralisch."
+            },
+            {
+              "text": "Mit Bezug auf die vermuteten Absichten der anderen, nicht auf ihre sichtbaren Handlungen",
+              "ok": false,
+              "fb": "Falsch: Handlungen anderer zu bewerten ist hilfreich, wenn es mit Bezug auf die eigenen Gefühle und Bedürfnisse geschieht und nicht moralisch."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was will Rosenberg statt vollständiger Objektivität erreichen?",
+          "beleg": "Er trete nicht dafür ein, objektiv zu bleiben, sondern objektiv prüfbare Beobachtungen und subjektive Bewertungen zu trennen.",
+          "belegDe": "„Er trete nicht dafür ein, objektiv zu bleiben, sondern objektiv prüfbare Beobachtungen und subjektive Bewertungen zu trennen.“",
+          "optionen": [
+            {
+              "text": "Sachliche Argumente und persönliche Beziehungen trennen und getrennt halten",
+              "ok": false,
+              "fb": "Falsch: Rosenberg tritt nicht dafür ein, objektiv zu bleiben, sondern objektiv prüfbare Beobachtungen und subjektive Bewertungen zu trennen."
+            },
+            {
+              "text": "Jede Bewertung vermeiden und stattdessen wertfreie Fakten aussprechen",
+              "ok": false,
+              "fb": "Falsch: Rosenberg tritt nicht dafür ein, objektiv zu bleiben, sondern objektiv prüfbare Beobachtungen und subjektive Bewertungen zu trennen."
+            },
+            {
+              "text": "Gefühle und Bedürfnisse deutlicher von der eigentlichen Bitte trennen",
+              "ok": false,
+              "fb": "Falsch: Rosenberg tritt nicht dafür ein, objektiv zu bleiben, sondern objektiv prüfbare Beobachtungen und subjektive Bewertungen zu trennen."
+            },
+            {
+              "text": "Objektiv prüfbare Beobachtungen und subjektive Bewertungen trennen",
+              "ok": true,
+              "fb": "Richtig: Rosenberg tritt nicht dafür ein, objektiv zu bleiben, sondern objektiv prüfbare Beobachtungen und subjektive Bewertungen zu trennen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-urteile-befragen",
+      "kurz": "Urteile befragen",
+      "titel": "Moralische Urteile, Vergleiche und die Frage dahinter",
+      "karte": "Rosenberg nennt moralische Urteile als eine Variante lebensentfremdender Kommunikation: Sie unterstellen anderen, sie hätten unrecht oder seien schlecht, wenn sie unseren Wünschen nicht folgen. Eine andere Form von Verurteilung ist das Anstellen von Vergleichen. Zum Erforschen der eigenen Urteile schlägt er eine Übung vor: Man sammelt die Urteile, die am häufigsten durch den Kopf gehen, mit dem Satzanfang „Ich mag Menschen nicht, die … sind“ und klärt bei jedem, was man selbst braucht und nicht bekommt.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was unterstellen moralische Urteile nach Rosenberg anderen Menschen?",
+          "beleg": "Eine Variante lebensentfremdender Kommunikation sind moralische Urteile, die anderen Leuten unterstellen, dass sie unrecht haben oder schlecht sind, wenn sie sich nicht unseren Wünschen gemäß verhalten.",
+          "belegDe": "„Eine Variante lebensentfremdender Kommunikation sind moralische Urteile, die anderen Leuten unterstellen, dass sie unrecht haben oder schlecht sind, wenn sie sich nicht unseren Wünschen gemäß verhalten.“",
+          "optionen": [
+            {
+              "text": "Dass sie unrecht haben oder schlecht sind, wenn sie sich nicht unseren Wünschen gemäß verhalten",
+              "ok": true,
+              "fb": "Richtig: Moralische Urteile unterstellen anderen, dass sie unrecht haben oder schlecht sind, wenn sie sich nicht unseren Wünschen gemäß verhalten."
+            },
+            {
+              "text": "Dass sie mehr Erfahrung haben als wir und deshalb besondere Rücksicht und Nachsicht verdienen",
+              "ok": false,
+              "fb": "Falsch: Moralische Urteile unterstellen anderen, dass sie unrecht haben oder schlecht sind, wenn sie sich nicht unseren Wünschen gemäß verhalten."
+            },
+            {
+              "text": "Dass sie sich bewusst gegen uns verschworen haben und uns mit Absicht Schaden zufügen wollen",
+              "ok": false,
+              "fb": "Falsch: Moralische Urteile unterstellen anderen, dass sie unrecht haben oder schlecht sind, wenn sie sich nicht unseren Wünschen gemäß verhalten."
+            },
+            {
+              "text": "Dass sie richtig handeln, sobald man ihnen genaue Anweisungen gibt und sie dabei gut überwacht",
+              "ok": false,
+              "fb": "Falsch: Moralische Urteile unterstellen anderen, dass sie unrecht haben oder schlecht sind, wenn sie sich nicht unseren Wünschen gemäß verhalten."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Ein Vater sagt: „In deinem Alter war deine Schwester schon viel weiter.“ Was ist das?",
+          "beleg": "Eine andere Form von Verurteilung ist das Anstellen von Vergleichen.",
+          "belegDe": "„Eine andere Form von Verurteilung ist das Anstellen von Vergleichen.“",
+          "optionen": [
+            {
+              "text": "Eine reine Beobachtung ohne jede Bewertung",
+              "ok": false,
+              "fb": "Falsch: Das Anstellen von Vergleichen ist eine Form von Verurteilung."
+            },
+            {
+              "text": "Eine freundliche Bitte um mehr Einsatz im Alltag",
+              "ok": false,
+              "fb": "Falsch: Das Anstellen von Vergleichen ist eine Form von Verurteilung."
+            },
+            {
+              "text": "Ein Vergleich, also eine Form von Verurteilung",
+              "ok": true,
+              "fb": "Richtig: Das Anstellen von Vergleichen ist eine Form von Verurteilung."
+            },
+            {
+              "text": "Ein Ausdruck der eigenen Gefühle und Bedürfnisse",
+              "ok": false,
+              "fb": "Falsch: Das Anstellen von Vergleichen ist eine Form von Verurteilung."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Frage stellt Rosenberg zu einem eigenen Urteil wie „Ich mag Menschen nicht, die … sind“?",
+          "beleg": "Wenn ich dieses Urteil fälle, was brauche ich dann und was bekomme ich nicht?",
+          "belegDe": "„Wenn ich dieses Urteil fälle, was brauche ich dann und was bekomme ich nicht?“",
+          "optionen": [
+            {
+              "text": "Wer hat mir dieses Urteil beigebracht und aus welchem Grund?",
+              "ok": false,
+              "fb": "Falsch: Rosenberg fragt sich bei einem Urteil: Wenn ich dieses Urteil fälle, was brauche ich dann und was bekomme ich nicht?"
+            },
+            {
+              "text": "Was brauche ich dann und was bekomme ich nicht?",
+              "ok": true,
+              "fb": "Richtig: Rosenberg fragt sich bei einem Urteil: Wenn ich dieses Urteil fälle, was brauche ich dann und was bekomme ich nicht?"
+            },
+            {
+              "text": "Welche Beweise habe ich für dieses Urteil und wie belastbar sind sie?",
+              "ok": false,
+              "fb": "Falsch: Rosenberg fragt sich bei einem Urteil: Wenn ich dieses Urteil fälle, was brauche ich dann und was bekomme ich nicht?"
+            },
+            {
+              "text": "Wie kann ich dem anderen zeigen, dass mein Urteil berechtigt ist?",
+              "ok": false,
+              "fb": "Falsch: Rosenberg fragt sich bei einem Urteil: Wenn ich dieses Urteil fälle, was brauche ich dann und was bekomme ich nicht?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-ausloeser-und-ursache",
+      "kurz": "Auslöser und Ursache",
+      "titel": "Auslöser oder Ursache: Woher unsere Gefühle kommen",
+      "karte": "Wer sich ärgert, denkt schnell: Der andere hat mich wütend gemacht. Rosenberg widerspricht: Was andere sagen oder tun, kann ein Auslöser für unsere Gefühle sein, ist aber nie ihre Ursache. Wichtig ist eine klare Trennlinie: Das Verhalten der anderen Person lässt sich als Auslöser erkennen, aber niemand ist wütend, weil ein anderer etwas getan hat. Den Ärger führt Rosenberg auf lebensentfremdende Gedankenmuster zurück, die von den eigenen Bedürfnissen abgetrennt sind. Wer ihn ausdrücken will, trennt die andere Person deshalb zuerst von jeglicher Verantwortung dafür.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was ist das Verhalten anderer Menschen nach Rosenberg in Bezug auf unsere Gefühle?",
+          "beleg": "Was andere sagen oder tun, mag ein Auslöser für unsere Gefühle sein, ist aber nie ihre Ursache.",
+          "belegDe": "„Was andere sagen oder tun, mag ein Auslöser für unsere Gefühle sein, ist aber nie ihre Ursache.“",
+          "optionen": [
+            {
+              "text": "Ein möglicher Auslöser, aber nie die Ursache",
+              "ok": true,
+              "fb": "Richtig: Was andere sagen oder tun, kann ein Auslöser für unsere Gefühle sein, aber nie ihre Ursache."
+            },
+            {
+              "text": "Meistens die Ursache, selten bloß ein Auslöser",
+              "ok": false,
+              "fb": "Falsch: Was andere sagen oder tun, kann ein Auslöser für unsere Gefühle sein, aber nie ihre Ursache."
+            },
+            {
+              "text": "Weder Auslöser noch Ursache, Gefühle entstehen zufällig",
+              "ok": false,
+              "fb": "Falsch: Was andere sagen oder tun, kann ein Auslöser für unsere Gefühle sein, aber nie ihre Ursache."
+            },
+            {
+              "text": "Die Ursache, sobald es absichtlich geschieht",
+              "ok": false,
+              "fb": "Falsch: Was andere sagen oder tun, kann ein Auslöser für unsere Gefühle sein, aber nie ihre Ursache."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Du sagst: „Mein Chef hat mich wütend gemacht.“ Was hält Rosenberg dem entgegen?",
+          "beleg": "Wir sind niemals wütend, weil jemand anderes etwas gesagt oder getan hat. Wir können das Verhalten der anderen Person als Auslöser identifizieren, und gleichzeitig ist es sehr wichtig, eine klare Trennlinie zwischen Auslöser und Ursache zu ziehen.",
+          "belegDe": "„Wir sind niemals wütend, weil jemand anderes etwas gesagt oder getan hat. Wir können das Verhalten der anderen Person als Auslöser identifizieren, und gleichzeitig ist es sehr wichtig, eine klare Trennlinie zwischen Auslöser und Ursache zu ziehen.“",
+          "optionen": [
+            {
+              "text": "Sein Verhalten ist die Ursache, also liegt die Verantwortung bei ihm",
+              "ok": false,
+              "fb": "Falsch: Wir sind niemals wütend, weil jemand etwas gesagt oder getan hat; sein Verhalten kann höchstens der Auslöser sein."
+            },
+            {
+              "text": "Deine Wut hat keine erkennbare Ursache und vergeht von selbst",
+              "ok": false,
+              "fb": "Falsch: Wir sind niemals wütend, weil jemand etwas gesagt oder getan hat; sein Verhalten kann höchstens der Auslöser sein."
+            },
+            {
+              "text": "Deine Wut ist berechtigt, wenn er absichtlich so gehandelt hat",
+              "ok": false,
+              "fb": "Falsch: Wir sind niemals wütend, weil jemand etwas gesagt oder getan hat; sein Verhalten kann höchstens der Auslöser sein."
+            },
+            {
+              "text": "Sein Verhalten kann Auslöser sein, aber nicht die Ursache deiner Wut",
+              "ok": true,
+              "fb": "Richtig: Wir sind niemals wütend, weil jemand etwas gesagt oder getan hat; sein Verhalten kann höchstens der Auslöser sein."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Woraus entsteht Ärger nach Rosenberg, wenn nicht aus dem Verhalten anderer?",
+          "beleg": "Dieser Ärger entsteht aus lebensentfremdenden Gedankenmustern, die von unseren Bedürfnissen abgetrennt sind.",
+          "belegDe": "„Dieser Ärger entsteht aus lebensentfremdenden Gedankenmustern, die von unseren Bedürfnissen abgetrennt sind.“",
+          "optionen": [
+            {
+              "text": "Aus Bedürfnissen, die andere Menschen bewusst missachten",
+              "ok": false,
+              "fb": "Falsch: Ärger entsteht aus lebensentfremdenden Gedankenmustern, die von unseren Bedürfnissen abgetrennt sind."
+            },
+            {
+              "text": "Aus Gedankenmustern, die von Bedürfnissen abgetrennt sind",
+              "ok": true,
+              "fb": "Richtig: Ärger entsteht aus lebensentfremdenden Gedankenmustern, die von unseren Bedürfnissen abgetrennt sind."
+            },
+            {
+              "text": "Aus Gefühlen, die man über lange Zeit unterdrückt hat",
+              "ok": false,
+              "fb": "Falsch: Ärger entsteht aus lebensentfremdenden Gedankenmustern, die von unseren Bedürfnissen abgetrennt sind."
+            },
+            {
+              "text": "Aus Erwartungen, die von Anfang an zu hoch gesetzt waren",
+              "ok": false,
+              "fb": "Falsch: Ärger entsteht aus lebensentfremdenden Gedankenmustern, die von unseren Bedürfnissen abgetrennt sind."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-bitte-statt-forderung",
+      "kurz": "Bitte statt Forderung",
+      "titel": "Bitten statt fordern",
+      "karte": "Wünsche in Form von Forderungen auszudrücken, nennt Rosenberg ein typisches Merkmal einer Sprache, die Einfühlsamkeit blockiert. Denn man kann niemals jemanden dazu bringen, etwas zu tun. Vor einer Gruppe sagt er es so: Menschen kämen viel besser miteinander aus, wenn sie sagen können, was sie gerne möchten, ohne andere herumzukommandieren. Seine Bitte sei weder eine Anweisung noch ein Versuch, den anderen das Leben zu vermiesen.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was blockiert nach Rosenberg die Einfühlsamkeit, wenn wir unsere Wünsche äußern?",
+          "beleg": "Unsere Wünsche in Form von Forderungen zu formulieren ist ein weiteres typisches Merkmal einer Sprache, die Einfühlsamkeit blockiert.",
+          "belegDe": "„Unsere Wünsche in Form von Forderungen zu formulieren ist ein weiteres typisches Merkmal einer Sprache, die Einfühlsamkeit blockiert.“",
+          "optionen": [
+            {
+              "text": "Wünsche so leise zu äußern, dass sie überhört werden",
+              "ok": false,
+              "fb": "Falsch: Wünsche in Form von Forderungen zu formulieren, blockiert die Einfühlsamkeit."
+            },
+            {
+              "text": "Wünsche in Form von Forderungen zu formulieren",
+              "ok": true,
+              "fb": "Richtig: Wünsche in Form von Forderungen zu formulieren, blockiert die Einfühlsamkeit."
+            },
+            {
+              "text": "Wünsche erst zu äußern, wenn der Ärger verflogen ist",
+              "ok": false,
+              "fb": "Falsch: Wünsche in Form von Forderungen zu formulieren, blockiert die Einfühlsamkeit."
+            },
+            {
+              "text": "Wünsche mit einer langen Begründung zu versehen",
+              "ok": false,
+              "fb": "Falsch: Wünsche in Form von Forderungen zu formulieren, blockiert die Einfühlsamkeit."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Du möchtest, dass dein Mitbewohner abspült. Was kannst du nach Rosenberg nie erreichen?",
+          "beleg": "Wir können niemals jemanden dazu bringen, etwas zu tun.",
+          "belegDe": "„Wir können niemals jemanden dazu bringen, etwas zu tun.“",
+          "optionen": [
+            {
+              "text": "Ihm deinen Wunsch klar zu sagen",
+              "ok": false,
+              "fb": "Falsch: Wir können niemals jemanden dazu bringen, etwas zu tun."
+            },
+            {
+              "text": "Ihn nach seinen Gründen zu fragen",
+              "ok": false,
+              "fb": "Falsch: Wir können niemals jemanden dazu bringen, etwas zu tun."
+            },
+            {
+              "text": "Ihm zu zeigen, was dir wichtig ist",
+              "ok": false,
+              "fb": "Falsch: Wir können niemals jemanden dazu bringen, etwas zu tun."
+            },
+            {
+              "text": "Ihn dazu zu bringen, etwas zu tun",
+              "ok": true,
+              "fb": "Richtig: Wir können niemals jemanden dazu bringen, etwas zu tun."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Worin unterscheidet sich eine Bitte nach Rosenberg von einer Forderung?",
+          "beleg": "Wenn ich euch sage, was ich gerne hätte, dann sage ich nicht, dass ihr das entweder machen müsst oder dass ich versuche, euch das Leben zu vermiesen.",
+          "belegDe": "„Wenn ich euch sage, was ich gerne hätte, dann sage ich nicht, dass ihr das entweder machen müsst oder dass ich versuche, euch das Leben zu vermiesen.“",
+          "optionen": [
+            {
+              "text": "Wer bittet, sagt nicht, dass der andere es tun muss",
+              "ok": true,
+              "fb": "Richtig: Wer bittet, sagt nicht, dass die anderen es machen müssen, und versucht nicht, ihnen das Leben zu vermiesen."
+            },
+            {
+              "text": "Wer bittet, legt vorher fest, was bei einer Ablehnung folgt",
+              "ok": false,
+              "fb": "Falsch: Wer bittet, sagt nicht, dass die anderen es machen müssen, und versucht nicht, ihnen das Leben zu vermiesen."
+            },
+            {
+              "text": "Wer bittet, äußert den Wunsch bloß andeutungsweise",
+              "ok": false,
+              "fb": "Falsch: Wer bittet, sagt nicht, dass die anderen es machen müssen, und versucht nicht, ihnen das Leben zu vermiesen."
+            },
+            {
+              "text": "Wer bittet, erwartet dasselbe Ergebnis, wählt aber höflichere Worte",
+              "ok": false,
+              "fb": "Falsch: Wer bittet, sagt nicht, dass die anderen es machen müssen, und versucht nicht, ihnen das Leben zu vermiesen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-empathie",
+      "kurz": "Empathie",
+      "titel": "Empathie als respektvolles Verstehen",
+      "karte": "Statt Empathie anzubieten, haben wir oft einen starken Drang, Ratschläge zu geben, zu beschwichtigen oder die eigene Position und die eigenen Gefühle darzulegen. Rosenberg versteht Empathie als respektvolles Verstehen der Erfahrungen anderer Menschen. Sie verlangt, den Kopf leer zu machen und mit dem ganzen Wesen zuzuhören. Wer dagegen denkt, er habe etwas falsch gemacht, kann den Schmerz des anderen nicht richtig aufnehmen.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was fordert Empathie nach Rosenberg von uns, wenn wir anderen zuhören?",
+          "beleg": "Empathie hingegen fordert uns auf, unseren Kopf leer zu machen und anderen mit unserem ganzen Wesen zuzuhören.",
+          "belegDe": "„Empathie hingegen fordert uns auf, unseren Kopf leer zu machen und anderen mit unserem ganzen Wesen zuzuhören.“",
+          "optionen": [
+            {
+              "text": "Den Kopf leer zu machen und mit dem ganzen Wesen zuzuhören",
+              "ok": true,
+              "fb": "Richtig: Empathie fordert uns auf, den Kopf leer zu machen und anderen mit unserem ganzen Wesen zuzuhören."
+            },
+            {
+              "text": "Die eigene Sicht ausführlich darzulegen und zu begründen",
+              "ok": false,
+              "fb": "Falsch: Empathie fordert uns auf, den Kopf leer zu machen und anderen mit unserem ganzen Wesen zuzuhören."
+            },
+            {
+              "text": "Möglichst schnell den Sachverhalt zu klären und zu bewerten",
+              "ok": false,
+              "fb": "Falsch: Empathie fordert uns auf, den Kopf leer zu machen und anderen mit unserem ganzen Wesen zuzuhören."
+            },
+            {
+              "text": "Dem anderen genau vorzugeben, wie er sich fühlen sollte",
+              "ok": false,
+              "fb": "Falsch: Empathie fordert uns auf, den Kopf leer zu machen und anderen mit unserem ganzen Wesen zuzuhören."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Ein Freund erzählt von seinem schweren Tag. Wozu drängt es uns nach Rosenberg statt zur Empathie?",
+          "beleg": "Anstatt Empathie anzubieten haben wir oft einen starken Drang, Ratschläge zu geben oder zu beschwichtigen und unsere eigene Position oder unsere eigenen Gefühle darzulegen.",
+          "belegDe": "„Anstatt Empathie anzubieten haben wir oft einen starken Drang, Ratschläge zu geben oder zu beschwichtigen und unsere eigene Position oder unsere eigenen Gefühle darzulegen.“",
+          "optionen": [
+            {
+              "text": "Das Gespräch auf ein anderes Thema zu lenken",
+              "ok": false,
+              "fb": "Falsch: Statt Empathie anzubieten, drängt es uns oft, Ratschläge zu geben oder zu beschwichtigen."
+            },
+            {
+              "text": "Dem Freund seine Fehler an dem Tag vorzuhalten",
+              "ok": false,
+              "fb": "Falsch: Statt Empathie anzubieten, drängt es uns oft, Ratschläge zu geben oder zu beschwichtigen."
+            },
+            {
+              "text": "Ratschläge zu geben oder zu beschwichtigen",
+              "ok": true,
+              "fb": "Richtig: Statt Empathie anzubieten, drängt es uns oft, Ratschläge zu geben oder zu beschwichtigen."
+            },
+            {
+              "text": "Das Gespräch möglichst schnell zu beenden",
+              "ok": false,
+              "fb": "Falsch: Statt Empathie anzubieten, drängt es uns oft, Ratschläge zu geben oder zu beschwichtigen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wann kann jemand deinen Schmerz nach Rosenberg nicht richtig aufnehmen?",
+          "beleg": "Sobald jemand denkt, er hätte etwas falsch gemacht, wird er unseren Schmerz nicht richtig aufnehmen können.",
+          "belegDe": "„Sobald jemand denkt, er hätte etwas falsch gemacht, wird er unseren Schmerz nicht richtig aufnehmen können.“",
+          "optionen": [
+            {
+              "text": "Sobald er die gleiche Erfahrung schon selbst gemacht hat",
+              "ok": false,
+              "fb": "Falsch: Sobald jemand denkt, er hätte etwas falsch gemacht, kann er den Schmerz des anderen nicht richtig aufnehmen."
+            },
+            {
+              "text": "Sobald er dir ruhig und lange zugehört hat",
+              "ok": false,
+              "fb": "Falsch: Sobald jemand denkt, er hätte etwas falsch gemacht, kann er den Schmerz des anderen nicht richtig aufnehmen."
+            },
+            {
+              "text": "Sobald du ihm deine Gefühle genau beschrieben hast",
+              "ok": false,
+              "fb": "Falsch: Sobald jemand denkt, er hätte etwas falsch gemacht, kann er den Schmerz des anderen nicht richtig aufnehmen."
+            },
+            {
+              "text": "Sobald er denkt, er hätte etwas falsch gemacht",
+              "ok": true,
+              "fb": "Richtig: Sobald jemand denkt, er hätte etwas falsch gemacht, kann er den Schmerz des anderen nicht richtig aufnehmen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-vier-reaktionen",
+      "kurz": "Vier Reaktionen",
+      "titel": "Vier Reaktionen auf eine schwierige Aussage",
+      "karte": "Hört man etwas, das schwer zu hören ist, nennt Rosenberg vier Möglichkeiten: sich selbst die Schuld geben, anderen die Schuld geben, die eigenen Gefühle und Bedürfnisse wahrnehmen oder die des anderen. Gewalt entsteht für ihn aus dem Glauben, dass andere Menschen unsere Schmerzen verursachen und dafür Strafe verdienen. Urteile über andere tragen außerdem zu sich selbst erfüllenden Prophezeiungen bei.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche gehört nach Rosenberg zu den vier Reaktionen auf eine schwierige Aussage?",
+          "beleg": "Wir erinnern uns an die vier Reaktionsmöglichkeiten, wenn wir eine Aussage hören, die für uns schwierig ist: 1. Uns selbst die Schuld geben. 2. Anderen die Schuld geben. 3. Unsere eigenen Gefühle und Bedürfnisse wahrnehmen. 4. Die Gefühle und Bedürfnisse des anderen wahrnehmen.",
+          "belegDe": "„Wir erinnern uns an die vier Reaktionsmöglichkeiten, wenn wir eine Aussage hören, die für uns schwierig ist: 1. Uns selbst die Schuld geben. 2. Anderen die Schuld geben. 3. Unsere eigenen Gefühle und Bedürfnisse wahrnehmen. 4. Die Gefühle und Bedürfnisse des anderen wahrnehmen.“",
+          "optionen": [
+            {
+              "text": "Das Gespräch abbrechen und später darauf zurückkommen",
+              "ok": false,
+              "fb": "Falsch: Zu den vier Reaktionen gehört, die Gefühle und Bedürfnisse des anderen wahrzunehmen."
+            },
+            {
+              "text": "Die Gefühle und Bedürfnisse des anderen wahrnehmen",
+              "ok": true,
+              "fb": "Richtig: Zu den vier Reaktionen gehört, die Gefühle und Bedürfnisse des anderen wahrzunehmen."
+            },
+            {
+              "text": "Einen Dritten um ein Urteil in der Sache bitten",
+              "ok": false,
+              "fb": "Falsch: Zu den vier Reaktionen gehört, die Gefühle und Bedürfnisse des anderen wahrzunehmen."
+            },
+            {
+              "text": "Die Aussage zunächst ruhen lassen und später prüfen",
+              "ok": false,
+              "fb": "Falsch: Zu den vier Reaktionen gehört, die Gefühle und Bedürfnisse des anderen wahrzunehmen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Dein Chef sagt: „Der Bericht ist schlampig.“ Du denkst: „Ich kann nichts.“ Welche Reaktion ist das?",
+          "beleg": "Wir erinnern uns an die vier Reaktionsmöglichkeiten, wenn wir eine Aussage hören, die für uns schwierig ist: 1. Uns selbst die Schuld geben. 2. Anderen die Schuld geben. 3. Unsere eigenen Gefühle und Bedürfnisse wahrnehmen. 4. Die Gefühle und Bedürfnisse des anderen wahrnehmen.",
+          "belegDe": "„Wir erinnern uns an die vier Reaktionsmöglichkeiten, wenn wir eine Aussage hören, die für uns schwierig ist: 1. Uns selbst die Schuld geben. 2. Anderen die Schuld geben. 3. Unsere eigenen Gefühle und Bedürfnisse wahrnehmen. 4. Die Gefühle und Bedürfnisse des anderen wahrnehmen.“",
+          "optionen": [
+            {
+              "text": "Anderen die Schuld geben",
+              "ok": false,
+              "fb": "Falsch: Wer denkt „Ich kann nichts“, gibt sich selbst die Schuld; das ist die erste der vier Reaktionen."
+            },
+            {
+              "text": "Die eigenen Gefühle und Bedürfnisse wahrnehmen",
+              "ok": false,
+              "fb": "Falsch: Wer denkt „Ich kann nichts“, gibt sich selbst die Schuld; das ist die erste der vier Reaktionen."
+            },
+            {
+              "text": "Sich selbst die Schuld geben",
+              "ok": true,
+              "fb": "Richtig: Wer denkt „Ich kann nichts“, gibt sich selbst die Schuld; das ist die erste der vier Reaktionen."
+            },
+            {
+              "text": "Die Gefühle und Bedürfnisse des anderen wahrnehmen",
+              "ok": false,
+              "fb": "Falsch: Wer denkt „Ich kann nichts“, gibt sich selbst die Schuld; das ist die erste der vier Reaktionen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Woraus entsteht nach Rosenberg Gewalt?",
+          "beleg": "Gewalt entsteht aus dem Glauben, dass andere Menschen unsere Schmerzen verursachen und dafür Strafe verdienen.",
+          "belegDe": "„Gewalt entsteht aus dem Glauben, dass andere Menschen unsere Schmerzen verursachen und dafür Strafe verdienen.“",
+          "optionen": [
+            {
+              "text": "Aus dem Glauben, dass andere unsere Schmerzen verursachen und Strafe verdienen",
+              "ok": true,
+              "fb": "Richtig: Gewalt entsteht aus dem Glauben, dass andere Menschen unsere Schmerzen verursachen und dafür Strafe verdienen."
+            },
+            {
+              "text": "Aus dem Mangel an Fähigkeiten und Mitteln, Konflikte auf andere Weise zu lösen",
+              "ok": false,
+              "fb": "Falsch: Gewalt entsteht aus dem Glauben, dass andere Menschen unsere Schmerzen verursachen und dafür Strafe verdienen."
+            },
+            {
+              "text": "Aus Gefühlen, die über lange Zeit nicht ausgesprochen und nicht beachtet wurden",
+              "ok": false,
+              "fb": "Falsch: Gewalt entsteht aus dem Glauben, dass andere Menschen unsere Schmerzen verursachen und dafür Strafe verdienen."
+            },
+            {
+              "text": "Aus dem Bedürfnis, über andere Menschen Macht auszuüben und sie zu lenken",
+              "ok": false,
+              "fb": "Falsch: Gewalt entsteht aus dem Glauben, dass andere Menschen unsere Schmerzen verursachen und dafür Strafe verdienen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gfk-muessen-in-frei-waehlen",
+      "kurz": "Vom Müssen zum Wählen",
+      "titel": "Vom „Müssen“ zum freien Wählen: Rosenbergs Übung",
+      "karte": "Viele Aufgaben erledigen wir mit dem Gedanken, wir hätten keine Wahl. Rosenberg schlägt vor, alles aufzulisten, was man zu tun meint, und vor jeden Punkt die Worte „Ich habe frei gewählt zu …“ zu setzen. Danach folgt der Satz „…, denn ich möchte …“. So erkennt man die wichtigen Anliegen hinter der eigenen Wahl. Handeln, nur weil andere es erwarten, hält er für den Weg zu den potenziell gefährlichsten Verhaltensweisen.",
+      "quelle": {
+        "titel": "Gewaltfreie Kommunikation",
+        "url": "https://www.amazon.de/dp/3955715728",
+        "herausgeber": "Marshall B. Rosenberg, Ingrid Holler (Übersetzung), Junfermann Verlag",
+        "abgerufen": "2026-11-03"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche Worte setzt Rosenberg vor jeden Punkt seiner Liste mit vermeintlichen Pflichten?",
+          "beleg": "Setzen Sie die Wörter „Ich habe frei gewählt zu ...",
+          "belegDe": "„Setzen Sie die Wörter „Ich habe frei gewählt zu ...“ vor jeden Punkt auf Ihrer Liste.“",
+          "optionen": [
+            {
+              "text": "„Ich bin gezwungen worden zu …“",
+              "ok": false,
+              "fb": "Falsch: Rosenberg setzt vor jeden Punkt der Liste die Worte „Ich habe frei gewählt zu …“."
+            },
+            {
+              "text": "„Ich nehme mir künftig vor zu …“",
+              "ok": false,
+              "fb": "Falsch: Rosenberg setzt vor jeden Punkt der Liste die Worte „Ich habe frei gewählt zu …“."
+            },
+            {
+              "text": "„Ich werde es künftig vermeiden zu …“",
+              "ok": false,
+              "fb": "Falsch: Rosenberg setzt vor jeden Punkt der Liste die Worte „Ich habe frei gewählt zu …“."
+            },
+            {
+              "text": "„Ich habe frei gewählt zu …“",
+              "ok": true,
+              "fb": "Richtig: Rosenberg setzt vor jeden Punkt der Liste die Worte „Ich habe frei gewählt zu …“."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Du ergänzt: „Ich habe frei gewählt zu …, denn ich möchte …“. Was entdeckst du vielleicht damit?",
+          "beleg": "Beim Erforschen der Aussage „Ich habe frei gewählt zu …, denn ich möchte …",
+          "belegDe": "„Beim Erforschen der Aussage „Ich habe frei gewählt zu …, denn ich möchte …“ entdecken Sie vielleicht – so wie ich mit dem Fahrdienst für die Schulkinder – die wichtigen Anliegen hinter der jeweiligen Wahl, die Sie getroffen haben.“",
+          "optionen": [
+            {
+              "text": "Dass die Pflicht in Wahrheit unnötig ist",
+              "ok": false,
+              "fb": "Falsch: Beim Erforschen des Satzes entdeckt man vielleicht die wichtigen Anliegen hinter der jeweiligen Wahl."
+            },
+            {
+              "text": "Die wichtigen Anliegen hinter deiner Wahl",
+              "ok": true,
+              "fb": "Richtig: Beim Erforschen des Satzes entdeckt man vielleicht die wichtigen Anliegen hinter der jeweiligen Wahl."
+            },
+            {
+              "text": "Dass andere dich zu der Pflicht gedrängt haben",
+              "ok": false,
+              "fb": "Falsch: Beim Erforschen des Satzes entdeckt man vielleicht die wichtigen Anliegen hinter der jeweiligen Wahl."
+            },
+            {
+              "text": "Wie du die Pflicht schneller erledigen kannst",
+              "ok": false,
+              "fb": "Falsch: Beim Erforschen des Satzes entdeckt man vielleicht die wichtigen Anliegen hinter der jeweiligen Wahl."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welches Handeln führt nach Rosenberg zu den potenziell gefährlichsten Verhaltensweisen?",
+          "beleg": "Dinge zu tun, „weil sie von uns erwartet werden",
+          "belegDe": "„Dinge zu tun, „weil sie von uns erwartet werden“, führt zu den potenziell gefährlichsten Verhaltensweisen.“",
+          "optionen": [
+            {
+              "text": "Dinge zu tun, die wir lange vorher überlegt haben",
+              "ok": false,
+              "fb": "Falsch: Dinge zu tun, weil sie von uns erwartet werden, führt zu den potenziell gefährlichsten Verhaltensweisen."
+            },
+            {
+              "text": "Dinge zu tun, die wir aus eigenem Antrieb gewählt haben",
+              "ok": false,
+              "fb": "Falsch: Dinge zu tun, weil sie von uns erwartet werden, führt zu den potenziell gefährlichsten Verhaltensweisen."
+            },
+            {
+              "text": "Dinge zu tun, weil sie von uns erwartet werden",
+              "ok": true,
+              "fb": "Richtig: Dinge zu tun, weil sie von uns erwartet werden, führt zu den potenziell gefährlichsten Verhaltensweisen."
+            },
+            {
+              "text": "Dinge zu tun, die uns Freude bereiten und Kraft geben",
+              "ok": false,
+              "fb": "Falsch: Dinge zu tun, weil sie von uns erwartet werden, führt zu den potenziell gefährlichsten Verhaltensweisen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [],
+  "platzhalter": false,
+  "coverBreite": 1062,
+  "coverHoehe": 1500
+}

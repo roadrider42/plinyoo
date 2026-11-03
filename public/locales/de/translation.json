@@ -523,8 +523,7 @@
     "new_badge": "Neu",
     "book_subtitle": "Buchvorstellung",
     "book_button": "Zur Buchseite",
-    "all_books": "Alle Bücher ansehen",
-    "all_books_count": "Alle {{count}} Bücher ansehen"
+    "more_books": "Weitere Bücher entdecken"
   },
   "forms": {
     "validation": {

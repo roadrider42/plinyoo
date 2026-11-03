@@ -80,9 +80,7 @@ export const Books = () => {
 
           <p className="mt-10">
             <a href={uebersichtUrl} className="inline-block border border-primary text-primary font-semibold py-2 px-6 rounded-lg hover:bg-primary hover:text-white transition-colors">
-              {buecher.length > 0
-                ? t('examples.all_books_count', { count: buecher.length, defaultValue: 'Alle {{count}} Bücher ansehen' })
-                : t('examples.all_books', 'Alle Bücher ansehen')}
+              {t('examples.more_books', 'Weitere Bücher entdecken')}
             </a>
           </p>
         </div>
