@@ -51,7 +51,8 @@
     "seiten:dev": "node scripts/seiten-dev.mjs",
     "buchseiten:entwurf": "VITE_BUCHSEITEN_DRAFT=1 BUCHSEITEN_DRAFT=1 npm run build",
     "preview": "vite preview --port 3001",
-    "pruefung:kontakt-grenze": "node supabase/tests/plinyoo-contact-483.mjs"
+    "pruefung:kontakt-grenze": "node supabase/tests/plinyoo-contact-483.mjs",
+    "pruefung:kontaktformular": "node tests/kontaktformular-483.mjs"
   },
   "eslintConfig": {
     "extends": [

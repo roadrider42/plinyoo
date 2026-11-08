@@ -1,6 +1,7 @@
 // src/pages/KontaktPage.tsx
 import React, { useState, useEffect } from "react";
 import { useContactForm } from '@/hooks/hook.useContactForm';
+import KontaktFehlerHinweis from '@/components/ui/KontaktFehlerHinweis';
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { useToast } from "@/components/ui/use-toast";
@@ -36,9 +37,6 @@ export default function KontaktPage() {
       onSuccess: () => {
         toast({ title: t('forms.validation.success_title'), description: t('forms.validation.success_message') });
       },
-      onError: (error: any) => {
-        toast({ title: t('forms.validation.error_title'), description: error.message || t('forms.validation.error_generic') });
-      }
     });
   };
 
@@ -79,6 +77,7 @@ export default function KontaktPage() {
               <textarea name="message" value={form.message} onChange={onChange} rows={5} className="mt-1 w-full rounded-lg border p-2" placeholder={t('forms.use_case.message_placeholder')}></textarea>
             </div>
             <p className="text-xs text-gray-500">{t('forms.privacy_notice')} <Link to="/datenschutz" className="underline">{t('forms.privacy_link')}</Link></p>
+            <KontaktFehlerHinweis fehler={contactMutation.error} />
             <button type="submit" disabled={contactMutation.isLoading || showEmailError} className="w-full bg-primary text-text-inverse px-5 py-3 rounded-lg shadow-ci hover:shadow-ci-lg transition disabled:opacity-50">
               {contactMutation.isLoading ? t('forms.button_sending') : t('forms.button_send_request')}
             </button>
