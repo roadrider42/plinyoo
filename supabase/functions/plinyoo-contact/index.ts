@@ -1,5 +1,29 @@
+// plinyoo-contact -- Kontaktformulare der Startseite (Kontakt, Mitmachen,
+// Investieren, Zugang). Ohne Anmeldung erreichbar.
+//
+// AUSROLLEN NUR IN DIESER REIHENFOLGE: erst die SQL-Datei
+// 20270303090000_483_kontaktmail_grenze.sql aus spoonup einspielen
+// (legt kontaktmail_buchen an), dann diese Funktion ausrollen. Ohne die
+// SQL-Datei antwortet die Funktion 500 und verschickt nichts.
+//
+// #483 (spoonup), Heiko E-357 (08.11.2026): Die Funktion bleibt ohne
+// Anmeldung erreichbar, zaehlt aber ueber DENSELBEN Zaehler wie
+// contact-fom-email in spoonup -- eine Grenze fuer alle Kontaktmails
+// zusammen, nicht je Netzadresse (ein Schulnetz teilt sich eine). Gezaehlt
+// wird in der Datenbank (kontaktmail_buchen, nur mit dem Dienstschluessel),
+// weil eine Edge Function in vielen Instanzen nebeneinander laeuft.
+// Nachweis: supabase/tests/plinyoo-contact-483.mjs.
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.43.4";
 import { Resend } from 'https://esm.sh/resend@3.4.0';
+
+// Die EINZIGE Stelle der Zahl in diesem Repo; die SQL-Funktion bekommt sie
+// mitgeschickt. Sie muss KONTAKTMAIL_GRENZE in spoonup
+// (supabase/functions/contact-fom-email/index.ts) gleichen -- beide buchen in
+// denselben Zaehler, und mit zwei Grenzen gaelte fuer jeden Aufrufer die
+// andere. Der Nachweis vergleicht beide.
+const KONTAKTMAIL_GRENZE = { anzahl: 20, fenster_minuten: 60 } as const;
+// Derselbe Satz wie in contact-fom-email (Sprecher, #469) -- dieselbe Lage.
+const GRENZE_SATZ = 'Gerade kommen sehr viele Anfragen an. Bitte versuche es spätestens in einer Stunde noch einmal.';
 
 // 1. Complete CORS Headers
 const corsHeaders = {
@@ -18,6 +42,38 @@ interface FormData {
   linkedin?: string;
   github?: string;
   investment_range?: string;
+}
+
+// Laengengrenzen wie in contact-fom-email (#469): weit gezogen, eine echte
+// Anfrage scheitert nie an ihnen (die Zugang-Seite setzt mehrere Zeilen in
+// `message` zusammen), sie halten nur Masse ab.
+const FORM_TYPEN = ['contact', 'join', 'invest'] as const;
+const PFLICHT_LAENGE = { name: 200, email: 254 } as const;
+const FREI_LAENGE = { message: 5000, role: 200, availability: 200, linkedin: 500, github: 500, investment_range: 100 } as const;
+const ADRESSE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function pruefeFormular(roh: unknown): FormData | null {
+  if (typeof roh !== 'object' || roh === null || Array.isArray(roh)) return null;
+  const f = roh as Record<string, unknown>;
+  for (const [feld, max] of Object.entries(PFLICHT_LAENGE)) {
+    const wert = f[feld];
+    if (typeof wert !== 'string' || wert.trim().length === 0 || wert.length > max) return null;
+  }
+  if (!ADRESSE.test(f.email as string)) return null;
+  if (!FORM_TYPEN.includes(f.formType as FormData['formType'])) return null;
+  for (const [feld, max] of Object.entries(FREI_LAENGE)) {
+    const wert = f[feld];
+    if (wert === undefined || wert === null) continue;
+    if (typeof wert !== 'string' || wert.length > max) return null;
+  }
+  return f as unknown as FormData;
+}
+
+function json(body: unknown, status: number): Response {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { ...corsHeaders, "Content-Type": "application/json" },
+  });
 }
 
 function createSubject(formType: FormData['formType']): string {
@@ -61,16 +117,48 @@ Deno.serve(async (req) => {
 
     if (!supabaseUrl || !serviceRoleKey || !resendApiKey || !contactReceiverEmail) {
       console.error("Server misconfiguration: Missing environment variables.");
-      return new Response(JSON.stringify({ error: 'Server misconfigured' }), {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+      return json({ error: 'Server misconfigured' }, 500);
     }
 
-    const formData: FormData = await req.json();
+    let roh: unknown;
+    try {
+      roh = await req.json();
+    } catch {
+      return json({ error: 'Bad Request' }, 400);
+    }
+    const formData = pruefeFormular(roh);
+    if (!formData) {
+      return json({ error: 'Bad Request' }, 400);
+    }
 
-    // 2. Handle DB and Email errors properly
-    const supabaseAdmin = createClient(supabaseUrl, serviceRoleKey);
+    const supabaseAdmin = createClient(supabaseUrl, serviceRoleKey, {
+      auth: { persistSession: false, autoRefreshToken: false },
+    });
+
+    // Erst nach der Pruefung buchen (ein ungueltiges Formular verbraucht
+    // keinen Platz), und VOR Zeile und Mail: bei 'gesamt' entsteht keins von
+    // beiden. Scheitert die Buchung oder antwortet sie Unbekanntes, geht
+    // nichts hinaus -- ein Fehler ist kein "noch Platz".
+    const { data: gebucht, error: buchungsFehler } = await supabaseAdmin.rpc('kontaktmail_buchen', {
+      p_grenze: KONTAKTMAIL_GRENZE.anzahl,
+      p_fenster_minuten: KONTAKTMAIL_GRENZE.fenster_minuten,
+    });
+    if (buchungsFehler) {
+      console.error("kontaktmail_buchen fehlgeschlagen:", (buchungsFehler as any).code ?? 'ohne Code');
+      return json({ error: 'Failed to save contact' }, 500);
+    }
+    if (gebucht === 'gesamt') {
+      console.warn("Kontaktmail: Grenze erreicht", KONTAKTMAIL_GRENZE);
+      return json({ error: 'GRENZE_ERREICHT', meldung: GRENZE_SATZ }, 429);
+    }
+    if (gebucht !== 'erlaubt') {
+      console.error("kontaktmail_buchen: unbekannte Antwort", JSON.stringify(gebucht));
+      return json({ error: 'Failed to save contact' }, 500);
+    }
+
+    // Fehler der Datenbank und von Resend gehen nur mit Code ins Protokoll,
+    // nie an den (anonymen) Aufrufer: Fehlertexte nennen Tabellen, Spalten
+    // oder das Postfach des Empfaengers.
     const { error: dbError } = await supabaseAdmin.from("plinyoo_contacts").insert({
       name: formData.name,
       email: formData.email,
@@ -79,22 +167,8 @@ Deno.serve(async (req) => {
     });
 
     if (dbError) {
-      console.error("DB Insert Error:", dbError);
-      return new Response(
-        JSON.stringify({
-          error: 'Failed to save contact',
-          dbError: {
-            code: (dbError as any).code ?? null,
-            message: (dbError as any).message ?? null,
-            details: (dbError as any).details ?? null,
-            hint: (dbError as any).hint ?? null,
-          },
-        }),
-        {
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-        }
-      );
+      console.error("DB Insert Error:", (dbError as any).code ?? 'ohne Code');
+      return json({ error: 'Failed to save contact' }, 500);
     }
 
     const resend = new Resend(resendApiKey);
@@ -106,34 +180,16 @@ Deno.serve(async (req) => {
     });
 
     if (emailError) {
-      console.error("Resend Email Error:", emailError);
-      return new Response(
-        JSON.stringify({
-          error: 'Failed to send email',
-          emailError: {
-            name: (emailError as any).name ?? null,
-            message: (emailError as any).message ?? null,
-            code: (emailError as any).code ?? null,
-            statusCode: (emailError as any).statusCode ?? null,
-          },
-        }),
-        {
-          status: 500,
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
-        }
-      );
+      console.error("Resend Email Error:", (emailError as any).name ?? 'ohne Namen', (emailError as any).statusCode ?? '');
+      return json({ error: 'Failed to send email' }, 500);
     }
 
-    return new Response(JSON.stringify({ message: 'Form submitted successfully' }), {
-      status: 200,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    return json({ message: 'Form submitted successfully' }, 200);
 
   } catch (err) {
-    console.error("Request Handling Error:", err);
-    return new Response(JSON.stringify({ error: 'Bad Request' }), {
-      status: 400,
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    // Ungueltige Eingaben sind oben schon beantwortet; was hier ankommt, ist
+    // ein Fehler auf unserer Seite (Netz, Datenbank) -- 500, nicht 400.
+    console.error("Request Handling Error:", err instanceof Error ? err.name : 'unbekannt');
+    return json({ error: 'Failed to save contact' }, 500);
   }
 });
