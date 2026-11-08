@@ -19,7 +19,7 @@ export default function Impressum() {
           <div>
             <h2 className="text-2xl font-semibold text-primary mb-4">Betreiber der Website</h2>
             <div className="space-y-2 text-text-muted">
-              <p>Plinyoo UG (haftungsbeschränkt) i.Gr.</p>
+              <p>Plinyoo UG (haftungsbeschränkt) i. Gr.</p>
               <p>Theodor-Fliedner-Str. 1d</p>
               <p>34121 Kassel</p>
               <p>Deutschland</p>
