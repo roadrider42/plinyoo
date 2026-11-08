@@ -20,7 +20,12 @@ import { Resend } from 'https://esm.sh/resend@3.4.0';
 // mitgeschickt. Sie muss KONTAKTMAIL_GRENZE in spoonup
 // (supabase/functions/contact-fom-email/index.ts) gleichen -- beide buchen in
 // denselben Zaehler, und mit zwei Grenzen gaelte fuer jeden Aufrufer die
-// andere. Der Nachweis vergleicht beide.
+// andere. Verglichen wird nur hier in plinyoo, und nur von Hand:
+// `npm run pruefung:kontakt-grenze` (G1 in supabase/tests/plinyoo-contact-483.mjs)
+// liest die spoonup-Zahl aus ../SpoonUp oder per SPOONUP_REF; ohne den
+// spoonup-Stand meldet er NICHT MESSBAR. Keine CI faehrt ihn, und in spoonup
+// prueft keine Pruefung diese Seite -- wer die Zahl nur dort aendert, merkt
+// es erst, wenn hier jemand den Befehl faehrt.
 const KONTAKTMAIL_GRENZE = { anzahl: 20, fenster_minuten: 60 } as const;
 // Derselbe Satz wie in contact-fom-email (Sprecher, #469) -- dieselbe Lage.
 const GRENZE_SATZ = 'Gerade kommen sehr viele Anfragen an. Bitte versuche es spätestens in einer Stunde noch einmal.';
@@ -63,7 +68,9 @@ function pruefeFormular(roh: unknown): FormData | null {
   if (!FORM_TYPEN.includes(f.formType as FormData['formType'])) return null;
   for (const [feld, max] of Object.entries(FREI_LAENGE)) {
     const wert = f[feld];
-    if (wert === undefined || wert === null) continue;
+    // Wie Zod .optional() in contact-fom-email: nur ein fehlendes Feld ist
+    // erlaubt, null nicht.
+    if (wert === undefined) continue;
     if (typeof wert !== 'string' || wert.length > max) return null;
   }
   return f as unknown as FormData;

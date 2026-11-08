@@ -40,6 +40,18 @@
 //       ohne Fehlercode und ohne Fehlertext der Datenbank
 //   D2  Mail scheitert (Resend-Fehler nennt den Empfaenger) -> 500, Antwort ohne
 //       Empfaenger, ohne Fehlertext, ohne Fehlercode
+//   L1-L7  je Feld genau an der Grenze: name 200, email 254, role 200,
+//       availability 200, linkedin 500, github 500, investment_range 100 -> 200;
+//       ein Zeichen mehr -> 400 ohne Wirkung
+//   T1-T18 Name nur Leerzeichen, Name null/Zahl, Body null/Zahl/Liste, jedes
+//       Freifeld als null und als Zahl -> 400 ohne Wirkung
+//
+// K1-K6 und D1 schliessen zusaetzlich den Empfaenger (CONTACT_RECEIVER_EMAIL)
+// in Antwort UND Protokoll aus (alle Konsolenkanaele), D2 tat das schon.
+//
+// G1 ist der EINZIGE Vergleich der beiden Grenzen. Er laeuft nur hier, von
+// Hand (keine CI), und braucht den spoonup-Stand, der die Konstante traegt
+// (SPOONUP_REF); spoonup selbst prueft diese Seite nicht.
 //
 // Ohne Fix (plinyoo 876929b, bytegleich mit live): G1, G2, K1-K6, F1-F4, D1, D2 rot.
 // Ausgang: 0 gruen, 1 rot, 2 nicht messbar.
@@ -146,7 +158,7 @@ if (typeof handler !== 'function') nichtMessbar('index.ts registriert keinen Han
 // --- Helfer -----------------------------------------------------------------
 const gueltig = { name: 'Wer auch immer', email: 'wer@example.org', formType: 'contact', message: 'Hallo' };
 const erlaubt = () => ({ data: 'erlaubt', error: null });
-const stilleKonsole = { error: console.error, warn: console.warn, log: console.log };
+const stilleKonsole = { error: console.error, warn: console.warn, log: console.log, info: console.info, debug: console.debug };
 
 async function rufe(body, l) {
   spur = [];
@@ -154,15 +166,20 @@ async function rufe(body, l) {
   const roh = typeof body === 'string' ? body : JSON.stringify(body);
   const req = new Request('http://attrappe/functions/v1/plinyoo-contact', { method: 'POST', headers: { 'content-type': 'application/json' }, body: roh });
   // Die Funktion protokolliert Fehler -- hier nur gesammelt, nicht gezeigt.
+  // Alle Kanaele der Konsole, nicht nur error/warn: auch ein console.log mit
+  // dem Empfaenger landet im Protokoll der Edge Function.
   const protokoll = [];
-  console.error = (...a) => protokoll.push(a.map(String).join(' '));
-  console.warn = console.error;
+  const sammeln = (...a) => protokoll.push(a.map((x) => (typeof x === 'string' ? x : JSON.stringify(x) ?? String(x))).join(' '));
+  console.error = sammeln; console.warn = sammeln; console.log = sammeln; console.info = sammeln; console.debug = sammeln;
   let antwort;
   try {
     antwort = await handler(req);
   } finally {
     console.error = stilleKonsole.error;
     console.warn = stilleKonsole.warn;
+    console.log = stilleKonsole.log;
+    console.info = stilleKonsole.info;
+    console.debug = stilleKonsole.debug;
   }
   const text = await antwort.text();
   const zahl = (art) => spur.filter((s) => s.art === art).length;
@@ -180,6 +197,13 @@ const keineWirkung = (r) => [
   [r.zeilen === 0, `schreibt ${r.zeilen} Zeile(n)`],
   [r.mails === 0, `schickt ${r.mails} Mail(s)`],
   [r.netz === 0, `${r.netz} Netzaufruf(e)`],
+];
+// Der Empfaenger (CONTACT_RECEIVER_EMAIL) steht weder in der Antwort noch im
+// Protokoll -- auf JEDEM Weg, nicht nur beim Mailfehler.
+const EMPFAENGER = umgebung.CONTACT_RECEIVER_EMAIL.split('@')[0];
+const ohneEmpfaenger = (r) => [
+  [!r.text.includes(EMPFAENGER), `Antwort nennt den Empfaenger: ${r.text}`],
+  [!r.protokoll.some((z) => z.includes(EMPFAENGER)), `Protokoll nennt den Empfaenger: ${r.protokoll.filter((z) => z.includes(EMPFAENGER)).join(' | ')}`],
 ];
 
 // --- G1 / G2 ----------------------------------------------------------------
@@ -215,6 +239,7 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
     [iRpc >= 0 && iRpc < iZeile && iRpc < iMail, `Reihenfolge Buchung ${iRpc}, Zeile ${iZeile}, Mail ${iMail}`],
     [r.zeilen === 1, `${r.zeilen} Zeile(n)`],
     [r.mails === 1, `${r.mails} Mail(s)`],
+    ...ohneEmpfaenger(r),
   ]);
 }
 {
@@ -226,6 +251,7 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
     [body.error === 'GRENZE_ERREICHT', `error ${JSON.stringify(body.error)}`],
     [r.zeilen === 0, `${r.zeilen} Zeile(n)`],
     [r.mails === 0, `${r.mails} Mail(s)`],
+    ...ohneEmpfaenger(r),
   ]);
 }
 {
@@ -235,6 +261,7 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
     [r.zeilen === 0, `${r.zeilen} Zeile(n)`],
     [r.mails === 0, `${r.mails} Mail(s)`],
     [!/42883|ATTRAPPE|kontaktmail_buchen/.test(r.text), `Antwort nennt den Datenbankfehler: ${r.text}`],
+    ...ohneEmpfaenger(r),
   ]);
 }
 {
@@ -243,6 +270,7 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
     [r.status === 500, `Status ${r.status}`],
     [r.zeilen === 0, `${r.zeilen} Zeile(n)`],
     [r.mails === 0, `${r.mails} Mail(s)`],
+    ...ohneEmpfaenger(r),
   ]);
 }
 {
@@ -252,16 +280,18 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
     [r.zeilen === 0, `${r.zeilen} Zeile(n)`],
     [r.mails === 0, `${r.mails} Mail(s)`],
     [!/ATTRAPPE|fetch failed/.test(r.text), `Antwort nennt den Fehler: ${r.text}`],
+    ...ohneEmpfaenger(r),
   ]);
 }
 {
   // Zaehler-Attrappe: haelt sich an die Grenze, die die Funktion SELBST mitschickt.
   let belegt = 0;
   const zaehler = (_n, a) => (belegt >= a.p_grenze ? { data: 'gesamt', error: null } : (belegt++, { data: 'erlaubt', error: null }));
-  let mails = 0; let zeilen = 0; let zuViel = 0; let andere = 0;
+  let mails = 0; let zeilen = 0; let zuViel = 0; let andere = 0; let empfaenger = [];
   for (let i = 0; i < SOLL.anzahl + 3; i++) {
     const r = await rufe(gueltig, { rpc: zaehler });
     mails += r.mails; zeilen += r.zeilen;
+    empfaenger.push(...ohneEmpfaenger(r).filter(([ok]) => !ok));
     if (r.status === 429) zuViel++; else if (r.status !== 200) andere++;
   }
   pruefe(`K5 ${SOLL.anzahl + 3} Aufrufe -> ${SOLL.anzahl} Mails, 3x 429`, [
@@ -269,6 +299,7 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
     [zeilen === SOLL.anzahl, `${zeilen} Zeilen`],
     [zuViel === 3, `${zuViel}x 429`],
     [andere === 0, `${andere} andere Antworten`],
+    [empfaenger.length === 0, `Empfaenger sichtbar: ${empfaenger.map(([, w]) => w).join('; ')}`],
   ]);
 }
 
@@ -297,6 +328,49 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
   const r = await rufe({ ...gueltig, formType: 'join', message: 'z'.repeat(5000), role: 'Entwicklung', linkedin: 'https://linkedin.com/in/x' }, {});
   pruefe('F6 Nachricht 5000 Zeichen -> 200', [[r.status === 200, `Status ${r.status}`], [r.mails === 1, `${r.mails} Mail(s)`]]);
 }
+// L: jedes Feld genau an der Grenze -- Max geht durch, Max+1 wird ohne
+// Wirkung abgelehnt. Grenzen wie contact-fom-email (Zod, #469).
+const adresse = (laenge) => 'a'.repeat(laenge - '@example.org'.length) + '@example.org';
+const GRENZFAELLE = [
+  ['name', 200, (n) => ({ ...gueltig, name: 'n'.repeat(n) })],
+  ['email', 254, (n) => ({ ...gueltig, email: adresse(n) })],
+  ['role', 200, (n) => ({ ...gueltig, formType: 'join', role: 'r'.repeat(n) })],
+  ['availability', 200, (n) => ({ ...gueltig, formType: 'join', availability: 'v'.repeat(n) })],
+  ['linkedin', 500, (n) => ({ ...gueltig, formType: 'join', linkedin: 'l'.repeat(n) })],
+  ['github', 500, (n) => ({ ...gueltig, formType: 'join', github: 'g'.repeat(n) })],
+  ['investment_range', 100, (n) => ({ ...gueltig, formType: 'invest', investment_range: 'i'.repeat(n) })],
+];
+for (const [i, [feld, max, bau]] of GRENZFAELLE.entries()) {
+  const ja = await rufe(bau(max), {});
+  const nein = await rufe(bau(max + 1), {});
+  pruefe(`L${i + 1} ${feld} ${max} -> 200, ${max + 1} -> 400 ohne Wirkung`, [
+    [bau(max)[feld].length === max && bau(max + 1)[feld].length === max + 1, `Fall baut ${bau(max)[feld].length}/${bau(max + 1)[feld].length} Zeichen`],
+    [ja.status === 200, `${max} Zeichen: Status ${ja.status}`],
+    [ja.mails === 1, `${max} Zeichen: ${ja.mails} Mail(s)`],
+    [nein.status === 400, `${max + 1} Zeichen: Status ${nein.status}`],
+    ...keineWirkung(nein).map(([ok, w]) => [ok, `${max + 1} Zeichen: ${w}`]),
+  ]);
+}
+// T: Typ und Inhalt. null in einem Freifeld wird abgelehnt wie bei Zod
+// (.optional() nimmt nur undefined); null oder eine Zahl als Name oder als
+// ganzer Body ist 400, nicht 500. Ein Name nur aus Leerzeichen ist bewusst
+// strenger als contact-fom-email (min(1)): er nennt niemanden.
+const TYPFAELLE = [
+  ['Name nur Leerzeichen', { ...gueltig, name: '   ' }],
+  ['Name null', { ...gueltig, name: null }],
+  ['Name als Zahl', { ...gueltig, name: 42 }],
+  ['Body null', 'null'],
+  ['Body als Zahl', '42'],
+  ['Body als Liste', '[]'],
+  ...['message', 'role', 'availability', 'linkedin', 'github', 'investment_range'].flatMap((feld) => [
+    [`${feld} null`, { ...gueltig, [feld]: null }],
+    [`${feld} als Zahl`, { ...gueltig, [feld]: 7 }],
+  ]),
+];
+for (const [i, [was, body]] of TYPFAELLE.entries()) {
+  const r = await rufe(body, {});
+  pruefe(`T${i + 1} ${was} -> 400, keine Wirkung`, [[r.status === 400, `Status ${r.status}`], ...keineWirkung(r)]);
+}
 
 // --- D: keine Fehlertexte an den Aufrufer -------------------------------------
 {
@@ -305,6 +379,7 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
     [r.status === 500, `Status ${r.status}`],
     [r.mails === 0, `${r.mails} Mail(s)`],
     [!/42P01|ATTRAPPE|relation|dbError/.test(r.text), `Antwort nennt den Datenbankfehler: ${r.text}`],
+    ...ohneEmpfaenger(r),
   ]);
 }
 {
