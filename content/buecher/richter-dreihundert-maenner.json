@@ -1,0 +1,2031 @@
+{
+  "slug": "richter-dreihundert-maenner",
+  "draft": false,
+  "nr": 7,
+  "kachelTitel": "Dreihundert Männer — Deutsches Unternehmertum",
+  "kachelText": "zu über den Wandel von der Frühindustrialisierung bis zu BioNTech, mit Fallstudien wie Bosch, Siemens und SAP",
+  "symbol": "⚙️",
+  "autor": "Konstantin Richter",
+  "titel": "Dreihundert Männer",
+  "untertitel": "Aufstieg und Fall der Deutschland AG",
+  "uebersetzer": "",
+  "verlag": "Suhrkamp",
+  "erschienen": "2025",
+  "isbn": "978-3-518-43252-5",
+  "leitfrage": "Die Geschichte der deutschen Wirtschaft gilt als Erfolgsmodell – was kann man daraus für die Zukunft lernen?",
+  "einordnung": "Die Karten zeigen den Weg von der Frühindustrialisierung über das Kaiserreich und die NS-Zeit bis zur Bundesrepublik und heutige Fallstudien.",
+  "kartenIntro": "Alle 18 kannst du unten durchspielen.",
+  "karten": [
+    "Frühindustrialisierung: Zoll",
+    "Kaiserreich: Rhein. Kapital.",
+    "Ordoliberalismus: Erhard",
+    "Hidden Champions: Mittelstand",
+    "Bosch: Magnetzündung 1902",
+    "Siemens: Infrastruktur",
+    "SAP: ERP-Standardisierung",
+    "BioNTech: mRNA & Pandemie",
+    "NS-Zeit: Arisierung",
+    "NS-Zeit: Zwangsarbeit",
+    "IG Farben: Kartellmacht",
+    "Mitbestimmung & Tarif",
+    "Schumpeter: Zerstörung",
+    "Unternehmertum: Kosten",
+    "Unternehmertum: Regional",
+    "Unternehmertum: Belastung",
+    "Modernisierung: Entstaubung",
+    "Gründer: Stärken nutzen"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
+  "verlagUrl": "",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://link.amazon/B0bYIreQO",
+  "cover": "cover.jpg",
+  "coverCredit": "Cover der Originalausgabe (Suhrkamp Verlag, suhrkamp.de, unverändert, Stand 2026-11-08)",
+  "naechsteWoche": "",
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph zu deutschem Unternehmertum",
+  "knoten": [
+    {
+      "slug": "frihueindustrialisierung-marktintegration-zollverein",
+      "titel": "Frühindustrialisierung: Zoll"
+    },
+    {
+      "slug": "kaiserreich-rheinischer-kapitalismus-organisiert",
+      "titel": "Kaiserreich: Rhein. Kapital."
+    },
+    {
+      "slug": "bundesrepublik-ordoliberalismus-erhard-eucken",
+      "titel": "Ordoliberalismus: Erhard"
+    },
+    {
+      "slug": "hidden-champions-familienunternehmen-und-mittelstandsmodell",
+      "titel": "Hidden Champions: Mittelstand"
+    },
+    {
+      "slug": "bosch-fallstudie-1902-magnetzuendung-timing",
+      "titel": "Bosch: Magnetzündung 1902"
+    },
+    {
+      "slug": "siemens-fallstudie-telegraphie-elektrifizierung-infrastruktur",
+      "titel": "Siemens: Infrastruktur"
+    },
+    {
+      "slug": "sap-fallstudie-1972-erp-standardisierung",
+      "titel": "SAP: ERP-Standardisierung"
+    },
+    {
+      "slug": "biontech-fallstudie-mrna-vorbereitung-und-pandemieschock",
+      "titel": "BioNTech: mRNA & Pandemie"
+    },
+    {
+      "slug": "ns-zeit-arisierung-unternehmenseigentum",
+      "titel": "NS-Zeit: Arisierung"
+    },
+    {
+      "slug": "ns-zwangsarbeit-unternehmensgewinn-12-millionen",
+      "titel": "NS-Zeit: Zwangsarbeit"
+    },
+    {
+      "slug": "ig-farben-fallstudie-kartellmacht-und-kriegswirtschaft",
+      "titel": "IG Farben: Kartellmacht"
+    },
+    {
+      "slug": "mitbestimmung-tarifautonomie-bundesrepublik",
+      "titel": "Mitbestimmung & Tarif"
+    },
+    {
+      "slug": "schumpeterismus-und-institutionelle-balance",
+      "titel": "Schumpeter: Zerstörung"
+    },
+    {
+      "slug": "unternehmertum-als-traeger-gesellschaftlichen-fortschritts-kosten-und-nutzen",
+      "titel": "Unternehmertum: Kosten"
+    },
+    {
+      "slug": "unternehmertum-charakter-qualitaet-regionalitaet-polyzentrisch",
+      "titel": "Unternehmertum: Regional"
+    },
+    {
+      "slug": "unternehmertum-charakter-selbstausbeutung-arbeitsbelastung",
+      "titel": "Unternehmertum: Belastung"
+    },
+    {
+      "slug": "deutsche-modernisierung-des-modells-entstaubung-nicht-abwicklung",
+      "titel": "Modernisierung: Entstaubung"
+    },
+    {
+      "slug": "tipps-fuer-gruender-in-deutschland-staerken-kombinieren",
+      "titel": "Gründer: Stärken nutzen"
+    }
+  ],
+  "kanten": [
+    [
+      1,
+      5,
+      "verwandt"
+    ],
+    [
+      1,
+      10,
+      "verwandt"
+    ],
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      2,
+      11,
+      "verwandt"
+    ],
+    [
+      3,
+      11,
+      "verwandt"
+    ],
+    [
+      3,
+      14,
+      "verwandt"
+    ],
+    [
+      3,
+      16,
+      "verwandt"
+    ],
+    [
+      3,
+      17,
+      "verwandt"
+    ],
+    [
+      8,
+      9,
+      "verwandt"
+    ],
+    [
+      8,
+      10,
+      "verwandt"
+    ],
+    [
+      8,
+      13,
+      "verwandt"
+    ],
+    [
+      9,
+      10,
+      "verwandt"
+    ],
+    [
+      9,
+      13,
+      "verwandt"
+    ],
+    [
+      11,
+      15,
+      "verwandt"
+    ],
+    [
+      12,
+      13,
+      "verwandt"
+    ],
+    [
+      12,
+      16,
+      "verwandt"
+    ],
+    [
+      16,
+      17,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "Die offene Frage",
+    "titel": "Was kann man aus Fehlern und Erfolgen der Vergangenheit für die Krise der deutschen Wirtschaft heute lernen?",
+    "anreisser": "„Dreihundert Männer“ (Konstantin Richter, Suhrkamp) nimmt mehr als ein Jahrhundert deutscher Wirtschaftsgeschichte in den Blick — vom Kaiserreich über die NS-Zeit bis in die Gegenwart. 18 Lernkarten beschreiben die Stationen; die Antwort auf die Frage stellt sich beim Durchspielen.",
+    "absaetze": [
+      "Konstantin Richters „Dreihundert Männer“ (Suhrkamp, Berlin 2025, 544 S.) führt durch die deutsche Wirtschaftsgeschichte ab 1871. Im Zentrum stehen Unternehmer, Bankiers, Konzerne und ihre Verbindungen. Unter dem Brennglas jeweils die Einschnitte der Gründerzeit, der Weimarer Republik, des Nationalsozialismus und der Nachkriegsordnung. Das Buch gliedert sich in drei Hauptteile: das Kaiserreich, die Zeit von 1914 bis 1945 und die Zeit seit 1945 bis in die Gegenwart.",
+      "„History doesn't repeat itself, but it often rhymes.“ (Mark Twain zugeschrieben) – Kapitalismus, die ordnende Hand des Staates, die Wissenschaft, die Gewalt des Proletariats, der Einfluss des Faschismus, Verbindungen nach Amerika, die Rolle der Frauen, viele andere Aspekte und nicht zuletzt Moral: Richter spürt der sozialen, politischen und historischen Verankerung der deutschen Wirtschaft nach.",
+      "Unter anderem anhand von Unternehmerbiografien zeichnet Richter ein dichtes und lehrreiches Bild der Geschichte, das inspirierend für die Zukunft sein kann.",
+      "Die Karten beschreiben über ein Jahrhundert deutscher Wirtschaftsgeschichte — von Zollverein und Kaiserreich über die NS-Zeit bis zu den Fallstudien von heute. Die offene Frage: Was kann man aus Fehlern und Erfolgen der Vergangenheit für die Krise der deutschen Wirtschaft heute lernen?"
+    ],
+    "autor": "Heiko Miertzsch"
+  },
+  "kartenvoll": [
+    {
+      "slug": "frihueindustrialisierung-marktintegration-zollverein",
+      "kurz": "Frühindustrialisierung: Zoll",
+      "titel": "Frühindustrialisierung — Marktintegration durch Zollverein und Eisenbahn",
+      "karte": "Die frühe deutsche Industrialisierung entstand aus einer Doppelstruktur: moderne Fabrik-Inseln (Textil, Bergbau, Maschinenbau) eingebettet in eine noch vormoderne Agrarlandschaft. Der Deutsche Zollverein 1834 hob Zollbarrieren zwischen deutschen Staaten auf und schuf erstmals einen grenzenlosen Binnenmarkt — Unternehmertum wurde national marktfähig. Der Eisenbahnausbau erschloss danach neue Lieferketten und Absatzmärkte. Krupp zeigt das Muster: Zollverein, Eisenbahnboom und ein preußischer Militärauftrag 1859 trafen zusammen auf technische Exzellenz.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "In welchem Jahr hob der Deutsche Zollverein die Zollbarrieren zwischen den deutschen Staaten auf?",
+          "beleg": "Deutscher Zollverein 1834 als Katalysator",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "1834",
+              "ok": true,
+              "fb": "Richtig: Der Deutsche Zollverein hob 1834 die Zollbarrieren zwischen den deutschen Staaten auf."
+            },
+            {
+              "text": "1848",
+              "ok": false,
+              "fb": "Falsch: Der Deutsche Zollverein hob 1834 die Zollbarrieren zwischen den deutschen Staaten auf."
+            },
+            {
+              "text": "1871",
+              "ok": false,
+              "fb": "Falsch: Der Deutsche Zollverein hob 1834 die Zollbarrieren zwischen den deutschen Staaten auf."
+            },
+            {
+              "text": "1859",
+              "ok": false,
+              "fb": "Falsch: Der Deutsche Zollverein hob 1834 die Zollbarrieren zwischen den deutschen Staaten auf."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Vor dem Zollverein waren die deutschen Märkte zersplittert. Was änderte sich danach für Unternehmer?",
+          "beleg": "Unternehmertum wurde ‚national marktfähig'",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Unternehmertum wurde ausschließlich regional beschränkt",
+              "ok": false,
+              "fb": "Falsch: Der Deutsche Zollverein von 1834 hob Zollbarrieren auf und machte Unternehmertum national marktfähig."
+            },
+            {
+              "text": "Unternehmertum wurde national marktfähig",
+              "ok": true,
+              "fb": "Richtig: Der Deutsche Zollverein von 1834 hob Zollbarrieren auf und machte Unternehmertum national marktfähig."
+            },
+            {
+              "text": "Unternehmertum wurde staatlich verstaatlicht",
+              "ok": false,
+              "fb": "Falsch: Der Deutsche Zollverein von 1834 hob Zollbarrieren auf und machte Unternehmertum national marktfähig."
+            },
+            {
+              "text": "Unternehmertum wurde international unattraktiv",
+              "ok": false,
+              "fb": "Falsch: Der Deutsche Zollverein von 1834 hob Zollbarrieren auf und machte Unternehmertum national marktfähig."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum gilt Krupps Aufstieg in Essen nicht als geniale Einzelidee, sondern als Zufall und Timing?",
+          "beleg": "Alfred Krupps Stahlfirma wuchs nicht aus genialer Einzelidee, sondern aus Zufall + Timing",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil Krupp seine Reifen nie patentieren ließ",
+              "ok": false,
+              "fb": "Falsch: Alfred Krupps Stahlfirma wuchs nicht aus genialer Einzelidee, sondern aus dem Zusammentreffen von Zufall und Timing."
+            },
+            {
+              "text": "Weil der Zollverein Krupps Wachstum verhinderte",
+              "ok": false,
+              "fb": "Falsch: Der Deutsche Zollverein von 1834 hob Zollbarrieren auf und schuf einen Binnenmarkt, was Krupps Wachstum förderte."
+            },
+            {
+              "text": "Weil Zufall und Timing zusammentrafen, nicht eine Einzelidee",
+              "ok": true,
+              "fb": "Richtig: Alfred Krupps Stahlfirma wuchs nicht aus genialer Einzelidee, sondern aus Zufall und Timing."
+            },
+            {
+              "text": "Weil der preußische Militärauftrag vor dem Zollverein kam",
+              "ok": false,
+              "fb": "Falsch: Der preußische Militärauftrag von 1859 traf auf den bereits bestehenden Zollverein und den Eisenbahnausbau."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kaiserreich-rheinischer-kapitalismus-organisiert",
+      "kurz": "Kaiserreich: Rhein. Kapital.",
+      "titel": "Kaiserreich — Rheinischer Kapitalismus und organisierte Hochindustrialisierung",
+      "karte": "Zwischen Reichsgründung 1871 und Erstem Weltkrieg investierte Deutschland 1891–1913 im Durchschnitt fast 25% des Inlandsprodukts — europaweit beispiellos. Es entstand ein Ordnungsmuster aus hoher Konzentration, enger Bank-Industrie-Verflechtung und Kartellen, später als „rheinischer\" oder „organisierter Kapitalismus\" beschrieben. Kartelle glätteten Preise in kapitalintensiven Branchen. Deutsche Farbunternehmen hielten 1914 faktisch ein Weltmonopol auf Farbstoffe; Konzerne wie Siemens blieben familientragend, entwickelten aber moderne Managementstrukturen.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie hoch lag die Investitionsquote Deutschlands am Inlandsprodukt zwischen 1891 und 1913 im Schnitt?",
+          "beleg": "im Durchschnitt fast 25% des Inlandsprodukts",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Etwa 10%",
+              "ok": false,
+              "fb": "Falsch: Die durchschnittliche Investitionsquote Deutschlands am Inlandsprodukt zwischen 1891 und 1913 lag bei fast 25%."
+            },
+            {
+              "text": "Fast 25%",
+              "ok": true,
+              "fb": "Richtig: Die durchschnittliche Investitionsquote Deutschlands am Inlandsprodukt zwischen 1891 und 1913 lag bei fast 25%."
+            },
+            {
+              "text": "Etwa 15%",
+              "ok": false,
+              "fb": "Falsch: Die durchschnittliche Investitionsquote Deutschlands am Inlandsprodukt zwischen 1891 und 1913 lag bei fast 25%."
+            },
+            {
+              "text": "Über 40%",
+              "ok": false,
+              "fb": "Falsch: Die durchschnittliche Investitionsquote Deutschlands am Inlandsprodukt zwischen 1891 und 1913 lag bei fast 25%."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welches Instrument nutzten deutsche Firmen im Kaiserreich gegen ruinöse Preiskämpfe?",
+          "beleg": "ein Instrument zur Preisglättung in kapitalintensiven Branchen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Staatliche Preiskontrollen",
+              "ok": false,
+              "fb": "Falsch: Kartelle dienten im Kaiserreich als Instrument zur Preisglättung in kapitalintensiven Branchen, nicht staatliche Preiskontrollen."
+            },
+            {
+              "text": "Börsennotierungen",
+              "ok": false,
+              "fb": "Falsch: Kartelle glätteten Preise in kapitalintensiven Branchen, nicht Börsennotierungen."
+            },
+            {
+              "text": "Kartelle",
+              "ok": true,
+              "fb": "Richtig: Kartelle glätteten Preise in kapitalintensiven Branchen."
+            },
+            {
+              "text": "Gewerkschaftliche Tarifverträge",
+              "ok": false,
+              "fb": "Falsch: Kartelle glätteten Preise in kapitalintensiven Branchen, nicht gewerkschaftliche Tarifverträge."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum gilt Siemens im Kaiserreich trotz moderner Strukturen als deutsche Besonderheit?",
+          "beleg": "Die Firma blieb ‚persönlich geprägt, auch wenn sie organisatorisch anonym wurde'",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil Siemens als einziges großes Unternehmen im Kaiserreich keine Kartelle nutzte",
+              "ok": false,
+              "fb": "Falsch: Siemens nutzte Kartelle nicht als Alleinstellungsmerkmal. Die Besonderheit lag darin, dass das Unternehmen persönlich geprägt blieb, obwohl es organisatorisch anonym wurde."
+            },
+            {
+              "text": "Weil Siemens schon im Kaiserreich vollständig verstaatlicht wurde",
+              "ok": false,
+              "fb": "Falsch: Siemens wurde nicht verstaatlicht. Die Besonderheit bestand darin, dass die Firma persönlich geprägt blieb, obwohl sie organisatorisch anonym wurde."
+            },
+            {
+              "text": "Weil Siemens fast ausschließlich im Ausland statt im Inland investierte",
+              "ok": false,
+              "fb": "Falsch: Siemens investierte nicht ausschließlich im Ausland. Die Besonderheit war, dass die Firma persönlich geprägt blieb, obwohl sie organisatorisch anonym wurde."
+            },
+            {
+              "text": "Weil sie persönlich geprägt blieb, obwohl sie organisatorisch anonym wurde",
+              "ok": true,
+              "fb": "Richtig: Siemens blieb im Kaiserreich persönlich geprägt, auch wenn sie organisatorisch anonym wurde."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bundesrepublik-ordoliberalismus-erhard-eucken",
+      "kurz": "Ordoliberalismus: Erhard",
+      "titel": "Bundesrepublik — Ordoliberalismus (Erhard, Eucken) als Nachkriegsordnung",
+      "karte": "Nach 1945 war Unternehmertum diskreditiert und zugleich unentbehrlich. Die Währungsreform 1948 beendete die versteckte Inflation der Kriegs- und Nachkriegszeit und schuf mit der D-Mark das Fundament der westdeutschen Nachkriegsökonomie. Walter Euckens Ordoliberalismus wollte nicht den Wirtschaftsprozess lenken, sondern Ordnungsformen des Wettbewerbs setzen — ein starker Rechtsstaat gegen Monopole und Kartelle. Erhard und Müller-Armack erweiterten das um konjunkturpolitische Steuerung zur Sozialen Marktwirtschaft; Ordoliberalismus und Keynesianismus koexistierten, statt sich auszuschließen.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welches Ereignis von 1948 markierte den wirtschaftlichen Neustart der Bundesrepublik?",
+          "beleg": "Die Währungsreform 1948 markierte den Übergang",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Die Reichsgründung 1871",
+              "ok": false,
+              "fb": "Falsch: Die Währungsreform 1948 markierte den wirtschaftlichen Neustart der Bundesrepublik."
+            },
+            {
+              "text": "Der Marshallplan 1947",
+              "ok": false,
+              "fb": "Falsch: Die Währungsreform 1948 markierte den wirtschaftlichen Neustart der Bundesrepublik."
+            },
+            {
+              "text": "Die Währungsreform 1948",
+              "ok": true,
+              "fb": "Richtig: Die Währungsreform 1948 markierte den wirtschaftlichen Neustart der Bundesrepublik."
+            },
+            {
+              "text": "Die Wiedervereinigung 1990",
+              "ok": false,
+              "fb": "Falsch: Die Währungsreform 1948 markierte den wirtschaftlichen Neustart der Bundesrepublik."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Ein Staat begrenzt Monopole, lenkt aber den Markt nicht im Detail. Welcher Ansatz ist das nach Eucken?",
+          "beleg": "nicht, den Wirtschaftsprozess im Detail zu lenken, sondern die Ordnungsformen des Wettbewerbs zu setzen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Dem Keynesianismus",
+              "ok": false,
+              "fb": "Falsch: Euckens Ansatz ist der Ordoliberalismus, der Ordnungsformen des Wettbewerbs setzt, ohne den Wirtschaftsprozess im Detail zu lenken."
+            },
+            {
+              "text": "Der Planwirtschaft",
+              "ok": false,
+              "fb": "Falsch: Euckens Ansatz ist der Ordoliberalismus, der Ordnungsformen des Wettbewerbs setzt, ohne den Wirtschaftsprozess im Detail zu lenken."
+            },
+            {
+              "text": "Dem Laissez-faire ohne Rechtsstaat",
+              "ok": false,
+              "fb": "Falsch: Euckens Ansatz ist der Ordoliberalismus, der Ordnungsformen des Wettbewerbs setzt, ohne den Wirtschaftsprozess im Detail zu lenken."
+            },
+            {
+              "text": "Dem Ordoliberalismus",
+              "ok": true,
+              "fb": "Richtig: Euckens Ordoliberalismus setzt Ordnungsformen des Wettbewerbs, ohne den Wirtschaftsprozess im Detail zu lenken."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum war die BRD-Nachkriegsordnung kein Entweder-oder von Ordoliberalismus und Keynesianismus?",
+          "beleg": "eine Koexistenz von Ordnungsrahmen und makroökonomischer Steuerung",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil Ordnungsrahmen und Konjunktursteuerung nebeneinander bestanden",
+              "ok": true,
+              "fb": "Richtig: In der Bundesrepublik bestanden der ordoliberale Ordnungsrahmen und die keynesianische Konjunktursteuerung nebeneinander."
+            },
+            {
+              "text": "Weil Erhard jede staatliche Konjunktursteuerung vollständig ablehnte",
+              "ok": false,
+              "fb": "Falsch: Erhard und Müller-Armack erweiterten den Ordoliberalismus um keynesianische Konjunkturpolitik zur Sozialen Marktwirtschaft."
+            },
+            {
+              "text": "Weil Eucken selbst eine umfassende Konjunkturpolitik entwarf",
+              "ok": false,
+              "fb": "Falsch: Walter Eucken wollte Ordnungsformen des Wettbewerbs setzen; Erhard und Müller-Armack fügten die Konjunktursteuerung hinzu."
+            },
+            {
+              "text": "Weil beide Ansätze in der Bundesrepublik gesetzlich verboten waren",
+              "ok": false,
+              "fb": "Falsch: Ordoliberalismus und Keynesianismus koexistierten in der Bundesrepublik, anstatt sich auszuschließen oder verboten zu sein."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "hidden-champions-familienunternehmen-und-mittelstandsmodell",
+      "kurz": "Hidden Champions: Mittelstand",
+      "titel": "Hidden Champions — Familiengeführte Mittelständler als Erfolgsmodell",
+      "karte": "Das klassische Nachkriegsmodell beruhte auf Eigentum und Leitung in einer Hand, Kontinuität und Unabhängigkeitsstreben. Daraus entstand die Erfolgsformel der Hidden Champions: hochspezialisierte, oft familiengeführte, exportstarke Mittelständler, die in Nischen Weltmarktführer wurden, ohne spektakulär sichtbar zu sein. Laut IfM Bonn arbeiteten 2023 19,1 von 35,9 Millionen abhängig Beschäftigten im Unternehmenssektor in KMU. Familienunternehmen prosperierten dort, wo soziale Bindungen und lange Investitionshorizonte gegenüber kurzfristiger Kapitalmarktorientierung Vorteile boten.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viele der 35,9 Millionen abhängig Beschäftigten arbeiteten 2023 laut IfM Bonn in KMU?",
+          "beleg": "19,1 Millionen von 35,9 Millionen im Jahr 2023",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "9,1 Millionen",
+              "ok": false,
+              "fb": "Falsch: 19,1 Millionen der 35,9 Millionen abhängig Beschäftigten im Unternehmenssektor arbeiteten 2023 laut IfM Bonn in KMU."
+            },
+            {
+              "text": "25,9 Millionen",
+              "ok": false,
+              "fb": "Falsch: 19,1 Millionen der 35,9 Millionen abhängig Beschäftigten im Unternehmenssektor arbeiteten 2023 laut IfM Bonn in KMU."
+            },
+            {
+              "text": "35,9 Millionen",
+              "ok": false,
+              "fb": "Falsch: 19,1 Millionen der 35,9 Millionen abhängig Beschäftigten im Unternehmenssektor arbeiteten 2023 laut IfM Bonn in KMU."
+            },
+            {
+              "text": "19,1 Millionen",
+              "ok": true,
+              "fb": "Richtig: 19,1 Millionen der 35,9 Millionen abhängig Beschäftigten im Unternehmenssektor arbeiteten 2023 laut IfM Bonn in KMU."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie nennt die Karte einen unauffälligen Nischen-Weltmarktführer?",
+          "beleg": "Weltmarktführer wurden, ohne selbst spektakulär sichtbar zu sein",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Hidden Champion",
+              "ok": true,
+              "fb": "Richtig: Die Karte nennt einen unauffälligen Nischen-Weltmarktführer einen Hidden Champion."
+            },
+            {
+              "text": "Startup",
+              "ok": false,
+              "fb": "Falsch: Die Karte nennt einen unauffälligen Nischen-Weltmarktführer einen Hidden Champion."
+            },
+            {
+              "text": "Global Player",
+              "ok": false,
+              "fb": "Falsch: Die Karte nennt einen unauffälligen Nischen-Weltmarktführer einen Hidden Champion."
+            },
+            {
+              "text": "Konzernriese",
+              "ok": false,
+              "fb": "Falsch: Die Karte nennt einen unauffälligen Nischen-Weltmarktführer einen Hidden Champion."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wo prosperierten Familienunternehmen besonders, weil soziale Bindungen und lange Horizonte zählten?",
+          "beleg": "gerade dort prosperieren, wo soziale Bindungen, lange Investitionshorizonte und technisches Spezialwissen gegenüber kurzfristiger Kapitalmarktorientierung Vorteile boten",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Wo kurzfristige Kapitalmarktorientierung gegenüber Bindungen den Ton angab",
+              "ok": false,
+              "fb": "Falsch: Familienunternehmen prosperierten dort, wo soziale Bindungen und lange Investitionshorizonte gegenüber kurzfristiger Kapitalmarktorientierung Vorteile boten."
+            },
+            {
+              "text": "Wo soziale Bindungen und lange Investitionshorizonte Vorteile boten",
+              "ok": true,
+              "fb": "Richtig: Familienunternehmen prosperierten gerade dort, wo soziale Bindungen und lange Investitionshorizonte Vorteile boten."
+            },
+            {
+              "text": "Vor allem in den großen Metropolen mit Zugang zum Kapitalmarkt",
+              "ok": false,
+              "fb": "Falsch: Familienunternehmen prosperierten dort, wo soziale Bindungen und lange Investitionshorizonte gegenüber kurzfristiger Kapitalmarktorientierung Vorteile boten."
+            },
+            {
+              "text": "Vor allem dort, wo Fremdkapital vom Kapitalmarkt kaum erhältlich war",
+              "ok": false,
+              "fb": "Falsch: Familienunternehmen prosperierten dort, wo soziale Bindungen und lange Investitionshorizonte gegenüber kurzfristiger Kapitalmarktorientierung Vorteile boten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "bosch-fallstudie-1902-magnetzuendung-timing",
+      "kurz": "Bosch: Magnetzündung 1902",
+      "titel": "Bosch — Fallstudie zum Timing (Magnetzündung 1902 + Automobilisierung)",
+      "karte": "Robert Boschs Hochspannungs-Magnetzündung von 1902 löste ein Schlüsselproblem der Automobilisierung: schnelle, zuverlässige Zündung für Verbrennungsmotoren. Der technische Durchbruch traf exakt auf die Welle steigender Motorisierung — schon vor dem Ersten Weltkrieg war die Zündung etabliert, 1912 stieg die Produktion auf eine Million. Die Quelle rechnet kontrafaktisch: 1880 eingeführt, hätte es noch keine Automobilindustrie gegeben; 1930 wäre das Konzept vermutlich verdrängt gewesen. 1902 war das Fenster offen.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welches Jahr nennt die Karte für Boschs Hochspannungs-Magnetzündung?",
+          "beleg": "Die Hochspannungs-Magnetzündung von 1902",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "1892",
+              "ok": false,
+              "fb": "Falsch: Die Hochspannungs-Magnetzündung von Robert Bosch stammt aus dem Jahr 1902."
+            },
+            {
+              "text": "1912",
+              "ok": false,
+              "fb": "Falsch: 1912 war das Jahr, in dem die Produktion auf eine Million stieg, nicht das Jahr der Erfindung."
+            },
+            {
+              "text": "1922",
+              "ok": false,
+              "fb": "Falsch: Die Hochspannungs-Magnetzündung von Robert Bosch stammt aus dem Jahr 1902."
+            },
+            {
+              "text": "1902",
+              "ok": true,
+              "fb": "Richtig: Die Hochspannungs-Magnetzündung von Robert Bosch stammt aus dem Jahr 1902."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was zeigt der Anstieg von Boschs Zündungs-Produktion auf eine Million bis 1912?",
+          "beleg": "1912 war die Produktion auf eine Million gestiegen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ein exponentielles Wachstum durch perfektes Timing",
+              "ok": true,
+              "fb": "Richtig: Der Anstieg der Produktion von Boschs Magnetzündung auf eine Million bis 1912 zeigt ein exponentielles Wachstum durch perfektes Timing."
+            },
+            {
+              "text": "Eine langsame, lineare Marktdurchdringung über viele Jahre",
+              "ok": false,
+              "fb": "Falsch: Der Anstieg der Produktion von Boschs Magnetzündung auf eine Million bis 1912 zeigt kein lineares Wachstum, sondern ein exponentielles Wachstum durch perfektes Timing."
+            },
+            {
+              "text": "Einen Rückgang wegen starken Konkurrenzdrucks",
+              "ok": false,
+              "fb": "Falsch: Der Anstieg der Produktion von Boschs Magnetzündung auf eine Million bis 1912 zeigt keinen Rückgang, sondern ein exponentielles Wachstum durch perfektes Timing."
+            },
+            {
+              "text": "Eine staatlich verordnete Produktionsquote für Zündungen",
+              "ok": false,
+              "fb": "Falsch: Der Anstieg der Produktion von Boschs Magnetzündung auf eine Million bis 1912 ist keine staatliche Quote, sondern ein exponentielles Wachstum durch perfektes Timing."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum wäre die Magnetzündung von Robert Bosch 1880 wirkungslos geblieben?",
+          "beleg": "1880 hätte es keine Automobilindustrie gegeben (noch zu früh)",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil 1880 bereits andere Technologien das Konzept verdrängt hätten",
+              "ok": false,
+              "fb": "Falsch: 1930 wäre das Konzept vermutlich verdrängt gewesen, 1880 gab es jedoch noch keine Automobilindustrie."
+            },
+            {
+              "text": "Weil es 1880 noch keine Automobilindustrie gab",
+              "ok": true,
+              "fb": "Richtig: 1880 hätte es keine Automobilindustrie gegeben, weshalb die Zündung wirkungslos geblieben wäre."
+            },
+            {
+              "text": "Weil Bosch die Zündung 1880 patentrechtlich nicht hätte schützen können",
+              "ok": false,
+              "fb": "Falsch: 1880 hätte es keine Automobilindustrie gegeben, weshalb die Zündung wirkungslos geblieben wäre."
+            },
+            {
+              "text": "Weil 1880 die Nachfrage nach Zündungen bereits gesättigt war",
+              "ok": false,
+              "fb": "Falsch: 1880 hätte es keine Automobilindustrie gegeben, weshalb die Zündung wirkungslos geblieben wäre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "siemens-fallstudie-telegraphie-elektrifizierung-infrastruktur",
+      "kurz": "Siemens: Infrastruktur",
+      "titel": "Siemens — Fallstudie zu Timing, Infrastruktur-Expansion und Familie-Bürokratie",
+      "karte": "Siemens startete 1847 als kleine Berliner Werkstatt und stieg über Telegraphie, Hochspannungstechnik und Infrastrukturprojekte zum globalen Elektrokonzern auf. Die Expansion beruhte auf dem historischen Glück, genau in den Aufstieg von Telegraphie, Energieinfrastruktur und globalen Großprojekten zu fallen. Kocka beschreibt Siemens als Fall, in dem Familie und Bürokratie zusammenwirkten: familientragende Identität bei gleichzeitig moderner Verwaltung. Die Firma blieb persönlich geprägt, auch als sie organisatorisch anonym wurde.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "In welchem Jahr startete Siemens als kleine Berliner Werkstatt?",
+          "beleg": "Siemens startete 1847 als kleine Berliner Werkstatt",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "1834",
+              "ok": false,
+              "fb": "Falsch: Siemens startete 1847 als kleine Berliner Werkstatt."
+            },
+            {
+              "text": "1871",
+              "ok": false,
+              "fb": "Falsch: Siemens startete 1847 als kleine Berliner Werkstatt."
+            },
+            {
+              "text": "1902",
+              "ok": false,
+              "fb": "Falsch: Siemens startete 1847 als kleine Berliner Werkstatt."
+            },
+            {
+              "text": "1847",
+              "ok": true,
+              "fb": "Richtig: Siemens startete 1847 als kleine Berliner Werkstatt."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welches historische Zeitfenster nennt Kocka für den Aufstieg von Siemens in Berlin?",
+          "beleg": "genau in den Aufstieg von Telegraphie, Energieinfrastruktur und globalen staatlichen Großprojekten zu fallen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Den Aufstieg von Telegraphie, Energieinfrastruktur und Großprojekten",
+              "ok": true,
+              "fb": "Richtig: Kocka beschreibt den Aufstieg von Siemens als Fall, der genau in den Aufstieg von Telegraphie, Energieinfrastruktur und globalen staatlichen Großprojekten fiel."
+            },
+            {
+              "text": "Die Einführung der Sozialversicherung unter Bismarck im Jahr 1883",
+              "ok": false,
+              "fb": "Falsch: Kocka nennt für den Aufstieg von Siemens den Aufstieg von Telegraphie, Energieinfrastruktur und globalen staatlichen Großprojekten, nicht die Einführung der Sozialversicherung 1883."
+            },
+            {
+              "text": "Die Gründung des Deutschen Zollvereins und den Bau der ersten Bahnen",
+              "ok": false,
+              "fb": "Falsch: Kocka nennt für den Aufstieg von Siemens den Aufstieg von Telegraphie, Energieinfrastruktur und globalen staatlichen Großprojekten, nicht die Gründung des Deutschen Zollvereins."
+            },
+            {
+              "text": "Den Beginn der ERP-Standardisierung und der Unternehmenssoftware",
+              "ok": false,
+              "fb": "Falsch: Kocka nennt für den Aufstieg von Siemens den Aufstieg von Telegraphie, Energieinfrastruktur und globalen staatlichen Großprojekten, nicht den Beginn der ERP-Standardisierung."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was meint Kocka mit „Familie und Bürokratie wirkten zusammen“ bei Siemens?",
+          "beleg": "Das Unternehmen behielt eine familientragende Identität, entwickelte aber zugleich moderne Verwaltungs- und Managementstrukturen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Die Familie zog sich vollständig aus der Führung des Unternehmens zurück",
+              "ok": false,
+              "fb": "Falsch: Siemens behielt eine familientragende Identität, während moderne Verwaltungs- und Managementstrukturen gleichzeitig bestanden."
+            },
+            {
+              "text": "Familientragende Identität und moderne Verwaltung bestanden gleichzeitig",
+              "ok": true,
+              "fb": "Richtig: Siemens behielt eine familientragende Identität, während moderne Verwaltungs- und Managementstrukturen gleichzeitig bestanden."
+            },
+            {
+              "text": "Bürokratie ersetzte jede persönliche Prägung des gesamten Unternehmens",
+              "ok": false,
+              "fb": "Falsch: Siemens behielt eine familientragende Identität, während moderne Verwaltungs- und Managementstrukturen gleichzeitig bestanden."
+            },
+            {
+              "text": "Die Verwaltung blieb bis zuletzt rein handwerklich und familiär organisiert",
+              "ok": false,
+              "fb": "Falsch: Siemens behielt eine familientragende Identität, während moderne Verwaltungs- und Managementstrukturen gleichzeitig bestanden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sap-fallstudie-1972-erp-standardisierung",
+      "kurz": "SAP: ERP-Standardisierung",
+      "titel": "SAP — Fallstudie (1972) zur ERP-Standardisierung und digitaler Transformation",
+      "karte": "Fünf ehemalige IBM-Mitarbeiter gründeten SAP 1972 mit der Idee, betriebliche Datenverarbeitung in Standardsoftware zu übersetzen. Es war „Glück im historischen Sinn\", dass ihr Können just auf die frühe Phase der ERP-Standardisierung und die internationale Diffusion computergestützter Steuerung traf. Nicht jede gute Softwarefirma wurde zur Standardarchitektur der Weltwirtschaft — Konkurrenten mit ähnlichen Ideen zu anderer Zeit erlebten andere Marktdynamiken. Wie Bosch 1902 traf SAP 1972 exakt den richtigen Zeitpunkt.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "In welchem Jahr wurde SAP von fünf ehemaligen IBM-Mitarbeitern gegründet?",
+          "beleg": "Fünf ehemalige IBM-Mitarbeiter gründeten SAP 1972",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "1962",
+              "ok": false,
+              "fb": "Falsch: SAP wurde 1972 von fünf ehemaligen IBM-Mitarbeitern gegründet."
+            },
+            {
+              "text": "1972",
+              "ok": true,
+              "fb": "Richtig: SAP wurde 1972 von fünf ehemaligen IBM-Mitarbeitern gegründet."
+            },
+            {
+              "text": "1982",
+              "ok": false,
+              "fb": "Falsch: SAP wurde 1972 von fünf ehemaligen IBM-Mitarbeitern gegründet."
+            },
+            {
+              "text": "1992",
+              "ok": false,
+              "fb": "Falsch: SAP wurde 1972 von fünf ehemaligen IBM-Mitarbeitern gegründet."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was lässt sich über Konkurrenten mit ähnlicher Idee zu anderer Zeit als SAP sagen?",
+          "beleg": "Konkurrenten mit ähnlichen Ideen, die 5 oder 10 Jahre früher oder später starteten, erlebten andere Marktdynamiken",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Sie hätten identische Marktdynamiken erlebt",
+              "ok": false,
+              "fb": "Falsch: Konkurrenten mit ähnlichen Ideen, die 5 oder 10 Jahre früher oder später starteten, erlebten andere Marktdynamiken."
+            },
+            {
+              "text": "Sie hätten garantiert höhere Erfolgschancen gehabt",
+              "ok": false,
+              "fb": "Falsch: Konkurrenten mit ähnlichen Ideen, die 5 oder 10 Jahre früher oder später starteten, erlebten andere Marktdynamiken."
+            },
+            {
+              "text": "Sie hätten andere Marktdynamiken erlebt",
+              "ok": true,
+              "fb": "Richtig: Konkurrenten mit ähnlichen Ideen, die 5 oder 10 Jahre früher oder später starteten, erlebten andere Marktdynamiken."
+            },
+            {
+              "text": "Ihr Erfolg wäre unabhängig vom Timing gewesen",
+              "ok": false,
+              "fb": "Falsch: Konkurrenten mit ähnlichen Ideen, die 5 oder 10 Jahre früher oder später starteten, erlebten andere Marktdynamiken."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Worin liegt die Parallele zwischen Bosch 1902 und SAP 1972 bei der digitalen Standardisierung?",
+          "beleg": "traf SAP 1972 die beginnende digitale Standardisierung der Unternehmenslogistik — anderes Jahrhundert, selbes Muster",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Beide Firmen wurden in ihrer Gründungsphase vom Staat direkt subventioniert",
+              "ok": false,
+              "fb": "Falsch: SAP 1972 traf exakt den richtigen Zeitpunkt für die beginnende digitale Standardisierung der Unternehmenslogistik."
+            },
+            {
+              "text": "Beide entstanden aus Abspaltungen ehemaliger Automobilkonzerne",
+              "ok": false,
+              "fb": "Falsch: SAP 1972 traf exakt den richtigen Zeitpunkt für die beginnende digitale Standardisierung der Unternehmenslogistik."
+            },
+            {
+              "text": "Beide scheiterten zunächst an mangelnder Nachfrage und fehlendem Kapital",
+              "ok": false,
+              "fb": "Falsch: SAP 1972 traf exakt den richtigen Zeitpunkt für die beginnende digitale Standardisierung der Unternehmenslogistik."
+            },
+            {
+              "text": "Beide trafen zur richtigen Zeit auf eine aufkommende technische Welle",
+              "ok": true,
+              "fb": "Richtig: SAP 1972 traf exakt den richtigen Zeitpunkt für die beginnende digitale Standardisierung der Unternehmenslogistik."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "biontech-fallstudie-mrna-vorbereitung-und-pandemieschock",
+      "kurz": "BioNTech: mRNA & Pandemie",
+      "titel": "BioNTech — Fallstudie (Jahrzehnte Vorbereitung + Pandemieschock 2020)",
+      "karte": "BioNTech forschte seit den 1990er Jahren an mRNA, wurde 2008 mit großzügiger Seed-Finanzierung gegründet und schloss 2018 eine Kooperation mit Pfizer — noch in einem Nischenfeld. Dann kam die Pandemie: ein exogener Schock, der mRNA aus einem Nischenfeld in den Mittelpunkt globaler Impfstoffentwicklung katapultierte. Der Staat beschleunigte den Sprung zusätzlich mit einer BMBF-Förderung von bis zu 375 Millionen Euro. Erfolg war laut Taleb weder reiner Zufall noch reine Meisterschaft, sondern ein Zusammenspiel aus Vorbereitung, Kapital, Netzwerken, politischem Kontext und historischem Moment.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Seit wann forschten die BioNTech-Gründer an mRNA?",
+          "beleg": "Die Gründer forschten seit den 1990er Jahren an mRNA",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Seit den 1990er Jahren",
+              "ok": true,
+              "fb": "Richtig: Die BioNTech-Gründer forschten seit den 1990er Jahren an mRNA."
+            },
+            {
+              "text": "Seit den 1980er Jahren",
+              "ok": false,
+              "fb": "Falsch: Die BioNTech-Gründer forschten nicht seit den 1980er Jahren, sondern seit den 1990er Jahren an mRNA."
+            },
+            {
+              "text": "Seit den 2000er Jahren",
+              "ok": false,
+              "fb": "Falsch: Die BioNTech-Gründer forschten nicht seit den 2000er Jahren, sondern seit den 1990er Jahren an mRNA."
+            },
+            {
+              "text": "Seit den 2010er Jahren",
+              "ok": false,
+              "fb": "Falsch: Die BioNTech-Gründer forschten nicht seit den 2010er Jahren, sondern seit den 1990er Jahren an mRNA."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welcher Begriff beschreibt ein plötzliches Weltereignis, das ein Nischenfeld ins Zentrum rückt?",
+          "beleg": "ein exogener Schock, der mRNA plötzlich aus einem Nischenfeld in den Mittelpunkt globaler Impfstoffentwicklung katapultierte",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ein geplanter Strategiewechsel",
+              "ok": false,
+              "fb": "Falsch: Der plötzliche Sprung von mRNA aus einem Nischenfeld in den Mittelpunkt globaler Impfstoffentwicklung wird in der BioNTech-Fallstudie als exogener Schock bezeichnet, nicht als geplanter Strategiewechsel."
+            },
+            {
+              "text": "Ein exogener Schock",
+              "ok": true,
+              "fb": "Richtig: Ein exogener Schock beschreibt das plötzliche Weltereignis, das mRNA aus einem Nischenfeld in den Mittelpunkt globaler Impfstoffentwicklung katapultierte."
+            },
+            {
+              "text": "Eine reguläre Marktzyklus-Wende",
+              "ok": false,
+              "fb": "Falsch: Die Verschiebung von mRNA in den Mittelpunkt globaler Impfstoffentwicklung wird in der BioNTech-Fallstudie als exogener Schock definiert, nicht als reguläre Marktzyklus-Wende."
+            },
+            {
+              "text": "Ein interner Innovationsschub",
+              "ok": false,
+              "fb": "Falsch: Der Übergang von einem Nischenfeld in den Mittelpunkt globaler Impfstoffentwicklung wird in der BioNTech-Fallstudie als exogener Schock charakterisiert, nicht als interner Innovationsschub."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum gilt der BioNTech-Erfolg weder als reiner Zufall noch als reine Meisterschaft?",
+          "beleg": "Erfolg war weder reiner Zufall noch reine Meisterschaft, sondern ein Zusammenspiel aus Vorbereitung, Kapital, Netzwerken, politischem Kontext und historischem Moment",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil ausschließlich die Pfizer-Kooperation den Ausschlag gab",
+              "ok": false,
+              "fb": "Falsch: Der BioNTech-Erfolg war kein Einzelereignis, sondern ein Zusammenspiel aus Vorbereitung, Kapital, Netzwerken, politischem Kontext und historischem Moment."
+            },
+            {
+              "text": "Weil die Förderung allein über den Erfolg entschied",
+              "ok": false,
+              "fb": "Falsch: Die BMBF-Förderung war nur ein Teil des Zusammenspiels aus Vorbereitung, Kapital, Netzwerken, politischem Kontext und historischem Moment."
+            },
+            {
+              "text": "Weil Vorbereitung, Kapital, Netzwerke und Moment zusammenwirkten",
+              "ok": true,
+              "fb": "Richtig: Der BioNTech-Erfolg war ein Zusammenspiel aus Vorbereitung, Kapital, Netzwerken, politischem Kontext und historischem Moment."
+            },
+            {
+              "text": "Weil nur der historische Moment zählte, nicht die Vorbereitung",
+              "ok": false,
+              "fb": "Falsch: Der historische Moment war nur ein Faktor im Zusammenspiel aus Vorbereitung, Kapital, Netzwerken, politischem Kontext und historischem Moment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ns-zeit-arisierung-unternehmenseigentum",
+      "kurz": "NS-Zeit: Arisierung",
+      "titel": "NS-Zeit — Arisierung und unternehmerische Gelegenheitsökonomie",
+      "karte": "Die Arisierung — Enteignung jüdischen Eigentums unter dem NS-Regime — war nicht bloß staatlicher Raub, sondern auch eine unternehmerische Gelegenheitsökonomie, in der Marktakteure unmittelbar profitierten. Anfang 1933 gab es etwa 100.000 jüdisch geführte Unternehmen in Deutschland; bis 1938 waren rund zwei Drittel geschlossen oder zu Schleuderpreisen verkauft. Deutsche Unternehmer kauften bewusst zu Schleuderpreisen, wissend, dass der Verkäufer gezwungen war. Geschäft, Technik und Verbrechen waren strukturell verschränkt.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viele jüdisch geführte Unternehmen gab es Anfang 1933 in Deutschland?",
+          "beleg": "etwa 100.000 jüdisch geführte Unternehmen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Etwa 50.000",
+              "ok": false,
+              "fb": "Falsch: Anfang 1933 gab es in Deutschland etwa 100.000 jüdisch geführte Unternehmen."
+            },
+            {
+              "text": "Etwa 200.000",
+              "ok": false,
+              "fb": "Falsch: Anfang 1933 gab es in Deutschland etwa 100.000 jüdisch geführte Unternehmen."
+            },
+            {
+              "text": "Etwa 100.000",
+              "ok": true,
+              "fb": "Richtig: Anfang 1933 gab es in Deutschland etwa 100.000 jüdisch geführte Unternehmen."
+            },
+            {
+              "text": "Etwa 10.000",
+              "ok": false,
+              "fb": "Falsch: Anfang 1933 gab es in Deutschland etwa 100.000 jüdisch geführte Unternehmen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie nennt man den bewussten Kauf jüdischen Eigentums zu Schleuderpreisen bei bekannter Zwangslage?",
+          "beleg": "deutsche Unternehmer kauften bewusst zu Schleuderpreisen, wissend dass der Verkäufer gezwungen war",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Reguläres Marktgeschäft ohne besondere Umstände",
+              "ok": false,
+              "fb": "Falsch: Der bewusste Kauf jüdischen Eigentums zu Schleuderpreisen, wissend, dass der Verkäufer gezwungen war, wird als unternehmerische Gelegenheitsökonomie bezeichnet."
+            },
+            {
+              "text": "Ein Einzelfall ohne wirtschaftliche Bedeutung",
+              "ok": false,
+              "fb": "Falsch: Der bewusste Kauf jüdischen Eigentums zu Schleuderpreisen, wissend, dass der Verkäufer gezwungen war, wird als unternehmerische Gelegenheitsökonomie bezeichnet."
+            },
+            {
+              "text": "Eine rein staatliche Enteignung ohne Marktbeteiligung",
+              "ok": false,
+              "fb": "Falsch: Der bewusste Kauf jüdischen Eigentums zu Schleuderpreisen, wissend, dass der Verkäufer gezwungen war, wird als unternehmerische Gelegenheitsökonomie bezeichnet."
+            },
+            {
+              "text": "Unternehmerische Gelegenheitsökonomie",
+              "ok": true,
+              "fb": "Richtig: Der bewusste Kauf jüdischen Eigentums zu Schleuderpreisen, wissend, dass der Verkäufer gezwungen war, wird als unternehmerische Gelegenheitsökonomie bezeichnet."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum reicht es nicht, die Arisierung 1933–1938 nur als staatlichen Raub zu bezeichnen?",
+          "beleg": "nicht nur staatliche Expropriation, sondern auch ‚unternehmerische Gelegenheitsökonomie, in der Marktakteure unmittelbar profitierten'",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil Marktakteure selbst unmittelbar von den Übertragungen profitierten",
+              "ok": true,
+              "fb": "Richtig: Die Arisierung war auch eine unternehmerische Gelegenheitsökonomie, in der Marktakteure unmittelbar profitierten."
+            },
+            {
+              "text": "Weil der Staat an den Verkäufen finanziell gar nicht beteiligt war",
+              "ok": false,
+              "fb": "Falsch: Deutsche Unternehmer kauften bewusst zu Schleuderpreisen und profitierten unmittelbar von den Übertragungen."
+            },
+            {
+              "text": "Weil zwei Drittel der Betriebe unverändert weiterbestanden",
+              "ok": false,
+              "fb": "Falsch: Bis 1938 waren rund zwei Drittel der jüdisch geführten Unternehmen geschlossen oder zu Schleuderpreisen verkauft."
+            },
+            {
+              "text": "Weil ausländische Investoren die Übernahmen finanzierten",
+              "ok": false,
+              "fb": "Falsch: Deutsche Unternehmer kauften bewusst zu Schleuderpreisen und profitierten unmittelbar von den Übertragungen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ns-zwangsarbeit-unternehmensgewinn-12-millionen",
+      "kurz": "NS-Zeit: Zwangsarbeit",
+      "titel": "NS-Zeit — Zwangsarbeit (12+ Millionen) als Unternehmensressource",
+      "karte": "Zwischen 1939 und 1945 arbeiteten laut Bundesarchiv mehr als 12 Millionen Menschen aus ganz Europa unter Zwang im Deutschen Reich — deportiert und als „Menschenmaterial\" missbraucht in Rüstungsindustrie, Landwirtschaft und Versorgungswirtschaft. Das war keine externe Atrocität, sondern eine strukturelle Komponente der Unternehmensökonomie unter dem Nationalsozialismus. Wer diese Dimension marginalisiert, erzählt laut Quelle „keine neutrale, sondern eine falsche Geschichte\" deutscher Unternehmensgeschichte.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viele Menschen arbeiteten laut Bundesarchiv zwischen 1939 und 1945 unter Zwang im Deutschen Reich?",
+          "beleg": "mehr als 12 Millionen Menschen aus ganz Europa",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Mehr als 5 Millionen",
+              "ok": false,
+              "fb": "Falsch: Zwischen 1939 und 1945 arbeiteten laut Bundesarchiv mehr als 12 Millionen Menschen aus ganz Europa unter Zwang im Deutschen Reich."
+            },
+            {
+              "text": "Mehr als 8 Millionen",
+              "ok": false,
+              "fb": "Falsch: Zwischen 1939 und 1945 arbeiteten laut Bundesarchiv mehr als 12 Millionen Menschen aus ganz Europa unter Zwang im Deutschen Reich."
+            },
+            {
+              "text": "Mehr als 20 Millionen",
+              "ok": false,
+              "fb": "Falsch: Zwischen 1939 und 1945 arbeiteten laut Bundesarchiv mehr als 12 Millionen Menschen aus ganz Europa unter Zwang im Deutschen Reich."
+            },
+            {
+              "text": "Mehr als 12 Millionen",
+              "ok": true,
+              "fb": "Richtig: Zwischen 1939 und 1945 arbeiteten laut Bundesarchiv mehr als 12 Millionen Menschen aus ganz Europa unter Zwang im Deutschen Reich."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "In welchen Sektoren war Zwangsarbeit im Deutschen Reich (1939–1945) verbreitet, nicht nur in Nischen?",
+          "beleg": "Rüstungsindustrie, Landwirtschaft, Versorgungsbetriebe",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Rüstungsindustrie, Landwirtschaft und Versorgungsbetriebe",
+              "ok": true,
+              "fb": "Richtig: Zwischen 1939 und 1945 war Zwangsarbeit im Deutschen Reich in der Rüstungsindustrie, Landwirtschaft und den Versorgungsbetrieben verbreitet."
+            },
+            {
+              "text": "Die Rüstungsindustrie und der Bergbau, aber kein anderer Sektor",
+              "ok": false,
+              "fb": "Falsch: Zwangsarbeit war nicht nur auf die Rüstungsindustrie beschränkt, sondern betraf auch Landwirtschaft und Versorgungsbetriebe."
+            },
+            {
+              "text": "Die Landwirtschaft und das Handwerk, aber keine Industrie",
+              "ok": false,
+              "fb": "Falsch: Zwangsarbeit war nicht ausschließlich auf die Landwirtschaft beschränkt, sondern betraf auch Rüstungsindustrie und Versorgungsbetriebe."
+            },
+            {
+              "text": "Die staatlichen Versorgungsbetriebe, aber keine Privatwirtschaft",
+              "ok": false,
+              "fb": "Falsch: Zwangsarbeit betraf nicht nur staatliche Versorgungsbetriebe, sondern auch Rüstungsindustrie und Landwirtschaft."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum gilt eine Geschichtsschreibung als falsch, die Zwangsarbeit in der NS-Wirtschaft marginalisiert?",
+          "beleg": "Die Zwangsarbeit war kein Missgeschick der Wirtschaft, sondern zentral für die Kriegswirtschaft",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil Zwangsarbeit statistisch kaum belegt und daher nicht nachweisbar ist",
+              "ok": false,
+              "fb": "Falsch: Zwischen 1939 und 1945 arbeiteten laut Bundesarchiv mehr als 12 Millionen Menschen aus ganz Europa unter Zwang im Deutschen Reich."
+            },
+            {
+              "text": "Weil Zwangsarbeit zentral für die Kriegswirtschaft war, kein Missgeschick",
+              "ok": true,
+              "fb": "Richtig: Zwangsarbeit war kein Missgeschick der Wirtschaft, sondern zentral für die Kriegswirtschaft."
+            },
+            {
+              "text": "Weil sie nur einzelne Konzerne und nicht die breite Wirtschaft betraf",
+              "ok": false,
+              "fb": "Falsch: Zwangsarbeit betraf die Rüstungsindustrie, Landwirtschaft und Versorgungswirtschaft im gesamten Deutschen Reich."
+            },
+            {
+              "text": "Weil die Zahl von 12 Millionen in der Forschung umstritten ist",
+              "ok": false,
+              "fb": "Falsch: Die Zahl von über 12 Millionen Menschen ist laut Bundesarchiv belegt und nicht umstritten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ig-farben-fallstudie-kartellmacht-und-kriegswirtschaft",
+      "kurz": "IG Farben: Kartellmacht",
+      "titel": "IG Farben — Kartellmacht, Forschung und Kriegswirtschafts-Verstrickung",
+      "karte": "IG Farben war 1925 zum größten Chemieunternehmen Europas aufgewachsen — durch Kartellbildung, Forschungskapazität und strategische Verflechtung. Im NS-Staat wurde das Unternehmen zu einem zentralen Akteur der Kriegswirtschaft, strukturell verflochten mit Rüstungsproduktion, Chemiewaffen und Deportationslogistik. Die Geschichte zeigt, dass Geschäft, Technik und Verbrechen strukturell verschränkt waren — keine getrennten Sphären, sondern eine untrennbare Verflechtung derselben Firma.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "In welchem Jahr war IG Farben zum größten Chemieunternehmen Europas aufgewachsen?",
+          "beleg": "1925 zum größten Chemieunternehmen Europas aufgewachsen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "1918",
+              "ok": false,
+              "fb": "Falsch: IG Farben war 1925 zum größten Chemieunternehmen Europas aufgewachsen."
+            },
+            {
+              "text": "1933",
+              "ok": false,
+              "fb": "Falsch: IG Farben war 1925 zum größten Chemieunternehmen Europas aufgewachsen."
+            },
+            {
+              "text": "1925",
+              "ok": true,
+              "fb": "Richtig: IG Farben war 1925 zum größten Chemieunternehmen Europas aufgewachsen."
+            },
+            {
+              "text": "1939",
+              "ok": false,
+              "fb": "Falsch: IG Farben war 1925 zum größten Chemieunternehmen Europas aufgewachsen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welches Unternehmen zeigt Kartellmacht, Forschung und Kriegsbeteiligung vereint?",
+          "beleg": "zeigt exemplarisch, wie Kartellmacht, Forschungskapazität und politische Komplizenschaft zusammenwirken konnten",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Siemens",
+              "ok": false,
+              "fb": "Falsch: IG Farben zeigt exemplarisch, wie Kartellmacht, Forschungskapazität und politische Komplizenschaft zusammenwirken konnten."
+            },
+            {
+              "text": "Bosch",
+              "ok": false,
+              "fb": "Falsch: IG Farben zeigt exemplarisch, wie Kartellmacht, Forschungskapazität und politische Komplizenschaft zusammenwirken konnten."
+            },
+            {
+              "text": "Krupp",
+              "ok": false,
+              "fb": "Falsch: IG Farben zeigt exemplarisch, wie Kartellmacht, Forschungskapazität und politische Komplizenschaft zusammenwirken konnten."
+            },
+            {
+              "text": "IG Farben",
+              "ok": true,
+              "fb": "Richtig: IG Farben zeigt exemplarisch, wie Kartellmacht, Forschungskapazität und politische Komplizenschaft zusammenwirken konnten."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum waren Geschäft, Technik und Verbrechen bei IG Farben im NS-Staat strukturell verschränkt?",
+          "beleg": "Geschäftliche Rationalität, technische Exzellenz und Kriegsverbrechen waren bei demselben Unternehmen gleichzeitig möglich",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil Rationalität, Exzellenz und Verbrechen gleichzeitig in derselben Firma bestanden",
+              "ok": true,
+              "fb": "Richtig: Bei IG Farben waren Geschäftliche Rationalität, technische Exzellenz und Kriegsverbrechen im NS-Staat gleichzeitig in derselben Firma möglich."
+            },
+            {
+              "text": "Weil das Unternehmen die Kriegswirtschaft nur unter staatlichem Druck unterstützte",
+              "ok": false,
+              "fb": "Falsch: IG Farben war im NS-Staat ein zentraler Akteur der Kriegswirtschaft und strukturell verflochten mit Rüstungsproduktion, nicht widerwillig."
+            },
+            {
+              "text": "Weil Verbrechen nur in einer isolierten Randabteilung des Konzerns stattfanden",
+              "ok": false,
+              "fb": "Falsch: Geschäft, Technik und Verbrechen waren bei IG Farben keine getrennten Sphären, sondern eine untrennbare Verflechtung derselben Firma."
+            },
+            {
+              "text": "Weil die Forschungsabteilung von der Kriegswirtschaft getrennt blieb",
+              "ok": false,
+              "fb": "Falsch: IG Farben war im NS-Staat strukturell verflochten mit Rüstungsproduktion und Chemiewaffen, die Forschungsabteilung blieb nicht getrennt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "mitbestimmung-tarifautonomie-bundesrepublik",
+      "kurz": "Mitbestimmung & Tarif",
+      "titel": "Bundesrepublik — Mitbestimmung und Tarifautonomie als Institutionen",
+      "karte": "Zu den prägenden Besonderheiten der Bundesrepublik gehörten Mitbestimmung, Tarifautonomie, Kündigungsschutz und Sozialstaat — nicht peripher, sondern zentral für das Nachkriegsmodell. Sie erhöhen Transaktionskosten und wirken aus investoren-liberaler Sicht weniger friktionslos, haben aber über Jahrzehnte Vertrauen, Qualifikationsbindung und kooperative Produktivitätsgewinne begünstigt. Das BMAS bezeichnet Mitbestimmung als „Grundlage wirtschaftlichen Erfolgs und sozialen Friedens\" — nicht als notwendiges Übel.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie bezeichnet das BMAS die Mitbestimmung in der Bundesrepublik?",
+          "beleg": "Grundlage wirtschaftlichen Erfolgs und sozialen Friedens",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Grundlage wirtschaftlichen Erfolgs und sozialen Friedens",
+              "ok": true,
+              "fb": "Richtig: Das BMAS bezeichnet Mitbestimmung in der Bundesrepublik als „Grundlage wirtschaftlichen Erfolgs und sozialen Friedens“."
+            },
+            {
+              "text": "Hemmnis für wirtschaftlichen Erfolg und Investitionen",
+              "ok": false,
+              "fb": "Falsch: Das BMAS bezeichnet Mitbestimmung in der Bundesrepublik als „Grundlage wirtschaftlichen Erfolgs und sozialen Friedens“."
+            },
+            {
+              "text": "Relikt überholter Nachkriegs-Wirtschaftspolitik",
+              "ok": false,
+              "fb": "Falsch: Das BMAS bezeichnet Mitbestimmung in der Bundesrepublik als „Grundlage wirtschaftlichen Erfolgs und sozialen Friedens“."
+            },
+            {
+              "text": "Nebensächliches Detail des Arbeitsrechts",
+              "ok": false,
+              "fb": "Falsch: Das BMAS bezeichnet Mitbestimmung in der Bundesrepublik als „Grundlage wirtschaftlichen Erfolgs und sozialen Friedens“."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welchen langfristigen Effekt hatten Mitbestimmung und Tarifautonomie in der Bundesrepublik?",
+          "beleg": "über Jahrzehnte Vertrauen, Qualifikationsbindung und kooperative Produktivitätsgewinne begünstigt",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Sie hätten vor allem Kosten ohne messbaren Gegenwert für Betriebe erzeugt",
+              "ok": false,
+              "fb": "Falsch: Mitbestimmung und Tarifautonomie in der Bundesrepublik haben über Jahrzehnte Vertrauen, Qualifikationsbindung und kooperative Produktivitätsgewinne begünstigt."
+            },
+            {
+              "text": "Sie hätten Vertrauen und kooperative Produktivitätsgewinne begünstigt",
+              "ok": true,
+              "fb": "Richtig: Mitbestimmung und Tarifautonomie in der Bundesrepublik haben über Jahrzehnte Vertrauen und kooperative Produktivitätsgewinne begünstigt."
+            },
+            {
+              "text": "Sie seien inzwischen in der Bundesrepublik komplett abgeschafft worden",
+              "ok": false,
+              "fb": "Falsch: Mitbestimmung und Tarifautonomie in der Bundesrepublik gehören zu den zentralen Institutionen des Nachkriegsmodells und wurden nicht abgeschafft."
+            },
+            {
+              "text": "Sie beträfen vor allem den öffentlichen Sektor und kaum die Industrie",
+              "ok": false,
+              "fb": "Falsch: Mitbestimmung und Tarifautonomie in der Bundesrepublik sind zentrale Institutionen des Nachkriegsmodells und betreffen nicht nur den öffentlichen Sektor."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum musste unternehmerisches Handeln stärker mit Beschäftigten zusammenarbeiten?",
+          "beleg": "mit Beschäftigten, Betriebsräten und Verbänden arbeiten, nicht gegen sie",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil reine Shareholder-Logik in Deutschland gesetzlich ausdrücklich verboten war",
+              "ok": false,
+              "fb": "Falsch: Unternehmen mussten mit Beschäftigten, Betriebsräten und Verbänden zusammenarbeiten, nicht gegen sie."
+            },
+            {
+              "text": "Weil Betriebsräte über alle Investitionsentscheidungen der Unternehmen allein bestimmten",
+              "ok": false,
+              "fb": "Falsch: Unternehmen mussten mit Beschäftigten, Betriebsräten und Verbänden zusammenarbeiten, nicht gegen sie."
+            },
+            {
+              "text": "Weil Unternehmen mit Beschäftigten und Betriebsräten arbeiten mussten, nicht gegen sie",
+              "ok": true,
+              "fb": "Richtig: Unternehmen mussten mit Beschäftigten, Betriebsräten und Verbänden zusammenarbeiten, nicht gegen sie."
+            },
+            {
+              "text": "Weil der Sozialstaat Unternehmen von Verhandlungen mit Beschäftigten befreite",
+              "ok": false,
+              "fb": "Falsch: Unternehmen mussten mit Beschäftigten, Betriebsräten und Verbänden zusammenarbeiten, nicht gegen sie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "schumpeterismus-und-institutionelle-balance",
+      "kurz": "Schumpeter: Zerstörung",
+      "titel": "Schumpeterismus — Kreative Zerstörung und institutionelle Balance",
+      "karte": "Ein nüchterner Schumpeterismus ist plausibel: Dynamisches Unternehmertum ist wesentliche Voraussetzung gesellschaftlichen Fortschritts, weil Innovation und neue Problemlösungen sonst folgenlos bleiben. Schumpeters „kreative Zerstörung\" funktioniert aber nur produktiv, wenn Staat und Gesellschaft gleichzeitig Wettbewerb schützen, Verlierer abfedern und Fähigkeiten erneuern. Das war die historische Stärke der Bundesrepublik in ihren besten Phasen — nicht die Abschaffung von Konkurrenz, sondern ihre Einbettung in Bildung, Infrastruktur, Sozialstaat und Rechtsrahmen.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie nennt Schumpeter den Prozess, den dynamisches Unternehmertum antreibt?",
+          "beleg": "Schumpeters ‚kreative Zerstörung'",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Kreative Zerstörung",
+              "ok": true,
+              "fb": "Richtig: Schumpeter nennt den Prozess, den dynamisches Unternehmertum antreibt, kreative Zerstörung."
+            },
+            {
+              "text": "Institutionelle Balance",
+              "ok": false,
+              "fb": "Falsch: Schumpeter nennt den Prozess, den dynamisches Unternehmertum antreibt, kreative Zerstörung."
+            },
+            {
+              "text": "Ordoliberale Steuerung",
+              "ok": false,
+              "fb": "Falsch: Schumpeter nennt den Prozess, den dynamisches Unternehmertum antreibt, kreative Zerstörung."
+            },
+            {
+              "text": "Marktintegration",
+              "ok": false,
+              "fb": "Falsch: Schumpeter nennt den Prozess, den dynamisches Unternehmertum antreibt, kreative Zerstörung."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche drei Aufgaben muss ein Staat bei Schumpeters kreativer Zerstörung gleichzeitig erfüllen?",
+          "beleg": "Wettbewerb schützen ... Verlierer abfedern ... Fähigkeiten erneuern",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Steuern senken, Zölle erhöhen, Exporte fördern",
+              "ok": false,
+              "fb": "Falsch: Schumpeters kreative Zerstörung wirkt produktiv, wenn der Staat Wettbewerb schützt, Verlierer abfedert und Fähigkeiten erneuert."
+            },
+            {
+              "text": "Wettbewerb schützen, Verlierer abfedern, Fähigkeiten erneuern",
+              "ok": true,
+              "fb": "Richtig: Staat und Gesellschaft müssen Wettbewerb schützen, Verlierer abfedern und Fähigkeiten erneuern, damit kreative Zerstörung produktiv wirkt."
+            },
+            {
+              "text": "Monopole zulassen, Löhne einfrieren, Bildung kürzen",
+              "ok": false,
+              "fb": "Falsch: Schumpeters kreative Zerstörung wirkt produktiv, wenn der Staat Wettbewerb schützt, Verlierer abfedert und Fähigkeiten erneuert."
+            },
+            {
+              "text": "Kartelle stärken, Sozialstaat abbauen, Forschung privatisieren",
+              "ok": false,
+              "fb": "Falsch: Schumpeters kreative Zerstörung wirkt produktiv, wenn der Staat Wettbewerb schützt, Verlierer abfedert und Fähigkeiten erneuert."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum galt die frühe Bundesrepublik als Beispiel für produktive kreative Zerstörung?",
+          "beleg": "nicht die Abschaffung von Konkurrenz, sondern ihre Einbettung in Bildung, Infrastruktur, Sozialstaat und Rechtsrahmen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil sie Konkurrenz zugunsten staatlicher Planung vollständig abschaffte",
+              "ok": false,
+              "fb": "Falsch: Die frühe Bundesrepublik schaffte Konkurrenz nicht ab, sondern bettete sie in Bildung, Infrastruktur, Sozialstaat und Rechtsrahmen ein."
+            },
+            {
+              "text": "Weil sie ausschließlich auf einen strengen Rechtsrahmen ohne Sozialstaat setzte",
+              "ok": false,
+              "fb": "Falsch: Die frühe Bundesrepublik setzte nicht ausschließlich auf den Rechtsrahmen, sondern bettete Konkurrenz in Bildung, Infrastruktur, Sozialstaat und Rechtsrahmen ein."
+            },
+            {
+              "text": "Weil sie Konkurrenz in Bildung, Infrastruktur und Sozialstaat einbettete",
+              "ok": true,
+              "fb": "Richtig: Die frühe Bundesrepublik bettete Konkurrenz in Bildung, Infrastruktur, Sozialstaat und Rechtsrahmen ein."
+            },
+            {
+              "text": "Weil sie Innovation dem freien Markt ohne Infrastruktur allein überließ",
+              "ok": false,
+              "fb": "Falsch: Die frühe Bundesrepublik überließ Innovation nicht dem freien Markt allein, sondern bettete Konkurrenz in Bildung, Infrastruktur, Sozialstaat und Rechtsrahmen ein."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "unternehmertum-als-traeger-gesellschaftlichen-fortschritts-kosten-und-nutzen",
+      "kurz": "Unternehmertum: Kosten",
+      "titel": "Unternehmertum als Träger gesellschaftlichen Fortschritts — Kosten und Nutzen",
+      "karte": "Ohne Unternehmertum wäre deutsche Modernisierung nicht denkbar: Die Industrialisierung schuf neue Produkte, senkte Kosten und steigerte Produktivität. Diese positive Bilanz ist aber unvollständig: Frühindustrialisierung bedeutete harte Disziplinierung von Arbeitskraft, die NS-Unternehmensgeschichte zeigt Enteignung, Zwangsarbeit und Verbrechensverstrickung, die alte Industrie externalisierte lange Umweltkosten. Unternehmerischer Fortschritt und gesellschaftlicher Fortschritt fallen laut Quelle „nicht automatisch zusammen\".",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was schuf die deutsche Industrialisierung neben neuen Produkten noch?",
+          "beleg": "senkte Kosten, steigerte Produktivität und veränderte Konsum, Mobilität und Kommunikation",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ausschließlich höhere Kosten",
+              "ok": false,
+              "fb": "Falsch: Die deutsche Industrialisierung senkte Kosten und steigerte Produktivität, statt ausschließlich höhere Kosten zu verursachen."
+            },
+            {
+              "text": "Gesenkte Kosten und gesteigerte Produktivität",
+              "ok": true,
+              "fb": "Richtig: Die deutsche Industrialisierung senkte Kosten und steigerte Produktivität."
+            },
+            {
+              "text": "Eine reine Verlagerung von Kapital ins Ausland",
+              "ok": false,
+              "fb": "Falsch: Die deutsche Industrialisierung senkte Kosten und steigerte Produktivität, statt Kapital rein ins Ausland zu verlagern."
+            },
+            {
+              "text": "Keine Veränderung von Konsum oder Mobilität",
+              "ok": false,
+              "fb": "Falsch: Die deutsche Industrialisierung veränderte Konsum, Mobilität und Kommunikation, statt diese Bereiche unverändert zu lassen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welchen Zusammenhang stellt die Klimapolitik zu historischen Externalisierungen der Industrie her?",
+          "beleg": "der Versuch, historische Externalisierungen zu bepreisen und Innovation in klimaneutrale Bahnen zu lenken",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Klimapolitik ist rein symbolisch und ohne wirtschaftlichen Bezug zur Industrie",
+              "ok": false,
+              "fb": "Falsch: Klimapolitik bepreist historische Externalisierungen der deutschen Industrie und lenkt Innovation in klimaneutrale Bahnen."
+            },
+            {
+              "text": "Klimapolitik betrifft nur neue Startups und nicht die etablierte Industrie",
+              "ok": false,
+              "fb": "Falsch: Klimapolitik bepreist historische Externalisierungen der deutschen Industrie und lenkt Innovation in klimaneutrale Bahnen."
+            },
+            {
+              "text": "Klimapolitik bepreist historische Externalisierungen der Industrie",
+              "ok": true,
+              "fb": "Richtig: Klimapolitik bepreist historische Externalisierungen der deutschen Industrie und lenkt Innovation in klimaneutrale Bahnen."
+            },
+            {
+              "text": "Klimapolitik ersetzt die Mitbestimmung vollständig",
+              "ok": false,
+              "fb": "Falsch: Klimapolitik bepreist historische Externalisierungen der deutschen Industrie und lenkt Innovation in klimaneutrale Bahnen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum ist die positive Bilanz der Industrialisierung unvollständig, wenn man ihre Kosten übersieht?",
+          "beleg": "unvollständig, wenn man ihre Kosten übersieht",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil die Industrialisierung insgesamt keinen Wohlstand schuf",
+              "ok": false,
+              "fb": "Falsch: Die Industrialisierung schuf neue Produkte und senkte Kosten, was zu Wohlstand führte. Die positive Bilanz gilt als unvollständig, weil sie harte Disziplinierung, Enteignung, Zwangsarbeit und externalisierte Umweltkosten ausblendet."
+            },
+            {
+              "text": "Weil KMU heute keine Beschäftigung mehr tragen",
+              "ok": false,
+              "fb": "Falsch: Die Karte nennt keine Aussage zur heutigen Beschäftigung durch KMU. Die unvollständige Bilanz der Industrialisierung beruht auf übersehenen Kosten wie Zwangsarbeit und Umweltschäden."
+            },
+            {
+              "text": "Weil Startups die Modernisierung allein leisteten",
+              "ok": false,
+              "fb": "Falsch: Startups werden in der Karte nicht erwähnt. Die unvollständige Bilanz der Industrialisierung entsteht, weil Kosten wie Zwangsarbeit und Umweltschäden nicht berücksichtigt werden."
+            },
+            {
+              "text": "Weil sie ihre Kosten wie Zwangsarbeit und Umweltschäden übersieht",
+              "ok": true,
+              "fb": "Richtig: Die positive Bilanz der Industrialisierung ist unvollständig, wenn man Kosten wie Zwangsarbeit und Umweltschäden übersieht."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "unternehmertum-charakter-qualitaet-regionalitaet-polyzentrisch",
+      "kurz": "Unternehmertum: Regional",
+      "titel": "Unternehmertum-Charakter — Qualitäts- und Regionalitätsideal",
+      "karte": "Mit der Ingenieurskultur verbindet sich ein Qualitäts- und Regionalitätsideal. Die deutsche Wirtschaft ist polyzentrisch: Der Deutschlandatlas zeigt, dass Deutschland anders als viele Länder nicht von einer einzigen Hauptstadtregion dominiert wird, sondern von vielen Groß-, Mittel- und Kleinstädten mit Strahlkraft. Regional verankertes Unternehmertum ist deshalb keine Folklore, sondern Teil der Wirtschaftsgeographie. Hidden Champions sitzen oft außerhalb der Metropolen, während Berlin, München und Hamburg vor allem Startups bündeln.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wovon wird Deutschland laut Deutschlandatlas anders als viele Länder nicht dominiert?",
+          "beleg": "nicht von einer einzigen Hauptstadtregion dominiert wird",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Von einer einzigen Hauptstadtregion",
+              "ok": true,
+              "fb": "Richtig: Der Deutschlandatlas zeigt, dass Deutschland anders als viele Länder nicht von einer einzigen Hauptstadtregion dominiert wird."
+            },
+            {
+              "text": "Von einer einzigen Industriebranche",
+              "ok": false,
+              "fb": "Falsch: Der Deutschlandatlas belegt, dass Deutschland nicht von einer einzigen Hauptstadtregion dominiert wird, sondern von vielen Groß-, Mittel- und Kleinstädten."
+            },
+            {
+              "text": "Von einer einzigen Bankengruppe",
+              "ok": false,
+              "fb": "Falsch: Der Deutschlandatlas belegt, dass Deutschland nicht von einer einzigen Hauptstadtregion dominiert wird, sondern von vielen Groß-, Mittel- und Kleinstädten."
+            },
+            {
+              "text": "Von einer einzigen politischen Partei",
+              "ok": false,
+              "fb": "Falsch: Der Deutschlandatlas belegt, dass Deutschland nicht von einer einzigen Hauptstadtregion dominiert wird, sondern von vielen Groß-, Mittel- und Kleinstädten."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Ein Hidden Champion sitzt in einer Kleinstadt statt in Berlin. Wie wird dieser Standort eingeordnet?",
+          "beleg": "keine Folklore, sondern Teil der Wirtschaftsgeographie",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Als bloße Folklore ohne wirtschaftliche Bedeutung",
+              "ok": false,
+              "fb": "Falsch: Regional verankertes Unternehmertum ist keine Folklore, sondern Teil der Wirtschaftsgeographie."
+            },
+            {
+              "text": "Als Teil der Wirtschaftsgeographie",
+              "ok": true,
+              "fb": "Richtig: Regional verankertes Unternehmertum ist Teil der Wirtschaftsgeographie."
+            },
+            {
+              "text": "Als Ausnahme, die die Regel bestätigt",
+              "ok": false,
+              "fb": "Falsch: Regional verankertes Unternehmertum ist keine Folklore, sondern Teil der Wirtschaftsgeographie."
+            },
+            {
+              "text": "Als vorübergehendes Übergangsphänomen",
+              "ok": false,
+              "fb": "Falsch: Regional verankertes Unternehmertum ist keine Folklore, sondern Teil der Wirtschaftsgeographie."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum bündeln sich finanzierungs- und talentabhängige Startups in Berlin, München und Hamburg?",
+          "beleg": "während Berlin, München und Hamburg vor allem die stark finanzierungs- und talentabhängigen Startup-Segmente bündeln",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil Startups keine Finanzierung benötigen",
+              "ok": false,
+              "fb": "Falsch: Berlin, München und Hamburg bündeln die stark finanzierungs- und talentabhängigen Startup-Segmente, da diese Faktoren dort konzentriert sind."
+            },
+            {
+              "text": "Weil Startups stark von Finanzierung und Talent abhängig sind",
+              "ok": true,
+              "fb": "Richtig: Berlin, München und Hamburg bündeln die stark finanzierungs- und talentabhängigen Startup-Segmente."
+            },
+            {
+              "text": "Weil Hidden Champions grundsätzlich keine Fachkräfte brauchen",
+              "ok": false,
+              "fb": "Falsch: Berlin, München und Hamburg bündeln die stark finanzierungs- und talentabhängigen Startup-Segmente."
+            },
+            {
+              "text": "Weil in Kleinstädten keine Unternehmen zugelassen sind",
+              "ok": false,
+              "fb": "Falsch: Berlin, München und Hamburg bündeln die stark finanzierungs- und talentabhängigen Startup-Segmente."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "unternehmertum-charakter-selbstausbeutung-arbeitsbelastung",
+      "kurz": "Unternehmertum: Belastung",
+      "titel": "Unternehmertum-Charakter — Selbst-Ausbeutung und enorme Arbeitsbelastung",
+      "karte": "Ein prägnantes Merkmal deutschen Unternehmertums ist die enorme Selbst-Ausbeutung. Destatis zeigt: 2024 arbeiteten 36,0 Prozent aller Selbstständigen gewöhnlich mehr als 48 Stunden pro Woche, bei Selbstständigen mit Beschäftigten waren es 45,1 Prozent. Der KfW-Gründungsmonitor 2026 weist für Vollerwerbsgründungen 2025 im Schnitt 45 Wochenstunden aus, davon 8,7 Stunden allein für gesetzliche Anforderungen. BMAS und Destatis verweisen darauf, dass schwindende Arbeitszeitgrenzen und Stress psychische Belastungen verstärken.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viel Prozent aller Selbstständigen arbeiteten 2024 laut Destatis mehr als 48 Stunden pro Woche?",
+          "beleg": "36,0 Prozent aller Selbstständigen gewöhnlich mehr als 48 Stunden pro Woche arbeiteten",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "25,1 Prozent",
+              "ok": false,
+              "fb": "Falsch: 2024 arbeiteten laut Destatis 36,0 Prozent aller Selbstständigen gewöhnlich mehr als 48 Stunden pro Woche."
+            },
+            {
+              "text": "45,1 Prozent",
+              "ok": false,
+              "fb": "Falsch: 45,1 Prozent beziehen sich auf Selbstständige mit Beschäftigten; bei allen Selbstständigen waren es 36,0 Prozent."
+            },
+            {
+              "text": "55,0 Prozent",
+              "ok": false,
+              "fb": "Falsch: 2024 arbeiteten laut Destatis 36,0 Prozent aller Selbstständigen gewöhnlich mehr als 48 Stunden pro Woche."
+            },
+            {
+              "text": "36,0 Prozent",
+              "ok": true,
+              "fb": "Richtig: 2024 arbeiteten laut Destatis 36,0 Prozent aller Selbstständigen gewöhnlich mehr als 48 Stunden pro Woche."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie viele der 45 Wochenstunden entfallen laut KfW-Monitor auf gesetzliche Anforderungen?",
+          "beleg": "davon im Schnitt 8,7 Stunden allein für gesetzliche und regulatorische Anforderungen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "8,7 Stunden",
+              "ok": true,
+              "fb": "Richtig: Der KfW-Gründungsmonitor 2026 weist für Vollerwerbsgründungen 2025 im Schnitt 8,7 Stunden für gesetzliche und regulatorische Anforderungen aus."
+            },
+            {
+              "text": "4,5 Stunden",
+              "ok": false,
+              "fb": "Falsch: Der KfW-Gründungsmonitor 2026 weist für Vollerwerbsgründungen 2025 im Schnitt 8,7 Stunden für gesetzliche und regulatorische Anforderungen aus."
+            },
+            {
+              "text": "12,0 Stunden",
+              "ok": false,
+              "fb": "Falsch: Der KfW-Gründungsmonitor 2026 weist für Vollerwerbsgründungen 2025 im Schnitt 8,7 Stunden für gesetzliche und regulatorische Anforderungen aus."
+            },
+            {
+              "text": "20,0 Stunden",
+              "ok": false,
+              "fb": "Falsch: Der KfW-Gründungsmonitor 2026 weist für Vollerwerbsgründungen 2025 im Schnitt 8,7 Stunden für gesetzliche und regulatorische Anforderungen aus."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum wird der deutsche Unternehmer manchmal als „letzter Sklave seines Betriebs“ bezeichnet?",
+          "beleg": "ökonomisch privilegiert vielleicht, zeitlich und psychisch aber häufig überbeansprucht",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil Unternehmer wirtschaftlich meist benachteiligt und kaum abgesichert sind",
+              "ok": false,
+              "fb": "Falsch: Der Beleg beschreibt Unternehmer als ökonomisch privilegiert, aber zeitlich und psychisch häufig überbeansprucht."
+            },
+            {
+              "text": "Weil er trotz ökonomischer Privilegien zeitlich und psychisch überbeansprucht ist",
+              "ok": true,
+              "fb": "Richtig: Der Unternehmer ist ökonomisch privilegiert, aber zeitlich und psychisch häufig überbeansprucht."
+            },
+            {
+              "text": "Weil Selbstständige gesetzlich zu unbezahlten Überstunden im Betrieb verpflichtet sind",
+              "ok": false,
+              "fb": "Falsch: Der Beleg nennt keine gesetzliche Verpflichtung zu Überstunden, sondern beschreibt eine zeitliche und psychische Überbeanspruchung."
+            },
+            {
+              "text": "Weil die Selbst-Ausbeutung von Unternehmern erst seit 2024 statistisch gemessen wird",
+              "ok": false,
+              "fb": "Falsch: Der Beleg nennt keine Messung seit 2024, sondern beschreibt die Überbeanspruchung unabhängig von einem Startdatum."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "deutsche-modernisierung-des-modells-entstaubung-nicht-abwicklung",
+      "kurz": "Modernisierung: Entstaubung",
+      "titel": "Deutsche Modernisierung — Entstaubung statt Abwicklung des Rheinischen Kapitalismus",
+      "karte": "Aus der Analyse folgt kein Aufruf zur „blinden Amerikanisierung\", sondern eine deutsche Modernisierung des deutschen Modells: weniger Bürokratie, schnellere Digitalisierung, breitere Mitarbeiterkapitalbeteiligung, tiefere Wachstumsfinanzierung, verlässlichere Energiepreise, technologieoffene Klimapolitik und leichtere Zuwanderung Qualifizierter. Die Grundstrukturen — Mittelstand, Bankenfinanzierung, Mitbestimmung — sind laut Quelle nicht das Problem; die Ausführung ist es. Nicht die Abwicklung des Rheinischen Kapitalismus, sondern seine Entstaubung wäre die produktivere Strategie.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welchen Begriff nennt die Analyse statt „Abwicklung“ des Rheinischen Kapitalismus als Strategie?",
+          "beleg": "Nicht die Abwicklung des Rheinischen Kapitalismus, sondern seine Entstaubung wäre die produktivere Strategie",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Amerikanisierung",
+              "ok": false,
+              "fb": "Falsch: Die Analyse lehnt eine blinde Amerikanisierung ab und schlägt stattdessen die Entstaubung des deutschen Modells vor."
+            },
+            {
+              "text": "Entstaubung",
+              "ok": true,
+              "fb": "Richtig: Die Analyse verwendet den Begriff Entstaubung für die produktivere Strategie des Rheinischen Kapitalismus."
+            },
+            {
+              "text": "Deregulierung",
+              "ok": false,
+              "fb": "Falsch: Die Analyse verwendet den Begriff Entstaubung, nicht Deregulierung, für die vorgeschlagene Strategie."
+            },
+            {
+              "text": "Verstaatlichung",
+              "ok": false,
+              "fb": "Falsch: Die Analyse verwendet den Begriff Entstaubung, nicht Verstaatlichung, für die vorgeschlagene Strategie."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welchen Befund zur deutschen Wachstumsfinanzierung (VC) nennt die Analyse konkret?",
+          "beleg": "Venture Capital ist bei Rang 18 (relativ zu Wirtschaftsleistung) zu niedrig",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Deutschland führt weltweit bei Venture-Capital-Investments relativ zur Wirtschaftsleistung",
+              "ok": false,
+              "fb": "Falsch: Deutschland liegt bei Venture-Capital-Investments relativ zur Wirtschaftsleistung auf Rang 18, was als zu niedrig bewertet wird."
+            },
+            {
+              "text": "Venture Capital ist in Deutschland nur für staatliche Fonds gesetzlich erlaubt",
+              "ok": false,
+              "fb": "Falsch: Venture Capital ist in Deutschland nicht verboten, liegt aber relativ zur Wirtschaftsleistung auf Rang 18 und gilt als zu niedrig."
+            },
+            {
+              "text": "Deutschland liegt bei VC-Investments relativ zur Wirtschaftsleistung auf Rang 18",
+              "ok": true,
+              "fb": "Richtig: Deutschland liegt bei Venture-Capital-Investments relativ zur Wirtschaftsleistung auf Rang 18."
+            },
+            {
+              "text": "Die Wachstumsfinanzierung ist im internationalen Vergleich bereits ausreichend tief",
+              "ok": false,
+              "fb": "Falsch: Die Wachstumsfinanzierung ist nicht ausreichend tief, da Venture Capital relativ zur Wirtschaftsleistung auf Rang 18 liegt."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum gilt der 40%-Befund des Startup-Verbands als bemerkenswert für das deutsche Wirtschaftsmodell?",
+          "beleg": "bemerkenswert und zeigt, dass das deutsche Modell keineswegs erledigt ist",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil er beweist, dass Bürokratie in Deutschland kein Problem mehr ist",
+              "ok": false,
+              "fb": "Falsch: Der 40%-Befund des deutschen Startup-Verbands zeigt, dass das deutsche Modell keineswegs erledigt ist."
+            },
+            {
+              "text": "Weil er den Kapitalengpass vollständig widerlegt",
+              "ok": false,
+              "fb": "Falsch: Der 40%-Befund des deutschen Startup-Verbands zeigt, dass das deutsche Modell keineswegs erledigt ist."
+            },
+            {
+              "text": "Weil er nur für second-tier-Regionen gilt",
+              "ok": false,
+              "fb": "Falsch: Der 40%-Befund des deutschen Startup-Verbands zeigt, dass das deutsche Modell keineswegs erledigt ist."
+            },
+            {
+              "text": "Weil er zeigt, dass das deutsche Modell keineswegs erledigt ist",
+              "ok": true,
+              "fb": "Richtig: Der 40%-Befund des deutschen Startup-Verbands zeigt, dass das deutsche Modell keineswegs erledigt ist."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "tipps-fuer-gruender-in-deutschland-staerken-kombinieren",
+      "kurz": "Gründer: Stärken nutzen",
+      "titel": "Tipps für Gründer in Deutschland — Stärken strategisch kombinieren",
+      "karte": "Wer in Deutschland als Gründer erfolgreich sein will, sollte die Stärken des Standorts nicht gegen seine Schwächen ausspielen, sondern beides kombinieren: technische Substanz und Qualitätsanspruch behalten, aber Internationalisierung, Kapitalzugang und Talentgewinnung deutlich früher mitdenken. Typische Fehler: den Weltmarkt zu spät ansteuern, das Kapital zu vorsichtig ansteuern, die Bürokratie zu naiv ansteuern. Im 20. Jahrhundert reichte Werkbankexzellenz; im 21. Jahrhundert muss sie mit Skalierungsfähigkeit verbunden werden.",
+      "quelle": {
+        "titel": "Unternehmertum in Deutschland von der Frühindustrialisierung bis 2026",
+        "url": "",
+        "herausgeber": "",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche drei Fehler begehen deutsche Gründer bei Weltmarkt, Kapital und Bürokratie?",
+          "beleg": "den Weltmarkt zu spät, das Kapital zu vorsichtig oder die Bürokratie zu naiv ansteuern",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Zu viel Kapital aufnehmen, zu schnell wachsen, zu global und zu ehrgeizig denken",
+              "ok": false,
+              "fb": "Falsch: Deutsche Gründer steuern den Weltmarkt zu spät, das Kapital zu vorsichtig und die Bürokratie zu naiv an."
+            },
+            {
+              "text": "Zu wenig Qualität, zu viel Regionalität, zu späte Gründung nach dem Studium",
+              "ok": false,
+              "fb": "Falsch: Deutsche Gründer steuern den Weltmarkt zu spät, das Kapital zu vorsichtig und die Bürokratie zu naiv an."
+            },
+            {
+              "text": "Weltmarkt zu spät, Kapital zu vorsichtig, Bürokratie zu naiv ansteuern",
+              "ok": true,
+              "fb": "Richtig: Deutsche Gründer steuern den Weltmarkt zu spät, das Kapital zu vorsichtig und die Bürokratie zu naiv an."
+            },
+            {
+              "text": "Zu früh internationalisieren, zu viel Personal einstellen, zu teuer produzieren",
+              "ok": false,
+              "fb": "Falsch: Deutsche Gründer steuern den Weltmarkt zu spät, das Kapital zu vorsichtig und die Bürokratie zu naiv an."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Ein Gründer wartet auf Marktsättigung daheim, bevor er ins Ausland geht. Welcher Fehler?",
+          "beleg": "Den Weltmarkt zu spät ansteuern — warten bis die Heimat gesättigt ist",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Das Kapital zu vorsichtig ansteuern",
+              "ok": false,
+              "fb": "Falsch: Den Weltmarkt zu spät ansteuern ist der Fehler. Wer auf Marktsättigung wartet, verpasst den Zeitpunkt für die Internationalisierung."
+            },
+            {
+              "text": "Die Bürokratie zu naiv ansteuern",
+              "ok": false,
+              "fb": "Falsch: Den Weltmarkt zu spät ansteuern ist der Fehler. Wer auf Marktsättigung wartet, verpasst den Zeitpunkt für die Internationalisierung."
+            },
+            {
+              "text": "Die Qualität zu früh aufgeben",
+              "ok": false,
+              "fb": "Falsch: Den Weltmarkt zu spät ansteuern ist der Fehler. Wer auf Marktsättigung wartet, verpasst den Zeitpunkt für die Internationalisierung."
+            },
+            {
+              "text": "Den Weltmarkt zu spät ansteuern",
+              "ok": true,
+              "fb": "Richtig: Den Weltmarkt zu spät ansteuern ist der Fehler. Wer auf Marktsättigung wartet, verpasst den Zeitpunkt für die Internationalisierung."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum reicht im 21. Jahrhundert in Deutschland Werkbankexzellenz für Gründer nicht mehr aus?",
+          "beleg": "Werkbankexzellenz allein nicht mehr; sie muss mit Skalierungsfähigkeit verbunden werden",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil sie mit Skalierungsfähigkeit verbunden werden muss",
+              "ok": true,
+              "fb": "Richtig: Im 21. Jahrhundert muss Werkbankexzellenz in Deutschland mit Skalierungsfähigkeit verbunden werden, um erfolgreich zu sein."
+            },
+            {
+              "text": "Weil Qualität im 21. Jahrhundert keine Rolle mehr spielt",
+              "ok": false,
+              "fb": "Falsch: Qualität spielt weiterhin eine Rolle; Werkbankexzellenz muss im 21. Jahrhundert jedoch mit Skalierungsfähigkeit verbunden werden."
+            },
+            {
+              "text": "Weil Werkbankexzellenz durch Bürokratie ersetzt wurde",
+              "ok": false,
+              "fb": "Falsch: Bürokratie ersetzt Werkbankexzellenz nicht; diese muss im 21. Jahrhundert mit Skalierungsfähigkeit verbunden werden."
+            },
+            {
+              "text": "Weil ausschließlich Kapitalzugang über Erfolg entscheidet",
+              "ok": false,
+              "fb": "Falsch: Kapitalzugang ist nicht der einzige Faktor; Werkbankexzellenz muss im 21. Jahrhundert mit Skalierungsfähigkeit verbunden werden."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [
+    {
+      "von": [
+        0
+      ],
+      "titel": "Marshall: Grenzen und ihre Folgen",
+      "url": "/buch/marshall-die-macht-der-geografie/",
+      "ziel": "marshall-die-macht-der-geografie"
+    },
+    {
+      "von": [
+        1
+      ],
+      "titel": "Dalrymple: Das Handelsmonopol von 1600",
+      "url": "/buch/dalrymple-anarchie/",
+      "ziel": "dalrymple-anarchie"
+    },
+    {
+      "von": [
+        10
+      ],
+      "titel": "Dalrymple: Die Armee der Company",
+      "url": "/buch/dalrymple-anarchie/",
+      "ziel": "dalrymple-anarchie"
+    },
+    {
+      "von": [
+        9
+      ],
+      "titel": "Lissabon 1941: Wolfram",
+      "url": "/buch/lissabon-1941/",
+      "ziel": "lissabon-1941"
+    },
+    {
+      "von": [
+        3
+      ],
+      "titel": "Naval: Spezifisches Wissen",
+      "url": "/buch/der-almanach-von-naval-ravikant/",
+      "ziel": "der-almanach-von-naval-ravikant"
+    }
+  ],
+  "platzhalter": false,
+  "coverBreite": 797,
+  "coverHoehe": 1269
+}
