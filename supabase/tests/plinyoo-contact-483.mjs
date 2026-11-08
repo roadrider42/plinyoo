@@ -29,6 +29,9 @@
 //   K4  Buchung antwortet Unbekanntes           -> 500, keine Zeile, keine Mail
 //   K6  Buchung wirft (Netz weg)                -> 500, keine Zeile, keine Mail, kein Fehlertext
 //   K5  Folge Grenze+3 gegen einen Zaehler      -> genau Grenze Mails, 3x 429
+//   E1  gueltig, formData.email fremd       -> Mail geht genau an CONTACT_RECEIVER_EMAIL,
+//       formData.email weder in to noch in cc/bcc (Review fb806308, V41)
+//   E2  429                                     -> kein X-To-Kopf, kein Kopf mit dem Empfaenger (N08)
 //   F1  Fall 27 der Diagnose: Name 5000 Zeichen, keine Adresse, formType 'egal'
 //                                               -> 400, keine Buchung, keine Zeile, keine Mail
 //   F2  gueltig bis auf Nachricht mit 5001 Zeichen -> 400, keine Wirkung
@@ -183,7 +186,8 @@ async function rufe(body, l) {
   }
   const text = await antwort.text();
   const zahl = (art) => spur.filter((s) => s.art === art).length;
-  return { status: antwort.status, text, spur: [...spur], rpc: zahl('RPC'), zeilen: zahl('ZEILE'), mails: zahl('MAIL'), netz: zahl('NETZ'), protokoll };
+  const koepfe = [...antwort.headers.entries()];
+  return { status: antwort.status, text, koepfe, spur: [...spur], rpc: zahl('RPC'), zeilen: zahl('ZEILE'), mails: zahl('MAIL'), netz: zahl('NETZ'), protokoll };
 }
 
 const ergebnisse = [];
@@ -300,6 +304,34 @@ pruefe('G2 Kopf nennt: erst 20270303 einspielen, dann ausrollen', [
     [zuViel === 3, `${zuViel}x 429`],
     [andere === 0, `${andere} andere Antworten`],
     [empfaenger.length === 0, `Empfaenger sichtbar: ${empfaenger.map(([, w]) => w).join('; ')}`],
+  ]);
+}
+
+// --- E: wohin die Mail geht, was die Antwort traegt (Review fb806308, V41/N08)
+{
+  // Die Absenderadresse aus dem Formular darf nie Empfaenger werden -- sonst
+  // verschickt die Funktion ohne Anmeldung Mails an beliebige Adressen.
+  const r = await rufe({ ...gueltig, email: 'fremd@example.net' }, {});
+  const mail = r.spur.find((s) => s.art === 'MAIL')?.was ?? {};
+  const liste = (x) => (x == null ? [] : Array.isArray(x) ? x : [x]).map(String);
+  const an = liste(mail.to);
+  const kopie = [...liste(mail.cc), ...liste(mail.bcc)];
+  pruefe('E1 Mail geht an CONTACT_RECEIVER_EMAIL, nicht an formData.email', [
+    [r.status === 200, `Status ${r.status}`],
+    [r.mails === 1, `${r.mails} Mail(s)`],
+    [an.length === 1 && an[0] === umgebung.CONTACT_RECEIVER_EMAIL, `to ${JSON.stringify(mail.to)} statt ["${umgebung.CONTACT_RECEIVER_EMAIL}"]`],
+    [!an.some((x) => x.includes('fremd@example.net')), `to nennt formData.email: ${JSON.stringify(mail.to)}`],
+    [!kopie.some((x) => x.includes('fremd@example.net')), `cc/bcc nennt formData.email: ${JSON.stringify(kopie)}`],
+  ]);
+}
+{
+  const r = await rufe(gueltig, { rpc: () => ({ data: 'gesamt', error: null }) });
+  const xTo = r.koepfe.filter(([k]) => k.toLowerCase() === 'x-to');
+  const mitEmpfaenger = r.koepfe.filter(([, v]) => v.includes(EMPFAENGER));
+  pruefe('E2 429 traegt keinen X-To-Kopf und keinen Kopf mit dem Empfaenger', [
+    [r.status === 429, `Status ${r.status}`],
+    [xTo.length === 0, `X-To: ${JSON.stringify(xTo)}`],
+    [mitEmpfaenger.length === 0, `Kopf nennt den Empfaenger: ${JSON.stringify(mitEmpfaenger)}`],
   ]);
 }
 
