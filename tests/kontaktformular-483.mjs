@@ -17,6 +17,8 @@
 //   500  { error: 'Failed to save contact' }
 //   Netz weg (Anfrage bricht ab)
 //   200  { message: 'Form submitted successfully' }   -- Gegenstueck: Erfolg bleibt Erfolg
+//   adresse    'a@b' -- gueltig fuer type=email, nicht fuer zod: Satz 400, kein Aufruf
+//   undefined  fetch liefert undefined -- ein Fehler, der kein KontaktFehler ist: Satz sonst
 //
 // Je Fehlerausgang muss die Seite genau den festen Satz zeigen (Sprecher
 // 41314483), darf die Erfolgsansicht nicht zeigen, zeigt weder die
@@ -80,15 +82,28 @@ const AUSGAENGE = [
   { id: '500', antwort: { status: 500, body: { error: 'Failed to save contact' } }, satz: SATZ.sonst, servertext: ['Failed to save contact'] },
   { id: 'netz', antwort: 'abbruch', satz: SATZ.sonst, servertext: [] },
   { id: '200', antwort: { status: 200, body: { message: 'Form submitted successfully' } }, satz: null, servertext: [] },
+  // Review #483r, Verstellung A: eine Adresse, die der Browser annimmt
+  // (type=email), zod aber nicht. Die eigene Formpruefung muss den Satz 400
+  // zeigen und darf die Randfunktion nie rufen. Kaeme der Aufruf doch durch,
+  // antwortet die Attrappe mit 200 -- dann stuende "Vielen Dank" da.
+  // Abgeschickt wird mit Enter im Adressfeld: Auf /kontakt sperrt die Seite die
+  // Schaltflaeche, sobald das Feld mit einer falschen Adresse verlassen wird --
+  // offen ist der Weg also nur ohne Verlassen des Feldes (Review #483r).
+  { id: 'adresse', email: 'a@b', absenden: 'enter', antwort: { status: 200, body: { message: 'Form submitted successfully' } }, aufrufe: 0, satz: SATZ[400], servertext: ['Invalid email address', 'Validation'] },
+  // Review #483r, Verstellung B: fetch liefert undefined. response.ok wirft
+  // dann einen TypeError, der kein KontaktFehler ist -- der Zweig "unerwarteter
+  // Fehler" in kontaktFehlerSatz. Er muss den allgemeinen Satz zeigen, weder
+  // einen leeren Hinweis noch den englischen Systemtext.
+  { id: 'undefined', antwort: 'undefined', satz: SATZ.sonst, servertext: ['Cannot read', 'undefined', 'TypeError'] },
 ];
 
 // Erfolgsansicht = forms.success.title (de); Formular = die Absendeschaltflaeche.
 const ERFOLG_UEBERSCHRIFT = 'Vielen Dank!';
 const SEITEN = [
-  { id: 'kontakt', pfad: '/#/kontakt', fuellen: async (p) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', 'wer@example.org'); await p.fill('textarea[name=message]', 'Hallo'); } },
-  { id: 'mitmachen', pfad: '/#/mitmachen', fuellen: async (p) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', 'wer@example.org'); } },
-  { id: 'investieren', pfad: '/#/investieren', fuellen: async (p) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', 'wer@example.org'); } },
-  { id: 'zugang', pfad: '/#/zugang', fuellen: async (p) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', 'wer@example.org'); } },
+  { id: 'kontakt', pfad: '/#/kontakt', fuellen: async (p, email) => { await p.fill('input[name=name]', 'Wer'); await p.fill('textarea[name=message]', 'Hallo'); await p.fill('input[name=email]', email); } },
+  { id: 'mitmachen', pfad: '/#/mitmachen', fuellen: async (p, email) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', email); } },
+  { id: 'investieren', pfad: '/#/investieren', fuellen: async (p, email) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', email); } },
+  { id: 'zugang', pfad: '/#/zugang', fuellen: async (p, email) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', email); } },
 ];
 
 const server = await vite.createServer({ root: WURZEL, logLevel: 'silent', server: { port: 0, host: '127.0.0.1', strictPort: false } });
@@ -117,6 +132,19 @@ async function fall(seite, ausgang) {
     const page = await ctx.newPage();
     await page.addInitScript(() => { try { localStorage.setItem('i18nextLng', 'de'); } catch { /* egal */ } });
     let aufrufe = 0;
+    if (ausgang.antwort === 'undefined') {
+      // Kein Netzweg kann "undefined" liefern; deshalb wird fetch selbst
+      // ersetzt, nur fuer plinyoo-contact. Gezaehlt wird im Fenster.
+      await page.addInitScript(() => {
+        const echt = window.fetch.bind(window);
+        window.__kontaktAufrufe = 0;
+        window.fetch = (eingabe, init) => {
+          const url = typeof eingabe === 'string' ? eingabe : eingabe?.url ?? String(eingabe);
+          if (url.includes('/functions/v1/plinyoo-contact')) { window.__kontaktAufrufe++; return Promise.resolve(undefined); }
+          return echt(eingabe, init);
+        };
+      });
+    }
     await page.route('**/functions/v1/plinyoo-contact', async (route) => {
       if (route.request().method() === 'OPTIONS') return route.fulfill({ status: 200, headers: { 'access-control-allow-origin': '*', 'access-control-allow-headers': '*' }, body: 'ok' });
       aufrufe++;
@@ -126,8 +154,9 @@ async function fall(seite, ausgang) {
     await page.goto(BASIS + seite.pfad, { waitUntil: 'networkidle' });
     const absenden = page.locator('form button[type=submit]');
     await absenden.waitFor({ timeout: 15000 });
-    await seite.fuellen(page);
-    await absenden.click();
+    await seite.fuellen(page, ausgang.email ?? 'wer@example.org');
+    if (ausgang.absenden === 'enter') await page.press('input[name=email]', 'Enter');
+    else await absenden.click();
     // Warten, bis die Seite reagiert hat: Erfolgsansicht ODER irgendein Satz.
     const erwartet = ausgang.satz ?? ERFOLG_UEBERSCHRIFT;
     await page.getByText(erwartet, { exact: false }).first().waitFor({ timeout: 8000 }).catch(() => {});
@@ -146,7 +175,9 @@ async function fall(seite, ausgang) {
       await page.screenshot({ path: join(BILDER, `${seite.id}-${ausgang.id}.png`), fullPage: false });
     }
     if (ausgang.satz) console.log(`      ${seite.id} ${ausgang.id}: Satz nach dem Tippen ${imBild ? 'im Bild' : 'NICHT ganz im Bild'} (y ${box ? Math.round(box.y) : '-'}..${box ? Math.round(box.y + box.height) : '-'} von 844)`);
-    const b = [[aufrufe === 1, `${aufrufe} Aufruf(e) der Randfunktion`]];
+    if (ausgang.antwort === 'undefined') aufrufe = await page.evaluate(() => window.__kontaktAufrufe ?? 0);
+    const sollAufrufe = ausgang.aufrufe ?? 1;
+    const b = [[aufrufe === sollAufrufe, `${aufrufe} Aufruf(e) der Randfunktion, erwartet ${sollAufrufe}`]];
     if (ausgang.satz) {
       b.push([text.includes(ausgang.satz), `fester Satz fehlt (sichtbar: ${text.replace(/\s+/g, ' ').slice(-240)})`]);
       b.push([erfolg === 0, 'zeigt die Erfolgsansicht']);
