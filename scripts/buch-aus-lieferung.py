@@ -16,7 +16,7 @@ from pathlib import Path
 import yaml
 
 PFLICHT = ["buch_nr", "slug", "titel_buch", "autor", "verlag", "erschienen", "isbn", "leitfrage",
-           "einordnung", "karten_thema", "karten_reihenfolge", "beitrag_etikett", "beitrag_titel",
+           "karten_thema", "karten_reihenfolge", "beitrag_titel",
            "beitrag_anreisser", "beitrag_autor"]
 GRUNDLAGE_STANDARD = "Grundlage sind die Quellen der Lernkarten."
 fehler, warnungen = [], []
@@ -201,7 +201,7 @@ def main():
         kartenvoll.append({"slug": k["slug"], "kurz": kurz, "titel": k["titel"], "karte": k["karte"],
                            "quelle": k["quelle"], "fragen": fragen})
 
-    beitrag = {"etikett": str(meta["beitrag_etikett"]).strip(), "titel": str(meta["beitrag_titel"]).strip(),
+    beitrag = {"etikett": str(meta.get("beitrag_etikett") or "").strip(), "titel": str(meta["beitrag_titel"]).strip(),
                "anreisser": str(meta["beitrag_anreisser"]).strip(), "absaetze": beitrag_absaetze,
                "autor": str(meta["beitrag_autor"]).strip()}
     if not gelesen:
@@ -217,7 +217,7 @@ def main():
         "uebersetzer": str(meta.get("uebersetzer") or "").strip(),
         "verlag": str(meta["verlag"]).strip(), "erschienen": str(meta["erschienen"]).strip(),
         "isbn": str(meta["isbn"]).strip(), "leitfrage": str(meta["leitfrage"]).strip(),
-        "einordnung": str(meta["einordnung"]).strip(),
+        "einordnung": str(meta.get("einordnung") or "").strip(),
         "kartenIntro": f"Alle {len(karten)} kannst du unten durchspielen.",
         "karten": [kurz for kurz, _ in karten],
         "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",

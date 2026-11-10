@@ -226,7 +226,14 @@ async function vorschaubild(b, coverQuelle, ziel) {
 // auf alle Karten des Buchs ausgedehnt: Jede Karte ist aufklappbar, jede Frage einzeln beantwortbar (mit "Nochmal versuchen").
 // Sind alle Fragen einer Karte richtig, leuchtet ihr Stern im Sternenfeld. Der Weg im Sternenfeld bestimmt die Reihenfolge:
 // Die Karten der angetippten Sterne stehen zuerst. Ohne JavaScript stehen Antworten und Belege gleich da.
-function frageBlock(f, i, j, gesamt) {
+// Der Beleg nennt die Quelle beim Namen („die Quelle“ allein sagt Lesenden nichts): Titel bis zum ersten Doppelpunkt, höchstens 70 Zeichen.
+function belegQuelle(q) {
+  const titel = String((q && q.titel) || '').split(': ')[0].trim();
+  if (!titel) return 'Beleg im Originaltext';
+  return `Beleg aus „${titel.length > 70 ? titel.slice(0, 67) + '…' : titel}“`;
+}
+
+function frageBlock(f, i, j, gesamt, quelle) {
   const richtig = f.optionen.find((o) => o.ok);
   const id = `f-${i}-${j}`;
   return `<div class="frage" data-f="${j}">
@@ -238,7 +245,7 @@ function frageBlock(f, i, j, gesamt) {
     <p class="rueck" aria-live="polite"></p>
     <div class="nachher">
       <p><strong>Richtig:</strong> ${esc(richtig.text)}</p>
-      <p class="beleg"><span class="bl">Beleg aus der Quelle:</span> „${esc(f.beleg)}“<br><span class="de">(eigene Übersetzung: „${esc(f.belegDe)}“)</span></p>
+      <p class="beleg"><span class="bl">${esc(belegQuelle(quelle))}:</span> „${esc(f.beleg)}“<br><span class="de">(eigene Übersetzung: „${esc(f.belegDe)}“)</span></p>
     </div>
     <button type="button" class="nochmal" hidden>Nochmal versuchen</button>
   </div>`;
@@ -254,7 +261,7 @@ function kartenBlock(k, i) {
     <p>${esc(k.karte)}</p>
     ${k.buchLink ? `<p class="buchlink"><a href="${esc(k.buchLink.url)}">${esc(k.buchLink.titel)} →</a></p>` : ''}
   </article>
-  ${k.fragen.map((f, j) => frageBlock(f, i, j, k.fragen.length)).join('\n  ')}
+  ${k.fragen.map((f, j) => frageBlock(f, i, j, k.fragen.length, q)).join('\n  ')}
   <p class="quelle">Quelle: ${esc(q.titel)} — ${esc(q.herausgeber)}, abgerufen ${esc(q.abgerufen)}. <a href="${esc(q.url)}" rel="noopener">Zur Quelle</a></p>
 </details>`;
 }
@@ -277,7 +284,7 @@ function kartenSektion(b) {
 function beitragFalte(bt, buchTitel, buchAutor) {
   if (!bt || !bt.absaetze || bt.absaetze.length === 0) return '';
   return `<section class="beitrag-fold" aria-label="Meinungsbeitrag">
-    <p class="bk">${esc(bt.etikett || 'Dazu ein Beitrag')}</p>
+    ${bt.etikett ? `<p class="bk">${esc(bt.etikett)}</p>` : ''}
     <p class="bt">${esc(bt.titel)}</p>
     ${bt.anreisser ? `<p class="anreisser">${esc(bt.anreisser)}</p>` : ''}
     <div class="lesetext">
@@ -291,7 +298,7 @@ function beitragFalte(bt, buchTitel, buchAutor) {
 // damit sie nicht veraltet. Fehlt kachelText, steht die Einordnung des Buchs.
 function kachelBeschreibung(b) {
   const n = (b.kartenvoll ?? []).length;
-  return b.kachelText ? `${n} Karten ${b.kachelText}` : b.einordnung;
+  return b.kachelText ? `${n} Karten ${b.kachelText}` : (b.einordnung || `${n} Karten`);
 }
 
 // Neu-Kasten: Auf jeder Buchseite außer der des neuesten Buchs. Ersetzt den Handtext "naechsteWoche", der veraltete.
@@ -520,7 +527,7 @@ details.kartek.gekonnt{border-color:#2F7D4F}
 .kartek .kstatus{font-weight:400;font-size:14px;color:var(--muted);white-space:nowrap}
 .kartek.gekonnt .kstatus{color:#2F7D4F;font-weight:600}
 .kartek .karte{margin-top:0}
-.kartek .frage{margin:14px 0 4px}
+.kartek .frage{margin:20px 0 4px;padding-top:20px;border-top:1px solid var(--line)}
 .nochmal{margin-top:10px;background:none;border:0;padding:0;font:inherit;font-size:15px;color:var(--graphite);text-decoration:underline;cursor:pointer}
 .uni .n.gekonnt .k{fill:#fff;stroke:var(--amber);stroke-width:3;filter:drop-shadow(0 0 8px rgba(255,255,255,.85))}
 .uni .n.gekonnt.besucht .k{fill:var(--amber)}
@@ -630,7 +637,7 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
       <h1>${esc(b.leitfrage)}</h1>
       <p class="meta"><strong>${esc(b.autor)}: ${esc(b.titel)}</strong> — ${esc(b.untertitel)}<br>
       ${b.uebersetzer ? `Aus dem Englischen von ${esc(b.uebersetzer)} · ` : ''}${esc(b.verlag)} · ${esc(b.erschienen)}${b.beitrag ? '' : ''}</p>
-      <p class="lead">${esc(b.einordnung)}</p>
+      ${b.einordnung ? `<p class="lead">${esc(b.einordnung)}</p>` : ''}
       ${beitragFalte(b.beitrag, b.titel, b.autor)}
     </div>
     ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="${b.coverBreite || 691}" height="${b.coverHoehe || 1063}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
@@ -803,9 +810,8 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
       ordneKarten();
       if(cur<0){status.textContent='Tippe einen Stern an, um deinen Weg zu beginnen.';return;}
       var weiter=nb[cur].filter(function(i){return weg.indexOf(i)<0}).map(titel);
-      function satz(t){return /[.?!]$/.test(t)?t+' ':t+'. ';}   // kein "?." wenn ein Kartenname selbst mit Fragezeichen endet
-      status.textContent=satz('Dein Weg: '+weg.map(titel).join(' → '))+
-        (weiter.length?satz('Von hier führt es weiter zu: '+weiter.join(', '))+'Tippe einen leuchtenden Stern an.':'Hier endet dieser Weg. Geh zurück zu einem früheren Stern oder beginne neu.');
+      // knapp halten: der Satz erscheint bei jedem Klick neu (die leuchtenden Sterne zeigen schon, was angetippt werden kann)
+      status.textContent=weg.map(titel).join(' → ')+(weiter.length?' · weiter: '+weiter.join(', '):' · Ende dieses Wegs');
     }
     function waehle(i){
       var cur=weg.length?weg[weg.length-1]:-1;
@@ -813,7 +819,7 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
       if(cur<0){weg=[i];}
       else if(pos>-1){weg=weg.slice(0,pos+1);}
       else if(nb[cur].indexOf(i)>-1){weg.push(i);}
-      else{status.textContent='Von „'+titel(cur)+'" gibt es keinen direkten Verweis zu „'+titel(i)+'". Tippe einen leuchtenden Stern an.';return;}
+      else{status.textContent='Kein direkter Verweis von „'+titel(cur)+'" zu „'+titel(i)+'".';return;}
       zeichne();
       if(!gemeldet&&window.plausible){gemeldet=true;window.plausible('Wissensuniversum erkundet');}
     }
