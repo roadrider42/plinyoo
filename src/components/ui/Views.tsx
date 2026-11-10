@@ -20,15 +20,30 @@ type View = {
 const SCREEN_WIDTH = 390;
 const SCREEN_HEIGHT = 844;
 
-// Telefonrahmen: Bildschirm im Seitenverhältnis 390 × 844, Inhalt wird hineingesetzt
-function Phone({ children, raised = false }: { children: React.ReactNode; raised?: boolean }) {
+// Telefonrahmen: Bildschirm im Seitenverhältnis 390 × 844, Inhalt wird hineingesetzt.
+// Auch vom Hero benutzt (#503): `size` ersetzt Breite und Lage, `light` den Schatten für hellen Grund, `screenClassName` den Bildschirmgrund.
+export function Phone({
+  children,
+  raised = false,
+  size = 'mx-auto w-full max-w-[300px]',
+  light = false,
+  screenClassName = 'bg-white',
+  screenProps,
+}: {
+  children: React.ReactNode;
+  raised?: boolean;
+  size?: string;
+  light?: boolean;
+  screenClassName?: string;
+  screenProps?: React.HTMLAttributes<HTMLDivElement>;
+}) {
   return (
     <div
-      className={`mx-auto w-full max-w-[300px] rounded-[2.6rem] bg-neutral-800 p-[9px] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] ring-1 ring-white/15 ${
-        raised ? 'lg:-mt-8' : ''
-      }`}
+      className={`${size} rounded-[2.6rem] bg-neutral-800 p-[9px] ${
+        light ? 'shadow-[0_30px_80px_-20px_rgba(0,0,0,0.45)]' : 'shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)] ring-1 ring-white/15'
+      } ${raised ? 'lg:-mt-8' : ''}`}
     >
-      <div className="relative overflow-hidden rounded-[2.1rem] bg-white" style={{ aspectRatio: `${SCREEN_WIDTH} / ${SCREEN_HEIGHT}` }}>
+      <div {...screenProps} className={`relative overflow-hidden rounded-[2.1rem] ${screenClassName}`} style={{ aspectRatio: `${SCREEN_WIDTH} / ${SCREEN_HEIGHT}` }}>
         {children}
       </div>
     </div>

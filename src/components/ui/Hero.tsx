@@ -1,52 +1,26 @@
 // src/components/ui/Hero.tsx
-// Neue Plinyoo Hero mit Carousel, Sprachumschalter und Kennwerten
-// Angepasst für plinyoo.com (mit eigenem Header wie app.plinyoo.com)
+// Plinyoo Hero mit Sprachumschalter und, in Sprachen mit eigenem Text, einem Telefon, das über einen Faden aus vier Büchern wischt.
+// Angepasst für plinyoo.com (mit eigenem Header wie app.plinyoo.com).
+// #503 (Entwurf V2, Baublatt B1–B11): ab 1024 px zwei Spalten (Text links, Telefon rechts), darunter untereinander.
+//   Das frühere Karussell unter dem Hero (Beispielkarten bzw. Kennwerte) fällt weg (Heikos Entscheidung 2 = a).
+// Gegenbild-Zeile und Faden erscheinen nur, wenn die gewählte Sprache eigene Texte unter hero.faden hat (wie Views.tsx);
+//   sonst bleibt der Hero einspaltig wie bisher, ohne deutsche Beschriftungen in einer fremden Sprache.
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+import HeroFaden from './HeroFaden';
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
-  const [activeCardIndex, setActiveCardIndex] = useState(0);
-
-  // Plinyoo Kennwerte
-  const values = [
-    {
-      icon: '🎓',
-      title: 'Akademisch',
-      description: 'Respekt vor Wissen'
-    },
-    {
-      icon: '🌍',
-      title: 'Offen',
-      description: 'Keine Barrieren'
-    },
-    {
-      icon: '🚀',
-      title: 'Motivierend',
-      description: 'Fortschritt feiern'
-    },
-    {
-      icon: '💡',
-      title: 'Neugierig',
-      description: 'Lernen als Abenteuer'
-    }
-  ];
-
-  // Beispiel-Lernzyklus aus den Übersetzungen; Sprachen ohne Text behalten die Kennwerte
-  type DemoCard = { step: string; title: string; text?: string; chip?: string; options?: string[] };
-  const demoRaw = t('hero.cards', { returnObjects: true }) as unknown;
-  const demo = Array.isArray(demoRaw) && demoRaw.length > 0 ? (demoRaw as DemoCard[]) : null;
-  const count = demo ? demo.length : values.length;
-  const exampleLabel = String(t('hero.cardsLabel', { defaultValue: '' }));
+  const mitFaden = Boolean(i18n.getResource(i18n.resolvedLanguage || i18n.language, 'translation', 'hero.faden'));
 
   return (
     <div className="bg-main-background text-main-text">
-      {/* Header — wie app.plinyoo.com */}
+      {/* Header — wie app.plinyoo.com; Logo-Verweis mindestens 44 px hoch (B11) */}
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link to="/" aria-label={String(t('hero.title'))} className="text-xl font-bold font-sans text-primary">
+        <Link to="/" aria-label={String(t('hero.title'))} className="flex h-11 items-center text-xl font-bold font-sans text-primary">
           plinyoo
         </Link>
         <div className="flex items-center gap-2.5">
@@ -62,110 +36,50 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="mx-auto flex w-full max-w-5xl flex-col gap-5 px-5 pt-8 sm:px-8 sm:pt-14 lg:items-center lg:text-center">
-        <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface-1 py-1.5 pl-3 pr-3.5 text-xs font-medium text-text-muted">
-          <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
-          {t('hero.eyebrow')}
-        </span>
+      <div
+        className={
+          mitFaden
+            ? 'mx-auto grid w-full max-w-5xl gap-8 px-5 pb-16 pt-8 sm:px-8 lg:grid-cols-[1fr_360px] lg:items-center lg:pb-8 lg:pt-6'
+            : 'mx-auto w-full max-w-5xl px-5 pb-16 pt-8 sm:px-8 sm:pt-14'
+        }
+      >
+        <section className={`flex flex-col gap-5 ${mitFaden ? '' : 'lg:items-center lg:text-center'}`}>
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-surface-1 py-1.5 pl-3 pr-3.5 text-xs font-medium text-text-muted">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
+            {t('hero.eyebrow')}
+          </span>
 
-        <h1 className="max-w-3xl font-sans text-[2.375rem] font-bold leading-[1.04] tracking-[-0.032em] text-balance sm:text-5xl lg:text-6xl text-primary">
-          {t('hero.title')}
-        </h1>
+          <h1 className="max-w-3xl font-sans text-[2.375rem] font-bold leading-[1.04] tracking-[-0.032em] text-balance sm:text-5xl lg:text-6xl text-primary">
+            {t('hero.title')}
+          </h1>
 
-        <p className="max-w-xl text-[0.95rem] leading-relaxed text-main-text sm:text-lg">
-          {t('hero.subtitle')}
-        </p>
+          {mitFaden && (
+            <p className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1.5 text-[17px] leading-[1.4]">
+              <s className="text-text-muted decoration-2">{t('hero.faden.contrastFrom')}</s>
+              {/* Pfeil bleibt beim Umbruch bei der Methode, nicht am Ende der durchgestrichenen Zeile */}
+              <span className="flex items-baseline gap-2.5">
+                <span className="font-bold text-accent" aria-hidden="true">→</span>
+                <span className="font-semibold text-primary">{t('hero.faden.contrastTo')}</span>
+              </span>
+            </p>
+          )}
 
-        <Link
-          to="/zugang"
-          className="mt-1 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-[0.95rem] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md sm:w-auto sm:self-start lg:self-center"
-        >
-          {t('hero.cta')}
-        </Link>
-      </section>
+          <p className="max-w-xl text-[0.95rem] leading-relaxed text-main-text sm:text-lg">
+            {t('hero.subtitle')}
+          </p>
 
-      {/* Carousel mit Kennwerten */}
-      <section className="mx-auto w-full max-w-md px-5 pt-12 pb-16 sm:px-8" aria-label={demo ? String(t('hero.cardsAria', { defaultValue: '' })) : 'Plinyoo Kennwerte'}>
-        <div className="mb-12">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            {/* Carousel Navigation */}
-            <button
-              onClick={() => setActiveCardIndex((activeCardIndex - 1 + count) % count)}
-              className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
-              aria-label="Vorherige Karte"
-            >
-              ←
-            </button>
+          <Link
+            to="/zugang"
+            className={`mt-1 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-[0.95rem] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md sm:w-auto sm:self-start ${
+              mitFaden ? '' : 'lg:self-center'
+            }`}
+          >
+            {t('hero.cta')}
+          </Link>
+        </section>
 
-            {/* Aktive Karte */}
-            {demo ? (
-              <div
-                className="w-full max-w-sm min-h-[15rem] bg-white rounded-xl shadow-sm border border-border p-6 text-left"
-                aria-live="polite"
-              >
-                <div className="mb-4 flex items-center justify-between text-xs font-medium uppercase tracking-wide">
-                  <span className="text-primary">{demo[activeCardIndex].step}</span>
-                  {exampleLabel && <span className="text-text-muted">{exampleLabel}</span>}
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-3">{demo[activeCardIndex].title}</h3>
-                {demo[activeCardIndex].text && (
-                  <p className="text-main-text">{demo[activeCardIndex].text}</p>
-                )}
-                {demo[activeCardIndex].options && (
-                  <ul className="mt-2 space-y-2">
-                    {demo[activeCardIndex].options!.map((option) => (
-                      <li key={option} className="rounded-lg border border-border px-3 py-2 text-sm text-main-text">
-                        {option}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                {demo[activeCardIndex].chip && (
-                  <span className="mt-4 inline-block rounded-full bg-surface-2 px-3 py-1 text-xs font-medium text-primary">
-                    {demo[activeCardIndex].chip}
-                  </span>
-                )}
-              </div>
-            ) : (
-              <div className="w-full max-w-sm bg-white rounded-xl shadow-sm border border-border p-8 text-center">
-                <div className="text-5xl mb-4">{values[activeCardIndex].icon}</div>
-                <h3 className="text-2xl font-bold text-primary mb-2">
-                  {values[activeCardIndex].title}
-                </h3>
-                <p className="text-main-text">
-                  {values[activeCardIndex].description}
-                </p>
-              </div>
-            )}
-
-            {/* Carousel Navigation */}
-            <button
-              onClick={() => setActiveCardIndex((activeCardIndex + 1) % count)}
-              className="p-2 hover:bg-primary/10 rounded-lg transition-colors"
-              aria-label="Nächste Karte"
-            >
-              →
-            </button>
-          </div>
-
-          {/* Carousel Dots */}
-          <div className="flex justify-center gap-2">
-            {Array.from({ length: count }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveCardIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === activeCardIndex
-                    ? 'bg-primary w-8'
-                    : 'bg-border w-2 hover:bg-primary/50'
-                }`}
-                aria-label={`Gehe zu Karte ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+        {mitFaden && <HeroFaden />}
+      </div>
     </div>
   );
 }

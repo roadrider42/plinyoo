@@ -9,35 +9,7 @@
     "subtitle": "Você sabe onde está hoje e aonde quer chegar. O caminho entre os dois você encontra em cartões que remetem uns aos outros — não em um plano de curso.",
     "cta_primary": "Junte-se agora",
     "cta_secondary": "Para investidores",
-    "cta": "Solicitar acesso",
-    "cardsLabel": "Exemplo",
-    "cardsAria": "Exemplo: como você aprende um cartão",
-    "cards": [
-      {
-        "step": "Cartão",
-        "title": "Temperatura da superfície vs. temperatura do ar",
-        "text": "Os dados de satélite mostram temperaturas da superfície, muitas vezes mais altas que as do ar. A temperatura do ar a 2 m de altura determina mais o estresse térmico humano.",
-        "chip": "→ Análise de satélite do DLR"
-      },
-      {
-        "step": "Pergunta",
-        "title": "O que os dados de satélite mostram principalmente?",
-        "options": [
-          "A temperatura do ar a 2 metros de altura, medida em estações terrestres",
-          "As temperaturas da superfície de ruas, telhados e vegetação"
-        ]
-      },
-      {
-        "step": "Reencontro",
-        "title": "O cartão volta.",
-        "text": "O que está firme volta mais tarde. O que vacila volta mais cedo."
-      },
-      {
-        "step": "Estrela",
-        "title": "Aprendido — uma estrela.",
-        "text": "Quando todas as perguntas de um cartão foram respondidas corretamente na última vez, ele brilha como estrela no seu universo."
-      }
-    ]
+    "cta": "Solicitar acesso"
   },
   "visionMission": {
     "vision": {

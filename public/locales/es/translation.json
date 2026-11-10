@@ -9,35 +9,7 @@
     "subtitle": "Sabes dónde estás hoy y adónde quieres llegar. El camino entre ambos puntos lo encuentras en tarjetas que se remiten entre sí, no en un plan de curso.",
     "cta_primary": "Únete ahora",
     "cta_secondary": "Para inversores",
-    "cta": "Solicitar acceso",
-    "cardsLabel": "Ejemplo",
-    "cardsAria": "Ejemplo: así aprendes una tarjeta",
-    "cards": [
-      {
-        "step": "Tarjeta",
-        "title": "Temperatura superficial vs. temperatura del aire",
-        "text": "Los datos satelitales muestran temperaturas superficiales, a menudo más altas que las del aire. La temperatura del aire a 2 m de altura determina más el estrés térmico humano.",
-        "chip": "→ Análisis satelital del DLR"
-      },
-      {
-        "step": "Pregunta",
-        "title": "¿Qué muestran principalmente los datos satelitales?",
-        "options": [
-          "La temperatura del aire a 2 metros de altura, medida en estaciones terrestres",
-          "Las temperaturas superficiales de calles, tejados y vegetación"
-        ]
-      },
-      {
-        "step": "Reencuentro",
-        "title": "La tarjeta vuelve.",
-        "text": "Lo que se sabe vuelve más tarde. Lo que flaquea vuelve antes."
-      },
-      {
-        "step": "Estrella",
-        "title": "Aprendido: una estrella.",
-        "text": "Cuando todas las preguntas de una tarjeta se respondieron bien la última vez, brilla como estrella en tu universo."
-      }
-    ]
+    "cta": "Solicitar acceso"
   },
   "visionMission": {
     "vision": {
