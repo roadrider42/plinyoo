@@ -1,0 +1,2021 @@
+{
+  "slug": "zitelmann-zero-sum-mindset",
+  "draft": false,
+  "nr": 8,
+  "kachelTitel": "Zero Sum Mindset — Nullsummendenken",
+  "kachelText": "zu Brechts Vers, dem Rückgang extremer Armut in China, dem Handel nach Smith und Ricardo sowie Umfragen zu Neid und politischer Haltung.",
+  "symbol": "⚖️",
+  "autor": "Rainer Zitelmann",
+  "titel": "ZERO SUM MINDSET",
+  "untertitel": "Die Nullsummenfalle – warum alle mehr gewinnen, wenn wir anders denken",
+  "uebersetzer": "",
+  "verlag": "Deutscher Wirtschaftsbuch Verlag",
+  "erschienen": "2026",
+  "isbn": "978-3-690-66262-8",
+  "leitfrage": "Ist der Erfolg anderer automatisch unser Verlust?",
+  "einordnung": "",
+  "kartenIntro": "Alle 17 kannst du unten durchspielen.",
+  "karten": [
+    "Nullsummendenken",
+    "Der feste Kuchen",
+    "Brecht: Reich und Arm",
+    "Umverteilung und Armut",
+    "Armut: 90 auf 10 Prozent",
+    "China: Marktreformen",
+    "Handel: Smith und Ricardo",
+    "Märkte als Kooperation",
+    "Zwei Denkweisen, Politik",
+    "Neid: 13-Länder-Umfrage",
+    "Ökonomen und Laien",
+    "Nullsumme in Deutschland",
+    "Nullsumme: Links und Rechts",
+    "Nullsumme und Ungleichheit",
+    "Nullsumme und Zuwanderung",
+    "Politik und Interessen",
+    "Gemeinsame Interessen"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
+  "verlagUrl": "https://www.deutscherwirtschaftsbuchverlag.com/products/zero-sum-mindset",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://link.amazon/B0fFLNIEo",
+  "cover": "cover.jpg",
+  "coverCredit": "Cover der Originalausgabe (Deutscher Wirtschaftsbuch Verlag, unverändert, Stand 2026-11-10)",
+  "naechsteWoche": "",
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph zum Zero Sum Mindset",
+  "knoten": [
+    {
+      "slug": "zsm-definition",
+      "titel": "Nullsummendenken"
+    },
+    {
+      "slug": "zsm-fixed-pie",
+      "titel": "Der feste Kuchen"
+    },
+    {
+      "slug": "zsm-brecht-markt",
+      "titel": "Brecht: Reich und Arm"
+    },
+    {
+      "slug": "zsm-umverteilung-armutsbekaempfung",
+      "titel": "Umverteilung und Armut"
+    },
+    {
+      "slug": "zsm-armut-rueckgang",
+      "titel": "Armut: 90 auf 10 Prozent"
+    },
+    {
+      "slug": "zsm-china-reformen",
+      "titel": "China: Marktreformen"
+    },
+    {
+      "slug": "zsm-handel-smith-ricardo",
+      "titel": "Handel: Smith und Ricardo"
+    },
+    {
+      "slug": "zsm-kooperation-im-markt",
+      "titel": "Märkte als Kooperation"
+    },
+    {
+      "slug": "zsm-politik-zwei-denkweisen",
+      "titel": "Zwei Denkweisen, Politik"
+    },
+    {
+      "slug": "zsm-neid-umfrage",
+      "titel": "Neid: 13-Länder-Umfrage"
+    },
+    {
+      "slug": "zsm-oekonomen-laien",
+      "titel": "Ökonomen und Laien"
+    },
+    {
+      "slug": "zsm-wertewandel-deutschland",
+      "titel": "Nullsumme in Deutschland"
+    },
+    {
+      "slug": "zsm-davidai-ongis",
+      "titel": "Nullsumme: Links und Rechts"
+    },
+    {
+      "slug": "zsm-nullsumme-ungleichheit",
+      "titel": "Nullsumme und Ungleichheit"
+    },
+    {
+      "slug": "zsm-nullsumme-zuwanderung",
+      "titel": "Nullsumme und Zuwanderung"
+    },
+    {
+      "slug": "zsm-politik-interessen-lager",
+      "titel": "Politik und Interessen"
+    },
+    {
+      "slug": "zsm-politik-gemeinsame-interessen",
+      "titel": "Gemeinsame Interessen"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      0,
+      6,
+      "verwandt"
+    ],
+    [
+      0,
+      7,
+      "verwandt"
+    ],
+    [
+      0,
+      12,
+      "verwandt"
+    ],
+    [
+      1,
+      8,
+      "verwandt"
+    ],
+    [
+      1,
+      10,
+      "verwandt"
+    ],
+    [
+      1,
+      12,
+      "verwandt"
+    ],
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      2,
+      4,
+      "verwandt"
+    ],
+    [
+      2,
+      9,
+      "verwandt"
+    ],
+    [
+      3,
+      8,
+      "verwandt"
+    ],
+    [
+      3,
+      9,
+      "verwandt"
+    ],
+    [
+      4,
+      5,
+      "verwandt"
+    ],
+    [
+      6,
+      7,
+      "verwandt"
+    ],
+    [
+      7,
+      8,
+      "verwandt"
+    ],
+    [
+      7,
+      10,
+      "verwandt"
+    ],
+    [
+      7,
+      12,
+      "verwandt"
+    ],
+    [
+      8,
+      10,
+      "verwandt"
+    ],
+    [
+      8,
+      13,
+      "verwandt"
+    ],
+    [
+      9,
+      10,
+      "verwandt"
+    ],
+    [
+      9,
+      11,
+      "verwandt"
+    ],
+    [
+      10,
+      11,
+      "verwandt"
+    ],
+    [
+      10,
+      12,
+      "verwandt"
+    ],
+    [
+      12,
+      13,
+      "verwandt"
+    ],
+    [
+      12,
+      14,
+      "verwandt"
+    ],
+    [
+      12,
+      15,
+      "verwandt"
+    ],
+    [
+      12,
+      16,
+      "verwandt"
+    ],
+    [
+      13,
+      14,
+      "verwandt"
+    ],
+    [
+      14,
+      15,
+      "verwandt"
+    ],
+    [
+      15,
+      16,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "",
+    "titel": "Ein Plädoyer zum Nachdenken über den „Fixed-Pie-Myth“",
+    "anreisser": "„Reicher Mann und armer Mann / standen da und sah’n sich an / und der Arme sagte bleich / wär ich nicht arm, wärst du nicht reich.“ So fasste der Dramatiker Bertolt Brecht eine Denkweise in vier Zeilen. Eine US-Studie fand sie bei Linken wie bei Konservativen, nur bei unterschiedlichen Themen.",
+    "absaetze": [
+      "Der Vierzeiler stammt aus Brechts „Alfabet“. Er beschreibt Nullsummendenken: Wer so denkt, sieht den Erfolg des anderen automatisch als eigenen Verlust an, als gäbe es nur einen festen Kuchen („fixed pie“), bei dem der Gewinn des einen andere zu Verlierern macht. Der Historiker und Soziologe Rainer Zitelmann hält dagegen, dass im Marktsystem reich wird, wer die Wünsche vieler Kunden erfüllt, im Gegensatz zu früheren Zeiten, in denen Reichtum oft auf Raub beruhte.",
+      "Laut Zitelmann sank die extreme Armut von 90 Prozent im Jahr 1820 auf rund 10 Prozent. Für 1981 nennt er eine Quote von 42,7 Prozent und für das Jahr 2000 27,8 Prozent. Er merkt an, die heutige Quote läge bei 6,5 Prozent, hätte die Weltbank ihre Berechnung nicht zuletzt geändert.",
+      "China diente als Beispiel für den Wandel: 1981 lebten dort noch 88 Prozent der Bevölkerung in extremer Armut. Nach den marktwirtschaftlichen Reformen unter Chinas damaligem obersten Führer Deng Xiaoping, die Anfang der 1980er-Jahre begannen, fiel die Quote unter 1 Prozent. Zugleich stieg die Zahl der Milliardäre von null auf über 500.",
+      "Der schottische Ökonom und Philosoph Adam Smith (1723 bis 1790) erkannte, dass Spezialisierung die gesamte Produktion steigert, weshalb beim Handel beide Seiten gewinnen. Der britische Ökonom David Ricardo (1772 bis 1823) baute das aus: Selbst ein weniger effizientes Land profitiert, wenn es sich auf die Güter verlegt, die es verhältnismäßig günstiger herstellen kann.",
+      "Die Forscher Shai Davidai (Columbia Business School) und Martino Ongis (New School for Social Research) untersuchten 2019 in den USA, wie politische Haltung und Nullsummendenken zusammenhängen. Ergebnis aus sechs Studien: Linke wie Konservative halten das Leben für ein Nullsummenspiel, wenn es ihrer Haltung nützt. Konservative tun das, wenn die bestehende Ordnung angegriffen wird, Linke, wenn sie verteidigt wird.",
+      "Unsere Einordnung: In dieser Studie kommt Nullsummendenken auf beiden Seiten des politischen Spektrums vor, nur bei unterschiedlichen Themen.",
+      "Wer die Karten durchspielt, entdeckt die Verbindung zwischen historischen Daten, ökonomischen Theorien und aktuellen Umfragen. So lässt sich das Muster des Nullsummendenkens in verschiedenen Kontexten erkunden."
+    ],
+    "autor": "Heiko Miertzsch",
+    "grundlage": "Aus Zitelmanns Aufsatz (RealClearMarkets 2025), Davidai/Ongis (Science Advances 2019) und IREF (2017)."
+  },
+  "kartenvoll": [
+    {
+      "slug": "zsm-definition",
+      "kurz": "Nullsummendenken",
+      "titel": "Nullsummendenken: Der Erfolg des anderen gilt als eigener Verlust",
+      "karte": "Wer so denkt, geht davon aus, dass der Erfolg eines anderen automatisch auf eigene Kosten geht und das eigene Scheitern dem anderen nützt. Manche Situationen sind tatsächlich so gebaut, etwa ein Tennismatch. Zum Denkfehler wird das Muster, wenn jemand auch Lagen so liest, die gar keine Nullsummenspiele sind, etwa den freiwilligen Tausch von Waren.",
+      "quelle": {
+        "titel": "The Zero-Sum Mindset Will Get You Nowhere",
+        "url": "https://www.realclearmarkets.com/articles/2025/12/22/the_zero-sum_mindset_will_get_you_nowhere_1154907.html",
+        "herausgeber": "RealClearMarkets (Autor: Rainer Zitelmann, 22.12.2025)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was beschreibt ein „Zero-Sum Mindset“?",
+          "beleg": "a mental conception of success in which another person’s success automatically comes at your expense, and your failure is their success",
+          "belegDe": "eine gedankliche Vorstellung von Erfolg, in der der Erfolg eines anderen automatisch auf eigene Kosten geht und das eigene Scheitern sein Erfolg ist",
+          "optionen": [
+            {
+              "text": "Erfolg entsteht nur durch Zusammenarbeit aller Beteiligten",
+              "ok": false,
+              "fb": "Falsch: Fremder Erfolg geht aus dieser Sicht automatisch auf eigene Kosten, das eigene Scheitern ist der Erfolg des anderen."
+            },
+            {
+              "text": "Erfolg hängt vor allem vom Zufall und vom Glück ab",
+              "ok": false,
+              "fb": "Falsch: Fremder Erfolg geht aus dieser Sicht automatisch auf eigene Kosten, das eigene Scheitern ist der Erfolg des anderen."
+            },
+            {
+              "text": "Fremder Erfolg geht automatisch auf eigene Kosten",
+              "ok": true,
+              "fb": "Richtig: Fremder Erfolg geht aus dieser Sicht automatisch auf eigene Kosten, das eigene Scheitern ist der Erfolg des anderen."
+            },
+            {
+              "text": "Jeder fremde Erfolg nützt automatisch auch allen anderen",
+              "ok": false,
+              "fb": "Falsch: Fremder Erfolg geht aus dieser Sicht automatisch auf eigene Kosten, das eigene Scheitern ist der Erfolg des anderen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Situation ist ein echtes Nullsummenspiel?",
+          "beleg": "a tennis match is one example: if you want to win, the other person must lose.",
+          "belegDe": "ein Tennismatch ist ein Beispiel: Wer gewinnen will, bei dem muss der andere verlieren.",
+          "optionen": [
+            {
+              "text": "Ein Tennismatch zwischen zwei Spielern",
+              "ok": true,
+              "fb": "Richtig: Im Tennismatch gewinnt einer nur, wenn der andere verliert. Beim freiwilligen Tausch können beide Seiten gewinnen."
+            },
+            {
+              "text": "Der freiwillige Tausch von Waren am Markt",
+              "ok": false,
+              "fb": "Falsch: Im Tennismatch gewinnt einer nur, wenn der andere verliert. Beim freiwilligen Tausch können beide Seiten gewinnen."
+            },
+            {
+              "text": "Der Handel zwischen zwei Ländern",
+              "ok": false,
+              "fb": "Falsch: Im Tennismatch gewinnt einer nur, wenn der andere verliert. Beim freiwilligen Tausch können beide Seiten gewinnen."
+            },
+            {
+              "text": "Ein Geschäft, das beiden Seiten nützt",
+              "ok": false,
+              "fb": "Falsch: Im Tennismatch gewinnt einer nur, wenn der andere verliert. Beim freiwilligen Tausch können beide Seiten gewinnen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Worin liegt das Problem, wenn jemand alles als Nullsummenspiel liest?",
+          "beleg": "fundamentally interpret situations as zero-sum games, even if they are not in reality.",
+          "belegDe": "deuten Situationen grundsätzlich als Nullsummenspiele, auch wenn sie es in Wirklichkeit nicht sind.",
+          "optionen": [
+            {
+              "text": "Er unterschätzt, wie oft in der Wirklichkeit Wettbewerb vorkommt",
+              "ok": false,
+              "fb": "Falsch: Das Problem ist die Fehldeutung: Auch Situationen, die in Wirklichkeit keine Nullsummenspiele sind, werden so gelesen."
+            },
+            {
+              "text": "Er lehnt jeden Wettbewerb um Kunden oder Plätze grundsätzlich ab",
+              "ok": false,
+              "fb": "Falsch: Das Problem ist die Fehldeutung: Auch Situationen, die in Wirklichkeit keine Nullsummenspiele sind, werden so gelesen."
+            },
+            {
+              "text": "Er hält jede Lage für reinen Zufall ohne Einfluss von Handeln",
+              "ok": false,
+              "fb": "Falsch: Das Problem ist die Fehldeutung: Auch Situationen, die in Wirklichkeit keine Nullsummenspiele sind, werden so gelesen."
+            },
+            {
+              "text": "Er deutet auch Lagen so, die keine Nullsummenspiele sind",
+              "ok": true,
+              "fb": "Richtig: Das Problem ist die Fehldeutung: Auch Situationen, die in Wirklichkeit keine Nullsummenspiele sind, werden so gelesen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-fixed-pie",
+      "kurz": "Der feste Kuchen",
+      "titel": "Der feste Kuchen: Nullsummendenken und die Fixed-Pie-Fallacy",
+      "karte": "Nullsummendenken beruht nach Wikipedia auf der stillschweigenden Annahme, dass es nur eine begrenzte Menge an Gütern gibt: Gewinnt einer, werden die anderen zu Verlierern. In der Ökonomik bezeichnet „zero-sum fallacy“ meist die „fixed-pie fallacy“, den Fehlschluss vom festen Kuchen. Als „Zero-sum bias“ gilt die Neigung, eine Lage auch dann für ein Nullsummenspiel zu halten, wenn sie keines ist.",
+      "quelle": {
+        "titel": "Zero-sum thinking",
+        "url": "https://en.wikipedia.org/wiki/Zero-sum_thinking",
+        "herausgeber": "Wikipedia",
+        "abgerufen": "2026-11-10"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie heißt der Nullsummen-Fehlschluss in der Ökonomik meist?",
+          "beleg": "In economics, \"zero-sum fallacy\" generally refers to the fixed-pie fallacy",
+          "belegDe": "In der Ökonomik bezeichnet „zero-sum fallacy“ üblicherweise die „fixed-pie fallacy“ (den Fehlschluss vom festen Kuchen)",
+          "optionen": [
+            {
+              "text": "Sunk-Cost-Fallacy, der Fehlschluss der versunkenen Kosten",
+              "ok": false,
+              "fb": "Falsch: In der Ökonomik bezeichnet „zero-sum fallacy“ meist die „fixed-pie fallacy“, den Fehlschluss vom festen Kuchen."
+            },
+            {
+              "text": "Broken-Window-Fallacy, der Fehlschluss der zerbrochenen Fenster",
+              "ok": false,
+              "fb": "Falsch: In der Ökonomik bezeichnet „zero-sum fallacy“ meist die „fixed-pie fallacy“, den Fehlschluss vom festen Kuchen."
+            },
+            {
+              "text": "Fixed-Pie-Fallacy, der Fehlschluss vom festen Kuchen",
+              "ok": true,
+              "fb": "Richtig: In der Ökonomik bezeichnet „zero-sum fallacy“ meist die „fixed-pie fallacy“, den Fehlschluss vom festen Kuchen."
+            },
+            {
+              "text": "Free-Lunch-Fallacy, der Fehlschluss vom kostenlosen Essen",
+              "ok": false,
+              "fb": "Falsch: In der Ökonomik bezeichnet „zero-sum fallacy“ meist die „fixed-pie fallacy“, den Fehlschluss vom festen Kuchen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche stillschweigende Annahme liegt dem Nullsummendenken zugrunde?",
+          "beleg": "based on the implicit assumption that a finite amount of goods exists in the world, in which one person's winning makes others the losers",
+          "belegDe": "beruht auf der stillschweigenden Annahme, dass es auf der Welt eine begrenzte Menge an Gütern gibt, bei der der Gewinn des einen die anderen zu Verlierern macht",
+          "optionen": [
+            {
+              "text": "Es gebe nur begrenzt viele Güter, jeder Gewinn mache andere zu Verlierern",
+              "ok": true,
+              "fb": "Richtig: Nullsummendenken beruht auf der stillschweigenden Annahme, dass es nur eine begrenzte Menge an Gütern gibt, bei der der Gewinn des einen andere zu Verlierern macht."
+            },
+            {
+              "text": "Es gebe unbegrenzt viele Güter, jeder Gewinn nütze deshalb auch allen anderen",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken beruht auf der stillschweigenden Annahme, dass es nur eine begrenzte Menge an Gütern gibt, bei der der Gewinn des einen andere zu Verlierern macht."
+            },
+            {
+              "text": "Güter verteilten sich immer nach Bedarf auf alle Beteiligten ganz gleichmäßig",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken beruht auf der stillschweigenden Annahme, dass es nur eine begrenzte Menge an Gütern gibt, bei der der Gewinn des einen andere zu Verlierern macht."
+            },
+            {
+              "text": "Güter seien nur dann knapp, wenn der Staat sie künstlich zurückhält und verteilt",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken beruht auf der stillschweigenden Annahme, dass es nur eine begrenzte Menge an Gütern gibt, bei der der Gewinn des einen andere zu Verlierern macht."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was beschreibt der „Zero-sum bias“?",
+          "beleg": "it is people's tendency to intuitively judge that a situation is zero-sum, even when this is not the case.",
+          "belegDe": "es ist die Neigung der Menschen, intuitiv zu urteilen, dass eine Lage ein Nullsummenspiel ist, auch wenn das nicht der Fall ist.",
+          "optionen": [
+            {
+              "text": "Die Neigung, jede Lage grundsätzlich als gemeinsame Chance für beide Seiten zu sehen",
+              "ok": false,
+              "fb": "Falsch: Der Zero-sum bias ist die Neigung, intuitiv eine Nullsumme anzunehmen, auch wenn die Lage keine ist."
+            },
+            {
+              "text": "Die Fähigkeit, Nullsummenspiele zuverlässig zu erkennen und danach sauber zu lösen",
+              "ok": false,
+              "fb": "Falsch: Der Zero-sum bias ist die Neigung, intuitiv eine Nullsumme anzunehmen, auch wenn die Lage keine ist."
+            },
+            {
+              "text": "Die Annahme, dass Märkte immer von allein im Gleichgewicht bleiben und nie schwanken",
+              "ok": false,
+              "fb": "Falsch: Der Zero-sum bias ist die Neigung, intuitiv eine Nullsumme anzunehmen, auch wenn die Lage keine ist."
+            },
+            {
+              "text": "Die Neigung, eine Lage auch dann für Nullsumme zu halten, wenn sie keine ist",
+              "ok": true,
+              "fb": "Richtig: Der Zero-sum bias ist die Neigung, intuitiv eine Nullsumme anzunehmen, auch wenn die Lage keine ist."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-brecht-markt",
+      "kurz": "Brecht: Reich und Arm",
+      "titel": "Brechts Vers vom reichen und vom armen Mann",
+      "karte": "Der deutsche Dramatiker und Lyriker Bertolt Brecht hat die Denkweise in einem Vierzeiler zugespitzt, in dem ein Armer zu einem Reichen sagt: Wäre ich nicht arm, wärst du nicht reich. Wer so denkt, sieht Armut vor allem als Folge von Egoismus der Reichen. Der Historiker und Soziologe Rainer Zitelmann hält dagegen: Früher beruhte Reichtum oft auf Raub, im Marktsystem wird reich, wer die Wünsche vieler Kunden erfüllt.",
+      "quelle": {
+        "titel": "The Zero-Sum Mindset Will Get You Nowhere",
+        "url": "https://www.realclearmarkets.com/articles/2025/12/22/the_zero-sum_mindset_will_get_you_nowhere_1154907.html",
+        "herausgeber": "RealClearMarkets (Autor: Rainer Zitelmann, 22.12.2025)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wovon gehen Antikapitalisten nach Zitelmann bei der Wirtschaft aus?",
+          "beleg": "Anti-capitalists believe economics is a zero-sum game.",
+          "belegDe": "Antikapitalisten glauben, Wirtschaft sei ein Nullsummenspiel.",
+          "optionen": [
+            {
+              "text": "Davon, dass der Markt am Ende allen Beteiligten nützt",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmanns Darstellung sehen Antikapitalisten die Wirtschaft als Nullsummenspiel."
+            },
+            {
+              "text": "Davon, dass die Wirtschaft ein Nullsummenspiel ist",
+              "ok": true,
+              "fb": "Richtig: Nach Zitelmanns Darstellung sehen Antikapitalisten die Wirtschaft als Nullsummenspiel."
+            },
+            {
+              "text": "Davon, dass Wirtschaftswachstum praktisch unbegrenzt ist",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmanns Darstellung sehen Antikapitalisten die Wirtschaft als Nullsummenspiel."
+            },
+            {
+              "text": "Davon, dass Preise die Knappheit von Gütern anzeigen",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmanns Darstellung sehen Antikapitalisten die Wirtschaft als Nullsummenspiel."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie erklären Antikapitalisten nach Zitelmann, dass es noch so viele Arme gibt?",
+          "beleg": "the fact that there are still so many poor people is solely due to selfishness and a lack of goodwill among the rich.",
+          "belegDe": "dass es immer noch so viele Arme gibt, liege allein am Egoismus und am fehlenden guten Willen der Reichen.",
+          "optionen": [
+            {
+              "text": "Durch zu wenig Wirtschaftswachstum in den ärmeren Ländern",
+              "ok": false,
+              "fb": "Falsch: Aus Sicht der Antikapitalisten liegt es allein an Egoismus und fehlendem guten Willen der Reichen."
+            },
+            {
+              "text": "Durch fehlende Bildung und mangelnde Infrastruktur in armen Ländern",
+              "ok": false,
+              "fb": "Falsch: Aus Sicht der Antikapitalisten liegt es allein an Egoismus und fehlendem guten Willen der Reichen."
+            },
+            {
+              "text": "Durch zu hohe Steuern und Abgaben auf Arbeit in vielen Ländern",
+              "ok": false,
+              "fb": "Falsch: Aus Sicht der Antikapitalisten liegt es allein an Egoismus und fehlendem guten Willen der Reichen."
+            },
+            {
+              "text": "Allein durch Egoismus und fehlenden guten Willen der Reichen",
+              "ok": true,
+              "fb": "Richtig: Aus Sicht der Antikapitalisten liegt es allein an Egoismus und fehlendem guten Willen der Reichen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wer wird im Marktsystem nach Zitelmann reich?",
+          "beleg": "those who effectively meet the needs of a large number of consumers become rich.",
+          "belegDe": "reich wird, wer die Bedürfnisse einer großen Zahl von Konsumenten wirksam erfüllt.",
+          "optionen": [
+            {
+              "text": "Wer anderen mit Gewalt ihren Besitz wegnimmt",
+              "ok": false,
+              "fb": "Falsch: Im Marktsystem wird reich, wer die Bedürfnisse einer großen Zahl von Kunden wirksam erfüllt."
+            },
+            {
+              "text": "Wer die Bedürfnisse vieler Kunden gut erfüllt",
+              "ok": true,
+              "fb": "Richtig: Im Marktsystem wird reich, wer die Bedürfnisse einer großen Zahl von Kunden wirksam erfüllt."
+            },
+            {
+              "text": "Wer Preise per Gesetz zu seinen Gunsten festlegen lässt",
+              "ok": false,
+              "fb": "Falsch: Im Marktsystem wird reich, wer die Bedürfnisse einer großen Zahl von Kunden wirksam erfüllt."
+            },
+            {
+              "text": "Wer die eigenen Märkte vor Wettbewerb abschirmen lässt",
+              "ok": false,
+              "fb": "Falsch: Im Marktsystem wird reich, wer die Bedürfnisse einer großen Zahl von Kunden wirksam erfüllt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-umverteilung-armutsbekaempfung",
+      "kurz": "Umverteilung und Armut",
+      "titel": "Armutsbekämpfung und Umverteilung aus Sicht des Nullsummendenkens",
+      "karte": "Zitelmann beschreibt: Wer glaubt, dass mehr Wohlstand bei den Reichen automatisch die Lage der Übrigen verschlechtert, sieht den Kampf gegen Armut als Kampf gegen die Reichen oder für Umverteilung. Antikapitalisten meinten nach seiner Darstellung, reiche Länder müssten einen Teil ihres Wohlstands mit armen Ländern teilen und reiche Menschen mit Armen.",
+      "quelle": {
+        "titel": "The Zero-Sum Mindset Will Get You Nowhere",
+        "url": "https://www.realclearmarkets.com/articles/2025/12/22/the_zero-sum_mindset_will_get_you_nowhere_1154907.html",
+        "herausgeber": "RealClearMarkets (Autor: Rainer Zitelmann, 22.12.2025)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie wird der Kampf gegen Armut gesehen, wenn Reichtum als Nullsumme gilt?",
+          "beleg": "will perceive the fight against poverty as synonymous with a fight against the rich or in favor of",
+          "belegDe": "wird den Kampf gegen Armut mit einem Kampf gegen die Reichen oder für „Umverteilung“ gleichsetzen.",
+          "optionen": [
+            {
+              "text": "Als Aufgabe, die allein private Spenden und Stiftungen lösen",
+              "ok": false,
+              "fb": "Falsch: Wer Reichtum als Nullsumme sieht, versteht den Kampf gegen Armut als Kampf gegen die Reichen oder für Umverteilung."
+            },
+            {
+              "text": "Als Frage, die allein durch mehr Bildung beantwortet wird",
+              "ok": false,
+              "fb": "Falsch: Wer Reichtum als Nullsumme sieht, versteht den Kampf gegen Armut als Kampf gegen die Reichen oder für Umverteilung."
+            },
+            {
+              "text": "Als Kampf gegen die Reichen oder für Umverteilung",
+              "ok": true,
+              "fb": "Richtig: Wer Reichtum als Nullsumme sieht, versteht den Kampf gegen Armut als Kampf gegen die Reichen oder für Umverteilung."
+            },
+            {
+              "text": "Als Kampf für niedrigere Steuern auf Einkommen und Vermögen",
+              "ok": false,
+              "fb": "Falsch: Wer Reichtum als Nullsumme sieht, versteht den Kampf gegen Armut als Kampf gegen die Reichen oder für Umverteilung."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wer muss nach Zitelmanns Darstellung laut Antikapitalisten teilen?",
+          "beleg": "rich countries must share some of their wealth with poor countries, and rich people must share with the impoverished.",
+          "belegDe": "reiche Länder müssten einen Teil ihres Wohlstands mit armen Ländern teilen, und reiche Menschen mit den Armen.",
+          "optionen": [
+            {
+              "text": "Reiche Länder mit armen, reiche Menschen mit Armen",
+              "ok": true,
+              "fb": "Richtig: Nach Zitelmanns Darstellung meinen Antikapitalisten, reiche Länder müssten mit armen teilen und reiche Menschen mit Armen."
+            },
+            {
+              "text": "Arme Länder mit reichen Ländern und arme Menschen mit Reichen",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmanns Darstellung meinen Antikapitalisten, reiche Länder müssten mit armen teilen und reiche Menschen mit Armen."
+            },
+            {
+              "text": "Nur Unternehmen mit ihren eigenen Beschäftigten und Kunden",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmanns Darstellung meinen Antikapitalisten, reiche Länder müssten mit armen teilen und reiche Menschen mit Armen."
+            },
+            {
+              "text": "Nur Staaten untereinander, nicht einzelne Menschen oder Firmen",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmanns Darstellung meinen Antikapitalisten, reiche Länder müssten mit armen teilen und reiche Menschen mit Armen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Vorstellung liegt der Forderung nach Umverteilung zugrunde, die Zitelmann beschreibt?",
+          "beleg": "anyone who believes that an increase in the wealth of the rich automatically results in a deterioration of the circumstances of the non- rich",
+          "belegDe": "jeder, der glaubt, dass mehr Wohlstand der Reichen automatisch die Lage der Nicht-Reichen verschlechtert",
+          "optionen": [
+            {
+              "text": "Mehr Wohlstand der Reichen verbessere automatisch die Lage der Übrigen",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmann liegt die Vorstellung zugrunde, mehr Wohlstand der Reichen verschlechtere automatisch die Lage der Übrigen."
+            },
+            {
+              "text": "Der Wohlstand der Reichen sei ohne jeden Einfluss auf die Lage der Übrigen",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmann liegt die Vorstellung zugrunde, mehr Wohlstand der Reichen verschlechtere automatisch die Lage der Übrigen."
+            },
+            {
+              "text": "Die Lage der Übrigen hänge allein von staatlichen Leistungen und Gesetzen ab",
+              "ok": false,
+              "fb": "Falsch: Nach Zitelmann liegt die Vorstellung zugrunde, mehr Wohlstand der Reichen verschlechtere automatisch die Lage der Übrigen."
+            },
+            {
+              "text": "Mehr Wohlstand der Reichen verschlechtere automatisch die Lage der Übrigen",
+              "ok": true,
+              "fb": "Richtig: Nach Zitelmann liegt die Vorstellung zugrunde, mehr Wohlstand der Reichen verschlechtere automatisch die Lage der Übrigen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-armut-rueckgang",
+      "kurz": "Armut: 90 auf 10 Prozent",
+      "titel": "Extreme Armut sank von 90 Prozent im Jahr 1820 auf rund 10 Prozent",
+      "karte": "Vor dem Kapitalismus lebte die Mehrheit der Weltbevölkerung in extremer Armut. Zitelmann nennt für 1820 eine Quote von 90 Prozent und für heute etwa 10 Prozent. Für 1981 gibt er 42,7 Prozent an, für das Jahr 2000 27,8 Prozent. Er merkt an, die heutige Quote läge bei 6,5 Prozent, hätte die Weltbank ihre Berechnung nicht zuletzt geändert. Es sind seine Angaben.",
+      "quelle": {
+        "titel": "The Zero-Sum Mindset Will Get You Nowhere",
+        "url": "https://www.realclearmarkets.com/articles/2025/12/22/the_zero-sum_mindset_will_get_you_nowhere_1154907.html",
+        "herausgeber": "RealClearMarkets (Autor: Rainer Zitelmann, 22.12.2025)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie hoch war die Quote extremer Armut weltweit 1820 nach Zitelmanns Angabe?",
+          "beleg": "in 1820, the rate was 90 percent",
+          "belegDe": "1820 lag die Quote bei 90 Prozent",
+          "optionen": [
+            {
+              "text": "90 Prozent",
+              "ok": true,
+              "fb": "Richtig: Für 1820 nennt Zitelmann eine Quote extremer Armut von 90 Prozent."
+            },
+            {
+              "text": "50 Prozent",
+              "ok": false,
+              "fb": "Falsch: Für 1820 nennt Zitelmann eine Quote extremer Armut von 90 Prozent."
+            },
+            {
+              "text": "70 Prozent",
+              "ok": false,
+              "fb": "Falsch: Für 1820 nennt Zitelmann eine Quote extremer Armut von 90 Prozent."
+            },
+            {
+              "text": "30 Prozent",
+              "ok": false,
+              "fb": "Falsch: Für 1820 nennt Zitelmann eine Quote extremer Armut von 90 Prozent."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie hoch lag die globale Armutsquote im Jahr 2000 nach Zitelmanns Angabe?",
+          "beleg": "by 2000 it had fallen to 27.8 percent",
+          "belegDe": "bis 2000 war sie auf 27,8 Prozent gefallen",
+          "optionen": [
+            {
+              "text": "42,7 Prozent",
+              "ok": false,
+              "fb": "Falsch: Im Jahr 2000 lag die Quote nach Zitelmann bei 27,8 Prozent. 42,7 Prozent war der Wert von 1981."
+            },
+            {
+              "text": "35,0 Prozent",
+              "ok": false,
+              "fb": "Falsch: Im Jahr 2000 lag die Quote nach Zitelmann bei 27,8 Prozent. 42,7 Prozent war der Wert von 1981."
+            },
+            {
+              "text": "27,8 Prozent",
+              "ok": true,
+              "fb": "Richtig: Im Jahr 2000 lag die Quote nach Zitelmann bei 27,8 Prozent. 42,7 Prozent war der Wert von 1981."
+            },
+            {
+              "text": "10,0 Prozent",
+              "ok": false,
+              "fb": "Falsch: Im Jahr 2000 lag die Quote nach Zitelmann bei 27,8 Prozent. 42,7 Prozent war der Wert von 1981."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Beobachtung passt nicht zur Annahme, Wohlstand sei eine feste Größe?",
+          "beleg": "Zero-sum thinkers cannot explain how the number of rich people can rise so quickly at the same time as the number of poor people falls so rapidly.",
+          "belegDe": "Nullsummendenker können nicht erklären, wie die Zahl der Reichen so schnell steigen kann, während zugleich die Zahl der Armen so rapide sinkt.",
+          "optionen": [
+            {
+              "text": "Die Zahl der Armen und der Reichen sank im selben Zeitraum",
+              "ok": false,
+              "fb": "Falsch: Dass die Zahl der Reichen schnell stieg, während die der Armen schnell sank, lässt sich mit einem festen Kuchen nicht erklären."
+            },
+            {
+              "text": "Die Zahl der Reichen stieg, während die der Armen sank",
+              "ok": true,
+              "fb": "Richtig: Dass die Zahl der Reichen schnell stieg, während die der Armen schnell sank, lässt sich mit einem festen Kuchen nicht erklären."
+            },
+            {
+              "text": "Die Zahl der Reichen sank, während die der Armen stieg",
+              "ok": false,
+              "fb": "Falsch: Dass die Zahl der Reichen schnell stieg, während die der Armen schnell sank, lässt sich mit einem festen Kuchen nicht erklären."
+            },
+            {
+              "text": "Beide Zahlen blieben über Jahrzehnte nahezu unverändert",
+              "ok": false,
+              "fb": "Falsch: Dass die Zahl der Reichen schnell stieg, während die der Armen schnell sank, lässt sich mit einem festen Kuchen nicht erklären."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-china-reformen",
+      "kurz": "China: Marktreformen",
+      "titel": "China: Marktreformen und der Rückgang extremer Armut",
+      "karte": "Zitelmann führt China als Beispiel an: 1981 lebten dort noch 88 Prozent der Bevölkerung in extremer Armut. Nach den marktwirtschaftlichen Reformen unter Chinas damaligem obersten Führer Deng Xiaoping, die Anfang der 1980er-Jahre begannen, fiel die Quote unter 1 Prozent. Zugleich stieg die Zahl der Milliardäre von null auf über 500; nur die USA haben mehr. Die Zahlen sind seine Angaben.",
+      "quelle": {
+        "titel": "The Zero-Sum Mindset Will Get You Nowhere",
+        "url": "https://www.realclearmarkets.com/articles/2025/12/22/the_zero-sum_mindset_will_get_you_nowhere_1154907.html",
+        "herausgeber": "RealClearMarkets (Autor: Rainer Zitelmann, 22.12.2025)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie hoch war Chinas Quote extremer Armut 1981 nach Zitelmanns Angabe?",
+          "beleg": "in 1981, 88 percent of the Chinese population were still living in extreme poverty.",
+          "belegDe": "1981 lebten noch 88 Prozent der chinesischen Bevölkerung in extremer Armut.",
+          "optionen": [
+            {
+              "text": "58 Prozent",
+              "ok": false,
+              "fb": "Falsch: 1981 lebten nach Zitelmann noch 88 Prozent der Chinesen in extremer Armut."
+            },
+            {
+              "text": "68 Prozent",
+              "ok": false,
+              "fb": "Falsch: 1981 lebten nach Zitelmann noch 88 Prozent der Chinesen in extremer Armut."
+            },
+            {
+              "text": "98 Prozent",
+              "ok": false,
+              "fb": "Falsch: 1981 lebten nach Zitelmann noch 88 Prozent der Chinesen in extremer Armut."
+            },
+            {
+              "text": "88 Prozent",
+              "ok": true,
+              "fb": "Richtig: 1981 lebten nach Zitelmann noch 88 Prozent der Chinesen in extremer Armut."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Reformen leitete Deng Xiaoping Anfang der 1980er-Jahre in China ein?",
+          "beleg": "market economy reforms initiated by Deng Xiaoping in the early 1980s",
+          "belegDe": "marktwirtschaftliche Reformen, die Deng Xiaoping Anfang der 1980er-Jahre einleitete",
+          "optionen": [
+            {
+              "text": "Marktwirtschaftliche Reformen",
+              "ok": true,
+              "fb": "Richtig: Deng Xiaoping leitete Anfang der 1980er-Jahre marktwirtschaftliche Reformen ein."
+            },
+            {
+              "text": "Eine weitere Kollektivierung der Landwirtschaft",
+              "ok": false,
+              "fb": "Falsch: Deng Xiaoping leitete Anfang der 1980er-Jahre marktwirtschaftliche Reformen ein."
+            },
+            {
+              "text": "Einen Fünfjahresplan nach Maos Vorbild",
+              "ok": false,
+              "fb": "Falsch: Deng Xiaoping leitete Anfang der 1980er-Jahre marktwirtschaftliche Reformen ein."
+            },
+            {
+              "text": "Ein Programm zur Verstaatlichung der Industrie",
+              "ok": false,
+              "fb": "Falsch: Deng Xiaoping leitete Anfang der 1980er-Jahre marktwirtschaftliche Reformen ein."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie entwickelte sich in China die Zahl der Milliardäre nach den Marktreformen?",
+          "beleg": "the number of billionaires has risen from zero to over 500 – only the United States has more.",
+          "belegDe": "die Zahl der Milliardäre ist von null auf über 500 gestiegen – nur die Vereinigten Staaten haben mehr.",
+          "optionen": [
+            {
+              "text": "Sie sank von über 500 auf null",
+              "ok": false,
+              "fb": "Falsch: Die Zahl stieg von null auf über 500. Nur die USA haben mehr Milliardäre."
+            },
+            {
+              "text": "Sie blieb dauerhaft unter zehn",
+              "ok": false,
+              "fb": "Falsch: Die Zahl stieg von null auf über 500. Nur die USA haben mehr Milliardäre."
+            },
+            {
+              "text": "Sie stieg von null auf über 500",
+              "ok": true,
+              "fb": "Richtig: Die Zahl stieg von null auf über 500. Nur die USA haben mehr Milliardäre."
+            },
+            {
+              "text": "Sie stieg auf über 500, mehr als in den USA",
+              "ok": false,
+              "fb": "Falsch: Die Zahl stieg von null auf über 500. Nur die USA haben mehr Milliardäre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-handel-smith-ricardo",
+      "kurz": "Handel: Smith und Ricardo",
+      "titel": "Handel ist kein Nullsummenspiel: Smith und Ricardo",
+      "karte": "Der schottische Ökonom und Philosoph Adam Smith (1723 bis 1790) erkannte, dass Spezialisierung und Arbeitsteilung die gesamte Produktion steigern, deshalb gewinnen beim Handel beide Seiten. Der britische Ökonom David Ricardo (1772 bis 1823) baute das aus: Selbst ein weniger effizientes Land profitiert, wenn es sich auf die Güter verlegt, die es verhältnismäßig günstiger herstellen kann.",
+      "quelle": {
+        "titel": "The Zero-Sum Mindset Will Get You Nowhere",
+        "url": "https://www.realclearmarkets.com/articles/2025/12/22/the_zero-sum_mindset_will_get_you_nowhere_1154907.html",
+        "herausgeber": "RealClearMarkets (Autor: Rainer Zitelmann, 22.12.2025)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Warum ist Handel nach Adam Smith kein Nullsummenspiel?",
+          "beleg": "trade is not a zero-sum game because specialization and the division of labor enhance overall production.",
+          "belegDe": "Handel ist kein Nullsummenspiel, weil Spezialisierung und Arbeitsteilung die Gesamtproduktion steigern.",
+          "optionen": [
+            {
+              "text": "Der Staat verteilt die Handelsgewinne jedes Mal gerecht an alle um",
+              "ok": false,
+              "fb": "Falsch: Smith sah, dass Spezialisierung und Arbeitsteilung die gesamte Produktion steigern, deshalb ist Handel kein Nullsummenspiel."
+            },
+            {
+              "text": "Handel verschiebt vorhandenen Reichtum nur zwischen den Ländern",
+              "ok": false,
+              "fb": "Falsch: Smith sah, dass Spezialisierung und Arbeitsteilung die gesamte Produktion steigern, deshalb ist Handel kein Nullsummenspiel."
+            },
+            {
+              "text": "Spezialisierung und Arbeitsteilung steigern die Produktion",
+              "ok": true,
+              "fb": "Richtig: Smith sah, dass Spezialisierung und Arbeitsteilung die gesamte Produktion steigern, deshalb ist Handel kein Nullsummenspiel."
+            },
+            {
+              "text": "Zölle gleichen die Gewinne beider Seiten am Ende wieder aus",
+              "ok": false,
+              "fb": "Falsch: Smith sah, dass Spezialisierung und Arbeitsteilung die gesamte Produktion steigern, deshalb ist Handel kein Nullsummenspiel."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welches Prinzip formulierte David Ricardo zum Handel?",
+          "beleg": "formulating the principle of comparative advantage",
+          "belegDe": "das Prinzip des komparativen Vorteils formulierte",
+          "optionen": [
+            {
+              "text": "Das Prinzip der komparativen Vorteile",
+              "ok": true,
+              "fb": "Richtig: Ricardo formulierte das Prinzip der komparativen Vorteile."
+            },
+            {
+              "text": "Das Prinzip der absoluten Kostenvorteile",
+              "ok": false,
+              "fb": "Falsch: Ricardo formulierte das Prinzip der komparativen Vorteile."
+            },
+            {
+              "text": "Das Prinzip der Selbstversorgung",
+              "ok": false,
+              "fb": "Falsch: Ricardo formulierte das Prinzip der komparativen Vorteile."
+            },
+            {
+              "text": "Das Prinzip der Meistbegünstigung",
+              "ok": false,
+              "fb": "Falsch: Ricardo formulierte das Prinzip der komparativen Vorteile."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wer kann nach Ricardo vom Handel profitieren, wenn ein Land überall weniger effizient ist?",
+          "beleg": "even a less efficient country can benefit from trade if it specializes in producing goods that it can produce relatively more cheaply.",
+          "belegDe": "selbst ein weniger effizientes Land kann vom Handel profitieren, wenn es sich auf Güter spezialisiert, die es relativ günstiger herstellen kann.",
+          "optionen": [
+            {
+              "text": "Nur das Land, das bei allen Gütern effizienter produziert",
+              "ok": false,
+              "fb": "Falsch: Auch ein weniger effizientes Land profitiert, wenn es Güter herstellt, die es verhältnismäßig günstiger produzieren kann."
+            },
+            {
+              "text": "Keines von beiden, denn der Gesamtgewinn bleibt gleich null",
+              "ok": false,
+              "fb": "Falsch: Auch ein weniger effizientes Land profitiert, wenn es Güter herstellt, die es verhältnismäßig günstiger produzieren kann."
+            },
+            {
+              "text": "Nur das Land mit den niedrigeren Löhnen und Kosten insgesamt",
+              "ok": false,
+              "fb": "Falsch: Auch ein weniger effizientes Land profitiert, wenn es Güter herstellt, die es verhältnismäßig günstiger produzieren kann."
+            },
+            {
+              "text": "Auch das weniger effiziente Land, wenn es sich spezialisiert",
+              "ok": true,
+              "fb": "Richtig: Auch ein weniger effizientes Land profitiert, wenn es Güter herstellt, die es verhältnismäßig günstiger produzieren kann."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-kooperation-im-markt",
+      "kurz": "Märkte als Kooperation",
+      "titel": "Im Markt arbeiten fast alle zusammen, der Wettbewerb ist nur die Auswahl",
+      "karte": "Beim Wort Markt denken viele zuerst an Konkurrenz. Das Institut IREF verweist auf das, was dabei übersehen wird: Kunden arbeiten mit Unternehmen zusammen, Unternehmen mit Beschäftigten, Beschäftigte untereinander, Firmen als Zulieferer und Abnehmer. Wettbewerb ist nach dieser Sicht nur das Mittel, über den Preis die besten Partner zusammenzubringen. Und je öfter Menschen selbst an solcher Zusammenarbeit teilnehmen, desto eher sehen sie Märkte als Spiel, in dem alle gewinnen können.",
+      "quelle": {
+        "titel": "Zero-sum Thinking: Disadvantageous, but gaining Ground",
+        "url": "https://en.irefeurope.org/publications/online-articles/article/zero-sum-thinking-disadvantageous-but-gaining-ground/",
+        "herausgeber": "IREF Europe (20.02.2017)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wozu dient Wettbewerb im Markt, wenn man Märkte als Zusammenarbeit sieht?",
+          "beleg": "competition in markets is merely a means to an end for bringing the best possible cooperation partners together via the price mechanism.",
+          "belegDe": "Wettbewerb auf Märkten ist lediglich ein Mittel zum Zweck, um über den Preismechanismus die bestmöglichen Kooperationspartner zusammenzubringen.",
+          "optionen": [
+            {
+              "text": "Er bringt über den Preis die besten Partner zusammen",
+              "ok": true,
+              "fb": "Richtig: Wettbewerb ist in dieser Sicht nur das Mittel, über den Preis die besten Kooperationspartner zusammenzubringen."
+            },
+            {
+              "text": "Er soll möglichst viele Anbieter vom Markt verdrängen",
+              "ok": false,
+              "fb": "Falsch: Wettbewerb ist in dieser Sicht nur das Mittel, über den Preis die besten Kooperationspartner zusammenzubringen."
+            },
+            {
+              "text": "Er verteilt einen festen Kuchen gerecht unter allen",
+              "ok": false,
+              "fb": "Falsch: Wettbewerb ist in dieser Sicht nur das Mittel, über den Preis die besten Kooperationspartner zusammenzubringen."
+            },
+            {
+              "text": "Er ersetzt die Zusammenarbeit zwischen den Firmen",
+              "ok": false,
+              "fb": "Falsch: Wettbewerb ist in dieser Sicht nur das Mittel, über den Preis die besten Kooperationspartner zusammenzubringen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wer arbeitet in Märkten zusammen, wenn man sie als Kooperation sieht?",
+          "beleg": "Consumers co-operate with companies. Companies co-operate with employees.",
+          "belegDe": "Konsumenten arbeiten mit Unternehmen zusammen. Unternehmen arbeiten mit Beschäftigten zusammen.",
+          "optionen": [
+            {
+              "text": "Nur Unternehmen untereinander, Kunden bleiben außen vor",
+              "ok": false,
+              "fb": "Falsch: Kunden arbeiten mit Unternehmen zusammen, Unternehmen mit Beschäftigten, dazu Beschäftigte untereinander und Firmen als Zulieferer."
+            },
+            {
+              "text": "Nur Beschäftigte untereinander, nicht mit der Firma",
+              "ok": false,
+              "fb": "Falsch: Kunden arbeiten mit Unternehmen zusammen, Unternehmen mit Beschäftigten, dazu Beschäftigte untereinander und Firmen als Zulieferer."
+            },
+            {
+              "text": "Kunden mit Unternehmen, Unternehmen mit Beschäftigten",
+              "ok": true,
+              "fb": "Richtig: Kunden arbeiten mit Unternehmen zusammen, Unternehmen mit Beschäftigten, dazu Beschäftigte untereinander und Firmen als Zulieferer."
+            },
+            {
+              "text": "Kunden und Unternehmen stehen sich nur als Gegner gegenüber",
+              "ok": false,
+              "fb": "Falsch: Kunden arbeiten mit Unternehmen zusammen, Unternehmen mit Beschäftigten, dazu Beschäftigte untereinander und Firmen als Zulieferer."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wann sehen Menschen Interaktionen eher als Positivsummenspiel?",
+          "beleg": "people are more likely to perceive interactions as a positive sum game, the more often they are actually participating in them.",
+          "belegDe": "Menschen nehmen Interaktionen eher als Positivsummenspiel wahr, je öfter sie tatsächlich daran teilnehmen.",
+          "optionen": [
+            {
+              "text": "Je weniger sie im Alltag mit anderen Menschen zu tun haben",
+              "ok": false,
+              "fb": "Falsch: Nach IREF sehen Menschen Interaktionen eher als Positivsummenspiel, je öfter sie tatsächlich an solchen teilnehmen."
+            },
+            {
+              "text": "Je öfter sie selbst an solchen Interaktionen teilnehmen",
+              "ok": true,
+              "fb": "Richtig: Nach IREF sehen Menschen Interaktionen eher als Positivsummenspiel, je öfter sie tatsächlich an solchen teilnehmen."
+            },
+            {
+              "text": "Je härter der Wettbewerb ist, dem sie im Beruf ausgesetzt sind",
+              "ok": false,
+              "fb": "Falsch: Nach IREF sehen Menschen Interaktionen eher als Positivsummenspiel, je öfter sie tatsächlich an solchen teilnehmen."
+            },
+            {
+              "text": "Je höher ihr Einkommen im Vergleich zu anderen ist",
+              "ok": false,
+              "fb": "Falsch: Nach IREF sehen Menschen Interaktionen eher als Positivsummenspiel, je öfter sie tatsächlich an solchen teilnehmen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-politik-zwei-denkweisen",
+      "kurz": "Zwei Denkweisen, Politik",
+      "titel": "Zwei Denkweisen über Wirtschaft, zwei Erwartungen an die Politik",
+      "karte": "Das Institut IREF beschreibt zwei Denkweisen. Nullsummendenken betont die Verteilung eines Betrags an Vermögen, Einkommen, Gütern und Jobs, den es als fest wahrnimmt. Es motiviert den Ruf nach politischem Eingriff, um den als schwächer wahrgenommenen Wettbewerber vor dem als stärker wahrgenommenen zu schützen. Positivsummendenken betont, dass sich Einkommen, Vermögen und Güter durch zusätzliche Möglichkeiten der Zusammenarbeit vermehren. Es führt zur Forderung nach politischem Handeln, das freiwillige Zusammenarbeit erleichtert.",
+      "quelle": {
+        "titel": "Zero-sum Thinking: Disadvantageous, but gaining Ground",
+        "url": "https://en.irefeurope.org/publications/online-articles/article/zero-sum-thinking-disadvantageous-but-gaining-ground/",
+        "herausgeber": "IREF Europe (20.02.2017)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was betont Nullsummendenken in Bezug auf Vermögen, Einkommen und Jobs?",
+          "beleg": "Zero-sum thinking emphasises the distribution of an amount of wealth, income, goods and services or jobs, perceived as fixed",
+          "belegDe": "Nullsummendenken betont die Verteilung eines Betrags an Vermögen, Einkommen, Gütern und Dienstleistungen oder Jobs, der als fest wahrgenommen wird",
+          "optionen": [
+            {
+              "text": "Die Vermehrung des Betrags durch zusätzliche Zusammenarbeit",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken betont die Verteilung eines Betrags, der als fest wahrgenommen wird."
+            },
+            {
+              "text": "Die Preisbildung auf offenen Märkten durch Angebot und Nachfrage",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken betont die Verteilung eines Betrags, der als fest wahrgenommen wird."
+            },
+            {
+              "text": "Die Verteilung eines als fest wahrgenommenen Betrags",
+              "ok": true,
+              "fb": "Richtig: Nullsummendenken betont die Verteilung eines Betrags, der als fest wahrgenommen wird."
+            },
+            {
+              "text": "Die Verteilung nach Leistung und nach Bedarf der Einzelnen",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken betont die Verteilung eines Betrags, der als fest wahrgenommen wird."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wozu motiviert Nullsummendenken in der Politik?",
+          "beleg": "motivates a call for political intervention in order to protect the allegedly weaker competitor from the allegedly stronger competitor.",
+          "belegDe": "motiviert den Ruf nach politischem Eingriff, um den als schwächer wahrgenommenen Wettbewerber vor dem als stärker wahrgenommenen zu schützen.",
+          "optionen": [
+            {
+              "text": "Zum Ruf nach politischem Eingriff zugunsten des Schwächeren",
+              "ok": true,
+              "fb": "Richtig: Nullsummendenken motiviert den Ruf nach politischem Eingriff, um den als schwächer wahrgenommenen Wettbewerber zu schützen."
+            },
+            {
+              "text": "Zum Verzicht auf jede politische Beteiligung am Marktgeschehen",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken motiviert den Ruf nach politischem Eingriff, um den als schwächer wahrgenommenen Wettbewerber zu schützen."
+            },
+            {
+              "text": "Zum Ruf nach Maßnahmen, die Zusammenarbeit erleichtern sollen",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken motiviert den Ruf nach politischem Eingriff, um den als schwächer wahrgenommenen Wettbewerber zu schützen."
+            },
+            {
+              "text": "Zur Forderung nach höheren Preisen für alle gehandelten Güter",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken motiviert den Ruf nach politischem Eingriff, um den als schwächer wahrgenommenen Wettbewerber zu schützen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche politische Forderung gehört zum Positivsummendenken?",
+          "beleg": "leads to the demand of political actions which make it easier for people to co-operate voluntarily with each other.",
+          "belegDe": "führt zur Forderung nach politischem Handeln, das es Menschen erleichtert, freiwillig miteinander zusammenzuarbeiten.",
+          "optionen": [
+            {
+              "text": "Maßnahmen, die den Schwächeren vor dem Stärkeren schützen",
+              "ok": false,
+              "fb": "Falsch: Positivsummendenken führt zur Forderung nach politischem Handeln, das es Menschen erleichtert, freiwillig zusammenzuarbeiten."
+            },
+            {
+              "text": "Maßnahmen, die einen festen Betrag neu verteilen",
+              "ok": false,
+              "fb": "Falsch: Positivsummendenken führt zur Forderung nach politischem Handeln, das es Menschen erleichtert, freiwillig zusammenzuarbeiten."
+            },
+            {
+              "text": "Maßnahmen, die Zusammenarbeit zwischen Firmen verbieten",
+              "ok": false,
+              "fb": "Falsch: Positivsummendenken führt zur Forderung nach politischem Handeln, das es Menschen erleichtert, freiwillig zusammenzuarbeiten."
+            },
+            {
+              "text": "Maßnahmen, die freiwillige Zusammenarbeit erleichtern",
+              "ok": true,
+              "fb": "Richtig: Positivsummendenken führt zur Forderung nach politischem Handeln, das es Menschen erleichtert, freiwillig zusammenzuarbeiten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-neid-umfrage",
+      "kurz": "Neid: 13-Länder-Umfrage",
+      "titel": "13-Länder-Umfrage: Neid und Nullsummendenken hängen zusammen",
+      "karte": "Zitelmann ließ das Institut Ipsos MORI in 13 Ländern befragen, wie Menschen über Reichtum und Reiche denken. Mehrere Fragen maßen sozialen Neid. Am häufigsten war er in Frankreich, danach in Deutschland; deutlich seltener in Polen, Japan und Vietnam. Eine Aussage stand für Nullsummendenken: Je mehr die Reichen haben, desto weniger bleibt für die Armen. Auftraggeber der Umfrage ist Zitelmann selbst.",
+      "quelle": {
+        "titel": "The Zero-Sum Mindset Will Get You Nowhere",
+        "url": "https://www.realclearmarkets.com/articles/2025/12/22/the_zero-sum_mindset_will_get_you_nowhere_1154907.html",
+        "herausgeber": "RealClearMarkets (Autor: Rainer Zitelmann, 22.12.2025)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "In welchem Land war sozialer Neid in Zitelmanns 13-Länder-Umfrage am stärksten?",
+          "beleg": "social envy was most prevalent in France, followed by Germany.",
+          "belegDe": "sozialer Neid war am stärksten in Frankreich verbreitet, gefolgt von Deutschland.",
+          "optionen": [
+            {
+              "text": "In Deutschland",
+              "ok": false,
+              "fb": "Falsch: Am stärksten war sozialer Neid in Frankreich, gefolgt von Deutschland."
+            },
+            {
+              "text": "In Frankreich",
+              "ok": true,
+              "fb": "Richtig: Am stärksten war sozialer Neid in Frankreich, gefolgt von Deutschland."
+            },
+            {
+              "text": "In Vietnam",
+              "ok": false,
+              "fb": "Falsch: Am stärksten war sozialer Neid in Frankreich, gefolgt von Deutschland."
+            },
+            {
+              "text": "In Japan",
+              "ok": false,
+              "fb": "Falsch: Am stärksten war sozialer Neid in Frankreich, gefolgt von Deutschland."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Länder zeigten deutlich weniger Neid als Frankreich und Deutschland?",
+          "beleg": "countries such as Poland, Japan, and Vietnam exhibited significantly less envy.",
+          "belegDe": "Länder wie Polen, Japan und Vietnam zeigten deutlich weniger Neid.",
+          "optionen": [
+            {
+              "text": "Frankreich, Japan und Vietnam",
+              "ok": false,
+              "fb": "Falsch: Deutlich weniger Neid zeigten Polen, Japan und Vietnam."
+            },
+            {
+              "text": "Deutschland, Polen und Japan",
+              "ok": false,
+              "fb": "Falsch: Deutlich weniger Neid zeigten Polen, Japan und Vietnam."
+            },
+            {
+              "text": "Frankreich, Deutschland und Polen",
+              "ok": false,
+              "fb": "Falsch: Deutlich weniger Neid zeigten Polen, Japan und Vietnam."
+            },
+            {
+              "text": "Polen, Japan und Vietnam",
+              "ok": true,
+              "fb": "Richtig: Deutlich weniger Neid zeigten Polen, Japan und Vietnam."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was zeigte der Vergleich von Neidern und Nicht-Neidern bei der Nullsummen-Aussage?",
+          "beleg": "in all 13 countries, enviers far more frequently agreed with the above zero-sum statement than non-enviers.",
+          "belegDe": "in allen 13 Ländern stimmten Neider der genannten Nullsummen-Aussage weit häufiger zu als Nicht-Neider.",
+          "optionen": [
+            {
+              "text": "Neider lehnten sie in allen 13 Ländern deutlich häufiger ab",
+              "ok": false,
+              "fb": "Falsch: In allen 13 Ländern stimmten Neider der Nullsummen-Aussage weit häufiger zu als Nicht-Neider."
+            },
+            {
+              "text": "Neider stimmten ihr in allen 13 Ländern weit häufiger zu",
+              "ok": true,
+              "fb": "Richtig: In allen 13 Ländern stimmten Neider der Nullsummen-Aussage weit häufiger zu als Nicht-Neider."
+            },
+            {
+              "text": "Nur in Frankreich und Deutschland stimmten Neider häufiger zu",
+              "ok": false,
+              "fb": "Falsch: In allen 13 Ländern stimmten Neider der Nullsummen-Aussage weit häufiger zu als Nicht-Neider."
+            },
+            {
+              "text": "Beide Gruppen stimmten ihr in allen Ländern gleich häufig zu",
+              "ok": false,
+              "fb": "Falsch: In allen 13 Ländern stimmten Neider der Nullsummen-Aussage weit häufiger zu als Nicht-Neider."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-oekonomen-laien",
+      "kurz": "Ökonomen und Laien",
+      "titel": "Ökonomen sehen Märkte als Positivsummenspiel, Laien oft nicht",
+      "karte": "Nach einer Analyse des Instituts IREF betrachten Ökonomen freiwilligen Austausch auf Märkten als ein Spiel, bei dem alle Beteiligten gewinnen. Wer keine ökonomische Ausbildung hat, sieht darin eher Gewinner und Verlierer. Er hält außerdem die Menge an Gütern und die Zahl der Jobs für fest. Ökonomen verweisen dagegen auf Effizienz und Produktivität, die das Angebot wachsen lassen.",
+      "quelle": {
+        "titel": "Zero-sum Thinking: Disadvantageous, but gaining Ground",
+        "url": "https://en.irefeurope.org/publications/online-articles/article/zero-sum-thinking-disadvantageous-but-gaining-ground/",
+        "herausgeber": "IREF Europe (20.02.2017)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie sehen Ökonomen freiwillige Interaktionen auf Märkten?",
+          "beleg": "Economists regard voluntary interactions between people on markets as positive-sum game from which all participants benefit.",
+          "belegDe": "Ökonomen betrachten freiwillige Interaktionen zwischen Menschen auf Märkten als Positivsummenspiel, von dem alle Beteiligten profitieren.",
+          "optionen": [
+            {
+              "text": "Als Nullsummenspiel mit Gewinnern und Verlierern",
+              "ok": false,
+              "fb": "Falsch: Ökonomen sehen darin ein Positivsummenspiel, von dem alle Beteiligten profitieren."
+            },
+            {
+              "text": "Als Verteilung eines festen Kuchens",
+              "ok": false,
+              "fb": "Falsch: Ökonomen sehen darin ein Positivsummenspiel, von dem alle Beteiligten profitieren."
+            },
+            {
+              "text": "Als Positivsummenspiel, von dem alle profitieren",
+              "ok": true,
+              "fb": "Richtig: Ökonomen sehen darin ein Positivsummenspiel, von dem alle Beteiligten profitieren."
+            },
+            {
+              "text": "Als Spiel, das nur Verkäufer begünstigt",
+              "ok": false,
+              "fb": "Falsch: Ökonomen sehen darin ein Positivsummenspiel, von dem alle Beteiligten profitieren."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was nehmen Nicht-Ökonomen oft über Gütermenge und Arbeitsplätze an?",
+          "beleg": "regard the produced amount of goods and services as well as the number of jobs as fixed",
+          "belegDe": "betrachten die erzeugte Menge an Gütern und Dienstleistungen sowie die Zahl der Jobs als fest",
+          "optionen": [
+            {
+              "text": "Beide seien eine feste Größe",
+              "ok": true,
+              "fb": "Richtig: Nicht-Ökonomen halten Gütermenge und Zahl der Jobs oft für fest."
+            },
+            {
+              "text": "Beide wüchsen von selbst immer weiter",
+              "ok": false,
+              "fb": "Falsch: Nicht-Ökonomen halten Gütermenge und Zahl der Jobs oft für fest."
+            },
+            {
+              "text": "Nur die Gütermenge sei fest, Jobs nicht",
+              "ok": false,
+              "fb": "Falsch: Nicht-Ökonomen halten Gütermenge und Zahl der Jobs oft für fest."
+            },
+            {
+              "text": "Beide sänken zwangsläufig",
+              "ok": false,
+              "fb": "Falsch: Nicht-Ökonomen halten Gütermenge und Zahl der Jobs oft für fest."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was lässt die Produktionsmöglichkeiten einer Wirtschaft nach Ökonomen-Sicht wachsen?",
+          "beleg": "efficiency gains and increased productivity can let our production capabilities grow.",
+          "belegDe": "Effizienzgewinne und höhere Produktivität können unsere Produktionsmöglichkeiten wachsen lassen.",
+          "optionen": [
+            {
+              "text": "Eine feste Zahl von Arbeitsstunden je Kopf",
+              "ok": false,
+              "fb": "Falsch: Effizienzgewinne und höhere Produktivität lassen die Produktionsmöglichkeiten wachsen."
+            },
+            {
+              "text": "Die gerechtere Umverteilung vorhandener Güter",
+              "ok": false,
+              "fb": "Falsch: Effizienzgewinne und höhere Produktivität lassen die Produktionsmöglichkeiten wachsen."
+            },
+            {
+              "text": "Weniger Beteiligte und weniger Konkurrenz",
+              "ok": false,
+              "fb": "Falsch: Effizienzgewinne und höhere Produktivität lassen die Produktionsmöglichkeiten wachsen."
+            },
+            {
+              "text": "Effizienzgewinne und höhere Produktivität",
+              "ok": true,
+              "fb": "Richtig: Effizienzgewinne und höhere Produktivität lassen die Produktionsmöglichkeiten wachsen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-wertewandel-deutschland",
+      "kurz": "Nullsumme in Deutschland",
+      "titel": "World Value Survey: Nullsummendenken nimmt in Deutschland zu",
+      "karte": "Im World Value Survey bewerten Befragte auf einer Skala von 1 bis 10 zwei Meinungen: Man werde nur auf Kosten anderer reich (1) oder Wohlstand könne so wachsen, dass es für alle reicht (10). Seit der ersten Befragung in Deutschland 1997 fiel der Durchschnitt in Ost und West, im Osten stärker. IREF liest das als Zeichen, dass Nullsummendenken verbreiteter ist als in den 1990ern, trotz möglicher Messfehler.",
+      "quelle": {
+        "titel": "Zero-sum Thinking: Disadvantageous, but gaining Ground",
+        "url": "https://en.irefeurope.org/publications/online-articles/article/zero-sum-thinking-disadvantageous-but-gaining-ground/",
+        "herausgeber": "IREF Europe (20.02.2017)",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche Aussage im World Value Survey steht für Nullsummendenken?",
+          "beleg": "People can only become rich at the expense of their fellow people",
+          "belegDe": "Man kann nur auf Kosten seiner Mitmenschen reich werden",
+          "optionen": [
+            {
+              "text": "Wohlstand kann so wachsen, dass es für alle reicht",
+              "ok": false,
+              "fb": "Falsch: Die Aussage, man könne nur auf Kosten anderer reich werden, steht für Nullsummendenken."
+            },
+            {
+              "text": "Man kann nur auf Kosten anderer reich werden",
+              "ok": true,
+              "fb": "Richtig: Die Aussage, man könne nur auf Kosten anderer reich werden, steht für Nullsummendenken."
+            },
+            {
+              "text": "Wer reich ist, hat es sich verdient",
+              "ok": false,
+              "fb": "Falsch: Die Aussage, man könne nur auf Kosten anderer reich werden, steht für Nullsummendenken."
+            },
+            {
+              "text": "Reiche sollten stärker besteuert werden",
+              "ok": false,
+              "fb": "Falsch: Die Aussage, man könne nur auf Kosten anderer reich werden, steht für Nullsummendenken."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was fiel seit 1997 bei den Antworten deutscher Befragter im World Value Survey auf?",
+          "beleg": "the average of the given answers in East- and West-Germany fell from above 6 to below 6.",
+          "belegDe": "der Durchschnitt der Antworten in Ost- und Westdeutschland sank von über 6 auf unter 6.",
+          "optionen": [
+            {
+              "text": "Der Durchschnitt stieg von unter 6 auf über 6",
+              "ok": false,
+              "fb": "Falsch: Der Durchschnitt fiel in Ost und West von über 6 auf unter 6, im Osten stärker."
+            },
+            {
+              "text": "Der Durchschnitt blieb bei genau 5",
+              "ok": false,
+              "fb": "Falsch: Der Durchschnitt fiel in Ost und West von über 6 auf unter 6, im Osten stärker."
+            },
+            {
+              "text": "Der Durchschnitt sank von 9 auf 7",
+              "ok": false,
+              "fb": "Falsch: Der Durchschnitt fiel in Ost und West von über 6 auf unter 6, im Osten stärker."
+            },
+            {
+              "text": "Der Durchschnitt sank von über 6 auf unter 6",
+              "ok": true,
+              "fb": "Richtig: Der Durchschnitt fiel in Ost und West von über 6 auf unter 6, im Osten stärker."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was zeigt der gesunkene Durchschnitt auf der Skala von 1 bis 10?",
+          "beleg": "These results are an indicator that zero-sum thinking is more popular now than in the 1990s.",
+          "belegDe": "Diese Ergebnisse sind ein Hinweis darauf, dass Nullsummendenken heute verbreiteter ist als in den 1990er-Jahren.",
+          "optionen": [
+            {
+              "text": "Positivsummendenken ist heute verbreiteter als in den 1990ern",
+              "ok": false,
+              "fb": "Falsch: Nach IREF deutet der Rückgang darauf hin, dass Nullsummendenken heute verbreiteter ist als in den 1990ern."
+            },
+            {
+              "text": "Nullsummendenken ist heute verbreiteter als in den 1990ern",
+              "ok": true,
+              "fb": "Richtig: Nach IREF deutet der Rückgang darauf hin, dass Nullsummendenken heute verbreiteter ist als in den 1990ern."
+            },
+            {
+              "text": "Die Befragten antworten heute weniger sorgfältig als früher",
+              "ok": false,
+              "fb": "Falsch: Nach IREF deutet der Rückgang darauf hin, dass Nullsummendenken heute verbreiteter ist als in den 1990ern."
+            },
+            {
+              "text": "Ost und West denken heute in dieser Frage genau gleich",
+              "ok": false,
+              "fb": "Falsch: Nach IREF deutet der Rückgang darauf hin, dass Nullsummendenken heute verbreiteter ist als in den 1990ern."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-davidai-ongis",
+      "kurz": "Nullsumme: Links und Rechts",
+      "titel": "Nullsummendenken ist keine Frage von links oder rechts",
+      "karte": "Die Forscher Shai Davidai (Columbia Business School) und Martino Ongis (New School for Social Research) untersuchten 2019 in der Zeitschrift Science Advances, wie politische Haltung und Nullsummendenken zusammenhängen. Befragt wurden Menschen in den USA, die sich zwischen „sehr liberal“ (links) und „sehr konservativ“ (rechts) einordneten; „liberal“ meint dort links, nicht marktliberal wie im Deutschen. Ergebnis aus sechs Studien: Linke wie Konservative halten das Leben für ein Nullsummenspiel, wenn es ihrer Haltung nützt. Konservative tun das, wenn die bestehende Ordnung angegriffen wird, Linke, wenn sie verteidigt wird.",
+      "quelle": {
+        "titel": "The politics of zero-sum thinking: The relationship between political ideology and the belief that life is a zero-sum game",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6989335/",
+        "herausgeber": "Science Advances 2019 (Davidai und Ongis), über PubMed Central",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viele Personen nahmen 2019 an der Studienreihe zu Politik und Nullsummendenken teil?",
+          "beleg": "Six studies (N = 3223)",
+          "belegDe": "Sechs Studien (N = 3223)",
+          "optionen": [
+            {
+              "text": "1.020 Personen",
+              "ok": false,
+              "fb": "Falsch: An den sechs Studien nahmen 3.223 Personen teil. 10.000 Teilnehmende gehören zu einer anderen Studienreihe."
+            },
+            {
+              "text": "6.000 Personen",
+              "ok": false,
+              "fb": "Falsch: An den sechs Studien nahmen 3.223 Personen teil. 10.000 Teilnehmende gehören zu einer anderen Studienreihe."
+            },
+            {
+              "text": "10.000 Personen",
+              "ok": false,
+              "fb": "Falsch: An den sechs Studien nahmen 3.223 Personen teil. 10.000 Teilnehmende gehören zu einer anderen Studienreihe."
+            },
+            {
+              "text": "3.223 Personen",
+              "ok": true,
+              "fb": "Richtig: An den sechs Studien nahmen 3.223 Personen teil. 10.000 Teilnehmende gehören zu einer anderen Studienreihe."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wann denken Konservative eher in Nullsummen?",
+          "beleg": "conservatives exhibit zero-sum thinking when the status quo is challenged",
+          "belegDe": "Konservative zeigen Nullsummendenken, wenn der Status quo infrage gestellt wird",
+          "optionen": [
+            {
+              "text": "Wenn der Status quo infrage gestellt wird",
+              "ok": true,
+              "fb": "Richtig: Konservative neigen dazu, wenn der Status quo infrage gestellt wird. Politisch Linke tun es, wenn er verteidigt wird."
+            },
+            {
+              "text": "Wenn der Status quo verteidigt wird",
+              "ok": false,
+              "fb": "Falsch: Konservative neigen dazu, wenn der Status quo infrage gestellt wird. Politisch Linke tun es, wenn er verteidigt wird."
+            },
+            {
+              "text": "Nur bei Fragen der Vermögensverteilung",
+              "ok": false,
+              "fb": "Falsch: Konservative neigen dazu, wenn der Status quo infrage gestellt wird. Politisch Linke tun es, wenn er verteidigt wird."
+            },
+            {
+              "text": "Nie, sie denken stets positiv",
+              "ok": false,
+              "fb": "Falsch: Konservative neigen dazu, wenn der Status quo infrage gestellt wird. Politisch Linke tun es, wenn er verteidigt wird."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche Ungleichheit sehen politisch Linke in den USA eher als Nullsummenspiel?",
+          "beleg": "liberals view economic inequalities—where the status quo has remained relatively unchallenged in past decades—as such.",
+          "belegDe": "„liberals“ (in den USA: politisch links) sehen wirtschaftliche Ungleichheit – deren Status quo in den vergangenen Jahrzehnten relativ unangefochten blieb – als solche (Nullsumme).",
+          "optionen": [
+            {
+              "text": "Die soziale Ungleichheit zwischen Gruppen",
+              "ok": false,
+              "fb": "Falsch: Politisch Linke sehen eher die wirtschaftliche Ungleichheit so, Konservative eher die soziale."
+            },
+            {
+              "text": "Die Ungleichheit zwischen den Generationen",
+              "ok": false,
+              "fb": "Falsch: Politisch Linke sehen eher die wirtschaftliche Ungleichheit so, Konservative eher die soziale."
+            },
+            {
+              "text": "Die wirtschaftliche Ungleichheit",
+              "ok": true,
+              "fb": "Richtig: Politisch Linke sehen eher die wirtschaftliche Ungleichheit so, Konservative eher die soziale."
+            },
+            {
+              "text": "Keine, sie lehnen Nullsummendenken ab",
+              "ok": false,
+              "fb": "Falsch: Politisch Linke sehen eher die wirtschaftliche Ungleichheit so, Konservative eher die soziale."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-nullsumme-ungleichheit",
+      "kurz": "Nullsumme und Ungleichheit",
+      "titel": "Vermögen als feste Größe und die Haltung zu wirtschaftlicher Ungleichheit",
+      "karte": "In einer zusätzlichen Studie (S1) maßen Davidai und Ongis, wie sehr Teilnehmende Vermögen als Nullsummen-Ressource sehen und wie positiv sie wirtschaftliche Ungleichheit bewerten. Je stärker jemand Vermögen für eine Nullsummen-Ressource hielt, desto stärker lehnte er Ungleichheit ab. Der Zusammenhang blieb bestehen, wenn die politische Haltung der Teilnehmenden einbezogen wurde.",
+      "quelle": {
+        "titel": "The politics of zero-sum thinking: The relationship between political ideology and the belief that life is a zero-sum game",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6989335/",
+        "herausgeber": "Science Advances 2019 (Davidai und Ongis), über PubMed Central",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie hängt der Glaube an Vermögen als Nullsumme mit der Haltung zu Ungleichheit zusammen?",
+          "beleg": "The more participants believed that wealth was a zero-sum resource, the more they opposed inequality.",
+          "belegDe": "Je stärker die Teilnehmenden glaubten, Vermögen sei eine Nullsummen-Ressource, desto stärker lehnten sie Ungleichheit ab.",
+          "optionen": [
+            {
+              "text": "Je stärker der Glaube, desto stärker die Zustimmung zu Ungleichheit",
+              "ok": false,
+              "fb": "Falsch: Je stärker Teilnehmende Vermögen als Nullsummen-Ressource sahen, desto stärker lehnten sie Ungleichheit ab."
+            },
+            {
+              "text": "Je stärker der Glaube, desto stärker die Ablehnung von Ungleichheit",
+              "ok": true,
+              "fb": "Richtig: Je stärker Teilnehmende Vermögen als Nullsummen-Ressource sahen, desto stärker lehnten sie Ungleichheit ab."
+            },
+            {
+              "text": "Zwischen beidem fand die Studie in keiner Gruppe irgendeinen Zusammenhang",
+              "ok": false,
+              "fb": "Falsch: Je stärker Teilnehmende Vermögen als Nullsummen-Ressource sahen, desto stärker lehnten sie Ungleichheit ab."
+            },
+            {
+              "text": "Der Zusammenhang zeigte sich nur bei politisch konservativen Befragten",
+              "ok": false,
+              "fb": "Falsch: Je stärker Teilnehmende Vermögen als Nullsummen-Ressource sahen, desto stärker lehnten sie Ungleichheit ab."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Blieb der Zusammenhang zur Haltung zu Ungleichheit trotz politischer Haltung bestehen?",
+          "beleg": "zero-sum thinking remained a significant predictor of support for inequality beyond participants’ ideology",
+          "belegDe": "Nullsummendenken blieb ein signifikanter Prädiktor für die Unterstützung von Ungleichheit, auch über die Ideologie der Teilnehmenden hinaus",
+          "optionen": [
+            {
+              "text": "Nein, er verschwand nach dem Einbezug der Haltung vollständig",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken blieb auch unter Einbezug der politischen Haltung ein signifikanter Prädiktor für die Haltung zu Ungleichheit."
+            },
+            {
+              "text": "Er blieb nur bei Befragten mit hohem Einkommen und Bildung bestehen",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken blieb auch unter Einbezug der politischen Haltung ein signifikanter Prädiktor für die Haltung zu Ungleichheit."
+            },
+            {
+              "text": "Die Studie hat diese Frage in keiner ihrer Untersuchungen geprüft",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken blieb auch unter Einbezug der politischen Haltung ein signifikanter Prädiktor für die Haltung zu Ungleichheit."
+            },
+            {
+              "text": "Ja, er blieb über die politische Haltung hinaus bestehen",
+              "ok": true,
+              "fb": "Richtig: Nullsummendenken blieb auch unter Einbezug der politischen Haltung ein signifikanter Prädiktor für die Haltung zu Ungleichheit."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was bedeutet es, dass Nullsummendenken Einstellungen über die Ideologie hinaus vorhersagt?",
+          "beleg": "Zero-sum thinking also has a unique effect in its ability to predict people’s attitudes about important societal issues above and beyond their political ideology.",
+          "belegDe": "Nullsummendenken hat außerdem einen eigenen Effekt: Es sagt Einstellungen zu wichtigen gesellschaftlichen Fragen über die politische Ideologie hinaus voraus.",
+          "optionen": [
+            {
+              "text": "Es ersetzt die politische Haltung als Erklärung vollständig und überall",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken hat einen eigenen Effekt: Es sagt Einstellungen zu gesellschaftlichen Fragen über die politische Ideologie hinaus voraus."
+            },
+            {
+              "text": "Es erklärt Einstellungen zusätzlich zur politischen Haltung",
+              "ok": true,
+              "fb": "Richtig: Nullsummendenken hat einen eigenen Effekt: Es sagt Einstellungen zu gesellschaftlichen Fragen über die politische Ideologie hinaus voraus."
+            },
+            {
+              "text": "Es hängt allein von der politischen Haltung der jeweiligen Person ab",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken hat einen eigenen Effekt: Es sagt Einstellungen zu gesellschaftlichen Fragen über die politische Ideologie hinaus voraus."
+            },
+            {
+              "text": "Es sagt ausschließlich das spätere Wahlverhalten von Personen voraus",
+              "ok": false,
+              "fb": "Falsch: Nullsummendenken hat einen eigenen Effekt: Es sagt Einstellungen zu gesellschaftlichen Fragen über die politische Ideologie hinaus voraus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-nullsumme-zuwanderung",
+      "kurz": "Nullsumme und Zuwanderung",
+      "titel": "Zuwanderung als Nullsummenspiel und Zustimmung zu strengeren Regeln",
+      "karte": "In einer weiteren zusätzlichen Studie (S2) maßen Davidai und Ongis, wie stark Teilnehmende Zuwanderung als Nullsummenspiel sehen und wie sehr sie eine strengere Einwanderungspolitik unterstützen. Je stärker Zuwanderung als Nullsumme gesehen wurde, desto stärker war die Unterstützung strengerer Maßnahmen. Der Zusammenhang blieb bestehen, wenn die politische Haltung der Teilnehmenden einbezogen wurde.",
+      "quelle": {
+        "titel": "The politics of zero-sum thinking: The relationship between political ideology and the belief that life is a zero-sum game",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6989335/",
+        "herausgeber": "Science Advances 2019 (Davidai und Ongis), über PubMed Central",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie hängt der Nullsummen-Glaube zu Zuwanderung mit strengeren Einwanderungsregeln zusammen?",
+          "beleg": "The more participants viewed immigration as zero-sum, the more they supported taking a tough stance against immigration.",
+          "belegDe": "Je stärker die Teilnehmenden Zuwanderung als Nullsumme sahen, desto stärker unterstützten sie eine harte Haltung gegen Zuwanderung.",
+          "optionen": [
+            {
+              "text": "Je stärker der Glaube, desto stärker die Unterstützung strengerer Regeln",
+              "ok": true,
+              "fb": "Richtig: Je stärker Teilnehmende Zuwanderung als Nullsumme sahen, desto stärker unterstützten sie eine strengere Haltung."
+            },
+            {
+              "text": "Je stärker der Glaube, desto schwächer die Unterstützung strengerer Regeln",
+              "ok": false,
+              "fb": "Falsch: Je stärker Teilnehmende Zuwanderung als Nullsumme sahen, desto stärker unterstützten sie eine strengere Haltung."
+            },
+            {
+              "text": "Zwischen beidem fand die Studie in keiner Gruppe irgendeinen Zusammenhang",
+              "ok": false,
+              "fb": "Falsch: Je stärker Teilnehmende Zuwanderung als Nullsumme sahen, desto stärker unterstützten sie eine strengere Haltung."
+            },
+            {
+              "text": "Der Zusammenhang zeigte sich nur bei Befragten mit linker politischer Haltung",
+              "ok": false,
+              "fb": "Falsch: Je stärker Teilnehmende Zuwanderung als Nullsumme sahen, desto stärker unterstützten sie eine strengere Haltung."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Blieb der Zusammenhang zur Einwanderungspolitik trotz politischer Haltung bestehen?",
+          "beleg": "viewing immigration as zero-sum uniquely predicted support for anti-immigration policies",
+          "belegDe": "die Sicht auf Zuwanderung als Nullsumme sagte die Unterstützung einer strengen Einwanderungspolitik eigenständig voraus",
+          "optionen": [
+            {
+              "text": "Nein, er verschwand nach dem Einbezug der Haltung vollständig",
+              "ok": false,
+              "fb": "Falsch: Die Nullsummen-Sicht auf Zuwanderung sagte die Unterstützung strengerer Politik über die politische Ideologie hinaus voraus."
+            },
+            {
+              "text": "Er blieb nur bei Befragten mit hohem Einkommen und Bildung bestehen",
+              "ok": false,
+              "fb": "Falsch: Die Nullsummen-Sicht auf Zuwanderung sagte die Unterstützung strengerer Politik über die politische Ideologie hinaus voraus."
+            },
+            {
+              "text": "Ja, er blieb über die politische Haltung hinaus bestehen",
+              "ok": true,
+              "fb": "Richtig: Die Nullsummen-Sicht auf Zuwanderung sagte die Unterstützung strengerer Politik über die politische Ideologie hinaus voraus."
+            },
+            {
+              "text": "Die Studie hat diese Frage in keiner ihrer Untersuchungen geprüft",
+              "ok": false,
+              "fb": "Falsch: Die Nullsummen-Sicht auf Zuwanderung sagte die Unterstützung strengerer Politik über die politische Ideologie hinaus voraus."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche beiden Größen setzte die Studie zu Zuwanderung in Beziehung?",
+          "beleg": "participants’ tendency to view immigration as zero-sum, their support for various anti-immigration policies",
+          "belegDe": "die Neigung der Teilnehmenden, Zuwanderung als Nullsumme zu sehen, ihre Unterstützung verschiedener Maßnahmen gegen Zuwanderung",
+          "optionen": [
+            {
+              "text": "Das Einkommen der Befragten und ihr Wohnort in Stadt oder auf dem Land",
+              "ok": false,
+              "fb": "Falsch: Die Studie setzte die Nullsummen-Sicht auf Zuwanderung und die Unterstützung strengerer Einwanderungspolitik in Beziehung."
+            },
+            {
+              "text": "Nullsummen-Sicht auf Zuwanderung und Unterstützung strengerer Regeln",
+              "ok": true,
+              "fb": "Richtig: Die Studie setzte die Nullsummen-Sicht auf Zuwanderung und die Unterstützung strengerer Einwanderungspolitik in Beziehung."
+            },
+            {
+              "text": "Parteimitgliedschaft und Wahlbeteiligung der Befragten bei früheren Wahlen",
+              "ok": false,
+              "fb": "Falsch: Die Studie setzte die Nullsummen-Sicht auf Zuwanderung und die Unterstützung strengerer Einwanderungspolitik in Beziehung."
+            },
+            {
+              "text": "Bildungsstand der Befragten und ihre Berufswahl im gesamten späteren Leben",
+              "ok": false,
+              "fb": "Falsch: Die Studie setzte die Nullsummen-Sicht auf Zuwanderung und die Unterstützung strengerer Einwanderungspolitik in Beziehung."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-politik-interessen-lager",
+      "kurz": "Politik und Interessen",
+      "titel": "Wirtschaftsfreundliche und zuwanderungsfreundliche Politik: Wer sieht Interessen vereinbar?",
+      "karte": "In Studie 3 befragten Davidai und Ongis 200 Menschen in den USA, ob wirtschaftsfreundliche und zuwanderungsfreundliche Politik mit den Interessen der Durchschnittsamerikaner vereinbar ist. Die Autoren ordnen wirtschaftsfreundliche Politik als Politik ein, die den Status quo erhält, zuwanderungsfreundliche als Politik, die ihn infrage stellt. Konservative hielten wirtschaftsfreundliche Interessen eher für vereinbar, zuwanderungsfreundliche weniger. Je konservativer, desto eher bestand Nullsummendenken über zuwanderungsfreundliche Politik.",
+      "quelle": {
+        "titel": "The politics of zero-sum thinking: The relationship between political ideology and the belief that life is a zero-sum game",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6989335/",
+        "herausgeber": "Science Advances 2019 (Davidai und Ongis), über PubMed Central",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche Politik sahen Konservative eher als vereinbar mit den Interessen des Durchschnittsamerikaners?",
+          "beleg": "conservatives were more likely to view probusiness interests as compatible with the interests of the average American but less likely to view proimmigration interests as such.",
+          "belegDe": "Konservative hielten wirtschaftsfreundliche Interessen eher für vereinbar mit den Interessen des Durchschnittsamerikaners, zuwanderungsfreundliche Interessen aber weniger.",
+          "optionen": [
+            {
+              "text": "Zuwanderungsfreundliche Politik",
+              "ok": false,
+              "fb": "Falsch: Konservative hielten wirtschaftsfreundliche Interessen eher für vereinbar, zuwanderungsfreundliche weniger."
+            },
+            {
+              "text": "Beide Arten gleich häufig",
+              "ok": false,
+              "fb": "Falsch: Konservative hielten wirtschaftsfreundliche Interessen eher für vereinbar, zuwanderungsfreundliche weniger."
+            },
+            {
+              "text": "Keine der beiden Arten",
+              "ok": false,
+              "fb": "Falsch: Konservative hielten wirtschaftsfreundliche Interessen eher für vereinbar, zuwanderungsfreundliche weniger."
+            },
+            {
+              "text": "Wirtschaftsfreundliche Politik",
+              "ok": true,
+              "fb": "Richtig: Konservative hielten wirtschaftsfreundliche Interessen eher für vereinbar, zuwanderungsfreundliche weniger."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie ordnet die Studie wirtschaftsfreundliche Politik in Bezug auf den Status quo ein?",
+          "beleg": "policies that maintain the status quo (i.e., probusiness policies)",
+          "belegDe": "Politik, die den Status quo erhält (also wirtschaftsfreundliche Politik)",
+          "optionen": [
+            {
+              "text": "Als Politik, die den Status quo erhält",
+              "ok": true,
+              "fb": "Richtig: Die Autoren ordnen wirtschaftsfreundliche Politik als Politik ein, die den Status quo erhält."
+            },
+            {
+              "text": "Als Politik, die den Status quo infrage stellt",
+              "ok": false,
+              "fb": "Falsch: Die Autoren ordnen wirtschaftsfreundliche Politik als Politik ein, die den Status quo erhält."
+            },
+            {
+              "text": "Als Politik ohne jeden Bezug zum Status quo",
+              "ok": false,
+              "fb": "Falsch: Die Autoren ordnen wirtschaftsfreundliche Politik als Politik ein, die den Status quo erhält."
+            },
+            {
+              "text": "Als Politik gegen Zuwanderung insgesamt",
+              "ok": false,
+              "fb": "Falsch: Die Autoren ordnen wirtschaftsfreundliche Politik als Politik ein, die den Status quo erhält."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie hängt Konservatismus mit Nullsummendenken über zuwanderungsfreundliche Politik zusammen?",
+          "beleg": "it was positively associated with zero-sum thinking about policies that challenge it (i.e., proimmigration policies)",
+          "belegDe": "er war positiv mit Nullsummendenken über Politik verbunden, die ihn infrage stellt (also zuwanderungsfreundliche Politik)",
+          "optionen": [
+            {
+              "text": "Je konservativer, desto seltener Nullsummendenken darüber",
+              "ok": false,
+              "fb": "Falsch: Konservatismus war positiv mit Nullsummendenken über zuwanderungsfreundliche Politik verbunden."
+            },
+            {
+              "text": "Es gab keinen Zusammenhang zwischen beidem",
+              "ok": false,
+              "fb": "Falsch: Konservatismus war positiv mit Nullsummendenken über zuwanderungsfreundliche Politik verbunden."
+            },
+            {
+              "text": "Je konservativer, desto eher Nullsummendenken darüber",
+              "ok": true,
+              "fb": "Richtig: Konservatismus war positiv mit Nullsummendenken über zuwanderungsfreundliche Politik verbunden."
+            },
+            {
+              "text": "Der Zusammenhang gilt nur für hohe Einkommen",
+              "ok": false,
+              "fb": "Falsch: Konservatismus war positiv mit Nullsummendenken über zuwanderungsfreundliche Politik verbunden."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zsm-politik-gemeinsame-interessen",
+      "kurz": "Gemeinsame Interessen",
+      "titel": "Politische Gegner: Werte und Interessen, die sich überschneiden",
+      "karte": "Die Einleitung der Studie von Davidai und Ongis verweist auf Forschung zu Politik in den USA. Danach übersehen Anhänger beider Lager oft, wie weit ihre Werte vom anderen Lager geteilt werden, und nehmen an, ihre politischen Interessen seien mit denen der anderen Seite unvereinbar. Sprechen politische Gegner zuerst über ihre Überzeugungen und erst danach über die Sachfragen, erkennen sie eher gemeinsame Interessen und erzielen eher für beide vorteilhafte Einigungen.",
+      "quelle": {
+        "titel": "The politics of zero-sum thinking: The relationship between political ideology and the belief that life is a zero-sum game",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6989335/",
+        "herausgeber": "Science Advances 2019 (Davidai und Ongis), über PubMed Central",
+        "abgerufen": "2026-11-09"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was übersehen Anhänger beider politischen Lager nach dieser Forschung oft?",
+          "beleg": "both liberals and conservatives often overlook the extent to which their values are shared by the other side",
+          "belegDe": "sowohl „liberals“ (in den USA: politisch links) als auch Konservative übersehen oft, wie weit ihre Werte von der anderen Seite geteilt werden",
+          "optionen": [
+            {
+              "text": "Wie viele Menschen die eigene Partei wählen",
+              "ok": false,
+              "fb": "Falsch: Anhänger beider Lager übersehen oft, wie weit ihre Werte vom anderen Lager geteilt werden."
+            },
+            {
+              "text": "Wie weit das andere Lager ihre Werte teilt",
+              "ok": true,
+              "fb": "Richtig: Anhänger beider Lager übersehen oft, wie weit ihre Werte vom anderen Lager geteilt werden."
+            },
+            {
+              "text": "Welche Gesetze zuletzt beschlossen wurden",
+              "ok": false,
+              "fb": "Falsch: Anhänger beider Lager übersehen oft, wie weit ihre Werte vom anderen Lager geteilt werden."
+            },
+            {
+              "text": "Wie hoch die Schulden des Staates sind",
+              "ok": false,
+              "fb": "Falsch: Anhänger beider Lager übersehen oft, wie weit ihre Werte vom anderen Lager geteilt werden."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was hilft politischen Gegnern, gemeinsame Interessen zu erkennen?",
+          "beleg": "when political opponents voice their beliefs before discussing the issues at hand, they are more likely to identify their shared interests",
+          "belegDe": "wenn politische Gegner ihre Überzeugungen aussprechen, bevor sie die Sachfragen besprechen, erkennen sie eher gemeinsame Interessen",
+          "optionen": [
+            {
+              "text": "Sofort über alle Einzelheiten der Gesetzestexte ohne Vorgespräch verhandeln",
+              "ok": false,
+              "fb": "Falsch: Sprechen politische Gegner zuerst über ihre Überzeugungen, erkennen sie eher gemeinsame Interessen."
+            },
+            {
+              "text": "Zuerst über die Kosten der einzelnen Maßnahmen und Gesetze sprechen",
+              "ok": false,
+              "fb": "Falsch: Sprechen politische Gegner zuerst über ihre Überzeugungen, erkennen sie eher gemeinsame Interessen."
+            },
+            {
+              "text": "Abstimmen, bevor man über die Sachfragen überhaupt diskutiert hat",
+              "ok": false,
+              "fb": "Falsch: Sprechen politische Gegner zuerst über ihre Überzeugungen, erkennen sie eher gemeinsame Interessen."
+            },
+            {
+              "text": "Erst Überzeugungen aussprechen, dann die Sachfragen besprechen",
+              "ok": true,
+              "fb": "Richtig: Sprechen politische Gegner zuerst über ihre Überzeugungen, erkennen sie eher gemeinsame Interessen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wovon gehen Menschen im Nullsummendenken über politische Interessen aus?",
+          "beleg": "assume that their political interests are incompatible with the other side’s interests",
+          "belegDe": "nehmen an, ihre politischen Interessen seien mit denen der anderen Seite unvereinbar",
+          "optionen": [
+            {
+              "text": "Dass ihre Interessen mit denen der anderen Seite übereinstimmen",
+              "ok": false,
+              "fb": "Falsch: Menschen nehmen an, ihre politischen Interessen seien mit denen der anderen Seite unvereinbar."
+            },
+            {
+              "text": "Dass ihre Interessen mit denen der anderen Seite unvereinbar sind",
+              "ok": true,
+              "fb": "Richtig: Menschen nehmen an, ihre politischen Interessen seien mit denen der anderen Seite unvereinbar."
+            },
+            {
+              "text": "Dass politische Interessen keine Rolle für Einigungen spielen",
+              "ok": false,
+              "fb": "Falsch: Menschen nehmen an, ihre politischen Interessen seien mit denen der anderen Seite unvereinbar."
+            },
+            {
+              "text": "Dass nur die Interessen einer der beiden Seiten politisch zählen dürfen",
+              "ok": false,
+              "fb": "Falsch: Menschen nehmen an, ihre politischen Interessen seien mit denen der anderen Seite unvereinbar."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [
+    {
+      "von": [
+        2
+      ],
+      "titel": "Dalrymple: Die Hungersnot in Bengalen",
+      "url": "/buch/dalrymple-anarchie/",
+      "ziel": "dalrymple-anarchie"
+    },
+    {
+      "von": [
+        2
+      ],
+      "titel": "Richter: Arisierung",
+      "url": "/buch/richter-dreihundert-maenner/",
+      "ziel": "richter-dreihundert-maenner"
+    },
+    {
+      "von": [
+        6
+      ],
+      "titel": "Crowley: Das Monopol der Krone",
+      "url": "/buch/crowley-die-eroberer/",
+      "ziel": "crowley-die-eroberer"
+    },
+    {
+      "von": [
+        6
+      ],
+      "titel": "Dalrymple: Das Monopol von 1600",
+      "url": "/buch/dalrymple-anarchie/",
+      "ziel": "dalrymple-anarchie"
+    },
+    {
+      "von": [
+        7
+      ],
+      "titel": "Richter: Mitbestimmung und Tarifautonomie",
+      "url": "/buch/richter-dreihundert-maenner/",
+      "ziel": "richter-dreihundert-maenner"
+    },
+    {
+      "von": [
+        8
+      ],
+      "titel": "Richter: Ordoliberalismus nach 1945",
+      "url": "/buch/richter-dreihundert-maenner/",
+      "ziel": "richter-dreihundert-maenner"
+    },
+    {
+      "von": [
+        8
+      ],
+      "titel": "Dalrymple: Das Monopol von 1600",
+      "url": "/buch/dalrymple-anarchie/",
+      "ziel": "dalrymple-anarchie"
+    },
+    {
+      "von": [
+        10
+      ],
+      "titel": "Richter: Kosten und Nutzen des Unternehmertums",
+      "url": "/buch/richter-dreihundert-maenner/",
+      "ziel": "richter-dreihundert-maenner"
+    }
+  ],
+  "platzhalter": false,
+  "coverBreite": 637,
+  "coverHoehe": 1000
+}
