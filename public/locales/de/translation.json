@@ -402,14 +402,14 @@
     "topicLisbon": "Lissabon 1941"
   },
   "views": {
-    "title": "Dein Wissensuniversum in der App",
-    "subtitle": "So sieht Lernen auf Karten aus: dein Ziel, dein Weg, deine Sterne.",
+    "title": "Dein Wissensuniversum",
+    "subtitle": "So stellen wir uns Lernen auf Karten vor: dein Ziel, dein Weg, deine Sterne.",
     "items": [
       {
         "id": "lernfeld",
-        "tag": "Ansicht",
+        "tag": "Zielbild",
         "title": "Dein Ziel, dein Weg, dein Wissensuniversum",
-        "text": "Ein Blick auf das Lernfeld: Startseite mit Ziel, der Weg dorthin und der Rückblick mit deinen Sternen.",
+        "text": "Ein Blick auf das Lernfeld, wie wir es uns vorstellen: Startseite mit Ziel, der Weg dorthin und der Rückblick mit deinen Sternen.",
         "images": [
           {
             "src": "/ansichten/lernfeld-start.webp",
