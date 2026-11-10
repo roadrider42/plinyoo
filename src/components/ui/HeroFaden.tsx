@@ -171,21 +171,22 @@ export default function HeroFaden() {
                       )}
                     </div>
                   ) : (
-                    <div data-ziel="hero-faden-karte" className="flex min-h-0 flex-1 flex-col gap-1.5 overflow-hidden rounded-[14px] border border-border bg-surface-1 p-3">
+                    // Fragefolie als Ergebnis, nicht als Bedienfeld (Review #503, Anm. 3): Antworten als Liste ohne Rahmen und
+                    // ohne Mindesthöhe einer Bedienfläche; die richtige trägt ✓ und steht grün und fett. Die Fläche ist so hoch
+                    // wie ihr Inhalt, damit unter den Antworten kein leerer Kasten steht.
+                    <div data-ziel="hero-faden-karte" className="flex min-h-0 flex-col gap-2.5 overflow-hidden rounded-[14px] border border-border bg-surface-1 p-3">
                       <h3 className="m-0 text-base font-semibold leading-[1.3] text-primary">{f.frage}</h3>
-                      {f.antworten.map((a, k) => (
-                        <div
-                          key={a}
-                          className={`min-h-[44px] rounded-[10px] border p-2.5 text-[13px] ${
-                            k === f.richtig ? 'border-[#2f855a] bg-[#f0fff4]' : 'border-border'
-                          }`}
-                        >
-                          {a}
-                        </div>
-                      ))}
+                      <ul data-ziel="hero-faden-antworten" className="m-0 flex list-none flex-col gap-2 p-0">
+                        {f.antworten.map((a, k) => (
+                          <li key={a} data-richtig={k === f.richtig ? 'true' : 'false'} className="flex gap-2 text-[13px] leading-normal">
+                            <span className="w-4 flex-none text-center font-semibold text-[#2f855a]">{k === f.richtig ? '✓' : ''}</span>
+                            <span className={k === f.richtig ? 'font-semibold text-[#2f855a]' : 'text-text-muted'}>{a}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   )}
-                  <div className="text-center text-xs text-text-muted">
+                  <div className="mt-auto text-center text-xs text-text-muted">
                     {f.art === 'karte'
                       ? t('hero.faden.cardOf', { n: kartenBisHier, m: kartenGesamt })
                       : t('hero.faden.questionOf')}

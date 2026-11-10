@@ -18,7 +18,7 @@ export type FadenFolie =
   | { art: 'frage'; buch: string; frage: string; antworten: string[]; richtig: number };
 
 export const FADEN_BUECHER: Record<string, FadenBuch> = {
-  zit: { autor: 'Rainer Zitelmann', titel: 'Nullsummendenken', initialen: 'RZ' },
+  zit: { autor: 'Rainer Zitelmann', titel: 'Nullsummendenken', coverSlug: 'zitelmann-zero-sum-mindset', initialen: 'RZ' },
   cro: { autor: 'Roger Crowley', titel: 'Die Eroberer', coverSlug: 'crowley-die-eroberer', initialen: 'RC' },
   dal: { autor: 'William Dalrymple', titel: 'Anarchie', coverSlug: 'dalrymple-anarchie', initialen: 'WD' },
   ric: { autor: 'Konstantin Richter', titel: 'Dreihundert Männer', coverSlug: 'richter-dreihundert-maenner', initialen: 'KR' },
