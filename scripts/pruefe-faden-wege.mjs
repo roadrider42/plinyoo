@@ -1,6 +1,6 @@
 // scripts/pruefe-faden-wege.mjs — #513: Jede Karte im Telefon der Startseite (HeroFaden) zeigt mindestens zwei Wege,
 // und jeder Weg ist einer, den es in den Buchdaten gibt.
-// Aufruf: node scripts/pruefe-faden-wege.mjs   (Node >= 22.6: lädt fadenInhalt.ts ohne Übersetzer)
+// Aufruf: node scripts/pruefe-faden-wege.mjs   (Node >= 22.18: lädt fadenInhalt.ts ohne Übersetzer und ohne Schalter)
 // Je Karte des Fadens, gegen content/buecher/<slug>.json:
 //   1. Der Kartentitel steht in kartenvoll[].titel (sonst ist die Karte keine Karte des Buchs).
 //   2. ↑ Weiterlesen: Titel einer Karte desselben Buchs mit einer Kante zur Karte, und genau die nach der Regel in fadenInhalt.ts.
@@ -11,6 +11,20 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+// Erst die Node-Version, dann der Import: Unter Node < 22.18 bricht der Import von fadenInhalt.ts mit
+// ERR_UNKNOWN_FILE_EXTENSION ab, und die Meldung sagt nicht, dass Node zu alt ist. Deshalb ist der Import dynamisch.
+// 22.18, nicht 22.6: 22.6 bis 22.17 entfernen Typen nur mit --experimental-strip-types, ein schlichtes `node` lädt die Datei nicht.
+const [haupt, neben] = process.version.slice(1).split('.').map(Number);
+if (haupt < 22 || (haupt === 22 && neben < 18)) {
+  console.error(`Node ${process.version} ist zu alt: der Bau braucht Node 22.18 oder neuer. Prüfe mit node --version.`);
+  process.exit(1);
+}
+// Neu genug, aber die Typ-Entfernung abgeschaltet (--no-experimental-strip-types): dieselbe Ursache, eigene Zeile.
+if (process.features?.typescript === false) {
+  console.error(`Node ${process.version} lädt keine .ts-Dateien (--no-experimental-strip-types gesetzt): der Bau braucht Node 22.18 oder neuer mit Typ-Entfernung. Prüfe mit node --version und NODE_OPTIONS.`);
+  process.exit(1);
+}
 
 const WURZEL = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const { FADEN_BUECHER, FADEN_FOLIEN, wegeDerFolie } = await import(path.join(WURZEL, 'src/components/ui/fadenInhalt.ts'));
