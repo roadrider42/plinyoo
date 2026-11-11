@@ -7,8 +7,8 @@
     "eyebrow": "Lernplattform — Coach und Begleiter in einem",
     "title": "Dein Lernpfad ist einzigartig.",
     "subtitle": "Du weißt, wo du heute stehst und wohin du willst. Den Weg dazwischen findest du auf Karten, die aufeinander verweisen — nicht in einem Kursplan.",
-    "cta": "Zugang anfragen",
-    "cta_primary": "Zugang anfragen",
+    "cta": "Ich will dabei sein",
+    "cta_primary": "Ich will dabei sein",
     "cta_secondary": "Für Investoren",
     "faden": {
       "contrastFrom": "Ein fester Kursplan",
@@ -19,7 +19,6 @@
       "pause": "Anhalten",
       "play": "Abspielen",
       "next": "Nächste Karte",
-      "refersTo": "verweist auf · {{book}}",
       "cardOf": "Karte {{n}} von {{m}}",
       "questionOf": "Frage zur Karte davor"
     }
@@ -58,7 +57,7 @@
   "roles": {
     "srTitle": "Für wen plinyoo gedacht ist",
     "roleLabel": "Rolle",
-    "cta": "Zugang anfragen",
+    "cta": "Ich will dabei sein",
     "learner": {
       "title": "Du willst lernen?",
       "role": "Lernende:r",
@@ -461,7 +460,8 @@
   "cta": {
     "title": "Fang mit einer Karte an.",
     "subtitle": "Du brauchst keinen Kursplan. Du brauchst eine erste Karte und den Verweis, der dich zur nächsten bringt.",
-    "button": "Zugang anfragen"
+    "button": "Ich will dabei sein",
+    "hinweis": "Wir melden uns persönlich bei dir."
   },
   "storySketch": {
     "title": "So wird aus Wissen Service-Qualität",

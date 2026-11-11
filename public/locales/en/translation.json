@@ -7,8 +7,8 @@
     "eyebrow": "Learning platform — coach and companion in one",
     "title": "Your learning path is unique.",
     "subtitle": "You know where you stand today and where you want to go. You find the way in between on cards that point to one another — not in a course plan.",
-    "cta": "Request access",
-    "cta_primary": "Join now",
+    "cta": "I’d like to be part of it",
+    "cta_primary": "I’d like to be part of it",
     "cta_secondary": "For Investors"
   },
   "hero1": {
@@ -45,7 +45,7 @@
   "roles": {
     "srTitle": "Who plinyoo is for",
     "roleLabel": "Role",
-    "cta": "Request access",
+    "cta": "I’d like to be part of it",
     "learner": {
       "title": "Want to learn?",
       "role": "Learner",
@@ -171,7 +171,7 @@
   "cta": {
     "title": "Start with one card.",
     "subtitle": "You don't need a course plan. You need a first card and the link that takes you to the next.",
-    "button": "Request access"
+    "button": "I’d like to be part of it"
   },
   "storySketch": {
     "title": "This is how knowledge becomes service quality",

@@ -8,7 +8,7 @@
 // Aufruf: läuft nach "vite build" (siehe package.json). Entwürfe ("draft": true) werden NICHT erzeugt,
 //        außer mit BUCHSEITEN_DRAFT=1 (lokal testen). So kann kein Entwurf versehentlich live gehen.
 
-import { readdir, readFile, writeFile, mkdir, copyFile, access } from 'node:fs/promises';
+import { readdir, readFile, writeFile, mkdir, copyFile, access, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -38,6 +38,47 @@ const escInline = (s) =>
   esc(s).replace(/&lt;(\/?(?:strong|em))&gt;/g, '<$1>').replace(/\[\[buch:([a-z0-9-]+)\|([^\]]+)\]\]/g, '<a href="/buch/$1/">$2</a>');
 
 const exists = async (p) => access(p).then(() => true, () => false);
+
+// Strukturierte Daten (JSON-LD) braucht für datePublished ein ISO-Datum. Die Buchdateien schreiben "erschienen" frei:
+// "2016", "20. März 2026", "Taschenbuch, erscheint am 19. November 2026". Gelesen werden Jahr allein oder
+// "<Tag>. <Monat> <Jahr>" irgendwo im Text. Alles andere bricht den Bau ab — ein geratenes Datum wäre schlimmer als keins.
+const MONATE = ['januar', 'februar', 'märz', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'dezember'];
+function isoDatum(s, slug) {
+  const t = String(s).trim();
+  if (/^\d{4}$/.test(t)) return t;
+  const m = t.match(/(\d{1,2})\.\s*([A-Za-zÄÖÜäöü]+)\s+(\d{4})/);
+  const monat = m ? MONATE.indexOf(m[2].toLowerCase()) + 1 : 0;
+  if (!monat) throw new Error(`${slug}: "erschienen" (${t}) ist weder ein Jahr noch "<Tag>. <Monat> <Jahr>"`);
+  return `${m[3]}-${String(monat).padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+}
+
+// Mehrere Namen in einem Feld ("Norbert Juraschitz und Hans Freundl") werden je eine Person.
+const personen = (s) => String(s ?? '').split(/\s*,\s*|\s+und\s+|\s*&\s*/).map((n) => n.trim()).filter(Boolean).map((name) => ({ '@type': 'Person', name }));
+
+// JSON-LD je Buchseite: Brotkrume (Startseite → Bücher → Buch), die Seite selbst und das Buch, um das sie geht.
+// Nur Angaben aus der Buchdatei; fehlt eine, fehlt sie auch hier (nichts wird ergänzt oder geraten).
+function buchLd(b, url, titel, coverUrl) {
+  const buch = { '@type': 'Book', '@id': `${url}#buch`, name: b.titel };
+  if (b.untertitel) buch.alternativeHeadline = b.untertitel;
+  buch.author = personen(b.autor);
+  if (b.uebersetzer) buch.translator = personen(b.uebersetzer);
+  if (b.verlag) buch.publisher = { '@type': 'Organization', name: b.verlag };
+  if (b.erschienen) buch.datePublished = isoDatum(b.erschienen, b.slug);
+  if (b.isbn) buch.isbn = b.isbn;
+  if (coverUrl) buch.image = coverUrl;
+  const krumen = { '@type': 'BreadcrumbList', '@id': `${url}#krumen`, itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Bücher', item: `${SITE}/buch/` },
+    { '@type': 'ListItem', position: 3, name: b.titel, item: url },
+  ] };
+  const webseite = { '@type': 'WebPage', '@id': url, url, name: titel, inLanguage: 'de', breadcrumb: { '@id': `${url}#krumen` }, about: { '@id': `${url}#buch` } };
+  return JSON.stringify({ '@context': 'https://schema.org', '@graph': [krumen, webseite, buch] }).replace(/</g, '\\u003c');
+}
+
+// Cover auf der Buchseite: angezeigt 160 CSS-px ab 660 px Fensterbreite (Spalte im Hero), darunter volle Breite
+// des Inhalts (Fenster minus 2 × 20 px Rand von .wrap). Breiten für 1×–3× Pixeldichte; nie über die Datei hinaus.
+const COVER_BREITEN = [320, 640, 1050];
+const COVER_SIZES = '(min-width: 660px) 160px, calc(100vw - 40px)';
 
 // Die drei Anreden: gleiche Texte wie in public/locales/de/translation.json (roles.*).
 // Hier doppelt, weil die statischen Seiten keinen Zugriff auf die App-Texte haben.
@@ -188,14 +229,59 @@ function universum(b) {
 }
 
 // Vorschaubild je Buch (1200×630 für og:image): Sternbild des Buchs als Hintergrund, Wortmarke, Titel, Autor, rechts das Cover.
-function zeilen(text, max) {
-  const out = [];
-  for (const wort of String(text).split(/\s+/)) {
-    const z = out.length ? out[out.length - 1] : null;
-    if (z !== null && (z + ' ' + wort).length <= max) out[out.length - 1] = z + ' ' + wort;
-    else out.push(wort);
+// Titelzeile (#505): umgebrochen nach der gemessenen Breite, nicht nach Zeichen. Gemessen wird die Tinte der Zeile,
+// so wie sharp/librsvg sie mit derselben Schrift rendert. Ein Titel wird nie gekürzt; passt ein Wort allein nicht
+// in die Spalte, wird die Schrift kleiner. Erster Versuch 76 px (höchstens zwei Zeilen), dann 60 px, dann in 2-px-Schritten bis 36 px.
+const TITEL_ABSTAND_COVER = 40; // Abstand rechte Tintenkante des Titels zur linken Kante des Covers
+const TITEL_GROESSEN = [76, 60, 58, 56, 54, 52, 50, 48, 46, 44, 42, 40, 38, 36];
+const TITEL_X = 80, TITEL_Y = 200, AUTOR_GRENZE = 500; // Autorzeile (34 px) muss über der Fußzeile (y 560) enden
+const tintenCache = new Map();
+async function tintenBreite(text, groesse, font) {
+  const key = `${groesse}|${text}`;
+  if (tintenCache.has(key)) return tintenCache.get(key);
+  const w = 3000, h = Math.ceil(groesse * 1.6), yb = Math.round(groesse * 1.2);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><g ${font}><text x="0" y="${yb}" font-size="${groesse}" font-weight="700" fill="#FFFFFF">${esc(text)}</text></g></svg>`;
+  const { data, info } = await sharp(Buffer.from(svg)).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  let rechts = -1;
+  for (let y = 0; y < info.height; y++) for (let x = info.width - 1; x > rechts; x--) {
+    if (data[(y * info.width + x) * info.channels + 3] > 0) { rechts = x; break; }
   }
-  return out;
+  if (rechts < 0 && String(text).trim()) throw new Error(`Vorschaubild: Titelzeile „${text}“ ließ sich nicht messen (keine Tinte bei ${groesse} px)`);
+  if (rechts >= w - 1) throw new Error(`Vorschaubild: Titelzeile „${text}“ breiter als die Messfläche (${w} px)`);
+  const breite = rechts + 1;
+  tintenCache.set(key, breite);
+  return breite;
+}
+async function titelSatz(text, font, spalte) {
+  const woerter = String(text).trim().split(/\s+/);
+  for (const groesse of TITEL_GROESSEN) {
+    let passt = true;
+    for (const wort of woerter) if (await tintenBreite(wort, groesse, font) > spalte) { passt = false; break; }
+    if (!passt) continue;
+    const out = [];
+    for (const wort of woerter) {
+      const z = out.length ? out[out.length - 1] : null;
+      if (z !== null && await tintenBreite(z + ' ' + wort, groesse, font) <= spalte) out[out.length - 1] = z + ' ' + wort;
+      else out.push(wort);
+    }
+    if (groesse === TITEL_GROESSEN[0] && out.length > 2) continue;
+    if (TITEL_Y + out.length * groesse * 1.1 + 14 > AUTOR_GRENZE) continue;
+    return { zeilen: out, groesse };
+  }
+  throw new Error(`Vorschaubild: Titel „${text}“ passt in keiner Größe (${TITEL_GROESSEN.at(-1)}–${TITEL_GROESSEN[0]} px) in die linke Spalte (${spalte} px)`);
+}
+// Abschlussprüfung, unabhängig vom Satz: Jede Titelzeile endet mindestens TITEL_ABSTAND_COVER vor dem Cover,
+// der Titel ist vollständig, und die Autorzeile bleibt über der Fußzeile. Sonst bricht der Bau ab und nennt den Titel.
+async function titelPruefen(b, zeilenListe, groesse, font, coverX) {
+  const grenze = coverX - TITEL_ABSTAND_COVER;
+  if (zeilenListe.join(' ') !== String(b.titel).trim().split(/\s+/).join(' ')) throw new Error(`Vorschaubild ${b.slug}: Titel „${b.titel}“ unvollständig gesetzt („${zeilenListe.join(' | ')}“)`);
+  for (const z of zeilenListe) {
+    const rechts = TITEL_X + await tintenBreite(z, groesse, font);
+    console.log(`  Vorschaubild ${b.slug}: Titelzeile „${z}“ ${groesse} px, x ${TITEL_X}…${rechts}, Grenze ${grenze}, Abstand zum Cover ${coverX - rechts} px`);
+    if (rechts > grenze) throw new Error(`Vorschaubild ${b.slug}: Titel „${b.titel}“, Zeile „${z}“ reicht bei ${groesse} px bis x ${rechts}, Grenze x ${grenze} (Cover ab x ${coverX})`);
+  }
+  const autorY = TITEL_Y + zeilenListe.length * groesse * 1.1 + 14;
+  if (autorY > AUTOR_GRENZE) throw new Error(`Vorschaubild ${b.slug}: Titel „${b.titel}“ schiebt die Autorzeile auf y ${autorY}, Grenze ${AUTOR_GRENZE}`);
 }
 
 async function vorschaubild(b, coverQuelle, ziel) {
@@ -205,21 +291,23 @@ async function vorschaubild(b, coverQuelle, ziel) {
   const pos = knoten.length ? anordnung(b.slug, knoten.length, kanten, CX - 40, H) : [];
   const linien = kanten.map(([x, y]) => `<line x1="${pos[x].x}" y1="${pos[x].y}" x2="${pos[y].x}" y2="${pos[y].y}"/>`).join('');
   const punkte = pos.map((p, i) => `<circle cx="${p.x}" cy="${p.y}" r="${i % 4 === 0 ? 6 : 4.5}" fill="${i % 4 === 0 ? '#E3A72F' : '#6FB3B8'}"/>`).join('');
-  const titel = zeilen(b.titel, 16).slice(0, 3);
-  const tGroesse = titel.length > 2 ? 60 : 76;
   const font = `font-family="Helvetica Neue, Helvetica, Arial, Liberation Sans, DejaVu Sans, sans-serif"`;
-  let y = 200;
-  const titelSvg = titel.map((z) => { const t = `<text x="80" y="${y}" font-size="${tGroesse}" font-weight="700" fill="#F4F5F7">${esc(z)}</text>`; y += tGroesse * 1.1; return t; }).join('');
+  const { zeilen: titel, groesse: tGroesse } = await titelSatz(b.titel, font, CX - TITEL_ABSTAND_COVER - 80);
+  await titelPruefen(b, titel, tGroesse, font, CX);
+  let y = TITEL_Y;
+  const titelSvg = titel.map((z) => { const t = `<text x="${TITEL_X}" y="${y}" font-size="${tGroesse}" font-weight="700" fill="#F4F5F7">${esc(z)}</text>`; y += tGroesse * 1.1; return t; }).join('');
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
   <rect width="100%" height="100%" fill="#0F1419"/>
   <g opacity="0.25"><g stroke="#6FB3B8" stroke-width="1" opacity="0.6">${linien}</g>${punkte}</g>
   <g ${font}>${titelSvg}
   <text x="80" y="${y + 14}" font-size="34" fill="#BDE3E6">${esc(b.autor)}</text>
-  <text x="80" y="${H - 70}" font-size="24" font-weight="600" fill="#E3A72F">Buchvorstellung mit Lernkarten <tspan fill="#FFFFFF">· made by plinyoo</tspan></text></g>
+  <text x="80" y="${H - 70}" font-size="24" font-weight="600" fill="#E3A72F">Wissensgraphen mit Lernkarten <tspan fill="#FFFFFF">· made by plinyoo</tspan></text></g>
   <rect x="${CX + 6}" y="${CY + 10}" width="${CW}" height="${CH}" rx="6" fill="#000" opacity="0.5"/>
 </svg>`;
   const cover = await sharp(coverQuelle).resize(CW, CH, { fit: 'cover' }).toBuffer();
-  await sharp(Buffer.from(svg)).composite([{ input: cover, left: CX, top: CY }]).png().toFile(ziel);
+  // JPEG statt PNG: 78–169 KB statt 108–596 KB, PSNR gegen das PNG >= 42,8 dB bei q95 und vollen Farbauflösung (4:4:4),
+  // Schrift bleibt scharf. Gemessen #505 (SpoonUp claude/_seo-buch/bau/og-vergleich.txt).
+  await sharp(Buffer.from(svg)).composite([{ input: cover, left: CX, top: CY }]).flatten({ background: '#0F1419' }).jpeg({ quality: 95, chromaSubsampling: '4:4:4', mozjpeg: true }).toFile(ziel);
 }
 
 // Karten zum Durchspielen — Konzept von future-space.plinyoo.com (echte Karte, Frage, Rückmeldung, Beleg, Quelle),
@@ -281,11 +369,15 @@ function kartenSektion(b) {
 
 // Der Beitrag zum Buch steht immer ausgeklappt (kein Klappen, damit er nicht überlesen wird), mit orangem Balken links,
 // klar als Meinungsbeitrag gekennzeichnet. Ohne Feld grundlage steht der Zusatz „auf Grundlage von …“; grundlage: "" lässt ihn weg.
-function beitragFalte(bt, buchTitel, buchAutor) {
+// Ist der Beitragstitel Zeichen für Zeichen die Leitfrage (die schon in der h1 steht), entfallen Titel UND Etikett:
+// ein Etikett über nichts wäre ein Stummel (Sprecher 11.11.2026, #505 Z3). Weicht er auch nur in einem Zeichen ab
+// (Marshall: „–“ statt „,“), bleibt beides: dort setzt das Etikett seinen Satz im Titel fort.
+function beitragFalte(bt, buchTitel, buchAutor, leitfrage) {
   if (!bt || !bt.absaetze || bt.absaetze.length === 0) return '';
+  const titelDoppelt = bt.titel === leitfrage;
   return `<section class="beitrag-fold" aria-label="Meinungsbeitrag">
-    ${bt.etikett ? `<p class="bk">${esc(bt.etikett)}</p>` : ''}
-    <p class="bt">${esc(bt.titel)}</p>
+    ${!titelDoppelt && bt.etikett ? `<p class="bk">${esc(bt.etikett)}</p>` : ''}
+    ${titelDoppelt ? '' : `<p class="bt">${esc(bt.titel)}</p>`}
     ${bt.anreisser ? `<p class="anreisser">${esc(bt.anreisser)}</p>` : ''}
     <div class="lesetext">
       ${bt.absaetze.map((a) => `<p>${escInline(a)}</p>`).join('\n      ')}
@@ -294,28 +386,152 @@ function beitragFalte(bt, buchTitel, buchAutor) {
   </section>`;
 }
 
-// Text der Kachel auf der Startseite und im „Neu“-Kasten: "<n> Karten <kachelText>". Die Zahl kommt aus den Karten,
+// Text der Kachel auf der Startseite und auf /buch/: "<n> Karten <kachelText>". Die Zahl kommt aus den Karten,
 // damit sie nicht veraltet. Fehlt kachelText, steht die Einordnung des Buchs.
 function kachelBeschreibung(b) {
   const n = (b.kartenvoll ?? []).length;
   return b.kachelText ? `${n} Karten ${b.kachelText}` : (b.einordnung || `${n} Karten`);
 }
 
-// Neu-Kasten: Auf jeder Buchseite außer der des neuesten Buchs. Ersetzt den Handtext "naechsteWoche", der veraltete.
-function neuKasten(b, neu) {
-  if (neu && neu.slug !== b.slug) {
-    return `<aside class="neu-kasten" aria-labelledby="neu-h" style="margin-top:32px;padding:18px 20px;border:1px solid #d6e4e2;border-left:4px solid #e8a838;border-radius:8px;background:#fff">
-    <p style="margin:0 0 4px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b9791a" id="neu-h">Neu auf plinyoo</p>
-    <p style="margin:0 0 4px;font-weight:700"><a href="/buch/${esc(neu.slug)}/" data-neu="${esc(neu.slug)}">${esc(neu.kachelTitel || neu.titel)}</a></p>
-    <p style="margin:0 0 12px">${esc(kachelBeschreibung(neu))}</p>
-    <p style="margin:0"><a class="btn" data-neu="${esc(neu.slug)}" href="/buch/${esc(neu.slug)}/">Zur Buchseite</a></p>
-  </aside>`;
-  }
+// Handtext "naechsteWoche": nur auf der Seite des neuesten Buchs (wie bisher; auf allen anderen stand dort der
+// Neu-Kasten, der seit #505 im Abschnitt "Weiter in anderen Büchern" aufgeht, siehe weiterAuswahl()).
+function ausblick(b, neu) {
+  if (neu && neu.slug !== b.slug) return '';
   return b.naechsteWoche ? `<h2 style="margin-top:32px">Ausblick</h2><p>${esc(b.naechsteWoche)}</p>` : '';
 }
 
+// Ziel einer Brücke: "/buch/<slug>/" eines Buchs, das es gibt. Alles andere wäre ein toter Link und bricht den Bau
+// (#505 Q2-6). Ein Buch, das es nur als Entwurf gibt, ist kein Fehler: die Brücke wird dann übergangen.
+function brueckenZiel(b, br, alleSlugs) {
+  const m = /^\/buch\/([a-z0-9-]+)\/$/.exec(String(br.url ?? ''));
+  if (!m) throw new Error(`${b.slug}.json: Brücke „${br.titel}“ hat keine URL der Form /buch/<slug>/: ${br.url}`);
+  if (!alleSlugs.has(m[1])) throw new Error(`${b.slug}.json: Brücke „${br.titel}“ zeigt auf ein Buch, das es nicht gibt: ${br.url}`);
+  return m[1];
+}
+
+// Abschnitt "Weiter in anderen Büchern" (#505 B7, Entwurf Q2-1): 3–4 Bücher als echte Links, aus `sichtbar`
+// (Reihenfolge wie /buch/), ohne das eigene Buch, ohne Doppelte, in dieser Folge:
+// 1. das neueste Buch ("Neu"), 2. bis zu zwei Bücher aus den Brücken (mehr Brücken zuerst, sonst Reihenfolge wie /buch/),
+// 3. immer das nächstältere Buch (zyklisch), damit jedes Buch einen eingehenden Link hat, 4. auffüllen auf mindestens 3.
+// Liefert [{ buch, art: 'neu' | 'bruecke' | 'reihe', gruende: [Kartennamen] }]; bei weniger als zwei sichtbaren Büchern [].
+function weiterAuswahl(b, sichtbar, alleSlugs) {
+  const slugs = sichtbar.map((x) => x.slug);
+  const zaehl = new Map();
+  for (const br of b.bruecken ?? []) {
+    const ziel = brueckenZiel(b, br, alleSlugs);
+    if (ziel === b.slug || !slugs.includes(ziel)) continue;
+    if (!zaehl.has(ziel)) zaehl.set(ziel, []);
+    zaehl.get(ziel).push(String(br.titel).replace(/^[^:]+:\s*/, ''));
+  }
+  const i = slugs.indexOf(b.slug);
+  if (i < 0 || slugs.length < 2) return [];
+  const brueck = [...zaehl.keys()].sort((x, y) => zaehl.get(y).length - zaehl.get(x).length || slugs.indexOf(x) - slugs.indexOf(y));
+  const ring = slugs.slice(i + 1).concat(slugs.slice(0, i));
+  const wahl = [];
+  const nimm = (s, art) => { if (s !== b.slug && !wahl.some((w) => w.slug === s)) wahl.push({ slug: s, art }); };
+  if (slugs[0] !== b.slug) nimm(slugs[0], 'neu');
+  for (const s of brueck.slice(0, 2)) nimm(s, 'bruecke');
+  nimm(ring[0], 'reihe');
+  for (const s of brueck.slice(2).concat(ring.slice(1))) {
+    if (wahl.length >= 3) break;
+    nimm(s, zaehl.has(s) ? 'bruecke' : 'reihe');
+  }
+  return wahl.slice(0, 4).map(({ slug, art }) => ({ buch: sichtbar[slugs.indexOf(slug)], art, gruende: [...new Set(zaehl.get(slug) ?? [])].slice(0, 2) }));
+}
+
+// Wortlaut T1–T4, Sprecher 11.11.2026 (#505, sprecher-freigaben.md Z. 11209). Grundzeile: mit Brücke die Kartennamen
+// aus den Daten (höchstens zwei), sonst die Zahl der Lernkarten aus den Karten. Ein Buch ohne Karten bekäme "0 Lernkarten":
+// das wäre ein Fehler, der wie eine Auskunft aussieht, darum bricht der Bau.
+function weiterAbschnitt(b, sichtbar, alleSlugs, covers) {
+  const wahl = weiterAuswahl(b, sichtbar, alleSlugs);
+  if (!wahl.length) return '';
+  // Ab 720 px stehen die Karten nebeneinander; das Etikett „Neu“ schöbe den Titel seiner Karte tiefer als die anderen
+  // (Entwurf A5: Titel einer Reihe auf derselben Höhe). Die anderen Karten bekommen deshalb einen leeren, unsichtbaren
+  // Platzhalter derselben Form; unter 720 px ist er weg. Kein Text im HTML: „Neu“ steht nur auf einer Karte (W3).
+  // Titel „X — Y“: geschütztes Leerzeichen vor dem Gedankenstrich, sonst steht er bei 1440 allein auf einer Zeile.
+  const mitNeu = wahl.some((w) => w.art === 'neu');
+  const karten = wahl.map(({ buch: x, art, gruende }) => {
+    const c = covers[x.slug];
+    const bild = c
+      ? `<span class="mc"><img src="/buch/${esc(x.slug)}/cover-klein.jpg" width="${c.w}" height="${c.h}" alt="" loading="lazy"></span>`
+      : `<span class="mc"><span class="ohne" aria-hidden="true">${esc(x.symbol || '📚')}</span></span>`;
+    let grund;
+    if (gruende.length) grund = `Verbunden über: ${gruende.map((g) => `„${g}“`).join(', ')}`;
+    else {
+      const n = (x.kartenvoll ?? []).length;
+      if (n === 0) throw new Error(`${b.slug}: Abschnitt „Weiter in anderen Büchern“ nennt ${x.slug}, das Buch hat keine Lernkarten`);
+      grund = `${n} Lernkarten`;
+    }
+    return `<li><a class="mehr-karte" href="/buch/${esc(x.slug)}/" data-weiter="${esc(x.slug)}" data-art="${art}">${bild}<span class="mt">${art === 'neu' ? '<span class="mn">Neu</span>' : mitNeu ? '<span class="mn mn-platz" aria-hidden="true"></span>' : ''}<span class="mk">${esc(x.kachelTitel || x.titel).replace(/ — /g, ' — ')}</span><span class="ma">${esc(x.autor)}</span><span class="mg">${esc(grund)}</span></span></a></li>`;
+  });
+  return `<section class="sek" id="weiter" aria-labelledby="weiter-h"><div class="wrap">
+  <h2 id="weiter-h">Weiter in anderen Büchern</h2>
+  <ul class="mehr-liste">
+  ${karten.join('\n  ')}
+  </ul>
+</div></section>`;
+}
+
+// Zeile "Alle Bücher" unter der Fußzeile der Startseite (#505 B7, Entwurf S2, Wortlaut T5). Die Startseite ist eine
+// React-Seite mit leerem #root; diese Zeile steht deshalb beim Bau im HTML, damit Roboter ohne JavaScript /buch/ finden.
+// Der Platzhalter muss genau einmal da sein, sonst fehlt die Zeile still oder steht doppelt: dann bricht der Bau.
+const BUECHER_FUSS = '<!--BUECHER-FUSS-->';
+async function buecherFuss(sichtbar) {
+  const links = sichtbar.slice(0, 3).map((x) => `<a href="/buch/${esc(x.slug)}/">${esc((x.kachelTitel || x.titel).split(' — ')[0])}</a>`).join('');
+  const zeile = sichtbar.length ? `<nav class="buecher-fuss" lang="de" aria-label="Bücher" style="background:#1C2A33;color:rgba(255,255,255,.7);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+<style>.buecher-fuss .bf{max-width:72rem;margin:0 auto;padding:0 24px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:0 18px}.buecher-fuss a{display:inline-flex;align-items:center;min-height:44px;color:rgba(255,255,255,.7);text-decoration:none}.buecher-fuss a:hover{color:#fff}.buecher-fuss .bt{color:#fff;font-weight:600}</style>
+<div class="bf"><a class="bt" href="/buch/">Alle Bücher</a>${links}</div></nav>` : '';
+  for (const datei of ['index.html', '404.html']) {
+    const p = path.join(distDir, datei);
+    const html = await readFile(p, 'utf8');
+    const anzahl = html.split(BUECHER_FUSS).length - 1;
+    if (anzahl !== 1) throw new Error(`dist/${datei}: Platzhalter ${BUECHER_FUSS} steht ${anzahl}-mal da, erwartet genau einmal (index.html, nach <div id="root">)`);
+    await writeFile(p, html.replace(BUECHER_FUSS, zeile), 'utf8');
+  }
+}
+
+// Vorschaubild für /buch/ (#505 B10, Entwurf O3, Wortlaut T6–T9): 1200 × 630, links Titel und Zahl, rechts ein Fächer
+// aus den Covern der vier neuesten Bücher (kleine Fassung, 480 px breit, hier 247 px: nie vergrößert), das neueste vorn.
+// Unter zwei Büchern mit Cover entfällt das Bild (O3-4): dann das allgemeine /og/buchseite.png.
+// Titel 67 statt 68 px: bei 68 misst „Lernkarten zu“ 441 px, die Grenze ist 440. Schatten nur nach unten versetzt,
+// damit rechts 70 px frei bleiben (mit 6 px seitlich waren es 65).
+const OG_UEBERSICHT_GRENZE = 300 * 1024;
+async function uebersichtBild(sichtbar, covers, ziel) {
+  const mit = sichtbar.filter((x) => covers[x.slug]).slice(0, 4);
+  if (mit.length < 2) return null;
+  const W = 1200, H = 630, CH = 380;
+  const font = `font-family="Helvetica Neue, Helvetica, Arial, Liberation Sans, DejaVu Sans, sans-serif"`;
+  const lagen = mit.map((x, k) => ({ x, left: 560 + k * 105, top: 125 + (k % 2) * 20, w: Math.round(CH * covers[x.slug].w / covers[x.slug].h) }));
+  const rechts = Math.max(...lagen.map((l) => l.left + l.w));
+  if (rechts > W - 70) throw new Error(`/buch/og.jpg: Cover reichen bis x ${rechts}, rechter Rand muss 70 px frei bleiben`);
+  const schatten = lagen.map((l) => `<rect x="${l.left}" y="${l.top + 10}" width="${l.w}" height="${CH}" rx="6" fill="#000" opacity="0.5"/>`).join('');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <rect width="100%" height="100%" fill="#0F1419"/>
+  <g ${font}>
+  <text x="80" y="214" font-size="67" font-weight="700" fill="#F4F5F7">Lernkarten zu</text>
+  <text x="80" y="288" font-size="67" font-weight="700" fill="#F4F5F7">Büchern</text>
+  <text x="80" y="352" font-size="34" fill="#BDE3E6">${sichtbar.length} Bücher zum Durchspielen</text>
+  <text x="80" y="${H - 70}" font-size="24" font-weight="600" fill="#E3A72F">Wissensgraphen mit Lernkarten <tspan fill="#FFFFFF">· made by plinyoo</tspan></text></g>
+  ${schatten}
+</svg>`;
+  // Hinten zuerst zeichnen: das neueste Cover liegt oben.
+  const ebenen = [];
+  for (const l of [...lagen].reverse()) {
+    const input = await sharp(path.join(distDir, 'buch', l.x.slug, 'cover-klein.jpg')).resize(l.w, CH, { fit: 'cover' }).toBuffer();
+    ebenen.push({ input, left: l.left, top: l.top });
+  }
+  const daten = await sharp(Buffer.from(svg)).composite(ebenen).flatten({ background: '#0F1419' }).jpeg({ quality: 85, mozjpeg: true }).toBuffer();
+  if (daten.length > OG_UEBERSICHT_GRENZE) throw new Error(`/buch/og.jpg: ${daten.length} Bytes, Grenze ${OG_UEBERSICHT_GRENZE}`);
+  await writeFile(ziel, daten);
+  const zahl = ZAHLWORT[mit.length];
+  return { url: `${SITE}/buch/og.jpg`, w: W, h: H, alt: `Die Cover der ${zahl} neuesten Bücher bei plinyoo neben dem Titel Lernkarten zu Büchern` };
+}
+
 // Übersichtsseite /buch/: alle veröffentlichten Bücher, das neueste zuerst, mit Cover (kleine Fassung, siehe main).
-function uebersicht(buecher, covers) {
+// og: Vorschaubild aus uebersichtBild() oder null (dann das allgemeine Bild, O3-4).
+function uebersicht(buecher, covers, og) {
+  const desc = `Aus jedem Buch wird ein Wissensgraph: Lernkarten, Verbindungen und Fragen zum Durchspielen. ${buecher.length} Bücher, das neueste zuerst.`;
+  const bild = og || { url: `${SITE}/og/buchseite.png`, w: 1200, h: 630, alt: 'plinyoo' };
   const cover = (b, klasse) => {
     const c = covers[b.slug];
     if (!c) return `<div class="${klasse} ohne" aria-hidden="true"><span>${esc(b.symbol || '📚')}</span></div>`;
@@ -348,11 +564,20 @@ function uebersicht(buecher, covers) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lernkarten zu Büchern: Wissensgraphen zum Durchspielen | plinyoo</title>
-<meta name="description" content="Aus jedem Buch wird ein Wissensgraph: Lernkarten, Verbindungen und Fragen zum Durchspielen. ${buecher.length} Bücher, das neueste zuerst.">
+<meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${SITE}/buch/">
+<meta property="og:site_name" content="plinyoo">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Lernkarten zu Büchern: Wissensgraphen zum Durchspielen | plinyoo">
+<meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${SITE}/buch/">
+<meta property="og:image" content="${bild.url}">
+<meta property="og:image:width" content="${bild.w}">
+<meta property="og:image:height" content="${bild.h}">
+<meta property="og:image:alt" content="${esc(bild.alt)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="${esc(bild.alt)}">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://plausible.io; base-uri 'self'; form-action 'self'">
 ${CSS}
 <style>
@@ -391,7 +616,7 @@ ${CSS}
   <a class="logo" href="/" aria-label="plinyoo, zur Startseite">plinyoo</a>
   <nav aria-label="Hauptnavigation">
     <a class="login" href="${LOGIN}">Anmelden</a>
-    <a class="btn haupt" href="/#/zugang">Zugang anfragen</a>
+    <a class="btn haupt" href="/#/zugang">Ich will dabei sein</a>
   </nav>
 </div></header>
 <main>
@@ -408,7 +633,8 @@ ${CSS}
   <div class="abschluss">
     <h2>Was willst du als Nächstes können?</h2>
     <p>Sag uns, was dich interessiert. Wir zeigen dir den Weg, allein oder mit deinem Team.</p>
-    <p style="margin:0"><a class="btn haupt" href="/#/zugang">Zugang anfragen</a></p>
+    <p style="margin:0"><a class="btn haupt" href="/#/zugang">Ich will dabei sein</a></p>
+    <p style="margin:12px 0 0">Wir melden uns persönlich bei dir.</p>
   </div>
 </div></section>
 </main>
@@ -440,6 +666,7 @@ header.top nav{display:flex;align-items:center;gap:10px}
 header.top .btn{margin:0;padding:8px 14px;font-size:15px}
 .hero{padding:44px 0 36px}
 .eyebrow{display:inline-block;margin:0 0 14px;padding:4px 12px;border-radius:999px;background:var(--mist);font-size:13px;font-weight:600;color:var(--teal-d)}
+.eyebrow .nb{white-space:nowrap}
 .hero h1{margin:0 0 14px;font-size:clamp(28px,5.2vw,42px);line-height:1.15;color:var(--graphite)}
 .hero .grid{display:grid;grid-template-columns:1fr;gap:22px}
 @media(min-width:660px){.hero .grid.mit-cover{grid-template-columns:1fr 160px;align-items:start}}
@@ -535,7 +762,7 @@ details.kartek.gekonnt{border-color:#2F7D4F}
 .abschluss .rollen{font-size:15px}
 .kauf{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 20px 12px}
 .kauf .meta{margin-bottom:12px}
-.anzeige{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid var(--muted);border-radius:4px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;vertical-align:middle}
+.anzeige{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid var(--muted);border-radius:4px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;vertical-align:middle}
 .hinweis{font-size:13px;color:var(--muted);margin:4px 0 0}
 details.faq{border-bottom:1px solid var(--line);padding:14px 0}
 details.faq:first-of-type{border-top:1px solid var(--line)}
@@ -563,6 +790,20 @@ a.sozial{white-space:nowrap}
 .beitrag-fold .lesetext{max-width:none}
 .beitrag-fold .lesetext p{font-size:1em;color:var(--ink);line-height:1.65}
 .beitrag-fold .lesetext p.status{font-size:.8em;color:var(--muted);margin-top:6px}
+.mehr-liste{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.mehr-karte{display:flex;gap:14px;align-items:flex-start;height:100%;min-height:44px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);text-decoration:none}
+.mehr-karte:hover{background:var(--mist)}
+.mehr-karte:focus-visible{outline:3px solid var(--teal-d);outline-offset:2px}
+.mehr-karte .mc{flex:none;display:flex;align-items:flex-end;justify-content:center;width:64px}
+.mehr-karte .mc img,.mehr-karte .ohne{display:block;width:64px;height:auto;border:1px solid var(--line);border-radius:4px;background:#fff}
+.mehr-karte .ohne{display:flex;align-items:center;justify-content:center;aspect-ratio:2/3;background:var(--mist);font-size:28px}
+.mehr-karte .mt{display:block;min-width:0}
+.mehr-karte .mk{display:block;font-weight:700;color:var(--graphite);line-height:1.3;text-decoration:underline;text-underline-offset:3px}
+.mehr-karte .ma{display:block;margin-top:2px;font-size:15px;color:var(--muted)}
+.mehr-karte .mg{display:block;margin-top:8px;font-size:14px;color:var(--muted);line-height:1.45}
+.mehr-karte .mn{display:inline-block;margin:0 0 6px;padding:2px 10px;border-radius:999px;background:#E8A838;color:#1C2A33;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.mehr-karte .mn-platz{display:none}
+@media(min-width:720px){.mehr-karte .mn-platz{display:inline-block;visibility:hidden}.mehr-karte .mn-platz::before{content:"Neu"}.mehr-liste{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.mehr-karte{flex-direction:column}.mehr-karte .mc{width:96px;height:144px}.mehr-karte .mc img,.mehr-karte .ohne{width:auto;max-width:96px;max-height:144px;object-fit:contain}.mehr-karte .ohne{width:96px}}
 footer{padding:22px 0 30px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:6px 14px}
 footer a{color:var(--muted)}
@@ -579,12 +820,46 @@ summary{font-size:18px}
 }
 </style>`;
 
-function seite(b, mitCover, neu) {
+// Beschreibung im Suchtreffer (meta description, og:description). Wortlaut je Buch im Feld suchBeschreibung,
+// freigegeben vom Sprecher (11.11.2026, #505 Z2). Kartenzahl {n} und Fragenzahl {fragen} kommen aus kartenvoll,
+// nie von Hand: sonst veraltet der Satz bei der nächsten Karte. Lässt sich die Fragenzahl nicht als Zahlwort
+// sagen, entfällt sie („je mit Quelle und Fragen“). Was der Satz behauptet und die Daten nicht halten, bricht den Bau ab.
+const ZAHLWORT = { 2: 'zwei', 3: 'drei', 4: 'vier', 5: 'fünf', 6: 'sechs', 7: 'sieben', 8: 'acht', 9: 'neun', 10: 'zehn' };
+function suchBeschreibung(b) {
+  const vorlage = b.suchBeschreibung;
+  if (!vorlage) {
+    if (b.draft) return b.leitfrage;
+    throw new Error(`${b.slug}: Feld suchBeschreibung fehlt (Wortlaut vom Sprecher, mit {n} und {fragen})`);
+  }
+  const karten = b.kartenvoll ?? [];
+  if (karten.length === 0) throw new Error(`${b.slug}: suchBeschreibung nennt Lernkarten, kartenvoll ist leer`);
+  if (vorlage.split('{n}').length !== 2) throw new Error(`${b.slug}: suchBeschreibung braucht genau einmal {n}`);
+  if (/je mit Quelle/.test(vorlage) && !karten.every((k) => k.quelle)) throw new Error(`${b.slug}: suchBeschreibung sagt „je mit Quelle“, eine Karte hat keine`);
+  let text = vorlage.replace('{n}', String(karten.length));
+  if (text.includes('{fragen}')) {
+    const zahlen = karten.map((k) => (k.fragen ?? []).length);
+    if (zahlen.some((z) => z === 0)) throw new Error(`${b.slug}: suchBeschreibung nennt Fragen, eine Karte hat keine`);
+    const min = Math.min(...zahlen);
+    const max = Math.max(...zahlen);
+    const wort = min === max ? ZAHLWORT[min] : ZAHLWORT[min] && ZAHLWORT[max] ? `${ZAHLWORT[min]} bis ${ZAHLWORT[max]}` : undefined;
+    text = wort ? text.replace('{fragen}', wort) : text.replace('{fragen} ', '');
+  }
+  if (/[{}]/.test(text)) throw new Error(`${b.slug}: suchBeschreibung hat einen unbekannten Platzhalter: ${text}`);
+  return text;
+}
+
+// cover: null (ohne Cover) oder { w, h, srcset } aus main(); sichtbar/alleSlugs/covers für den Abschnitt „Weiter in anderen Büchern“.
+function seite(b, cover, neu, sichtbar, alleSlugs, covers) {
+  const mitCover = !!cover;
   const url = `${SITE}/buch/${b.slug}/`;
   const titelVoll = `${b.titel} — ${b.autor}`;
-  const ogBild = mitCover ? `${url}og.png` : `${SITE}/og/buchseite.png`;
-  const titel = `${b.autor}: ${b.titel} — Buchvorstellung | plinyoo`;
-  const desc = b.leitfrage;
+  // Vorschaubild beim Teilen: je Buch 1200 × 630 (vorschaubild()), sonst das allgemeine Bild, ebenfalls 1200 × 630.
+  const ogBild = mitCover ? `${url}og.jpg` : `${SITE}/og/buchseite.png`;
+  // Wortlaut Sprecher 11.11.2026 (#505 B5, GEÄNDERT): Titel und Autor aus den Buchdaten, nie von Hand.
+  const ogAlt = mitCover ? `Lernkarten zu „${b.titel}“ von ${b.autor}, mit Buchcover` : 'plinyoo';
+  // Wortlaut T-A, Sprecher 11.11.2026 (#505 Z1): für alle Bücher dieselbe Form, nie je Buch gemischt.
+  const titel = `${b.titel} – ${b.autor} | plinyoo`;
+  const desc = suchBeschreibung(b);
   const karten = b.karten ?? [];
   const slugQ = encodeURIComponent(b.slug);
   const zugang = `/?buch=${slugQ}#/zugang`;
@@ -611,7 +886,12 @@ ${b.draft ? '<meta name="robots" content="noindex, nofollow">' : ''}
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${ogBild}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(ogAlt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="${esc(ogAlt)}">
+<script type="application/ld+json">${buchLd(b, url, titel, mitCover ? `${url}cover.jpg` : '')}</script>
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://plausible.io; base-uri 'self'; form-action 'self'">
 ${CSS}
 <script>document.documentElement.className+=' js';try{if('scrollRestoration' in history){history.scrollRestoration='manual'}}catch(e){}</script>
@@ -624,23 +904,23 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
   <a class="logo" href="/" aria-label="plinyoo, zur Startseite">plinyoo</a>
   <nav aria-label="Hauptnavigation">
     <a class="login" href="${LOGIN}">Anmelden</a>
-    <a class="btn haupt" data-zugang href="${zugang}">Zugang anfragen</a>
+    <a class="btn haupt" data-zugang href="${zugang}">Ich will dabei sein</a>
   </nav>
 </div></header>
 
 <main>
 <section class="hero"><div class="wrap">
   <p style="margin:0 0 16px;font-size:15px"><a data-alle-buecher href="/buch/" style="font-weight:600">← Alle Bücher</a></p>
-  <p class="eyebrow">Buchvorstellung</p>
+  <p class="eyebrow">${esc(b.titel)} · <span class="nb">${esc(b.autor)}</span></p>
   <div class="grid${mitCover ? ' mit-cover' : ''}">
     <div>
       <h1>${esc(b.leitfrage)}</h1>
-      <p class="meta"><strong>${esc(b.autor)}: ${esc(b.titel)}</strong> — ${esc(b.untertitel)}<br>
+      <p class="meta">${b.untertitel ? `${esc(b.untertitel)}<br>` : ''}
       ${b.uebersetzer ? `Aus dem Englischen von ${esc(b.uebersetzer)} · ` : ''}${esc(b.verlag)} · ${esc(b.erschienen)}${b.beitrag ? '' : ''}</p>
       ${b.einordnung ? `<p class="lead">${esc(b.einordnung)}</p>` : ''}
-      ${beitragFalte(b.beitrag, b.titel, b.autor)}
+      ${beitragFalte(b.beitrag, b.titel, b.autor, b.leitfrage)}
     </div>
-    ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="${b.coverBreite || 691}" height="${b.coverHoehe || 1063}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
+    ${mitCover ? `<figure class="cover"><img src="cover.jpg" srcset="${cover.srcset}" sizes="${COVER_SIZES}" width="${cover.w}" height="${cover.h}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
   </div>
 </div></section>
 
@@ -689,8 +969,10 @@ ${b.platzhalter && !b.amazonUrl ? '' : `<section class="sek alt" aria-labelledby
     ${b.leseprobeUrl ? `<p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>` : ''}
     <p class="hinweis">Der Amazon-Link ist ein Partnerlink (Werbung). Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
   </div>
-  ${neuKasten(b, neu)}
+  ${ausblick(b, neu)}
 </div></section>`}
+
+${weiterAbschnitt(b, sichtbar, alleSlugs, covers)}
 
 <section class="sek" aria-labelledby="faq-h"><div class="wrap">
   <h2 id="faq-h">Häufige Fragen</h2>
@@ -700,7 +982,7 @@ ${b.platzhalter && !b.amazonUrl ? '' : `<section class="sek alt" aria-labelledby
 <section class="abschluss" aria-labelledby="abschluss-h"><div class="wrap">
   <h2 id="abschluss-h">Hat dich das neugierig gemacht?</h2>
   <p>Das hier ist ein erster Schritt. Wir sammeln gerade Rückmeldungen: Was hat dir gefallen, was hat gefehlt, was würdest du dir für dich oder dein Team wünschen? Wer Interesse hat, meldet sich hier. Wir antworten persönlich.</p>
-  <p><a class="btn haupt" data-zugang href="${zugang}">Zugang anfragen</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
+  <p><a class="btn haupt" data-zugang href="${zugang}">Ich will dabei sein</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
   <p class="rollen">Ich komme als
     ${TUEREN.map((t) => `<a data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">${esc(t.label)}</a>`).join(' · ')}</p>
   <p class="teilen-zeile">Folge uns auf <a class="sozial" data-sozial="instagram" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a> und <a class="sozial" data-sozial="twitter" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>: @plinyoo_path. Oder schick die Seite an jemanden, der sie brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>
@@ -749,6 +1031,9 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
   // Weitere Messpunkte (ohne Personenbezug): Beitrag gesehen (Hälfte des Textes im Bild), Kauf-Link geklickt
   var bf=document.querySelector('.beitrag-fold');
   if(bf&&'IntersectionObserver' in window){var bfIO=new IntersectionObserver(function(es){if(es[0].isIntersecting){bfIO.disconnect();ereignis('Beitrag gesehen',{});}},{threshold:0.5});bfIO.observe(bf);}
+  document.querySelectorAll('[data-weiter]').forEach(function(a){
+    a.addEventListener('click',function(){ereignis('Weiter geklickt',{ziel:a.getAttribute('data-weiter'),art:a.getAttribute('data-art')});});
+  });
   document.querySelectorAll('[data-kauf]').forEach(function(a){
     a.addEventListener('click',function(){ereignis('Kauf-Link geklickt',{ziel:a.getAttribute('data-kauf')});});
   });
@@ -869,28 +1154,53 @@ async function main() {
   // Veröffentlichte Bücher, das neueste (höchste nr) zuerst. Ohne nr zählt die Dateireihenfolge.
   const sichtbar = alle.filter((b) => !b.draft || mitEntwuerfen).sort((x, y) => (y.nr ?? 0) - (x.nr ?? 0));
   const neu = sichtbar[0];
+  // Jede Brücke prüfen, auch die von Entwürfen: ein Ziel außerhalb /buch/<slug>/ oder ohne Buch bricht den Bau (#505 Q2-6).
+  const alleSlugs = new Set(alle.map((b) => b.slug));
+  for (const b of alle) for (const br of b.bruecken ?? []) brueckenZiel(b, br, alleSlugs);
   let erzeugt = 0, uebersprungen = 0;
   const covers = {};
+  // Erst Bilder aller Bücher, dann die Seiten: der Abschnitt „Weiter in anderen Büchern“ braucht die Maße fremder Cover.
+  const seiten = [];
   for (const b of alle) {
     if (b.draft && !mitEntwuerfen) { uebersprungen++; continue; }
     const out = path.join(distDir, 'buch', b.slug);
     await mkdir(out, { recursive: true });
     const coverQuelle = path.join(contentDir, b.slug, b.cover || 'cover.jpg');
     const mitCover = await exists(coverQuelle);
+    let cover = null;
     if (mitCover) {
       await copyFile(coverQuelle, path.join(out, 'cover.jpg'));
-      await vorschaubild(b, coverQuelle, path.join(out, 'og.png'));
+      await vorschaubild(b, coverQuelle, path.join(out, 'og.jpg'));
+      // Kleinere Fassungen für srcset, nur unterhalb der eigenen Breite (nie vergrößern); die Datei selbst ist die größte.
+      // Eine Fassung, die nicht weniger Bytes hat als die Datei selbst, entfällt (GFK: 1050 px wären 193 KB, die Datei 1062 px hat 157 KB).
+      const { width: cw, height: ch } = await sharp(coverQuelle).metadata();
+      const cBytes = (await stat(coverQuelle)).size;
+      const fassungen = [];
+      for (const w of COVER_BREITEN.filter((x) => x < cw)) {
+        const f = await sharp(coverQuelle).resize({ width: w, withoutEnlargement: true }).jpeg({ quality: 82 }).toBuffer();
+        if (f.length >= cBytes) continue;
+        await writeFile(path.join(out, `cover-${w}.jpg`), f);
+        fassungen.push(`cover-${w}.jpg ${w}w`);
+      }
+      fassungen.push(`cover.jpg ${cw}w`);
+      cover = { w: cw, h: ch, srcset: fassungen.join(', ') };
       // Kleine Fassung für die Übersicht (480 px breit), damit die Seite schnell lädt
       const klein = await sharp(coverQuelle).resize({ width: 480, withoutEnlargement: true }).jpeg({ quality: 82 }).toBuffer({ resolveWithObject: true });
       await writeFile(path.join(out, 'cover-klein.jpg'), klein.data);
       covers[b.slug] = { w: klein.info.width, h: klein.info.height };
     }
-    await writeFile(path.join(out, 'index.html'), seite(b, mitCover, neu), 'utf8');
+    seiten.push({ b, out, cover, mitCover });
+  }
+  for (const { b, out, cover, mitCover } of seiten) {
+    await writeFile(path.join(out, 'index.html'), seite(b, cover, neu, sichtbar, alleSlugs, covers), 'utf8');
     erzeugt++;
     console.log(`Buchseite: /buch/${b.slug}/${mitCover ? ' (mit Cover)' : ' (ohne Cover)'}${b.draft ? ' [ENTWURF]' : ''}`);
   }
+  await buecherFuss(sichtbar);
   if (sichtbar.length) {
-    await writeFile(path.join(distDir, 'buch', 'index.html'), uebersicht(sichtbar, covers), 'utf8');
+    const og = await uebersichtBild(sichtbar, covers, path.join(distDir, 'buch', 'og.jpg'));
+    await writeFile(path.join(distDir, 'buch', 'index.html'), uebersicht(sichtbar, covers, og), 'utf8');
+    console.log(`Vorschaubild /buch/: ${og ? `og.jpg (${og.alt})` : 'kein eigenes, /og/buchseite.png (unter zwei Büchern mit Cover)'}`);
     // Liste für die Kacheln der Startseite (die App lädt sie zur Laufzeit; so veraltet nichts von Hand)
     const liste = sichtbar.map((b, i) => ({ nr: b.nr ?? null, slug: b.slug, titel: b.kachelTitel || b.titel, text: kachelBeschreibung(b), symbol: b.symbol || '📚', neu: i === 0 }));
     await writeFile(path.join(distDir, 'buecher.json'), JSON.stringify({ buecher: liste }), 'utf8');

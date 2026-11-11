@@ -9,7 +9,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Phone } from './Views';
-import { FADEN_BUECHER, FADEN_FOLIEN, type FadenBuch } from './fadenInhalt';
+import { ArrowRight, ArrowUp } from 'lucide-react';
+import { FADEN_BUECHER, FADEN_FOLIEN, wegeDerFolie, type FadenBuch } from './fadenInhalt';
 
 const TAKT_MS = 5000;
 const WISCH_PX = 40;
@@ -69,14 +70,6 @@ export default function HeroFaden() {
   const zeigen = (n: number) => setIndex(((n % folien.length) + folien.length) % folien.length);
   const anhalten = () => setLauf(false);
   const aktivesBuch = folien[index].buch;
-
-  const naechsteKarte = (i: number) => {
-    for (let j = i + 1; j < folien.length; j++) {
-      const f = folien[j];
-      if (f.art === 'karte') return f;
-    }
-    return null;
-  };
 
   const knopf =
     'min-h-[44px] min-w-[44px] whitespace-nowrap rounded-full border px-3 text-sm sm:px-4 font-medium transition-colors focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-offset-2 focus-visible:outline-accent';
@@ -149,7 +142,6 @@ export default function HeroFaden() {
           >
             {folien.map((f, i) => {
               const buch = FADEN_BUECHER[f.buch];
-              const n = naechsteKarte(i);
               const kartenBisHier = folien.slice(0, i + 1).filter((x) => x.art === 'karte').length;
               return (
                 <div
@@ -163,12 +155,25 @@ export default function HeroFaden() {
                     <div data-ziel="hero-faden-karte" className="flex min-h-0 flex-1 flex-col gap-1.5 overflow-hidden rounded-[14px] border border-border bg-surface-1 p-3">
                       <h3 className="m-0 text-base font-semibold leading-[1.3] text-primary">{f.titel}</h3>
                       <p className="m-0 text-[13px] leading-normal text-main-text">{f.text}</p>
-                      {n && (
-                        <div className="mt-auto flex flex-col gap-0.5 rounded-[10px] bg-surface-tint px-2.5 py-1.5 text-xs text-text-muted">
-                          {t('hero.faden.refersTo', { book: FADEN_BUECHER[n.buch].titel })}
-                          <strong className="text-[13px] text-primary">{n.titel}</strong>
-                        </div>
-                      )}
+                      {/* Wege unter der Karte wie in der App (#513, ui-WegeUnterDerKarte): ↑ Weiterlesen, darunter → Abstecher,
+                          Titel links, Pfeil rechts, ohne Überzeile. Im Zielbild als Ergebnis, nicht als Bedienfeld (wie die
+                          Antworten, Review #503 Anm. 3): kein Rahmen einer Schaltfläche, keine Mindesthöhe. */}
+                      <ul data-ziel="hero-faden-wege" className="m-0 mt-auto flex list-none flex-col rounded-[10px] bg-surface-tint p-0">
+                        {wegeDerFolie(folien, i).map((w, k) => (
+                          <li
+                            key={w.pfeil}
+                            data-weg={w.pfeil}
+                            className={`flex items-center gap-2 px-2.5 py-1.5 ${k > 0 ? 'border-t border-border' : ''}`}
+                          >
+                            <span className="min-w-0 flex-1 text-[13px] font-semibold leading-snug text-primary">{w.titel}</span>
+                            {w.pfeil === 'weiterlesen' ? (
+                              <ArrowUp aria-hidden="true" className="h-4 w-4 flex-none text-primary" />
+                            ) : (
+                              <ArrowRight aria-hidden="true" className="h-4 w-4 flex-none text-primary" />
+                            )}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   ) : (
                     // Fragefolie als Ergebnis, nicht als Bedienfeld (Review #503, Anm. 3): Antworten als Liste ohne Rahmen und
@@ -198,7 +203,7 @@ export default function HeroFaden() {
         </Phone>
       </div>
 
-      {/* Bedienzeile (B8): genau eine gefüllte Schaltfläche */}
+      {/* Bedienzeile: alle drei umrandet (#503 Zugang B4, ersetzt B8): Im Hero ist allein die Zugangsschaltfläche gefüllt */}
       <div className="mt-2.5 flex justify-center gap-2 lg:col-span-2 lg:col-start-1 lg:row-start-2">
         <button
           type="button"
@@ -229,7 +234,7 @@ export default function HeroFaden() {
             anhalten();
             zeigen(index + 1);
           }}
-          className={`${knopf} border-primary bg-primary text-white hover:bg-primary/90`}
+          className={`${knopf} border-border bg-surface-1 text-primary hover:bg-surface-2`}
         >
           {t('hero.faden.next')}
         </button>

@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
+import ZugangHinweis from './ZugangHinweis';
 
 export default function CTA() {
   const { t } = useTranslation();
@@ -23,6 +24,7 @@ export default function CTA() {
           {t('cta.button')}
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </Link>
+        <ZugangHinweis />
       </div>
     </section>
   );
