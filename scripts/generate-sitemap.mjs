@@ -67,20 +67,52 @@ async function generateSitemap() {
     throw new Error(`Sitemap und Buchseiten passen nicht zusammen. Ohne Seite in dist/buch/: [${fehltImBau.join(', ')}]. Gebaut, aber nicht in der Sitemap: [${fehltInSitemap.join(', ')}].`);
   }
 
-  // Statische Unterseiten (content/seiten/<seite>/), je Sprache eine Adresse; Entwürfe nicht
+  // Statische Unterseiten (content/seiten/<seite>/), je Sprache eine Adresse; Entwürfe nicht.
+  // Dieselbe Regel wie scripts/seiten.mjs: kein Ordner content/seiten → keine Unterseiten; ein Eintrag ohne seite.json
+  // (etwa .DS_Store) wird übersprungen. Jeder Lesefehler darüber hinaus bricht den Bau ab — eine Unterseite, die still
+  // aus der Sitemap fällt, ist ein Fehler, kein Ergebnis.
   const seitenDir = path.join(root, 'content', 'seiten');
-  try {
+  async function lesen(datei) {
+    try {
+      return JSON.parse(await readFile(datei, 'utf-8'));
+    } catch (e) {
+      throw new Error(`Sitemap: Unterseite nicht lesbar: ${path.relative(root, datei)} (${e.code ?? e.message}). Bau abgebrochen, damit die Seite nicht still aus der Sitemap fällt.`);
+    }
+  }
+  const seitenDa = await readdir(seitenDir).then(() => true, (e) => {
+    if (e.code === 'ENOENT') return false;
+    throw new Error(`Sitemap: Ordner content/seiten nicht lesbar (${e.code ?? e.message}). Bau abgebrochen.`);
+  });
+  const unterseiten = [];
+  if (seitenDa) {
     for (const name of await readdir(seitenDir)) {
       const dir = path.join(seitenDir, name);
-      const meta = JSON.parse(await readFile(path.join(dir, 'seite.json'), 'utf-8'));
+      const metaDatei = path.join(dir, 'seite.json');
+      const metaDa = await readFile(metaDatei).then(() => true, (e) => {
+        if (e.code === 'ENOENT' || e.code === 'ENOTDIR') return false;
+        throw new Error(`Sitemap: Unterseite nicht lesbar: ${path.relative(root, metaDatei)} (${e.code ?? e.message}). Bau abgebrochen.`);
+      });
+      if (!metaDa) continue;
+      const meta = await lesen(metaDatei);
       if (meta.draft) continue;
       for (const file of (await readdir(dir)).filter((f) => /^[a-z]{2}\.json$/.test(f))) {
-        const t = JSON.parse(await readFile(path.join(dir, file), 'utf-8'));
+        const t = await lesen(path.join(dir, file));
+        if (typeof t.pfad !== 'string' || !/^\/([a-z]{2}\/)?[a-z0-9-]+\/$/.test(t.pfad)) {
+          throw new Error(`Sitemap: content/seiten/${name}/${file}: Pfad "${t.pfad}" ungültig. Bau abgebrochen.`);
+        }
+        unterseiten.push(t.pfad);
         urls.push({ loc: `${SITE}${t.pfad}`, changefreq: 'monthly', priority: '0.8', lastmod: new Date().toISOString().split('T')[0] });
       }
     }
-  } catch (e) {
-    console.warn('Unterseiten konnten nicht gelesen werden:', e.message);
+  }
+  // Abgleich mit dem Bau (scripts/seiten.mjs): jede Unterseite der Sitemap hat ihre Seite in dist/.
+  const ohneSeite = [];
+  for (const pfad of unterseiten) {
+    const da = await readFile(path.join(distDir, ...pfad.split('/').filter(Boolean), 'index.html')).then(() => true, () => false);
+    if (!da) ohneSeite.push(pfad);
+  }
+  if (ohneSeite.length) {
+    throw new Error(`Sitemap: Unterseiten ohne Seite in dist/: [${ohneSeite.join(', ')}]. Bau abgebrochen.`);
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -94,7 +126,7 @@ ${urls.map(u => `  <url>
 </urlset>`;
 
   await writeFile(path.join(distDir, 'sitemap.xml'), xml, 'utf-8');
-  console.log(`✓ sitemap.xml erzeugt (${buecher.length} Buchseiten, abgeglichen mit dist/buch/)`);
+  console.log(`✓ sitemap.xml erzeugt (${buecher.length} Buchseiten, abgeglichen mit dist/buch/; ${unterseiten.length} Unterseiten, abgeglichen mit dist/)`);
 }
 
 generateSitemap().catch((e) => { console.error(e); process.exit(1); });
