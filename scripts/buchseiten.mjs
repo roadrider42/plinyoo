@@ -324,11 +324,15 @@ function kartenSektion(b) {
 
 // Der Beitrag zum Buch steht immer ausgeklappt (kein Klappen, damit er nicht überlesen wird), mit orangem Balken links,
 // klar als Meinungsbeitrag gekennzeichnet. Ohne Feld grundlage steht der Zusatz „auf Grundlage von …“; grundlage: "" lässt ihn weg.
-function beitragFalte(bt, buchTitel, buchAutor) {
+// Ist der Beitragstitel Zeichen für Zeichen die Leitfrage (die schon in der h1 steht), entfallen Titel UND Etikett:
+// ein Etikett über nichts wäre ein Stummel (Sprecher 11.11.2026, #505 Z3). Weicht er auch nur in einem Zeichen ab
+// (Marshall: „–“ statt „,“), bleibt beides: dort setzt das Etikett seinen Satz im Titel fort.
+function beitragFalte(bt, buchTitel, buchAutor, leitfrage) {
   if (!bt || !bt.absaetze || bt.absaetze.length === 0) return '';
+  const titelDoppelt = bt.titel === leitfrage;
   return `<section class="beitrag-fold" aria-label="Meinungsbeitrag">
-    ${bt.etikett ? `<p class="bk">${esc(bt.etikett)}</p>` : ''}
-    <p class="bt">${esc(bt.titel)}</p>
+    ${!titelDoppelt && bt.etikett ? `<p class="bk">${esc(bt.etikett)}</p>` : ''}
+    ${titelDoppelt ? '' : `<p class="bt">${esc(bt.titel)}</p>`}
     ${bt.anreisser ? `<p class="anreisser">${esc(bt.anreisser)}</p>` : ''}
     <div class="lesetext">
       ${bt.absaetze.map((a) => `<p>${escInline(a)}</p>`).join('\n      ')}
@@ -484,6 +488,7 @@ header.top nav{display:flex;align-items:center;gap:10px}
 header.top .btn{margin:0;padding:8px 14px;font-size:15px}
 .hero{padding:44px 0 36px}
 .eyebrow{display:inline-block;margin:0 0 14px;padding:4px 12px;border-radius:999px;background:var(--mist);font-size:13px;font-weight:600;color:var(--teal-d)}
+.eyebrow .nb{white-space:nowrap}
 .hero h1{margin:0 0 14px;font-size:clamp(28px,5.2vw,42px);line-height:1.15;color:var(--graphite)}
 .hero .grid{display:grid;grid-template-columns:1fr;gap:22px}
 @media(min-width:660px){.hero .grid.mit-cover{grid-template-columns:1fr 160px;align-items:start}}
@@ -623,6 +628,34 @@ summary{font-size:18px}
 }
 </style>`;
 
+// Beschreibung im Suchtreffer (meta description, og:description). Wortlaut je Buch im Feld suchBeschreibung,
+// freigegeben vom Sprecher (11.11.2026, #505 Z2). Kartenzahl {n} und Fragenzahl {fragen} kommen aus kartenvoll,
+// nie von Hand: sonst veraltet der Satz bei der nächsten Karte. Lässt sich die Fragenzahl nicht als Zahlwort
+// sagen, entfällt sie („je mit Quelle und Fragen“). Was der Satz behauptet und die Daten nicht halten, bricht den Bau ab.
+const ZAHLWORT = { 2: 'zwei', 3: 'drei', 4: 'vier', 5: 'fünf', 6: 'sechs', 7: 'sieben', 8: 'acht', 9: 'neun', 10: 'zehn' };
+function suchBeschreibung(b) {
+  const vorlage = b.suchBeschreibung;
+  if (!vorlage) {
+    if (b.draft) return b.leitfrage;
+    throw new Error(`${b.slug}: Feld suchBeschreibung fehlt (Wortlaut vom Sprecher, mit {n} und {fragen})`);
+  }
+  const karten = b.kartenvoll ?? [];
+  if (karten.length === 0) throw new Error(`${b.slug}: suchBeschreibung nennt Lernkarten, kartenvoll ist leer`);
+  if (vorlage.split('{n}').length !== 2) throw new Error(`${b.slug}: suchBeschreibung braucht genau einmal {n}`);
+  if (/je mit Quelle/.test(vorlage) && !karten.every((k) => k.quelle)) throw new Error(`${b.slug}: suchBeschreibung sagt „je mit Quelle“, eine Karte hat keine`);
+  let text = vorlage.replace('{n}', String(karten.length));
+  if (text.includes('{fragen}')) {
+    const zahlen = karten.map((k) => (k.fragen ?? []).length);
+    if (zahlen.some((z) => z === 0)) throw new Error(`${b.slug}: suchBeschreibung nennt Fragen, eine Karte hat keine`);
+    const min = Math.min(...zahlen);
+    const max = Math.max(...zahlen);
+    const wort = min === max ? ZAHLWORT[min] : ZAHLWORT[min] && ZAHLWORT[max] ? `${ZAHLWORT[min]} bis ${ZAHLWORT[max]}` : undefined;
+    text = wort ? text.replace('{fragen}', wort) : text.replace('{fragen} ', '');
+  }
+  if (/[{}]/.test(text)) throw new Error(`${b.slug}: suchBeschreibung hat einen unbekannten Platzhalter: ${text}`);
+  return text;
+}
+
 // cover: null (ohne Cover) oder { w, h, srcset } aus main().
 function seite(b, cover, neu) {
   const mitCover = !!cover;
@@ -631,8 +664,9 @@ function seite(b, cover, neu) {
   // Vorschaubild beim Teilen: je Buch 1200 × 630 (vorschaubild()), sonst das allgemeine Bild, ebenfalls 1200 × 630.
   const ogBild = mitCover ? `${url}og.jpg` : `${SITE}/og/buchseite.png`;
   const ogAlt = mitCover ? `Buchvorstellung mit Lernkarten: ${b.titel} von ${b.autor}` : 'plinyoo';
-  const titel = `${b.autor}: ${b.titel} — Buchvorstellung | plinyoo`;
-  const desc = b.leitfrage;
+  // Wortlaut T-A, Sprecher 11.11.2026 (#505 Z1): für alle Bücher dieselbe Form, nie je Buch gemischt.
+  const titel = `${b.titel} – ${b.autor} | plinyoo`;
+  const desc = suchBeschreibung(b);
   const karten = b.karten ?? [];
   const slugQ = encodeURIComponent(b.slug);
   const zugang = `/?buch=${slugQ}#/zugang`;
@@ -684,14 +718,14 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
 <main>
 <section class="hero"><div class="wrap">
   <p style="margin:0 0 16px;font-size:15px"><a data-alle-buecher href="/buch/" style="font-weight:600">← Alle Bücher</a></p>
-  <p class="eyebrow">Buchvorstellung</p>
+  <p class="eyebrow">${esc(b.titel)} · <span class="nb">${esc(b.autor)}</span></p>
   <div class="grid${mitCover ? ' mit-cover' : ''}">
     <div>
       <h1>${esc(b.leitfrage)}</h1>
       <p class="meta"><strong>${esc(b.autor)}: ${esc(b.titel)}</strong> — ${esc(b.untertitel)}<br>
       ${b.uebersetzer ? `Aus dem Englischen von ${esc(b.uebersetzer)} · ` : ''}${esc(b.verlag)} · ${esc(b.erschienen)}${b.beitrag ? '' : ''}</p>
       ${b.einordnung ? `<p class="lead">${esc(b.einordnung)}</p>` : ''}
-      ${beitragFalte(b.beitrag, b.titel, b.autor)}
+      ${beitragFalte(b.beitrag, b.titel, b.autor, b.leitfrage)}
     </div>
     ${mitCover ? `<figure class="cover"><img src="cover.jpg" srcset="${cover.srcset}" sizes="${COVER_SIZES}" width="${cover.w}" height="${cover.h}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
   </div>
