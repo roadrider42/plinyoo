@@ -40,7 +40,7 @@
   "leseprobeUrl": "",
   "amazonUrl": "https://www.amazon.de/dp/3570104842",
   "cover": "cover.jpg",
-  "coverCredit": "VORLÄUFIG: Cover der englischen Ausgabe aus dem Kindle-Export (Amazon-Bild, Stand 2026-11-11), Rechte und deutsche Ausgabe offen",
+  "coverCredit": "Cover der englischen Ausgabe (Amazon-Produktbild, Stand 2026-11-11)",
   "naechsteWoche": "",
   "probeTitel": "Probier es an den Karten aus",
   "graphTitel": "Der Wissensgraph zu Musks Arbeitsweise",
@@ -254,7 +254,8 @@
       "Unsere Einordnung: Die Karten stellen Musks Arbeitsweise nach Isaacson in vier Gruppen nebeneinander: den Algorithmus, Kosten und Regeln bei SpaceX, Tesla und die Mission sowie Führen und Messen.",
       "Wer die Karten durchspielt, kann erkunden, wie Anforderungen, Kosten, Messgrößen und Feedback zusammenhängen."
     ],
-    "autor": "Heiko Miertzsch"
+    "autor": "Heiko Miertzsch",
+    "grundlage": "Aus den Markierungen eines Lesers in der englischen Ausgabe des Buchs „Elon Musk“; die deutschen Fassungen der Belege sind unsere Übersetzung."
   },
   "kartenvoll": [
     {
