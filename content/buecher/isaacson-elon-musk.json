@@ -1,0 +1,2038 @@
+{
+  "slug": "isaacson-elon-musk",
+  "draft": false,
+  "nr": 10,
+  "kachelTitel": "Musk — Arbeitsweise",
+  "kachelText": "zu Musks Fragen an Ingenieure: Anforderungen, Kosten, Messgrößen und Feedback, mit Wissensgraph und interaktiven Fragen.",
+  "symbol": "🚀",
+  "autor": "Walter Isaacson",
+  "titel": "Elon Musk",
+  "untertitel": "",
+  "uebersetzer": "",
+  "verlag": "C. Bertelsmann",
+  "erschienen": "2023",
+  "isbn": "978-3-570-10484-2",
+  "leitfrage": "Wie gehen Musks Unternehmen laut Isaacson mit Anforderungen und Kosten um?",
+  "einordnung": "",
+  "kartenIntro": "Alle 18 kannst du unten durchspielen.",
+  "karten": [
+    "Algorithmus: feste Reihenfolge",
+    "Anforderung braucht Namen",
+    "Hollman: korrodierte Mutter",
+    "Idiot-Index: Raketenteile",
+    "Triebwerk: Zünden, fliegen",
+    "Cost-plus: Aussage Senat",
+    "Tesla: Komponenten selbst",
+    "Master Plan: Oben nach unten",
+    "Falcon 1: Vierter Start",
+    "Risikoliste: Tempo, Kontrollen",
+    "Messgrößen: Meilen/Eingriff",
+    "Booster: Am Turm fangen",
+    "Mission zuerst, Modell dazu",
+    "Führung: Praxis, Kameraderie",
+    "Feedback: Handlung, Person",
+    "Automatisierung: Fehler",
+    "Twitter: Opt-in für Hardcore",
+    "Starship: Wandstärke"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
+  "verlagUrl": "https://www.penguin.de/buecher/walter-isaacson-elon-musk/buch/9783570104842",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://www.amazon.de/dp/3570104842",
+  "cover": "cover.jpg",
+  "coverCredit": "VORLÄUFIG: Cover der englischen Ausgabe aus dem Kindle-Export (Amazon-Bild, Stand 2026-11-11), Rechte und deutsche Ausgabe offen",
+  "naechsteWoche": "",
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph zu Musks Arbeitsweise",
+  "knoten": [
+    {
+      "slug": "musk-algorithmus-reihenfolge",
+      "titel": "Algorithmus: feste Reihenfolge"
+    },
+    {
+      "slug": "musk-anforderung-braucht-namen",
+      "titel": "Anforderung braucht Namen"
+    },
+    {
+      "slug": "musk-hollman-mutter",
+      "titel": "Hollman: korrodierte Mutter"
+    },
+    {
+      "slug": "musk-idiot-index-eigenfertigung",
+      "titel": "Idiot-Index: Raketenteile"
+    },
+    {
+      "slug": "musk-triebwerk-ein-test",
+      "titel": "Triebwerk: Zünden, fliegen"
+    },
+    {
+      "slug": "musk-cost-plus",
+      "titel": "Cost-plus: Aussage Senat"
+    },
+    {
+      "slug": "musk-vertikale-integration",
+      "titel": "Tesla: Komponenten selbst"
+    },
+    {
+      "slug": "musk-secret-master-plan",
+      "titel": "Master Plan: Oben nach unten"
+    },
+    {
+      "slug": "musk-falcon-1-vierter-start",
+      "titel": "Falcon 1: Vierter Start"
+    },
+    {
+      "slug": "musk-risikoliste-elf",
+      "titel": "Risikoliste: Tempo, Kontrollen"
+    },
+    {
+      "slug": "musk-messgroessen-fsd",
+      "titel": "Messgrößen: Meilen/Eingriff"
+    },
+    {
+      "slug": "musk-booster-fangen",
+      "titel": "Booster: Am Turm fangen"
+    },
+    {
+      "slug": "musk-mission-und-geschaeftsmodell",
+      "titel": "Mission zuerst, Modell dazu"
+    },
+    {
+      "slug": "musk-regeln-fuehrung",
+      "titel": "Führung: Praxis, Kameraderie"
+    },
+    {
+      "slug": "musk-feedback-handlung-nicht-person",
+      "titel": "Feedback: Handlung, Person"
+    },
+    {
+      "slug": "musk-automatisierung-zuletzt",
+      "titel": "Automatisierung: Fehler"
+    },
+    {
+      "slug": "musk-twitter-opt-in",
+      "titel": "Twitter: Opt-in für Hardcore"
+    },
+    {
+      "slug": "musk-starship-wandstaerke",
+      "titel": "Starship: Wandstärke"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      0,
+      3,
+      "verwandt"
+    ],
+    [
+      0,
+      10,
+      "verwandt"
+    ],
+    [
+      0,
+      11,
+      "verwandt"
+    ],
+    [
+      0,
+      13,
+      "verwandt"
+    ],
+    [
+      0,
+      15,
+      "verwandt"
+    ],
+    [
+      1,
+      2,
+      "verwandt"
+    ],
+    [
+      1,
+      4,
+      "verwandt"
+    ],
+    [
+      1,
+      17,
+      "verwandt"
+    ],
+    [
+      2,
+      8,
+      "verwandt"
+    ],
+    [
+      3,
+      5,
+      "verwandt"
+    ],
+    [
+      3,
+      6,
+      "verwandt"
+    ],
+    [
+      4,
+      5,
+      "verwandt"
+    ],
+    [
+      4,
+      9,
+      "verwandt"
+    ],
+    [
+      6,
+      7,
+      "verwandt"
+    ],
+    [
+      6,
+      12,
+      "verwandt"
+    ],
+    [
+      6,
+      16,
+      "verwandt"
+    ],
+    [
+      7,
+      12,
+      "verwandt"
+    ],
+    [
+      8,
+      9,
+      "verwandt"
+    ],
+    [
+      10,
+      13,
+      "verwandt"
+    ],
+    [
+      11,
+      17,
+      "verwandt"
+    ],
+    [
+      13,
+      14,
+      "verwandt"
+    ],
+    [
+      13,
+      15,
+      "verwandt"
+    ],
+    [
+      13,
+      16,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "",
+    "titel": "Wer hat diese Anforderung aufgestellt? Musks Fragen an seine Ingenieure",
+    "anreisser": "Laut Walter Isaacson sollten Musks Ingenieure den Namen hinter jeder Anforderung kennen, auch bei Vorgaben von Militär und NASA. Die Karten legen Beispiele aus SpaceX, Tesla und Twitter nebeneinander.",
+    "absaetze": [
+      "Der US-amerikanische Journalist Walter Isaacson (* 1952) hat Biografien über Steve Jobs, Albert Einstein und Elon Musk (* 1971) geschrieben, den Chef von Tesla und SpaceX. Die Karten dieser Seite stammen aus den Markierungen eines Lesers in Isaacsons „Elon Musk“.",
+      "Nach Isaacson wurde das Hinterfragen aller Anforderungen bei SpaceX zum ersten Schritt einer Fünf-Punkte-Liste, die Musk „den Algorithmus“ nannte. In einer Regelliste in Musks Ich-Form, die Isaacson wiedergibt, folgen: überflüssige Teile und Prozesse löschen, vereinfachen und optimieren, die Zykluszeit verkürzen und zuletzt automatisieren. Werde nicht mindestens ein Zehntel des Gelöschten später wieder hinzugefügt, sei zu wenig gelöscht worden. Die übermäßige Automatisierung bei Tesla nannte Musk laut Isaacson öffentlich seinen Fehler.",
+      "Fragte Musk, wer eine Anforderung aufgestellt habe, genügte ihm nach Isaacson „das Militär“ oder „die Rechtsabteilung“ nicht; die Ingenieure sollten den Namen der Person kennen. Jedes Teil, jeder Prozess und jede Vorgabe brauche einen Namen. Isaacson schildert, wie Musk nach einem Fehlstart auf einen Ingenieur deutete, der am Vorabend eine Mutter gelöst und wieder angebracht hatte. Als die Treibstoffleitung gefunden wurde, war die Mutter korrodiert und gebrochen; laut Isaacson trug der Ingenieur keine Schuld.",
+      "Zu den Kosten: Musk entwickelte laut Isaacson den „idiot index“, der angibt, um wie viel teurer ein fertiges Produkt ist als die Kosten seiner Grundmaterialien. Als einen Grund für hohe Kosten nennt Isaacson Hunderte Vorgaben von Militär und NASA. Statt viele Teststunden zu fahren, ließ Musk ein Triebwerk bauen, auf dem Prüfstand zünden und bei Erfolg fliegen. Vor einem Senatsausschuss kritisierte er laut Isaacson das Cost-plus-Modell, bei dem ein Auftragnehmer bei Überschreitung des Budgets mehr bezahlt bekommt. Die Falcon 1 erreichte nach drei Fehlstarts als erste privat gebaute Rakete die Umlaufbahn; Boeings vergleichbare Sparte hatte nach Isaacson fünfzigtausend Beschäftigte, SpaceX fünfhundert.",
+      "Bei Tesla entschied Musk nach Isaacson, die wichtigsten Komponenten selbst herzustellen, statt sie bei Zulieferern zu kaufen. Im „Secret Master Plan“ nennt er die Strategie: im oberen Marktsegment einsteigen und mit jedem Modell zu höheren Stückzahlen und niedrigeren Preisen gehen. Starlink entwickelte Musk laut Isaacson, um die Marsmission von SpaceX zu finanzieren.",
+      "Klare Messgrößen treiben nach Musks Überzeugung Innovation voran. Für das Team des Fahrsystems Full Self-Driving war es die Zahl der Meilen ohne menschlichen Eingriff; große Monitore zeigten sie live, und ein Gong belohnte jeden gelösten Fall. Über sein Feedback sagt Musk, es sei „hardcore“, und er versuche, die Handlung zu kritisieren, nicht die Person. Mit dem Beobachten ohne zu bewerten befasst sich auch Marshall B. Rosenbergs [[buch:gewaltfreie-kommunikation|„Gewaltfreie Kommunikation“]]. Bei Twitter drehte Musk nach Isaacson eine Abfrage von Opt-out zu Opt-in um; 69 Prozent der Belegschaft sagten zu.",
+      "Unsere Einordnung: Die Karten stellen Musks Arbeitsweise nach Isaacson in vier Gruppen nebeneinander: den Algorithmus, Kosten und Regeln bei SpaceX, Tesla und die Mission sowie Führen und Messen.",
+      "Wer die Karten durchspielt, kann erkunden, wie Anforderungen, Kosten, Messgrößen und Feedback zusammenhängen."
+    ],
+    "autor": "Heiko Miertzsch"
+  },
+  "kartenvoll": [
+    {
+      "slug": "musk-algorithmus-reihenfolge",
+      "kurz": "Algorithmus: feste Reihenfolge",
+      "titel": "Musks „Algorithmus“: Schritte in fester Reihenfolge",
+      "karte": "Nach Isaacson wurde das Hinterfragen aller Anforderungen bei SpaceX zum ersten Schritt einer Fünf-Punkte-Liste, die Musk „den Algorithmus“ nannte. In einer Regelliste in Musks Ich-Form, die Isaacson wiedergibt, folgen: überflüssige Teile und Prozesse löschen, vereinfachen und optimieren, die Zykluszeit verkürzen, zuletzt automatisieren. Werde nicht mindestens ein Zehntel des Gelöschten später wieder hinzugefügt, sei zu wenig gelöscht worden.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welcher Schritt steht in Musks Liste an erster Stelle?",
+          "beleg": "Question every requirement. Each should come with the name of the person who made it.",
+          "belegDe": "Jede Anforderung hinterfragen. Zu jeder sollte der Name der Person gehören, die sie aufgestellt hat.",
+          "optionen": [
+            {
+              "text": "Alle Teile vereinfachen und optimieren",
+              "ok": false,
+              "fb": "Falsch: In Musks Liste kommt zuerst das Hinterfragen jeder Anforderung."
+            },
+            {
+              "text": "Jeden Arbeitsschritt automatisieren",
+              "ok": false,
+              "fb": "Falsch: In Musks Liste kommt zuerst das Hinterfragen jeder Anforderung."
+            },
+            {
+              "text": "Die Zykluszeit jedes Prozesses verkürzen",
+              "ok": false,
+              "fb": "Falsch: In Musks Liste kommt zuerst das Hinterfragen jeder Anforderung."
+            },
+            {
+              "text": "Jede Anforderung hinterfragen",
+              "ok": true,
+              "fb": "Richtig: In Musks Liste kommt zuerst das Hinterfragen jeder Anforderung."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welcher Schritt folgt in der Liste direkt auf das Löschen?",
+          "beleg": "Simplify and optimize. This should come after step two.",
+          "belegDe": "Vereinfachen und optimieren. Das sollte nach Schritt zwei kommen.",
+          "optionen": [
+            {
+              "text": "Vereinfachen und optimieren",
+              "ok": true,
+              "fb": "Richtig: Nach dem Löschen folgt in der Liste Vereinfachen und Optimieren."
+            },
+            {
+              "text": "Die Zykluszeit beschleunigen",
+              "ok": false,
+              "fb": "Falsch: Nach dem Löschen folgt in der Liste Vereinfachen und Optimieren."
+            },
+            {
+              "text": "Eine neue Anforderung festlegen",
+              "ok": false,
+              "fb": "Falsch: Nach dem Löschen folgt in der Liste Vereinfachen und Optimieren."
+            },
+            {
+              "text": "Automatisieren",
+              "ok": false,
+              "fb": "Falsch: Nach dem Löschen folgt in der Liste Vereinfachen und Optimieren."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie viel des Gelöschten sollte später wieder hinzukommen, damit genug gelöscht wurde?",
+          "beleg": "if you do not end up adding back at least 10% of them, then you didn’t delete enough.",
+          "belegDe": "Wenn du am Ende nicht mindestens 10 % davon wieder hinzufügst, hast du nicht genug gelöscht.",
+          "optionen": [
+            {
+              "text": "Nichts, alles bleibt gelöscht",
+              "ok": false,
+              "fb": "Falsch: Nach der Liste sollten mindestens 10 Prozent der gelöschten Teile und Prozesse wieder hinzukommen."
+            },
+            {
+              "text": "Höchstens 1 Prozent",
+              "ok": false,
+              "fb": "Falsch: Nach der Liste sollten mindestens 10 Prozent der gelöschten Teile und Prozesse wieder hinzukommen."
+            },
+            {
+              "text": "Mindestens 50 Prozent",
+              "ok": false,
+              "fb": "Falsch: Nach der Liste sollten mindestens 10 Prozent der gelöschten Teile und Prozesse wieder hinzukommen."
+            },
+            {
+              "text": "Mindestens 10 Prozent",
+              "ok": true,
+              "fb": "Richtig: Nach der Liste sollten mindestens 10 Prozent der gelöschten Teile und Prozesse wieder hinzukommen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-anforderung-braucht-namen",
+      "kurz": "Anforderung braucht Namen",
+      "titel": "Jede Anforderung braucht den Namen eines Menschen",
+      "karte": "Nach Isaacson fragte Musk bei SpaceX immer wieder, wer eine Anforderung aufgestellt habe. „Das Militär“ oder „die Rechtsabteilung“ genügte ihm nicht, die Ingenieure sollten den Namen der Person kennen. Alle Anforderungen seien als Empfehlungen zu behandeln, unveränderlich seien nur die Naturgesetze. Dazu gehört eine Regel zur Verantwortung: Jedes Teil, jeder Prozess und jede Vorgabe braucht einen Namen.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche Auskunft über den Urheber einer Anforderung ließ Musk nicht gelten?",
+          "beleg": "Musk would insist that they know the name of the actual person who made the requirement.",
+          "belegDe": "Musk bestand darauf, dass sie den Namen der Person kennen, die die Anforderung tatsächlich aufgestellt hatte.",
+          "optionen": [
+            {
+              "text": "Eine schriftliche Begründung der Person",
+              "ok": false,
+              "fb": "Falsch: Laut Isaacson genügte Musk der Hinweis auf eine Abteilung nicht; er wollte den Namen der Person."
+            },
+            {
+              "text": "Den Verweis auf ein früheres Projekt",
+              "ok": false,
+              "fb": "Falsch: Laut Isaacson genügte Musk der Hinweis auf eine Abteilung nicht; er wollte den Namen der Person."
+            },
+            {
+              "text": "Das Militär oder die Rechtsabteilung",
+              "ok": true,
+              "fb": "Richtig: Laut Isaacson genügte Musk der Hinweis auf eine Abteilung nicht; er wollte den Namen der Person."
+            },
+            {
+              "text": "Den Namen der Person, die sie aufgestellt hatte",
+              "ok": false,
+              "fb": "Falsch: Laut Isaacson genügte Musk der Hinweis auf eine Abteilung nicht; er wollte den Namen der Person."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Regeln gelten nach der Liste als einzige „Regeln“?",
+          "beleg": "The only rules are the ones dictated by the laws of physics. Everything else is a recommendation.",
+          "belegDe": "Die einzigen Regeln sind die, die die Naturgesetze vorgeben. Alles andere ist eine Empfehlung.",
+          "optionen": [
+            {
+              "text": "Die der Kundenverträge",
+              "ok": false,
+              "fb": "Falsch: In Musks Liste sind nur die Regeln der Naturgesetze verbindlich, alles andere ist eine Empfehlung."
+            },
+            {
+              "text": "Die der Militärvorschriften",
+              "ok": false,
+              "fb": "Falsch: In Musks Liste sind nur die Regeln der Naturgesetze verbindlich, alles andere ist eine Empfehlung."
+            },
+            {
+              "text": "Die der NASA-Normen",
+              "ok": false,
+              "fb": "Falsch: In Musks Liste sind nur die Regeln der Naturgesetze verbindlich, alles andere ist eine Empfehlung."
+            },
+            {
+              "text": "Die der Naturgesetze",
+              "ok": true,
+              "fb": "Richtig: In Musks Liste sind nur die Regeln der Naturgesetze verbindlich, alles andere ist eine Empfehlung."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was muss nach Musks Regel zur Verantwortung einen Namen tragen?",
+          "beleg": "every part, every process, and every specification needs to have a name attached.",
+          "belegDe": "jedes Teil, jeder Prozess und jede Vorgabe muss einen Namen tragen.",
+          "optionen": [
+            {
+              "text": "Jedes Teil, jeder Prozess, jede Vorgabe",
+              "ok": true,
+              "fb": "Richtig: Nach Isaacson soll bei Musk jedes Teil, jeder Prozess und jede Vorgabe einen Namen tragen."
+            },
+            {
+              "text": "Nur Teile, die schon einmal ausgefallen sind",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson soll bei Musk jedes Teil, jeder Prozess und jede Vorgabe einen Namen tragen."
+            },
+            {
+              "text": "Alle Verträge mit externen Lieferanten",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson soll bei Musk jedes Teil, jeder Prozess und jede Vorgabe einen Namen tragen."
+            },
+            {
+              "text": "Jede Entscheidung, die der Vorstand fällt",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson soll bei Musk jedes Teil, jeder Prozess und jede Vorgabe einen Namen tragen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-hollman-mutter",
+      "kurz": "Hollman: korrodierte Mutter",
+      "titel": "Wem gaben sie die Schuld am Fehlstart? Die korrodierte Mutter",
+      "karte": "Nach Isaacson galt bei Musk: Jedes Teil hat einen Namen. Nach einem Fehlstart auf der Insel Kwaj (Kwajalein-Atoll) deutete Musk auf einen Ingenieur namens Jeremy Hollman, der am Vorabend eine Mutter gelöst und wieder angebracht hatte. Wenige Tage später sprach er öffentlich von „einem unserer erfahrensten Techniker“; Insider wussten, wer gemeint war. Als die Treibstoffleitung gefunden wurde, war die Mutter korrodiert und gebrochen. Laut Isaacson trug Hollman keine Schuld; schuld sei die Seeluft von Kwaj.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wem schrieb Musk den Fehler zunächst zu?",
+          "beleg": "Musk fingered an engineer named Jeremy Hollman, one of Mueller’s first hires, who, the night before the launch, had removed and then reattached the nut in order to get access to a valve.",
+          "belegDe": "Musk machte einen Ingenieur namens Jeremy Hollman verantwortlich, eine von Muellers ersten Einstellungen, der am Abend vor dem Start die Mutter gelöst und wieder angebracht hatte, um an ein Ventil zu kommen.",
+          "optionen": [
+            {
+              "text": "Dem Lieferanten, der die Treibstoffleitung geliefert hatte",
+              "ok": false,
+              "fb": "Falsch: Musk machte nach Isaacson einen Ingenieur verantwortlich, der am Vorabend eine Mutter gelöst und wieder angebracht hatte."
+            },
+            {
+              "text": "Einem Ingenieur, der die Mutter am Vorabend gelöst hatte",
+              "ok": true,
+              "fb": "Richtig: Musk machte nach Isaacson einen Ingenieur verantwortlich, der am Vorabend eine Mutter gelöst und wieder angebracht hatte."
+            },
+            {
+              "text": "Der Bodenmannschaft der US-Armee auf der Insel",
+              "ok": false,
+              "fb": "Falsch: Musk machte nach Isaacson einen Ingenieur verantwortlich, der am Vorabend eine Mutter gelöst und wieder angebracht hatte."
+            },
+            {
+              "text": "Dem Wetter, das am Startplatz herrschte",
+              "ok": false,
+              "fb": "Falsch: Musk machte nach Isaacson einen Ingenieur verantwortlich, der am Vorabend eine Mutter gelöst und wieder angebracht hatte."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was fand man bei der Treibstoffleitung?",
+          "beleg": "part of the B-nut was still attached, but it was corroded and had cracked in half.",
+          "belegDe": "ein Teil der Mutter (B-Nut) war noch befestigt, aber sie war korrodiert und in zwei Hälften gebrochen.",
+          "optionen": [
+            {
+              "text": "Ein loses Kabel am Ventil der zweiten Stufe",
+              "ok": false,
+              "fb": "Falsch: Die Mutter an der Treibstoffleitung war nach Isaacson korrodiert und gebrochen."
+            },
+            {
+              "text": "Einen Riss in der Wand des Treibstofftanks",
+              "ok": false,
+              "fb": "Falsch: Die Mutter an der Treibstoffleitung war nach Isaacson korrodiert und gebrochen."
+            },
+            {
+              "text": "Eine korrodierte, durchgebrochene Mutter",
+              "ok": true,
+              "fb": "Richtig: Die Mutter an der Treibstoffleitung war nach Isaacson korrodiert und gebrochen."
+            },
+            {
+              "text": "Ein verstopftes Filtersieb in der Leitung",
+              "ok": false,
+              "fb": "Falsch: Die Mutter an der Treibstoffleitung war nach Isaacson korrodiert und gebrochen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was war laut Isaacson schuld an der gebrochenen Mutter?",
+          "beleg": "As it turned out, Hollman was not at fault. When the fuel line was found, part of the B-nut was still attached, but it was corroded and had cracked in half. The sea air of Kwaj was to blame.",
+          "belegDe": "Wie sich herausstellte, trug Hollman keine Schuld. Als die Treibstoffleitung gefunden wurde, war ein Teil der Mutter noch befestigt, aber sie war korrodiert und in zwei Hälften gebrochen. Schuld war die Seeluft von Kwaj.",
+          "optionen": [
+            {
+              "text": "Einer falschen Anweisung von Musk",
+              "ok": false,
+              "fb": "Falsch: Schuld an der korrodierten Mutter war nach Isaacson die Seeluft von Kwaj."
+            },
+            {
+              "text": "Dem Material des Herstellers",
+              "ok": false,
+              "fb": "Falsch: Schuld an der korrodierten Mutter war nach Isaacson die Seeluft von Kwaj."
+            },
+            {
+              "text": "Einem Montagefehler im Werk",
+              "ok": false,
+              "fb": "Falsch: Schuld an der korrodierten Mutter war nach Isaacson die Seeluft von Kwaj."
+            },
+            {
+              "text": "Der Seeluft von Kwaj",
+              "ok": true,
+              "fb": "Richtig: Schuld an der korrodierten Mutter war nach Isaacson die Seeluft von Kwaj."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-idiot-index-eigenfertigung",
+      "kurz": "Idiot-Index: Raketenteile",
+      "titel": "Idiot-Index: Warum Raketenteile so viel kosten",
+      "karte": "Nach Isaacson entwickelte Musk bei SpaceX den „idiot index“: Er gibt an, um wie viel teurer ein fertiges Produkt ist als die Kosten seiner Grundmaterialien. Als einen Grund für hohe Kosten nennt Isaacson Hunderte Vorgaben von Militär und NASA, denen große Luft- und Raumfahrtfirmen streng folgten. Nach einigen Jahren stellte SpaceX 70 Prozent der Raketenteile selbst her.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was misst Musks „idiot index“ nach Isaacson?",
+          "beleg": "which calculated how much more costly a finished product was than the cost of its basic materials.",
+          "belegDe": "der berechnete, um wie viel teurer ein fertiges Produkt war als die Kosten seiner Grundmaterialien.",
+          "optionen": [
+            {
+              "text": "Wie viele Einzelteile ein Produkt insgesamt hat",
+              "ok": false,
+              "fb": "Falsch: Der „idiot index“ berechnet, um wie viel teurer ein fertiges Produkt ist als seine Grundmaterialien."
+            },
+            {
+              "text": "Wie viel Gewinn ein Hersteller je verkauftem Produkt macht",
+              "ok": false,
+              "fb": "Falsch: Der „idiot index“ berechnet, um wie viel teurer ein fertiges Produkt ist als seine Grundmaterialien."
+            },
+            {
+              "text": "Wie lange die Fertigung eines Produkts dauert",
+              "ok": false,
+              "fb": "Falsch: Der „idiot index“ berechnet, um wie viel teurer ein fertiges Produkt ist als seine Grundmaterialien."
+            },
+            {
+              "text": "Wie viel teurer ein Produkt ist als sein Material",
+              "ok": true,
+              "fb": "Richtig: Der „idiot index“ berechnet, um wie viel teurer ein fertiges Produkt ist als seine Grundmaterialien."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was nennt Isaacson als einen Grund für die hohen Kosten von Raketenteilen?",
+          "beleg": "One reason was that rocket components were subject to hundreds of specifications and requirements mandated by the military and NASA.",
+          "belegDe": "Ein Grund war, dass Raketenteile Hunderten von Spezifikationen und Anforderungen unterlagen, die Militär und NASA vorschrieben.",
+          "optionen": [
+            {
+              "text": "Hunderte Vorgaben von Militär und NASA",
+              "ok": true,
+              "fb": "Richtig: Raketenteile unterlagen nach Isaacson Hunderten Vorgaben von Militär und NASA."
+            },
+            {
+              "text": "Der hohe Preis für die benötigten Rohstoffe",
+              "ok": false,
+              "fb": "Falsch: Raketenteile unterlagen nach Isaacson Hunderten Vorgaben von Militär und NASA."
+            },
+            {
+              "text": "Zölle auf Stahl und Aluminium aus dem Ausland",
+              "ok": false,
+              "fb": "Falsch: Raketenteile unterlagen nach Isaacson Hunderten Vorgaben von Militär und NASA."
+            },
+            {
+              "text": "Zu wenige qualifizierte Ingenieure in den USA",
+              "ok": false,
+              "fb": "Falsch: Raketenteile unterlagen nach Isaacson Hunderten Vorgaben von Militär und NASA."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welchen Anteil der Raketenteile stellte SpaceX nach einigen Jahren selbst her?",
+          "beleg": "SpaceX was making in-house 70 percent of the components of its rockets.",
+          "belegDe": "SpaceX stellte 70 Prozent der Bauteile seiner Raketen selbst her.",
+          "optionen": [
+            {
+              "text": "100 Prozent",
+              "ok": false,
+              "fb": "Falsch: Nach einigen Jahren fertigte SpaceX laut Isaacson 70 Prozent der Raketenteile selbst."
+            },
+            {
+              "text": "30 Prozent",
+              "ok": false,
+              "fb": "Falsch: Nach einigen Jahren fertigte SpaceX laut Isaacson 70 Prozent der Raketenteile selbst."
+            },
+            {
+              "text": "70 Prozent",
+              "ok": true,
+              "fb": "Richtig: Nach einigen Jahren fertigte SpaceX laut Isaacson 70 Prozent der Raketenteile selbst."
+            },
+            {
+              "text": "10 Prozent",
+              "ok": false,
+              "fb": "Falsch: Nach einigen Jahren fertigte SpaceX laut Isaacson 70 Prozent der Raketenteile selbst."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-triebwerk-ein-test",
+      "kurz": "Triebwerk: Zünden, fliegen",
+      "titel": "Ein Triebwerk bauen, zünden, fliegen",
+      "karte": "Nach Isaacson schrieben Militärvorgaben vor, wie viele Stunden jede neue Triebwerksversion unter vielen Bedingungen getestet werden musste. Musk wies an, ein Triebwerk zu bauen und auf dem Prüfstand zu zünden; funktioniere es, komme es auf eine Rakete. Die Ingenieure trieben die Triebwerke bis zum Bruch, um die Grenzen zu kennen. Möglich war das nach Isaacson, weil SpaceX ein Privatunternehmen war und Musk Regeln missachtete.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was verlangten die Militärvorgaben für neue Triebwerksversionen?",
+          "beleg": "a set of military specifications on how many hours each new version of an engine needed to be test-fired under a long list of different conditions.",
+          "belegDe": "Militärvorgaben dazu, wie viele Stunden jede neue Version eines Triebwerks unter einer langen Liste verschiedener Bedingungen getestet werden musste.",
+          "optionen": [
+            {
+              "text": "Eine Zulassung durch die US-Luftwaffe vor jedem Flug",
+              "ok": false,
+              "fb": "Falsch: Die Vorgaben verlangten nach Isaacson viele Teststunden je Triebwerksversion unter vielen Bedingungen."
+            },
+            {
+              "text": "Viele Teststunden unter vielen Bedingungen",
+              "ok": true,
+              "fb": "Richtig: Die Vorgaben verlangten nach Isaacson viele Teststunden je Triebwerksversion unter vielen Bedingungen."
+            },
+            {
+              "text": "Tests nur unter kontrollierten Laborbedingungen",
+              "ok": false,
+              "fb": "Falsch: Die Vorgaben verlangten nach Isaacson viele Teststunden je Triebwerksversion unter vielen Bedingungen."
+            },
+            {
+              "text": "Einen einzigen Testlauf pro Jahr und Modell",
+              "ok": false,
+              "fb": "Falsch: Die Vorgaben verlangten nach Isaacson viele Teststunden je Triebwerksversion unter vielen Bedingungen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was ordnete Musk stattdessen an?",
+          "beleg": "just to build one engine and fire it up on the test stand; if it worked, put it on a rocket and fly it.",
+          "belegDe": "einfach ein Triebwerk zu bauen und es auf dem Prüfstand zu zünden; wenn es funktionierte, es auf eine Rakete zu setzen und zu fliegen.",
+          "optionen": [
+            {
+              "text": "Eins bauen, auf dem Prüfstand zünden, dann fliegen",
+              "ok": true,
+              "fb": "Richtig: Musk ließ nach Isaacson ein Triebwerk bauen, auf dem Prüfstand zünden und bei Erfolg auf eine Rakete setzen."
+            },
+            {
+              "text": "Die Tests vollständig streichen und sofort starten",
+              "ok": false,
+              "fb": "Falsch: Musk ließ nach Isaacson ein Triebwerk bauen, auf dem Prüfstand zünden und bei Erfolg auf eine Rakete setzen."
+            },
+            {
+              "text": "Die Tests auf zehn Triebwerke ausweiten",
+              "ok": false,
+              "fb": "Falsch: Musk ließ nach Isaacson ein Triebwerk bauen, auf dem Prüfstand zünden und bei Erfolg auf eine Rakete setzen."
+            },
+            {
+              "text": "Alle Tests an externe Labore auslagern",
+              "ok": false,
+              "fb": "Falsch: Musk ließ nach Isaacson ein Triebwerk bauen, auf dem Prüfstand zünden und bei Erfolg auf eine Rakete setzen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wodurch konnte SpaceX diese Risiken eingehen?",
+          "beleg": "Because SpaceX was a private company, and because Musk was willing to flout rules, it could take the risks it wanted.",
+          "belegDe": "Weil SpaceX ein Privatunternehmen war und Musk bereit war, Regeln zu missachten, konnte es die Risiken eingehen, die es wollte.",
+          "optionen": [
+            {
+              "text": "Privatunternehmen; Musk missachtete Regeln",
+              "ok": true,
+              "fb": "Richtig: SpaceX konnte die Risiken eingehen, weil es ein Privatunternehmen war und Musk Regeln missachtete."
+            },
+            {
+              "text": "Zusagen der NASA über mögliche Verluste",
+              "ok": false,
+              "fb": "Falsch: SpaceX konnte die Risiken eingehen, weil es ein Privatunternehmen war und Musk Regeln missachtete."
+            },
+            {
+              "text": "Eine Sondergenehmigung der Armee für Testflüge",
+              "ok": false,
+              "fb": "Falsch: SpaceX konnte die Risiken eingehen, weil es ein Privatunternehmen war und Musk Regeln missachtete."
+            },
+            {
+              "text": "Eine staatliche Übernahme der Haftung",
+              "ok": false,
+              "fb": "Falsch: SpaceX konnte die Risiken eingehen, weil es ein Privatunternehmen war und Musk Regeln missachtete."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-cost-plus",
+      "kurz": "Cost-plus: Aussage Senat",
+      "titel": "Cost-plus-Verträge: Musks Aussage vor dem Senat",
+      "karte": "Bei einer Anhörung im US-Senat in Washington kritisierte Musk laut Isaacson das Cost-plus-Vertragsmodell: Wird ein Projekt teurer als geplant, bekommt der Auftragnehmer mehr bezahlt. Das System behindere dadurch Innovation: Es gebe wenig Anreiz, Risiken einzugehen, kreativ zu sein, schnell zu arbeiten oder Kosten zu senken. Musks Formulierung über Boeing und Lockheed ist drastisch; hier steht nur Isaacsons Wiedergabe seines Arguments.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wo trug Musk seine Kritik am Cost-plus-System vor?",
+          "beleg": "Musk testified before a Senate committee and pushed a different approach.",
+          "belegDe": "Musk sagte vor einem Senatsausschuss aus und warb für einen anderen Ansatz.",
+          "optionen": [
+            {
+              "text": "Vor dem Aufsichtsrat von Boeing",
+              "ok": false,
+              "fb": "Falsch: Musk trug seine Kritik laut Isaacson vor einem Senatsausschuss in Washington vor."
+            },
+            {
+              "text": "In einer Fernsehsendung",
+              "ok": false,
+              "fb": "Falsch: Musk trug seine Kritik laut Isaacson vor einem Senatsausschuss in Washington vor."
+            },
+            {
+              "text": "Vor einem Senatsausschuss",
+              "ok": true,
+              "fb": "Richtig: Musk trug seine Kritik laut Isaacson vor einem Senatsausschuss in Washington vor."
+            },
+            {
+              "text": "Auf einer NASA-Pressekonferenz",
+              "ok": false,
+              "fb": "Falsch: Musk trug seine Kritik laut Isaacson vor einem Senatsausschuss in Washington vor."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was war nach Musks Argument das Problem des Cost-plus-Systems?",
+          "beleg": "The problem with a cost-plus system, he argued, was that it stymied innovation.",
+          "belegDe": "Das Problem eines Cost-plus-Systems sei, argumentierte er, dass es Innovation behindere.",
+          "optionen": [
+            {
+              "text": "Es begünstige zu kleine Firmen",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson argumentierte Musk, das Cost-plus-System behindere Innovation."
+            },
+            {
+              "text": "Es verlängere die Genehmigungen",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson argumentierte Musk, das Cost-plus-System behindere Innovation."
+            },
+            {
+              "text": "Es behindere Innovation",
+              "ok": true,
+              "fb": "Richtig: Nach Isaacson argumentierte Musk, das Cost-plus-System behindere Innovation."
+            },
+            {
+              "text": "Es mache Aufträge zu billig",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson argumentierte Musk, das Cost-plus-System behindere Innovation."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was passiert im Cost-plus-System bei einer Budgetüberschreitung?",
+          "beleg": "If the project went over budget, the contractor would get paid more.",
+          "belegDe": "Wenn das Projekt das Budget überschritt, bekam der Auftragnehmer mehr bezahlt.",
+          "optionen": [
+            {
+              "text": "Der Staat zahlt eine Vertragsstrafe",
+              "ok": false,
+              "fb": "Falsch: Im Cost-plus-System bekommt der Auftragnehmer nach Isaacson bei einer Budgetüberschreitung mehr bezahlt."
+            },
+            {
+              "text": "Der Auftragnehmer bekommt mehr bezahlt",
+              "ok": true,
+              "fb": "Richtig: Im Cost-plus-System bekommt der Auftragnehmer nach Isaacson bei einer Budgetüberschreitung mehr bezahlt."
+            },
+            {
+              "text": "Der Auftragnehmer trägt die Mehrkosten",
+              "ok": false,
+              "fb": "Falsch: Im Cost-plus-System bekommt der Auftragnehmer nach Isaacson bei einer Budgetüberschreitung mehr bezahlt."
+            },
+            {
+              "text": "Der Vertrag wird gekündigt",
+              "ok": false,
+              "fb": "Falsch: Im Cost-plus-System bekommt der Auftragnehmer nach Isaacson bei einer Budgetüberschreitung mehr bezahlt."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-vertikale-integration",
+      "kurz": "Tesla: Komponenten selbst",
+      "titel": "Tesla baut Schlüsselkomponenten selbst",
+      "karte": "Nach Isaacson gehört zu den wichtigsten Entscheidungen Musks bei Tesla, dass die Firma ihre wichtigsten Komponenten selbst herstellt, statt ein Auto aus Hunderten Teilen unabhängiger Zulieferer zusammenzusetzen. Tesla wolle so Schicksal, Qualität, Kosten und Lieferkette selbst steuern. Wissen aus SpaceX und Tesla fließe in beide Richtungen: Eine Edelstahllegierung, die Tesla patentieren ließ, sei für Lastwagen und Raketen stark und günstig genug gewesen.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was entschied Musk laut Isaacson über die Schlüsselkomponenten von Tesla?",
+          "beleg": "it should make its own key components, rather than piecing together a car with hundreds of components from independent suppliers.",
+          "belegDe": "die Firma solle ihre wichtigsten Komponenten selbst herstellen, statt ein Auto aus Hunderten Komponenten unabhängiger Zulieferer zusammenzusetzen.",
+          "optionen": [
+            {
+              "text": "Tesla lizenziert sie von Toyota",
+              "ok": false,
+              "fb": "Falsch: Tesla sollte nach Isaacson seine wichtigsten Komponenten selbst herstellen."
+            },
+            {
+              "text": "Tesla kauft sie bei Zulieferern",
+              "ok": false,
+              "fb": "Falsch: Tesla sollte nach Isaacson seine wichtigsten Komponenten selbst herstellen."
+            },
+            {
+              "text": "Tesla lässt sie in China bauen",
+              "ok": false,
+              "fb": "Falsch: Tesla sollte nach Isaacson seine wichtigsten Komponenten selbst herstellen."
+            },
+            {
+              "text": "Tesla stellt sie selbst her",
+              "ok": true,
+              "fb": "Richtig: Tesla sollte nach Isaacson seine wichtigsten Komponenten selbst herstellen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was wollte Tesla durch vertikale Integration kontrollieren?",
+          "beleg": "Tesla would control its own destiny—and quality and costs and supply chain—by being vertically integrated.",
+          "belegDe": "Tesla werde sein eigenes Schicksal kontrollieren, dazu Qualität, Kosten und Lieferkette, indem es vertikal integriert ist.",
+          "optionen": [
+            {
+              "text": "Werbung, Marketing und den Vertrieb",
+              "ok": false,
+              "fb": "Falsch: Durch vertikale Integration wollte Tesla nach Isaacson Schicksal, Qualität, Kosten und Lieferkette kontrollieren."
+            },
+            {
+              "text": "Den Preis der Batteriezellen und Motoren",
+              "ok": false,
+              "fb": "Falsch: Durch vertikale Integration wollte Tesla nach Isaacson Schicksal, Qualität, Kosten und Lieferkette kontrollieren."
+            },
+            {
+              "text": "Schicksal, Qualität, Kosten, Lieferkette",
+              "ok": true,
+              "fb": "Richtig: Durch vertikale Integration wollte Tesla nach Isaacson Schicksal, Qualität, Kosten und Lieferkette kontrollieren."
+            },
+            {
+              "text": "Die Zahl der Händler in Europa",
+              "ok": false,
+              "fb": "Falsch: Durch vertikale Integration wollte Tesla nach Isaacson Schicksal, Qualität, Kosten und Lieferkette kontrollieren."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wofür war die von Tesla patentierte Edelstahllegierung stark und günstig genug?",
+          "beleg": "It was strong enough and cheap enough to use for both trucks and rockets.",
+          "belegDe": "Sie war stark genug und günstig genug, um sowohl für Lastwagen als auch für Raketen verwendet zu werden.",
+          "optionen": [
+            {
+              "text": "Für Lastwagen und Raketen",
+              "ok": true,
+              "fb": "Richtig: Die Legierung war nach Isaacson für Lastwagen und Raketen stark und günstig genug."
+            },
+            {
+              "text": "Für Karosserien von Sportwagen",
+              "ok": false,
+              "fb": "Falsch: Die Legierung war nach Isaacson für Lastwagen und Raketen stark und günstig genug."
+            },
+            {
+              "text": "Für Batteriegehäuse von Autos",
+              "ok": false,
+              "fb": "Falsch: Die Legierung war nach Isaacson für Lastwagen und Raketen stark und günstig genug."
+            },
+            {
+              "text": "Für Satellitenteile und Antennen",
+              "ok": false,
+              "fb": "Falsch: Die Legierung war nach Isaacson für Lastwagen und Raketen stark und günstig genug."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-secret-master-plan",
+      "kurz": "Master Plan: Oben nach unten",
+      "titel": "Teslas „Secret Master Plan“: oben einsteigen, nach unten gehen",
+      "karte": "Musk schrieb laut Isaacson einen „Secret Tesla Motors Master Plan (just between you and me)“. Darin steht der Zweck: den Wechsel von einer Wirtschaft, die Kohlenwasserstoffe fördert und verbrennt, zu einer Solar-Elektro-Wirtschaft zu beschleunigen. Der Roadster solle einen Benzin-Sportwagen wie Porsche oder Ferrari schlagen. Die Strategie: im oberen Marktsegment einsteigen und mit jedem Modell zu höheren Stückzahlen und niedrigeren Preisen gehen.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wo wollte Tesla laut Masterplan in den Markt einsteigen?",
+          "beleg": "The strategy of Tesla is to enter at the high end of the market, where customers are prepared to pay a premium",
+          "belegDe": "Teslas Strategie ist, am oberen Ende des Marktes einzusteigen, wo Kunden bereit sind, einen Aufpreis zu zahlen",
+          "optionen": [
+            {
+              "text": "Am oberen Ende des Marktes",
+              "ok": true,
+              "fb": "Richtig: Tesla wollte nach dem Masterplan im oberen Marktsegment einsteigen."
+            },
+            {
+              "text": "Bei Lieferwagen für Firmen",
+              "ok": false,
+              "fb": "Falsch: Tesla wollte nach dem Masterplan im oberen Marktsegment einsteigen."
+            },
+            {
+              "text": "Bei günstigen Kleinwagen",
+              "ok": false,
+              "fb": "Falsch: Tesla wollte nach dem Masterplan im oberen Marktsegment einsteigen."
+            },
+            {
+              "text": "Bei Mietwagenflotten der Autovermieter",
+              "ok": false,
+              "fb": "Falsch: Tesla wollte nach dem Masterplan im oberen Marktsegment einsteigen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was sollte der Roadster nach dem Masterplan können?",
+          "beleg": "Critical to making that happen is an electric car without compromises, which is why the Tesla Roadster is designed to beat a gasoline sports car like a Porsche or Ferrari in a head-to-head showdown",
+          "belegDe": "Entscheidend dafür ist ein Elektroauto ohne Kompromisse, weshalb der Tesla Roadster so konstruiert ist, dass er einen Benzin-Sportwagen wie einen Porsche oder Ferrari im direkten Vergleich schlägt",
+          "optionen": [
+            {
+              "text": "Einen Benzin-Sportwagen im Vergleich schlagen",
+              "ok": true,
+              "fb": "Richtig: Der Roadster sollte nach dem Masterplan einen Benzin-Sportwagen wie Porsche oder Ferrari im direkten Vergleich schlagen."
+            },
+            {
+              "text": "Einen Familienvan für Eltern ersetzen",
+              "ok": false,
+              "fb": "Falsch: Der Roadster sollte nach dem Masterplan einen Benzin-Sportwagen wie Porsche oder Ferrari im direkten Vergleich schlagen."
+            },
+            {
+              "text": "Möglichst wenig Strom pro Kilometer verbrauchen",
+              "ok": false,
+              "fb": "Falsch: Der Roadster sollte nach dem Masterplan einen Benzin-Sportwagen wie Porsche oder Ferrari im direkten Vergleich schlagen."
+            },
+            {
+              "text": "Das billigste Elektroauto auf dem Markt werden",
+              "ok": false,
+              "fb": "Falsch: Der Roadster sollte nach dem Masterplan einen Benzin-Sportwagen wie Porsche oder Ferrari im direkten Vergleich schlagen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welcher Zweck steht an erster Stelle im Masterplan?",
+          "beleg": "to help expedite the move from a mine-and-burn hydrocarbon economy towards a solar electric economy",
+          "belegDe": "den Übergang von einer Wirtschaft, die Kohlenwasserstoffe fördert und verbrennt, zu einer Solar-Elektro-Wirtschaft zu beschleunigen",
+          "optionen": [
+            {
+              "text": "Eine eigene Rennserie für Elektroautos gründen",
+              "ok": false,
+              "fb": "Falsch: Zweck war nach dem Masterplan, den Wechsel zu einer Solar-Elektro-Wirtschaft zu beschleunigen."
+            },
+            {
+              "text": "Den Wechsel zu einer Solar-Elektro-Wirtschaft",
+              "ok": true,
+              "fb": "Richtig: Zweck war nach dem Masterplan, den Wechsel zu einer Solar-Elektro-Wirtschaft zu beschleunigen."
+            },
+            {
+              "text": "Den Verkauf von Sportwagen kräftig steigern",
+              "ok": false,
+              "fb": "Falsch: Zweck war nach dem Masterplan, den Wechsel zu einer Solar-Elektro-Wirtschaft zu beschleunigen."
+            },
+            {
+              "text": "Alle Autos vollständig automatisieren",
+              "ok": false,
+              "fb": "Falsch: Zweck war nach dem Masterplan, den Wechsel zu einer Solar-Elektro-Wirtschaft zu beschleunigen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-falcon-1-vierter-start",
+      "kurz": "Falcon 1: Vierter Start",
+      "titel": "Falcon 1: Drei Fehlstarts, ein vierter Versuch",
+      "karte": "Musk hatte laut Isaacson für drei Startversuche der Falcon 1 Geld eingeplant, und alle drei endeten mit einer Explosion vor dem Erreichen der Umlaufbahn. Musk stand vor der persönlichen Pleite, Tesla steckte in einer Finanzkrise. Dann halfen Mitgründer von PayPal, die ihn acht Jahre zuvor als Chef abgesetzt hatten. Danach wurde die Falcon 1 laut Isaacson die erste privat gebaute Rakete, die von der Erde startete und die Umlaufbahn erreichte.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Für wie viele Startversuche der Falcon 1 hatte Musk Geld eingeplant?",
+          "beleg": "Musk had budgeted for three launch attempts of the Falcon 1, and all had exploded before they could get to orbit.",
+          "belegDe": "Musk hatte für drei Startversuche der Falcon 1 Geld eingeplant, und alle waren explodiert, bevor sie die Umlaufbahn erreichten.",
+          "optionen": [
+            {
+              "text": "Drei",
+              "ok": true,
+              "fb": "Richtig: Musk hatte nach Isaacson Geld für drei Startversuche der Falcon 1 eingeplant."
+            },
+            {
+              "text": "Einen",
+              "ok": false,
+              "fb": "Falsch: Musk hatte nach Isaacson Geld für drei Startversuche der Falcon 1 eingeplant."
+            },
+            {
+              "text": "Fünf",
+              "ok": false,
+              "fb": "Falsch: Musk hatte nach Isaacson Geld für drei Startversuche der Falcon 1 eingeplant."
+            },
+            {
+              "text": "Zehn",
+              "ok": false,
+              "fb": "Falsch: Musk hatte nach Isaacson Geld für drei Startversuche der Falcon 1 eingeplant."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wer half Musk laut Isaacson bei der Finanzierung eines vierten Versuchs?",
+          "beleg": "his fellow cofounders of PayPal, who had ejected him from the role of CEO eight years earlier.",
+          "belegDe": "seine Mitgründer von PayPal, die ihn acht Jahre zuvor als Geschäftsführer abgesetzt hatten.",
+          "optionen": [
+            {
+              "text": "Mehrere Großbanken",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson halfen Musks Mitgründer von PayPal, die ihn acht Jahre zuvor als Chef abgesetzt hatten."
+            },
+            {
+              "text": "Mitgründer von PayPal",
+              "ok": true,
+              "fb": "Richtig: Nach Isaacson halfen Musks Mitgründer von PayPal, die ihn acht Jahre zuvor als Chef abgesetzt hatten."
+            },
+            {
+              "text": "Die NASA",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson halfen Musks Mitgründer von PayPal, die ihn acht Jahre zuvor als Chef abgesetzt hatten."
+            },
+            {
+              "text": "Die Mitgründer von Tesla",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson halfen Musks Mitgründer von PayPal, die ihn acht Jahre zuvor als Chef abgesetzt hatten."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie viele Beschäftigte hatte Boeings vergleichbare Sparte nach Isaacsons Angabe?",
+          "beleg": "Musk and his small crew of just five hundred employees (Boeing’s comparable division had fifty thousand)",
+          "belegDe": "Musk und seine kleine Mannschaft von nur fünfhundert Beschäftigten (Boeings vergleichbare Sparte hatte fünfzigtausend)",
+          "optionen": [
+            {
+              "text": "Fünfhundert",
+              "ok": false,
+              "fb": "Falsch: Isaacson nennt für Boeings vergleichbare Sparte 50.000 Beschäftigte gegenüber 500 bei SpaceX."
+            },
+            {
+              "text": "Fünfhunderttausend",
+              "ok": false,
+              "fb": "Falsch: Isaacson nennt für Boeings vergleichbare Sparte 50.000 Beschäftigte gegenüber 500 bei SpaceX."
+            },
+            {
+              "text": "Fünftausend",
+              "ok": false,
+              "fb": "Falsch: Isaacson nennt für Boeings vergleichbare Sparte 50.000 Beschäftigte gegenüber 500 bei SpaceX."
+            },
+            {
+              "text": "Fünfzigtausend",
+              "ok": true,
+              "fb": "Richtig: Isaacson nennt für Boeings vergleichbare Sparte 50.000 Beschäftigte gegenüber 500 bei SpaceX."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-risikoliste-elf",
+      "kurz": "Risikoliste: Tempo, Kontrollen",
+      "titel": "Fünf Wochen oder fünf Tage: Kontrollen, Tempo, Risikoliste",
+      "karte": "Nach den ersten drei Fehlstarts hatte Musk laut Isaacson mehr Qualitätskontrollen eingeführt. Bei der Reparatur einer Rakete sagte ihm Tim Buzza, SpaceX-Vizepräsident für Start und Test, mit allen neuen Anforderungen dauere sie fünf Wochen, ohne sie fünf Tage. Musk entschied sich für das Tempo; Buzza lernte, dass Musk bei neuer Lage umschwenken konnte. An anderer Stelle sagt Musk zu Hans Koenigsmann, einem der ersten SpaceX-Ingenieure: elf Punkte auf der Risikoliste, nie nur zehn.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie lange hätte die Reparatur mit allen neuen Anforderungen gedauert?",
+          "beleg": "if they followed all these new requirements, it would take five weeks to repair the rocket.",
+          "belegDe": "wenn sie alle diese neuen Anforderungen befolgten, würde die Reparatur der Rakete fünf Wochen dauern.",
+          "optionen": [
+            {
+              "text": "Fünf Tage",
+              "ok": false,
+              "fb": "Falsch: Mit allen neuen Anforderungen hätte die Reparatur nach Isaacson fünf Wochen gedauert, ohne sie fünf Tage."
+            },
+            {
+              "text": "Fünf Stunden",
+              "ok": false,
+              "fb": "Falsch: Mit allen neuen Anforderungen hätte die Reparatur nach Isaacson fünf Wochen gedauert, ohne sie fünf Tage."
+            },
+            {
+              "text": "Fünf Wochen",
+              "ok": true,
+              "fb": "Richtig: Mit allen neuen Anforderungen hätte die Reparatur nach Isaacson fünf Wochen gedauert, ohne sie fünf Tage."
+            },
+            {
+              "text": "Fünf Monate",
+              "ok": false,
+              "fb": "Falsch: Mit allen neuen Anforderungen hätte die Reparatur nach Isaacson fünf Wochen gedauert, ohne sie fünf Tage."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was antwortete Musk, als er zwischen fünf Wochen und fünf Tagen wählen konnte?",
+          "beleg": "Go as fast as you can.",
+          "belegDe": "Macht so schnell, wie ihr könnt.",
+          "optionen": [
+            {
+              "text": "Sie sollten den Starttermin um Wochen verschieben",
+              "ok": false,
+              "fb": "Falsch: Musk antwortete nach Isaacson, sie sollten so schnell wie möglich arbeiten."
+            },
+            {
+              "text": "Sie sollten so schnell wie möglich arbeiten",
+              "ok": true,
+              "fb": "Richtig: Musk antwortete nach Isaacson, sie sollten so schnell wie möglich arbeiten."
+            },
+            {
+              "text": "Sie sollten alle neuen Kontrollen einhalten",
+              "ok": false,
+              "fb": "Falsch: Musk antwortete nach Isaacson, sie sollten so schnell wie möglich arbeiten."
+            },
+            {
+              "text": "Sie sollten zuerst ein Gutachten einholen",
+              "ok": false,
+              "fb": "Falsch: Musk antwortete nach Isaacson, sie sollten so schnell wie möglich arbeiten."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie viele Punkte sollte Musks Risikoliste künftig mindestens haben?",
+          "beleg": "we are going to have eleven items on our risk list, never just ten.",
+          "belegDe": "wir werden elf Punkte auf unserer Risikoliste haben, nie nur zehn.",
+          "optionen": [
+            {
+              "text": "Elf",
+              "ok": true,
+              "fb": "Richtig: Musk wollte nach Isaacson künftig elf Punkte auf der Risikoliste haben, nie nur zehn."
+            },
+            {
+              "text": "Zwanzig",
+              "ok": false,
+              "fb": "Falsch: Musk wollte nach Isaacson künftig elf Punkte auf der Risikoliste haben, nie nur zehn."
+            },
+            {
+              "text": "Fünf",
+              "ok": false,
+              "fb": "Falsch: Musk wollte nach Isaacson künftig elf Punkte auf der Risikoliste haben, nie nur zehn."
+            },
+            {
+              "text": "Zehn",
+              "ok": false,
+              "fb": "Falsch: Musk wollte nach Isaacson künftig elf Punkte auf der Risikoliste haben, nie nur zehn."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-messgroessen-fsd",
+      "kurz": "Messgrößen: Meilen/Eingriff",
+      "titel": "Messgrößen: Meilen pro Eingriff als Startfolie",
+      "karte": "Nach Isaacson glaubte Musk, Innovation werde durch klare Messgrößen vorangetrieben, etwa Kosten je Tonne in die Umlaufbahn oder Meilen mit Autopilot ohne menschlichen Eingriff. Für das Team des Fahrsystems Full Self-Driving (FSD) wurde die Zahl der Meilen ohne Eingriff zum Leitstern. Musk wollte sie als erste Folie jeder Besprechung sehen; im Büro zeigten große Monitore den Wert live, und ein Gong belohnte jeden gelösten Fall.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wodurch wurde Innovation nach Musks Überzeugung vorangetrieben?",
+          "beleg": "Musk believed that innovation was driven by setting clear metrics",
+          "belegDe": "Musk glaubte, dass Innovation durch klar gesetzte Messgrößen vorangetrieben werde",
+          "optionen": [
+            {
+              "text": "Durch hohe Gehälter",
+              "ok": false,
+              "fb": "Falsch: Musk glaubte nach Isaacson, Innovation werde durch klare Messgrößen vorangetrieben."
+            },
+            {
+              "text": "Durch Zuwachs im Team",
+              "ok": false,
+              "fb": "Falsch: Musk glaubte nach Isaacson, Innovation werde durch klare Messgrößen vorangetrieben."
+            },
+            {
+              "text": "Durch möglichst viele Besprechungen",
+              "ok": false,
+              "fb": "Falsch: Musk glaubte nach Isaacson, Innovation werde durch klare Messgrößen vorangetrieben."
+            },
+            {
+              "text": "Durch klare Messgrößen",
+              "ok": true,
+              "fb": "Richtig: Musk glaubte nach Isaacson, Innovation werde durch klare Messgrößen vorangetrieben."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was sollte laut Musk die erste Folie jeder FSD-Besprechung sein?",
+          "beleg": "I want the latest data on miles per intervention to be the starting slide at each of our meetings",
+          "belegDe": "Ich will die neuesten Daten zu Meilen pro Eingriff als Startfolie in jeder unserer Besprechungen",
+          "optionen": [
+            {
+              "text": "Die Kosten je Rechenzentrum",
+              "ok": false,
+              "fb": "Falsch: Musk wollte nach Isaacson die Meilen pro Eingriff als Startfolie jeder Besprechung."
+            },
+            {
+              "text": "Meilen pro Eingriff",
+              "ok": true,
+              "fb": "Richtig: Musk wollte nach Isaacson die Meilen pro Eingriff als Startfolie jeder Besprechung."
+            },
+            {
+              "text": "Die Zahl der Beschwerden",
+              "ok": false,
+              "fb": "Falsch: Musk wollte nach Isaacson die Meilen pro Eingriff als Startfolie jeder Besprechung."
+            },
+            {
+              "text": "Die Zahl der verkauften Autos",
+              "ok": false,
+              "fb": "Falsch: Musk wollte nach Isaacson die Meilen pro Eingriff als Startfolie jeder Besprechung."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was durften die Teammitglieder tun, wenn sie ein Eingriffsproblem lösten?",
+          "beleg": "whenever they successfully solved a problem causing an intervention, they got to bang the gong.",
+          "belegDe": "immer wenn sie ein Problem, das einen Eingriff verursachte, erfolgreich lösten, durften sie den Gong schlagen.",
+          "optionen": [
+            {
+              "text": "Ein Foto mit Musk machen",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson durften die Teammitglieder bei einem gelösten Eingriffsproblem den Gong schlagen."
+            },
+            {
+              "text": "Eine Prämie bekommen",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson durften die Teammitglieder bei einem gelösten Eingriffsproblem den Gong schlagen."
+            },
+            {
+              "text": "Einen Gong schlagen",
+              "ok": true,
+              "fb": "Richtig: Nach Isaacson durften die Teammitglieder bei einem gelösten Eingriffsproblem den Gong schlagen."
+            },
+            {
+              "text": "Einen freien Tag nehmen",
+              "ok": false,
+              "fb": "Falsch: Nach Isaacson durften die Teammitglieder bei einem gelösten Eingriffsproblem den Gong schlagen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-booster-fangen",
+      "kurz": "Booster: Am Turm fangen",
+      "titel": "Booster am Turm fangen: Das beste Teil ist kein Teil",
+      "karte": "Musks Leitprinzip bei Starship war laut Isaacson schnelle Wiederverwendbarkeit. Er kündigte an, den Booster mit dem Startturm-Arm zu fangen. Im Raum gab es Bedenken, denn stürzt der Booster in den Turm, kann lange keine Rakete starten. Auf die Frage, warum er keine Landebeine nutze, antwortete Musk laut Isaacson sinngemäß, Beine würden funktionieren, aber das beste Teil sei gar kein Teil.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was war Musks Leitprinzip bei Starship laut Isaacson?",
+          "beleg": "Musk’s guiding principle was rapid reusability",
+          "belegDe": "Musks Leitprinzip war schnelle Wiederverwendbarkeit",
+          "optionen": [
+            {
+              "text": "Geheimhaltung der Technik",
+              "ok": false,
+              "fb": "Falsch: Musks Leitprinzip bei Starship war nach Isaacson schnelle Wiederverwendbarkeit."
+            },
+            {
+              "text": "Schnelle Wiederverwendbarkeit",
+              "ok": true,
+              "fb": "Richtig: Musks Leitprinzip bei Starship war nach Isaacson schnelle Wiederverwendbarkeit."
+            },
+            {
+              "text": "Möglichst hohe Nutzlast",
+              "ok": false,
+              "fb": "Falsch: Musks Leitprinzip bei Starship war nach Isaacson schnelle Wiederverwendbarkeit."
+            },
+            {
+              "text": "Möglichst niedrige Startkosten",
+              "ok": false,
+              "fb": "Falsch: Musks Leitprinzip bei Starship war nach Isaacson schnelle Wiederverwendbarkeit."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie wollte Musk den Booster zurückholen?",
+          "beleg": "try to catch the booster with the launch tower arm!",
+          "belegDe": "versuchen, den Booster mit dem Arm des Startturms zu fangen!",
+          "optionen": [
+            {
+              "text": "Mit Landebeinen auf einer Plattform",
+              "ok": false,
+              "fb": "Falsch: Musk wollte den Booster nach Isaacson mit dem Arm des Startturms fangen."
+            },
+            {
+              "text": "Mit einem Schiff auffangen",
+              "ok": false,
+              "fb": "Falsch: Musk wollte den Booster nach Isaacson mit dem Arm des Startturms fangen."
+            },
+            {
+              "text": "Mit Fallschirmen im Meer",
+              "ok": false,
+              "fb": "Falsch: Musk wollte den Booster nach Isaacson mit dem Arm des Startturms fangen."
+            },
+            {
+              "text": "Mit dem Arm des Startturms fangen",
+              "ok": true,
+              "fb": "Richtig: Musk wollte den Booster nach Isaacson mit dem Arm des Startturms fangen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was antwortete Musk auf die Frage, warum er keine Landebeine nutze?",
+          "beleg": "Legs would certainly work, but the best part is no part.",
+          "belegDe": "Beine würden sicher funktionieren, aber das beste Teil ist kein Teil.",
+          "optionen": [
+            {
+              "text": "Beine seien zu schwer",
+              "ok": false,
+              "fb": "Falsch: Musk antwortete nach Isaacson, Beine würden funktionieren, aber das beste Teil sei kein Teil."
+            },
+            {
+              "text": "Das beste Teil sei kein Teil",
+              "ok": true,
+              "fb": "Richtig: Musk antwortete nach Isaacson, Beine würden funktionieren, aber das beste Teil sei kein Teil."
+            },
+            {
+              "text": "Beine würden nicht funktionieren",
+              "ok": false,
+              "fb": "Falsch: Musk antwortete nach Isaacson, Beine würden funktionieren, aber das beste Teil sei kein Teil."
+            },
+            {
+              "text": "Beine seien nicht zugelassen",
+              "ok": false,
+              "fb": "Falsch: Musk antwortete nach Isaacson, Beine würden funktionieren, aber das beste Teil sei kein Teil."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-mission-und-geschaeftsmodell",
+      "kurz": "Mission zuerst, Modell dazu",
+      "titel": "Mission zuerst, Geschäftsmodell dazu",
+      "karte": "Nach Isaacson sind Musks hohe Ziele meist mit praktischen Geschäftsmodellen verbunden: Starlink entwickelte er als Weg, SpaceXs Marsmission zu finanzieren. Musk sagte nach Isaacson auch, Elektroautos für den Massenmarkt seien unvermeidlich gewesen, eine raumfahrende Zivilisation dagegen nicht. In einem TED-Vortrag betonte er, Technik verbessere sich nicht von selbst.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wofür entwickelte Musk laut Isaacson die Starlink-Satelliten?",
+          "beleg": "He had developed Starlink satellites, for example, as a way to fund SpaceX’s mission to Mars.",
+          "belegDe": "Er hatte die Starlink-Satelliten zum Beispiel als Weg entwickelt, SpaceXs Marsmission zu finanzieren.",
+          "optionen": [
+            {
+              "text": "Um den Rivalen Boeing zu verdrängen",
+              "ok": false,
+              "fb": "Falsch: Musk entwickelte Starlink nach Isaacson, um SpaceXs Marsmission zu finanzieren."
+            },
+            {
+              "text": "Um die Marsmission zu finanzieren",
+              "ok": true,
+              "fb": "Richtig: Musk entwickelte Starlink nach Isaacson, um SpaceXs Marsmission zu finanzieren."
+            },
+            {
+              "text": "Um Konkurrenten im Weltraum zu überwachen",
+              "ok": false,
+              "fb": "Falsch: Musk entwickelte Starlink nach Isaacson, um SpaceXs Marsmission zu finanzieren."
+            },
+            {
+              "text": "Um Tesla-Autos mit dem Netz zu verbinden",
+              "ok": false,
+              "fb": "Falsch: Musk entwickelte Starlink nach Isaacson, um SpaceXs Marsmission zu finanzieren."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was hielt Musk nach eigener Aussage für nicht unvermeidlich?",
+          "beleg": "It would have happened without me. But becoming a space-faring civilization is not inevitable.",
+          "belegDe": "Es wäre auch ohne mich passiert. Aber eine raumfahrende Zivilisation zu werden, ist nicht unvermeidlich.",
+          "optionen": [
+            {
+              "text": "Künstliche Intelligenz auf Weltniveau",
+              "ok": false,
+              "fb": "Falsch: Eine raumfahrende Zivilisation hielt Musk nach eigener Aussage nicht für unvermeidlich."
+            },
+            {
+              "text": "Selbstfahrende Autos im Stadtverkehr",
+              "ok": false,
+              "fb": "Falsch: Eine raumfahrende Zivilisation hielt Musk nach eigener Aussage nicht für unvermeidlich."
+            },
+            {
+              "text": "Eine raumfahrende Zivilisation zu werden",
+              "ok": true,
+              "fb": "Richtig: Eine raumfahrende Zivilisation hielt Musk nach eigener Aussage nicht für unvermeidlich."
+            },
+            {
+              "text": "Elektroautos für den Massenmarkt",
+              "ok": false,
+              "fb": "Falsch: Eine raumfahrende Zivilisation hielt Musk nach eigener Aussage nicht für unvermeidlich."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wann verbessert sich Technik nach Musks Aussage im TED-Vortrag?",
+          "beleg": "It only improves if a lot of people work very hard to make it better.",
+          "belegDe": "Sie verbessert sich nur, wenn viele Menschen sehr hart daran arbeiten, sie besser zu machen.",
+          "optionen": [
+            {
+              "text": "Von selbst, mit der Zeit und mehr Wissen",
+              "ok": false,
+              "fb": "Falsch: Technik verbessert sich nach Musks Aussage nur, wenn viele Menschen hart daran arbeiten."
+            },
+            {
+              "text": "Wenn der Staat sie großzügig fördert",
+              "ok": false,
+              "fb": "Falsch: Technik verbessert sich nach Musks Aussage nur, wenn viele Menschen hart daran arbeiten."
+            },
+            {
+              "text": "Wenn viele Menschen hart daran arbeiten",
+              "ok": true,
+              "fb": "Richtig: Technik verbessert sich nach Musks Aussage nur, wenn viele Menschen hart daran arbeiten."
+            },
+            {
+              "text": "Wenn der Wettbewerb unter Firmen nachlässt",
+              "ok": false,
+              "fb": "Falsch: Technik verbessert sich nach Musks Aussage nur, wenn viele Menschen hart daran arbeiten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-regeln-fuehrung",
+      "kurz": "Führung: Praxis, Kameraderie",
+      "titel": "Regeln für Führung: Praxis, Kameraderie, Einstellung",
+      "karte": "Die Regelliste in Musks Ich-Form, die Isaacson wiedergibt, enthält auch Führungsregeln. Technische Manager brauchen praktische Erfahrung; Softwaremanager sollen mindestens 20 Prozent ihrer Zeit programmieren. Kameraderie sei gefährlich, weil sie das Hinterfragen der Arbeit anderer erschwere. Bei der Einstellung zähle die richtige Haltung: Fähigkeiten ließen sich lehren, eine Änderung der Haltung brauche eine Gehirntransplantation.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viel ihrer Zeit sollen Softwaremanager laut der Regelliste mindestens programmieren?",
+          "beleg": "managers of software teams must spend at least 20% of their time coding.",
+          "belegDe": "Manager von Softwareteams müssen mindestens 20 % ihrer Zeit mit Programmieren verbringen.",
+          "optionen": [
+            {
+              "text": "Mindestens 20 Prozent",
+              "ok": true,
+              "fb": "Richtig: Softwaremanager sollen laut der Regelliste mindestens 20 Prozent ihrer Zeit programmieren."
+            },
+            {
+              "text": "Mindestens 60 Prozent",
+              "ok": false,
+              "fb": "Falsch: Softwaremanager sollen laut der Regelliste mindestens 20 Prozent ihrer Zeit programmieren."
+            },
+            {
+              "text": "Gar keine Zeit",
+              "ok": false,
+              "fb": "Falsch: Softwaremanager sollen laut der Regelliste mindestens 20 Prozent ihrer Zeit programmieren."
+            },
+            {
+              "text": "Höchstens 5 Prozent",
+              "ok": false,
+              "fb": "Falsch: Softwaremanager sollen laut der Regelliste mindestens 20 Prozent ihrer Zeit programmieren."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Warum hält die Regelliste Kameraderie für gefährlich?",
+          "beleg": "Comradery is dangerous. It makes it hard for people to challenge each other’s work.",
+          "belegDe": "Kameraderie ist gefährlich. Sie macht es schwer, dass Menschen die Arbeit der anderen hinterfragen.",
+          "optionen": [
+            {
+              "text": "Sie hält gute Leute vom Wechsel ab",
+              "ok": false,
+              "fb": "Falsch: Die Regelliste hält Kameraderie für gefährlich, weil sie das Hinterfragen der Arbeit anderer erschwert."
+            },
+            {
+              "text": "Sie verlangsamt den Einkauf in den Teams",
+              "ok": false,
+              "fb": "Falsch: Die Regelliste hält Kameraderie für gefährlich, weil sie das Hinterfragen der Arbeit anderer erschwert."
+            },
+            {
+              "text": "Sie erschwert, die Arbeit anderer zu hinterfragen",
+              "ok": true,
+              "fb": "Richtig: Die Regelliste hält Kameraderie für gefährlich, weil sie das Hinterfragen der Arbeit anderer erschwert."
+            },
+            {
+              "text": "Sie führt zu langen Besprechungen ohne Ergebnis und Streit",
+              "ok": false,
+              "fb": "Falsch: Die Regelliste hält Kameraderie für gefährlich, weil sie das Hinterfragen der Arbeit anderer erschwert."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Worauf soll man laut Regelliste bei der Einstellung vor allem achten?",
+          "beleg": "look for people with the right attitude. Skills can be taught.",
+          "belegDe": "achte auf Menschen mit der richtigen Einstellung. Fähigkeiten lassen sich lehren.",
+          "optionen": [
+            {
+              "text": "Auf die Empfehlung eines Kollegen",
+              "ok": false,
+              "fb": "Falsch: Bei der Einstellung soll laut Regelliste die richtige Haltung zählen, denn Fähigkeiten lassen sich lehren."
+            },
+            {
+              "text": "Auf die richtige Einstellung",
+              "ok": true,
+              "fb": "Richtig: Bei der Einstellung soll laut Regelliste die richtige Haltung zählen, denn Fähigkeiten lassen sich lehren."
+            },
+            {
+              "text": "Auf den Abschluss einer Eliteuniversität",
+              "ok": false,
+              "fb": "Falsch: Bei der Einstellung soll laut Regelliste die richtige Haltung zählen, denn Fähigkeiten lassen sich lehren."
+            },
+            {
+              "text": "Auf möglichst viel Berufserfahrung",
+              "ok": false,
+              "fb": "Falsch: Bei der Einstellung soll laut Regelliste die richtige Haltung zählen, denn Fähigkeiten lassen sich lehren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-feedback-handlung-nicht-person",
+      "kurz": "Feedback: Handlung, Person",
+      "titel": "Hardcore-Feedback: die Handlung kritisieren, nicht die Person",
+      "karte": "Musk sagt über sein Feedback, es sei „hardcore“ und meist zutreffend, und er versuche, nicht persönlich zu werden: Er kritisiere die Handlung, nicht die Person. Alle machten Fehler. Entscheidend sei, ob jemand einen guten Feedback-Kreislauf habe, Kritik bei anderen suche und sich verbessern könne. Die Physik kümmere sich nicht um verletzte Gefühle, sondern darum, ob man die Rakete richtig gebaut habe.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was versucht Musk nach eigener Aussage bei Feedback zu kritisieren?",
+          "beleg": "I try to criticize the action, not the person.",
+          "belegDe": "Ich versuche, die Handlung zu kritisieren, nicht die Person.",
+          "optionen": [
+            {
+              "text": "Die Person, nicht die Handlung",
+              "ok": false,
+              "fb": "Falsch: Musk sagt, er versuche, die Handlung zu kritisieren und nicht die Person."
+            },
+            {
+              "text": "Das Ergebnis, nicht das Verhalten",
+              "ok": false,
+              "fb": "Falsch: Musk sagt, er versuche, die Handlung zu kritisieren und nicht die Person."
+            },
+            {
+              "text": "Das Team, nicht den Einzelnen",
+              "ok": false,
+              "fb": "Falsch: Musk sagt, er versuche, die Handlung zu kritisieren und nicht die Person."
+            },
+            {
+              "text": "Die Handlung, nicht die Person",
+              "ok": true,
+              "fb": "Richtig: Musk sagt, er versuche, die Handlung zu kritisieren und nicht die Person."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Worauf kommt es laut Musk bei jemandem an, der Fehler macht?",
+          "beleg": "What matters is whether a person has a good feedback loop, can seek criticism from others, and can improve.",
+          "belegDe": "Entscheidend ist, ob eine Person einen guten Feedback-Kreislauf hat, bei anderen Kritik suchen kann und sich verbessern kann.",
+          "optionen": [
+            {
+              "text": "Ob er die Fehler nie ein zweites Mal macht",
+              "ok": false,
+              "fb": "Falsch: Nach Musk zählt, ob jemand einen guten Feedback-Kreislauf hat, Kritik sucht und sich verbessern kann."
+            },
+            {
+              "text": "Ob er im Team beliebt ist und vermittelt",
+              "ok": false,
+              "fb": "Falsch: Nach Musk zählt, ob jemand einen guten Feedback-Kreislauf hat, Kritik sucht und sich verbessern kann."
+            },
+            {
+              "text": "Ob er seine Fehler sofort öffentlich zugibt",
+              "ok": false,
+              "fb": "Falsch: Nach Musk zählt, ob jemand einen guten Feedback-Kreislauf hat, Kritik sucht und sich verbessern kann."
+            },
+            {
+              "text": "Ob er Kritik sucht und sich verbessern kann",
+              "ok": true,
+              "fb": "Richtig: Nach Musk zählt, ob jemand einen guten Feedback-Kreislauf hat, Kritik sucht und sich verbessern kann."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wofür interessiert sich die Physik nach Musk, wenn eine Rakete gebaut wird?",
+          "beleg": "Physics does not care about hurt feelings. It cares about whether you got the rocket right.",
+          "belegDe": "Der Physik sind verletzte Gefühle egal. Ihr geht es darum, ob du die Rakete richtig gebaut hast.",
+          "optionen": [
+            {
+              "text": "Ob das Budget eingehalten wurde",
+              "ok": false,
+              "fb": "Falsch: Nach Musk kümmert sich die Physik nicht um verletzte Gefühle, sondern darum, ob die Rakete richtig gebaut ist."
+            },
+            {
+              "text": "Ob alle im Team zufrieden sind",
+              "ok": false,
+              "fb": "Falsch: Nach Musk kümmert sich die Physik nicht um verletzte Gefühle, sondern darum, ob die Rakete richtig gebaut ist."
+            },
+            {
+              "text": "Ob die Rakete richtig gebaut ist",
+              "ok": true,
+              "fb": "Richtig: Nach Musk kümmert sich die Physik nicht um verletzte Gefühle, sondern darum, ob die Rakete richtig gebaut ist."
+            },
+            {
+              "text": "Ob der Zeitplan stimmt und dokumentiert ist",
+              "ok": false,
+              "fb": "Falsch: Nach Musk kümmert sich die Physik nicht um verletzte Gefühle, sondern darum, ob die Rakete richtig gebaut ist."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-automatisierung-zuletzt",
+      "kurz": "Automatisierung: Fehler",
+      "titel": "Zu viel Automatisierung: Musks eingestandener Fehler",
+      "karte": "Nach Isaacson übernahm Musk die Verantwortung für die übermäßige Automatisierung bei Tesla und sagte es öffentlich. In seiner Regelliste schreibt er, der große Fehler in Nevada und Fremont sei gewesen, jeden Schritt automatisieren zu wollen, bevor Anforderungen hinterfragt und Teile und Prozesse gelöscht waren. Für die Gigafactory in Nevada hielt der Planer der Linie 5.000 Batteriepacks pro Woche für verrückt und höchstens 1.800 für machbar.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was twitterte Musk zur übermäßigen Automatisierung bei Tesla?",
+          "beleg": "To be precise, my mistake. Humans are underrated.",
+          "belegDe": "Genauer gesagt: mein Fehler. Menschen werden unterschätzt.",
+          "optionen": [
+            {
+              "text": "Es sei sein Fehler, Menschen würden unterschätzt",
+              "ok": true,
+              "fb": "Richtig: Musk twitterte nach Isaacson, die übermäßige Automatisierung sei sein Fehler gewesen und Menschen würden unterschätzt."
+            },
+            {
+              "text": "Roboter seien noch viel zu teuer für Fabriken",
+              "ok": false,
+              "fb": "Falsch: Musk twitterte nach Isaacson, die übermäßige Automatisierung sei sein Fehler gewesen und Menschen würden unterschätzt."
+            },
+            {
+              "text": "Die Fabrik müsse noch weiter automatisieren",
+              "ok": false,
+              "fb": "Falsch: Musk twitterte nach Isaacson, die übermäßige Automatisierung sei sein Fehler gewesen und Menschen würden unterschätzt."
+            },
+            {
+              "text": "Die Gewerkschaft habe die Automatisierung verlangt",
+              "ok": false,
+              "fb": "Falsch: Musk twitterte nach Isaacson, die übermäßige Automatisierung sei sein Fehler gewesen und Menschen würden unterschätzt."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was war nach der Regelliste der große Fehler in Nevada und Fremont?",
+          "beleg": "The big mistake in Nevada and at Fremont was that I began by trying to automate every step.",
+          "belegDe": "Der große Fehler in Nevada und in Fremont war, dass ich damit begann, jeden Schritt automatisieren zu wollen.",
+          "optionen": [
+            {
+              "text": "Zu viele Zulieferer gleichzeitig gewählt zu haben",
+              "ok": false,
+              "fb": "Falsch: Der große Fehler war laut Musks Regelliste, zuerst jeden Schritt automatisieren zu wollen."
+            },
+            {
+              "text": "Zuerst jeden Schritt automatisieren zu wollen",
+              "ok": true,
+              "fb": "Richtig: Der große Fehler war laut Musks Regelliste, zuerst jeden Schritt automatisieren zu wollen."
+            },
+            {
+              "text": "Zu früh die Fabriken in Kalifornien verlassen zu haben",
+              "ok": false,
+              "fb": "Falsch: Der große Fehler war laut Musks Regelliste, zuerst jeden Schritt automatisieren zu wollen."
+            },
+            {
+              "text": "Zu wenige Roboter für die Linien bestellt zu haben",
+              "ok": false,
+              "fb": "Falsch: Der große Fehler war laut Musks Regelliste, zuerst jeden Schritt automatisieren zu wollen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie viele Batteriepacks pro Woche hielt der Linienplaner in Nevada höchstens für machbar?",
+          "beleg": "At most they could make eighteen hundred.",
+          "belegDe": "Höchstens könnten sie achtzehnhundert herstellen.",
+          "optionen": [
+            {
+              "text": "3.000",
+              "ok": false,
+              "fb": "Falsch: Der Linienplaner hielt nach Isaacson höchstens 1.800 Batteriepacks pro Woche für machbar."
+            },
+            {
+              "text": "500",
+              "ok": false,
+              "fb": "Falsch: Der Linienplaner hielt nach Isaacson höchstens 1.800 Batteriepacks pro Woche für machbar."
+            },
+            {
+              "text": "5.000",
+              "ok": false,
+              "fb": "Falsch: Der Linienplaner hielt nach Isaacson höchstens 1.800 Batteriepacks pro Woche für machbar."
+            },
+            {
+              "text": "1.800",
+              "ok": true,
+              "fb": "Richtig: Der Linienplaner hielt nach Isaacson höchstens 1.800 Batteriepacks pro Woche für machbar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-twitter-opt-in",
+      "kurz": "Twitter: Opt-in für Hardcore",
+      "titel": "Twitter: Opt-in statt Opt-out für „hardcore“",
+      "karte": "Nach Isaacson war die Abfrage unter den Twitter-Beschäftigten ursprünglich als Opt-out geplant. Musk drehte das um: Wer bleiben wollte, musste sich aktiv melden. Er wollte Menschen, die sich als „hardcore“ bezeichnen. Am Ende sagten 2.492 Beschäftigte zu, 69 Prozent der Belegschaft. Von den Ingenieuren, die blieben, verlangte Musk nach Isaacson drei Eigenschaften: ausgezeichnet, vertrauenswürdig und angetrieben.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was änderte Musk an der Abfrage unter den Twitter-Beschäftigten?",
+          "beleg": "We’re flipping it. Don’t make the choice opt-out. Instead, make it opt-in.",
+          "belegDe": "Wir drehen es um. Macht die Wahl nicht zum Opt-out, sondern zum Opt-in.",
+          "optionen": [
+            {
+              "text": "Aus Opt-in wurde Opt-out",
+              "ok": false,
+              "fb": "Falsch: Musk drehte die Abfrage nach Isaacson von Opt-out zu Opt-in um."
+            },
+            {
+              "text": "Aus Opt-out wurde Opt-in",
+              "ok": true,
+              "fb": "Richtig: Musk drehte die Abfrage nach Isaacson von Opt-out zu Opt-in um."
+            },
+            {
+              "text": "Die Abfrage fiel weg",
+              "ok": false,
+              "fb": "Falsch: Musk drehte die Abfrage nach Isaacson von Opt-out zu Opt-in um."
+            },
+            {
+              "text": "Sie wurde anonym gemacht",
+              "ok": false,
+              "fb": "Falsch: Musk drehte die Abfrage nach Isaacson von Opt-out zu Opt-in um."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie viel Prozent der Belegschaft sagten am Ende zu?",
+          "beleg": "In the end, 2,492 said yes, a surprisingly high 69 percent of the workforce.",
+          "belegDe": "Am Ende sagten 2.492 Ja, überraschend hohe 69 Prozent der Belegschaft.",
+          "optionen": [
+            {
+              "text": "69 Prozent",
+              "ok": true,
+              "fb": "Richtig: Am Ende sagten nach Isaacson 2.492 Beschäftigte zu, 69 Prozent der Belegschaft."
+            },
+            {
+              "text": "19 Prozent",
+              "ok": false,
+              "fb": "Falsch: Am Ende sagten nach Isaacson 2.492 Beschäftigte zu, 69 Prozent der Belegschaft."
+            },
+            {
+              "text": "89 Prozent",
+              "ok": false,
+              "fb": "Falsch: Am Ende sagten nach Isaacson 2.492 Beschäftigte zu, 69 Prozent der Belegschaft."
+            },
+            {
+              "text": "49 Prozent",
+              "ok": false,
+              "fb": "Falsch: Am Ende sagten nach Isaacson 2.492 Beschäftigte zu, 69 Prozent der Belegschaft."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche drei Kriterien mussten die bleibenden Ingenieure laut Musk erfüllen?",
+          "beleg": "They had to be excellent, trustworthy, and driven.",
+          "belegDe": "Sie mussten ausgezeichnet, vertrauenswürdig und angetrieben sein.",
+          "optionen": [
+            {
+              "text": "Kreativ, bescheiden und gut vernetzt",
+              "ok": false,
+              "fb": "Falsch: Die bleibenden Ingenieure sollten nach Isaacson ausgezeichnet, vertrauenswürdig und angetrieben sein."
+            },
+            {
+              "text": "Erfahren, geduldig und dem Unternehmen treu ergeben",
+              "ok": false,
+              "fb": "Falsch: Die bleibenden Ingenieure sollten nach Isaacson ausgezeichnet, vertrauenswürdig und angetrieben sein."
+            },
+            {
+              "text": "Ausgezeichnet, vertrauenswürdig, angetrieben",
+              "ok": true,
+              "fb": "Richtig: Die bleibenden Ingenieure sollten nach Isaacson ausgezeichnet, vertrauenswürdig und angetrieben sein."
+            },
+            {
+              "text": "Jung, günstig und flexibel einsetzbar",
+              "ok": false,
+              "fb": "Falsch: Die bleibenden Ingenieure sollten nach Isaacson ausgezeichnet, vertrauenswürdig und angetrieben sein."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "musk-starship-wandstaerke",
+      "kurz": "Starship: Wandstärke",
+      "titel": "Starship: Wer weiß, wie dünn die Wand sein darf?",
+      "karte": "Bei der Frage, wie dick die Wände von Starship sein sollten, sprach Musk laut Isaacson mit den Arbeitern, die tatsächlich schweißten, nicht mit den Führungskräften. Diese hielten 4,8 Millimeter für sicher; auf Musks Nachfrage nach vier Millimetern sagten sie, das mache sie ziemlich nervös. Musk entschied sich für vier Millimeter, und nach Isaacson funktionierte es. Als eine von Musks Regeln nennt ein Starship-Ingenieur: für Informationen so nah wie möglich dorthin gehen, wo sie entstehen.",
+      "quelle": {
+        "titel": "Elon Musk (Walter Isaacson), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Walter Isaacson: Elon Musk (englische Ausgabe, Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Mit wem sprach Musk über die Wandstärke von Starship?",
+          "beleg": "Musk talked to some of the workers—those actually doing the welding rather than the company’s executives",
+          "belegDe": "Musk sprach mit einigen der Arbeiter, mit denen, die tatsächlich schweißten, und nicht mit den Führungskräften des Unternehmens",
+          "optionen": [
+            {
+              "text": "Mit einem externen Beratungsunternehmen",
+              "ok": false,
+              "fb": "Falsch: Musk sprach nach Isaacson mit den Arbeitern, die schweißten, nicht mit den Führungskräften."
+            },
+            {
+              "text": "Mit dem Vorstand von SpaceX",
+              "ok": false,
+              "fb": "Falsch: Musk sprach nach Isaacson mit den Arbeitern, die schweißten, nicht mit den Führungskräften."
+            },
+            {
+              "text": "Mit der zuständigen Genehmigungsbehörde",
+              "ok": false,
+              "fb": "Falsch: Musk sprach nach Isaacson mit den Arbeitern, die schweißten, nicht mit den Führungskräften."
+            },
+            {
+              "text": "Mit den Arbeitern, die schweißten",
+              "ok": true,
+              "fb": "Richtig: Musk sprach nach Isaacson mit den Arbeitern, die schweißten, nicht mit den Führungskräften."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Regel von Musk nennt ein Starship-Ingenieur laut Isaacson?",
+          "beleg": "Go as close to the source as possible for information",
+          "belegDe": "Geh für Informationen so nah an die Quelle wie möglich",
+          "optionen": [
+            {
+              "text": "Jeden Schritt schriftlich dokumentieren lassen",
+              "ok": false,
+              "fb": "Falsch: Ein Starship-Ingenieur nennt nach Isaacson Musks Regel, für Informationen so nah wie möglich dorthin zu gehen, wo sie entstehen."
+            },
+            {
+              "text": "Nie ohne Rückfrage beim Chef entscheiden",
+              "ok": false,
+              "fb": "Falsch: Ein Starship-Ingenieur nennt nach Isaacson Musks Regel, für Informationen so nah wie möglich dorthin zu gehen, wo sie entstehen."
+            },
+            {
+              "text": "Dorthin gehen, wo die Information entsteht",
+              "ok": true,
+              "fb": "Richtig: Ein Starship-Ingenieur nennt nach Isaacson Musks Regel, für Informationen so nah wie möglich dorthin zu gehen, wo sie entstehen."
+            },
+            {
+              "text": "Immer zuerst die Zahlen noch einmal prüfen",
+              "ok": false,
+              "fb": "Falsch: Ein Starship-Ingenieur nennt nach Isaacson Musks Regel, für Informationen so nah wie möglich dorthin zu gehen, wo sie entstehen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Auf welche Wandstärke einigten sich Musk und die Arbeiter?",
+          "beleg": "let’s do four millimeters. Let’s give it a try.",
+          "belegDe": "machen wir vier Millimeter. Versuchen wir es.",
+          "optionen": [
+            {
+              "text": "Sechs Millimeter",
+              "ok": false,
+              "fb": "Falsch: Musk entschied sich nach Isaacson für vier Millimeter, und es funktionierte."
+            },
+            {
+              "text": "Vier Millimeter",
+              "ok": true,
+              "fb": "Richtig: Musk entschied sich nach Isaacson für vier Millimeter, und es funktionierte."
+            },
+            {
+              "text": "Zwei Millimeter",
+              "ok": false,
+              "fb": "Falsch: Musk entschied sich nach Isaacson für vier Millimeter, und es funktionierte."
+            },
+            {
+              "text": "4,8 Millimeter",
+              "ok": false,
+              "fb": "Falsch: Musk entschied sich nach Isaacson für vier Millimeter, und es funktionierte."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [
+    {
+      "von": [
+        14
+      ],
+      "titel": "Rosenberg: Beobachten, ohne zu bewerten",
+      "url": "/buch/gewaltfreie-kommunikation/",
+      "ziel": "gewaltfreie-kommunikation"
+    }
+  ],
+  "platzhalter": false,
+  "coverBreite": 655,
+  "coverHoehe": 1000
+}
