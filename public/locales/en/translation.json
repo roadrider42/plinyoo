@@ -9,35 +9,7 @@
     "subtitle": "You know where you stand today and where you want to go. You find the way in between on cards that point to one another — not in a course plan.",
     "cta": "Request access",
     "cta_primary": "Join now",
-    "cta_secondary": "For Investors",
-    "cardsLabel": "Example",
-    "cardsAria": "Example: how you learn a card",
-    "cards": [
-      {
-        "step": "Card",
-        "title": "Surface temperature vs. air temperature",
-        "text": "Satellite data show surface temperatures — often higher than air temperatures. The air temperature at 2 m height determines human heat stress more strongly.",
-        "chip": "→ DLR satellite analysis"
-      },
-      {
-        "step": "Question",
-        "title": "What do satellite data primarily show?",
-        "options": [
-          "Air temperature at 2 metres height, measured at ground stations",
-          "Surface temperatures of streets, roofs and vegetation"
-        ]
-      },
-      {
-        "step": "Second look",
-        "title": "The card comes back.",
-        "text": "What sticks comes back later. What wobbles comes back sooner."
-      },
-      {
-        "step": "Star",
-        "title": "Learned — one star.",
-        "text": "When all questions on a card were last answered correctly, it shines as a star in your knowledge universe."
-      }
-    ]
+    "cta_secondary": "For Investors"
   },
   "hero1": {
     "eyebrow": "Knowledge that lasts.",

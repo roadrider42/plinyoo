@@ -29,7 +29,7 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="flex h-9 items-center gap-1.5 rounded-full border border-border bg-surface-1 px-3 text-xs font-medium text-text-muted transition-colors hover:text-main-text">
+        <Menu.Button className="flex h-11 items-center gap-1.5 rounded-full border border-border bg-surface-1 px-3 text-xs font-medium text-text-muted transition-colors hover:text-main-text">
           <Globe className="h-4 w-4" aria-hidden="true" />
           <span className="uppercase">{currentLng}</span>
           <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />

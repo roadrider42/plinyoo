@@ -10,34 +10,19 @@
     "cta": "Zugang anfragen",
     "cta_primary": "Zugang anfragen",
     "cta_secondary": "Für Investoren",
-    "cardsLabel": "Beispiel",
-    "cardsAria": "Beispiel: so lernst du eine Karte",
-    "cards": [
-      {
-        "step": "Karte",
-        "title": "Auswählen statt abhaken",
-        "text": "Wer mehr weiß, liest mehr Bücher unvollständig und konzentriert sich auf neue Konzepte. Die Zahl ganz gelesener Bücher hält Naval Ravikant für eine Kennzahl der Eitelkeit.",
-        "chip": "→ Der Almanach von Naval Ravikant"
-      },
-      {
-        "step": "Frage",
-        "title": "Wofür ist die Zahl ganz gelesener Bücher nach Ravikant eine Kennzahl?",
-        "options": [
-          "Eine Kennzahl für Bildung",
-          "Eine Kennzahl für Eitelkeit"
-        ]
-      },
-      {
-        "step": "Wiedersehen",
-        "title": "Die Karte kommt wieder.",
-        "text": "Was sitzt, kommt später wieder. Was wackelt, kommt früher."
-      },
-      {
-        "step": "Stern",
-        "title": "Gelernt — ein Stern.",
-        "text": "Sind alle Fragen zu einer Karte zuletzt richtig beantwortet, leuchtet sie als Stern in deinem Wissensuniversum."
-      }
-    ]
+    "faden": {
+      "contrastFrom": "Ein fester Kursplan",
+      "contrastTo": "Karte verweist auf Karte",
+      "target": "Zielbild",
+      "booksLabel": "Bücher auf diesem Weg",
+      "prev": "Vorige Karte",
+      "pause": "Anhalten",
+      "play": "Abspielen",
+      "next": "Nächste Karte",
+      "refersTo": "verweist auf · {{book}}",
+      "cardOf": "Karte {{n}} von {{m}}",
+      "questionOf": "Frage zur Karte davor"
+    }
   },
   "hero1": {
     "eyebrow": "Wissen, das bleibt.",

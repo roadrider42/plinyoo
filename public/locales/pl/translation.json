@@ -9,35 +9,7 @@
     "subtitle": "Wiesz, gdzie dziś jesteś i dokąd chcesz dojść. Drogę pomiędzy znajdziesz na kartach, które odsyłają do siebie nawzajem — nie w planie kursu.",
     "cta_primary": "Dołącz teraz",
     "cta_secondary": "Dla inwestorów",
-    "cta": "Poproś o dostęp",
-    "cardsLabel": "Przykład",
-    "cardsAria": "Przykład: tak uczysz się karty",
-    "cards": [
-      {
-        "step": "Karta",
-        "title": "Temperatura powierzchni a temperatura powietrza",
-        "text": "Dane satelitarne pokazują temperatury powierzchni — często wyższe niż temperatury powietrza. Temperatura powietrza na wysokości 2 m silniej decyduje o stresie cieplnym człowieka.",
-        "chip": "→ Analiza satelitarna DLR"
-      },
-      {
-        "step": "Pytanie",
-        "title": "Co pokazują przede wszystkim dane satelitarne?",
-        "options": [
-          "Temperaturę powietrza na wysokości 2 metrów, mierzoną na stacjach naziemnych",
-          "Temperatury powierzchni ulic, dachów i roślinności"
-        ]
-      },
-      {
-        "step": "Powtórka",
-        "title": "Karta wraca.",
-        "text": "Co się trzyma, wraca później. Co się chwieje, wraca wcześniej."
-      },
-      {
-        "step": "Gwiazda",
-        "title": "Opanowane — jedna gwiazda.",
-        "text": "Gdy na wszystkie pytania do karty ostatnio odpowiedziano poprawnie, świeci jako gwiazda w Twoim wszechświecie."
-      }
-    ]
+    "cta": "Poproś o dostęp"
   },
   "visionMission": {
     "vision": {

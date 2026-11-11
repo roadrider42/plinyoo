@@ -9,35 +9,7 @@
     "subtitle": "Tu sais où tu en es aujourd’hui et où tu veux aller. Le chemin entre les deux, tu le trouves sur des fiches qui renvoient les unes aux autres — pas dans un plan de cours.",
     "cta_primary": "Rejoignez-nous maintenant",
     "cta_secondary": "Pour les investisseurs",
-    "cta": "Demander l’accès",
-    "cardsLabel": "Exemple",
-    "cardsAria": "Exemple : comment tu apprends une fiche",
-    "cards": [
-      {
-        "step": "Fiche",
-        "title": "Température de surface vs. température de l’air",
-        "text": "Les données satellitaires montrent des températures de surface, souvent plus élevées que celles de l’air. La température de l’air à 2 m de hauteur détermine davantage le stress thermique humain.",
-        "chip": "→ Analyse satellitaire du DLR"
-      },
-      {
-        "step": "Question",
-        "title": "Que montrent principalement les données satellitaires ?",
-        "options": [
-          "La température de l’air à 2 mètres de hauteur, mesurée par des stations au sol",
-          "Les températures de surface des rues, des toits et de la végétation"
-        ]
-      },
-      {
-        "step": "Retrouvailles",
-        "title": "La fiche revient.",
-        "text": "Ce qui est acquis revient plus tard. Ce qui vacille revient plus tôt."
-      },
-      {
-        "step": "Étoile",
-        "title": "Apprise — une étoile.",
-        "text": "Quand toutes les questions d’une fiche ont été répondues juste la dernière fois, elle brille comme une étoile dans ton univers."
-      }
-    ]
+    "cta": "Demander l’accès"
   },
   "visionMission": {
     "vision": {
