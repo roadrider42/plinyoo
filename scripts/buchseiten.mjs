@@ -229,14 +229,59 @@ function universum(b) {
 }
 
 // Vorschaubild je Buch (1200×630 für og:image): Sternbild des Buchs als Hintergrund, Wortmarke, Titel, Autor, rechts das Cover.
-function zeilen(text, max) {
-  const out = [];
-  for (const wort of String(text).split(/\s+/)) {
-    const z = out.length ? out[out.length - 1] : null;
-    if (z !== null && (z + ' ' + wort).length <= max) out[out.length - 1] = z + ' ' + wort;
-    else out.push(wort);
+// Titelzeile (#505): umgebrochen nach der gemessenen Breite, nicht nach Zeichen. Gemessen wird die Tinte der Zeile,
+// so wie sharp/librsvg sie mit derselben Schrift rendert. Ein Titel wird nie gekürzt; passt ein Wort allein nicht
+// in die Spalte, wird die Schrift kleiner. Erster Versuch 76 px (höchstens zwei Zeilen), dann 60 px, dann in 2-px-Schritten bis 36 px.
+const TITEL_ABSTAND_COVER = 40; // Abstand rechte Tintenkante des Titels zur linken Kante des Covers
+const TITEL_GROESSEN = [76, 60, 58, 56, 54, 52, 50, 48, 46, 44, 42, 40, 38, 36];
+const TITEL_X = 80, TITEL_Y = 200, AUTOR_GRENZE = 500; // Autorzeile (34 px) muss über der Fußzeile (y 560) enden
+const tintenCache = new Map();
+async function tintenBreite(text, groesse, font) {
+  const key = `${groesse}|${text}`;
+  if (tintenCache.has(key)) return tintenCache.get(key);
+  const w = 3000, h = Math.ceil(groesse * 1.6), yb = Math.round(groesse * 1.2);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"><g ${font}><text x="0" y="${yb}" font-size="${groesse}" font-weight="700" fill="#FFFFFF">${esc(text)}</text></g></svg>`;
+  const { data, info } = await sharp(Buffer.from(svg)).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  let rechts = -1;
+  for (let y = 0; y < info.height; y++) for (let x = info.width - 1; x > rechts; x--) {
+    if (data[(y * info.width + x) * info.channels + 3] > 0) { rechts = x; break; }
   }
-  return out;
+  if (rechts < 0 && String(text).trim()) throw new Error(`Vorschaubild: Titelzeile „${text}“ ließ sich nicht messen (keine Tinte bei ${groesse} px)`);
+  if (rechts >= w - 1) throw new Error(`Vorschaubild: Titelzeile „${text}“ breiter als die Messfläche (${w} px)`);
+  const breite = rechts + 1;
+  tintenCache.set(key, breite);
+  return breite;
+}
+async function titelSatz(text, font, spalte) {
+  const woerter = String(text).trim().split(/\s+/);
+  for (const groesse of TITEL_GROESSEN) {
+    let passt = true;
+    for (const wort of woerter) if (await tintenBreite(wort, groesse, font) > spalte) { passt = false; break; }
+    if (!passt) continue;
+    const out = [];
+    for (const wort of woerter) {
+      const z = out.length ? out[out.length - 1] : null;
+      if (z !== null && await tintenBreite(z + ' ' + wort, groesse, font) <= spalte) out[out.length - 1] = z + ' ' + wort;
+      else out.push(wort);
+    }
+    if (groesse === TITEL_GROESSEN[0] && out.length > 2) continue;
+    if (TITEL_Y + out.length * groesse * 1.1 + 14 > AUTOR_GRENZE) continue;
+    return { zeilen: out, groesse };
+  }
+  throw new Error(`Vorschaubild: Titel „${text}“ passt in keiner Größe (${TITEL_GROESSEN.at(-1)}–${TITEL_GROESSEN[0]} px) in die linke Spalte (${spalte} px)`);
+}
+// Abschlussprüfung, unabhängig vom Satz: Jede Titelzeile endet mindestens TITEL_ABSTAND_COVER vor dem Cover,
+// der Titel ist vollständig, und die Autorzeile bleibt über der Fußzeile. Sonst bricht der Bau ab und nennt den Titel.
+async function titelPruefen(b, zeilenListe, groesse, font, coverX) {
+  const grenze = coverX - TITEL_ABSTAND_COVER;
+  if (zeilenListe.join(' ') !== String(b.titel).trim().split(/\s+/).join(' ')) throw new Error(`Vorschaubild ${b.slug}: Titel „${b.titel}“ unvollständig gesetzt („${zeilenListe.join(' | ')}“)`);
+  for (const z of zeilenListe) {
+    const rechts = TITEL_X + await tintenBreite(z, groesse, font);
+    console.log(`  Vorschaubild ${b.slug}: Titelzeile „${z}“ ${groesse} px, x ${TITEL_X}…${rechts}, Grenze ${grenze}, Abstand zum Cover ${coverX - rechts} px`);
+    if (rechts > grenze) throw new Error(`Vorschaubild ${b.slug}: Titel „${b.titel}“, Zeile „${z}“ reicht bei ${groesse} px bis x ${rechts}, Grenze x ${grenze} (Cover ab x ${coverX})`);
+  }
+  const autorY = TITEL_Y + zeilenListe.length * groesse * 1.1 + 14;
+  if (autorY > AUTOR_GRENZE) throw new Error(`Vorschaubild ${b.slug}: Titel „${b.titel}“ schiebt die Autorzeile auf y ${autorY}, Grenze ${AUTOR_GRENZE}`);
 }
 
 async function vorschaubild(b, coverQuelle, ziel) {
@@ -246,11 +291,11 @@ async function vorschaubild(b, coverQuelle, ziel) {
   const pos = knoten.length ? anordnung(b.slug, knoten.length, kanten, CX - 40, H) : [];
   const linien = kanten.map(([x, y]) => `<line x1="${pos[x].x}" y1="${pos[x].y}" x2="${pos[y].x}" y2="${pos[y].y}"/>`).join('');
   const punkte = pos.map((p, i) => `<circle cx="${p.x}" cy="${p.y}" r="${i % 4 === 0 ? 6 : 4.5}" fill="${i % 4 === 0 ? '#E3A72F' : '#6FB3B8'}"/>`).join('');
-  const titel = zeilen(b.titel, 16).slice(0, 3);
-  const tGroesse = titel.length > 2 ? 60 : 76;
   const font = `font-family="Helvetica Neue, Helvetica, Arial, Liberation Sans, DejaVu Sans, sans-serif"`;
-  let y = 200;
-  const titelSvg = titel.map((z) => { const t = `<text x="80" y="${y}" font-size="${tGroesse}" font-weight="700" fill="#F4F5F7">${esc(z)}</text>`; y += tGroesse * 1.1; return t; }).join('');
+  const { zeilen: titel, groesse: tGroesse } = await titelSatz(b.titel, font, CX - TITEL_ABSTAND_COVER - 80);
+  await titelPruefen(b, titel, tGroesse, font, CX);
+  let y = TITEL_Y;
+  const titelSvg = titel.map((z) => { const t = `<text x="${TITEL_X}" y="${y}" font-size="${tGroesse}" font-weight="700" fill="#F4F5F7">${esc(z)}</text>`; y += tGroesse * 1.1; return t; }).join('');
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
   <rect width="100%" height="100%" fill="#0F1419"/>
   <g opacity="0.25"><g stroke="#6FB3B8" stroke-width="1" opacity="0.6">${linien}</g>${punkte}</g>
