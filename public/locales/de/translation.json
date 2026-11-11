@@ -19,7 +19,6 @@
       "pause": "Anhalten",
       "play": "Abspielen",
       "next": "Nächste Karte",
-      "refersTo": "verweist auf · {{book}}",
       "cardOf": "Karte {{n}} von {{m}}",
       "questionOf": "Frage zur Karte davor"
     }
