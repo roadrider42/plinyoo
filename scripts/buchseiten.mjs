@@ -256,7 +256,7 @@ async function vorschaubild(b, coverQuelle, ziel) {
   <g opacity="0.25"><g stroke="#6FB3B8" stroke-width="1" opacity="0.6">${linien}</g>${punkte}</g>
   <g ${font}>${titelSvg}
   <text x="80" y="${y + 14}" font-size="34" fill="#BDE3E6">${esc(b.autor)}</text>
-  <text x="80" y="${H - 70}" font-size="24" font-weight="600" fill="#E3A72F">Buchvorstellung mit Lernkarten <tspan fill="#FFFFFF">· made by plinyoo</tspan></text></g>
+  <text x="80" y="${H - 70}" font-size="24" font-weight="600" fill="#E3A72F">Wissensgraphen mit Lernkarten <tspan fill="#FFFFFF">· made by plinyoo</tspan></text></g>
   <rect x="${CX + 6}" y="${CY + 10}" width="${CW}" height="${CH}" rx="6" fill="#000" opacity="0.5"/>
 </svg>`;
   const cover = await sharp(coverQuelle).resize(CW, CH, { fit: 'cover' }).toBuffer();
