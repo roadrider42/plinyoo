@@ -198,7 +198,7 @@ export default function HeroFaden() {
         </Phone>
       </div>
 
-      {/* Bedienzeile (B8): genau eine gefüllte Schaltfläche */}
+      {/* Bedienzeile: alle drei umrandet (#503 Zugang B4, ersetzt B8): Im Hero ist allein die Zugangsschaltfläche gefüllt */}
       <div className="mt-2.5 flex justify-center gap-2 lg:col-span-2 lg:col-start-1 lg:row-start-2">
         <button
           type="button"
@@ -229,7 +229,7 @@ export default function HeroFaden() {
             anhalten();
             zeigen(index + 1);
           }}
-          className={`${knopf} border-primary bg-primary text-white hover:bg-primary/90`}
+          className={`${knopf} border-border bg-surface-1 text-primary hover:bg-surface-2`}
         >
           {t('hero.faden.next')}
         </button>

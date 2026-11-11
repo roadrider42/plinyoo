@@ -3,6 +3,9 @@
 // Angepasst für plinyoo.com (mit eigenem Header wie app.plinyoo.com).
 // #503 (Entwurf V2, Baublatt B1–B11): ab 1024 px zwei Spalten (Text links, Telefon rechts), darunter untereinander.
 //   Das frühere Karussell unter dem Hero (Beispielkarten bzw. Kennwerte) fällt weg (Heikos Entscheidung 2 = a).
+// #503 Zugang (claude/_503cta/entwurf.md, B1–B6): Mit Telefon steht die Zugangsschaltfläche unter 1024 px unter dem
+//   Telefon (nach seiner Bedienzeile), ab 1024 px in der Textspalte unter dem Text; ohne Telefon unter dem Text.
+//   Darunter steht jeweils die Zeile „Wir melden uns persönlich bei dir.“ (ZugangHinweis, nur in Sprachen mit eigenem Text).
 // Gegenbild-Zeile und Faden erscheinen nur, wenn die gewählte Sprache eigene Texte unter hero.faden hat (wie Views.tsx);
 //   sonst bleibt der Hero einspaltig wie bisher, ohne deutsche Beschriftungen in einer fremden Sprache.
 
@@ -11,6 +14,11 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import HeroFaden from './HeroFaden';
+import ZugangHinweis from './ZugangHinweis';
+
+// Gleiche Klassen für beide Zugangsschaltflächen (B2): Zu jeder Breite ist genau eine sichtbar.
+const zugangKlassen =
+  'flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-[0.95rem] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md sm:w-auto';
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
@@ -68,17 +76,30 @@ export default function Hero() {
             {t('hero.subtitle')}
           </p>
 
-          <Link
-            to="/zugang"
-            className={`mt-1 flex min-h-[52px] w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-[0.95rem] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md sm:w-auto sm:self-start ${
-              mitFaden ? '' : 'lg:self-center'
-            }`}
-          >
-            {t('hero.cta')}
-          </Link>
+          {/* B1/B2: Mit Telefon steht diese Schaltfläche nur ab 1024 px (lg) hier in der Textspalte, darunter die zweite nach dem Telefon */}
+          <div className={`mt-1 flex flex-col gap-2 ${mitFaden ? 'hidden lg:flex' : ''}`}>
+            <Link
+              to="/zugang"
+              data-ziel="hero-zugang"
+              className={`${zugangKlassen} sm:self-start ${mitFaden ? '' : 'lg:self-center'}`}
+            >
+              {t('hero.cta')}
+            </Link>
+            <ZugangHinweis />
+          </div>
         </section>
 
         {mitFaden && <HeroFaden />}
+
+        {/* B1–B3: Unter 1024 px steht die Zugangsschaltfläche nach dem Telefon, unter 640 px spaltenbreit, darüber mittig */}
+        {mitFaden && (
+          <div className="flex flex-col gap-2 sm:items-center lg:hidden">
+            <Link to="/zugang" data-ziel="hero-zugang" className={zugangKlassen}>
+              {t('hero.cta')}
+            </Link>
+            <ZugangHinweis className="text-center" />
+          </div>
+        )}
       </div>
     </div>
   );

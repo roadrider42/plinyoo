@@ -391,7 +391,7 @@ ${CSS}
   <a class="logo" href="/" aria-label="plinyoo, zur Startseite">plinyoo</a>
   <nav aria-label="Hauptnavigation">
     <a class="login" href="${LOGIN}">Anmelden</a>
-    <a class="btn haupt" href="/#/zugang">Zugang anfragen</a>
+    <a class="btn haupt" href="/#/zugang">Ich will dabei sein</a>
   </nav>
 </div></header>
 <main>
@@ -408,7 +408,8 @@ ${CSS}
   <div class="abschluss">
     <h2>Was willst du als Nächstes können?</h2>
     <p>Sag uns, was dich interessiert. Wir zeigen dir den Weg, allein oder mit deinem Team.</p>
-    <p style="margin:0"><a class="btn haupt" href="/#/zugang">Zugang anfragen</a></p>
+    <p style="margin:0"><a class="btn haupt" href="/#/zugang">Ich will dabei sein</a></p>
+    <p style="margin:12px 0 0">Wir melden uns persönlich bei dir.</p>
   </div>
 </div></section>
 </main>
@@ -624,7 +625,7 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
   <a class="logo" href="/" aria-label="plinyoo, zur Startseite">plinyoo</a>
   <nav aria-label="Hauptnavigation">
     <a class="login" href="${LOGIN}">Anmelden</a>
-    <a class="btn haupt" data-zugang href="${zugang}">Zugang anfragen</a>
+    <a class="btn haupt" data-zugang href="${zugang}">Ich will dabei sein</a>
   </nav>
 </div></header>
 
@@ -700,7 +701,7 @@ ${b.platzhalter && !b.amazonUrl ? '' : `<section class="sek alt" aria-labelledby
 <section class="abschluss" aria-labelledby="abschluss-h"><div class="wrap">
   <h2 id="abschluss-h">Hat dich das neugierig gemacht?</h2>
   <p>Das hier ist ein erster Schritt. Wir sammeln gerade Rückmeldungen: Was hat dir gefallen, was hat gefehlt, was würdest du dir für dich oder dein Team wünschen? Wer Interesse hat, meldet sich hier. Wir antworten persönlich.</p>
-  <p><a class="btn haupt" data-zugang href="${zugang}">Zugang anfragen</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
+  <p><a class="btn haupt" data-zugang href="${zugang}">Ich will dabei sein</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
   <p class="rollen">Ich komme als
     ${TUEREN.map((t) => `<a data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">${esc(t.label)}</a>`).join(' · ')}</p>
   <p class="teilen-zeile">Folge uns auf <a class="sozial" data-sozial="instagram" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a> und <a class="sozial" data-sozial="twitter" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>: @plinyoo_path. Oder schick die Seite an jemanden, der sie brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>

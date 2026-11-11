@@ -6,6 +6,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Compass, PenLine, Users } from 'lucide-react';
+import ZugangHinweis from './ZugangHinweis';
 
 const DOORS = [
   { key: 'learner', Icon: Compass },
@@ -54,6 +55,8 @@ export default function Roles() {
           </div>
         ))}
       </div>
+      {/* #503: Bedingung des Sprechers für „Ich will dabei sein“, einmal unter den drei Türen statt dreimal */}
+      <ZugangHinweis className="mt-4" />
     </section>
   );
 }
