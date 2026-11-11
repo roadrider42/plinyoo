@@ -8,7 +8,7 @@
 // Aufruf: läuft nach "vite build" (siehe package.json). Entwürfe ("draft": true) werden NICHT erzeugt,
 //        außer mit BUCHSEITEN_DRAFT=1 (lokal testen). So kann kein Entwurf versehentlich live gehen.
 
-import { readdir, readFile, writeFile, mkdir, copyFile, access } from 'node:fs/promises';
+import { readdir, readFile, writeFile, mkdir, copyFile, access, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
@@ -38,6 +38,47 @@ const escInline = (s) =>
   esc(s).replace(/&lt;(\/?(?:strong|em))&gt;/g, '<$1>').replace(/\[\[buch:([a-z0-9-]+)\|([^\]]+)\]\]/g, '<a href="/buch/$1/">$2</a>');
 
 const exists = async (p) => access(p).then(() => true, () => false);
+
+// Strukturierte Daten (JSON-LD) braucht für datePublished ein ISO-Datum. Die Buchdateien schreiben "erschienen" frei:
+// "2016", "20. März 2026", "Taschenbuch, erscheint am 19. November 2026". Gelesen werden Jahr allein oder
+// "<Tag>. <Monat> <Jahr>" irgendwo im Text. Alles andere bricht den Bau ab — ein geratenes Datum wäre schlimmer als keins.
+const MONATE = ['januar', 'februar', 'märz', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'dezember'];
+function isoDatum(s, slug) {
+  const t = String(s).trim();
+  if (/^\d{4}$/.test(t)) return t;
+  const m = t.match(/(\d{1,2})\.\s*([A-Za-zÄÖÜäöü]+)\s+(\d{4})/);
+  const monat = m ? MONATE.indexOf(m[2].toLowerCase()) + 1 : 0;
+  if (!monat) throw new Error(`${slug}: "erschienen" (${t}) ist weder ein Jahr noch "<Tag>. <Monat> <Jahr>"`);
+  return `${m[3]}-${String(monat).padStart(2, '0')}-${m[1].padStart(2, '0')}`;
+}
+
+// Mehrere Namen in einem Feld ("Norbert Juraschitz und Hans Freundl") werden je eine Person.
+const personen = (s) => String(s ?? '').split(/\s*,\s*|\s+und\s+|\s*&\s*/).map((n) => n.trim()).filter(Boolean).map((name) => ({ '@type': 'Person', name }));
+
+// JSON-LD je Buchseite: Brotkrume (Startseite → Bücher → Buch), die Seite selbst und das Buch, um das sie geht.
+// Nur Angaben aus der Buchdatei; fehlt eine, fehlt sie auch hier (nichts wird ergänzt oder geraten).
+function buchLd(b, url, titel, coverUrl) {
+  const buch = { '@type': 'Book', '@id': `${url}#buch`, name: b.titel };
+  if (b.untertitel) buch.alternativeHeadline = b.untertitel;
+  buch.author = personen(b.autor);
+  if (b.uebersetzer) buch.translator = personen(b.uebersetzer);
+  if (b.verlag) buch.publisher = { '@type': 'Organization', name: b.verlag };
+  if (b.erschienen) buch.datePublished = isoDatum(b.erschienen, b.slug);
+  if (b.isbn) buch.isbn = b.isbn;
+  if (coverUrl) buch.image = coverUrl;
+  const krumen = { '@type': 'BreadcrumbList', '@id': `${url}#krumen`, itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Bücher', item: `${SITE}/buch/` },
+    { '@type': 'ListItem', position: 3, name: b.titel, item: url },
+  ] };
+  const webseite = { '@type': 'WebPage', '@id': url, url, name: titel, inLanguage: 'de', breadcrumb: { '@id': `${url}#krumen` }, about: { '@id': `${url}#buch` } };
+  return JSON.stringify({ '@context': 'https://schema.org', '@graph': [krumen, webseite, buch] }).replace(/</g, '\\u003c');
+}
+
+// Cover auf der Buchseite: angezeigt 160 CSS-px ab 660 px Fensterbreite (Spalte im Hero), darunter volle Breite
+// des Inhalts (Fenster minus 2 × 20 px Rand von .wrap). Breiten für 1×–3× Pixeldichte; nie über die Datei hinaus.
+const COVER_BREITEN = [320, 640, 1050];
+const COVER_SIZES = '(min-width: 660px) 160px, calc(100vw - 40px)';
 
 // Die drei Anreden: gleiche Texte wie in public/locales/de/translation.json (roles.*).
 // Hier doppelt, weil die statischen Seiten keinen Zugriff auf die App-Texte haben.
@@ -219,7 +260,9 @@ async function vorschaubild(b, coverQuelle, ziel) {
   <rect x="${CX + 6}" y="${CY + 10}" width="${CW}" height="${CH}" rx="6" fill="#000" opacity="0.5"/>
 </svg>`;
   const cover = await sharp(coverQuelle).resize(CW, CH, { fit: 'cover' }).toBuffer();
-  await sharp(Buffer.from(svg)).composite([{ input: cover, left: CX, top: CY }]).png().toFile(ziel);
+  // JPEG statt PNG: 78–169 KB statt 108–596 KB, PSNR gegen das PNG >= 42,8 dB bei q95 und vollen Farbauflösung (4:4:4),
+  // Schrift bleibt scharf. Gemessen #505 (SpoonUp claude/_seo-buch/bau/og-vergleich.txt).
+  await sharp(Buffer.from(svg)).composite([{ input: cover, left: CX, top: CY }]).flatten({ background: '#0F1419' }).jpeg({ quality: 95, chromaSubsampling: '4:4:4', mozjpeg: true }).toFile(ziel);
 }
 
 // Karten zum Durchspielen — Konzept von future-space.plinyoo.com (echte Karte, Frage, Rückmeldung, Beleg, Quelle),
@@ -536,7 +579,7 @@ details.kartek.gekonnt{border-color:#2F7D4F}
 .abschluss .rollen{font-size:15px}
 .kauf{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 20px 12px}
 .kauf .meta{margin-bottom:12px}
-.anzeige{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid var(--muted);border-radius:4px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;vertical-align:middle}
+.anzeige{display:inline-block;margin-left:8px;padding:1px 6px;border:1px solid var(--muted);border-radius:4px;font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;vertical-align:middle}
 .hinweis{font-size:13px;color:var(--muted);margin:4px 0 0}
 details.faq{border-bottom:1px solid var(--line);padding:14px 0}
 details.faq:first-of-type{border-top:1px solid var(--line)}
@@ -580,10 +623,14 @@ summary{font-size:18px}
 }
 </style>`;
 
-function seite(b, mitCover, neu) {
+// cover: null (ohne Cover) oder { w, h, srcset } aus main().
+function seite(b, cover, neu) {
+  const mitCover = !!cover;
   const url = `${SITE}/buch/${b.slug}/`;
   const titelVoll = `${b.titel} — ${b.autor}`;
-  const ogBild = mitCover ? `${url}og.png` : `${SITE}/og/buchseite.png`;
+  // Vorschaubild beim Teilen: je Buch 1200 × 630 (vorschaubild()), sonst das allgemeine Bild, ebenfalls 1200 × 630.
+  const ogBild = mitCover ? `${url}og.jpg` : `${SITE}/og/buchseite.png`;
+  const ogAlt = mitCover ? `Buchvorstellung mit Lernkarten: ${b.titel} von ${b.autor}` : 'plinyoo';
   const titel = `${b.autor}: ${b.titel} — Buchvorstellung | plinyoo`;
   const desc = b.leitfrage;
   const karten = b.karten ?? [];
@@ -612,7 +659,12 @@ ${b.draft ? '<meta name="robots" content="noindex, nofollow">' : ''}
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${ogBild}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(ogAlt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="${esc(ogAlt)}">
+<script type="application/ld+json">${buchLd(b, url, titel, mitCover ? `${url}cover.jpg` : '')}</script>
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://plausible.io; base-uri 'self'; form-action 'self'">
 ${CSS}
 <script>document.documentElement.className+=' js';try{if('scrollRestoration' in history){history.scrollRestoration='manual'}}catch(e){}</script>
@@ -641,7 +693,7 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
       ${b.einordnung ? `<p class="lead">${esc(b.einordnung)}</p>` : ''}
       ${beitragFalte(b.beitrag, b.titel, b.autor)}
     </div>
-    ${mitCover ? `<figure class="cover"><img src="cover.jpg" width="${b.coverBreite || 691}" height="${b.coverHoehe || 1063}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
+    ${mitCover ? `<figure class="cover"><img src="cover.jpg" srcset="${cover.srcset}" sizes="${COVER_SIZES}" width="${cover.w}" height="${cover.h}" alt="Buchcover: ${esc(b.titel)} von ${esc(b.autor)}"><figcaption>${esc(b.coverCredit || '')}</figcaption></figure>` : ''}
   </div>
 </div></section>
 
@@ -878,15 +930,29 @@ async function main() {
     await mkdir(out, { recursive: true });
     const coverQuelle = path.join(contentDir, b.slug, b.cover || 'cover.jpg');
     const mitCover = await exists(coverQuelle);
+    let cover = null;
     if (mitCover) {
       await copyFile(coverQuelle, path.join(out, 'cover.jpg'));
-      await vorschaubild(b, coverQuelle, path.join(out, 'og.png'));
+      await vorschaubild(b, coverQuelle, path.join(out, 'og.jpg'));
+      // Kleinere Fassungen für srcset, nur unterhalb der eigenen Breite (nie vergrößern); die Datei selbst ist die größte.
+      // Eine Fassung, die nicht weniger Bytes hat als die Datei selbst, entfällt (GFK: 1050 px wären 193 KB, die Datei 1062 px hat 157 KB).
+      const { width: cw, height: ch } = await sharp(coverQuelle).metadata();
+      const cBytes = (await stat(coverQuelle)).size;
+      const fassungen = [];
+      for (const w of COVER_BREITEN.filter((x) => x < cw)) {
+        const f = await sharp(coverQuelle).resize({ width: w, withoutEnlargement: true }).jpeg({ quality: 82 }).toBuffer();
+        if (f.length >= cBytes) continue;
+        await writeFile(path.join(out, `cover-${w}.jpg`), f);
+        fassungen.push(`cover-${w}.jpg ${w}w`);
+      }
+      fassungen.push(`cover.jpg ${cw}w`);
+      cover = { w: cw, h: ch, srcset: fassungen.join(', ') };
       // Kleine Fassung für die Übersicht (480 px breit), damit die Seite schnell lädt
       const klein = await sharp(coverQuelle).resize({ width: 480, withoutEnlargement: true }).jpeg({ quality: 82 }).toBuffer({ resolveWithObject: true });
       await writeFile(path.join(out, 'cover-klein.jpg'), klein.data);
       covers[b.slug] = { w: klein.info.width, h: klein.info.height };
     }
-    await writeFile(path.join(out, 'index.html'), seite(b, mitCover, neu), 'utf8');
+    await writeFile(path.join(out, 'index.html'), seite(b, cover, neu), 'utf8');
     erzeugt++;
     console.log(`Buchseite: /buch/${b.slug}/${mitCover ? ' (mit Cover)' : ' (ohne Cover)'}${b.draft ? ' [ENTWURF]' : ''}`);
   }

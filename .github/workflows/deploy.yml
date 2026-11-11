@@ -27,6 +27,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Volle Historie: scripts/generate-sitemap.mjs liest lastmod je Buch aus git log und bricht in einem flachen Klon ab.
+          fetch-depth: 0
       - name: Set up Node
         uses: actions/setup-node@v4
         with:

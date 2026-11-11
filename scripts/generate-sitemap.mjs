@@ -1,6 +1,9 @@
 // scripts/generate-sitemap.mjs
 // Generiert sitemap.xml für plinyoo.com
+// Läuft nach scripts/buchseiten.mjs (siehe package.json) und gleicht die Sitemap mit dem ab, was dort gebaut wurde.
+// Jeder Fehler beendet den Bau mit Ausgang 1: Eine Sitemap ohne Buchseiten darf nicht still ausgeliefert werden.
 import { readdir, readFile, writeFile } from 'node:fs/promises';
+import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -9,39 +12,59 @@ const contentDir = path.join(root, 'content', 'buecher');
 const distDir = path.join(root, 'dist');
 const SITE = 'https://www.plinyoo.com';
 
+// lastmod einer Buchseite = Tag des letzten Commits, der ihre Buchdatei oder ihren Ordner (Cover) geändert hat.
+// Nicht das Baudatum: ein lastmod, das bei jedem Bau "heute" ist, werten Suchmaschinen als unzuverlässig.
+// Ein flacher Klon (actions/checkout ohne fetch-depth: 0) kennt nur den letzten Commit — jedes Buch bekäme dessen Tag.
+function gitAus(args) {
+  return execFileSync('git', args, { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+}
+if (gitAus(['rev-parse', '--is-shallow-repository']) !== 'false') {
+  throw new Error('Flacher Git-Klon: lastmod der Buchseiten wäre falsch. Im Workflow actions/checkout mit fetch-depth: 0 auschecken.');
+}
+function letzteAenderung(slug) {
+  const tag = gitAus(['log', '-1', '--format=%cs', '--', `content/buecher/${slug}.json`, `content/buecher/${slug}/`]);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(tag)) throw new Error(`lastmod: Buch "${slug}" hat keinen Commit (git log: "${tag}"). Erst committen, dann bauen.`);
+  return tag;
+}
+
 async function generateSitemap() {
+  // Nur echte Adressen. Die App-Seiten hinter "#/" (Zugang, Impressum …) sind für Suchmaschinen alle dieselbe Adresse "/".
   const urls = [
     { loc: SITE, changefreq: 'weekly', priority: '1.0' },
-    { loc: `${SITE}/#/zugang`, changefreq: 'monthly', priority: '0.8' },
-    { loc: `${SITE}/#/mitmachen`, changefreq: 'monthly', priority: '0.7' },
-    { loc: `${SITE}/#/investieren`, changefreq: 'monthly', priority: '0.6' },
-    { loc: `${SITE}/#/impressum`, changefreq: 'yearly', priority: '0.3' },
-    { loc: `${SITE}/#/datenschutz`, changefreq: 'yearly', priority: '0.3' },
-    { loc: `${SITE}/#/urheberrecht`, changefreq: 'yearly', priority: '0.3' },
-    { loc: `${SITE}/#/kontakt`, changefreq: 'monthly', priority: '0.5' },
   ];
 
-  // Übersicht aller Bücher (erzeugt scripts/buchseiten.mjs)
-  urls.push({ loc: `${SITE}/buch/`, changefreq: 'weekly', priority: '0.8', lastmod: new Date().toISOString().split('T')[0] });
+  // Buchseiten aus content/buecher/ — dieselbe Entwurfsregel wie buchseiten.mjs (draft: true wird nicht veröffentlicht).
+  const buecher = [];
+  for (const file of (await readdir(contentDir)).filter((f) => f.endsWith('.json'))) {
+    const buch = JSON.parse(await readFile(path.join(contentDir, file), 'utf-8'));
+    if (!buch.draft) buecher.push({ slug: buch.slug, lastmod: letzteAenderung(buch.slug) });
+  }
+  buecher.sort((a, b) => a.slug.localeCompare(b.slug));
 
-  // Buchseiten aus content/buecher/ lesen
-  try {
-    const files = await readdir(contentDir);
-    for (const file of files) {
-      if (!file.endsWith('.json')) continue;
-      const content = await readFile(path.join(contentDir, file), 'utf-8');
-      const buch = JSON.parse(content);
-      if (!buch.draft) {
-        urls.push({
-          loc: `${SITE}/buch/${buch.slug}/`,
-          changefreq: 'weekly',
-          priority: '0.9',
-          lastmod: new Date().toISOString().split('T')[0],
-        });
-      }
+  // Übersicht aller Bücher (erzeugt scripts/buchseiten.mjs): zuletzt geändert, wenn das jüngste Buch geändert wurde.
+  if (buecher.length) {
+    urls.push({ loc: `${SITE}/buch/`, changefreq: 'weekly', priority: '0.8', lastmod: buecher.map((b) => b.lastmod).sort().at(-1) });
+  }
+  for (const b of buecher) {
+    urls.push({ loc: `${SITE}/buch/${b.slug}/`, changefreq: 'weekly', priority: '0.9', lastmod: b.lastmod });
+  }
+
+  // Abgleich mit dem Bau: jede indexierbare Buchseite in dist/buch/ steht in der Sitemap, und jede Buch-URL der
+  // Sitemap hat ihre Seite in dist/buch/. Seiten mit noindex (Entwurfsbau) gehören nicht hinein.
+  const gebaut = [];
+  if (buecher.length) {
+    for (const e of await readdir(path.join(distDir, 'buch'), { withFileTypes: true })) {
+      if (!e.isDirectory()) continue;
+      const html = await readFile(path.join(distDir, 'buch', e.name, 'index.html'), 'utf-8').catch(() => null);
+      if (html === null) continue;
+      if (!/<meta name="robots" content="noindex/.test(html)) gebaut.push(e.name);
     }
-  } catch (e) {
-    console.warn('Buchseiten konnten nicht gelesen werden:', e.message);
+  }
+  const inSitemap = buecher.map((b) => b.slug);
+  const fehltImBau = inSitemap.filter((s) => !gebaut.includes(s));
+  const fehltInSitemap = gebaut.filter((s) => !inSitemap.includes(s));
+  if (fehltImBau.length || fehltInSitemap.length) {
+    throw new Error(`Sitemap und Buchseiten passen nicht zusammen. Ohne Seite in dist/buch/: [${fehltImBau.join(', ')}]. Gebaut, aber nicht in der Sitemap: [${fehltInSitemap.join(', ')}].`);
   }
 
   // Statische Unterseiten (content/seiten/<seite>/), je Sprache eine Adresse; Entwürfe nicht
@@ -71,7 +94,7 @@ ${urls.map(u => `  <url>
 </urlset>`;
 
   await writeFile(path.join(distDir, 'sitemap.xml'), xml, 'utf-8');
-  console.log('✓ sitemap.xml erzeugt');
+  console.log(`✓ sitemap.xml erzeugt (${buecher.length} Buchseiten, abgeglichen mit dist/buch/)`);
 }
 
-generateSitemap().catch(console.error);
+generateSitemap().catch((e) => { console.error(e); process.exit(1); });
