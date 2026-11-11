@@ -341,28 +341,152 @@ function beitragFalte(bt, buchTitel, buchAutor, leitfrage) {
   </section>`;
 }
 
-// Text der Kachel auf der Startseite und im „Neu“-Kasten: "<n> Karten <kachelText>". Die Zahl kommt aus den Karten,
+// Text der Kachel auf der Startseite und auf /buch/: "<n> Karten <kachelText>". Die Zahl kommt aus den Karten,
 // damit sie nicht veraltet. Fehlt kachelText, steht die Einordnung des Buchs.
 function kachelBeschreibung(b) {
   const n = (b.kartenvoll ?? []).length;
   return b.kachelText ? `${n} Karten ${b.kachelText}` : (b.einordnung || `${n} Karten`);
 }
 
-// Neu-Kasten: Auf jeder Buchseite außer der des neuesten Buchs. Ersetzt den Handtext "naechsteWoche", der veraltete.
-function neuKasten(b, neu) {
-  if (neu && neu.slug !== b.slug) {
-    return `<aside class="neu-kasten" aria-labelledby="neu-h" style="margin-top:32px;padding:18px 20px;border:1px solid #d6e4e2;border-left:4px solid #e8a838;border-radius:8px;background:#fff">
-    <p style="margin:0 0 4px;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#b9791a" id="neu-h">Neu auf plinyoo</p>
-    <p style="margin:0 0 4px;font-weight:700"><a href="/buch/${esc(neu.slug)}/" data-neu="${esc(neu.slug)}">${esc(neu.kachelTitel || neu.titel)}</a></p>
-    <p style="margin:0 0 12px">${esc(kachelBeschreibung(neu))}</p>
-    <p style="margin:0"><a class="btn" data-neu="${esc(neu.slug)}" href="/buch/${esc(neu.slug)}/">Zur Buchseite</a></p>
-  </aside>`;
-  }
+// Handtext "naechsteWoche": nur auf der Seite des neuesten Buchs (wie bisher; auf allen anderen stand dort der
+// Neu-Kasten, der seit #505 im Abschnitt "Weiter in anderen Büchern" aufgeht, siehe weiterAuswahl()).
+function ausblick(b, neu) {
+  if (neu && neu.slug !== b.slug) return '';
   return b.naechsteWoche ? `<h2 style="margin-top:32px">Ausblick</h2><p>${esc(b.naechsteWoche)}</p>` : '';
 }
 
+// Ziel einer Brücke: "/buch/<slug>/" eines Buchs, das es gibt. Alles andere wäre ein toter Link und bricht den Bau
+// (#505 Q2-6). Ein Buch, das es nur als Entwurf gibt, ist kein Fehler: die Brücke wird dann übergangen.
+function brueckenZiel(b, br, alleSlugs) {
+  const m = /^\/buch\/([a-z0-9-]+)\/$/.exec(String(br.url ?? ''));
+  if (!m) throw new Error(`${b.slug}.json: Brücke „${br.titel}“ hat keine URL der Form /buch/<slug>/: ${br.url}`);
+  if (!alleSlugs.has(m[1])) throw new Error(`${b.slug}.json: Brücke „${br.titel}“ zeigt auf ein Buch, das es nicht gibt: ${br.url}`);
+  return m[1];
+}
+
+// Abschnitt "Weiter in anderen Büchern" (#505 B7, Entwurf Q2-1): 3–4 Bücher als echte Links, aus `sichtbar`
+// (Reihenfolge wie /buch/), ohne das eigene Buch, ohne Doppelte, in dieser Folge:
+// 1. das neueste Buch ("Neu"), 2. bis zu zwei Bücher aus den Brücken (mehr Brücken zuerst, sonst Reihenfolge wie /buch/),
+// 3. immer das nächstältere Buch (zyklisch), damit jedes Buch einen eingehenden Link hat, 4. auffüllen auf mindestens 3.
+// Liefert [{ buch, art: 'neu' | 'bruecke' | 'reihe', gruende: [Kartennamen] }]; bei weniger als zwei sichtbaren Büchern [].
+function weiterAuswahl(b, sichtbar, alleSlugs) {
+  const slugs = sichtbar.map((x) => x.slug);
+  const zaehl = new Map();
+  for (const br of b.bruecken ?? []) {
+    const ziel = brueckenZiel(b, br, alleSlugs);
+    if (ziel === b.slug || !slugs.includes(ziel)) continue;
+    if (!zaehl.has(ziel)) zaehl.set(ziel, []);
+    zaehl.get(ziel).push(String(br.titel).replace(/^[^:]+:\s*/, ''));
+  }
+  const i = slugs.indexOf(b.slug);
+  if (i < 0 || slugs.length < 2) return [];
+  const brueck = [...zaehl.keys()].sort((x, y) => zaehl.get(y).length - zaehl.get(x).length || slugs.indexOf(x) - slugs.indexOf(y));
+  const ring = slugs.slice(i + 1).concat(slugs.slice(0, i));
+  const wahl = [];
+  const nimm = (s, art) => { if (s !== b.slug && !wahl.some((w) => w.slug === s)) wahl.push({ slug: s, art }); };
+  if (slugs[0] !== b.slug) nimm(slugs[0], 'neu');
+  for (const s of brueck.slice(0, 2)) nimm(s, 'bruecke');
+  nimm(ring[0], 'reihe');
+  for (const s of brueck.slice(2).concat(ring.slice(1))) {
+    if (wahl.length >= 3) break;
+    nimm(s, zaehl.has(s) ? 'bruecke' : 'reihe');
+  }
+  return wahl.slice(0, 4).map(({ slug, art }) => ({ buch: sichtbar[slugs.indexOf(slug)], art, gruende: [...new Set(zaehl.get(slug) ?? [])].slice(0, 2) }));
+}
+
+// Wortlaut T1–T4, Sprecher 11.11.2026 (#505, sprecher-freigaben.md Z. 11209). Grundzeile: mit Brücke die Kartennamen
+// aus den Daten (höchstens zwei), sonst die Zahl der Lernkarten aus den Karten. Ein Buch ohne Karten bekäme "0 Lernkarten":
+// das wäre ein Fehler, der wie eine Auskunft aussieht, darum bricht der Bau.
+function weiterAbschnitt(b, sichtbar, alleSlugs, covers) {
+  const wahl = weiterAuswahl(b, sichtbar, alleSlugs);
+  if (!wahl.length) return '';
+  // Ab 720 px stehen die Karten nebeneinander; das Etikett „Neu“ schöbe den Titel seiner Karte tiefer als die anderen
+  // (Entwurf A5: Titel einer Reihe auf derselben Höhe). Die anderen Karten bekommen deshalb einen leeren, unsichtbaren
+  // Platzhalter derselben Form; unter 720 px ist er weg. Kein Text im HTML: „Neu“ steht nur auf einer Karte (W3).
+  // Titel „X — Y“: geschütztes Leerzeichen vor dem Gedankenstrich, sonst steht er bei 1440 allein auf einer Zeile.
+  const mitNeu = wahl.some((w) => w.art === 'neu');
+  const karten = wahl.map(({ buch: x, art, gruende }) => {
+    const c = covers[x.slug];
+    const bild = c
+      ? `<span class="mc"><img src="/buch/${esc(x.slug)}/cover-klein.jpg" width="${c.w}" height="${c.h}" alt="" loading="lazy"></span>`
+      : `<span class="mc"><span class="ohne" aria-hidden="true">${esc(x.symbol || '📚')}</span></span>`;
+    let grund;
+    if (gruende.length) grund = `Verbunden über: ${gruende.map((g) => `„${g}“`).join(', ')}`;
+    else {
+      const n = (x.kartenvoll ?? []).length;
+      if (n === 0) throw new Error(`${b.slug}: Abschnitt „Weiter in anderen Büchern“ nennt ${x.slug}, das Buch hat keine Lernkarten`);
+      grund = `${n} Lernkarten`;
+    }
+    return `<li><a class="mehr-karte" href="/buch/${esc(x.slug)}/" data-weiter="${esc(x.slug)}" data-art="${art}">${bild}<span class="mt">${art === 'neu' ? '<span class="mn">Neu</span>' : mitNeu ? '<span class="mn mn-platz" aria-hidden="true"></span>' : ''}<span class="mk">${esc(x.kachelTitel || x.titel).replace(/ — /g, ' — ')}</span><span class="ma">${esc(x.autor)}</span><span class="mg">${esc(grund)}</span></span></a></li>`;
+  });
+  return `<section class="sek" id="weiter" aria-labelledby="weiter-h"><div class="wrap">
+  <h2 id="weiter-h">Weiter in anderen Büchern</h2>
+  <ul class="mehr-liste">
+  ${karten.join('\n  ')}
+  </ul>
+</div></section>`;
+}
+
+// Zeile "Alle Bücher" unter der Fußzeile der Startseite (#505 B7, Entwurf S2, Wortlaut T5). Die Startseite ist eine
+// React-Seite mit leerem #root; diese Zeile steht deshalb beim Bau im HTML, damit Roboter ohne JavaScript /buch/ finden.
+// Der Platzhalter muss genau einmal da sein, sonst fehlt die Zeile still oder steht doppelt: dann bricht der Bau.
+const BUECHER_FUSS = '<!--BUECHER-FUSS-->';
+async function buecherFuss(sichtbar) {
+  const links = sichtbar.slice(0, 3).map((x) => `<a href="/buch/${esc(x.slug)}/">${esc((x.kachelTitel || x.titel).split(' — ')[0])}</a>`).join('');
+  const zeile = sichtbar.length ? `<nav class="buecher-fuss" lang="de" aria-label="Bücher" style="background:#1C2A33;color:rgba(255,255,255,.7);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
+<style>.buecher-fuss .bf{max-width:72rem;margin:0 auto;padding:0 24px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:0 18px}.buecher-fuss a{display:inline-flex;align-items:center;min-height:44px;color:rgba(255,255,255,.7);text-decoration:none}.buecher-fuss a:hover{color:#fff}.buecher-fuss .bt{color:#fff;font-weight:600}</style>
+<div class="bf"><a class="bt" href="/buch/">Alle Bücher</a>${links}</div></nav>` : '';
+  for (const datei of ['index.html', '404.html']) {
+    const p = path.join(distDir, datei);
+    const html = await readFile(p, 'utf8');
+    const anzahl = html.split(BUECHER_FUSS).length - 1;
+    if (anzahl !== 1) throw new Error(`dist/${datei}: Platzhalter ${BUECHER_FUSS} steht ${anzahl}-mal da, erwartet genau einmal (index.html, nach <div id="root">)`);
+    await writeFile(p, html.replace(BUECHER_FUSS, zeile), 'utf8');
+  }
+}
+
+// Vorschaubild für /buch/ (#505 B10, Entwurf O3, Wortlaut T6–T9): 1200 × 630, links Titel und Zahl, rechts ein Fächer
+// aus den Covern der vier neuesten Bücher (kleine Fassung, 480 px breit, hier 247 px: nie vergrößert), das neueste vorn.
+// Unter zwei Büchern mit Cover entfällt das Bild (O3-4): dann das allgemeine /og/buchseite.png.
+// Titel 67 statt 68 px: bei 68 misst „Lernkarten zu“ 441 px, die Grenze ist 440. Schatten nur nach unten versetzt,
+// damit rechts 70 px frei bleiben (mit 6 px seitlich waren es 65).
+const OG_UEBERSICHT_GRENZE = 300 * 1024;
+async function uebersichtBild(sichtbar, covers, ziel) {
+  const mit = sichtbar.filter((x) => covers[x.slug]).slice(0, 4);
+  if (mit.length < 2) return null;
+  const W = 1200, H = 630, CH = 380;
+  const font = `font-family="Helvetica Neue, Helvetica, Arial, Liberation Sans, DejaVu Sans, sans-serif"`;
+  const lagen = mit.map((x, k) => ({ x, left: 560 + k * 105, top: 125 + (k % 2) * 20, w: Math.round(CH * covers[x.slug].w / covers[x.slug].h) }));
+  const rechts = Math.max(...lagen.map((l) => l.left + l.w));
+  if (rechts > W - 70) throw new Error(`/buch/og.jpg: Cover reichen bis x ${rechts}, rechter Rand muss 70 px frei bleiben`);
+  const schatten = lagen.map((l) => `<rect x="${l.left}" y="${l.top + 10}" width="${l.w}" height="${CH}" rx="6" fill="#000" opacity="0.5"/>`).join('');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
+  <rect width="100%" height="100%" fill="#0F1419"/>
+  <g ${font}>
+  <text x="80" y="214" font-size="67" font-weight="700" fill="#F4F5F7">Lernkarten zu</text>
+  <text x="80" y="288" font-size="67" font-weight="700" fill="#F4F5F7">Büchern</text>
+  <text x="80" y="352" font-size="34" fill="#BDE3E6">${sichtbar.length} Bücher zum Durchspielen</text>
+  <text x="80" y="${H - 70}" font-size="24" font-weight="600" fill="#E3A72F">Wissensgraphen mit Lernkarten <tspan fill="#FFFFFF">· made by plinyoo</tspan></text></g>
+  ${schatten}
+</svg>`;
+  // Hinten zuerst zeichnen: das neueste Cover liegt oben.
+  const ebenen = [];
+  for (const l of [...lagen].reverse()) {
+    const input = await sharp(path.join(distDir, 'buch', l.x.slug, 'cover-klein.jpg')).resize(l.w, CH, { fit: 'cover' }).toBuffer();
+    ebenen.push({ input, left: l.left, top: l.top });
+  }
+  const daten = await sharp(Buffer.from(svg)).composite(ebenen).flatten({ background: '#0F1419' }).jpeg({ quality: 85, mozjpeg: true }).toBuffer();
+  if (daten.length > OG_UEBERSICHT_GRENZE) throw new Error(`/buch/og.jpg: ${daten.length} Bytes, Grenze ${OG_UEBERSICHT_GRENZE}`);
+  await writeFile(ziel, daten);
+  const zahl = ZAHLWORT[mit.length];
+  return { url: `${SITE}/buch/og.jpg`, w: W, h: H, alt: `Die Cover der ${zahl} neuesten Bücher bei plinyoo neben dem Titel Lernkarten zu Büchern` };
+}
+
 // Übersichtsseite /buch/: alle veröffentlichten Bücher, das neueste zuerst, mit Cover (kleine Fassung, siehe main).
-function uebersicht(buecher, covers) {
+// og: Vorschaubild aus uebersichtBild() oder null (dann das allgemeine Bild, O3-4).
+function uebersicht(buecher, covers, og) {
+  const desc = `Aus jedem Buch wird ein Wissensgraph: Lernkarten, Verbindungen und Fragen zum Durchspielen. ${buecher.length} Bücher, das neueste zuerst.`;
+  const bild = og || { url: `${SITE}/og/buchseite.png`, w: 1200, h: 630, alt: 'plinyoo' };
   const cover = (b, klasse) => {
     const c = covers[b.slug];
     if (!c) return `<div class="${klasse} ohne" aria-hidden="true"><span>${esc(b.symbol || '📚')}</span></div>`;
@@ -395,11 +519,20 @@ function uebersicht(buecher, covers) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lernkarten zu Büchern: Wissensgraphen zum Durchspielen | plinyoo</title>
-<meta name="description" content="Aus jedem Buch wird ein Wissensgraph: Lernkarten, Verbindungen und Fragen zum Durchspielen. ${buecher.length} Bücher, das neueste zuerst.">
+<meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${SITE}/buch/">
+<meta property="og:site_name" content="plinyoo">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
 <meta property="og:title" content="Lernkarten zu Büchern: Wissensgraphen zum Durchspielen | plinyoo">
+<meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${SITE}/buch/">
+<meta property="og:image" content="${bild.url}">
+<meta property="og:image:width" content="${bild.w}">
+<meta property="og:image:height" content="${bild.h}">
+<meta property="og:image:alt" content="${esc(bild.alt)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="${esc(bild.alt)}">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://plausible.io 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://plausible.io; base-uri 'self'; form-action 'self'">
 ${CSS}
 <style>
@@ -612,6 +745,20 @@ a.sozial{white-space:nowrap}
 .beitrag-fold .lesetext{max-width:none}
 .beitrag-fold .lesetext p{font-size:1em;color:var(--ink);line-height:1.65}
 .beitrag-fold .lesetext p.status{font-size:.8em;color:var(--muted);margin-top:6px}
+.mehr-liste{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:12px}
+.mehr-karte{display:flex;gap:14px;align-items:flex-start;height:100%;min-height:44px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);text-decoration:none}
+.mehr-karte:hover{background:var(--mist)}
+.mehr-karte:focus-visible{outline:3px solid var(--teal-d);outline-offset:2px}
+.mehr-karte .mc{flex:none;display:flex;align-items:flex-end;justify-content:center;width:64px}
+.mehr-karte .mc img,.mehr-karte .ohne{display:block;width:64px;height:auto;border:1px solid var(--line);border-radius:4px;background:#fff}
+.mehr-karte .ohne{display:flex;align-items:center;justify-content:center;aspect-ratio:2/3;background:var(--mist);font-size:28px}
+.mehr-karte .mt{display:block;min-width:0}
+.mehr-karte .mk{display:block;font-weight:700;color:var(--graphite);line-height:1.3;text-decoration:underline;text-underline-offset:3px}
+.mehr-karte .ma{display:block;margin-top:2px;font-size:15px;color:var(--muted)}
+.mehr-karte .mg{display:block;margin-top:8px;font-size:14px;color:var(--muted);line-height:1.45}
+.mehr-karte .mn{display:inline-block;margin:0 0 6px;padding:2px 10px;border-radius:999px;background:#E8A838;color:#1C2A33;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.mehr-karte .mn-platz{display:none}
+@media(min-width:720px){.mehr-karte .mn-platz{display:inline-block;visibility:hidden}.mehr-karte .mn-platz::before{content:"Neu"}.mehr-liste{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.mehr-karte{flex-direction:column}.mehr-karte .mc{width:96px;height:144px}.mehr-karte .mc img,.mehr-karte .ohne{width:auto;max-width:96px;max-height:144px;object-fit:contain}.mehr-karte .ohne{width:96px}}
 footer{padding:22px 0 30px;font-size:14px;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:6px 14px}
 footer a{color:var(--muted)}
@@ -656,14 +803,15 @@ function suchBeschreibung(b) {
   return text;
 }
 
-// cover: null (ohne Cover) oder { w, h, srcset } aus main().
-function seite(b, cover, neu) {
+// cover: null (ohne Cover) oder { w, h, srcset } aus main(); sichtbar/alleSlugs/covers für den Abschnitt „Weiter in anderen Büchern“.
+function seite(b, cover, neu, sichtbar, alleSlugs, covers) {
   const mitCover = !!cover;
   const url = `${SITE}/buch/${b.slug}/`;
   const titelVoll = `${b.titel} — ${b.autor}`;
   // Vorschaubild beim Teilen: je Buch 1200 × 630 (vorschaubild()), sonst das allgemeine Bild, ebenfalls 1200 × 630.
   const ogBild = mitCover ? `${url}og.jpg` : `${SITE}/og/buchseite.png`;
-  const ogAlt = mitCover ? `Buchvorstellung mit Lernkarten: ${b.titel} von ${b.autor}` : 'plinyoo';
+  // Wortlaut Sprecher 11.11.2026 (#505 B5, GEÄNDERT): Titel und Autor aus den Buchdaten, nie von Hand.
+  const ogAlt = mitCover ? `Lernkarten zu „${b.titel}“ von ${b.autor}, mit Buchcover` : 'plinyoo';
   // Wortlaut T-A, Sprecher 11.11.2026 (#505 Z1): für alle Bücher dieselbe Form, nie je Buch gemischt.
   const titel = `${b.titel} – ${b.autor} | plinyoo`;
   const desc = suchBeschreibung(b);
@@ -722,7 +870,7 @@ ${b.draft ? '<div class="entwurf">ENTWURF — nicht veröffentlicht, Kartentitel
   <div class="grid${mitCover ? ' mit-cover' : ''}">
     <div>
       <h1>${esc(b.leitfrage)}</h1>
-      <p class="meta"><strong>${esc(b.autor)}: ${esc(b.titel)}</strong> — ${esc(b.untertitel)}<br>
+      <p class="meta">${b.untertitel ? `${esc(b.untertitel)}<br>` : ''}
       ${b.uebersetzer ? `Aus dem Englischen von ${esc(b.uebersetzer)} · ` : ''}${esc(b.verlag)} · ${esc(b.erschienen)}${b.beitrag ? '' : ''}</p>
       ${b.einordnung ? `<p class="lead">${esc(b.einordnung)}</p>` : ''}
       ${beitragFalte(b.beitrag, b.titel, b.autor, b.leitfrage)}
@@ -776,8 +924,10 @@ ${b.platzhalter && !b.amazonUrl ? '' : `<section class="sek alt" aria-labelledby
     ${b.leseprobeUrl ? `<p><a data-kauf="leseprobe" href="${esc(b.leseprobeUrl)}" rel="noopener">Leseprobe beim Verlag (PDF)</a></p>` : ''}
     <p class="hinweis">Der Amazon-Link ist ein Partnerlink (Werbung). Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
   </div>
-  ${neuKasten(b, neu)}
+  ${ausblick(b, neu)}
 </div></section>`}
+
+${weiterAbschnitt(b, sichtbar, alleSlugs, covers)}
 
 <section class="sek" aria-labelledby="faq-h"><div class="wrap">
   <h2 id="faq-h">Häufige Fragen</h2>
@@ -836,6 +986,9 @@ if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
   // Weitere Messpunkte (ohne Personenbezug): Beitrag gesehen (Hälfte des Textes im Bild), Kauf-Link geklickt
   var bf=document.querySelector('.beitrag-fold');
   if(bf&&'IntersectionObserver' in window){var bfIO=new IntersectionObserver(function(es){if(es[0].isIntersecting){bfIO.disconnect();ereignis('Beitrag gesehen',{});}},{threshold:0.5});bfIO.observe(bf);}
+  document.querySelectorAll('[data-weiter]').forEach(function(a){
+    a.addEventListener('click',function(){ereignis('Weiter geklickt',{ziel:a.getAttribute('data-weiter'),art:a.getAttribute('data-art')});});
+  });
   document.querySelectorAll('[data-kauf]').forEach(function(a){
     a.addEventListener('click',function(){ereignis('Kauf-Link geklickt',{ziel:a.getAttribute('data-kauf')});});
   });
@@ -956,8 +1109,13 @@ async function main() {
   // Veröffentlichte Bücher, das neueste (höchste nr) zuerst. Ohne nr zählt die Dateireihenfolge.
   const sichtbar = alle.filter((b) => !b.draft || mitEntwuerfen).sort((x, y) => (y.nr ?? 0) - (x.nr ?? 0));
   const neu = sichtbar[0];
+  // Jede Brücke prüfen, auch die von Entwürfen: ein Ziel außerhalb /buch/<slug>/ oder ohne Buch bricht den Bau (#505 Q2-6).
+  const alleSlugs = new Set(alle.map((b) => b.slug));
+  for (const b of alle) for (const br of b.bruecken ?? []) brueckenZiel(b, br, alleSlugs);
   let erzeugt = 0, uebersprungen = 0;
   const covers = {};
+  // Erst Bilder aller Bücher, dann die Seiten: der Abschnitt „Weiter in anderen Büchern“ braucht die Maße fremder Cover.
+  const seiten = [];
   for (const b of alle) {
     if (b.draft && !mitEntwuerfen) { uebersprungen++; continue; }
     const out = path.join(distDir, 'buch', b.slug);
@@ -986,12 +1144,18 @@ async function main() {
       await writeFile(path.join(out, 'cover-klein.jpg'), klein.data);
       covers[b.slug] = { w: klein.info.width, h: klein.info.height };
     }
-    await writeFile(path.join(out, 'index.html'), seite(b, cover, neu), 'utf8');
+    seiten.push({ b, out, cover, mitCover });
+  }
+  for (const { b, out, cover, mitCover } of seiten) {
+    await writeFile(path.join(out, 'index.html'), seite(b, cover, neu, sichtbar, alleSlugs, covers), 'utf8');
     erzeugt++;
     console.log(`Buchseite: /buch/${b.slug}/${mitCover ? ' (mit Cover)' : ' (ohne Cover)'}${b.draft ? ' [ENTWURF]' : ''}`);
   }
+  await buecherFuss(sichtbar);
   if (sichtbar.length) {
-    await writeFile(path.join(distDir, 'buch', 'index.html'), uebersicht(sichtbar, covers), 'utf8');
+    const og = await uebersichtBild(sichtbar, covers, path.join(distDir, 'buch', 'og.jpg'));
+    await writeFile(path.join(distDir, 'buch', 'index.html'), uebersicht(sichtbar, covers, og), 'utf8');
+    console.log(`Vorschaubild /buch/: ${og ? `og.jpg (${og.alt})` : 'kein eigenes, /og/buchseite.png (unter zwei Büchern mit Cover)'}`);
     // Liste für die Kacheln der Startseite (die App lädt sie zur Laufzeit; so veraltet nichts von Hand)
     const liste = sichtbar.map((b, i) => ({ nr: b.nr ?? null, slug: b.slug, titel: b.kachelTitel || b.titel, text: kachelBeschreibung(b), symbol: b.symbol || '📚', neu: i === 0 }));
     await writeFile(path.join(distDir, 'buecher.json'), JSON.stringify({ buecher: liste }), 'utf8');
