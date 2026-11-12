@@ -47,10 +47,12 @@
     padding:16px 8px 32px;
     min-height:100vh;
   }
-  .messstand{
-    color:#E8E4DE;font-size:13px;max-width:390px;margin:0 0 12px;text-align:center;
+  /* Eingebettet (Karussell der Startseite, iframe 390 x 844): der Rahmen füllt die Ansicht ganz,
+     sonst schneidet die untere Kante die Leiste ab (#515). */
+  @media (max-width:390px){
+    body{padding:0;background:var(--grund)}
+    .rahmen{border-radius:0;box-shadow:none}
   }
-  .messstand b{color:#fff}
 
   /* ---------- Der Rahmen: 390 x 844 ---------- */
   .rahmen{
@@ -197,14 +199,10 @@
 </head>
 <body>
 
-<p class="messstand">
-  Entwurf in Handygröße (<b>390 &times; 844</b>). Die Beispieldaten sind erfunden; die Rechnung darin ist echt.
-</p>
-
 <div class="rahmen">
   <header class="kopf">
     <h1 id="kopftitel">Wege und Lücken</h1>
-    <p id="kopfzeile">Beispieldaten — erfundener Bestand</p>
+    <p id="kopfzeile" hidden></p>
   </header>
   <main class="buehne" id="buehne"></main>
   <nav class="leiste" id="leiste"></nav>
@@ -754,7 +752,8 @@ function zeichnen(){
   kopftitel.textContent = { auswahl:'Wege und Lücken', ergebnis:'Wege und Lücken', zustaende:'Zustände' }[zustand.bildschirm];
   kopfzeile.textContent = zustand.bildschirm === 'zustaende'
     ? 'Jeder Randfall der Spezifikation, einmal angetippt'
-    : 'Beispieldaten — erfundener Bestand';
+    : '';
+  kopfzeile.hidden = !kopfzeile.textContent;
 
   if(zustand.bildschirm === 'auswahl')   buehne.innerHTML = auswahlBildschirm(erg);
   if(zustand.bildschirm === 'ergebnis')  buehne.innerHTML = ergebnisBildschirm(erg);
