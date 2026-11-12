@@ -47,10 +47,12 @@
     padding:16px 8px 32px;
     min-height:100vh;
   }
-  .messstand{
-    color:#E8E4DE;font-size:13px;max-width:390px;margin:0 0 12px;text-align:center;
+  /* Eingebettet (Karussell der Startseite, iframe 390 x 844): der Rahmen füllt die Ansicht ganz,
+     sonst schneidet die untere Kante die Leiste ab (#515). */
+  @media (max-width:390px){
+    body{padding:0;background:var(--grund)}
+    .rahmen{border-radius:0;box-shadow:none}
   }
-  .messstand b{color:#fff}
 
   /* ---------- Der Rahmen: 390 x 844 ---------- */
   .rahmen{
@@ -197,14 +199,9 @@
 </head>
 <body>
 
-<p class="messstand">
-  Entwurf in Handygröße (<b>390 &times; 844</b>). Die Beispieldaten sind erfunden; die Rechnung darin ist echt.
-</p>
-
 <div class="rahmen">
   <header class="kopf">
     <h1 id="kopftitel">Wege und Lücken</h1>
-    <p id="kopfzeile">Beispieldaten — erfundener Bestand</p>
   </header>
   <main class="buehne" id="buehne"></main>
   <nav class="leiste" id="leiste"></nav>
@@ -229,7 +226,6 @@ const SCHLAGWOERTER = [
   { id:'t-vokabeln',   name:'Vokabelliste Backen' },
   { id:'t-neu',        name:'Neu angelegt' },
   { id:'t-einzel',     name:'Brotgewürz' },
-  { id:'t-gross',      name:'Große Sammlung' },
 ];
 
 /* k(id, titel, x, y, tags) — x/y sind der hinterlegte Wert der Karte.
@@ -238,7 +234,7 @@ function k(id, titel, x, y, tags){ return { id, titel, wert: (x===null? null : [
 
 const S = 't-sauerteig', O = 't-ofen', W = 't-werkzeuge',
       F = 't-fuehrung', G = 't-grundlagen', V = 't-vokabeln',
-      N = 't-neu', E = 't-einzel', GR = 't-gross';
+      N = 't-neu', E = 't-einzel';
 
 const KARTEN = [
   // Sauerteig (liegt zugleich in „Grundlagen Brot")
@@ -342,16 +338,6 @@ const HERKUNFT = {
   bestaetigt: { wort:'in dieser Sitzung bestätigt',
                 satz:'Du hast diesen Schritt ausdrücklich bestätigt.' },
 };
-
-/* Die große Sammlung wird erzeugt, nicht hingeschrieben — sie dient nur dem
-   Randfall „sehr große Menge". 600 Karten, in Blöcken von 20 verknüpft. */
-(function grosseSammlungErzeugen(){
-  for(let i=0;i<600;i++){
-    const x = ((i*37)%100)/100, y = ((i*61)%100)/100;
-    KARTEN.push(k('x'+i, 'Beispielkarte '+String(i+1).padStart(3,'0'), x, y, [GR]));
-    if(i%20 !== 0) KANTEN.push(e('x'+(i-1), 'x'+i, 'verwandt'));
-  }
-})();
 
 /* Die Kantenarten, über die ein Weg laufen darf — namentlich, nie „alle". */
 const WEGARTEN = ['verwandt','voraussetzung'];
@@ -718,7 +704,7 @@ if(typeof module !== 'undefined') module.exports = {
    ======================================================================= */
 
 const zustand = {
-  bildschirm: 'auswahl',        // auswahl | ergebnis | zustaende
+  bildschirm: 'auswahl',        // auswahl | ergebnis
   tags: new Set(['t-sauerteig','t-ofen','t-werkzeuge']),
   fassung: 'ohne',              // ohne | mit
   gelegt: [],                   // in dieser Sitzung bestätigte Verknüpfungen
@@ -732,8 +718,6 @@ const zustand = {
 const buehne = document.getElementById('buehne');
 const leiste = document.getElementById('leiste');
 const blattOrt = document.getElementById('blatt');
-const kopftitel = document.getElementById('kopftitel');
-const kopfzeile = document.getElementById('kopfzeile');
 
 /* ---- kleine Helfer ---------------------------------------------------- */
 const roh = t => String(t).replace(/[&<>"]/g, z => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[z]));
@@ -751,21 +735,15 @@ const STUFENWORT = { nah:'nah', mittel:'mittel', fern:'fern' };
 /* ---- Zeichnen --------------------------------------------------------- */
 function zeichnen(){
   const erg = auswerten(zustand);
-  kopftitel.textContent = { auswahl:'Wege und Lücken', ergebnis:'Wege und Lücken', zustaende:'Zustände' }[zustand.bildschirm];
-  kopfzeile.textContent = zustand.bildschirm === 'zustaende'
-    ? 'Jeder Randfall der Spezifikation, einmal angetippt'
-    : 'Beispieldaten — erfundener Bestand';
 
   if(zustand.bildschirm === 'auswahl')   buehne.innerHTML = auswahlBildschirm(erg);
   if(zustand.bildschirm === 'ergebnis')  buehne.innerHTML = ergebnisBildschirm(erg);
-  if(zustand.bildschirm === 'zustaende') buehne.innerHTML = zustaendeBildschirm();
   buehne.scrollTop = zustand.scrollHalten ? buehne.scrollTop : 0;
   zustand.scrollHalten = false;
 
   leiste.innerHTML = [
     knopfLeiste('auswahl',  'Auswahl',  zustand.tags.size ? zustand.tags.size + ' gewählt' : 'nichts gewählt'),
     knopfLeiste('ergebnis', 'Ergebnis', erg.leer ? 'leer' : erg.karten + ' Karten'),
-    knopfLeiste('zustaende','Zustände', '10 Fälle'),
   ].join('');
 
   blattOrt.innerHTML = zustand.blatt ? blattZeichnen(zustand.blatt) : '';
@@ -1120,55 +1098,6 @@ function sitzungsZeile(){
     '</div>';
 }
 
-/* ---- Bildschirm 3: Zustände ------------------------------------------- */
-const ZUSTAENDE = [
-  { nr:'1a', titel:'Einzelne Karten ohne Rechenwert',
-    satz:'Die Auswertung läuft, die Zahl steht als eigene Zeile, das Ergebnis ist als unvollständig gekennzeichnet.',
-    tags:['t-sauerteig','t-ofen','t-werkzeuge'], fassung:'ohne' },
-  { nr:'1b', titel:'Keine Karte hat einen Rechenwert',
-    satz:'Der Teil über Verknüpfungen läuft vollständig. Der rechnende Teil sagt „nicht berechenbar" — nicht „keine Lücken".',
-    tags:['t-neu'], fassung:'ohne' },
-  { nr:'2', titel:'Keine gelegte Verknüpfung',
-    satz:'Ein gültiges Ergebnis: in dieser Auswahl ist noch nichts verknüpft. Kein Fehler, keine leere Liste.',
-    tags:['t-vokabeln'], fassung:'ohne' },
-  { nr:'3a', titel:'Genau eine Karte',
-    satz:'Keine Paare, keine Lücken, eine Gruppe — und ein Satz, der das sagt.',
-    tags:['t-einzel'], fassung:'ohne' },
-  { nr:'3b', titel:'Leere Auswahl',
-    satz:'Die Auswertung läuft nicht, und das ist kein Fehler.',
-    tags:[], fassung:'ohne' },
-  { nr:'4', titel:'Sehr große Menge — umgeschaltet',
-    satz:'600 Karten. Nicht abgeschnitten, sondern umgeschaltet — und die Ausgabe sagt, welcher Weg gelaufen ist.',
-    tags:['t-gross'], fassung:'ohne' },
-  { nr:'5', titel:'Zwei Karten sagen dasselbe',
-    satz:'Weder Weg noch Vorschlag: eine Meldung. Sonst würde der Autor zwei Karten verknüpfen, von denen eine überflüssig ist.',
-    tags:['t-sauerteig'], fassung:'ohne' },
-  { nr:'6', titel:'Die Zusammenstellung bewirkt nichts',
-    satz:'Keine neue Karte, keine neu sichtbare Verknüpfung — mit beiden Zahlen, schon an der Auswahl.',
-    tags:['t-grundlagen','t-sauerteig'], fassung:'ohne', ziel:'auswahl' },
-  { nr:'7', titel:'Ein beliebig gewählter Schritt',
-    satz:'Trägt seinen Namen, keinen Wert, und wird nie ohne ausdrückliche Handlung zu einer Verknüpfung.',
-    tags:['t-sauerteig','t-ofen','t-werkzeuge'], fassung:'mit' },
-  { nr:'∗', titel:'Alle sechs Befundarten auf einmal',
-    satz:'Verknüpfen, Karte schreiben, beliebig gewählt, Dublette, Widerspruch und „bewirkt nichts" — in einer Auswertung.',
-    tags:['t-grundlagen','t-sauerteig','t-fuehrung'], fassung:'mit' },
-];
-
-function zustaendeBildschirm(){
-  const teile = ['<div class="hinweis info"><b>Jeder Randfall ist ein eigener Zustand.</b>' +
-    'Keiner sieht aus wie ein Ergebnis, und keiner sieht aus wie ein Fehler. Antippen führt hin.</div>'];
-  teile.push('<div class="block">');
-  ZUSTAENDE.forEach((z, i) => {
-    teile.push('<button class="tagzeile" data-zustand="'+i+'" style="align-items:flex-start">' +
-      '<span class="haken" aria-hidden="true" style="border-radius:50%;font-size:12px;color:var(--leise);border-color:var(--kante)">'+roh(z.nr)+'</span>' +
-      '<span class="tagname"><span class="t">'+roh(z.titel)+'</span><span class="u">'+roh(z.satz)+'</span></span>' +
-      '</button>');
-  });
-  teile.push('</div>');
-  teile.push('<p class="fuss">Die Nummern folgen Abschnitt 5 der Spezifikation. ∗ ist kein Randfall, sondern eine Auswahl, in der alle sechs Befundarten zugleich auftreten.</p>');
-  return teile.join('');
-}
-
 /* ---- Das Blatt (Handgriffe, die außerhalb des Mockups weitergehen) ----- */
 function blattZeichnen(b){
   return '<div class="blattgrund" data-blattzu="1"><div class="blatt">' +
@@ -1183,7 +1112,7 @@ function blattZeichnen(b){
 
 /* ---- Bedienung --------------------------------------------------------- */
 document.addEventListener('click', ereignis => {
-  const ziel = ereignis.target.closest('[data-gehe],[data-tag],[data-fassung],[data-schalter],[data-gilt],[data-giltnicht],[data-handgriff],[data-zustand],[data-zuruecksetzen],[data-blattzu],[data-blatttat]');
+  const ziel = ereignis.target.closest('[data-gehe],[data-tag],[data-fassung],[data-schalter],[data-gilt],[data-giltnicht],[data-handgriff],[data-zuruecksetzen],[data-blattzu],[data-blatttat]');
   if(!ziel) return;
   // Ein Tipp neben eine Schaltfläche im Blatt schließt es nicht.
   if(ereignis.target.closest('.blatt') && !ziel.closest('.blatt')) return;
@@ -1223,14 +1152,6 @@ document.addEventListener('click', ereignis => {
   if(ziel.dataset.zuruecksetzen){
     zustand.gelegt = []; zustand.verworfen = []; zustand.gedreht = []; zustand.entfernt = [];
     zustand.scrollHalten = true; zeichnen(); return;
-  }
-
-  if(ziel.dataset.zustand !== undefined){
-    const z = ZUSTAENDE[Number(ziel.dataset.zustand)];
-    zustand.tags = new Set(z.tags);
-    zustand.fassung = z.fassung;
-    zustand.bildschirm = z.ziel || 'ergebnis';
-    zeichnen(); return;
   }
 
   if(ziel.dataset.handgriff){
