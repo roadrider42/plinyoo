@@ -5,7 +5,10 @@
 //   1. dist/ansichten/*.html — der Text, den die Seite zeigt oder per Skript setzt. Kommentare (HTML, CSS, JS) zählen
 //      nicht: die Datei erklärt dort ihre erfundenen Daten für Entwickler, kein Besucher sieht das.
 //   2. dist/locales/<sprache>/*.json — jeder Textwert in jeder Sprache (Schlüssel nicht).
-// Gesucht wird deutsch und englisch: Entwurf, Beispieldaten, erfundener Bestand, draft, sample data, mock/mockup.
+// Gesucht wird deutsch und englisch: Entwurf, Beispieldaten, erfundener Bestand, draft, sample data, mock/mockup,
+// dazu Verweise auf die Vorlage (Spezifikation, spec), Platzhalterkarten (Beispielkarte, sample card) und Musternummern
+// („Karte 001"). Eine Musternummer, die ein Skript erst zur Laufzeit bildet ('Karte ' + n.padStart(3,'0')), sieht diese
+// Prüfung nur am Wort davor.
 // Ausgang 1 bei jedem Fund und wenn keine Datei gefunden wird (nie stilles Bestehen).
 import fs from 'node:fs';
 import path from 'node:path';
@@ -21,6 +24,13 @@ const MUSTER = [
   /\bdrafts?\b/i,
   /\bsample[\s-]+data\b/i,
   /\bmock(?:-?ups?|s|ed)?\b/i,
+  // #515 Folie 5: Verweise auf die Vorlage und Platzhalter statt Inhalt.
+  /spezifikation/i,
+  /\bspec(?:s|ification)?\b/i,
+  /beispiel(?:karte|eintrag|titel|thema|schlagwort)/i,
+  /\b(?:sample|example|placeholder|dummy)\s+(?:card|item|entry|title)/i,
+  // Musternummer: ein Wort und eine Zahl mit führender Null („Karte 001", „Item 007").
+  /\b\p{L}+[\s_-]+0\d{2,}\b/iu,
 ];
 
 const funde = [];
