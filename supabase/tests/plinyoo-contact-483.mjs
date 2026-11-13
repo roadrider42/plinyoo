@@ -7,6 +7,7 @@
 //   PLINYOO_CONTACT_INDEX=<andere index.ts> node ...      (Gegenprobe ohne Fix)
 //   SPOONUP_WURZEL=<spoonup-Ordner> node ...              (Vorgabe: ../SpoonUp)
 //   SPOONUP_REF=<zweig> node ...                          (liest spoonup per git show statt aus dem Arbeitsbaum)
+//   KONTAKT_OHNE_SPOONUP=1 node ...                       (ohne G1, liest spoonup nicht -- so in der CI)
 //
 // Gefahren wird die AUSGELIEFERTE index.ts, kein Nachbau: esbuild buendelt
 // sie, ersetzt sind nur die Netz-Importe -- supabase-js (createClient gibt
@@ -52,13 +53,19 @@
 // K1-K6 und D1 schliessen zusaetzlich den Empfaenger (CONTACT_RECEIVER_EMAIL)
 // in Antwort UND Protokoll aus (alle Konsolenkanaele), D2 tat das schon.
 //
-// G1 vergleicht die beiden Grenzen hier nur von Hand und braucht den
-// spoonup-Stand, der die Konstante traegt (SPOONUP_WURZEL, SPOONUP_REF).
-// spoonup ist privat, die CI von plinyoo kann es nicht lesen. Deshalb faehrt
-// .github/workflows/pruefungen.yml diese Datei NICHT (spoonup #538, E-398).
-// Der Vergleich in der CI lebt in spoonup: pruefung:kontakt-grenze dort holt
-// diese index.ts von plinyoo main (oeffentlich) und haelt sie gegen
-// contact-fom-email.
+// G1 braucht den spoonup-Stand, der die Konstante traegt (SPOONUP_WURZEL,
+// SPOONUP_REF). spoonup ist privat, die CI von plinyoo kann es nicht lesen
+// (Heiko, E-398: kein Schluessel). Der Vergleich in der CI lebt deshalb in
+// spoonup: pruefung:kontakt-grenze-plinyoo dort holt diese index.ts von
+// plinyoo main (oeffentlich) und haelt sie gegen contact-fom-email.
+//
+// KONTAKT_OHNE_SPOONUP=1 (spoonup #538, A3): spoonup wird nicht gelesen, G1
+// steht als "NICHT GEMESSEN" da -- nie als gruen. Die erwartete Grenze fuer
+// K1 und K5 kommt dann aus dieser index.ts selbst; G0 haelt fest, dass sie
+// dort genau einmal steht. Alles andere laeuft unveraendert. So faehrt
+// .github/workflows/pruefungen.yml die Datei bei jedem PR. Ein anderer Wert
+// als 1 ist "nicht messbar", damit ein Tippfehler G1 nicht still abschaltet.
+// Ohne den Schalter ist alles wie vorher.
 //
 // Ohne Fix (plinyoo 876929b, bytegleich mit live): G1, G2, K1-K6, F1-F4, D1, D2 rot.
 // Ausgang: 0 gruen, 1 rot, 2 nicht messbar.
@@ -78,6 +85,13 @@ const SPOONUP_DATEI = 'supabase/functions/contact-fom-email/index.ts';
 
 const nichtMessbar = (warum) => { console.log(`NICHT MESSBAR: ${warum}`); process.exit(2); };
 
+const SCHALTER = process.env.KONTAKT_OHNE_SPOONUP;
+if (SCHALTER !== undefined && SCHALTER !== '' && SCHALTER !== '1') {
+  nichtMessbar(`KONTAKT_OHNE_SPOONUP=${JSON.stringify(SCHALTER)} -- nur 1 schaltet G1 ab`);
+}
+const OHNE_SPOONUP = SCHALTER === '1';
+const G1_TEXT = 'G1 KONTAKTMAIL_GRENZE gleicht spoonup';
+
 let esbuild;
 try {
   esbuild = createRequire(join(WURZEL, 'package.json'))('esbuild');
@@ -88,24 +102,34 @@ if (!existsSync(INDEX)) nichtMessbar(`${INDEX} fehlt`);
 const quelle = readFileSync(INDEX, 'utf8');
 console.log(`Funktion: ${INDEX}, esbuild ${esbuild.version}`);
 
-// --- spoonup-Grenze lesen ---------------------------------------------------
-// LAEUFER-HAT: git -- nur fuer SPOONUP_REF; ohne den Schalter wird nur gelesen
-let spoonupQuelle;
-try {
-  spoonupQuelle = process.env.SPOONUP_REF
-    ? execFileSync('git', ['-C', SPOONUP, 'show', `${process.env.SPOONUP_REF}:${SPOONUP_DATEI}`], { encoding: 'utf8' })
-    : readFileSync(join(SPOONUP, SPOONUP_DATEI), 'utf8');
-} catch (e) {
-  nichtMessbar(`spoonup nicht lesbar (${SPOONUP}, ${process.env.SPOONUP_REF || 'Arbeitsbaum'}): ${e.message.split('\n')[0]}`);
-}
 const GRENZE_MUSTER = /const\s+KONTAKTMAIL_GRENZE\s*=\s*\{\s*anzahl:\s*(\d+)\s*,\s*fenster_minuten:\s*(\d+)\s*\}/g;
 const lesenGrenze = (text) => [...text.matchAll(GRENZE_MUSTER)].map((m) => ({ anzahl: Number(m[1]), fenster_minuten: Number(m[2]) }));
-const spoonupGrenzen = lesenGrenze(spoonupQuelle);
-if (spoonupGrenzen.length !== 1) {
-  nichtMessbar(`spoonup ${SPOONUP_DATEI} (${process.env.SPOONUP_REF || 'Arbeitsbaum'}) traegt ${spoonupGrenzen.length}x KONTAKTMAIL_GRENZE, erwartet 1 -- anderen Stand mit SPOONUP_REF waehlen`);
+const eigene = lesenGrenze(quelle);
+
+let SOLL;
+if (OHNE_SPOONUP) {
+  // Ohne spoonup: K1 und K5 messen gegen die eigene Konstante. Fehlt sie oder
+  // steht sie doppelt, ist SOLL NaN -- K1 und K5 werden rot, G0 sagt warum.
+  SOLL = eigene.length === 1 ? eigene[0] : { anzahl: NaN, fenster_minuten: NaN };
+  console.log(`eigene Grenze: ${SOLL.anzahl} je ${SOLL.fenster_minuten} min (KONTAKT_OHNE_SPOONUP=1, spoonup nicht gelesen)`);
+} else {
+  // --- spoonup-Grenze lesen -------------------------------------------------
+  // LAEUFER-HAT: git -- nur fuer SPOONUP_REF; ohne den Schalter wird nur gelesen
+  let spoonupQuelle;
+  try {
+    spoonupQuelle = process.env.SPOONUP_REF
+      ? execFileSync('git', ['-C', SPOONUP, 'show', `${process.env.SPOONUP_REF}:${SPOONUP_DATEI}`], { encoding: 'utf8' })
+      : readFileSync(join(SPOONUP, SPOONUP_DATEI), 'utf8');
+  } catch (e) {
+    nichtMessbar(`spoonup nicht lesbar (${SPOONUP}, ${process.env.SPOONUP_REF || 'Arbeitsbaum'}): ${e.message.split('\n')[0]}`);
+  }
+  const spoonupGrenzen = lesenGrenze(spoonupQuelle);
+  if (spoonupGrenzen.length !== 1) {
+    nichtMessbar(`spoonup ${SPOONUP_DATEI} (${process.env.SPOONUP_REF || 'Arbeitsbaum'}) traegt ${spoonupGrenzen.length}x KONTAKTMAIL_GRENZE, erwartet 1 -- anderen Stand mit SPOONUP_REF waehlen`);
+  }
+  SOLL = spoonupGrenzen[0];
+  console.log(`spoonup-Grenze: ${SOLL.anzahl} je ${SOLL.fenster_minuten} min (${process.env.SPOONUP_REF || 'Arbeitsbaum'})`);
 }
-const SOLL = spoonupGrenzen[0];
-console.log(`spoonup-Grenze: ${SOLL.anzahl} je ${SOLL.fenster_minuten} min (${process.env.SPOONUP_REF || 'Arbeitsbaum'})`);
 
 // --- Rekorder ---------------------------------------------------------------
 let spur = [];
@@ -215,12 +239,18 @@ const ohneEmpfaenger = (r) => [
 ];
 
 // --- G1 / G2 ----------------------------------------------------------------
-const eigene = lesenGrenze(quelle);
-pruefe('G1 KONTAKTMAIL_GRENZE gleicht spoonup', [
-  [eigene.length === 1, `index.ts traegt ${eigene.length}x KONTAKTMAIL_GRENZE, erwartet genau 1`],
-  [eigene.length !== 1 || (eigene[0].anzahl === SOLL.anzahl && eigene[0].fenster_minuten === SOLL.fenster_minuten),
-    `plinyoo ${JSON.stringify(eigene[0])} gegen spoonup ${JSON.stringify(SOLL)}`],
-]);
+if (OHNE_SPOONUP) {
+  console.log(`NICHT GEMESSEN ${G1_TEXT} -- G1 hier nicht gemessen, lebt in spoonup (pruefung:kontakt-grenze-plinyoo)`);
+  pruefe('G0 index.ts traegt KONTAKTMAIL_GRENZE genau einmal', [
+    [eigene.length === 1, `index.ts traegt ${eigene.length}x KONTAKTMAIL_GRENZE, erwartet genau 1`],
+  ]);
+} else {
+  pruefe(G1_TEXT, [
+    [eigene.length === 1, `index.ts traegt ${eigene.length}x KONTAKTMAIL_GRENZE, erwartet genau 1`],
+    [eigene.length !== 1 || (eigene[0].anzahl === SOLL.anzahl && eigene[0].fenster_minuten === SOLL.fenster_minuten),
+      `plinyoo ${JSON.stringify(eigene[0])} gegen spoonup ${JSON.stringify(SOLL)}`],
+  ]);
+}
 // Kopf = alles vor der ersten Zeile, die kein Kommentar und nicht leer ist.
 const kopf = [];
 for (const z of quelle.split('\n')) { if (z.trim() && !z.trim().startsWith('//')) break; kopf.push(z); }
@@ -428,5 +458,5 @@ for (const [i, [was, body]] of TYPFAELLE.entries()) {
 }
 
 const rot = ergebnisse.filter((e) => e.rot.length);
-console.log(`\n${ergebnisse.length - rot.length} GRUEN, ${rot.length} ROT${rot.length ? ': ' + rot.map((e) => e.id.split(' ')[0]).join(', ') : ''}`);
+console.log(`\n${ergebnisse.length - rot.length} GRUEN, ${rot.length} ROT${rot.length ? ': ' + rot.map((e) => e.id.split(' ')[0]).join(', ') : ''}${OHNE_SPOONUP ? ', G1 NICHT GEMESSEN (lebt in spoonup)' : ''}`);
 process.exit(rot.length ? 1 : 0);

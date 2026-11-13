@@ -10,13 +10,19 @@
 #                             nicht als Abhängigkeit; installiert wird hier dieselbe
 #                             Fassung wie in spoonup (1.58.2), ohne package.json zu ändern.
 #
-# NICHT hier: pruefung:kontakt-grenze (supabase/tests/plinyoo-contact-483.mjs).
-# Ihr G1 vergleicht die Grenze mit spoonup, und spoonup ist privat -- dieser
-# Ablauf kann es nicht lesen (Heikos Entscheidung E-398: kein Schlüssel). Der
-# Vergleich läuft in der CI von spoonup (dort pruefung:kontakt-grenze), die
-# plinyoo öffentlich holt. Von Hand bleibt die Datei hier fahrbar.
+#   pruefung:kontakt-grenze   supabase/tests/plinyoo-contact-483.mjs mit
+#                             KONTAKT_OHNE_SPOONUP=1: Buchung, Grenze an
+#                             kontaktmail_buchen, Form, Fehlertexte (G0, G2, K, E,
+#                             F, L, T, D). Kein Netz, keine Datenbank.
 #
-# Die Prüfung endet mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
+# NICHT hier: G1 aus derselben Datei. G1 vergleicht die Grenze mit spoonup, und
+# spoonup ist privat -- dieser Ablauf kann es nicht lesen (Heikos Entscheidung
+# E-398: kein Schlüssel). Die Ausgabe sagt dann "G1 NICHT GEMESSEN (lebt in
+# spoonup)", nie grün. Der Vergleich läuft in der CI von spoonup (dort
+# pruefung:kontakt-grenze-plinyoo), die plinyoo öffentlich holt. Von Hand,
+# ohne den Schalter, fährt die Datei hier weiter mit G1.
+#
+# Beide Prüfungen enden mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
 # ist alles vorhanden, was sie braucht -- "nicht messbar" ist hier also ein
 # Fehler des Ablaufs und macht den Lauf rot, nicht grün.
 name: Pruefungen
@@ -45,6 +51,10 @@ jobs:
           cache: "npm"
       - name: Install dependencies
         run: npm ci
+      - name: pruefung:kontakt-grenze (ohne G1, lebt in spoonup)
+        env:
+          KONTAKT_OHNE_SPOONUP: "1"
+        run: npm run pruefung:kontakt-grenze
       - name: Playwright und Chromium
         run: |
           npm install --no-save playwright@1.58.2
