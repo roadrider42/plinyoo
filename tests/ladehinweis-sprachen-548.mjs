@@ -22,6 +22,11 @@
 //      Browsersprache (navigator.languages). fetch hält jede translation.json zurück; in der
 //      Wartezeit muss im #root genau der Satz der Sprache stehen. Danach Freigabe, und die Seite
 //      muss erscheinen.
+//      Dazu Fälle, in denen die gewünschte Sprache NICHT vorn in navigator.languages steht
+//      (Review #548 B1): zweite Vorliebe ['it-IT','it','uk'] -> uk, Cookie i18next=fr bei Browser
+//      de -> fr, localStorage es bei Browser de -> es. Ohne sie bliebe die Prüfung grün, wenn der
+//      Hinweis nur die erste Vorliebe nimmt, sie roh übernimmt statt über getBestMatchFromCodes,
+//      oder navigator.language statt der Erkennung von i18next fragt.
 //
 // Gegenprobe: mit dem Stand von origin/main (367545c) ist die Prüfung rot — F nicht ladbar,
 // A in allen Fällen „Lade Inhalte...“. Ausgang 0 grün, 1 rot.
@@ -57,6 +62,10 @@ const FAELLE = [
   { name: 'pt', sprachen: ['pt-BR', 'pt'], soll: URTEIL.pt },
   { name: 'uk', sprachen: ['uk-UA', 'uk'], soll: URTEIL.uk },
   { name: 'Rückfall (it)', sprachen: ['it-IT', 'it'], soll: URTEIL[RUECKFALL] },
+  // Gewünschte Sprache nicht vorn (Review #548 B1, Vorlage probe-548 P03, P04, P05).
+  { name: 'it, it, uk', sprachen: ['it-IT', 'it', 'uk'], soll: URTEIL.uk },
+  { name: 'Cookie fr', sprachen: ['de-DE', 'de'], cookie: 'i18next=fr', soll: URTEIL.fr },
+  { name: 'Speicher es', sprachen: ['de-DE'], speicher: 'es', soll: URTEIL.es },
 ];
 
 const befunde = [];
@@ -128,6 +137,8 @@ for (const fall of FAELLE) {
   const { window } = dom;
   Object.defineProperty(window.navigator, 'languages', { get: () => fall.sprachen });
   Object.defineProperty(window.navigator, 'language', { get: () => fall.sprachen[0] });
+  if (fall.cookie) window.document.cookie = fall.cookie;
+  if (fall.speicher) window.localStorage.setItem('i18nextLng', fall.speicher);
   const offen = [];
   let frei = false;
   window.fetch = (url) => new Promise((resolve) => {
@@ -146,7 +157,8 @@ for (const fall of FAELLE) {
   await warte(300);
   const fertig = root.textContent.trim();
   const ok = laden === fall.soll && fertig.includes(SEITENTEXT) && !fertig.includes(fall.soll);
-  zeilen.push(`A ${ok ? 'grün' : 'ROT '} ${fall.name.padEnd(13)} navigator.languages=${JSON.stringify(fall.sprachen)} -> beim Laden ${JSON.stringify(laden)} (angefragt: ${angefragt || '—'})`);
+  const extra = (fall.cookie ? ` cookie=${fall.cookie}` : '') + (fall.speicher ? ` localStorage=${fall.speicher}` : '');
+  zeilen.push(`A ${ok ? 'grün' : 'ROT '} ${fall.name.padEnd(13)} navigator.languages=${JSON.stringify(fall.sprachen)}${extra} -> beim Laden ${JSON.stringify(laden)} (angefragt: ${angefragt || '—'})`);
   if (!angefragt) befund(`A ${fall.name}: nicht messbar, keine translation.json angefragt`);
   // Dieselbe Erkennung: i18next lädt als erstes die Sprache, deren Satz angezeigt wird.
   const ersteSprache = (angefragt.match(/\/locales\/([a-z]+)\//) || [])[1];
@@ -164,5 +176,5 @@ if (befunde.length) {
   for (const b of befunde) console.error('  - ' + b);
   process.exit(1);
 }
-console.log(`ladehinweis-sprachen-548: grün — ${FAELLE.length} Browsersprachen angezeigt, ${FUNKTION.length} Funktionsaufrufe`);
+console.log(`ladehinweis-sprachen-548: grün — ${FAELLE.length} Fälle angezeigt, ${FUNKTION.length} Funktionsaufrufe`);
 process.exit(0);
