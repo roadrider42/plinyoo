@@ -8,6 +8,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useContactForm } from '@/hooks/hook.useContactForm';
+import KontaktFehlerHinweis from '@/components/ui/KontaktFehlerHinweis';
 import { useToast } from '@/components/ui/use-toast';
 import { getKampagne, kampagneZeilen } from '@/lib/kampagne';
 
@@ -57,9 +58,6 @@ export default function ZugangPage() {
             });
           } catch { /* Messung darf die Anfrage nie stören */ }
           toast({ title: t('forms.validation.success_title'), description: t('forms.validation.success_message') });
-        },
-        onError: (error: any) => {
-          toast({ title: t('forms.validation.error_title'), description: error.message || t('forms.validation.error_generic') });
         },
       },
     );
@@ -116,6 +114,7 @@ export default function ZugangPage() {
               />
             </div>
 
+            <KontaktFehlerHinweis fehler={contactMutation.error} />
             <div className="flex justify-end">
               <button type="submit" disabled={contactMutation.isLoading} className="w-full bg-highlight text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition disabled:opacity-50">
                 {contactMutation.isLoading ? t('forms.button_sending') : t('forms.access.button')}

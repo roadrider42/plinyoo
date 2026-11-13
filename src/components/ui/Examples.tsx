@@ -48,10 +48,12 @@ export const Books = () => {
       <section className="bg-surface-2 border-y border-border/60 py-16 md:py-12">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold font-sans text-primary mb-3">
-            {t('examples.books_title', 'Bücher zum Durchspielen')}
+            {/* Kein Rückfalltext: er war eine zweite, deutsche Fassung, die auf en/es/… erschien (#539).
+                Dass der Schlüssel in allen sieben Sprachen steht, hält tests/startseite-texte-539.mjs im Bau fest. */}
+            {t('examples.books_title')}
           </h2>
           <p className="text-text-muted mb-12 max-w-2xl mx-auto">
-            {t('examples.books_intro', 'Aus jedem Buch wird ein Wissensgraph: Karten, Verbindungen und Fragen. Such dir eins aus.')}
+            {t('examples.books_intro')}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">

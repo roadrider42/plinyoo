@@ -47,7 +47,7 @@
     "steps": [
       {
         "title": "Ustaw dwa języki",
-        "description": "Twój ojczysty język i ten, którego się uczysz. Treści pojawiają się w języku nauki, jedno dotknięcie przełącza z powrotem."
+        "description": "Twój ojczysty język i ten, którego się uczysz. Karty pojawiają się w języku nauki, o ile istnieją w tym języku."
       },
       {
         "title": "Śledź temat",
@@ -76,15 +76,15 @@
       },
       {
         "title": "Dwa języki, jedna droga",
-        "desc": "Twój ojczysty język i ten, którego się uczysz — jedno dotknięcie przełącza z powrotem."
+        "desc": "Twój ojczysty język i ten, którego się uczysz — oba możesz ustawić."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "języków"
+        "kpi": "2",
+        "label": "języki interfejsu"
       },
       {
         "kpi": "11",
@@ -139,11 +139,11 @@
       },
       {
         "q": "Czy mogę wnieść własne treści?",
-        "a": "Tak. Piszesz i łączysz własne karty, generujesz do nich pytania i pobierasz treści z Wikipedii lub udostępnionej strony."
+        "a": "Tak, w obszarze „Erstellen”. Piszesz i łączysz własne karty. Pobierasz karty z Obsidiana, z plików i z Wikipedii do własnych tematów albo przejmujesz tekst strony internetowej za pomocą zakładki. Z plików i stron Wikipedii możesz też zaimportować słownictwo zamiast kart do nauki."
       },
       {
         "q": "W jakich językach mogę się uczyć?",
-        "a": "Interfejs jest dostępny w siedmiu językach. Ustawiasz dwa: ojczysty i ten, którego właśnie się uczysz."
+        "a": "Interfejs jest dostępny po niemiecku i angielsku. Ustawiasz dwa języki: ojczysty i ten, którego właśnie się uczysz. Do wyboru jest dziesięć. Karty pojawiają się w języku nauki, o ile istnieją w tym języku."
       }
     ]
   },
@@ -191,12 +191,18 @@
       "subtitle": "Twoje specyficzne wymagania",
       "desc": "Opracowujemy indywidualne rozwiązania dla Twoich wyzwań.",
       "button": "Skontaktuj się z nami"
-    }
+    },
+    "books_intro": "Przedstawiamy tu książki. Do czterech z nich karty są już w aplikacji, każda książka jako osobny temat: „Die Eroberer” (Roger Crowley), „Der Almanach von Naval Ravikant” (Eric Jorgenson), „Gewaltfreie Kommunikation” (Marshall B. Rosenberg) i „Die Macht der Geografie” (Tim Marshall).",
+    "books_title": "Książki do przejścia"
   },
   "forms": {
     "validation": {
       "error_title": "Błąd",
       "error_generic": "Wystąpił nieoczekiwany błąd.",
+      "error_rate_limit": "Obecnie otrzymujemy bardzo dużo zapytań. Twoja wiadomość nie dotarła jeszcze do nas. Spróbuj ponownie najpóźniej za godzinę.",
+      "error_too_long": "Jedno z pól zawiera zbyt dużo tekstu. Twoja wiadomość nie dotarła jeszcze do nas. Skróć tekst i wyślij formularz ponownie.",
+      "error_rejected": "Twoich danych nie udało się przyjąć. Sprawdź imię, adres e-mail i wiadomość, skróć szczególnie długie teksty i wyślij formularz ponownie.",
+      "error_send_failed": "Wysłanie nie powiodło się. Spróbuj ponownie później.",
       "name_email_required": "Imię i adres e-mail są wymagane.",
       "success_title": "Wysłano pomyślnie",
       "success_message": "Dziękujemy! Otrzymaliśmy Twoją wiadomość."
@@ -259,7 +265,7 @@
       "message_label": "Co chcesz osiągnąć z plinyoo?",
       "message_placeholder": "Na przykład: chcę zrozumieć, dlaczego moje miasto tak się nagrzewa latem.",
       "button": "Poproś o dostęp",
-      "origin_note": "Otrzymujemy też informację, z jakiego linku przyszedłeś (np. strona książki lub kanał)."
+      "origin_note": "Otrzymujemy też informację, z jakiego linku wchodzisz (np. strona książki lub kanał)."
     },
     "social": {
       "lead": "Znajdziesz nas także tutaj:"

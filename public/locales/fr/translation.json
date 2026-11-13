@@ -47,7 +47,7 @@
     "steps": [
       {
         "title": "Définir deux langues",
-        "description": "Ta langue maternelle et celle que tu apprends. Le contenu apparaît dans la langue d’apprentissage, une touche permet de revenir."
+        "description": "Ta langue maternelle et celle que tu apprends. Les fiches s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
       },
       {
         "title": "Suivre un sujet",
@@ -64,7 +64,7 @@
     "items": [
       {
         "title": "Individuel plutôt que générique",
-        "desc": "Votre chemin, votre style, votre ton."
+        "desc": "Ton chemin, ton style, ta tonalité."
       },
       {
         "title": "Ta progression brille",
@@ -76,15 +76,15 @@
       },
       {
         "title": "Deux langues, un chemin",
-        "desc": "Ta langue maternelle et celle que tu apprends — une touche permet de revenir."
+        "desc": "Ta langue maternelle et celle que tu apprends — tu peux régler les deux."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "langues"
+        "kpi": "2",
+        "label": "langues de l’interface"
       },
       {
         "kpi": "11",
@@ -139,11 +139,11 @@
       },
       {
         "q": "Puis-je apporter mes propres contenus ?",
-        "a": "Oui. Tu écris et relies tes propres fiches, tu fais générer des questions et tu importes du contenu de Wikipédia ou d’une page partagée."
+        "a": "Oui, dans la zone « Erstellen ». Tu écris et relies tes propres fiches. Tu importes des fiches depuis Obsidian, depuis des fichiers et depuis Wikipédia dans tes propres sujets, ou tu reprends le texte d’une page web avec un signet. À partir de fichiers et de pages Wikipédia, tu peux aussi importer du vocabulaire au lieu de fiches d’apprentissage."
       },
       {
         "q": "Dans quelles langues puis-je apprendre ?",
-        "a": "L’interface existe en sept langues. Tu en définis deux : ta langue maternelle et celle que tu apprends en ce moment."
+        "a": "L’interface existe en allemand et en anglais. Tu définis deux langues : ta langue maternelle et celle que tu apprends en ce moment. Dix sont proposées. Les fiches s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
       }
     ]
   },
@@ -182,13 +182,17 @@
     "validation": {
       "error_title": "Erreur",
       "error_generic": "Une erreur inattendue est survenue.",
+      "error_rate_limit": "Nous recevons actuellement un très grand nombre de demandes. Ton message ne nous est pas encore parvenu. Réessaie dans une heure au plus tard.",
+      "error_too_long": "Un champ contient trop de texte. Ton message ne nous est pas encore parvenu. Raccourcis le texte et envoie à nouveau le formulaire.",
+      "error_rejected": "Tes informations n’ont pas pu être acceptées. Vérifie le nom, l’adresse e-mail et le message, raccourcis les textes particulièrement longs et envoie à nouveau le formulaire.",
+      "error_send_failed": "L’envoi n’a pas fonctionné. Réessaie plus tard.",
       "name_email_required": "Le nom et l'e-mail sont requis.",
       "success_title": "Envoyé avec succès",
-      "success_message": "Merci ! Nous avons bien reçu votre message."
+      "success_message": "Merci ! Nous avons bien reçu ton message."
     },
     "success": {
       "title": "Merci !",
-      "message": "Merci de votre intérêt. Nous vous contacterons !"
+      "message": "Merci de ton intérêt. Nous te contacterons !"
     },
     "button_sending": "Envoi en cours...",
     "button_send_interest": "Envoyer l'intérêt",
@@ -206,28 +210,28 @@
       "role_label": "Rôle/Compétence",
       "role_placeholder": "Frontend / Backend / Produit / ...",
       "availability_label": "Disponibilité",
-      "availability_placeholder": "Veuillez sélectionner",
+      "availability_placeholder": "Choisis",
       "availability_options": {
         "fulltime": "Temps plein",
         "parttime": "Temps partiel",
         "freelance": "Freelance"
       },
       "github_label": "GitHub",
-      "motivation_label": "Pourquoi vous et ce qui vous passionne"
+      "motivation_label": "Pourquoi toi et ce qui te passionne"
     },
-    "privacy_notice": "Les données fournies seront utilisées exclusivement pour traiter votre demande.",
+    "privacy_notice": "Les données fournies seront utilisées exclusivement pour traiter ta demande.",
     "back_to_home": "Retour à l'accueil",
     "use_case": {
       "title": "Contact et Cas d'utilisation",
-      "subtitle": "Décrivez-nous votre idée ou votre défi. Nous trouverons une solution ensemble.",
-      "message_placeholder": "Parlez-nous de votre préoccupation..."
+      "subtitle": "Décris-nous ton idée ou ton défi. Nous trouverons une solution ensemble.",
+      "message_placeholder": "Parle-nous de ta préoccupation..."
     },
     "invest": {
       "title": "Investir",
       "subtitle": "Plinyoo rend l'apprentissage efficace, tangible et continu. Ensemble, nous construisons un produit qui soutient le développement à long terme – mesurable, évolutif et pratique.",
       "subtitle_details": "Impact dans le monde réel • orientation produit claire • écosystème d'apprentissage évolutif.",
       "investment_range_label": "Fourchette d'investissement",
-      "investment_range_placeholder": "Veuillez sélectionner",
+      "investment_range_placeholder": "Choisis",
       "investment_range_options": {
         "up_to_5k": "jusqu'à 5k",
         "5k_to_20k": "5k–20k",
@@ -244,7 +248,7 @@
       "message_label": "Que veux-tu accomplir avec plinyoo ?",
       "message_placeholder": "Par exemple : je veux comprendre pourquoi ma ville devient si chaude l’été.",
       "button": "Demander l’accès",
-      "origin_note": "Nous recevons aussi le lien par lequel tu es arrivé (par exemple une page de livre ou un canal)."
+      "origin_note": "Nous recevons aussi le lien d’où tu viens (par exemple une page de livre ou un canal)."
     },
     "social": {
       "lead": "Tu peux aussi nous retrouver ici :"
@@ -260,11 +264,13 @@
       "button": "En savoir plus"
     },
     "your-use-case": {
-      "title": "Votre cas d'usage",
-      "subtitle": "Vos exigences spécifiques",
-      "desc": "Nous développons des solutions individuelles pour vos défis.",
-      "button": "Contactez-nous"
-    }
+      "title": "Ton cas d'usage",
+      "subtitle": "Tes exigences spécifiques",
+      "desc": "Nous développons des solutions individuelles pour tes défis.",
+      "button": "Contacte-nous"
+    },
+    "books_intro": "Nous présentons ici des livres. Pour quatre d’entre eux, les fiches sont déjà dans l’application, chaque livre comme sujet à part : « Die Eroberer » (Roger Crowley), « Der Almanach von Naval Ravikant » (Eric Jorgenson), « Gewaltfreie Kommunikation » (Marshall B. Rosenberg) et « Die Macht der Geografie » (Tim Marshall).",
+    "books_title": "Livres à parcourir"
   },
   "footer": {
     "brand": {
@@ -299,7 +305,7 @@
     },
     "kontakt": {
       "title": "Contact pour les droits d'utilisation",
-      "text": "Veuillez adresser les demandes de droits d'utilisation à heiko@plinyoo.com."
+      "text": "Adresse les demandes de droits d'utilisation à heiko@plinyoo.com."
     },
     "back_to_home": "Retour à l'accueil"
   },

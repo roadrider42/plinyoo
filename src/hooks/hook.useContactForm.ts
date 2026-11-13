@@ -2,15 +2,12 @@
 import { useMutation } from 'react-query';
 import { sendContactForm } from '@/services/svc.contact';
 
+// sendContactForm wirft bei jedem Fehler (#483) -- onSuccess heisst also
+// wirklich: die Randfunktion hat mit 2xx geantwortet.
 export function useContactForm() {
-  return useMutation((formData: unknown) => sendContactForm(formData), {
-    onSuccess: (data: void | { ok: boolean; data?: any; error?: any }) => {
-      // This can be used to show a success toast or redirect
-      console.log('Form submitted successfully:', data);
-    },
+  return useMutation<void, Error, unknown>((formData: unknown) => sendContactForm(formData), {
     onError: (error: Error) => {
-      // This will be caught by react-query and can be used to show an error toast
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form:', error.name);
     },
   });
 }
