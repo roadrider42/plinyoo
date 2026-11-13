@@ -213,6 +213,7 @@
       "error_rate_limit": "Nous recevons actuellement un très grand nombre de demandes. Ton message ne nous est pas encore parvenu. Réessaie dans une heure au plus tard.",
       "error_too_long": "Un champ contient trop de texte. Ton message ne nous est pas encore parvenu. Raccourcis le texte et envoie à nouveau le formulaire.",
       "error_rejected": "Tes informations n’ont pas pu être acceptées. Vérifie le nom, l’adresse e-mail et le message, raccourcis les textes particulièrement longs et envoie à nouveau le formulaire.",
+      "error_send_failed": "L’envoi n’a pas fonctionné. Réessaie plus tard.",
       "name_email_required": "Le nom et l'e-mail sont requis.",
       "success_title": "Envoyé avec succès",
       "success_message": "Merci ! Nous avons bien reçu votre message."

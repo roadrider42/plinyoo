@@ -15,15 +15,15 @@ import { ContactFormSchema } from '@/domain/dom.contact.zod';
 // vom Server traegt keinen Grund -- sie bekommt den ursachenneutralen Satz.
 export type KontaktFehlerArt = 'grenze' | 'zu_lang' | 'abgelehnt' | 'sonst';
 
-// Der Satz fuer `sonst` hat noch keine du-Fassung und keine Uebersetzung
-// (#533, offen bei Redaktion und Sprecher). Bis dahin steht er hier, wie ihn
-// der Sprecher in #483 freigegeben hat (41314483).
-const SATZ_SONST = 'Das Senden hat nicht geklappt. Bitte versuchen Sie es in ein paar Minuten noch einmal.';
-
-export const KONTAKT_SCHLUESSEL: Record<Exclude<KontaktFehlerArt, 'sonst'>, string> = {
+// `sonst` ist der Rueckfall: 500, Netzfehler, jeder unerwartete Fehler -- nie
+// 429 und nie 400 (Sprecher 70834fc61, spoonup claude/_533/fehlersatz-
+// allgemein.md). Seit #533 steht auch er in den Sprachdateien, in du; die
+// Sie-Fassung aus #483 ist weg.
+export const KONTAKT_SCHLUESSEL: Record<KontaktFehlerArt, string> = {
   grenze: 'forms.validation.error_rate_limit',
   zu_lang: 'forms.validation.error_too_long',
   abgelehnt: 'forms.validation.error_rejected',
+  sonst: 'forms.validation.error_send_failed',
 };
 
 export class KontaktFehler extends Error {
@@ -45,7 +45,6 @@ type Uebersetzer = (schluessel: string, optionen: { fallbackLng: string[] }) => 
  */
 export function kontaktFehlerSatz(error: unknown, t: Uebersetzer): string | null {
   const art: KontaktFehlerArt = error instanceof KontaktFehler ? error.art : 'sonst';
-  if (art === 'sonst') return SATZ_SONST;
   const schluessel = KONTAKT_SCHLUESSEL[art];
   const satz = t(schluessel, { fallbackLng: ['en'] });
   return satz && satz !== schluessel ? satz : null;

@@ -249,6 +249,7 @@
       "error_rate_limit": "We are receiving a lot of requests right now. Your message has not reached us yet. Please try again in an hour at the latest.",
       "error_too_long": "One field contains too much text. Your message has not reached us yet. Please shorten the text and send the form again.",
       "error_rejected": "Your details could not be accepted. Please check your name, email address and message, shorten particularly long texts and send the form again.",
+      "error_send_failed": "Sending did not work. Please try again later.",
       "name_email_required": "Name and email are required.",
       "success_title": "Successfully Sent",
       "success_message": "Thank you! We have received your message."

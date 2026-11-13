@@ -40,6 +40,10 @@
 //   en-*, uk-*    /kontakt in en und uk: 429, 400, zu_lang je im Wortlaut der
 //                 Sprache, kein deutscher Satz
 //   uk-rueckfall  uk-Datei ohne die drei Saetze: der en-Satz, nie der Schluessel
+//   *-500, *-netz der allgemeine Satz (Sprecher 70834fc61) in du, in en und uk
+//                 im Wortlaut der Sprache; uk-rueckfall-500: uk ohne ihn -> en
+// Vor dem allgemeinen Satz (plinyoo 607d0c8): 500, netz und undefined zeigen
+// "versuchen Sie es in ein paar Minuten", en/uk-500 zeigen Deutsch -- rot.
 // Vor dem Fix (plinyoo 3e17abb): 429 und 400 zeigen die Sie-Saetze, zu_lang
 // ruft die Randfunktion und zeigt den 400-Satz, en/uk zeigen Deutsch -- rot.
 // Ausgang: 0 gruen, 1 rot, 2 nicht messbar.
@@ -81,17 +85,18 @@ const BILDER = process.env.KONTAKT_BILDER ? resolve(process.env.KONTAKT_BILDER) 
 if (BILDER && !existsSync(BILDER)) mkdirSync(BILDER, { recursive: true });
 
 // Die Saetze, woertlich. 429, 400, zu_lang: du (Sprecher 2c335cf93, #533);
-// sonst: noch die Fassung aus #483 (41314483), du-Fassung offen.
+// sonst: der allgemeine Satz, du (Sprecher 70834fc61, #533).
 const SATZ = {
   429: 'Gerade kommen sehr viele Anfragen an. Deine Nachricht ist noch nicht bei uns. Bitte versuche es spätestens in einer Stunde noch einmal.',
   400: 'Deine Angaben konnten nicht angenommen werden. Bitte prüfe Name, E-Mail-Adresse und Nachricht, kürze besonders lange Texte und sende das Formular noch einmal.',
   zu_lang: 'Ein Feld enthält zu viel Text. Deine Nachricht ist noch nicht bei uns. Bitte kürze den Text und sende das Formular noch einmal.',
-  sonst: 'Das Senden hat nicht geklappt. Bitte versuchen Sie es in ein paar Minuten noch einmal.',
+  sonst: 'Das Senden hat nicht geklappt. Bitte versuche es später noch einmal.',
 };
 // Die Sie-Saetze aus #483 duerfen nirgends mehr erscheinen.
 const ALT_SIE = [
   'Gerade kommen sehr viele Anfragen an, Ihre Nachricht ist noch nicht bei uns.',
   'Ihre Angaben konnten nicht angenommen werden.',
+  'Das Senden hat nicht geklappt. Bitte versuchen Sie es in ein paar Minuten noch einmal.',
 ];
 // en und uk (Wortlaut wie tests/kontakt-meldung-533.mjs).
 const FREMD = {
@@ -99,11 +104,13 @@ const FREMD = {
     429: 'We are receiving a lot of requests right now. Your message has not reached us yet. Please try again in an hour at the latest.',
     400: 'Your details could not be accepted. Please check your name, email address and message, shorten particularly long texts and send the form again.',
     zu_lang: 'One field contains too much text. Your message has not reached us yet. Please shorten the text and send the form again.',
+    sonst: 'Sending did not work. Please try again later.',
   },
   uk: {
     429: 'Зараз надходить дуже багато запитів. Твоє повідомлення ще не дійшло до нас. Будь ласка, спробуй ще раз щонайпізніше за годину.',
     400: 'Твої дані не вдалося прийняти. Будь ласка, перевір ім’я, адресу електронної пошти та повідомлення, скороти особливо довгі тексти і надішли форму ще раз.',
     zu_lang: 'Одне з полів містить забагато тексту. Твоє повідомлення ще не дійшло до нас. Будь ласка, скороти текст і надішли форму ще раз.',
+    sonst: 'Не вдалося надіслати. Будь ласка, спробуй ще раз пізніше.',
   },
 };
 const SERVER_MELDUNG = 'ATTRAPPE-SERVERMELDUNG bitte nicht anzeigen';
@@ -139,8 +146,11 @@ const NUR_KONTAKT = [
     { id: `${l}-429`, sprache: l, antwort: { status: 429, body: { error: 'GRENZE_ERREICHT', meldung: SERVER_MELDUNG } }, satz: FREMD[l][429], servertext: ['GRENZE_ERREICHT', SERVER_MELDUNG] },
     { id: `${l}-400`, sprache: l, antwort: KONTAKT_400, satz: FREMD[l][400], servertext: ['Bad Request'] },
     { id: `${l}-zu_lang`, sprache: l, name: 'a'.repeat(201), antwort: KONTAKT_400, aufrufe: 0, satz: FREMD[l].zu_lang, servertext: ['Bad Request', 'too_big'] },
+    { id: `${l}-500`, sprache: l, antwort: { status: 500, body: { error: 'Failed to save contact' } }, satz: FREMD[l].sonst, servertext: ['Failed to save contact'] },
+    { id: `${l}-netz`, sprache: l, antwort: 'abbruch', satz: FREMD[l].sonst, servertext: [] },
   ]),
   { id: 'uk-rueckfall', sprache: 'uk', ohneSaetze: true, antwort: { status: 429, body: { error: 'GRENZE_ERREICHT', meldung: SERVER_MELDUNG } }, satz: FREMD.en[429], servertext: ['GRENZE_ERREICHT', SERVER_MELDUNG, 'forms.validation'] },
+  { id: 'uk-rueckfall-500', sprache: 'uk', ohneSaetze: true, antwort: { status: 500, body: { error: 'Failed to save contact' } }, satz: FREMD.en.sonst, servertext: ['Failed to save contact', 'forms.validation'] },
 ];
 
 // Erfolgsansicht = forms.success.title (de); Formular = die Absendeschaltflaeche.
@@ -183,7 +193,7 @@ async function fall(seite, ausgang) {
       await page.route(`**/locales/${sprache}/translation.json`, async (route) => {
         const r = await route.fetch();
         const j = await r.json();
-        for (const k of ['error_rate_limit', 'error_too_long', 'error_rejected']) delete j.forms?.validation?.[k];
+        for (const k of ['error_rate_limit', 'error_too_long', 'error_rejected', 'error_send_failed']) delete j.forms?.validation?.[k];
         await route.fulfill({ response: r, body: JSON.stringify(j), contentType: 'application/json' });
       });
     }

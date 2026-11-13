@@ -532,6 +532,7 @@
       "error_rate_limit": "Gerade kommen sehr viele Anfragen an. Deine Nachricht ist noch nicht bei uns. Bitte versuche es spätestens in einer Stunde noch einmal.",
       "error_too_long": "Ein Feld enthält zu viel Text. Deine Nachricht ist noch nicht bei uns. Bitte kürze den Text und sende das Formular noch einmal.",
       "error_rejected": "Deine Angaben konnten nicht angenommen werden. Bitte prüfe Name, E-Mail-Adresse und Nachricht, kürze besonders lange Texte und sende das Formular noch einmal.",
+      "error_send_failed": "Das Senden hat nicht geklappt. Bitte versuche es später noch einmal.",
       "name_email_required": "Name und E-Mail sind erforderlich.",
       "success_title": "Erfolgreich gesendet",
       "success_message": "Vielen Dank! Wir haben Ihre Nachricht erhalten."

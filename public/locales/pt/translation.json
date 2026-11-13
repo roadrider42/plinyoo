@@ -213,6 +213,7 @@
       "error_rate_limit": "Neste momento estamos recebendo muitas solicitações. Sua mensagem ainda não chegou até nós. Por favor, tente novamente em até uma hora.",
       "error_too_long": "Um campo contém texto demais. Sua mensagem ainda não chegou até nós. Por favor, encurte o texto e envie o formulário novamente.",
       "error_rejected": "Seus dados não puderam ser aceitos. Por favor, verifique o nome, o e-mail e a mensagem, encurte textos especialmente longos e envie o formulário novamente.",
+      "error_send_failed": "Não foi possível enviar. Por favor, tente novamente mais tarde.",
       "name_email_required": "Nome e e-mail são obrigatórios.",
       "success_title": "Enviado com sucesso",
       "success_message": "Obrigado! Recebemos sua mensagem."

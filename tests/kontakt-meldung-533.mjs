@@ -23,16 +23,28 @@
 //      en, pt Satz 2  claude/_kontakt-meldung/uebersetzung.md @ d7465abb9, FREI 303b21335
 //      pt Satz 1  sprecher-uebersetzung.md @ 303b21335 (GEAENDERT, "solicitações")
 //      en, pt 400  uebersetzung.md Nachtrag @ 4e957f6ff, FREI 02e7112b7
+//      error_send_failed (allgemeiner Satz), alle sieben: spoonup
+//          claude/_533/fehlersatz-allgemein.md @ 78b8694fc, FREI 70834fc61
 // S  Satzwahl (svc.contact.ts, gebuendelt): grenze -> error_rate_limit,
 //    zu_lang -> error_too_long, abgelehnt -> error_rejected, jeweils mit
 //    Rueckfall en; ein fremder Fehler -> der allgemeine Satz, nie ein Schluessel
 //    und nie die Fehlermeldung. too_big -> zu_lang, jeder andere Code nicht.
+//    Allgemeiner Satz (Bedingungen des Sprechers 70834fc61):
+//    S-R  Rueckfall: sonst und ein fremder Fehler -> forms.validation.
+//         error_send_failed; fehlt er der Sprache, der en-Satz.
+//    S-W  sendContactForm gegen ein vorgetaeuschtes fetch: 500, Netzfehler,
+//         fetch liefert undefined -> der allgemeine Satz; 429, 400 und die
+//         eigene Formpruefung (zu lang, falsche Adresse) -> NIE er.
+//    S-Sie  kein Satz des Formulars in de traegt die Sie-Form, und der
+//         gebuendelte Dienst enthaelt keinen festen Satz mehr.
 //
 // Der Bedienweg im Browser (alle vier Seiten, en und uk) steht in
 // tests/kontaktformular-483.mjs.
 //
 // Ohne Fix (plinyoo 3e17abb): L rot (der Browser kennt keine Hoechstlaenge),
 // W rot (kein Schluessel), S nicht ladbar -> rot.
+// Ohne den allgemeinen Satz (plinyoo 607d0c8): W error_send_failed 7x rot,
+// S-R rot (Sie-Satz statt en), S-W 500/netz/undefined rot, S-Sie rot.
 // Ausgang: 0 gruen, 1 rot, 2 nicht messbar.
 // ===========================================================================
 import { createRequire } from 'node:module';
@@ -179,6 +191,15 @@ const SOLL = {
     pt: 'Seus dados não puderam ser aceitos. Por favor, verifique o nome, o e-mail e a mensagem, encurte textos especialmente longos e envie o formulário novamente.',
     uk: 'Твої дані не вдалося прийняти. Будь ласка, перевір ім’я, адресу електронної пошти та повідомлення, скороти особливо довгі тексти і надішли форму ще раз.',
   },
+  error_send_failed: {
+    de: 'Das Senden hat nicht geklappt. Bitte versuche es später noch einmal.',
+    en: 'Sending did not work. Please try again later.',
+    es: 'No se ha podido enviar. Por favor, inténtalo de nuevo más tarde.',
+    fr: 'L’envoi n’a pas fonctionné. Réessaie plus tard.',
+    pl: 'Wysłanie nie powiodło się. Spróbuj ponownie później.',
+    pt: 'Não foi possível enviar. Por favor, tente novamente mais tarde.',
+    uk: 'Не вдалося надіслати. Будь ласка, спробуй ще раз пізніше.',
+  },
 };
 const SPRACHEN = ['de', 'en', 'es', 'fr', 'pl', 'pt', 'uk'];
 const sprachdatei = {};
@@ -229,6 +250,77 @@ if (svc) {
   pruefe('S fremder Fehler -> allgemeiner Satz, keine Fehlermeldung, kein Schluessel', [
     [typeof fremd === 'string' && fremd.length > 20, `Satz: ${JSON.stringify(fremd)}`],
     [!String(fremd).includes('Cannot read') && !String(fremd).startsWith('forms.'), `Satz: ${JSON.stringify(fremd)}`],
+  ]);
+  // S-R: Bedingung 3, Rueckfall en. Die "aktuelle Sprache" xx hat keinen Satz.
+  const ALLGEMEIN = SOLL.error_send_failed;
+  const sonstSatz = typeof kontaktFehlerSatz === 'function' && typeof KontaktFehler === 'function' ? fall('sonst') : null;
+  pruefe('S-R sonst -> forms.validation.error_send_failed, Rueckfall en', [
+    [sonstSatz === ALLGEMEIN.en, `Satz: ${JSON.stringify(sonstSatz)}`],
+    [rufe.length === 1 && rufe[0].k === 'forms.validation.error_send_failed' && (rufe[0].o?.fallbackLng ?? [])[0] === 'en', `gefragt: ${rufe.map((r) => r.k + ' ' + JSON.stringify(r.o)).join(', ') || 'nichts'}`],
+  ]);
+  pruefe('S-R fremder Fehler -> en-Satz, wenn der Sprache der Satz fehlt', [
+    [fremd === ALLGEMEIN.en, `Satz: ${JSON.stringify(fremd)}`],
+  ]);
+  // In der Sprache selbst vorhanden -> ihr Satz, nicht en (uk als Beispiel).
+  const tUk = (k, o) => { let w = sprachdatei.uk; for (const x of k.split('.')) w = w?.[x]; return typeof w === 'string' ? w : t(k, o); };
+  const ukSatz = typeof kontaktFehlerSatz === 'function' && typeof KontaktFehler === 'function' ? kontaktFehlerSatz(new KontaktFehler('sonst'), tUk) : null;
+  pruefe('S-R sonst in uk -> uk-Satz', [[ukSatz === ALLGEMEIN.uk, `Satz: ${JSON.stringify(ukSatz)}`]]);
+
+  // S-W: Bedingung 2 -- welcher Ausgang fuehrt auf den allgemeinen Satz?
+  // sendContactForm wird gerufen, fetch vorgetaeuscht; der Satz entsteht mit
+  // dem de-Uebersetzer, wie auf der Seite.
+  const tDe = (k, o) => { let w = sprachdatei.de; for (const x of k.split('.')) w = w?.[x]; return typeof w === 'string' ? w : t(k, o); };
+  const GUT = { name: 'Wer', email: 'wer@example.org', formType: 'contact', message: 'Hallo' };
+  const echtesFetch = globalThis.fetch;
+  async function satzBei(antwort, form = GUT) {
+    let aufrufe = 0;
+    globalThis.fetch = async () => {
+      aufrufe += 1;
+      if (antwort === 'abbruch') throw new TypeError('Failed to fetch');
+      if (antwort === 'undefined') return undefined;
+      return new Response(JSON.stringify({ error: 'x' }), { status: antwort, headers: { 'content-type': 'application/json' } });
+    };
+    console.error = () => {};
+    try {
+      await svc.sendContactForm(form);
+      return { satz: 'KEIN FEHLER', aufrufe };
+    } catch (e) {
+      return { satz: kontaktFehlerSatz(e, tDe), aufrufe };
+    } finally {
+      globalThis.fetch = echtesFetch; console.error = still.error;
+    }
+  }
+  if (typeof svc.sendContactForm === 'function') {
+    for (const [wie, antwort] of [['500', 500], ['502', 502], ['503', 503], ['Netzfehler', 'abbruch'], ['fetch liefert undefined', 'undefined']]) {
+      const { satz } = await satzBei(antwort);
+      pruefe(`S-W ${wie} -> allgemeiner Satz`, [[satz === ALLGEMEIN.de, `Satz: ${JSON.stringify(satz)}`]]);
+    }
+    for (const [wie, antwort, form, soll, sollAufrufe] of [
+      ['429', 429, GUT, SOLL.error_rate_limit.de, 1],
+      ['400', 400, GUT, SOLL.error_rejected.de, 1],
+      ['zu lang (eigene Pruefung)', 200, { ...GUT, name: 'a'.repeat(201) }, SOLL.error_too_long.de, 0],
+      ['falsche Adresse (eigene Pruefung)', 200, { ...GUT, email: 'a@b' }, SOLL.error_rejected.de, 0],
+    ]) {
+      const { satz, aufrufe } = await satzBei(antwort, form);
+      pruefe(`S-W ${wie} -> nie der allgemeine Satz`, [
+        [satz !== ALLGEMEIN.de, 'zeigt den allgemeinen Satz'],
+        [satz === soll, `Satz: ${JSON.stringify(satz)}`],
+        [aufrufe === sollAufrufe, `${aufrufe} Aufruf(e), erwartet ${sollAufrufe}`],
+      ]);
+    }
+    const ok = await satzBei(200);
+    pruefe('S-W 200 -> kein Fehler', [[ok.satz === 'KEIN FEHLER', `Satz: ${JSON.stringify(ok.satz)}`]]);
+  } else {
+    pruefe('S-W sendContactForm laesst sich rufen', [[false, 'keine Funktion sendContactForm']]);
+  }
+
+  // S-Sie: die Sie-Form verschwindet aus dem Formular.
+  const SIE = /\b(Sie|Ihre?[nmrs]?)\b/;
+  const deSaetze = Object.keys(SOLL).map((k) => [k, sprachdatei.de?.forms?.validation?.[k]]);
+  const gebuendelt = readFileSync(join(AUSGABE, 'svc.mjs'), 'utf8');
+  pruefe('S-Sie kein Formularsatz in de in Sie-Form, kein fester Satz im Dienst', [
+    ...deSaetze.map(([k, w]) => [typeof w === 'string' && !SIE.test(w), `${k}: ${JSON.stringify(w)?.slice(0, 80)}`]),
+    [!gebuendelt.includes('Das Senden hat nicht geklappt') && !gebuendelt.includes('versuchen Sie'), 'svc.contact.ts traegt einen festen Satz'],
   ]);
   // Auch en fehlt (noch nicht geladen): i18next gibt den Schluessel zurueck.
   const nichtsGeladen = typeof kontaktFehlerSatz === 'function' && typeof KontaktFehler === 'function'
