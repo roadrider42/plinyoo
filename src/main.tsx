@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
@@ -22,20 +22,13 @@ import 'modern-normalize/modern-normalize.css';
 import { router } from './routes/AppRoutes';
 import './lib/i18n';
 
-// FOUC Prevention - Add loading class initially
-document.documentElement.classList.add('loading');
-
-const AppWithLoading = () => {
-  useEffect(() => {
-    // Remove loading class when React is ready
-    document.documentElement.classList.remove('loading');
-    document.documentElement.classList.add('loaded');
-  }, []);
-
-  return (
-    <RouterProvider router={router} future={{ v7_startTransition: true }} />
-  );
-};
+// Kein html.loading mehr (spoonup#532): Die Klasse machte den body unsichtbar, bis die Seite
+// fertig war — und damit auch den Suspense-Rückfall unten, der genau für die Wartezeit auf
+// translation.json da ist. Bei langsamer Leitung sah der Besucher eine leere Seite.
+// Prüfung: tests/ladehinweis-532.mjs (npm run pruefung:ladehinweis).
+const App = () => (
+  <RouterProvider router={router} future={{ v7_startTransition: true }} />
+);
 
 const queryClient = new QueryClient();
 
@@ -55,7 +48,7 @@ createRoot(document.getElementById('root')!).render(
           Lade Inhalte...
         </div>
       }>
-        <AppWithLoading />
+        <App />
       </Suspense>
     </QueryClientProvider>
   </React.StrictMode>

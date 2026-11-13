@@ -34,14 +34,6 @@ body {
   min-height: 100vh;
 }
 
-/* Loading state */
-html.loading body {
-  opacity: 0;
-}
-html.loaded body {
-  opacity: 1;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
