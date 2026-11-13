@@ -69,7 +69,7 @@
     "steps": [
       {
         "title": "Set two languages",
-        "description": "Your native language and the one you’re currently learning. Content appears in the learning language, one tap switches back."
+        "description": "Your native language and the one you’re currently learning. Cards appear in the learning language where they exist."
       },
       {
         "title": "Follow a topic",
@@ -97,15 +97,15 @@
       },
       {
         "title": "Two languages, one path",
-        "desc": "Your native language and the one you’re learning — one tap switches back."
+        "desc": "Your native language and the one you’re learning — you can set both."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "languages"
+        "kpi": "2",
+        "label": "interface languages"
       },
       {
         "kpi": "11",
@@ -160,11 +160,11 @@
       },
       {
         "q": "Can I bring my own content?",
-        "a": "Yes. You write and link your own cards, have questions generated for them and pull in content from Wikipedia or a shared page."
+        "a": "Yes, in the “Create” area. You write and link your own cards. You pull cards from Obsidian, from files and from Wikipedia into your own topics, or you take over the text of a web page with a bookmark. From files and Wikipedia pages you can also import vocabulary instead of learning cards."
       },
       {
         "q": "In which languages can I learn?",
-        "a": "The interface comes in seven languages. You set two: your native language and the one you are learning right now."
+        "a": "The interface is available in German and English. You set two languages: your native language and the one you are learning right now. Ten are available. Cards appear in the learning language where they exist."
       }
     ]
   },
@@ -212,7 +212,9 @@
       "subtitle": "Your specific requirements",
       "desc": "We develop individual solutions for your challenges.",
       "button": "Contact us"
-    }
+    },
+    "books_intro": "Here we present books. For four of them, the learning cards are already in the app, each book as its own topic: “Die Eroberer” (Roger Crowley), “Der Almanach von Naval Ravikant” (Eric Jorgenson), “Gewaltfreie Kommunikation” (Marshall B. Rosenberg) and “Die Macht der Geografie” (Tim Marshall).",
+    "books_title": "Books to play through"
   },
   "forms": {
     "validation": {

@@ -47,7 +47,7 @@
     "steps": [
       {
         "title": "Definir dois idiomas",
-        "description": "Seu idioma nativo e o que você está aprendendo. O conteúdo aparece no idioma de aprendizado, um toque volta."
+        "description": "Seu idioma nativo e o que você está aprendendo. Os cartões aparecem no idioma de aprendizado, quando existem nele."
       },
       {
         "title": "Seguir um tópico",
@@ -76,15 +76,15 @@
       },
       {
         "title": "Dois idiomas, um caminho",
-        "desc": "Seu idioma nativo e o que você está aprendendo — um toque volta."
+        "desc": "Seu idioma nativo e o que você está aprendendo — os dois você pode definir."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "idiomas"
+        "kpi": "2",
+        "label": "idiomas da interface"
       },
       {
         "kpi": "11",
@@ -139,11 +139,11 @@
       },
       {
         "q": "Posso trazer meus próprios conteúdos?",
-        "a": "Sim. Você escreve e vincula seus próprios cartões, gera perguntas para eles e traz conteúdo da Wikipédia ou de uma página compartilhada."
+        "a": "Sim, na área “Erstellen”. Você escreve e vincula seus próprios cartões. Você traz cartões do Obsidian, de arquivos e da Wikipédia para seus próprios tópicos, ou leva o texto de uma página da web com um favorito. De arquivos e de páginas da Wikipédia você também pode importar vocabulário em vez de cartões de aprendizado."
       },
       {
         "q": "Em quais idiomas posso aprender?",
-        "a": "A interface existe em sete idiomas. Você define dois: seu idioma nativo e o que está aprendendo agora."
+        "a": "A interface existe em alemão e inglês. Você define dois idiomas: seu idioma nativo e o que está aprendendo agora. Há dez para escolher. Os cartões aparecem no idioma de aprendizado, quando existem nele."
       }
     ]
   },
@@ -264,7 +264,9 @@
       "subtitle": "Seus requisitos específicos",
       "desc": "Desenvolvemos soluções individuais para seus desafios.",
       "button": "Contate-nos"
-    }
+    },
+    "books_intro": "Aqui apresentamos livros. Para quatro deles, os cartões já estão no app, cada livro como tópico próprio: “Die Eroberer” (Roger Crowley), “Der Almanach von Naval Ravikant” (Eric Jorgenson), “Gewaltfreie Kommunikation” (Marshall B. Rosenberg) e “Die Macht der Geografie” (Tim Marshall).",
+    "books_title": "Livros para percorrer"
   },
   "footer": {
     "brand": {
