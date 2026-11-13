@@ -30,6 +30,18 @@
 // Vor dem Fix (plinyoo 23de836): alle Fehlerfaelle rot -- die Seite zeigt
 // die Erfolgsansicht, weil svc.contact.ts { ok:false } zurueckgibt und
 // niemand .ok prueft.
+//
+// #533: Die Saetze stehen in du (Sprecher 2c335cf93) und kommen aus den
+// Sprachdateien. Dazu:
+//   zu_lang       Name mit 201 Zeichen (Grenze 200 wie plinyoo-contact): der
+//                 Browser erkennt too_big, zeigt "Ein Feld enthaelt zu viel
+//                 Text", ruft die Randfunktion nicht
+//   zu_lang_text  /kontakt, Nachricht mit 5001 Zeichen: dasselbe
+//   en-*, uk-*    /kontakt in en und uk: 429, 400, zu_lang je im Wortlaut der
+//                 Sprache, kein deutscher Satz
+//   uk-rueckfall  uk-Datei ohne die drei Saetze: der en-Satz, nie der Schluessel
+// Vor dem Fix (plinyoo 3e17abb): 429 und 400 zeigen die Sie-Saetze, zu_lang
+// ruft die Randfunktion und zeigt den 400-Satz, en/uk zeigen Deutsch -- rot.
 // Ausgang: 0 gruen, 1 rot, 2 nicht messbar.
 // ===========================================================================
 import { createRequire } from 'node:module';
@@ -68,11 +80,31 @@ try {
 const BILDER = process.env.KONTAKT_BILDER ? resolve(process.env.KONTAKT_BILDER) : null;
 if (BILDER && !existsSync(BILDER)) mkdirSync(BILDER, { recursive: true });
 
-// Die drei Saetze, woertlich (Sprecher 41314483).
+// Die Saetze, woertlich. 429, 400, zu_lang: du (Sprecher 2c335cf93, #533);
+// sonst: noch die Fassung aus #483 (41314483), du-Fassung offen.
 const SATZ = {
-  429: 'Gerade kommen sehr viele Anfragen an, Ihre Nachricht ist noch nicht bei uns. Bitte versuchen Sie es spätestens in einer Stunde noch einmal.',
-  400: 'Ihre Angaben konnten nicht angenommen werden. Bitte prüfen Sie Name, E-Mail-Adresse und Nachricht, kürzen Sie besonders lange Texte und senden Sie das Formular noch einmal.',
+  429: 'Gerade kommen sehr viele Anfragen an. Deine Nachricht ist noch nicht bei uns. Bitte versuche es spätestens in einer Stunde noch einmal.',
+  400: 'Deine Angaben konnten nicht angenommen werden. Bitte prüfe Name, E-Mail-Adresse und Nachricht, kürze besonders lange Texte und sende das Formular noch einmal.',
+  zu_lang: 'Ein Feld enthält zu viel Text. Deine Nachricht ist noch nicht bei uns. Bitte kürze den Text und sende das Formular noch einmal.',
   sonst: 'Das Senden hat nicht geklappt. Bitte versuchen Sie es in ein paar Minuten noch einmal.',
+};
+// Die Sie-Saetze aus #483 duerfen nirgends mehr erscheinen.
+const ALT_SIE = [
+  'Gerade kommen sehr viele Anfragen an, Ihre Nachricht ist noch nicht bei uns.',
+  'Ihre Angaben konnten nicht angenommen werden.',
+];
+// en und uk (Wortlaut wie tests/kontakt-meldung-533.mjs).
+const FREMD = {
+  en: {
+    429: 'We are receiving a lot of requests right now. Your message has not reached us yet. Please try again in an hour at the latest.',
+    400: 'Your details could not be accepted. Please check your name, email address and message, shorten particularly long texts and send the form again.',
+    zu_lang: 'One field contains too much text. Your message has not reached us yet. Please shorten the text and send the form again.',
+  },
+  uk: {
+    429: 'Зараз надходить дуже багато запитів. Твоє повідомлення ще не дійшло до нас. Будь ласка, спробуй ще раз щонайпізніше за годину.',
+    400: 'Твої дані не вдалося прийняти. Будь ласка, перевір ім’я, адресу електронної пошти та повідомлення, скороти особливо довгі тексти і надішли форму ще раз.',
+    zu_lang: 'Одне з полів містить забагато тексту. Твоє повідомлення ще не дійшло до нас. Будь ласка, скороти текст і надішли форму ще раз.',
+  },
 };
 const SERVER_MELDUNG = 'ATTRAPPE-SERVERMELDUNG bitte nicht anzeigen';
 
@@ -95,15 +127,29 @@ const AUSGAENGE = [
   // Fehler" in kontaktFehlerSatz. Er muss den allgemeinen Satz zeigen, weder
   // einen leeren Hinweis noch den englischen Systemtext.
   { id: 'undefined', antwort: 'undefined', satz: SATZ.sonst, servertext: ['Cannot read', 'undefined', 'TypeError'] },
+  // #533: zu lang -- erkannt im Browser, kein Aufruf. Kaeme er doch durch,
+  // antwortet die Attrappe wie die Randfunktion mit 400 ohne Grund.
+  { id: 'zu_lang', name: 'a'.repeat(201), antwort: { status: 400, body: { error: 'Bad Request' } }, aufrufe: 0, satz: SATZ.zu_lang, servertext: ['Bad Request', 'too_big', 'Too big'] },
+];
+const KONTAKT_400 = { status: 400, body: { error: 'Bad Request' } };
+// Nur /kontakt: Nachricht zu lang, und die Sprachen.
+const NUR_KONTAKT = [
+  { id: 'zu_lang_text', nachricht: 'a'.repeat(5001), antwort: KONTAKT_400, aufrufe: 0, satz: SATZ.zu_lang, servertext: ['Bad Request', 'too_big'] },
+  ...['en', 'uk'].flatMap((l) => [
+    { id: `${l}-429`, sprache: l, antwort: { status: 429, body: { error: 'GRENZE_ERREICHT', meldung: SERVER_MELDUNG } }, satz: FREMD[l][429], servertext: ['GRENZE_ERREICHT', SERVER_MELDUNG] },
+    { id: `${l}-400`, sprache: l, antwort: KONTAKT_400, satz: FREMD[l][400], servertext: ['Bad Request'] },
+    { id: `${l}-zu_lang`, sprache: l, name: 'a'.repeat(201), antwort: KONTAKT_400, aufrufe: 0, satz: FREMD[l].zu_lang, servertext: ['Bad Request', 'too_big'] },
+  ]),
+  { id: 'uk-rueckfall', sprache: 'uk', ohneSaetze: true, antwort: { status: 429, body: { error: 'GRENZE_ERREICHT', meldung: SERVER_MELDUNG } }, satz: FREMD.en[429], servertext: ['GRENZE_ERREICHT', SERVER_MELDUNG, 'forms.validation'] },
 ];
 
 // Erfolgsansicht = forms.success.title (de); Formular = die Absendeschaltflaeche.
 const ERFOLG_UEBERSCHRIFT = 'Vielen Dank!';
 const SEITEN = [
-  { id: 'kontakt', pfad: '/#/kontakt', fuellen: async (p, email) => { await p.fill('input[name=name]', 'Wer'); await p.fill('textarea[name=message]', 'Hallo'); await p.fill('input[name=email]', email); } },
-  { id: 'mitmachen', pfad: '/#/mitmachen', fuellen: async (p, email) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', email); } },
-  { id: 'investieren', pfad: '/#/investieren', fuellen: async (p, email) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', email); } },
-  { id: 'zugang', pfad: '/#/zugang', fuellen: async (p, email) => { await p.fill('input[name=name]', 'Wer'); await p.fill('input[name=email]', email); } },
+  { id: 'kontakt', pfad: '/#/kontakt', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('textarea[name=message]', a.nachricht ?? 'Hallo'); await p.fill('input[name=email]', email); } },
+  { id: 'mitmachen', pfad: '/#/mitmachen', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('input[name=email]', email); } },
+  { id: 'investieren', pfad: '/#/investieren', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('input[name=email]', email); } },
+  { id: 'zugang', pfad: '/#/zugang', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('input[name=email]', email); } },
 ];
 
 const server = await vite.createServer({ root: WURZEL, logLevel: 'silent', server: { port: 0, host: '127.0.0.1', strictPort: false } });
@@ -128,9 +174,19 @@ async function fall(seite, ausgang) {
   // --single-process, und dann traegt ein Prozess verlaesslich nur eine Seite.
   const browser = await chromium.launch({ args: ['--single-process'] });
   try {
-    const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, locale: 'de-DE', deviceScaleFactor: 2 });
+    const sprache = ausgang.sprache ?? 'de';
+    const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, locale: sprache, deviceScaleFactor: 2 });
     const page = await ctx.newPage();
-    await page.addInitScript(() => { try { localStorage.setItem('i18nextLng', 'de'); } catch { /* egal */ } });
+    await page.addInitScript((l) => { try { localStorage.setItem('i18nextLng', l); } catch { /* egal */ } }, sprache);
+    if (ausgang.ohneSaetze) {
+      // Die Sprachdatei, wie sie aussaehe, wenn ihr die drei Saetze fehlten.
+      await page.route(`**/locales/${sprache}/translation.json`, async (route) => {
+        const r = await route.fetch();
+        const j = await r.json();
+        for (const k of ['error_rate_limit', 'error_too_long', 'error_rejected']) delete j.forms?.validation?.[k];
+        await route.fulfill({ response: r, body: JSON.stringify(j), contentType: 'application/json' });
+      });
+    }
     let aufrufe = 0;
     if (ausgang.antwort === 'undefined') {
       // Kein Netzweg kann "undefined" liefern; deshalb wird fetch selbst
@@ -154,7 +210,7 @@ async function fall(seite, ausgang) {
     await page.goto(BASIS + seite.pfad, { waitUntil: 'networkidle' });
     const absenden = page.locator('form button[type=submit]');
     await absenden.waitFor({ timeout: 15000 });
-    await seite.fuellen(page, ausgang.email ?? 'wer@example.org');
+    await seite.fuellen(page, ausgang.email ?? 'wer@example.org', ausgang);
     if (ausgang.absenden === 'enter') await page.press('input[name=email]', 'Enter');
     else await absenden.click();
     // Warten, bis die Seite reagiert hat: Erfolgsansicht ODER irgendein Satz.
@@ -183,11 +239,11 @@ async function fall(seite, ausgang) {
       b.push([erfolg === 0, 'zeigt die Erfolgsansicht']);
       b.push([formular === 1, 'Formular ist weg']);
       b.push([imBild === true, `Satz nach dem Tippen nicht ganz im Bild (y ${box ? Math.round(box.y) : '-'}..${box ? Math.round(box.y + box.height) : '-'} von 844)`]);
-      for (const s of Object.values(SATZ)) if (s !== ausgang.satz) b.push([!text.includes(s), `zeigt einen fremden Satz: ${s.slice(0, 40)}`]);
+      for (const s of [...Object.values(SATZ), ...ALT_SIE]) if (s !== ausgang.satz) b.push([!text.includes(s), `zeigt einen fremden Satz: ${s.slice(0, 40)}`]);
       for (const s of ausgang.servertext) b.push([!text.includes(s), `zeigt Servertext: ${s}`]);
     } else {
       b.push([erfolg === 1, 'Erfolgsansicht fehlt']);
-      for (const s of Object.values(SATZ)) b.push([!text.includes(s), `zeigt bei Erfolg einen Fehlersatz: ${s.slice(0, 40)}`]);
+      for (const s of [...Object.values(SATZ), ...ALT_SIE]) b.push([!text.includes(s), `zeigt bei Erfolg einen Fehlersatz: ${s.slice(0, 40)}`]);
     }
     pruefe(`${seite.id} ${ausgang.id}`, b);
   } catch (e) {
@@ -199,6 +255,7 @@ async function fall(seite, ausgang) {
 
 try {
   for (const seite of SEITEN) for (const ausgang of AUSGAENGE) await fall(seite, ausgang);
+  for (const ausgang of NUR_KONTAKT) await fall(SEITEN[0], ausgang);
 } finally {
   await server.close();
 }

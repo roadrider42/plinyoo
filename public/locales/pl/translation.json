@@ -225,6 +225,9 @@
     "validation": {
       "error_title": "Błąd",
       "error_generic": "Wystąpił nieoczekiwany błąd.",
+      "error_rate_limit": "Obecnie otrzymujemy bardzo dużo zapytań. Twoja wiadomość nie dotarła jeszcze do nas. Spróbuj ponownie najpóźniej za godzinę.",
+      "error_too_long": "Jedno z pól zawiera zbyt dużo tekstu. Twoja wiadomość nie dotarła jeszcze do nas. Skróć tekst i wyślij formularz ponownie.",
+      "error_rejected": "Twoich danych nie udało się przyjąć. Sprawdź imię, adres e-mail i wiadomość, skróć szczególnie długie teksty i wyślij formularz ponownie.",
       "name_email_required": "Imię i adres e-mail są wymagane.",
       "success_title": "Wysłano pomyślnie",
       "success_message": "Dziękujemy! Otrzymaliśmy Twoją wiadomość."
