@@ -57,7 +57,8 @@
     "pruefung:faden-wege": "node scripts/pruefe-faden-wege.mjs",
     "pruefung:ohne-entwurf": "node scripts/pruefe-ohne-entwurf.mjs",
     "pruefung:kontakt-grenze": "node supabase/tests/plinyoo-contact-483.mjs",
-    "pruefung:kontaktformular": "node tests/kontaktformular-483.mjs"
+    "pruefung:kontaktformular": "node tests/kontaktformular-483.mjs",
+    "pruefung:kontakt-meldung": "node tests/kontakt-meldung-533.mjs"
   },
   "eslintConfig": {
     "extends": [

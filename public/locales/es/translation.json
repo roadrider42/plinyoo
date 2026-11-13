@@ -182,6 +182,10 @@
     "validation": {
       "error_title": "Error",
       "error_generic": "Ocurrió un error inesperado.",
+      "error_rate_limit": "Ahora mismo estamos recibiendo muchas solicitudes. Tu mensaje todavía no ha llegado a nosotros. Por favor, inténtalo de nuevo en una hora como máximo.",
+      "error_too_long": "Un campo contiene demasiado texto. Tu mensaje todavía no ha llegado a nosotros. Por favor, acorta el texto y envía el formulario de nuevo.",
+      "error_rejected": "Tus datos no se han podido aceptar. Por favor, revisa el nombre, el correo electrónico y el mensaje, acorta los textos especialmente largos y envía el formulario de nuevo.",
+      "error_send_failed": "No se ha podido enviar. Por favor, inténtalo de nuevo más tarde.",
       "name_email_required": "El nombre y el correo electrónico son obligatorios.",
       "success_title": "Enviado con éxito",
       "success_message": "¡Gracias! Hemos recibido tu mensaje."
