@@ -1,0 +1,66 @@
+# Prüfungen bei jedem PR (spoonup #538).
+#
+# deploy.yml startet nur beim Push auf main und baut nur. Die zwei Prüfungen
+# der Kontaktformulare (spoonup #483) liefen bis hierher nur von Hand. Dieser
+# Ablauf fährt sie bei jedem PR, auf jeden Zielzweig, und ist damit rot, bevor
+# ein Fehler nach main kommt.
+#
+#   pruefung:kontakt-grenze   supabase/tests/plinyoo-contact-483.mjs -- die
+#                             ausgelieferte Randfunktion plinyoo-contact, gebündelt
+#                             mit esbuild, ohne Netz und ohne Datenbank. G1 vergleicht
+#                             die Grenze mit spoonup; dafür wird roadrider42/spoonup
+#                             (öffentlich) mit genau dieser einen Datei ausgecheckt.
+#   pruefung:kontaktformular  tests/kontaktformular-483.mjs -- Vite plus Chromium bei
+#                             390 x 844, die vier Formulare. plinyoo führt Playwright
+#                             nicht als Abhängigkeit; installiert wird hier dieselbe
+#                             Fassung wie in spoonup (1.58.2), ohne package.json zu ändern.
+#
+# Beide Prüfungen enden mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
+# ist alles vorhanden, was sie brauchen -- "nicht messbar" ist hier also ein
+# Fehler des Ablaufs und macht den Lauf rot, nicht grün.
+name: Pruefungen
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pruefungen-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  kontakt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Checkout spoonup (nur die Grenze fuer G1)
+        uses: actions/checkout@v4
+        with:
+          repository: roadrider42/spoonup
+          ref: main
+          path: _spoonup
+          sparse-checkout: supabase/functions/contact-fom-email
+          sparse-checkout-cone-mode: true
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+      - name: Install dependencies
+        run: npm ci
+      - name: pruefung:kontakt-grenze
+        env:
+          SPOONUP_WURZEL: ${{ github.workspace }}/_spoonup
+        run: npm run pruefung:kontakt-grenze
+      - name: Playwright und Chromium
+        run: |
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+      - name: pruefung:kontaktformular
+        env:
+          PLAYWRIGHT_MODUL: ${{ github.workspace }}/node_modules/playwright
+        run: npm run pruefung:kontaktformular

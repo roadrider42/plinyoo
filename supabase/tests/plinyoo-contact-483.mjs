@@ -52,9 +52,11 @@
 // K1-K6 und D1 schliessen zusaetzlich den Empfaenger (CONTACT_RECEIVER_EMAIL)
 // in Antwort UND Protokoll aus (alle Konsolenkanaele), D2 tat das schon.
 //
-// G1 ist der EINZIGE Vergleich der beiden Grenzen. Er laeuft nur hier, von
-// Hand (keine CI), und braucht den spoonup-Stand, der die Konstante traegt
-// (SPOONUP_REF); spoonup selbst prueft diese Seite nicht.
+// G1 ist der EINZIGE Vergleich der beiden Grenzen. Er laeuft hier -- von Hand
+// und seit spoonup #538 bei jedem PR in .github/workflows/pruefungen.yml, das
+// spoonup main nach _spoonup auscheckt (SPOONUP_WURZEL) -- und braucht den
+// spoonup-Stand, der die Konstante traegt (von Hand: SPOONUP_REF); spoonup
+// selbst prueft diese Seite nicht.
 //
 // Ohne Fix (plinyoo 876929b, bytegleich mit live): G1, G2, K1-K6, F1-F4, D1, D2 rot.
 // Ausgang: 0 gruen, 1 rot, 2 nicht messbar.
