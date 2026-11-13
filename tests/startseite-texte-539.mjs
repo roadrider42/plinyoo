@@ -9,7 +9,7 @@
 // Dazu zwei Prüfungen, die mehr sagen als „vorhanden“:
 //   1. examples.books_title und books_intro sind außerhalb von de nicht der deutsche Wortlaut
 //      (eine Kopie des Rückfalls wäre „vorhanden“ und trotzdem falsch).
-//   2. faq.items[2].a nennt in es, fr, pl, pt, uk den Bereich „Erstellen“ und nicht „Create“.
+//   2. faq.items[2].a nennt in en, es, fr, pl, pt, uk den Bereich „Erstellen“ und nicht „Create“.
 //      Gemessen am 13.11.2026 in der App (spoonup origin/main d026a1031): die untere Leiste setzt
 //      label 'Erstellen' aus dom.dashboard.types.ts:190,200 ohne Übersetzung ein
 //      (ui-UntereLeiste.tsx:339), also in jeder Sprache. Ändert die App das, ändert sich dieser Satz.
@@ -87,7 +87,7 @@ for (const s of ['examples.books_title', 'examples.books_intro']) {
   }
 }
 
-for (const l of ['es', 'fr', 'pl', 'pt', 'uk']) {
+for (const l of ['en', 'es', 'fr', 'pl', 'pt', 'uk']) {
   const a = holen(daten[l], 'faq.items[2].a');
   if (typeof a !== 'string' || !a.includes('Erstellen') || a.includes('Create')) {
     befunde.push(`${l}: faq.items[2].a nennt nicht den Bereichsnamen der App „Erstellen“ (oder zusätzlich „Create“)`);
