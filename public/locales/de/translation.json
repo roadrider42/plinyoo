@@ -81,7 +81,7 @@
     "steps": [
       {
         "title": "Zwei Sprachen setzen",
-        "description": "Deine Muttersprache und die, in der du gerade lernst. Inhalte erscheinen in der Lernsprache, ein Tipp wechselt zurück."
+        "description": "Deine Muttersprache und die, in der du gerade lernst. Karten erscheinen in der Lernsprache, soweit es sie dort gibt."
       },
       {
         "title": "Einem Thema folgen",
@@ -109,15 +109,15 @@
       },
       {
         "title": "Zwei Sprachen, ein Weg",
-        "desc": "Deine Muttersprache und die, in der du lernst — ein Tipp wechselt zurück."
+        "desc": "Deine Muttersprache und die, in der du lernst — beide kannst du einstellen."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "Sprachen"
+        "kpi": "2",
+        "label": "Sprachen der Oberfläche"
       },
       {
         "kpi": "11",
@@ -449,11 +449,11 @@
       },
       {
         "q": "Kann ich eigene Inhalte einbringen?",
-        "a": "Ja. Du schreibst und verlinkst eigene Karten, lässt Fragen dazu erzeugen und holst Inhalte aus Wikipedia oder von einer geteilten Seite."
+        "a": "Ja, im Bereich „Erstellen“. Du schreibst und verlinkst eigene Karten. Du holst Karten aus Obsidian, aus Dateien und aus Wikipedia in deine eigenen Themen, oder du übernimmst den Text einer Webseite per Lesezeichen. Aus Dateien und Wikipedia-Seiten lassen sich auch Vokabeln statt Lernkarten importieren."
       },
       {
         "q": "In welchen Sprachen kann ich lernen?",
-        "a": "Die Oberfläche gibt es in sieben Sprachen. Du setzt zwei: deine Muttersprache und die, in der du gerade lernst."
+        "a": "Die Oberfläche gibt es auf Deutsch und Englisch. Du stellst zwei Sprachen ein: deine Muttersprache und die, in der du gerade lernst. Zur Wahl stehen zehn. Karten erscheinen in der Lernsprache, soweit es sie dort gibt."
       }
     ]
   },
@@ -504,7 +504,7 @@
       "button": "Kontakt aufnehmen"
     },
     "books_title": "Bücher zum Durchspielen",
-    "books_intro": "Aus jedem Buch wird ein Wissensgraph: Karten, Verbindungen und Fragen. Such dir eins aus.",
+    "books_intro": "Hier stellen wir Bücher vor. Zu vier davon gibt es die Lernkarten schon in der App, jedes Buch als eigenes Thema: „Die Eroberer“ (Roger Crowley), „Der Almanach von Naval Ravikant“ (Eric Jorgenson), „Gewaltfreie Kommunikation“ (Marshall B. Rosenberg) und „Die Macht der Geografie“ (Tim Marshall).",
     "new_badge": "Neu",
     "book_subtitle": "Buchvorstellung",
     "book_button": "Zur Buchseite",
@@ -520,7 +520,7 @@
       "error_send_failed": "Das Senden hat nicht geklappt. Bitte versuche es später noch einmal.",
       "name_email_required": "Name und E-Mail sind erforderlich.",
       "success_title": "Erfolgreich gesendet",
-      "success_message": "Vielen Dank! Wir haben Ihre Nachricht erhalten."
+      "success_message": "Vielen Dank! Wir haben deine Nachricht erhalten."
     },
     "success": {
       "title": "Vielen Dank!",
@@ -551,12 +551,12 @@
       "github_label": "GitHub",
       "motivation_label": "Warum du & was dich reizt"
     },
-    "privacy_notice": "Die angegebenen Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.",
+    "privacy_notice": "Die angegebenen Daten werden ausschließlich zur Bearbeitung deiner Anfrage verwendet.",
     "back_to_home": "Zurück zur Startseite",
     "use_case": {
       "title": "Kontakt & Use Case",
-      "subtitle": "Beschreiben Sie uns Ihre Idee oder Herausforderung. Wir finden gemeinsam eine Lösung.",
-      "message_placeholder": "Erzählen Sie uns von Ihrem Anliegen..."
+      "subtitle": "Beschreibe uns deine Idee oder Herausforderung. Wir finden gemeinsam eine Lösung.",
+      "message_placeholder": "Erzähl uns von deinem Anliegen..."
     },
     "invest": {
       "title": "Investieren",

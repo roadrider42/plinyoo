@@ -47,7 +47,7 @@
     "steps": [
       {
         "title": "Configurar dos idiomas",
-        "description": "Tu idioma materno y el que estás aprendiendo. Los contenidos aparecen en el idioma de aprendizaje, un toque cambia de vuelta."
+        "description": "Tu idioma materno y el que estás aprendiendo. Las tarjetas aparecen en el idioma de aprendizaje, siempre que existan en él."
       },
       {
         "title": "Seguir un tema",
@@ -76,15 +76,15 @@
       },
       {
         "title": "Dos idiomas, un camino",
-        "desc": "Tu idioma materno y el que estás aprendiendo: un toque cambia de vuelta."
+        "desc": "Tu idioma materno y el que estás aprendiendo: puedes elegir ambos."
       }
     ]
   },
   "outcomes": {
     "items": [
       {
-        "kpi": "7",
-        "label": "idiomas"
+        "kpi": "2",
+        "label": "idiomas de la interfaz"
       },
       {
         "kpi": "11",
@@ -139,11 +139,11 @@
       },
       {
         "q": "¿Puedo aportar mis propios contenidos?",
-        "a": "Sí. Escribes y enlazas tus propias tarjetas, haces generar preguntas y traes contenido de Wikipedia o de una página compartida."
+        "a": "Sí, en el área «Erstellen». Escribes y enlazas tus propias tarjetas. Traes tarjetas de Obsidian, de archivos y de Wikipedia a tus propios temas, o tomas el texto de una página web con un marcador. De archivos y de páginas de Wikipedia también puedes importar vocabulario en lugar de tarjetas de aprendizaje."
       },
       {
         "q": "¿En qué idiomas puedo aprender?",
-        "a": "La interfaz está disponible en siete idiomas. Tú eliges dos: tu idioma materno y el que estás aprendiendo ahora."
+        "a": "La interfaz está disponible en alemán e inglés. Eliges dos idiomas: tu idioma materno y el que estás aprendiendo ahora. Hay diez para elegir. Las tarjetas aparecen en el idioma de aprendizaje, siempre que existan en él."
       }
     ]
   },
@@ -192,7 +192,7 @@
     },
     "success": {
       "title": "¡Gracias!",
-      "message": "Gracias por su interés. ¡Nos pondremos en contacto!"
+      "message": "Gracias por tu interés. ¡Nos pondremos en contacto!"
     },
     "button_sending": "Enviando...",
     "button_send_interest": "Enviar interés",
@@ -210,28 +210,28 @@
       "role_label": "Rol/Habilidad",
       "role_placeholder": "Frontend / Backend / Producto / ...",
       "availability_label": "Disponibilidad",
-      "availability_placeholder": "Por favor, seleccione",
+      "availability_placeholder": "Por favor, elige",
       "availability_options": {
         "fulltime": "Tiempo completo",
         "parttime": "Tiempo parcial",
         "freelance": "Freelance"
       },
       "github_label": "GitHub",
-      "motivation_label": "Por qué usted y qué le entusiasma"
+      "motivation_label": "Por qué tú y qué te entusiasma"
     },
-    "privacy_notice": "Los datos proporcionados se utilizarán exclusivamente para procesar su solicitud.",
+    "privacy_notice": "Los datos proporcionados se utilizarán exclusivamente para procesar tu solicitud.",
     "back_to_home": "Volver a la página principal",
     "use_case": {
       "title": "Contacto y Caso de Uso",
-      "subtitle": "Descríbanos su idea o desafío. Encontraremos una solución juntos.",
-      "message_placeholder": "Cuéntenos su inquietud..."
+      "subtitle": "Descríbenos tu idea o desafío. Encontraremos una solución juntos.",
+      "message_placeholder": "Cuéntanos tu inquietud..."
     },
     "invest": {
       "title": "Invertir",
       "subtitle": "Plinyoo hace que el aprendizaje sea efectivo, tangible y continuo. Juntos, estamos construyendo un producto que apoya el desarrollo a largo plazo: medible, escalable y práctico.",
       "subtitle_details": "Impacto en el mundo real • enfoque claro en el producto • ecosistema de aprendizaje escalable.",
       "investment_range_label": "Rango de inversión",
-      "investment_range_placeholder": "Por favor, seleccione",
+      "investment_range_placeholder": "Por favor, elige",
       "investment_range_options": {
         "up_to_5k": "hasta 5k",
         "5k_to_20k": "5k–20k",
@@ -268,7 +268,9 @@
       "subtitle": "Tus requisitos específicos",
       "desc": "Desarrollamos soluciones individuales para tus desafíos.",
       "button": "Contáctanos"
-    }
+    },
+    "books_intro": "Aquí presentamos libros. De cuatro de ellos, las tarjetas ya están en la app, cada libro como tema propio: «Die Eroberer» (Roger Crowley), «Der Almanach von Naval Ravikant» (Eric Jorgenson), «Gewaltfreie Kommunikation» (Marshall B. Rosenberg) y «Die Macht der Geografie» (Tim Marshall).",
+    "books_title": "Libros para recorrer"
   },
   "footer": {
     "brand": {
@@ -303,7 +305,7 @@
     },
     "kontakt": {
       "title": "Contacto para derechos de uso",
-      "text": "Dirija las consultas sobre derechos de uso a heiko@plinyoo.com."
+      "text": "Dirige las consultas sobre derechos de uso a heiko@plinyoo.com."
     },
     "back_to_home": "Volver al inicio"
   },
