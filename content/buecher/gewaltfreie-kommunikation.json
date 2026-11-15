@@ -1482,7 +1482,24 @@
       ]
     }
   ],
-  "bruecken": [],
+  "bruecken": [
+    {
+      "von": [
+        3
+      ],
+      "titel": "Isaacson: Handlung, nicht Person",
+      "url": "/buch/isaacson-elon-musk/",
+      "ziel": "isaacson-elon-musk"
+    },
+    {
+      "von": [
+        6
+      ],
+      "titel": "Isaacson: Handlung, nicht Person",
+      "url": "/buch/isaacson-elon-musk/",
+      "ziel": "isaacson-elon-musk"
+    }
+  ],
   "platzhalter": false,
   "coverBreite": 1062,
   "coverHoehe": 1500
