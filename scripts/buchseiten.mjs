@@ -501,7 +501,11 @@ async function uebersichtBild(sichtbar, covers, ziel) {
   if (mit.length < 2) return null;
   const W = 1200, H = 630, CH = 380;
   const font = `font-family="Helvetica Neue, Helvetica, Arial, Liberation Sans, DejaVu Sans, sans-serif"`;
-  const lagen = mit.map((x, k) => ({ x, left: 560 + k * 105, top: 125 + (k % 2) * 20, w: Math.round(CH * covers[x.slug].w / covers[x.slug].h) }));
+  // Abstand der Cover im Fächer: 105 px; ist das letzte Cover breit (Buch 10: Nr. 6 liegt an vierter Stelle, 269 px), wird der Abstand
+  // gerade so weit verkleinert, dass rechts 70 px frei bleiben (15.11.2026; vorher brach der Bau mit „Cover reichen bis x 1144“ ab).
+  const breiten = mit.map((x) => Math.round(CH * covers[x.slug].w / covers[x.slug].h));
+  const schritt = mit.length > 1 ? Math.min(105, Math.floor((W - 70 - 560 - breiten[mit.length - 1]) / (mit.length - 1))) : 105;
+  const lagen = mit.map((x, k) => ({ x, left: 560 + k * schritt, top: 125 + (k % 2) * 20, w: breiten[k] }));
   const rechts = Math.max(...lagen.map((l) => l.left + l.w));
   if (rechts > W - 70) throw new Error(`/buch/og.jpg: Cover reichen bis x ${rechts}, rechter Rand muss 70 px frei bleiben`);
   const schatten = lagen.map((l) => `<rect x="${l.left}" y="${l.top + 10}" width="${l.w}" height="${CH}" rx="6" fill="#000" opacity="0.5"/>`).join('');
