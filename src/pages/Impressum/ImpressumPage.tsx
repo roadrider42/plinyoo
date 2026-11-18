@@ -57,8 +57,8 @@ export default function Impressum() {
           <div>
             <h2 className="text-xl font-semibold text-primary mb-4">Registereintrag</h2>
             <div className="space-y-1 text-text-muted">
-              <p><span className="font-medium">Amtsgericht:</span> Amtsgericht Kassel</p>
-              <p>HRB 20918</p>
+              <p><span className="font-medium">Registergericht:</span> Amtsgericht Kassel</p>
+              <p><span className="font-medium">Handelsregisternummer:</span> HRB 20918</p>
             </div>
           </div>
 

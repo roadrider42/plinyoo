@@ -16,6 +16,9 @@
 //    gebuendelt und mit renderToStaticMarkup gerendert; gelesen wird der
 //    Text der Seite, nicht die Quelldatei:
 //    - "HRB 20918" und "Amtsgericht Kassel" stehen da,
+//    - je eine Zeile "Registergericht: Amtsgericht Kassel" und
+//      "Handelsregisternummer: HRB 20918", kein "Amtsgericht:" (Urteil
+//      Sprecher, 18.11.2026; gegen 5e2c0bb rot, ausprobiert),
 //    - Firma "Plinyoo UG (haftungsbeschränkt)" ohne "i. Gr.",
 //    - kein "nach Eintragung", kein "USt".
 // F  Kein "i. Gr." hinter dem Firmennamen in einer Sprachdatei
@@ -98,9 +101,17 @@ try {
 }
 const text = html.replace(/<[^>]+>/g, '\n').replace(/&amp;/g, '&');
 const zeilen = text.split('\n').map((z) => z.trim()).filter(Boolean);
+// Text je <p>, innere Auszeichnung (<span>) entfernt: so liest man die Zeile.
+const absaetze = [...html.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/g)]
+  .map((m) => m[1].replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim());
 pruefe('R gerenderte Seite', [
-  [zeilen.includes('HRB 20918'), 'Zeile "HRB 20918" fehlt'],
+  [text.includes('HRB 20918'), '"HRB 20918" fehlt'],
   [text.includes('Amtsgericht Kassel'), '"Amtsgericht Kassel" fehlt'],
+  // Wortlaut nach Urteil des Sprechers (spoonup claude/_582red/sprecher-urteil.md,
+  // Zeile 5, FREI): je <p> Beschriftung und Wert, "Amtsgericht:" entfaellt.
+  [absaetze.includes('Registergericht: Amtsgericht Kassel'), 'Zeile "Registergericht: Amtsgericht Kassel" fehlt'],
+  [absaetze.includes('Handelsregisternummer: HRB 20918'), 'Zeile "Handelsregisternummer: HRB 20918" fehlt'],
+  [!/Amtsgericht:/.test(text), '"Amtsgericht:" steht noch da (Wort doppelt)'],
   [zeilen.includes('Plinyoo UG (haftungsbeschränkt)'), 'Zeile "Plinyoo UG (haftungsbeschränkt)" fehlt'],
   [!/i\.\s?Gr\./.test(text), '"i. Gr." steht noch da'],
   [!/nach Eintragung/.test(text), '"nach Eintragung" steht noch da'],
