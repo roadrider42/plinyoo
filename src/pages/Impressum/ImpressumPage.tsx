@@ -19,7 +19,7 @@ export default function Impressum() {
           <div>
             <h2 className="text-2xl font-semibold text-primary mb-4">Betreiber der Website</h2>
             <div className="space-y-2 text-text-muted">
-              <p>Plinyoo UG (haftungsbeschränkt) i. Gr.</p>
+              <p>Plinyoo UG (haftungsbeschränkt)</p>
               <p>Theodor-Fliedner-Str. 1d</p>
               <p>34121 Kassel</p>
               <p>Deutschland</p>
@@ -57,10 +57,8 @@ export default function Impressum() {
           <div>
             <h2 className="text-xl font-semibold text-primary mb-4">Registereintrag</h2>
             <div className="space-y-1 text-text-muted">
-              <p><span className="font-medium">Amtsgericht:</span> Amtsgericht Kassel</p>
-              <p className="text-sm text-text-faint italic">
-                HRB-Nummer und USt-IdNr. werden nach Eintragung ergänzt
-              </p>
+              <p><span className="font-medium">Registergericht:</span> Amtsgericht Kassel</p>
+              <p><span className="font-medium">Handelsregisternummer:</span> HRB 20918</p>
             </div>
           </div>
 

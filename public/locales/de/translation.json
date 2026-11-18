@@ -611,7 +611,7 @@
   "privacy": {
     "title": "Datenschutzerklärung",
     "stand": "Stand: 18. Oktober 2026",
-    "intro": "Hier steht, welche Daten beim Besuch dieser Website und bei Anfragen über die Formulare entstehen, wozu wir sie nutzen und welche Rechte du hast. Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die Plinyoo UG (haftungsbeschränkt) i. Gr. („plinyoo“, „wir“), Theodor-Fliedner-Str. 1d, 34121 Kassel, erreichbar unter heiko@plinyoo.com. Die Angaben stehen auch im Impressum.",
+    "intro": "Hier steht, welche Daten beim Besuch dieser Website und bei Anfragen über die Formulare entstehen, wozu wir sie nutzen und welche Rechte du hast. Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die Plinyoo UG (haftungsbeschränkt) („plinyoo“, „wir“), Theodor-Fliedner-Str. 1d, 34121 Kassel, erreichbar unter heiko@plinyoo.com. Die Angaben stehen auch im Impressum.",
     "hosting": {
       "title": "Hosting und Verbindungsdaten",
       "text": "Diese Website wird über GitHub Pages ausgeliefert (GitHub Inc., USA). Bei jedem Aufruf verarbeitet der Hosting-Anbieter technisch notwendige Verbindungsdaten, nach seiner Datenschutzerklärung unter anderem die IP-Adresse sowie Datum, Uhrzeit und die verweisende Seite. Das dient dem sicheren und stabilen Betrieb; Rechtsgrundlage ist unser berechtigtes Interesse daran (Art. 6 Abs. 1 lit. f DSGVO). Nach eigenen Angaben stützt GitHub Übermittlungen in die USA auf Standardvertragsklauseln der EU-Kommission und hält das EU-U.S. Data Privacy Framework ein."
@@ -650,7 +650,7 @@
     },
     "contact": {
       "title": "Kontakt",
-      "text": "Bei Fragen zum Datenschutz erreichst du uns unter heiko@plinyoo.com (Plinyoo UG (haftungsbeschränkt) i. Gr., zu Händen Heiko Miertzsch)."
+      "text": "Bei Fragen zum Datenschutz erreichst du uns unter heiko@plinyoo.com (Plinyoo UG (haftungsbeschränkt), zu Händen Heiko Miertzsch)."
     },
     "back_to_home": "Zur Startseite"
   },
@@ -659,11 +659,11 @@
     "stand": "Stand: 2026",
     "urheberrecht": {
       "title": "Urheberrecht",
-      "text": "Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) sind – sofern nicht anders gekennzeichnet – Eigentum der Plinyoo UG (haftungsbeschränkt) i. Gr. und urheberrechtlich geschützt. Jede Art der Nutzung außerhalb der gesetzlichen Schrankenbestimmungen bedarf der vorherigen Zustimmung."
+      "text": "Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) sind – sofern nicht anders gekennzeichnet – Eigentum der Plinyoo UG (haftungsbeschränkt) und urheberrechtlich geschützt. Jede Art der Nutzung außerhalb der gesetzlichen Schrankenbestimmungen bedarf der vorherigen Zustimmung."
     },
     "bildquellen": {
       "title": "Bild-/Quellenhinweise",
-      "text": "Eigene Fotos und Grafiken: Plinyoo UG (haftungsbeschränkt) i. Gr."
+      "text": "Eigene Fotos und Grafiken: Plinyoo UG (haftungsbeschränkt)"
     },
     "kontakt": {
       "title": "Kontakt für Nutzungsanfragen",

@@ -15,6 +15,12 @@
 #                             kontaktmail_buchen, Form, Fehlertexte (G0, G2, K, E,
 #                             F, L, T, D). Kein Netz, keine Datenbank.
 #
+#   pruefung:impressum-hrb    tests/impressum-hrb-582.mjs (spoonup #582): das
+#                             gerenderte Impressum nennt Amtsgericht Kassel,
+#                             HRB 20918, Firma ohne Gruendungszusatz, keine
+#                             USt-IdNr.; dazu die Sprachdateien.
+#                             Kein Browser, kein Netz; esbuild kommt aus npm ci.
+#
 # NICHT hier: G1 aus derselben Datei. G1 vergleicht die Grenze mit spoonup, und
 # spoonup ist privat -- dieser Ablauf kann es nicht lesen (Heikos Entscheidung
 # E-398: kein Schlüssel). Die Ausgabe sagt dann "G1 NICHT GEMESSEN (lebt in
@@ -22,7 +28,7 @@
 # pruefung:kontakt-grenze-plinyoo), die plinyoo öffentlich holt. Von Hand,
 # ohne den Schalter, fährt die Datei hier weiter mit G1.
 #
-# Beide Prüfungen enden mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
+# Alle drei Prüfungen enden mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
 # ist alles vorhanden, was sie braucht -- "nicht messbar" ist hier also ein
 # Fehler des Ablaufs und macht den Lauf rot, nicht grün.
 name: Pruefungen
@@ -68,3 +74,5 @@ jobs:
         env:
           PLAYWRIGHT_MODUL: ${{ github.workspace }}/node_modules/playwright
         run: npm run pruefung:kontaktformular
+      - name: pruefung:impressum-hrb
+        run: npm run pruefung:impressum-hrb

@@ -59,6 +59,7 @@
     "pruefung:kontakt-grenze": "node supabase/tests/plinyoo-contact-483.mjs",
     "pruefung:kontaktformular": "node tests/kontaktformular-483.mjs",
     "pruefung:kontakt-meldung": "node tests/kontakt-meldung-533.mjs",
+    "pruefung:impressum-hrb": "node tests/impressum-hrb-582.mjs",
     "pruefung:ladehinweis": "node tests/ladehinweis-532.mjs",
     "pruefung:startseite-texte": "node tests/startseite-texte-539.mjs"
   },
