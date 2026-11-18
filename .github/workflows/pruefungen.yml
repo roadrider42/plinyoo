@@ -17,7 +17,8 @@
 #
 #   pruefung:impressum-hrb    tests/impressum-hrb-582.mjs (spoonup #582): das
 #                             gerenderte Impressum nennt Amtsgericht Kassel,
-#                             HRB 20918, Firma ohne "i. Gr.", keine USt-IdNr.
+#                             HRB 20918, Firma ohne Gruendungszusatz, keine
+#                             USt-IdNr.; dazu die Sprachdateien.
 #                             Kein Browser, kein Netz; esbuild kommt aus npm ci.
 #
 # NICHT hier: G1 aus derselben Datei. G1 vergleicht die Grenze mit spoonup, und

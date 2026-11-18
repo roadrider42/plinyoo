@@ -19,17 +19,24 @@
 //    - je eine Zeile "Registergericht: Amtsgericht Kassel" und
 //      "Handelsregisternummer: HRB 20918", kein "Amtsgericht:" (Urteil
 //      Sprecher, 18.11.2026; gegen 5e2c0bb rot, ausprobiert),
-//    - Firma "Plinyoo UG (haftungsbeschränkt)" ohne "i. Gr.",
-//    - kein "nach Eintragung", kein "USt".
-// F  Kein "i. Gr." hinter dem Firmennamen in einer Sprachdatei
-//    (public/locales/*/translation.json; Datenschutz und Urheberrecht nennen
-//    die Firma dort).
+//    - Firma "Plinyoo UG (haftungsbeschränkt)" ohne Gruendungszusatz
+//      (FIRMENZUSATZ: abgekuerzt mit/ohne Leerzeichen, "G." statt "Gr.",
+//      ausgeschrieben "in Gründung"),
+//    - kein "nach Eintragung", keine Umsatzsteuer in keiner Schreibweise
+//      (UMSATZSTEUER).
+// F  Dieselben Muster je Sprachdatei (public/locales/*/translation.json;
+//    Datenschutz und Urheberrecht nennen die Firma dort), nicht nur hinter
+//    "(haftungsbeschränkt)".
+//
+// B1/B2 der Abnahme (reviewerzwei, 18.11.2026): R kannte nur "USt", F nur
+// eine Schreibweise an einer Stelle. Jedes Muster ist mit eigener Verstellung
+// rot gefahren (spoonup claude/_582k/plinyoo-verstellungen.cjs).
 //
 // Gefahren am 18.11.2026 (Umsetzer, #582), node 22.23.4, esbuild 0.27.2:
 //   fix/impressum-hrb (68a79f6 + diese Datei): GRUEN R, GRUEN F, Exit 0.
 //   Gegenprobe origin/main 71a6b41 (ImpressumPage.tsx und die sieben
 //   translation.json per git show, cmp-gleich mit 71a6b41), abgelegt unter
-//   node_modules/.cache/gegenprobe-582: ROT R (HRB, Firma, "i. Gr.",
+//   node_modules/.cache/gegenprobe-582: ROT R (HRB, Firma, Gruendungszusatz,
 //   "nach Eintragung", "USt"), ROT F (de 4x, en/es/fr/pl/pt/uk je 2x), Exit 1.
 // Der alte Stand muss INNERHALB dieses Repos liegen: ausserhalb findet esbuild
 // fuer die Seite ein fremdes React (zweites React, "Objects are not valid as
@@ -48,6 +55,19 @@ const HIER = dirname(fileURLToPath(import.meta.url));
 const EIGEN = resolve(process.env.IMPRESSUM_PAKET || resolve(HIER, '..'));
 const WURZEL = resolve(process.env.IMPRESSUM_WURZEL || EIGEN);
 const nichtMessbar = (warum) => { console.log(`NICHT MESSBAR: ${warum}`); process.exit(2); };
+
+// Gleiche Muster wie spoonup impressum-registereintrag-582.test.tsx.
+const FIRMENZUSATZ = [/\bi\.\s?Gr?\./i, /\bin\s+Gründung\b/i];
+const EINTRAGUNG = /nach\s+Eintragung/i;
+// Nicht /ust/i: das faende "Zustimmung". "USt" nur als eigenes Wort, die
+// Kennung mit und ohne Bindestrich, das ausgeschriebene Wort, "VAT" und die
+// Nummer selbst (DE + 9 Ziffern).
+const UMSATZSTEUER = [/\bust\b/i, /\bust\.?\s?-?\s?id/i, /umsatzsteuer/i, /\bvat\b/i, /\bDE\s?\d{9}\b/];
+const verbotene = (s) => [
+  ...FIRMENZUSATZ.filter((m) => m.test(s)).map((m) => `Gruendungszusatz ${m}`),
+  ...(EINTRAGUNG.test(s) ? [`${EINTRAGUNG}`] : []),
+  ...UMSATZSTEUER.filter((m) => m.test(s)).map((m) => `Umsatzsteuer ${m}`),
+];
 
 let esbuild;
 try {
@@ -113,9 +133,7 @@ pruefe('R gerenderte Seite', [
   [absaetze.includes('Handelsregisternummer: HRB 20918'), 'Zeile "Handelsregisternummer: HRB 20918" fehlt'],
   [!/Amtsgericht:/.test(text), '"Amtsgericht:" steht noch da (Wort doppelt)'],
   [zeilen.includes('Plinyoo UG (haftungsbeschränkt)'), 'Zeile "Plinyoo UG (haftungsbeschränkt)" fehlt'],
-  [!/i\.\s?Gr\./.test(text), '"i. Gr." steht noch da'],
-  [!/nach Eintragung/.test(text), '"nach Eintragung" steht noch da'],
-  [!/USt/.test(text), '"USt" steht noch da'],
+  ...verbotene(text).map((v) => [false, `steht noch da: ${v}`]),
 ]);
 
 // --- F: Firmenname in den Sprachdateien ---------------------------------------
@@ -124,8 +142,19 @@ const funde = [];
 for (const l of readdirSync(locales)) {
   const datei = join(locales, l, 'translation.json');
   if (!existsSync(datei)) continue;
-  const n = readFileSync(datei, 'utf8').split('(haftungsbeschränkt) i. Gr.').length - 1;
-  if (n) funde.push(`${l}: ${n}x "i. Gr."`);
+  // Je Wert, nicht ueber die rohe Datei: so stoert kein JSON-Schluessel, und
+  // jeder Fund nennt die Stelle.
+  const werte = [];
+  const sammle = (o, pfad) => {
+    if (typeof o === 'string') werte.push([pfad, o]);
+    else if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) sammle(v, pfad ? `${pfad}.${k}` : k);
+  };
+  try {
+    sammle(JSON.parse(readFileSync(datei, 'utf8')), '');
+  } catch (e) {
+    nichtMessbar(`${datei} nicht lesbar (${e.message.split('\n')[0]})`);
+  }
+  for (const [pfad, wert] of werte) for (const v of verbotene(wert)) funde.push(`${l} ${pfad}: ${v}`);
 }
 pruefe('F Firmenname in Sprachdateien', funde.map((f) => [false, f]));
 
