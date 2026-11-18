@@ -23,7 +23,9 @@ concurrency:
 jobs:
   # Build-Job
   build:
-    runs-on: ubuntu-latest
+    # Fest auf ubuntu-24.04 (18.11.2026, spoonup #585), wie pruefungen.yml:
+    # "latest" zeigt auf ubuntu-26.04 und wechselt ohne Ankuendigung im Lauf.
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -56,7 +58,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     needs: build
     steps:
       - name: Deploy to GitHub Pages
