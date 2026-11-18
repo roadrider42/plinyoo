@@ -40,7 +40,12 @@ concurrency:
 
 jobs:
   kontakt:
-    runs-on: ubuntu-latest
+    # Fest auf ubuntu-24.04 (18.11.2026, spoonup #585): Das Label "latest" zeigt
+    # inzwischen auf ubuntu-26.04, und Playwright 1.58.2 bricht dort im Schritt
+    # "Playwright und Chromium" ab (PR #48, Lauf 44297917245):
+    # "ERROR: Playwright does not support chromium on ubuntu26.04-x64".
+    # spoonup steht seit 14.11.2026 (PR #191) aus demselben Grund fest auf 24.04.
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
