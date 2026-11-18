@@ -22,9 +22,15 @@
 //    (public/locales/*/translation.json; Datenschutz und Urheberrecht nennen
 //    die Firma dort).
 //
-// Gegenprobe: Stand origin/main 71a6b41 -> R und F rot erwartet.
-// NOCH NICHT GEFAHREN (18.11.2026): node auf diese Datei braucht im
-// Agenten-Sandkasten eine Freigabe. Wer sie faehrt, ersetzt diese Zeilen.
+// Gefahren am 18.11.2026 (Umsetzer, #582), node 22.23.4, esbuild 0.27.2:
+//   fix/impressum-hrb (68a79f6 + diese Datei): GRUEN R, GRUEN F, Exit 0.
+//   Gegenprobe origin/main 71a6b41 (ImpressumPage.tsx und die sieben
+//   translation.json per git show, cmp-gleich mit 71a6b41), abgelegt unter
+//   node_modules/.cache/gegenprobe-582: ROT R (HRB, Firma, "i. Gr.",
+//   "nach Eintragung", "USt"), ROT F (de 4x, en/es/fr/pl/pt/uk je 2x), Exit 1.
+// Der alte Stand muss INNERHALB dieses Repos liegen: ausserhalb findet esbuild
+// fuer die Seite ein fremdes React (zweites React, "Objects are not valid as
+// a React child") und die Pruefung meldet nicht messbar.
 // Exit 0 gruen, 1 rot, 2 nicht messbar.
 // ===========================================================================
 
@@ -75,12 +81,21 @@ try {
     },
     bundle: true, write: true, outfile: ziel, format: 'esm', platform: 'node', logLevel: 'silent',
     jsx: 'automatic', nodePaths: [join(EIGEN, 'node_modules')],
+    // react-dom/server ist CommonJS und ruft require('stream'); im ESM-Buendel
+    // gibt es kein require, ohne diese Zeile stirbt der Import vor jeder Messung.
+    banner: { js: "import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);" },
     define: { 'process.env.NODE_ENV': '"production"' },
   });
 } catch (e) {
   nichtMessbar(`Buendeln fehlgeschlagen (${e.message.split('\n')[0]})`);
 }
-const { html } = await import(pathToFileURL(ziel).href);
+// Ein Absturz beim Laden ist keine Messung: nicht messbar (2), nicht rot (1).
+let html;
+try {
+  ({ html } = await import(pathToFileURL(ziel).href));
+} catch (e) {
+  nichtMessbar(`Rendern fehlgeschlagen (${e.message.split('\n')[0]})`);
+}
 const text = html.replace(/<[^>]+>/g, '\n').replace(/&amp;/g, '&');
 const zeilen = text.split('\n').map((z) => z.trim()).filter(Boolean);
 pruefe('R gerenderte Seite', [
