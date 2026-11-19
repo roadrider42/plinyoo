@@ -110,7 +110,7 @@ def main():
         fehler.append("slug: nur Kleinbuchstaben, Ziffern und Bindestrich")
     if leer(meta.get("verlag_url")) and leer(meta.get("amazon_url")):
         fehler.append("Bezugsquelle fehlt: verlag_url oder amazon_url")
-    gelesen = bool(meta.get("buch_gelesen"))
+    gelesen = str(meta.get("buch_gelesen")).strip().lower() in ("true", "ja", "1", "yes")  # „false“ als Text zählt als nicht gelesen (Befund 19.11.2026: bool("false") ist wahr)
     if not gelesen and leer(meta.get("grundlage_text")):
         warnungen.append("buch_gelesen ist false, grundlage_text leer: Standardtext wird verwendet")
     if leer(meta.get("freigabe_beitrag")):
@@ -236,6 +236,8 @@ def main():
         "bruecken": bruecken,
         "platzhalter": False,
     })
+    if str(meta.get("such_beschreibung") or "").strip():  # Wortlaut im Suchtreffer; {n} und {fragen} füllt buchseiten.mjs (Wortlaut-Form seit 11.11.2026, #505)
+        d["suchBeschreibung"] = str(meta["such_beschreibung"]).strip()
     if cover:
         try:
             from PIL import Image

@@ -15,7 +15,7 @@
   "leitfrage": "Wie kommt Wissen vom Buch in den Kopf?",
   "suchBeschreibung": "Wie kommt Wissen vom Buch in den Kopf? {n} Lernkarten zu „Der Almanach von Naval Ravikant“ von Eric Jorgenson, je mit Quelle und {fragen} Fragen.",
   "einordnung": "Eric Jorgenson hat Naval Ravikants Gedanken zu Wohlstand, Wissen und einem erfüllten Leben gesammelt.",
-  "kartenIntro": "Alle 7 kannst du unten durchspielen.",
+  "kartenIntro": "Alle 8 kannst du unten durchspielen.",
   "karten": [
     "Lesen als Gewohnheit",
     "Die Eitelkeitskennzahl",
@@ -23,7 +23,8 @@
     "Spezifisches Wissen",
     "Authentizität",
     "Hebel und Renditen",
-    "Die besten Jobs"
+    "Die besten Jobs",
+    "Kurzfristiger Schmerz"
   ],
   "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
   "verlagUrl": "",
@@ -62,6 +63,10 @@
     {
       "slug": "naval-beste-jobs-unreguliert",
       "titel": "Die besten Jobs"
+    },
+    {
+      "slug": "naval-kurzfristiger-schmerz",
+      "titel": "Kurzfristiger Schmerz"
     }
   ],
   "kanten": [
@@ -98,6 +103,11 @@
     [
       4,
       6,
+      "verwandt"
+    ],
+    [
+      5,
+      7,
       "verwandt"
     ]
   ],
@@ -806,9 +816,116 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "naval-kurzfristiger-schmerz",
+      "kurz": "Kurzfristiger Schmerz",
+      "titel": "Kurzfristiger Schmerz, langfristiger Vorteil",
+      "karte": "Nach Ravikant gehören langfristige Vorteile zu dem Weg, der mit kurzfristigem Schmerz verbunden ist, wenn zwei Wege gleichwertig sind. Angesichts des Exponential-Gesetzes sind langfristige Gewinne das, was man auf Dauer will. Laut Ravikant überbewertet das Gehirn aber die Option mit der kurzfristigen Zufriedenheit und versucht, die mit kurzfristigem Schmerz zu vermeiden. Seine Definition von Weisheit: die langfristigen Folgen des eigenen Handelns zu kennen. Das sind seine Überzeugungen.",
+      "quelle": {
+        "titel": "Der Almanach von Naval Ravikant",
+        "url": "https://www.amazon.de/dp/3959724942",
+        "herausgeber": "Eric Jorgenson, FinanzBuch Verlag",
+        "abgerufen": "2026-11-19"
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was folgt nach Ravikant aus zwei gleichwertigen Wegen, von denen einer kurzfristig schmerzt?",
+          "beleg": "Der Definition nach bedeuten zwei gleichwertige Wege, von denen einer mit kurzfristigem Schmerz verbunden ist, dass langfristige Vorteile zu ihm gehören müssen.",
+          "belegDe": "„Der Definition nach bedeuten zwei gleichwertige Wege, von denen einer mit kurzfristigem Schmerz verbunden ist, dass langfristige Vorteile zu ihm gehören müssen.“",
+          "optionen": [
+            {
+              "text": "Zu ihm müssen langfristige Vorteile gehören",
+              "ok": true,
+              "fb": "Richtig: Nach Ravikant gehören langfristige Vorteile zu dem Weg, der mit kurzfristigem Schmerz verbunden ist, wenn beide Wege gleichwertig sind."
+            },
+            {
+              "text": "Zu ihm müssen höhere Gebühren und Kosten gehören",
+              "ok": false,
+              "fb": "Falsch: Nach Ravikant gehören langfristige Vorteile zu dem Weg, der mit kurzfristigem Schmerz verbunden ist, wenn beide Wege gleichwertig sind."
+            },
+            {
+              "text": "Zu ihm muss eine gleichwertige Alternative gehören",
+              "ok": false,
+              "fb": "Falsch: Nach Ravikant gehören langfristige Vorteile zu dem Weg, der mit kurzfristigem Schmerz verbunden ist, wenn beide Wege gleichwertig sind."
+            },
+            {
+              "text": "Zu ihm müssen kurzfristige Gewinne und Prämien gehören",
+              "ok": false,
+              "fb": "Falsch: Nach Ravikant gehören langfristige Vorteile zu dem Weg, der mit kurzfristigem Schmerz verbunden ist, wenn beide Wege gleichwertig sind."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Option überbewertet das Gehirn laut Ravikant?",
+          "beleg": "Aber Ihr Gehirn überbewertet die Option mit der kurzfristigen Zufriedenheit und versucht, die mit kurzfristigem Schmerz zu vermeiden.",
+          "belegDe": "„Aber Ihr Gehirn überbewertet die Option mit der kurzfristigen Zufriedenheit und versucht, die mit kurzfristigem Schmerz zu vermeiden.“",
+          "optionen": [
+            {
+              "text": "Die Option mit dem geringsten Risiko für das Kapital",
+              "ok": false,
+              "fb": "Falsch: Laut Ravikant überbewertet das Gehirn die Option mit der kurzfristigen Zufriedenheit und meidet die mit kurzfristigem Schmerz."
+            },
+            {
+              "text": "Die Option mit der längeren Vorbereitungszeit und Mühe",
+              "ok": false,
+              "fb": "Falsch: Laut Ravikant überbewertet das Gehirn die Option mit der kurzfristigen Zufriedenheit und meidet die mit kurzfristigem Schmerz."
+            },
+            {
+              "text": "Die Option mit der kurzfristigen Zufriedenheit",
+              "ok": true,
+              "fb": "Richtig: Laut Ravikant überbewertet das Gehirn die Option mit der kurzfristigen Zufriedenheit und meidet die mit kurzfristigem Schmerz."
+            },
+            {
+              "text": "Die Option mit der größten Zahl an Mitstreitern",
+              "ok": false,
+              "fb": "Falsch: Laut Ravikant überbewertet das Gehirn die Option mit der kurzfristigen Zufriedenheit und meidet die mit kurzfristigem Schmerz."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie definiert Ravikant Weisheit?",
+          "beleg": "Meine Definition von Weisheit ist, die langfristigen Folgen des eigenen Handelns zu kennen.",
+          "belegDe": "„Meine Definition von Weisheit ist, die langfristigen Folgen des eigenen Handelns zu kennen.“",
+          "optionen": [
+            {
+              "text": "Die Fehler anderer zu erkennen und daraus Regeln abzuleiten",
+              "ok": false,
+              "fb": "Falsch: Nach Ravikant bedeutet Weisheit, die langfristigen Folgen des eigenen Handelns zu kennen."
+            },
+            {
+              "text": "Die langfristigen Folgen des eigenen Handelns zu kennen",
+              "ok": true,
+              "fb": "Richtig: Nach Ravikant bedeutet Weisheit, die langfristigen Folgen des eigenen Handelns zu kennen."
+            },
+            {
+              "text": "Das Wissen aus möglichst vielen Büchern gesammelt zu haben",
+              "ok": false,
+              "fb": "Falsch: Nach Ravikant bedeutet Weisheit, die langfristigen Folgen des eigenen Handelns zu kennen."
+            },
+            {
+              "text": "Entscheidungen nach der Meinung erfahrener Berater zu treffen",
+              "ok": false,
+              "fb": "Falsch: Nach Ravikant bedeutet Weisheit, die langfristigen Folgen des eigenen Handelns zu kennen."
+            }
+          ]
+        }
+      ]
     }
   ],
-  "bruecken": [],
+  "bruecken": [
+    {
+      "von": [
+        7
+      ],
+      "titel": "Kostolany: Schmerzensgeld",
+      "url": "/buch/kostolany-kunst-ueber-geld-nachzudenken/",
+      "ziel": "kostolany-kunst-ueber-geld-nachzudenken"
+    }
+  ],
   "platzhalter": false,
   "coverBreite": 1711,
   "coverHoehe": 2560

@@ -1,0 +1,1969 @@
+{
+  "slug": "kostolany-kunst-ueber-geld-nachzudenken",
+  "draft": false,
+  "nr": 17,
+  "kachelTitel": "Kostolany — Geld und Psychologie",
+  "kachelText": "zu Spekulanten, Geld und Psychologie an der Börse, mit Wissensgraph und interaktiven Fragen.",
+  "symbol": "📈",
+  "autor": "André Kostolany",
+  "titel": "Die Kunst, über Geld nachzudenken",
+  "untertitel": "",
+  "uebersetzer": "",
+  "verlag": "Ullstein",
+  "erschienen": "2015",
+  "isbn": "978-3-548-37590-8",
+  "leitfrage": "Wie beschreibt Kostolany das Zusammenspiel von Geld, Psychologie und Börse?",
+  "einordnung": "",
+  "kartenIntro": "Alle 17 kannst du unten durchspielen.",
+  "karten": [
+    "Spekulant im noblen Sinne",
+    "Spieler, Spekulant, Anleger",
+    "Geld heiß lieben, kalt",
+    "Flucht 1940",
+    "Mann und Hund",
+    "Angebot und Nachfrage",
+    "Großer und kleiner Kuchen",
+    "Devisen und Aktien",
+    "Geld + Psychologie",
+    "Hartgesottene, Zittrige",
+    "Umsatz und Trend",
+    "Massenhysterie",
+    "Geduld und Verlust",
+    "Zehn Gebote",
+    "Zehn Verbote",
+    "Börse in Amsterdam",
+    "Boom und Krach"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
+  "verlagUrl": "https://www.ullstein.de/werke/die-kunst-ueber-geld-nachzudenken/taschenbuch/9783548375908",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://link.amazon/B05mNGck1",
+  "cover": "cover.jpg",
+  "coverCredit": "Cover der Originalausgabe (Ullstein, ullstein.de, nur verkleinert, Stand 2026-11-11)",
+  "naechsteWoche": "",
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph zu Kostolanys Börsenbildern",
+  "knoten": [
+    {
+      "slug": "kost-spekulant-selbstbild",
+      "titel": "Spekulant im noblen Sinne"
+    },
+    {
+      "slug": "kost-spekulant-spieler-anleger",
+      "titel": "Spieler, Spekulant, Anleger"
+    },
+    {
+      "slug": "kost-geld-heiss-kalt",
+      "titel": "Geld heiß lieben, kalt"
+    },
+    {
+      "slug": "kost-flucht-1940",
+      "titel": "Flucht 1940"
+    },
+    {
+      "slug": "kost-mann-und-hund",
+      "titel": "Mann und Hund"
+    },
+    {
+      "slug": "kost-angebot-nachfrage",
+      "titel": "Angebot und Nachfrage"
+    },
+    {
+      "slug": "kost-kuchen-wachstum",
+      "titel": "Großer und kleiner Kuchen"
+    },
+    {
+      "slug": "kost-devisen-nullsumme",
+      "titel": "Devisen und Aktien"
+    },
+    {
+      "slug": "kost-formel-geld-psychologie",
+      "titel": "Geld + Psychologie"
+    },
+    {
+      "slug": "kost-haende-verfassung",
+      "titel": "Hartgesottene, Zittrige"
+    },
+    {
+      "slug": "kost-umsatz-trend",
+      "titel": "Umsatz und Trend"
+    },
+    {
+      "slug": "kost-massenhysterie",
+      "titel": "Massenhysterie"
+    },
+    {
+      "slug": "kost-geduld-verlust",
+      "titel": "Geduld und Verlust"
+    },
+    {
+      "slug": "kost-zehn-gebote",
+      "titel": "Zehn Gebote"
+    },
+    {
+      "slug": "kost-zehn-verbote",
+      "titel": "Zehn Verbote"
+    },
+    {
+      "slug": "kost-amsterdam-boerse",
+      "titel": "Börse in Amsterdam"
+    },
+    {
+      "slug": "kost-boom-krach",
+      "titel": "Boom und Krach"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      0,
+      3,
+      "verwandt"
+    ],
+    [
+      0,
+      2,
+      "verwandt"
+    ],
+    [
+      0,
+      13,
+      "verwandt"
+    ],
+    [
+      1,
+      5,
+      "verwandt"
+    ],
+    [
+      1,
+      11,
+      "verwandt"
+    ],
+    [
+      2,
+      12,
+      "verwandt"
+    ],
+    [
+      4,
+      5,
+      "verwandt"
+    ],
+    [
+      4,
+      6,
+      "verwandt"
+    ],
+    [
+      4,
+      16,
+      "verwandt"
+    ],
+    [
+      5,
+      8,
+      "verwandt"
+    ],
+    [
+      6,
+      7,
+      "verwandt"
+    ],
+    [
+      7,
+      16,
+      "verwandt"
+    ],
+    [
+      8,
+      9,
+      "verwandt"
+    ],
+    [
+      8,
+      16,
+      "verwandt"
+    ],
+    [
+      9,
+      10,
+      "verwandt"
+    ],
+    [
+      9,
+      11,
+      "verwandt"
+    ],
+    [
+      10,
+      11,
+      "verwandt"
+    ],
+    [
+      11,
+      14,
+      "verwandt"
+    ],
+    [
+      12,
+      13,
+      "verwandt"
+    ],
+    [
+      12,
+      14,
+      "verwandt"
+    ],
+    [
+      13,
+      14,
+      "verwandt"
+    ],
+    [
+      15,
+      16,
+      "verwandt"
+    ],
+    [
+      15,
+      8,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "",
+    "titel": "Zwischen Spieler und Anleger: Wie denkt ein Spekulant über Geld?",
+    "anreisser": "Laut André Kostolany steht der Spekulant zwischen Spieler und Anleger, und die Börse verhält sich zur Wirtschaft wie ein Hund zu seinem Herrn. Die Karten legen seine Bilder und Regeln nebeneinander.",
+    "absaetze": [
+      "Der Börsen- und Finanzexperte André Kostolany (* 1906 in Budapest, † 1999 in Paris) war Journalist und Schriftsteller ungarischer Herkunft mit US-amerikanischer Staatsbürgerschaft. Nach eigener Aussage bezeichnete er sich selbstbewusst als Spekulant. Nach Wikipedia floh er 1940, kurz vor dem Einmarsch deutscher Truppen in Paris, über San Sebastian und Madrid in die USA. Flüchtlinge, die aus Frankreich über Spanien nach Portugal wollten, beschreibt auch [[buch:lissabon-1941|„Lissabon 1941“]]. Die Karten dieser Seite stammen aus den Markierungen eines Lesers in Kostolanys Buch „Die Kunst, über Geld nachzudenken“, eine Karte aus Wikipedia.",
+      "Kostolany versteht den Spekulanten im noblen Sinne des Wortes, als intellektuellen, mit Überlegung handelnden Börsianer. Der Spekulant befinde sich irgendwo zwischen dem Spieler und dem Anleger; den entscheidenden Unterschied zum Spieler sieht Kostolany darin, dass der Spekulant Ideen hat, ob sie sich bewähren oder nicht. Das Geld müsse man heiß lieben und kalt behandeln. An der Börse heiße das, den fallenden Kursen entgegenzugehen und den steigenden nicht hinterherzulaufen.",
+      "Börse und Wirtschaft beschreibt Kostolany mit einem Mann und seinem Hund: Während der Mann einen Kilometer geht, läuft der Hund vier. Der Mann ist die Wirtschaft, der Hund die Börse; auf sehr lange Sicht entwickeln sich beide in die gleiche Richtung, zwischendurch können sie gegensätzlich verlaufen. Den Unterschied zwischen Kapitalismus und Sozialismus erklärt er mit einem großen, ungerecht geteilten und einem kleinen, gerecht geteilten Kuchen. Bei Devisen steht nach Kostolany jeder Hausseposition eine Baisseposition gegenüber: Einer verliere, was der andere gewinne. Mit dem Nullsummendenken befasst sich auch Rainer Zitelmanns [[buch:zitelmann-zero-sum-mindset|„Zero Sum Mindset“]].",
+      "Kostolanys Glaubenssatz lautet: Geld + Psychologie = Tendenz. Nach seinem Fazit steigen die Kurse, wenn große und kleine Anleger kaufen wollen und auch können. Die technische Verfassung des Marktes, also die Intensität, mit der die Börse auf Nachrichten reagiert, hänge davon ab, ob die Papiere in den Händen der Hartgesottenen oder der Zittrigen liegen. Steigt oder fällt ein Markt mit kleinen Umsätzen, deute das nach Kostolany auf eine Fortsetzung des Trends hin; bei ständig steigenden Umsätzen sei die Trendwende nicht mehr weit. Um sich der Massenhysterie zu entziehen, müsse man sehr trainiert, kühl und sogar zynisch sein.",
+      "Geduld ist nach Kostolany vielleicht das Wichtigste an der Börse, und in der Spekulation gemachtes Geld sei Schmerzensgeld. Ein erfolgreicher Spekulant gewinne in 100 Fällen 51 Mal. Am Ende des Buches stellt Kostolany zehn Gebote und zehn Verbote auf; zu den Geboten gehört, genügend Geld zu haben, um nicht unter Druck zu kommen, zu den Verboten, Tipps nachzulaufen.",
+      "Die erste Aktienbörse im heutigen Sinne entstand nach Kostolany im 17. Jahrhundert in Amsterdam; die Spekulation stürzte sich auf die Aktien der 1602 gegründeten Indischen Kompanie, die auch im Themenfeld zu Dalrymples [[buch:dalrymple-anarchie|„Anarchie“]] vorkommt. Nach Kostolany geht jedem Börsenkrach ein Börsenboom voraus: Der Boom schwelle zu einem Riesenballon an, der durch einen Nadelstich platzen könne.",
+      "Unsere Einordnung: Die Karten stellen Kostolanys Bilder und Regeln nach seinen eigenen Worten in fünf Gruppen nebeneinander: der Spekulant, Börse und Wirtschaft, Geld und Psychologie, Geduld und die zehn Regeln, Geschichte der Börse. Die Karten geben seine Aussagen wieder, damit du sie mit eigenen Gedanken verbindest.",
+      "Wer die Karten durchspielt, kann erkunden, wie Geld, Psychologie, Geduld und die Verfassung des Marktes bei Kostolany zusammenhängen."
+    ],
+    "autor": "Heiko Miertzsch",
+    "grundlage": "Aus den Markierungen eines Lesers im Buch „Die Kunst, über Geld nachzudenken“ (deutsche Ausgabe, Kindle); die Belege sind deutscher Originaltext. Eine Karte stammt aus Wikipedia."
+  },
+  "kartenvoll": [
+    {
+      "slug": "kost-spekulant-selbstbild",
+      "kurz": "Spekulant im noblen Sinne",
+      "titel": "Der Spekulant im noblen Sinne des Wortes",
+      "karte": "Nach Kostolany bezeichnet er sich selbstbewusst als „Spekulant“ und versteht das Wort im noblen Sinne: Der Spekulant sei der intellektuelle, mit Überlegung handelnde Börsianer. Er nennt den Schriftsteller Balzac, der nach seinen Angaben Romane schrieb, weil er viel Geld brauchte, und selbst spekulierte. Balzac schrieb laut Kostolany in einem Traktat über das „Elegante Leben“, es gebe drei Arten von Menschen. Den richtigen Spekulanten sieht Kostolany unter denen, die denken.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie versteht Kostolany das Wort „Spekulant“ für sich?",
+          "beleg": "Ich verstehe die Bezeichnung im noblen Sinne des Wortes. Für mich ist der Spekulant der intellektuelle, mit Überlegung handelnde Börsianer",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Als Börsianer, der Tipps von Banken und Maklern sammelt",
+              "ok": false,
+              "fb": "Falsch: Kostolany versteht den Spekulanten als intellektuellen, mit Überlegung handelnden Börsianer."
+            },
+            {
+              "text": "Als Anleger, der Aktien über Jahrzehnte unverändert hält",
+              "ok": false,
+              "fb": "Falsch: Kostolany versteht den Spekulanten als intellektuellen, mit Überlegung handelnden Börsianer."
+            },
+            {
+              "text": "Als Händler, der mit Kredit auf kurzfristige Gewinne setzt",
+              "ok": false,
+              "fb": "Falsch: Kostolany versteht den Spekulanten als intellektuellen, mit Überlegung handelnden Börsianer."
+            },
+            {
+              "text": "Als intellektuellen, mit Überlegung handelnden Börsianer",
+              "ok": true,
+              "fb": "Richtig: Kostolany versteht den Spekulanten als intellektuellen, mit Überlegung handelnden Börsianer."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche drei Arten von Menschen nennt Balzac laut Kostolany?",
+          "beleg": "es gebe drei Arten von Menschen: Menschen, die arbeiten, Menschen, die denken, und Menschen, die nichts tun.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Menschen, die lesen, die schreiben und die rechnen",
+              "ok": false,
+              "fb": "Falsch: Balzac unterscheidet laut Kostolany Menschen, die arbeiten, die denken und die nichts tun."
+            },
+            {
+              "text": "Menschen, die führen, die folgen und die zuschauen",
+              "ok": false,
+              "fb": "Falsch: Balzac unterscheidet laut Kostolany Menschen, die arbeiten, die denken und die nichts tun."
+            },
+            {
+              "text": "Menschen, die sparen, die ausgeben und die verschenken",
+              "ok": false,
+              "fb": "Falsch: Balzac unterscheidet laut Kostolany Menschen, die arbeiten, die denken und die nichts tun."
+            },
+            {
+              "text": "Menschen, die arbeiten, die denken und die nichts tun",
+              "ok": true,
+              "fb": "Richtig: Balzac unterscheidet laut Kostolany Menschen, die arbeiten, die denken und die nichts tun."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wen hält Kostolany für den richtigen Spekulanten, anders als viele glauben?",
+          "beleg": "Der richtige Spekulant ist derjenige, der denkt. Viele glauben allerdings, es sei jener, der nicht arbeitet.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Den, der denkt, und nicht den, der nicht arbeitet",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany ist der richtige Spekulant derjenige, der denkt; viele glauben, es sei der, der nicht arbeitet."
+            },
+            {
+              "text": "Den, der viel Geld besitzt, und nicht den, der es leiht",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany ist der richtige Spekulant derjenige, der denkt; viele glauben, es sei der, der nicht arbeitet."
+            },
+            {
+              "text": "Den, der nach Tipps handelt, und nicht den, der abwartet",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany ist der richtige Spekulant derjenige, der denkt; viele glauben, es sei der, der nicht arbeitet."
+            },
+            {
+              "text": "Den, der arbeitet, und nicht den, der nichts tut",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany ist der richtige Spekulant derjenige, der denkt; viele glauben, es sei der, der nicht arbeitet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-spekulant-spieler-anleger",
+      "kurz": "Spieler, Spekulant, Anleger",
+      "titel": "Zwischen Spieler und Anleger: der Spekulant",
+      "karte": "Nach Kostolany befindet sich der Spekulant irgendwo zwischen dem Spieler und dem Anleger, die Grenzen seien fließend. Im Gegensatz zum Anleger interessierten ihn alle Nachrichten, doch anders als der Spieler reagiere er nicht auf jede. Er folge der Tendenz, einer Geraden von A nach B, und lasse kleine Kursausschläge außer Acht. Den entscheidenden Unterschied zum Spieler sieht Kostolany darin, dass der Spekulant Ideen hat, ob sie sich bewähren oder nicht.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wo befindet sich der Spekulant laut Kostolany?",
+          "beleg": "Man könnte sagen, der Spekulant befindet sich irgendwo zwischen dem Spieler und dem Anleger. Die Grenzen sind natürlich fließend.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Zwischen dem Spieler und dem Anleger, mit fließenden Grenzen",
+              "ok": true,
+              "fb": "Richtig: Der Spekulant steht nach Kostolany zwischen Spieler und Anleger; die Grenzen sind fließend."
+            },
+            {
+              "text": "Über dem Anleger und dem Spieler, mit klaren Grenzen",
+              "ok": false,
+              "fb": "Falsch: Der Spekulant steht nach Kostolany zwischen Spieler und Anleger; die Grenzen sind fließend."
+            },
+            {
+              "text": "Auf der Seite des Spielers, deutlich getrennt vom Anleger und Makler",
+              "ok": false,
+              "fb": "Falsch: Der Spekulant steht nach Kostolany zwischen Spieler und Anleger; die Grenzen sind fließend."
+            },
+            {
+              "text": "Auf der Seite der Banken, getrennt vom Anleger und Spieler",
+              "ok": false,
+              "fb": "Falsch: Der Spekulant steht nach Kostolany zwischen Spieler und Anleger; die Grenzen sind fließend."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Kurse fallen kurz wegen einer Nachricht. Wie reagiert der Spekulant laut Kostolany?",
+          "beleg": "dann wird er seine Spekulationskonstruktion nicht sofort über den Haufen werfen. Nur wenn die Nachricht so einschneidend ist, dass sie das Fundament seiner Prognose erschüttert und vorherige Annahmen widerlegt, disponiert er um.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Er folgt den kleinen Kursausschlägen und passt täglich an",
+              "ok": false,
+              "fb": "Falsch: Der Spekulant stellt nach Kostolany seine Konstruktion erst um, wenn eine Nachricht das Fundament seiner Prognose erschüttert."
+            },
+            {
+              "text": "Er verkauft sofort und kauft erst bei deutlich ruhigeren Kursen wieder zurück",
+              "ok": false,
+              "fb": "Falsch: Der Spekulant stellt nach Kostolany seine Konstruktion erst um, wenn eine Nachricht das Fundament seiner Prognose erschüttert."
+            },
+            {
+              "text": "Er wartet auf Tipps der Banken und richtet sich danach aus",
+              "ok": false,
+              "fb": "Falsch: Der Spekulant stellt nach Kostolany seine Konstruktion erst um, wenn eine Nachricht das Fundament seiner Prognose erschüttert."
+            },
+            {
+              "text": "Er behält seine Konstruktion, bis eine Nachricht ihr Fundament erschüttert",
+              "ok": true,
+              "fb": "Richtig: Der Spekulant stellt nach Kostolany seine Konstruktion erst um, wenn eine Nachricht das Fundament seiner Prognose erschüttert."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was ist laut Kostolany der entscheidende Unterschied zwischen Spekulant und Spieler?",
+          "beleg": "Mit einem Wort, er hat Ideen, richtige oder falsche, aber Ideen. Das ist der entscheidende Unterschied zum Spieler.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Der Spekulant setzt mehr Geld ein und trägt höhere Risiken",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany hat der Spekulant Ideen, ob sie sich bewähren oder nicht; das unterscheidet ihn vom Spieler."
+            },
+            {
+              "text": "Der Spekulant meidet Nachrichten, die der Spieler verfolgt",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany hat der Spekulant Ideen, ob sie sich bewähren oder nicht; das unterscheidet ihn vom Spieler."
+            },
+            {
+              "text": "Der Spekulant hat Ideen, ob sie sich bewähren oder nicht",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany hat der Spekulant Ideen, ob sie sich bewähren oder nicht; das unterscheidet ihn vom Spieler."
+            },
+            {
+              "text": "Der Spekulant kennt Nachrichten, die der Spieler nicht erhält",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany hat der Spekulant Ideen, ob sie sich bewähren oder nicht; das unterscheidet ihn vom Spieler."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-geld-heiss-kalt",
+      "kurz": "Geld heiß lieben, kalt",
+      "titel": "Geld heiß lieben und kalt behandeln",
+      "karte": "Nach Kostolany geht Geld zu dem, der es leidenschaftlich begehrt. Dieser müsse vom Geld hypnotisiert sein wie die Schlange von ihrem Beschwörer, aber auch einen gewissen Abstand haben. In einem Satz: das Geld heiß lieben und kalt behandeln. Für viele mache das Verdienen den eigentlichen Reiz aus, nicht der Besitz. Über eine geglückte Spekulation freue er sich vor allem, weil er mit seiner Idee gegen die Meinung der anderen Recht bekommen habe. An der Börse bedeute das Motto, den steigenden Kursen nicht hinterherzulaufen, sondern den fallenden entgegenzugehen.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie fasst Kostolany die Haltung zum Geld in einem Satz zusammen?",
+          "beleg": "In einem Satz: Man muss das Geld heiß lieben und kalt behandeln.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Das Geld stetig sparen und gelassen vergessen",
+              "ok": false,
+              "fb": "Falsch: Kostolany fasst die Haltung zum Geld so zusammen: heiß lieben und kalt behandeln."
+            },
+            {
+              "text": "Das Geld offen zeigen und vorsichtig verleihen",
+              "ok": false,
+              "fb": "Falsch: Kostolany fasst die Haltung zum Geld so zusammen: heiß lieben und kalt behandeln."
+            },
+            {
+              "text": "Das Geld heiß lieben und kalt behandeln",
+              "ok": true,
+              "fb": "Richtig: Kostolany fasst die Haltung zum Geld so zusammen: heiß lieben und kalt behandeln."
+            },
+            {
+              "text": "Das Geld kühl sammeln und warm weitergeben",
+              "ok": false,
+              "fb": "Falsch: Kostolany fasst die Haltung zum Geld so zusammen: heiß lieben und kalt behandeln."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was gilt laut Kostolany an der Börse für steigende und fallende Kurse?",
+          "beleg": "Das gilt besonders an der Börse, wo man den steigenden Kursen nicht hinterherlaufen darf, sondern den fallenden Kursen entgegengehen muss.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Den fallenden Kursen entgegengehen, den steigenden nicht hinterherlaufen",
+              "ok": true,
+              "fb": "Richtig: Laut Kostolany geht man den fallenden Kursen entgegen und läuft den steigenden nicht hinterher."
+            },
+            {
+              "text": "Beiden Kursbewegungen gleich nachlaufen und früh reagieren",
+              "ok": false,
+              "fb": "Falsch: Laut Kostolany geht man den fallenden Kursen entgegen und läuft den steigenden nicht hinterher."
+            },
+            {
+              "text": "Kurse meiden, die stark schwanken, und auf Ruhe warten",
+              "ok": false,
+              "fb": "Falsch: Laut Kostolany geht man den fallenden Kursen entgegen und läuft den steigenden nicht hinterher."
+            },
+            {
+              "text": "Den steigenden Kursen folgen und bei fallenden Kursen erst einmal abwarten",
+              "ok": false,
+              "fb": "Falsch: Laut Kostolany geht man den fallenden Kursen entgegen und läuft den steigenden nicht hinterher."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Worüber freut sich Kostolany bei einer geglückten Spekulation in erster Linie?",
+          "beleg": "Wenn mir eine Spekulation glückt, dann freue ich mich in erster Linie nicht über das Geld, das ich dabei einstreiche, sondern über die Tatsache, mit meiner Idee gegen die Meinung der anderen Recht bekommen zu haben.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Über das Geld, das er dabei einstreicht, und die Anerkennung seiner Bank",
+              "ok": false,
+              "fb": "Falsch: Kostolany freut sich nach eigener Aussage vor allem darüber, mit seiner Idee gegen die Meinung der anderen Recht zu bekommen."
+            },
+            {
+              "text": "Über die Möglichkeit, sich ein größeres Vermögen als Freunde aufzubauen",
+              "ok": false,
+              "fb": "Falsch: Kostolany freut sich nach eigener Aussage vor allem darüber, mit seiner Idee gegen die Meinung der anderen Recht zu bekommen."
+            },
+            {
+              "text": "Über den Nervenkitzel des Gewinnens, den auch der Roulettespieler kennt",
+              "ok": false,
+              "fb": "Falsch: Kostolany freut sich nach eigener Aussage vor allem darüber, mit seiner Idee gegen die Meinung der anderen Recht zu bekommen."
+            },
+            {
+              "text": "Darüber, mit seiner Idee gegen die Meinung der anderen Recht zu bekommen",
+              "ok": true,
+              "fb": "Richtig: Kostolany freut sich nach eigener Aussage vor allem darüber, mit seiner Idee gegen die Meinung der anderen Recht zu bekommen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-flucht-1940",
+      "kurz": "Flucht 1940",
+      "titel": "Kostolanys Flucht 1940: über San Sebastian und Madrid in die USA",
+      "karte": "Nach Wikipedia flüchtete Kostolany 1940, kurz vor dem Einmarsch deutscher Truppen in Paris, über San Sebastian und Madrid in die USA, weil er katholisch getauft, aber jüdischer Herkunft war. In Paris hatte er seit Mitte der 1920er-Jahre als Börsenspekulant erste Erfahrungen gesammelt. In den USA übernahm er 1941, nach der amerikanischen Staatsbürgerschaft, Posten bei der G. Ballai and Cie Financing Company. Die Fluchtwege jener Zeit aus Frankreich über Spanien beschreibt die Seite zu „Lissabon 1941“.",
+      "quelle": {
+        "titel": "André Kostolany (Wikipedia)",
+        "url": "https://de.wikipedia.org/wiki/Andr%C3%A9_Kostolany",
+        "herausgeber": "Wikipedia",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wann flüchtete Kostolany nach Wikipedia aus Paris in die USA?",
+          "beleg": "flüchtete Kostolany 1940, kurz vor dem Einmarsch deutscher Truppen in Paris",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "1938, kurz nach dem Anschluss Österreichs an das Deutsche Reich",
+              "ok": false,
+              "fb": "Falsch: Nach Wikipedia flüchtete Kostolany 1940, kurz vor dem Einmarsch deutscher Truppen in Paris, in die USA."
+            },
+            {
+              "text": "1940, kurz vor dem Einmarsch deutscher Truppen in Paris",
+              "ok": true,
+              "fb": "Richtig: Nach Wikipedia flüchtete Kostolany 1940, kurz vor dem Einmarsch deutscher Truppen in Paris, in die USA."
+            },
+            {
+              "text": "1942, kurz nach dem Kriegseintritt der Vereinigten Staaten",
+              "ok": false,
+              "fb": "Falsch: Nach Wikipedia flüchtete Kostolany 1940, kurz vor dem Einmarsch deutscher Truppen in Paris, in die USA."
+            },
+            {
+              "text": "1945, kurz nach der Befreiung von Paris durch alliierte Truppen",
+              "ok": false,
+              "fb": "Falsch: Nach Wikipedia flüchtete Kostolany 1940, kurz vor dem Einmarsch deutscher Truppen in Paris, in die USA."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Über welche Stationen führte Kostolanys Flucht laut Wikipedia in die USA?",
+          "beleg": "über San Sebastian und Madrid in die USA",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Über Marseille und Barcelona",
+              "ok": false,
+              "fb": "Falsch: Wikipedia nennt als Stationen der Flucht San Sebastian und Madrid."
+            },
+            {
+              "text": "Über Lyon und Genf",
+              "ok": false,
+              "fb": "Falsch: Wikipedia nennt als Stationen der Flucht San Sebastian und Madrid."
+            },
+            {
+              "text": "Über San Sebastian und Madrid",
+              "ok": true,
+              "fb": "Richtig: Wikipedia nennt als Stationen der Flucht San Sebastian und Madrid."
+            },
+            {
+              "text": "Über Bordeaux und Bayonne",
+              "ok": false,
+              "fb": "Falsch: Wikipedia nennt als Stationen der Flucht San Sebastian und Madrid."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Warum flüchtete Kostolany 1940 laut Wikipedia aus Paris?",
+          "beleg": "weil er zwar katholisch getauft, aber jüdischer Herkunft war",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Er war als Makler verschuldet und von Gläubigern bedroht",
+              "ok": false,
+              "fb": "Falsch: Nach Wikipedia flüchtete Kostolany, weil er zwar katholisch getauft, aber jüdischer Herkunft war."
+            },
+            {
+              "text": "Er war katholisch getauft, aber jüdischer Herkunft",
+              "ok": true,
+              "fb": "Richtig: Nach Wikipedia flüchtete Kostolany, weil er zwar katholisch getauft, aber jüdischer Herkunft war."
+            },
+            {
+              "text": "Er war politisch aktiv und von der Polizei gesucht worden",
+              "ok": false,
+              "fb": "Falsch: Nach Wikipedia flüchtete Kostolany, weil er zwar katholisch getauft, aber jüdischer Herkunft war."
+            },
+            {
+              "text": "Er war ungarischer Staatsbürger und ohne Aufenthaltsrecht",
+              "ok": false,
+              "fb": "Falsch: Nach Wikipedia flüchtete Kostolany, weil er zwar katholisch getauft, aber jüdischer Herkunft war."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-mann-und-hund",
+      "kurz": "Mann und Hund",
+      "titel": "Mann und Hund: Wirtschaft und Börse",
+      "karte": "Nach Kostolany lässt sich das Verhältnis von Börse und Wirtschaft mit einem Mann und seinem Hund beschreiben. Während der Mann langsam einen Kilometer zurücklegt, rast der Hund herum und läuft vier Kilometer. Der Mann ist die Wirtschaft, der Hund die Börse. Als Fazit nennt er: Auf sehr lange Sicht entwickeln sich beide in die gleiche Richtung, zwischendurch aber können sie gegensätzliche Richtungen nehmen. Die Börse habe ihre eigene Logik, kapriziös wie eine schöne Frau oder das Wetter.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wofür stehen im Bild von Mann und Hund der Mann und der Hund?",
+          "beleg": "Der Mann ist die Wirtschaft und der Hund ist die Börse.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Der Mann steht für den Anleger, der Hund für den Spekulanten",
+              "ok": false,
+              "fb": "Falsch: Im Bild ist der Mann die Wirtschaft und der Hund die Börse."
+            },
+            {
+              "text": "Der Mann steht für die Wirtschaft, der Hund für die Börse",
+              "ok": true,
+              "fb": "Richtig: Im Bild ist der Mann die Wirtschaft und der Hund die Börse."
+            },
+            {
+              "text": "Der Mann steht für die Börse, der Hund für die Wirtschaft",
+              "ok": false,
+              "fb": "Falsch: Im Bild ist der Mann die Wirtschaft und der Hund die Börse."
+            },
+            {
+              "text": "Der Mann steht für die Bank, der Hund für den Broker",
+              "ok": false,
+              "fb": "Falsch: Im Bild ist der Mann die Wirtschaft und der Hund die Börse."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie viele Kilometer legt der Hund zurück, während der Mann einen Kilometer geht?",
+          "beleg": "Doch während der Mann schön langsam einen Kilometer zurückgelegt hat, ist der Hund herumgerast und hat vier Kilometer zurückgelegt.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Zehn Kilometer",
+              "ok": false,
+              "fb": "Falsch: Der Hund läuft laut Kostolany vier Kilometer, während der Mann einen Kilometer zurücklegt."
+            },
+            {
+              "text": "Drei Kilometer",
+              "ok": false,
+              "fb": "Falsch: Der Hund läuft laut Kostolany vier Kilometer, während der Mann einen Kilometer zurücklegt."
+            },
+            {
+              "text": "Zwei Kilometer",
+              "ok": false,
+              "fb": "Falsch: Der Hund läuft laut Kostolany vier Kilometer, während der Mann einen Kilometer zurücklegt."
+            },
+            {
+              "text": "Vier Kilometer",
+              "ok": true,
+              "fb": "Richtig: Der Hund läuft laut Kostolany vier Kilometer, während der Mann einen Kilometer zurücklegt."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie entwickeln sich Wirtschaft und Börse nach Kostolanys Fazit auf lange Sicht?",
+          "beleg": "Fazit: Auf sehr lange Sicht entwickeln sich Wirtschaft und Börse in die gleiche Richtung, doch zwischendurch können sie völlig gegensätzliche Richtungen nehmen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "In die gleiche Richtung, zwischendurch auch gegensätzlich",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany entwickeln sich Wirtschaft und Börse auf sehr lange Sicht gleichgerichtet, zwischendurch können sie gegensätzlich verlaufen."
+            },
+            {
+              "text": "In gegensätzliche Richtungen, zwischendurch zeitweise auch gleich",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany entwickeln sich Wirtschaft und Börse auf sehr lange Sicht gleichgerichtet, zwischendurch können sie gegensätzlich verlaufen."
+            },
+            {
+              "text": "Die Wirtschaft folgt der Börse mit einer Verzögerung von Monaten",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany entwickeln sich Wirtschaft und Börse auf sehr lange Sicht gleichgerichtet, zwischendurch können sie gegensätzlich verlaufen."
+            },
+            {
+              "text": "Die Börse folgt der Wirtschaft ohne Abweichung nach",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany entwickeln sich Wirtschaft und Börse auf sehr lange Sicht gleichgerichtet, zwischendurch können sie gegensätzlich verlaufen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-angebot-nachfrage",
+      "kurz": "Angebot und Nachfrage",
+      "titel": "Angebot und Nachfrage: Was die Kurse bewegt",
+      "karte": "Nach Kostolany könnten sich Kommentatoren auf drei Begründungen beschränken: Die Börse war schwächer, weil das Angebot größer war als die Nachfrage, fester, weil die Nachfrage größer war, oder unverändert, weil beide ausgeglichen waren. Die Tendenz hänge davon ab, ob es für die Verkäufer wichtiger und dringender ist, ihre Papiere loszuwerden, als für die Käufer, mit ihrem Geld Werte zu erwerben. Gewinne der Unternehmen, Krieg oder Frieden, Wahlen wirkten nur mittelbar: erst wenn Besitzer von Geld und Wertpapieren ihnen Bedeutung beimessen und danach entscheiden.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Warum war die Börse laut Kostolany an einem Tag schwächer?",
+          "beleg": "Die Börse war schwächer, weil das Angebot größer als die Nachfrage war, oder die Börse war fester, weil die Nachfrage größer als das Angebot war",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Weil das Angebot größer war als die Nachfrage",
+              "ok": true,
+              "fb": "Richtig: Die Börse war nach Kostolany schwächer, wenn das Angebot größer war als die Nachfrage."
+            },
+            {
+              "text": "Weil die Nachfrage größer war als das Angebot",
+              "ok": false,
+              "fb": "Falsch: Die Börse war nach Kostolany schwächer, wenn das Angebot größer war als die Nachfrage."
+            },
+            {
+              "text": "Weil die Unternehmensgewinne gesunken waren",
+              "ok": false,
+              "fb": "Falsch: Die Börse war nach Kostolany schwächer, wenn das Angebot größer war als die Nachfrage."
+            },
+            {
+              "text": "Weil die Notenbank die Zinsen erhöht hatte",
+              "ok": false,
+              "fb": "Falsch: Die Börse war nach Kostolany schwächer, wenn das Angebot größer war als die Nachfrage."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wovon hängt die Tendenz laut Kostolany ab?",
+          "beleg": "Die Tendenz hängt davon ab, ob es für die Verkäufer wichtiger und dringender ist, ihre Papiere loszuwerden, als für die Käufer, mit ihrem Geld Werte zu erwerben.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ob Verkäufer ihre Papiere dringender loswerden wollen als Käufer Werte erwerben",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany hängt die Tendenz davon ab, ob es für Verkäufer dringender ist, Papiere loszuwerden, als für Käufer, Werte zu erwerben."
+            },
+            {
+              "text": "Ob Käufer ihre Papiere länger halten wollen als die Verkäufer ihr Geld",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany hängt die Tendenz davon ab, ob es für Verkäufer dringender ist, Papiere loszuwerden, als für Käufer, Werte zu erwerben."
+            },
+            {
+              "text": "Ob Regierungen ihre Haushalte schneller ausgleichen als die Notenbanken",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany hängt die Tendenz davon ab, ob es für Verkäufer dringender ist, Papiere loszuwerden, als für Käufer, Werte zu erwerben."
+            },
+            {
+              "text": "Ob Unternehmen ihre Gewinne früher melden als ihre Konkurrenten im selben Markt",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany hängt die Tendenz davon ab, ob es für Verkäufer dringender ist, Papiere loszuwerden, als für Käufer, Werte zu erwerben."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wann wirken Ereignisse wie Krieg oder Wahlen laut Kostolany auf die Kurse?",
+          "beleg": "Natürlich haben auch diese Ereignisse einen Einfluss auf die Kurse. Doch ihr Einfluss ist nur mittelbar. Erst wenn die Geld- und Wertpapierbesitzer diesen Ereignissen Bedeutung beimessen und ihre Kauf- und Verkaufsentscheidungen daran orientieren, wirken sie sich auf die Kurse aus.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Wenn Besitzer von Geld und Wertpapieren ihre Entscheidungen daran ausrichten",
+              "ok": true,
+              "fb": "Richtig: Ereignisse wirken laut Kostolany erst auf die Kurse, wenn Besitzer von Geld und Wertpapieren ihre Kauf- und Verkaufsentscheidungen daran ausrichten."
+            },
+            {
+              "text": "Wenn Unternehmen ihre Bilanzen entsprechend verändern und melden",
+              "ok": false,
+              "fb": "Falsch: Ereignisse wirken laut Kostolany erst auf die Kurse, wenn Besitzer von Geld und Wertpapieren ihre Kauf- und Verkaufsentscheidungen daran ausrichten."
+            },
+            {
+              "text": "Sobald die Notenbank darauf reagiert und die Zinsen sofort anpasst",
+              "ok": false,
+              "fb": "Falsch: Ereignisse wirken laut Kostolany erst auf die Kurse, wenn Besitzer von Geld und Wertpapieren ihre Kauf- und Verkaufsentscheidungen daran ausrichten."
+            },
+            {
+              "text": "Sobald die Zeitungen darüber berichten und Kommentatoren sie ausführlich bewerten",
+              "ok": false,
+              "fb": "Falsch: Ereignisse wirken laut Kostolany erst auf die Kurse, wenn Besitzer von Geld und Wertpapieren ihre Kauf- und Verkaufsentscheidungen daran ausrichten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-kuchen-wachstum",
+      "kurz": "Großer und kleiner Kuchen",
+      "titel": "Der große und der kleine Kuchen",
+      "karte": "Nach Kostolany ist der Unterschied zwischen Kapitalismus und Sozialismus einfach erklärt: ein großer Kuchen, der ungerecht geteilt wird, oder ein kleiner, der gerecht geteilt wird. Das Ergebnis sei, dass die gerechten Stücke des kleinen Kuchens viel winziger sind als die kleinsten Stücke des großen. An anderer Stelle schreibt er, die Wirtschaft wolle grundsätzlich wachsen, weil der Mensch nach einem immer höheren Lebensstandard strebe, und ohne Geld könne sie nicht wachsen.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie erklärt Kostolany den Unterschied zwischen Kapitalismus und Sozialismus?",
+          "beleg": "Der Unterschied zwischen Kapitalismus und Sozialismus ist einfach erklärt: ein großer Kuchen, der ungerecht, oder ein kleiner Kuchen, der gerecht geteilt wird",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ein großer Kuchen gerecht geteilt, gegen einen kleinen ungerecht geteilten",
+              "ok": false,
+              "fb": "Falsch: Kostolany erklärt den Unterschied mit einem großen, ungerecht geteilten und einem kleinen, gerecht geteilten Kuchen."
+            },
+            {
+              "text": "Ein Kuchen für alle Gäste, gegen einen Kuchen für wenige Gäste am Tisch",
+              "ok": false,
+              "fb": "Falsch: Kostolany erklärt den Unterschied mit einem großen, ungerecht geteilten und einem kleinen, gerecht geteilten Kuchen."
+            },
+            {
+              "text": "Ein fester Kuchen für Gäste, gegen einen Kuchen, der Gästen zugeteilt wird",
+              "ok": false,
+              "fb": "Falsch: Kostolany erklärt den Unterschied mit einem großen, ungerecht geteilten und einem kleinen, gerecht geteilten Kuchen."
+            },
+            {
+              "text": "Ein großer Kuchen ungerecht geteilt, gegen einen kleinen gerecht geteilten",
+              "ok": true,
+              "fb": "Richtig: Kostolany erklärt den Unterschied mit einem großen, ungerecht geteilten und einem kleinen, gerecht geteilten Kuchen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was ergibt sich laut Kostolany für die Stücke der beiden Kuchen?",
+          "beleg": "mit dem Ergebnis, dass die gerechten Stücke des kleinen Kuchens viel winziger sind als die kleinsten Stücke des großen Kuchens.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Die kleinsten Stücke des großen Kuchens sind ebenso klein wie die des kleinen",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany sind die gerechten Stücke des kleinen Kuchens winziger als die kleinsten Stücke des großen Kuchens."
+            },
+            {
+              "text": "Die gerechten Stücke des kleinen Kuchens sind winziger als die kleinsten des großen",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany sind die gerechten Stücke des kleinen Kuchens winziger als die kleinsten Stücke des großen Kuchens."
+            },
+            {
+              "text": "Die ungerechten Stücke des großen Kuchens sind winziger als die des kleinen",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany sind die gerechten Stücke des kleinen Kuchens winziger als die kleinsten Stücke des großen Kuchens."
+            },
+            {
+              "text": "Die gerechten Stücke des kleinen Kuchens sind größer als die kleinsten des großen Kuchens",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany sind die gerechten Stücke des kleinen Kuchens winziger als die kleinsten Stücke des großen Kuchens."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was ist laut Kostolany die Triebfeder des Wachstums der Wirtschaft?",
+          "beleg": "Ich bin davon überzeugt, dass die Wirtschaft grundsätzlich wachsen will, weil die Triebfeder des Wachstums der Drang des Menschen nach einem immer höheren Lebensstandard ist.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Der Drang des Menschen nach einem immer höheren Lebensstandard",
+              "ok": true,
+              "fb": "Richtig: Die Triebfeder des Wachstums ist nach Kostolany der Drang des Menschen nach einem immer höheren Lebensstandard."
+            },
+            {
+              "text": "Der Wunsch der Regierungen nach höheren Steuereinnahmen und Staatsausgaben",
+              "ok": false,
+              "fb": "Falsch: Die Triebfeder des Wachstums ist nach Kostolany der Drang des Menschen nach einem immer höheren Lebensstandard."
+            },
+            {
+              "text": "Die Erwartung der Sparer an stabile Preise und gesicherte Zinserträge",
+              "ok": false,
+              "fb": "Falsch: Die Triebfeder des Wachstums ist nach Kostolany der Drang des Menschen nach einem immer höheren Lebensstandard."
+            },
+            {
+              "text": "Das Bestreben der Unternehmen nach niedrigeren Löhnen und geringeren Kosten",
+              "ok": false,
+              "fb": "Falsch: Die Triebfeder des Wachstums ist nach Kostolany der Drang des Menschen nach einem immer höheren Lebensstandard."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-devisen-nullsumme",
+      "kurz": "Devisen und Aktien",
+      "titel": "Devisen und Aktien: Wer gewinnt, wer verliert?",
+      "karte": "Nach Kostolany steht bei der Devisenspekulation jeder Hausseposition eine Baisseposition gegenüber: Es müsse immer einer verlieren, was der andere gewinnt. Bei Aktien sei das anders. Steige die Börse über Jahrzehnte, gewinnen alle Aktienbesitzer, die ihr Risiko gestreut haben; nur die Baissespekulanten verlieren, und ihre Zahl sei klein. Über den Devisenmarkt schreibt er, maximal drei Prozent des Umsatzes dienten der Abwicklung oder Absicherung von Im- und Exportgeschäften, der Rest sei Spiel.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was steht bei der Devisenspekulation laut Kostolany jeder Hausseposition gegenüber?",
+          "beleg": "bei der Devisenspekulation jeder Hausseposition eine Baisseposition gegenübersteht. Es muss immer einer verlieren, was der andere gewinnt.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Eine Anleiheposition, sodass beide Seiten ihre Gewinne erzielen",
+              "ok": false,
+              "fb": "Falsch: Bei Devisen steht nach Kostolany jeder Hausseposition eine Baisseposition gegenüber; einer verliert, was der andere gewinnt."
+            },
+            {
+              "text": "Eine Terminposition, sodass beide Seiten ihre Verluste und ihre Gewinne teilen",
+              "ok": false,
+              "fb": "Falsch: Bei Devisen steht nach Kostolany jeder Hausseposition eine Baisseposition gegenüber; einer verliert, was der andere gewinnt."
+            },
+            {
+              "text": "Eine Absicherung, sodass keiner etwas verliert oder gewinnt",
+              "ok": false,
+              "fb": "Falsch: Bei Devisen steht nach Kostolany jeder Hausseposition eine Baisseposition gegenüber; einer verliert, was der andere gewinnt."
+            },
+            {
+              "text": "Eine Baisseposition, sodass einer verliert, was der andere gewinnt",
+              "ok": true,
+              "fb": "Richtig: Bei Devisen steht nach Kostolany jeder Hausseposition eine Baisseposition gegenüber; einer verliert, was der andere gewinnt."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wer gewinnt laut Kostolany bei Aktien, wenn die Börse über Jahrzehnte steigt?",
+          "beleg": "Wenn die Börse à la longue steigt, wie in den letzten Jahrzehnten, dann gewinnen alle Aktienbesitzer, die ihr Risiko gestreut haben. Nur die Baissespekulanten verlieren",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Baissespekulanten, die ihr Risiko gestreut haben; Aktienbesitzer verlieren",
+              "ok": false,
+              "fb": "Falsch: Bei langfristig steigender Börse gewinnen nach Kostolany die Aktienbesitzer mit gestreutem Risiko, die Baissespekulanten verlieren."
+            },
+            {
+              "text": "Aktienbesitzer, die ihr Risiko gestreut haben; Baissespekulanten verlieren",
+              "ok": true,
+              "fb": "Richtig: Bei langfristig steigender Börse gewinnen nach Kostolany die Aktienbesitzer mit gestreutem Risiko, die Baissespekulanten verlieren."
+            },
+            {
+              "text": "Aktienbesitzer, die ihr Risiko gebündelt haben; Hausse-Anleger verlieren",
+              "ok": false,
+              "fb": "Falsch: Bei langfristig steigender Börse gewinnen nach Kostolany die Aktienbesitzer mit gestreutem Risiko, die Baissespekulanten verlieren."
+            },
+            {
+              "text": "Devisenhändler, die ihr Risiko gestreut haben; Aktienbesitzer verlieren",
+              "ok": false,
+              "fb": "Falsch: Bei langfristig steigender Börse gewinnen nach Kostolany die Aktienbesitzer mit gestreutem Risiko, die Baissespekulanten verlieren."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welcher Teil des Devisenumsatzes dient laut Kostolany Im- und Exportgeschäften?",
+          "beleg": "Maximal drei Prozent dieses Umsatzes dienen der Abwicklung oder Absicherung von Im- und Exportgeschäften. Der Rest ist Spiel.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Maximal drei Prozent des Umsatzes, der Rest ist Spiel",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany dienen maximal drei Prozent des Devisenumsatzes Im- und Exportgeschäften; der Rest ist Spiel."
+            },
+            {
+              "text": "Rund dreißig Prozent des Umsatzes, der Rest ist Spiel",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany dienen maximal drei Prozent des Devisenumsatzes Im- und Exportgeschäften; der Rest ist Spiel."
+            },
+            {
+              "text": "Etwa die Hälfte des Umsatzes, der Rest ist Absicherung",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany dienen maximal drei Prozent des Devisenumsatzes Im- und Exportgeschäften; der Rest ist Spiel."
+            },
+            {
+              "text": "Über neunzig Prozent des Umsatzes, der Rest ist Spiel",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany dienen maximal drei Prozent des Devisenumsatzes Im- und Exportgeschäften; der Rest ist Spiel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-formel-geld-psychologie",
+      "kurz": "Geld + Psychologie",
+      "titel": "Geld plus Psychologie ergibt die Tendenz",
+      "karte": "Kostolany nennt als seinen Glaubenssatz: Geld + Psychologie = Tendenz. Nach seinem Fazit steigen die Kurse, wenn große und kleine Anleger kaufen wollen und auch können. Sie wollen kaufen, weil sie die Finanz- und Wirtschaftslage optimistisch beurteilen, und sie können kaufen, weil sie genügend flüssiges Geld in der Tasche oder Kasse haben. Für die mittelfristige Börsentendenz sei der Faktor Geld deshalb von übergeordneter Bedeutung.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie lautet Kostolanys Glaubenssatz zur Tendenz?",
+          "beleg": "mein Glaubenssatz wurde: Geld + Psychologie = Tendenz.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Geld + Psychologie = Tendenz",
+              "ok": true,
+              "fb": "Richtig: Kostolanys Glaubenssatz lautet: Geld + Psychologie = Tendenz."
+            },
+            {
+              "text": "Zinsen + Gewinne = Tendenz",
+              "ok": false,
+              "fb": "Falsch: Kostolanys Glaubenssatz lautet: Geld + Psychologie = Tendenz."
+            },
+            {
+              "text": "Geld + Bilanz + Zinsen = Tendenz",
+              "ok": false,
+              "fb": "Falsch: Kostolanys Glaubenssatz lautet: Geld + Psychologie = Tendenz."
+            },
+            {
+              "text": "Angebot + Politik = Tendenz",
+              "ok": false,
+              "fb": "Falsch: Kostolanys Glaubenssatz lautet: Geld + Psychologie = Tendenz."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wann steigen die Kurse laut Kostolanys Fazit?",
+          "beleg": "Fazit: Die Kurse steigen, wenn große und kleine Anleger kaufen wollen und auch können.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Wenn Zeitungen über Gewinne berichten und Banken Tipps geben",
+              "ok": false,
+              "fb": "Falsch: Die Kurse steigen nach Kostolany, wenn große und kleine Anleger kaufen wollen und auch können."
+            },
+            {
+              "text": "Wenn Unternehmen gute Bilanzen veröffentlichen und Dividenden zahlen",
+              "ok": false,
+              "fb": "Falsch: Die Kurse steigen nach Kostolany, wenn große und kleine Anleger kaufen wollen und auch können."
+            },
+            {
+              "text": "Wenn große und kleine Anleger kaufen wollen und auch können",
+              "ok": true,
+              "fb": "Richtig: Die Kurse steigen nach Kostolany, wenn große und kleine Anleger kaufen wollen und auch können."
+            },
+            {
+              "text": "Wenn Notenbanken die Zinsen anheben und Kredite verteuern",
+              "ok": false,
+              "fb": "Falsch: Die Kurse steigen nach Kostolany, wenn große und kleine Anleger kaufen wollen und auch können."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Woran liegt es nach Kostolany, dass Anleger kaufen können?",
+          "beleg": "wollen kaufen, weil sie die Finanz- und Wirtschaftslage optimistisch beurteilen, und sie können kaufen, weil sie genügend flüssiges Geld in der Tasche oder Kasse haben.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Sie erhalten von ihren Banken Hinweise auf steigende Kurse",
+              "ok": false,
+              "fb": "Falsch: Anleger können nach Kostolany kaufen, weil sie genügend flüssiges Geld in der Tasche oder Kasse haben."
+            },
+            {
+              "text": "Sie halten Papiere, deren Dividenden jedes Jahr gesteigert werden",
+              "ok": false,
+              "fb": "Falsch: Anleger können nach Kostolany kaufen, weil sie genügend flüssiges Geld in der Tasche oder Kasse haben."
+            },
+            {
+              "text": "Sie haben genügend flüssiges Geld in der Tasche oder Kasse",
+              "ok": true,
+              "fb": "Richtig: Anleger können nach Kostolany kaufen, weil sie genügend flüssiges Geld in der Tasche oder Kasse haben."
+            },
+            {
+              "text": "Sie beurteilen die Finanz- und Wirtschaftslage optimistisch genug",
+              "ok": false,
+              "fb": "Falsch: Anleger können nach Kostolany kaufen, weil sie genügend flüssiges Geld in der Tasche oder Kasse haben."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-haende-verfassung",
+      "kurz": "Hartgesottene, Zittrige",
+      "titel": "Hartgesottene und Zittrige: die technische Verfassung",
+      "karte": "Die Intensität, mit der die Börse auf gute oder schlechte Nachrichten reagiert, nennt Kostolany die technische Verfassung des Marktes. Sie hänge davon ab, ob die Papiere in den Händen der Hartgesottenen oder der Zittrigen liegen. Sind sie in zittrigen Händen, wirkt eine gute Nachricht kaum, eine schlechte endet im Debakel; Kostolany nennt das einen „übergekauften“ Markt. Der Hartgesottene verfüge über die vier G, die auch der preußische Generalfeldmarschall von Moltke als unerlässlich für eine erfolgreiche Kriegsführung betrachtete.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was nennt Kostolany die technische Verfassung des Marktes?",
+          "beleg": "Die Intensität, mit der die Börse auf gute oder schlechte Nachrichten reagiert, nenne ich die technische Verfassung des Marktes.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Die Intensität, mit der die Börse auf gute oder schlechte Nachrichten reagiert",
+              "ok": true,
+              "fb": "Richtig: Die technische Verfassung ist nach Kostolany die Intensität, mit der die Börse auf gute oder schlechte Nachrichten reagiert."
+            },
+            {
+              "text": "Die Menge an Papieren, die täglich an der Börse gehandelt und abgerechnet wird",
+              "ok": false,
+              "fb": "Falsch: Die technische Verfassung ist nach Kostolany die Intensität, mit der die Börse auf gute oder schlechte Nachrichten reagiert."
+            },
+            {
+              "text": "Die Stärke, mit der die Börse auf Zinsen oder Wechselkurse reagiert",
+              "ok": false,
+              "fb": "Falsch: Die technische Verfassung ist nach Kostolany die Intensität, mit der die Börse auf gute oder schlechte Nachrichten reagiert."
+            },
+            {
+              "text": "Die Geschwindigkeit, mit der Aufträge in den Handelssystemen ausgeführt werden",
+              "ok": false,
+              "fb": "Falsch: Die technische Verfassung ist nach Kostolany die Intensität, mit der die Börse auf gute oder schlechte Nachrichten reagiert."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was geschieht laut Kostolany, wenn die Papiere in zittrigen Händen liegen?",
+          "beleg": "Sind die Papiere in zittrigen Händen, so hat eine besonders gute Nachricht keine große Wirkung mehr. Dagegen wird eine schlechte Nachricht im Debakel enden.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Gute Nachrichten wirken euphorisch, schlechte Nachrichten rufen kaum Reaktionen hervor",
+              "ok": false,
+              "fb": "Falsch: Bei zittrigen Händen haben gute Nachrichten nach Kostolany kaum Wirkung, schlechte enden im Debakel."
+            },
+            {
+              "text": "Gute und schlechte Nachrichten wirken gleich stark, aber nur für kurze Zeit",
+              "ok": false,
+              "fb": "Falsch: Bei zittrigen Händen haben gute Nachrichten nach Kostolany kaum Wirkung, schlechte enden im Debakel."
+            },
+            {
+              "text": "Gute Nachrichten wirken am Tag, schlechte Nachrichten wirken erst in der Nacht",
+              "ok": false,
+              "fb": "Falsch: Bei zittrigen Händen haben gute Nachrichten nach Kostolany kaum Wirkung, schlechte enden im Debakel."
+            },
+            {
+              "text": "Gute Nachrichten wirken kaum, schlechte Nachrichten enden im Debakel",
+              "ok": true,
+              "fb": "Richtig: Bei zittrigen Händen haben gute Nachrichten nach Kostolany kaum Wirkung, schlechte enden im Debakel."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welche vier G nennt Kostolany für den Hartgesottenen?",
+          "beleg": "Der Hartgesottene verfügt über die vier G, die der preußische Generalfeldmarschall von Moltke auch für eine erfolgreiche Kriegsführung als unerlässlich betrachtete: Geld, Gedanken, Geduld – und natürlich auch Glück.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Geduld, Gespür, Gewinn und Gründlichkeit",
+              "ok": false,
+              "fb": "Falsch: Kostolany nennt für den Hartgesottenen vier G: Geld, Gedanken, Geduld und Glück."
+            },
+            {
+              "text": "Geld, Gedanken, Geduld und Glück",
+              "ok": true,
+              "fb": "Richtig: Kostolany nennt für den Hartgesottenen vier G: Geld, Gedanken, Geduld und Glück."
+            },
+            {
+              "text": "Geld, Gewinn, Geschick und Glück",
+              "ok": false,
+              "fb": "Falsch: Kostolany nennt für den Hartgesottenen vier G: Geld, Gedanken, Geduld und Glück."
+            },
+            {
+              "text": "Geld, Gewissen, Gelassenheit und Gunst",
+              "ok": false,
+              "fb": "Falsch: Kostolany nennt für den Hartgesottenen vier G: Geld, Gedanken, Geduld und Glück."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-umsatz-trend",
+      "kurz": "Umsatz und Trend",
+      "titel": "Umsatz und Trend: Kostolanys Faustregel",
+      "karte": "Nach Kostolany lässt sich aus dem Umsatz ablesen, wie es mit dem Trend weitergeht. Steigt oder fällt ein Markt mit kleinen Umsätzen, deute das auf eine Fortsetzung des Trends hin; geschieht es mit ständig steigenden Umsätzen, sei die Trendwende nicht mehr weit. Große Umsätze bei fallenden Preisen bedeuteten, dass zahlreiche Aktien von zittrigen in hartgesottene Hände übergehen. Steigende Kurse bei immer größeren Umsätzen nennt er eine sehr schlechte Perspektive: Je größer der Umsatz, umso verletzbarer der Markt.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Worauf deutet ein Anstieg oder Fall bei kleinen Umsätzen laut Kostolany hin?",
+          "beleg": "Fazit: Steigt oder fällt ein Markt mit kleinen Umsätzen, deutet dies auf eine Fortsetzung des Trends hin, steigt oder fällt er mit ständig steigenden Umsätzen, ist die Trendwende nicht mehr weit.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Auf eine Beruhigung bei zittrigen Händen",
+              "ok": false,
+              "fb": "Falsch: Kleine Umsätze bei steigenden oder fallenden Kursen deuten nach Kostolany auf eine Fortsetzung des Trends hin."
+            },
+            {
+              "text": "Auf einen Wechsel der Notenbankpolitik",
+              "ok": false,
+              "fb": "Falsch: Kleine Umsätze bei steigenden oder fallenden Kursen deuten nach Kostolany auf eine Fortsetzung des Trends hin."
+            },
+            {
+              "text": "Auf eine Fortsetzung des Trends",
+              "ok": true,
+              "fb": "Richtig: Kleine Umsätze bei steigenden oder fallenden Kursen deuten nach Kostolany auf eine Fortsetzung des Trends hin."
+            },
+            {
+              "text": "Auf eine Trendwende in naher Zukunft",
+              "ok": false,
+              "fb": "Falsch: Kleine Umsätze bei steigenden oder fallenden Kursen deuten nach Kostolany auf eine Fortsetzung des Trends hin."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was bedeuten große Umsätze bei fallenden Preisen laut Kostolany?",
+          "beleg": "Werden bei fallenden Preisen eine gewisse Zeit lang große Umsätze getätigt, bedeutet dies, dass zahlreiche Aktien von zittrigen in hartgesottene Hände übergehen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Zahlreiche Anleger verlassen den Markt und halten ihr Geld zurück",
+              "ok": false,
+              "fb": "Falsch: Große Umsätze bei fallenden Preisen bedeuten nach Kostolany, dass Aktien von zittrigen in hartgesottene Hände übergehen."
+            },
+            {
+              "text": "Zahlreiche Aktien gehen von zittrigen in hartgesottene Hände über",
+              "ok": true,
+              "fb": "Richtig: Große Umsätze bei fallenden Preisen bedeuten nach Kostolany, dass Aktien von zittrigen in hartgesottene Hände übergehen."
+            },
+            {
+              "text": "Zahlreiche Aktien gehen von hartgesottenen in zittrige Hände über",
+              "ok": false,
+              "fb": "Falsch: Große Umsätze bei fallenden Preisen bedeuten nach Kostolany, dass Aktien von zittrigen in hartgesottene Hände übergehen."
+            },
+            {
+              "text": "Zahlreiche Unternehmen nehmen Aktien vom Markt und kaufen sie zurück",
+              "ok": false,
+              "fb": "Falsch: Große Umsätze bei fallenden Preisen bedeuten nach Kostolany, dass Aktien von zittrigen in hartgesottene Hände übergehen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie bewertet Kostolany steigende Kurse bei immer größeren Umsätzen?",
+          "beleg": "Wenn dagegen die Papiere ununterbrochen bei immer größeren Umsätzen steigen, ist auch dies eine sehr schlechte Perspektive für die Zukunft. Je größer der Umsatz, umso verletzbarer der Markt.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Als neutrale Perspektive, denn der Umsatz sagt über den Markt nichts aus",
+              "ok": false,
+              "fb": "Falsch: Steigende Kurse bei immer größeren Umsätzen sind nach Kostolany eine sehr schlechte Perspektive; der Markt wird verletzbarer."
+            },
+            {
+              "text": "Als sehr schlechte Perspektive, denn je größer der Umsatz, desto verletzbarer der Markt",
+              "ok": true,
+              "fb": "Richtig: Steigende Kurse bei immer größeren Umsätzen sind nach Kostolany eine sehr schlechte Perspektive; der Markt wird verletzbarer."
+            },
+            {
+              "text": "Als gute Perspektive, denn große Umsätze zeigen den Zufluss neuer Anleger",
+              "ok": false,
+              "fb": "Falsch: Steigende Kurse bei immer größeren Umsätzen sind nach Kostolany eine sehr schlechte Perspektive; der Markt wird verletzbarer."
+            },
+            {
+              "text": "Als sehr gute Perspektive, denn je größer der Umsatz, desto stabiler und sicherer der Markt",
+              "ok": false,
+              "fb": "Falsch: Steigende Kurse bei immer größeren Umsätzen sind nach Kostolany eine sehr schlechte Perspektive; der Markt wird verletzbarer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-massenhysterie",
+      "kurz": "Massenhysterie",
+      "titel": "Gegen die Masse: Kostolany über Massenhysterie",
+      "karte": "Nach Kostolany muss man sehr trainiert, kühl und sogar zynisch sein, um sich der Massenhysterie zu entziehen; deshalb gelinge es an der Börse nur einer Minderheit, erfolgreich zu spekulieren. Es sei ein Komplex aller Börsianer, zu glauben, die anderen wüssten mehr als man selbst. Er fasst eine Beobachtung in einem Reim: Was an der Börse jeder weiß, macht mich nicht mehr heiß. Schätzungen einer Aktie hingen von Millionen Personen ab, die jeden Tag eine andere Ansicht hätten.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was braucht es laut Kostolany, um sich der Massenhysterie zu entziehen?",
+          "beleg": "Man muss sehr trainiert, kühl und sogar zynisch sein, um sich der Massenhysterie zu entziehen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Man muss sehr wohlhabend, ruhig und in Gesellschaft sicher sein",
+              "ok": false,
+              "fb": "Falsch: Um sich der Massenhysterie zu entziehen, muss man nach Kostolany sehr trainiert, kühl und sogar zynisch sein."
+            },
+            {
+              "text": "Man muss sehr trainiert, kühl und sogar zynisch sein",
+              "ok": true,
+              "fb": "Richtig: Um sich der Massenhysterie zu entziehen, muss man nach Kostolany sehr trainiert, kühl und sogar zynisch sein."
+            },
+            {
+              "text": "Man muss sehr gebildet, vorsichtig und sogar ängstlich sein",
+              "ok": false,
+              "fb": "Falsch: Um sich der Massenhysterie zu entziehen, muss man nach Kostolany sehr trainiert, kühl und sogar zynisch sein."
+            },
+            {
+              "text": "Man muss sehr erfahren, freundlich und stets gesprächsbereit sein",
+              "ok": false,
+              "fb": "Falsch: Um sich der Massenhysterie zu entziehen, muss man nach Kostolany sehr trainiert, kühl und sogar zynisch sein."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wem gelingt es an der Börse laut Kostolany, erfolgreich zu spekulieren?",
+          "beleg": "Deshalb gelingt es an der Börse auch nur einer Minderheit, erfolgreich zu spekulieren. Der Spekulant muss also mutig, engagiert und weise sein.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Einer Minderheit, die mutig, engagiert und weise ist",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany gelingt es an der Börse nur einer Minderheit, erfolgreich zu spekulieren; der Spekulant müsse mutig, engagiert und weise sein."
+            },
+            {
+              "text": "Einer Mehrheit, die gut beraten, vorsichtig und fleißig ist",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany gelingt es an der Börse nur einer Minderheit, erfolgreich zu spekulieren; der Spekulant müsse mutig, engagiert und weise sein."
+            },
+            {
+              "text": "Einer Mehrheit, die mutig, engagiert und weise ist",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany gelingt es an der Börse nur einer Minderheit, erfolgreich zu spekulieren; der Spekulant müsse mutig, engagiert und weise sein."
+            },
+            {
+              "text": "Einer Minderheit, die gut vernetzt, informiert und reich ist",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany gelingt es an der Börse nur einer Minderheit, erfolgreich zu spekulieren; der Spekulant müsse mutig, engagiert und weise sein."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welchen Komplex aller Börsianer nennt Kostolany?",
+          "beleg": "Es ist ein Komplex aller Börsianer, zu glauben, die anderen wüssten mehr als man selbst.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Zu glauben, die anderen wüssten mehr als man selbst",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany ist es ein Komplex aller Börsianer, zu glauben, die anderen wüssten mehr als man selbst."
+            },
+            {
+              "text": "Zu glauben, die anderen verdienten mehr als man selbst",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany ist es ein Komplex aller Börsianer, zu glauben, die anderen wüssten mehr als man selbst."
+            },
+            {
+              "text": "Zu glauben, die anderen hätten mehr Geld als man selbst",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany ist es ein Komplex aller Börsianer, zu glauben, die anderen wüssten mehr als man selbst."
+            },
+            {
+              "text": "Zu glauben, die anderen verkauften früher als man selbst",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany ist es ein Komplex aller Börsianer, zu glauben, die anderen wüssten mehr als man selbst."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-geduld-verlust",
+      "kurz": "Geduld und Verlust",
+      "titel": "Geduld, Schmerzensgeld und Verluste",
+      "karte": "Nach Kostolany ist Geduld vielleicht das Wichtigste an der Börse, und der Mangel an ihr der häufigste Fehler. Er zitiert die alten Frankfurter Börsianer: Das Geld mache man an der Börse nicht mit dem Kopf, sondern mit dem Sitzfleisch. Sein eigener Spruch lautet, in der Spekulation gemachtes Geld sei Schmerzensgeld. Ein erfolgreicher Spekulant gewinne in 100 Fällen 51 Mal; jeder Börsenverlust sei zugleich ein Gewinn an Erfahrung, wenn man ihn genau analysiere.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was ist laut Kostolany vielleicht das Wichtigste an der Börse?",
+          "beleg": "Geduld ist vielleicht das Wichtigste an der Börse und der Mangel an ihr der häufigste Fehler.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Kapital, und sein Mangel ist der häufigste Fehler",
+              "ok": false,
+              "fb": "Falsch: Geduld ist nach Kostolany vielleicht das Wichtigste an der Börse; ihr Mangel sei der häufigste Fehler."
+            },
+            {
+              "text": "Geduld, und ihr Mangel ist der häufigste Fehler",
+              "ok": true,
+              "fb": "Richtig: Geduld ist nach Kostolany vielleicht das Wichtigste an der Börse; ihr Mangel sei der häufigste Fehler."
+            },
+            {
+              "text": "Schnelligkeit, und ihr Mangel ist der häufigste Fehler",
+              "ok": false,
+              "fb": "Falsch: Geduld ist nach Kostolany vielleicht das Wichtigste an der Börse; ihr Mangel sei der häufigste Fehler."
+            },
+            {
+              "text": "Fachwissen, und sein Mangel ist der häufigste Fehler",
+              "ok": false,
+              "fb": "Falsch: Geduld ist nach Kostolany vielleicht das Wichtigste an der Börse; ihr Mangel sei der häufigste Fehler."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie lautet Kostolanys Spruch über in der Spekulation gemachtes Geld?",
+          "beleg": "Mein Spruch lautet: In der Spekulation gemachtes Geld ist Schmerzensgeld. Erst kommen die Schmerzen und dann das Geld.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Es ist Wartegeld: erst kommt die Ruhe, dann die Überraschung",
+              "ok": false,
+              "fb": "Falsch: Kostolanys Spruch: In der Spekulation gemachtes Geld ist Schmerzensgeld; erst kommen die Schmerzen, dann das Geld."
+            },
+            {
+              "text": "Es ist Spielgeld: erst kommt das Vergnügen, dann kommt der Verlust",
+              "ok": false,
+              "fb": "Falsch: Kostolanys Spruch: In der Spekulation gemachtes Geld ist Schmerzensgeld; erst kommen die Schmerzen, dann das Geld."
+            },
+            {
+              "text": "Es ist Lehrgeld: erst kommt der Gewinn, dann die Erkenntnis",
+              "ok": false,
+              "fb": "Falsch: Kostolanys Spruch: In der Spekulation gemachtes Geld ist Schmerzensgeld; erst kommen die Schmerzen, dann das Geld."
+            },
+            {
+              "text": "Es ist Schmerzensgeld: erst kommen die Schmerzen, dann das Geld",
+              "ok": true,
+              "fb": "Richtig: Kostolanys Spruch: In der Spekulation gemachtes Geld ist Schmerzensgeld; erst kommen die Schmerzen, dann das Geld."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie oft gewinnt laut Kostolany ein erfolgreicher Spekulant in 100 Fällen?",
+          "beleg": "Ein erfolgreicher Spekulant gewinnt in 100 Fällen 51 Mal und in 49 Fällen verliert er. Von der Differenz muss er leben.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "81 Mal, in 19 Fällen verliert er",
+              "ok": false,
+              "fb": "Falsch: Ein erfolgreicher Spekulant gewinnt nach Kostolany in 100 Fällen 51 Mal und verliert in 49 Fällen."
+            },
+            {
+              "text": "51 Mal, in 49 Fällen verliert er",
+              "ok": true,
+              "fb": "Richtig: Ein erfolgreicher Spekulant gewinnt nach Kostolany in 100 Fällen 51 Mal und verliert in 49 Fällen."
+            },
+            {
+              "text": "71 Mal, in 29 Fällen verliert er",
+              "ok": false,
+              "fb": "Falsch: Ein erfolgreicher Spekulant gewinnt nach Kostolany in 100 Fällen 51 Mal und verliert in 49 Fällen."
+            },
+            {
+              "text": "61 Mal, in 39 Fällen verliert er",
+              "ok": false,
+              "fb": "Falsch: Ein erfolgreicher Spekulant gewinnt nach Kostolany in 100 Fällen 51 Mal und verliert in 49 Fällen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-zehn-gebote",
+      "kurz": "Zehn Gebote",
+      "titel": "Kostolanys zehn Gebote",
+      "karte": "Am Ende des Buches stellt Kostolany zehn Gebote auf. Laut Liste soll man Ideen haben und mit Überlegung handeln, genügend Geld haben, um nicht unter Druck zu kommen, und Geduld haben. Man soll hart und zäh sein, wenn man überzeugt ist, und elastisch bleiben, weil die eigene Vorstellung danebenliegen kann. Weitere Gebote: verkaufen, wenn eine neue Konstellation vorhanden ist, alle Risiken ins Kalkül ziehen und demütig bleiben, auch wenn man Recht bekommen hat.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was lautet laut Kostolanys Liste das Gebot zum Geld?",
+          "beleg": "Genügend Geld haben, um nicht unter Druck zu kommen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Möglichst wenig Geld einsetzen, um nicht zu verlieren",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste lautet ein Gebot: Genügend Geld haben, um nicht unter Druck zu kommen."
+            },
+            {
+              "text": "Geld erst dann einsetzen, wenn sicher Gewinne winken",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste lautet ein Gebot: Genügend Geld haben, um nicht unter Druck zu kommen."
+            },
+            {
+              "text": "Genügend Geld haben, um jederzeit nachkaufen zu können",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste lautet ein Gebot: Genügend Geld haben, um nicht unter Druck zu kommen."
+            },
+            {
+              "text": "Genügend Geld haben, um nicht unter Druck zu kommen",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolanys Liste lautet ein Gebot: Genügend Geld haben, um nicht unter Druck zu kommen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wann ist laut Kostolanys Liste zu verkaufen?",
+          "beleg": "Verkaufen, wenn man einsieht, dass eine neue Konstellation vorhanden ist.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Wenn die Kurse eine längere Zeit nicht mehr gestiegen sind",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste ist zu verkaufen, wenn man einsieht, dass eine neue Konstellation vorhanden ist."
+            },
+            {
+              "text": "Wenn Banken und Makler zum Verkauf der Papiere raten",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste ist zu verkaufen, wenn man einsieht, dass eine neue Konstellation vorhanden ist."
+            },
+            {
+              "text": "Wenn man einsieht, dass eine neue Konstellation vorhanden ist",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolanys Liste ist zu verkaufen, wenn man einsieht, dass eine neue Konstellation vorhanden ist."
+            },
+            {
+              "text": "Wenn der Kurs eine vorher festgelegte Gewinnmarke erreicht hat",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste ist zu verkaufen, wenn man einsieht, dass eine neue Konstellation vorhanden ist."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie geht Kostolanys Liste mit Risiken um, auch mit unwahrscheinlichen?",
+          "beleg": "Alle Risiken, sogar die unwahrscheinlichsten, ins Kalkül ziehen, das heißt, ständig mit Imponderabilien rechnen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Risiken streuen, statt sie einzeln im Kalkül zu betrachten",
+              "ok": false,
+              "fb": "Falsch: Laut Kostolanys Liste sind alle Risiken, sogar die unwahrscheinlichsten, ins Kalkül zu ziehen."
+            },
+            {
+              "text": "Nur die wahrscheinlichen Risiken ins Kalkül ziehen und Rest ausblenden",
+              "ok": false,
+              "fb": "Falsch: Laut Kostolanys Liste sind alle Risiken, sogar die unwahrscheinlichsten, ins Kalkül zu ziehen."
+            },
+            {
+              "text": "Alle Risiken, auch die unwahrscheinlichsten, ins Kalkül ziehen",
+              "ok": true,
+              "fb": "Richtig: Laut Kostolanys Liste sind alle Risiken, sogar die unwahrscheinlichsten, ins Kalkül zu ziehen."
+            },
+            {
+              "text": "Risiken den Banken überlassen, statt sie selbst zu berechnen",
+              "ok": false,
+              "fb": "Falsch: Laut Kostolanys Liste sind alle Risiken, sogar die unwahrscheinlichsten, ins Kalkül zu ziehen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-zehn-verbote",
+      "kurz": "Zehn Verbote",
+      "titel": "Kostolanys zehn Verbote",
+      "karte": "Neben den Geboten stellt Kostolany zehn Verbote auf. Laut Liste soll man nicht Tipps nachlaufen oder Geheiminformationen ablauschen wollen, nicht glauben, dass Verkäufer und Käufer wissen, warum sie verkaufen oder kaufen, und nicht Verluste zurückgewinnen wollen. Weitere Verbote: die Kurse ununterbrochen in kleinsten Variationen verfolgen, sich von politischen Sympathien oder Antipathien beeinflussen lassen und übermütig werden, wenn man einen Profit erwischt hat. Zu Tipps schreibt er an anderer Stelle, sie seien stets der Versuch einer Bank oder Interessengruppe, eine Aktie beim Publikum abzuladen.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was steht laut Kostolanys Liste an erster Stelle der Verbote?",
+          "beleg": "Tipps nachzulaufen, Geheiminformationen ablauschen zu wollen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Banken nachzulaufen und Beratungsgespräche suchen zu wollen",
+              "ok": false,
+              "fb": "Falsch: Das erste Verbot der Liste lautet: Tipps nachzulaufen, Geheiminformationen ablauschen zu wollen."
+            },
+            {
+              "text": "Kurse nachzulaufen und Marktgerüchte an Freunde weitergeben zu wollen",
+              "ok": false,
+              "fb": "Falsch: Das erste Verbot der Liste lautet: Tipps nachzulaufen, Geheiminformationen ablauschen zu wollen."
+            },
+            {
+              "text": "Tipps nachzulaufen und Geheiminformationen ablauschen zu wollen",
+              "ok": true,
+              "fb": "Richtig: Das erste Verbot der Liste lautet: Tipps nachzulaufen, Geheiminformationen ablauschen zu wollen."
+            },
+            {
+              "text": "Trends nachzulaufen und Chartsignale deuten zu wollen",
+              "ok": false,
+              "fb": "Falsch: Das erste Verbot der Liste lautet: Tipps nachzulaufen, Geheiminformationen ablauschen zu wollen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was gehört laut Kostolanys Liste zu den Verboten beim Verfolgen der Kurse?",
+          "beleg": "Die Kurse ununterbrochen in den kleinsten Variationen zu verfolgen und auf jeden Singsang zu reagieren.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Die Kurse nur einmal im Jahr in den größten Bewegungen zu prüfen und zu deuten",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste gehört es zu den Verboten, die Kurse ununterbrochen in den kleinsten Variationen zu verfolgen."
+            },
+            {
+              "text": "Die Kurse ständig mit denen anderer Börsen zu vergleichen",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste gehört es zu den Verboten, die Kurse ununterbrochen in den kleinsten Variationen zu verfolgen."
+            },
+            {
+              "text": "Die Kurse mit Charts über viele Jahre in Ruhe auszuwerten",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolanys Liste gehört es zu den Verboten, die Kurse ununterbrochen in den kleinsten Variationen zu verfolgen."
+            },
+            {
+              "text": "Die Kurse ununterbrochen in den kleinsten Variationen zu verfolgen",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolanys Liste gehört es zu den Verboten, die Kurse ununterbrochen in den kleinsten Variationen zu verfolgen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welchen Glauben nennt Kostolanys Liste unter den Verboten über Käufer und Verkäufer?",
+          "beleg": "Zu glauben, dass die Verkäufer wissen, warum sie verkaufen, oder die Käufer, warum sie kaufen, das heißt, dass sie mehr wissen als man selbst.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Dass Verkäufer und Käufer ihre Entscheidungen von Charts und Kennzahlen ableiten lassen",
+              "ok": false,
+              "fb": "Falsch: Zu den Verboten in Kostolanys Liste gehört der Glaube, Verkäufer und Käufer wüssten, warum sie handeln, und wüssten mehr als man selbst."
+            },
+            {
+              "text": "Dass Verkäufer und Käufer Tipps erhalten und früher als andere handeln",
+              "ok": false,
+              "fb": "Falsch: Zu den Verboten in Kostolanys Liste gehört der Glaube, Verkäufer und Käufer wüssten, warum sie handeln, und wüssten mehr als man selbst."
+            },
+            {
+              "text": "Dass Verkäufer und Käufer wissen, warum sie handeln, und mehr wissen als man selbst",
+              "ok": true,
+              "fb": "Richtig: Zu den Verboten in Kostolanys Liste gehört der Glaube, Verkäufer und Käufer wüssten, warum sie handeln, und wüssten mehr als man selbst."
+            },
+            {
+              "text": "Dass Verkäufer und Käufer Verluste scheuen und deshalb auf Banken hören",
+              "ok": false,
+              "fb": "Falsch: Zu den Verboten in Kostolanys Liste gehört der Glaube, Verkäufer und Käufer wüssten, warum sie handeln, und wüssten mehr als man selbst."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-amsterdam-boerse",
+      "kurz": "Börse in Amsterdam",
+      "titel": "Die erste Aktienbörse im heutigen Sinne: Amsterdam",
+      "karte": "Nach Kostolany ist die Börse spontan entstanden, so wie die Wall Street unter einem Baum. Die erste Aktienbörse im heutigen Sinne entstand in Amsterdam im 17. Jahrhundert, zu Beginn der großen Kolonialzeit; die Spekulation stürzte sich auf die Aktien der Indischen Kompanie von 1602. Als Zeugen nennt er José de la Vega, den Autor des Buchs „Die Verwirrung der Verwirrungen“ über die Amsterdamer Börse im 17. Jahrhundert. Dieser beschreibe den Mechanismus der Spekulation schon so, wie er heute noch sei: Hoffnungen und Ängste, Erwartungen und Enttäuschungen sowie Geld oder Schulden bewegten die Kurse heute wie damals.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wo und wann entstand laut Kostolany die erste Aktienbörse im heutigen Sinne?",
+          "beleg": "Die erste Aktienbörse im heutigen Sinne entstand in Amsterdam. Es war im 17. Jahrhundert, zu Beginn der großen Kolonialzeit.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "In Amsterdam, im 17. Jahrhundert",
+              "ok": true,
+              "fb": "Richtig: Die erste Aktienbörse im heutigen Sinne entstand nach Kostolany im 17. Jahrhundert in Amsterdam."
+            },
+            {
+              "text": "In Paris, im 19. Jahrhundert",
+              "ok": false,
+              "fb": "Falsch: Die erste Aktienbörse im heutigen Sinne entstand nach Kostolany im 17. Jahrhundert in Amsterdam."
+            },
+            {
+              "text": "In London, zu Beginn des 18. Jahrhunderts",
+              "ok": false,
+              "fb": "Falsch: Die erste Aktienbörse im heutigen Sinne entstand nach Kostolany im 17. Jahrhundert in Amsterdam."
+            },
+            {
+              "text": "In Venedig, im 16. Jahrhundert",
+              "ok": false,
+              "fb": "Falsch: Die erste Aktienbörse im heutigen Sinne entstand nach Kostolany im 17. Jahrhundert in Amsterdam."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Auf welche Aktien stürzte sich laut Kostolany die Spekulation in Amsterdam?",
+          "beleg": "Die Spekulation stürzte sich auf die Aktien der Indischen Kompanie. Dieses erste organisierte Kolonialunternehmen war im Jahre 1602 gegründet worden.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Auf die Aktien der Westindischen Gilde, gegründet im Jahre 1621",
+              "ok": false,
+              "fb": "Falsch: In Amsterdam stürzte sich die Spekulation nach Kostolany auf die Aktien der 1602 gegründeten Indischen Kompanie."
+            },
+            {
+              "text": "Auf die Aktien der Handelsbank von Amsterdam, gegründet im Jahre 1609",
+              "ok": false,
+              "fb": "Falsch: In Amsterdam stürzte sich die Spekulation nach Kostolany auf die Aktien der 1602 gegründeten Indischen Kompanie."
+            },
+            {
+              "text": "Auf die Aktien der Tuchhändler von Haarlem, gegründet im Jahre 1590",
+              "ok": false,
+              "fb": "Falsch: In Amsterdam stürzte sich die Spekulation nach Kostolany auf die Aktien der 1602 gegründeten Indischen Kompanie."
+            },
+            {
+              "text": "Auf die Aktien der Indischen Kompanie, gegründet im Jahre 1602",
+              "ok": true,
+              "fb": "Richtig: In Amsterdam stürzte sich die Spekulation nach Kostolany auf die Aktien der 1602 gegründeten Indischen Kompanie."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was bewegt die Kurse laut Kostolany heute wie damals nach oben oder unten?",
+          "beleg": "Illusionen, Verdrießlichkeiten, Optimismus, Pessimismus, Überraschungen oder Überzeugungen, Hoffnungen und Ängste, Erwartungen und Enttäuschungen sowie Geld oder Schulden bewegen die Kurse heute wie damals nach oben oder unten.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Gerüchte, Preislisten und Zeitungsmeldungen sowie Reisen oder Briefe",
+              "ok": false,
+              "fb": "Falsch: Kostolany nennt Hoffnungen und Ängste, Erwartungen und Enttäuschungen sowie Geld oder Schulden als Kursbeweger, heute wie damals."
+            },
+            {
+              "text": "Gewinnmeldungen, Dividenden und Bilanzen sowie Zinsen oder staatliche Kreditlinien",
+              "ok": false,
+              "fb": "Falsch: Kostolany nennt Hoffnungen und Ängste, Erwartungen und Enttäuschungen sowie Geld oder Schulden als Kursbeweger, heute wie damals."
+            },
+            {
+              "text": "Hoffnungen und Ängste, Erwartungen und Enttäuschungen sowie Geld oder Schulden",
+              "ok": true,
+              "fb": "Richtig: Kostolany nennt Hoffnungen und Ängste, Erwartungen und Enttäuschungen sowie Geld oder Schulden als Kursbeweger, heute wie damals."
+            },
+            {
+              "text": "Politische Wahlen, Kriege und Handelsverträge sowie Zölle oder Steuern",
+              "ok": false,
+              "fb": "Falsch: Kostolany nennt Hoffnungen und Ängste, Erwartungen und Enttäuschungen sowie Geld oder Schulden als Kursbeweger, heute wie damals."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kost-boom-krach",
+      "kurz": "Boom und Krach",
+      "titel": "Boom und Krach: der Ballon und der Nadelstich",
+      "karte": "Nach Kostolany schwillt der Börsenboom mit den zufließenden Geldern und Krediten zu einem Riesenballon an, der durch einen Nadelstich platzen kann. Er wiederholt: Kein Börsenkrach, dem nicht ein Börsenboom vorausging, kein Boom, der nicht mit einem Krach endet. Aus Wien gibt er einen alten Spruch wieder: Eine Hausse kann auch ein Rothschild machen, eine Baisse aber nie verhindern. Als Rothschild nennt er an anderer Stelle einen Baron, bei dem Balzac Tipps erlauschte.",
+      "quelle": {
+        "titel": "Die Kunst, über Geld nachzudenken (André Kostolany), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "André Kostolany: Die Kunst, über Geld nachzudenken (deutsche Ausgabe, Ullstein; Kindle)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was gilt laut Kostolany für Börsenboom und Börsenkrach?",
+          "beleg": "Ich wiederhole: kein Börsenkrach, dem nicht ein Börsenboom vorangegangen ist, kein Boom, der nicht mit einem Krach endet.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ein Boom folgt meist einem Krach, und ein Krach endet meist mit einem Boom",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany geht jedem Börsenkrach ein Börsenboom voraus, und jeder Boom endet mit einem Krach."
+            },
+            {
+              "text": "Jedem Krach geht ein Boom voraus, und jeder Boom endet mit einem Krach",
+              "ok": true,
+              "fb": "Richtig: Nach Kostolany geht jedem Börsenkrach ein Börsenboom voraus, und jeder Boom endet mit einem Krach."
+            },
+            {
+              "text": "Ein Krach tritt meist ohne Boom ein, und ein Boom endet meist ohne Krach",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany geht jedem Börsenkrach ein Börsenboom voraus, und jeder Boom endet mit einem Krach."
+            },
+            {
+              "text": "Mancher Krach geht einem Boom voraus, und mancher Boom endet in einer Flaute",
+              "ok": false,
+              "fb": "Falsch: Nach Kostolany geht jedem Börsenkrach ein Börsenboom voraus, und jeder Boom endet mit einem Krach."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Mit welchem Bild beschreibt Kostolany den Börsenboom?",
+          "beleg": "Der Börsenboom schwillt mit den zufließenden Geldern und Krediten zu einem Riesenballon an, der dann durch einen Nadelstich platzen kann",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ein Dampfkessel, der durch einen Funken Sprengkraft erhält",
+              "ok": false,
+              "fb": "Falsch: Kostolany beschreibt den Börsenboom als Riesenballon, der durch einen Nadelstich platzen kann."
+            },
+            {
+              "text": "Ein Riesenballon, der durch einen Nadelstich platzen kann",
+              "ok": true,
+              "fb": "Richtig: Kostolany beschreibt den Börsenboom als Riesenballon, der durch einen Nadelstich platzen kann."
+            },
+            {
+              "text": "Ein Schneeball, der durch einen Windhauch zerfallen kann",
+              "ok": false,
+              "fb": "Falsch: Kostolany beschreibt den Börsenboom als Riesenballon, der durch einen Nadelstich platzen kann."
+            },
+            {
+              "text": "Ein Karussell, das durch einen Windstoß ins Schwanken gerät",
+              "ok": false,
+              "fb": "Falsch: Kostolany beschreibt den Börsenboom als Riesenballon, der durch einen Nadelstich platzen kann."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was besagt der alte Spruch an der Wiener Börse über Hausse und Baisse?",
+          "beleg": "Ein alter Spruch an der Wiener Börse lautete: Eine Hausse kann auch ein Rothschild machen, eine Baisse aber nie verhindern.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Eine Hausse kann auch ein Rothschild beenden, eine Baisse aber früh erkennen",
+              "ok": false,
+              "fb": "Falsch: Der Spruch an der Wiener Börse lautet nach Kostolany: Eine Hausse kann auch ein Rothschild machen, eine Baisse aber nie verhindern."
+            },
+            {
+              "text": "Eine Baisse kann auch ein Rothschild machen, eine Hausse aber nie verhindern",
+              "ok": false,
+              "fb": "Falsch: Der Spruch an der Wiener Börse lautet nach Kostolany: Eine Hausse kann auch ein Rothschild machen, eine Baisse aber nie verhindern."
+            },
+            {
+              "text": "Eine Hausse kann auch ein Rothschild machen, eine Baisse aber nie verhindern",
+              "ok": true,
+              "fb": "Richtig: Der Spruch an der Wiener Börse lautet nach Kostolany: Eine Hausse kann auch ein Rothschild machen, eine Baisse aber nie verhindern."
+            },
+            {
+              "text": "Eine Baisse kann auch ein Rothschild beenden, eine Hausse aber früh erkennen",
+              "ok": false,
+              "fb": "Falsch: Der Spruch an der Wiener Börse lautet nach Kostolany: Eine Hausse kann auch ein Rothschild machen, eine Baisse aber nie verhindern."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [
+    {
+      "von": [
+        6
+      ],
+      "titel": "Zitelmann: Nullsummenannahme",
+      "url": "/buch/zitelmann-zero-sum-mindset/",
+      "ziel": "zitelmann-zero-sum-mindset"
+    },
+    {
+      "von": [
+        7
+      ],
+      "titel": "Zitelmann: Nullsummendenken",
+      "url": "/buch/zitelmann-zero-sum-mindset/",
+      "ziel": "zitelmann-zero-sum-mindset"
+    },
+    {
+      "von": [
+        12
+      ],
+      "titel": "Ravikant: Kurzfristiger Schmerz",
+      "url": "/buch/der-almanach-von-naval-ravikant/",
+      "ziel": "der-almanach-von-naval-ravikant"
+    },
+    {
+      "von": [
+        3
+      ],
+      "titel": "Lissabon 1941: Fluchtwege",
+      "url": "/buch/lissabon-1941/",
+      "ziel": "lissabon-1941"
+    },
+    {
+      "von": [
+        15
+      ],
+      "titel": "Dalrymple: Die VOC von 1602",
+      "url": "/buch/dalrymple-anarchie/",
+      "ziel": "dalrymple-anarchie"
+    }
+  ],
+  "platzhalter": false,
+  "coverBreite": 1776,
+  "coverHoehe": 2700,
+  "suchBeschreibung": "Wie denkt ein Spekulant über Geld? {n} Lernkarten zu „Die Kunst, über Geld nachzudenken“ von André Kostolany, je mit Quelle und {fragen} Fragen."
+}
