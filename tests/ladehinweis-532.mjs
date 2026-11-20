@@ -30,7 +30,9 @@ import postcss from 'postcss';
 import tailwindcss from 'tailwindcss';
 
 const WURZEL = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const HINWEIS = 'Lade Inhalte';
+// Seit spoonup#548 spricht der Ladehinweis die Browsersprache; jsdom meldet en-US. Die Sprachen
+// selbst prüft tests/ladehinweis-sprachen-548.mjs.
+const HINWEIS = 'Loading content...';
 const SEITENTEXT = 'STARTSEITE-GELADEN';
 
 const befunde = [];

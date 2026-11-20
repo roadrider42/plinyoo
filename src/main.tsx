@@ -20,7 +20,8 @@ import './index.css';
 import 'modern-normalize/modern-normalize.css';
 
 import { router } from './routes/AppRoutes';
-import './lib/i18n';
+import { erkannteSprache } from './lib/i18n';
+import { ladehinweisFuer } from './lib/ladehinweis';
 
 // Kein html.loading mehr (spoonup#532): Die Klasse machte den body unsichtbar, bis die Seite
 // fertig war — und damit auch den Suspense-Rückfall unten, der genau für die Wartezeit auf
@@ -45,7 +46,8 @@ createRoot(document.getElementById('root')!).render(
           color: '#141A1F',
           fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
         }}>
-          Lade Inhalte...
+          {/* In der Sprache des Besuchers, gewählt wie i18next selbst wählt (spoonup#548) */}
+          {ladehinweisFuer(erkannteSprache())}
         </div>
       }>
         <App />
