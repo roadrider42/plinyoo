@@ -677,16 +677,16 @@
       "description": "Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan."
     },
     "zugang": {
-      "title": "Dein Zugang zu plinyoo",
+      "title": "Zugang | plinyoo",
       "description": "Sag uns kurz, wer du bist und was du lernen oder weitergeben möchtest."
     },
     "mitmachen": {
       "title": "Mitmachen | plinyoo",
-      "description": "100 % Produkt. 100 % Praxis. Wir entwickeln bei plinyoo Lern-Flows, die Teams wirklich unterstützen und Service messbar besser machen."
+      "description": "Mach bei plinyoo mit: Sag uns, ob du dich bei Frontend, Backend, Mobile, Product oder Learning Design einbringen willst."
     },
     "investieren": {
       "title": "Investieren | plinyoo",
-      "description": "plinyoo macht Lernen wirksam, greifbar und kontinuierlich. Gemeinsam bauen wir ein Produkt, das Entwicklung langfristig unterstützt – messbar, skalierbar und praxisnah."
+      "description": "plinyoo ist eine Lernplattform für Wissen, Teams und eigene Wege."
     },
     "impressum": {
       "title": "Impressum | plinyoo",
@@ -698,11 +698,11 @@
     },
     "urheberrecht": {
       "title": "Urheberrecht & Bildnachweise | plinyoo",
-      "description": "Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) sind – sofern nicht anders gekennzeichnet – Eigentum der Plinyoo UG (haftungsbeschränkt) und urheberrechtlich geschützt."
+      "description": "Inhalte dieser Website gehören, sofern nicht anders gekennzeichnet, der Plinyoo UG (haftungsbeschränkt) und sind urheberrechtlich geschützt."
     },
     "kontakt": {
-      "title": "Kontakt & Use Case | plinyoo",
-      "description": "Beschreibe uns deine Idee oder Herausforderung. Wir finden gemeinsam eine Lösung."
+      "title": "Kontakt | plinyoo",
+      "description": "Beschreibe uns deine Idee oder Herausforderung."
     }
   }
 }
