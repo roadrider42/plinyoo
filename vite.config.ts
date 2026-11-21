@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'node:path'
+import { setzeKopf } from './scripts/seo-kopf.mjs'
 
 // Für GitHub Project Pages: https://USER.github.io/REPO/
 // -> base = '/REPO/'
@@ -13,7 +14,8 @@ export default defineConfig(({ command }) => {
   const base = envBase ?? (isGitHubActionsBuild && repo ? `/${repo}/` : '/');
 
   return {
-    plugins: [react()],
+    // #609: Titel und Beschreibung kommen aus seo.start.* in public/locales/de/translation.json (scripts/seo-kopf.mjs).
+    plugins: [react(), { name: 'seo-kopf', transformIndexHtml: { order: 'pre', handler: (html: string) => setzeKopf(html) } }],
     base,
     resolve: {
       alias: {

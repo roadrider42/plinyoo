@@ -670,5 +670,11 @@
       "text": "Anfragen zu Nutzungsrechten bitte an heiko@plinyoo.com."
     },
     "back_to_home": "Zur Startseite"
+  },
+  "seo": {
+    "start": {
+      "title": "plinyoo: Lernplattform für Wissen, Teams und eigene Wege",
+      "description": "Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan."
+    }
   }
 }
