@@ -79,7 +79,7 @@ export default function Hero() {
           {/* B1/B2: Mit Telefon steht diese Schaltfläche nur ab 1024 px (lg) hier in der Textspalte, darunter die zweite nach dem Telefon */}
           <div className={`mt-1 flex flex-col gap-2 ${mitFaden ? 'hidden lg:flex' : ''}`}>
             <Link
-              to="/zugang"
+              to="/zugang/"
               data-ziel="hero-zugang"
               className={`${zugangKlassen} sm:self-start ${mitFaden ? '' : 'lg:self-center'}`}
             >
@@ -94,7 +94,7 @@ export default function Hero() {
         {/* B1–B3: Unter 1024 px steht die Zugangsschaltfläche nach dem Telefon, unter 640 px spaltenbreit, darüber mittig */}
         {mitFaden && (
           <div className="flex flex-col gap-2 sm:items-center lg:hidden">
-            <Link to="/zugang" data-ziel="hero-zugang" className={zugangKlassen}>
+            <Link to="/zugang/" data-ziel="hero-zugang" className={zugangKlassen}>
               {t('hero.cta')}
             </Link>
             <ZugangHinweis className="text-center" />

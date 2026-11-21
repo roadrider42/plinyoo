@@ -76,7 +76,7 @@ export default function KontaktPage() {
               <label className="block text-sm font-medium">{t('forms.common.message_label')}</label>
               <textarea name="message" value={form.message} onChange={onChange} rows={5} className="mt-1 w-full rounded-lg border p-2" placeholder={t('forms.use_case.message_placeholder')}></textarea>
             </div>
-            <p className="text-xs text-gray-500">{t('forms.privacy_notice')} <Link to="/datenschutz" className="underline">{t('forms.privacy_link')}</Link></p>
+            <p className="text-xs text-gray-500">{t('forms.privacy_notice')} <Link to="/datenschutz/" className="underline">{t('forms.privacy_link')}</Link></p>
             <KontaktFehlerHinweis fehler={contactMutation.error} />
             <button type="submit" disabled={contactMutation.isLoading || showEmailError} className="w-full bg-primary text-text-inverse px-5 py-3 rounded-lg shadow-ci hover:shadow-ci-lg transition disabled:opacity-50">
               {contactMutation.isLoading ? t('forms.button_sending') : t('forms.button_send_request')}

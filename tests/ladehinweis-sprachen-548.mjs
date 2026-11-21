@@ -28,6 +28,9 @@
 //      Hinweis nur die erste Vorliebe nimmt, sie roh übernimmt statt über getBestMatchFromCodes,
 //      oder navigator.language statt der Erkennung von i18next fragt.
 //
+// Seit #609: gemessen wird der Zweig createRoot (leerer #root: 404.html, npm run dev), wie
+// tests/ladehinweis-532.mjs. Vorgerenderte Seiten zeigen keinen Ladehinweis, ihren Zweig prüft
+// tests/hydration-609.mjs.
 // Gegenprobe: mit dem Stand von origin/main (367545c) ist die Prüfung rot — F nicht ladbar,
 // A in allen Fällen „Lade Inhalte...“. Ausgang 0 grün, 1 rot.
 import fs from 'node:fs';

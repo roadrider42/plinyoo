@@ -19,10 +19,14 @@ const coverSrc = (b: FadenBuch) => (b.coverSlug ? `/buch/${b.coverSlug}/cover-kl
 
 function useReduzierteBewegung() {
   const abfrage = '(prefers-reduced-motion: reduce)';
-  const [ruhe, setRuhe] = useState(() => typeof window !== 'undefined' && window.matchMedia?.(abfrage).matches);
+  // #609: Anfangswert immer false, wie beim Vorrendern auf dem Server (dort gibt es kein matchMedia). Läse der
+  // Browser hier schon die echte Einstellung, wiche die erste Zeichnung von der vorgerenderten Seite ab. Der echte
+  // Wert kommt gleich danach im Effekt, bevor der erste Takt (TAKT_MS) abläuft.
+  const [ruhe, setRuhe] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia?.(abfrage);
     if (!mq) return;
+    setRuhe(mq.matches);
     const neu = () => setRuhe(mq.matches);
     mq.addEventListener('change', neu);
     return () => mq.removeEventListener('change', neu);

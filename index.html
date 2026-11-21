@@ -80,12 +80,16 @@
       } catch (e) {}
     </script>
 
+    <!-- #609: alte Adressen (/#/zugang?…) auf die echten (/zugang/?…) umleiten, mit allen Angaben, VOR Plausible,
+         damit der Aufruf schon unter dem neuen Pfad gezählt wird. vite.config.ts setzt hier src/lib/alte-adressen.ts ein. -->
+    <!--ALTE-ADRESSEN-->
+
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa--uQFBayBpH0z77zfdWY78.js"></script>
     <script>
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-      // Die Website nutzt einen Hash-Router (/#/zugang): ohne diese Option zählt Plausible jede Seite als "/".
-      plausible.init({ hashBasedRouting: true })
+      // #609: echte Adressen (/zugang/). Plausible zählt Pfade und Seitenwechsel im Browser (pushState) selbst.
+      plausible.init()
     </script>
   </head>
   <body>

@@ -27,7 +27,7 @@ export default function Header() {
           <div className="hidden md:flex flex-grow items-center justify-end gap-8">
             <nav className="flex items-center gap-6">
               <NavLink
-                to="/mitmachen"
+                to="/mitmachen/"
                 className={({ isActive }) =>
                   `${desktopLinkBase} ${isActive ? desktopLinkActive : desktopLinkInactive}`
                 }
@@ -35,7 +35,7 @@ export default function Header() {
                 {t('navigation.cta_primary')}
               </NavLink>
               <NavLink
-                to="/investieren"
+                to="/investieren/"
                 className={({ isActive }) =>
                   `${desktopLinkBase} ${isActive ? desktopLinkActive : desktopLinkInactive}`
                 }
@@ -74,7 +74,7 @@ export default function Header() {
         <div className="fixed inset-0 z-40 bg-white md:hidden">
           <div className="flex flex-col items-center justify-center h-full space-y-6">
             <NavLink
-              to="/mitmachen"
+              to="/mitmachen/"
               className={({ isActive }) =>
                 `${mobileLinkBase} ${isActive ? mobileLinkActive : mobileLinkInactive}`
               }
@@ -83,7 +83,7 @@ export default function Header() {
               {t('navigation.cta_primary')}
             </NavLink>
             <NavLink
-              to="/investieren"
+              to="/investieren/"
               className={({ isActive }) =>
                 `${mobileLinkBase} ${isActive ? mobileLinkActive : mobileLinkInactive}`
               }

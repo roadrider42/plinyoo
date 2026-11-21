@@ -1,8 +1,8 @@
 // scripts/buchseiten.mjs
 // Zweck: Erzeugt aus content/buecher/<slug>.json je Buch eine eigene statische Seite
 //        dist/buch/<slug>/index.html — mit eigenem Titel, eigener Beschreibung und eigenem Vorschaubild.
-// Warum nicht in der App: Die Website nutzt einen Hash-Router (/#/seite). Soziale Netze und Suchmaschinen
-//        lesen nur index.html; eine Unterseite hinter '#' erschiene mit dem Titel der Startseite.
+// Warum nicht in der App: Die Bücher sind statische Seiten mit eigenem Aufbau, ohne React. (Bis #609 lief die App
+//        mit einem Hash-Router, eine Unterseite hinter '#' erschien mit dem Titel der Startseite.)
 // Aufbau der Seite: folgt der Vorlage von future-space.plinyoo.com (Hero, Lernkarte zum Ausprobieren, "Für wen",
 //        "Was du bekommst", "So fängst du an", Fragen, dunkler Abschluss) — ohne deren Markenfarbe.
 // Aufruf: läuft nach "vite build" (siehe package.json). Entwürfe ("draft": true) werden NICHT erzeugt,
@@ -486,7 +486,10 @@ async function buecherFuss(sichtbar) {
   const zeile = sichtbar.length ? `<nav class="buecher-fuss" lang="de" aria-label="Bücher" style="background:#1C2A33;color:rgba(255,255,255,.7);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
 <style>.buecher-fuss .bf{max-width:72rem;margin:0 auto;padding:0 24px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:0 18px}.buecher-fuss a{display:inline-flex;align-items:center;min-height:44px;color:rgba(255,255,255,.7);text-decoration:none}.buecher-fuss a:hover{color:#fff}.buecher-fuss .bt{color:#fff;font-weight:600}</style>
 <div class="bf"><a class="bt" href="/buch/">Alle Bücher</a>${links}<a href="${TRAINER_HREF}">${TRAINER_TEXT}</a></div></nav>` : '';
-  for (const datei of ['index.html', '404.html']) {
+  // #609: jede vorgerenderte Seite der App (src/routes/seiten.ts) trägt die Leiste, dazu 404.html (Hülle).
+  const { SEITEN } = await import(path.join(root, 'src/routes/seiten.ts'));
+  const dateien = [...SEITEN.map((s) => path.join(...s.pfad.split('/').filter(Boolean), 'index.html')), '404.html'];
+  for (const datei of dateien) {
     const p = path.join(distDir, datei);
     const html = await readFile(p, 'utf8');
     const anzahl = html.split(BUECHER_FUSS).length - 1;
@@ -625,7 +628,7 @@ ${CSS}
   <a class="logo" href="/" aria-label="plinyoo, zur Startseite">plinyoo</a>
   <nav aria-label="Hauptnavigation">
     <a class="login" href="${LOGIN}">Anmelden</a>
-    <a class="btn haupt" href="/#/zugang">Ich will dabei sein</a>
+    <a class="btn haupt" href="/zugang/">Ich will dabei sein</a>
   </nav>
 </div></header>
 <main>
@@ -642,13 +645,13 @@ ${CSS}
   <div class="abschluss">
     <h2>Was willst du als Nächstes können?</h2>
     <p>Sag uns, was dich interessiert. Wir zeigen dir den Weg, allein oder mit deinem Team.</p>
-    <p style="margin:0"><a class="btn haupt" href="/#/zugang">Ich will dabei sein</a></p>
+    <p style="margin:0"><a class="btn haupt" href="/zugang/">Ich will dabei sein</a></p>
     <p style="margin:12px 0 0">Wir melden uns persönlich bei dir.</p>
   </div>
 </div></section>
 </main>
 <footer><div class="wrap">
-  <a href="/">Startseite</a><a href="${TRAINER_HREF}">${TRAINER_TEXT}</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a>
+  <a href="/">Startseite</a><a href="${TRAINER_HREF}">${TRAINER_TEXT}</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="/urheberrecht/">Urheberrecht</a>
 </div></footer>
 </body>
 </html>
@@ -871,7 +874,7 @@ function seite(b, cover, neu, sichtbar, alleSlugs, covers) {
   const desc = suchBeschreibung(b);
   const karten = b.karten ?? [];
   const slugQ = encodeURIComponent(b.slug);
-  const zugang = `/?buch=${slugQ}#/zugang`;
+  const zugang = `/zugang/?buch=${slugQ}`;
 
   const faq = [
     ['Stammen die Karten aus dem Buch?', `Nein. Das Buch ist der Anlass, nicht die Vorlage.`],
@@ -993,27 +996,27 @@ ${weiterAbschnitt(b, sichtbar, alleSlugs, covers)}
   <p>Das hier ist ein erster Schritt. Wir sammeln gerade Rückmeldungen: Was hat dir gefallen, was hat gefehlt, was würdest du dir für dich oder dein Team wünschen? Wer Interesse hat, meldet sich hier. Wir antworten persönlich.</p>
   <p><a class="btn haupt" data-zugang href="${zugang}">Ich will dabei sein</a><a class="btn" id="wasist" href="/">Was ist plinyoo?</a></p>
   <p class="rollen">Ich komme als
-    ${TUEREN.map((t) => `<a data-rolle="${t.rolle}" href="${zugang}?rolle=${t.rolle}">${esc(t.label)}</a>`).join(' · ')}</p>
+    ${TUEREN.map((t) => `<a data-rolle="${t.rolle}" href="${zugang}&rolle=${t.rolle}">${esc(t.label)}</a>`).join(' · ')}</p>
   <p class="teilen-zeile">Folge uns auf <a class="sozial" data-sozial="instagram" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a> und <a class="sozial" data-sozial="twitter" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>: @plinyoo_path. Oder schick die Seite an jemanden, der sie brauchen kann: <button class="teilen" id="teilen" type="button">Seite weitergeben</button></p>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <a href="/">plinyoo.com</a><a href="${TRAINER_HREF}">${TRAINER_TEXT}</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a><a class="sozial" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a><a class="sozial" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>
+  <a href="/">plinyoo.com</a><a href="${TRAINER_HREF}">${TRAINER_TEXT}</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="/urheberrecht/">Urheberrecht</a><a class="sozial" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a><a class="sozial" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>
 </div></footer>
 
 <script>
 // Landingpage: ohne Sprungmarke immer oben beginnen. Der Browser würde sonst nach Zurück-Taste oder Tab-Wiederherstellung
 // an der alten Stelle landen (gemessen: Pixel 3141 auf dem Handy = Abschnitt "13 Karten, viele Wege"), obwohl der Besucher oben beginnen soll.
 if(!location.hash){window.scrollTo({top:0,left:0,behavior:'instant'})}
-// Herkunft (utm_*) von dieser Seite an das Formular weiterreichen; die Startseite liest sie vor dem '#'.
+// Herkunft (utm_*) von dieser Seite an das Formular weiterreichen (/zugang/?buch=…&utm_…).
 (function(){
   var q=new URLSearchParams(location.search), keep=new URLSearchParams();
   keep.set('buch',${JSON.stringify(b.slug)});
   ['utm_source','utm_medium','utm_campaign'].forEach(function(k){var v=q.get(k);if(v)keep.set(k,v)});
   document.querySelectorAll('[data-zugang],[data-rolle]').forEach(function(a){
     var r=a.getAttribute('data-rolle');
-    a.href='/?'+keep.toString()+'#/zugang'+(r?'?rolle='+r:'');
+    a.href='/zugang/?'+keep.toString()+(r?'&rolle='+r:'');
   });
   // Karten zum Durchspielen: Fragen beantworten, "Nochmal versuchen", Stern leuchtet bei einer gekonnten Karte
   var liste=document.getElementById('kartenliste');

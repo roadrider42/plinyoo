@@ -34,7 +34,8 @@ const exists = async (p) => access(p).then(() => true, () => false);
 function zugangHref(lang, kampagne, inhalt) {
   const q = new URLSearchParams({ lng: lang, utm_source: 'website', utm_medium: 'seite', utm_campaign: kampagne });
   if (inhalt) q.set('utm_content', inhalt);
-  return `/?${q.toString()}#/zugang?rolle=curator`;
+  q.set('rolle', 'curator');
+  return `/zugang/?${q.toString()}`;
 }
 
 function seedRnd(text) {
@@ -273,7 +274,7 @@ ${entwurf ? `<div class="entwurf">${esc(t.entwurfHinweis)}</div>` : ''}
 </main>
 
 <footer><div class="wrap">
-  <a href="/?lng=${t.lang}">plinyoo.com</a><a href="/?lng=${t.lang}#/impressum">${esc(t.footer.impressum)}</a><a href="/?lng=${t.lang}#/datenschutz">${esc(t.footer.datenschutz)}</a><a href="/?lng=${t.lang}#/urheberrecht">${esc(t.footer.urheberrecht)}</a>
+  <a href="/?lng=${t.lang}">plinyoo.com</a><a href="/impressum/?lng=${t.lang}">${esc(t.footer.impressum)}</a><a href="/datenschutz/?lng=${t.lang}">${esc(t.footer.datenschutz)}</a><a href="/urheberrecht/?lng=${t.lang}">${esc(t.footer.urheberrecht)}</a>
 </div></footer>
 
 <script>

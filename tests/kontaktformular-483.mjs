@@ -8,7 +8,9 @@
 //
 // Gefahren wird die ECHTE Seite: Vite startet diesen Arbeitsbaum, Chromium
 // oeffnet die vier Formulare, die useContactForm nutzen (Kontakt, Mitmachen,
-// Investieren, Zugang), fuellt sie aus und schickt sie ab. Der Aufruf von
+// Investieren, Zugang), fuellt sie aus und schickt sie ab. Seit #609 unter
+// den echten Adressen (/kontakt/ ...); Zugang mit der alten /#/zugang, die
+// index.html auf /zugang/ umleitet -- jeder Fall prueft die Adresse mit. Der Aufruf von
 // plinyoo-contact wird abgefangen und mit dem Ausgang beantwortet, den die
 // Randfunktion wirklich kennt (supabase/functions/plinyoo-contact/index.ts):
 //
@@ -155,10 +157,12 @@ const NUR_KONTAKT = [
 
 // Erfolgsansicht = forms.success.title (de); Formular = die Absendeschaltflaeche.
 const ERFOLG_UEBERSCHRIFT = 'Vielen Dank!';
+// #609: echte Adressen. /zugang bleibt mit der alten Hash-Adresse, als Nachweis, dass die Umleitung in
+// index.html (src/lib/alte-adressen.ts) im echten Browser auf das Formular führt.
 const SEITEN = [
-  { id: 'kontakt', pfad: '/#/kontakt', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('textarea[name=message]', a.nachricht ?? 'Hallo'); await p.fill('input[name=email]', email); } },
-  { id: 'mitmachen', pfad: '/#/mitmachen', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('input[name=email]', email); } },
-  { id: 'investieren', pfad: '/#/investieren', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('input[name=email]', email); } },
+  { id: 'kontakt', pfad: '/kontakt/', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('textarea[name=message]', a.nachricht ?? 'Hallo'); await p.fill('input[name=email]', email); } },
+  { id: 'mitmachen', pfad: '/mitmachen/', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('input[name=email]', email); } },
+  { id: 'investieren', pfad: '/investieren/', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('input[name=email]', email); } },
   { id: 'zugang', pfad: '/#/zugang', fuellen: async (p, email, a) => { await p.fill('input[name=name]', a.name ?? 'Wer'); await p.fill('input[name=email]', email); } },
 ];
 
@@ -244,6 +248,9 @@ async function fall(seite, ausgang) {
     if (ausgang.antwort === 'undefined') aufrufe = await page.evaluate(() => window.__kontaktAufrufe ?? 0);
     const sollAufrufe = ausgang.aufrufe ?? 1;
     const b = [[aufrufe === sollAufrufe, `${aufrufe} Aufruf(e) der Randfunktion, erwartet ${sollAufrufe}`]];
+    // #609: Das Formular steht auf der echten Adresse -- auch nach der alten /#/zugang.
+    const adresse = new URL(page.url()).pathname;
+    b.push([adresse === `/${seite.id}/`, `Formular auf ${adresse}, erwartet /${seite.id}/`]);
     if (ausgang.satz) {
       b.push([text.includes(ausgang.satz), `fester Satz fehlt (sichtbar: ${text.replace(/\s+/g, ' ').slice(-240)})`]);
       b.push([erfolg === 0, 'zeigt die Erfolgsansicht']);
