@@ -24,6 +24,11 @@ const TWITTER = 'https://x.com/plinyoo_path';   // früher twitter.com, leitet a
 const ICO_INSTA = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>';
 const ICO_X = '<svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>';
 const mitEntwuerfen = process.env.BUCHSEITEN_DRAFT === '1';
+// Link auf die Trainer-Seite in den Fußzeilen (spoonup #609, SEO-Vorschlag 4, Heiko frei auf E-523; Wortlaut
+// "Für Trainer" vom Sprecher frei). Alle drei Fußzeilen hier sind deutsch, darum der deutsche Pfad aus
+// content/seiten/fuer-trainer/de.json. Geprüft im gebauten HTML: tests/fuss-trainer-609.mjs.
+const TRAINER_HREF = '/fuer-trainer/';
+const TRAINER_TEXT = 'Für Trainer';
 
 const esc = (s) =>
   String(s ?? '')
@@ -480,7 +485,7 @@ async function buecherFuss(sichtbar) {
   const links = sichtbar.slice(0, 3).map((x) => `<a href="/buch/${esc(x.slug)}/">${esc((x.kachelTitel || x.titel).split(' — ')[0])}</a>`).join('');
   const zeile = sichtbar.length ? `<nav class="buecher-fuss" lang="de" aria-label="Bücher" style="background:#1C2A33;color:rgba(255,255,255,.7);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
 <style>.buecher-fuss .bf{max-width:72rem;margin:0 auto;padding:0 24px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:0 18px}.buecher-fuss a{display:inline-flex;align-items:center;min-height:44px;color:rgba(255,255,255,.7);text-decoration:none}.buecher-fuss a:hover{color:#fff}.buecher-fuss .bt{color:#fff;font-weight:600}</style>
-<div class="bf"><a class="bt" href="/buch/">Alle Bücher</a>${links}</div></nav>` : '';
+<div class="bf"><a class="bt" href="/buch/">Alle Bücher</a>${links}<a href="${TRAINER_HREF}">${TRAINER_TEXT}</a></div></nav>` : '';
   for (const datei of ['index.html', '404.html']) {
     const p = path.join(distDir, datei);
     const html = await readFile(p, 'utf8');
@@ -643,7 +648,7 @@ ${CSS}
 </div></section>
 </main>
 <footer><div class="wrap">
-  <a href="/">Startseite</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a>
+  <a href="/">Startseite</a><a href="${TRAINER_HREF}">${TRAINER_TEXT}</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a>
 </div></footer>
 </body>
 </html>
@@ -994,7 +999,7 @@ ${weiterAbschnitt(b, sichtbar, alleSlugs, covers)}
 </main>
 
 <footer><div class="wrap">
-  <a href="/">plinyoo.com</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a><a class="sozial" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a><a class="sozial" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>
+  <a href="/">plinyoo.com</a><a href="${TRAINER_HREF}">${TRAINER_TEXT}</a><a href="/#/impressum">Impressum</a><a href="/#/datenschutz">Datenschutz</a><a href="/#/urheberrecht">Urheberrecht</a><a class="sozial" href="${INSTA}" rel="noopener me" target="_blank" aria-label="Instagram: @plinyoo_path">${ICO_INSTA}Instagram</a><a class="sozial" href="${TWITTER}" rel="noopener me" target="_blank" aria-label="X (Twitter): @plinyoo_path">${ICO_X}X (Twitter)</a>
 </div></footer>
 
 <script>
