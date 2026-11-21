@@ -50,7 +50,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run pruefung:faden-wege && npm run pruefung:ladehinweis && npm run pruefung:ladehinweis-sprachen && npm run pruefung:startseite-texte && vite build && npm run pruefung:ohne-entwurf && cp dist/index.html dist/404.html && node scripts/buchseiten.mjs && node scripts/seiten.mjs && node scripts/generate-sitemap.mjs && npm run pruefung:fuss-trainer",
+    "build": "npm run pruefung:faden-wege && npm run pruefung:ladehinweis && npm run pruefung:ladehinweis-sprachen && npm run pruefung:startseite-texte && vite build && npm run pruefung:ohne-entwurf && cp dist/index.html dist/404.html && node scripts/buchseiten.mjs && node scripts/seiten.mjs && node scripts/generate-sitemap.mjs && node tests/sitemap-609.mjs --lesen dist/sitemap.xml && npm run pruefung:fuss-trainer",
     "seiten:dev": "node scripts/seiten-dev.mjs",
     "buchseiten:entwurf": "VITE_BUCHSEITEN_DRAFT=1 BUCHSEITEN_DRAFT=1 npm run build",
     "preview": "vite preview --port 3001",
@@ -63,7 +63,8 @@
     "pruefung:ladehinweis": "node tests/ladehinweis-532.mjs",
     "pruefung:ladehinweis-sprachen": "node tests/ladehinweis-sprachen-548.mjs",
     "pruefung:startseite-texte": "node tests/startseite-texte-539.mjs",
-    "pruefung:fuss-trainer": "node tests/fuss-trainer-609.mjs"
+    "pruefung:fuss-trainer": "node tests/fuss-trainer-609.mjs",
+    "pruefung:sitemap": "node tests/sitemap-609.mjs"
   },
   "eslintConfig": {
     "extends": [

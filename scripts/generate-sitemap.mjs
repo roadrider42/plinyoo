@@ -9,7 +9,9 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const contentDir = path.join(root, 'content', 'buecher');
-const distDir = path.join(root, 'dist');
+// --dist <ordner>: anderer Bauordner (tests/sitemap-609.mjs schreibt in einen Ordner außerhalb von dist/). Vorgabe dist/.
+const distArg = process.argv.indexOf('--dist');
+const distDir = distArg > 0 ? path.resolve(process.argv[distArg + 1]) : path.join(root, 'dist');
 const SITE = 'https://www.plinyoo.com';
 
 // lastmod einer Buchseite = Tag des letzten Commits, der ihre Buchdatei oder ihren Ordner (Cover) geändert hat.
@@ -21,16 +23,23 @@ function gitAus(args) {
 if (gitAus(['rev-parse', '--is-shallow-repository']) !== 'false') {
   throw new Error('Flacher Git-Klon: lastmod der Buchseiten wäre falsch. Im Workflow actions/checkout mit fetch-depth: 0 auschecken.');
 }
-function letzteAenderung(slug) {
-  const tag = gitAus(['log', '-1', '--format=%cs', '--', `content/buecher/${slug}.json`, `content/buecher/${slug}/`]);
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(tag)) throw new Error(`lastmod: Buch "${slug}" hat keinen Commit (git log: "${tag}"). Erst committen, dann bauen.`);
+// Tag des letzten Commits auf die genannten Pfade. Kein Commit → Abbruch statt "heute" (dieselbe Regel für alle Seiten).
+function letzterCommitTag(was, pfade) {
+  const tag = gitAus(['log', '-1', '--format=%cs', '--', ...pfade]);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(tag)) throw new Error(`lastmod: ${was} hat keinen Commit (git log: "${tag}"). Erst committen, dann bauen.`);
   return tag;
 }
+function letzteAenderung(slug) {
+  return letzterCommitTag(`Buch "${slug}"`, [`content/buecher/${slug}.json`, `content/buecher/${slug}/`]);
+}
+// Die Startseite ist die App: ihr Inhalt steht in index.html, im Code unter src/ und in den Texten unter public/locales/.
+const STARTSEITE_PFADE = ['index.html', 'src/', 'public/locales/'];
 
 async function generateSitemap() {
   // Nur echte Adressen. Die App-Seiten hinter "#/" (Zugang, Impressum …) sind für Suchmaschinen alle dieselbe Adresse "/".
+  // Mit Schrägstrich wie die Canonical-Adresse in index.html (<link rel="canonical" href="https://www.plinyoo.com/">).
   const urls = [
-    { loc: SITE, changefreq: 'weekly', priority: '1.0' },
+    { loc: `${SITE}/`, changefreq: 'weekly', priority: '1.0', lastmod: letzterCommitTag('Startseite', STARTSEITE_PFADE) },
   ];
 
   // Buchseiten aus content/buecher/ — dieselbe Entwurfsregel wie buchseiten.mjs (draft: true wird nicht veröffentlicht).
@@ -101,7 +110,9 @@ async function generateSitemap() {
           throw new Error(`Sitemap: content/seiten/${name}/${file}: Pfad "${t.pfad}" ungültig. Bau abgebrochen.`);
         }
         unterseiten.push(t.pfad);
-        urls.push({ loc: `${SITE}${t.pfad}`, changefreq: 'monthly', priority: '0.8', lastmod: new Date().toISOString().split('T')[0] });
+        // lastmod = letzter Commit auf die Sprachdatei dieser Adresse, nicht der Tag des Baus.
+        const sprachdatei = `content/seiten/${name}/${file}`;
+        urls.push({ loc: `${SITE}${t.pfad}`, changefreq: 'monthly', priority: '0.8', lastmod: letzterCommitTag(`Unterseite ${sprachdatei}`, [sprachdatei]) });
       }
     }
   }
