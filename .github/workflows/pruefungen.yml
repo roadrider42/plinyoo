@@ -21,6 +21,14 @@
 #                             USt-IdNr.; dazu die Sprachdateien.
 #                             Kein Browser, kein Netz; esbuild kommt aus npm ci.
 #
+#   pruefung:sitemap          tests/sitemap-609.mjs (spoonup #609): erzeugt die
+#                             Sitemap in einen Ordner außerhalb von dist/ und
+#                             liest sie -- Startseite mit Schrägstrich wie die
+#                             Canonical-Adresse, jedes lastmod = letzter Commit
+#                             auf die Dateien der Seite, nie der Bautag. Braucht
+#                             die volle Historie (fetch-depth: 0 unten); in
+#                             einem flachen Klon meldet sie "nicht messbar".
+#
 # NICHT hier: G1 aus derselben Datei. G1 vergleicht die Grenze mit spoonup, und
 # spoonup ist privat -- dieser Ablauf kann es nicht lesen (Heikos Entscheidung
 # E-398: kein Schlüssel). Die Ausgabe sagt dann "G1 NICHT GEMESSEN (lebt in
@@ -28,7 +36,7 @@
 # pruefung:kontakt-grenze-plinyoo), die plinyoo öffentlich holt. Von Hand,
 # ohne den Schalter, fährt die Datei hier weiter mit G1.
 #
-# Alle drei Prüfungen enden mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
+# Alle vier Prüfungen enden mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
 # ist alles vorhanden, was sie braucht -- "nicht messbar" ist hier also ein
 # Fehler des Ablaufs und macht den Lauf rot, nicht grün.
 name: Pruefungen
@@ -55,6 +63,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Volle Historie: pruefung:sitemap rechnet lastmod aus git log, wie scripts/generate-sitemap.mjs im Bau.
+          fetch-depth: 0
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -76,3 +87,5 @@ jobs:
         run: npm run pruefung:kontaktformular
       - name: pruefung:impressum-hrb
         run: npm run pruefung:impressum-hrb
+      - name: pruefung:sitemap
+        run: npm run pruefung:sitemap
