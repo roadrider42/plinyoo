@@ -675,6 +675,34 @@
     "start": {
       "title": "plinyoo: Lernplattform für Wissen, Teams und eigene Wege",
       "description": "Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan."
+    },
+    "zugang": {
+      "title": "Zugang | plinyoo",
+      "description": "Sag uns kurz, wer du bist und was du lernen oder weitergeben möchtest."
+    },
+    "mitmachen": {
+      "title": "Mitmachen | plinyoo",
+      "description": "Mach bei plinyoo mit: Sag uns, ob du dich bei Frontend, Backend, Mobile, Product oder Learning Design einbringen willst."
+    },
+    "investieren": {
+      "title": "Investieren | plinyoo",
+      "description": "plinyoo ist eine Lernplattform für Wissen, Teams und eigene Wege."
+    },
+    "impressum": {
+      "title": "Impressum | plinyoo",
+      "description": "Impressum der Plinyoo UG (haftungsbeschränkt), Theodor-Fliedner-Str. 1d, 34121 Kassel."
+    },
+    "datenschutz": {
+      "title": "Datenschutzerklärung | plinyoo",
+      "description": "Hier steht, welche Daten beim Besuch dieser Website und bei Anfragen über die Formulare entstehen, wozu wir sie nutzen und welche Rechte du hast."
+    },
+    "urheberrecht": {
+      "title": "Urheberrecht & Bildnachweise | plinyoo",
+      "description": "Inhalte dieser Website gehören, sofern nicht anders gekennzeichnet, der Plinyoo UG (haftungsbeschränkt) und sind urheberrechtlich geschützt."
+    },
+    "kontakt": {
+      "title": "Kontakt | plinyoo",
+      "description": "Beschreibe uns deine Idee oder Herausforderung."
     }
   }
 }

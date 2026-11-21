@@ -4,6 +4,7 @@
  */
 
 import { Link } from 'react-router-dom';
+import { BAUJAHR } from '@/lib/baujahr';
 
 export default function Impressum() {
   return (
@@ -11,7 +12,7 @@ export default function Impressum() {
       <section className="max-w-4xl mx-auto px-6 md:px-12 py-16">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-primary mb-2">Impressum</h1>
-          <p className="text-sm text-text-muted">Stand: {new Date().getFullYear()}</p>
+          <p className="text-sm text-text-muted">Stand: {BAUJAHR}</p>
         </div>
 
         <div className="mt-8 space-y-8">
@@ -106,7 +107,7 @@ export default function Impressum() {
             </p>
             <p className="text-text-muted leading-relaxed mt-4">
               Weitere Informationen zum Datenschutz finden Sie in unserer{' '}
-              <Link to="/datenschutz" className="text-primary hover:underline font-medium">
+              <Link to="/datenschutz/" className="text-primary hover:underline font-medium">
                 Datenschutzerklärung
               </Link>
               .
@@ -123,7 +124,7 @@ export default function Impressum() {
                 Zur Startseite
               </Link>
               <Link
-                to="/datenschutz"
+                to="/datenschutz/"
                 className="inline-block rounded-lg border border-primary text-primary px-6 py-3 font-semibold hover:bg-primary hover:text-white transition"
               >
                 Datenschutzerklärung

@@ -36,11 +36,27 @@ function letzteAenderung(slug) {
 const STARTSEITE_PFADE = ['index.html', 'src/', 'public/locales/'];
 
 async function generateSitemap() {
-  // Nur echte Adressen. Die App-Seiten hinter "#/" (Zugang, Impressum …) sind für Suchmaschinen alle dieselbe Adresse "/".
   // Mit Schrägstrich wie die Canonical-Adresse in index.html (<link rel="canonical" href="https://www.plinyoo.com/">).
+  const startTag = letzterCommitTag('Startseite', STARTSEITE_PFADE);
   const urls = [
-    { loc: `${SITE}/`, changefreq: 'weekly', priority: '1.0', lastmod: letzterCommitTag('Startseite', STARTSEITE_PFADE) },
+    { loc: `${SITE}/`, changefreq: 'weekly', priority: '1.0', lastmod: startTag },
   ];
+
+  // #609: die übrigen Seiten der App, seit dem Vorrendern je eine echte Adresse (scripts/vorrendern.mjs). Dieselbe
+  // Liste wie Router und Vorrendern (src/routes/seiten.ts); lastmod wie die Startseite, denn ihr Inhalt liegt an
+  // denselben Stellen. Abgleich: Jede steht vorgerendert in dist/, mit Inhalt in #root — sonst Abbruch.
+  const { SEITEN } = await import(path.join(root, 'src/routes/seiten.ts'));
+  const RECHTLICH = new Set(['/impressum/', '/datenschutz/', '/urheberrecht/']);
+  const ohneInhalt = [];
+  for (const { pfad } of SEITEN) {
+    const html = await readFile(path.join(distDir, ...pfad.split('/').filter(Boolean), 'index.html'), 'utf-8').catch(() => '');
+    if (!html.includes('<div id="root">') || html.includes('<div id="root"></div>')) ohneInhalt.push(pfad);
+    if (pfad === '/') continue;
+    urls.push({ loc: `${SITE}${pfad}`, changefreq: 'monthly', priority: RECHTLICH.has(pfad) ? '0.3' : '0.7', lastmod: startTag });
+  }
+  if (ohneInhalt.length) {
+    throw new Error(`Sitemap: Seiten der App ohne vorgerenderten Inhalt in dist/: [${ohneInhalt.join(', ')}]. Erst scripts/vorrendern.mjs. Bau abgebrochen.`);
+  }
 
   // Buchseiten aus content/buecher/ — dieselbe Entwurfsregel wie buchseiten.mjs (draft: true wird nicht veröffentlicht).
   const buecher = [];

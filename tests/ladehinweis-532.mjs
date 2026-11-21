@@ -19,6 +19,10 @@
 //     visibility, display). Danach Freigabe, und die Seite selbst muss erscheinen — sonst wäre auch
 //     ein Fix grün, der den Hinweis für immer stehen lässt.
 //
+// Seit #609 (Vorrendern): main.tsx übernimmt eine vorgerenderte Seite mit hydrateRoot und zeigt dort keinen
+// Ladehinweis (der Inhalt steht schon da). Diese Prüfung lädt die Quell-index.html mit LEEREM #root, also den
+// Zweig createRoot, den es für 404.html und npm run dev weiter gibt. Den Zweig hydrateRoot prüft
+// tests/hydration-609.mjs. ./routes/AppRoutes exportiert weiter `router`, die Ersetzung unten gilt unverändert.
 // Gegenprobe: Mit main.tsx, index.html und src/index.css von origin/main (ced64de) ist die Prüfung
 // rot (body opacity 0 während des Ladens), mit dem Fix grün. Ausgang 1 bei jedem Befund.
 import fs from 'node:fs';
