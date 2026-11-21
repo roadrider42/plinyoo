@@ -3,20 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta property="og:title" content="plinyoo | Intelligente persönliche Lernplattformen" />
-    <meta property="og:description" content="Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan." />
+    <!-- #609: Titel und Beschreibung stehen einmal, in public/locales/de/translation.json unter seo.start.
+         vite.config.ts setzt sie beim Bau ein (scripts/seo-kopf.mjs). Hier nichts eintragen. -->
+    <meta property="og:title" content="{{seo.start.title}}" />
+    <meta property="og:description" content="{{seo.start.description}}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.plinyoo.com/" />
     <meta property="og:image" content="https://www.plinyoo.com/og-image.png" />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:site_name" content="plinyoo" />
-    <meta name="description" content="plinyoo - intelligente persönliche digitale Lernplattformen. Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan." />
+    <meta name="description" content="{{seo.start.description}}" />
     <meta name="keywords" content="Lernplattform, personalisiertes Lernen, Wissensmanagement, digitales Lernen, Mikro-Learning, Karteikarten, spaced repetition" />
     <meta name="author" content="plinyoo UG" />
     <link rel="canonical" href="https://www.plinyoo.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="plinyoo | Intelligente persönliche Lernplattformen" />
-    <meta name="twitter:description" content="Dein Lernpfad ist einzigartig. Finde deinen Weg auf Karten, die aufeinander verweisen — nicht in einem Kursplan." />
+    <meta name="twitter:title" content="{{seo.start.title}}" />
+    <meta name="twitter:description" content="{{seo.start.description}}" />
     <meta name="twitter:image" content="https://www.plinyoo.com/og-image.png" />
     <meta name="twitter:site" content="@plinyoo_path" />
 
@@ -67,7 +69,7 @@
     img-src 'self' data:;
     connect-src 'self' https://plausible.io https://*.supabase.co;
   ">
-    <title>plinyoo</title>
+    <title>{{seo.start.title}}</title>
 
     <!-- Scroll-Restoration deaktivieren: Landingpage soll immer oben beginnen, nicht an der alten Scroll-Position -->
     <script>
