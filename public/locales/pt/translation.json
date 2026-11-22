@@ -356,10 +356,56 @@
     "right": "Certa:",
     "wrong": "Não exatamente.",
     "retry": "Tentar de novo",
-    "note": "Os cartões estão em alemão."
+    "note": "Os cartões estão em alemão.",
+    "topics": "Escolhe um tema",
+    "topicEic": "East India Company",
+    "topicBorders": "Fronteiras",
+    "topicLisbon": "Lisboa 1941",
+    "source": "Fonte:",
+    "retrieved": "consultado",
+    "toSource": "Ir para a fonte",
+    "bookNote": "Estes cartões acompanham o livro «{{titel}}» de {{autor}}."
   },
   "views": {
     "title": "Um olhar por dentro",
-    "subtitle": "Três vistas do desenvolvimento do plinyoo. Os textos das vistas estão em alemão."
+    "subtitle": "Três vistas do desenvolvimento do plinyoo. Os textos das vistas estão em alemão.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Conceito",
+        "title": "O teu objetivo, o teu caminho, o teu universo de conhecimento",
+        "text": "Um olhar sobre o campo de aprendizagem como o imaginamos: uma página inicial com o teu objetivo, o caminho até lá e a retrospetiva com as tuas estrelas.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Campo de aprendizagem: o teu universo e a pergunta «O que queres saber fazer?» (captura de ecrã em alemão)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Campo de aprendizagem: «Este é o teu caminho» com etapas até ao objetivo (captura de ecrã em alemão)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Campo de aprendizagem: «Foi isto hoje» com as estrelas reunidas (captura de ecrã em alemão)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Conceito",
+        "title": "A rede de conhecimento",
+        "text": "Onze cartões sobre o calor urbano, com ligações reais entre eles, rodeados de outros temas. Arrasta para reordenar, desloca para ampliar.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "A rede de conhecimento — vista interativa"
+      },
+      {
+        "id": "autor",
+        "tag": "Conceito",
+        "title": "Ver caminhos e lacunas",
+        "text": "Para quem transmite conhecimento: escolhes palavras-chave e vês como os cartões se ligam e onde ainda falta uma ponte.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Caminhos e lacunas — vista interativa"
+      }
+    ]
   }
 }

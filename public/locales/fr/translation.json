@@ -356,10 +356,56 @@
     "right": "Bonne réponse :",
     "wrong": "Pas tout à fait.",
     "retry": "Réessayer",
-    "note": "Les fiches sont en allemand."
+    "note": "Les fiches sont en allemand.",
+    "topics": "Choisis un thème",
+    "topicEic": "East India Company",
+    "topicBorders": "Frontières",
+    "topicLisbon": "Lisbonne 1941",
+    "source": "Source :",
+    "retrieved": "consulté",
+    "toSource": "Vers la source",
+    "bookNote": "Ces cartes accompagnent le livre « {{titel}} » de {{autor}}."
   },
   "views": {
     "title": "Un regard à l’intérieur",
-    "subtitle": "Trois vues issues du développement de plinyoo. Les textes des vues sont en allemand."
+    "subtitle": "Trois vues issues du développement de plinyoo. Les textes des vues sont en allemand.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Concept",
+        "title": "Ton objectif, ton chemin, ton univers de connaissances",
+        "text": "Un aperçu du champ d’apprentissage tel que nous l’imaginons : une page d’accueil avec ton objectif, le chemin pour y arriver et le retour sur tes étoiles.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Champ d’apprentissage : ton univers et la question « Que veux-tu savoir faire ? » (capture d’écran en allemand)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Champ d’apprentissage : « Voici ton chemin » avec des étapes vers l’objectif (capture d’écran en allemand)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Champ d’apprentissage : « Voilà pour aujourd’hui » avec les étoiles collectées (capture d’écran en allemand)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Concept",
+        "title": "Le réseau de connaissances",
+        "text": "Onze cartes sur la chaleur urbaine, reliées par de vrais liens et entourées d’autres thèmes. Fais glisser pour réorganiser, fais défiler pour zoomer.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "Le réseau de connaissances — vue interactive"
+      },
+      {
+        "id": "autor",
+        "tag": "Concept",
+        "title": "Voir les chemins et les lacunes",
+        "text": "Pour celles et ceux qui transmettent du savoir : tu choisis des mots-clés et tu vois comment les cartes se relient et où il manque encore un pont.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Chemins et lacunes — vue interactive"
+      }
+    ]
   }
 }

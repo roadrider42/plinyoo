@@ -356,10 +356,56 @@
     "right": "Correcta:",
     "wrong": "No del todo.",
     "retry": "Intentar de nuevo",
-    "note": "Las tarjetas están en alemán."
+    "note": "Las tarjetas están en alemán.",
+    "topics": "Elige un tema",
+    "topicEic": "East India Company",
+    "topicBorders": "Fronteras",
+    "topicLisbon": "Lisboa 1941",
+    "source": "Fuente:",
+    "retrieved": "consultado",
+    "toSource": "Ir a la fuente",
+    "bookNote": "Estas tarjetas acompañan al libro «{{titel}}» de {{autor}}."
   },
   "views": {
     "title": "Una mirada al interior",
-    "subtitle": "Tres vistas del desarrollo de plinyoo. Los textos de las vistas están en alemán."
+    "subtitle": "Tres vistas del desarrollo de plinyoo. Los textos de las vistas están en alemán.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Concepto",
+        "title": "Tu meta, tu camino, tu universo de conocimiento",
+        "text": "Una mirada al campo de aprendizaje tal como lo imaginamos: una página de inicio con tu meta, el camino hacia ella y la mirada atrás con tus estrellas.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Campo de aprendizaje: tu universo y la pregunta «¿Qué quieres saber hacer?» (captura en alemán)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Campo de aprendizaje: «Este es tu camino» con paradas en el camino hacia la meta (captura en alemán)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Campo de aprendizaje: «Esto fue hoy» con estrellas conseguidas (captura en alemán)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Concepto",
+        "title": "La red de conocimiento",
+        "text": "Once tarjetas sobre el calor urbano, con enlaces reales entre ellas, rodeadas de otros temas. Arrastra para reordenar, desplaza para hacer zoom.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "La red de conocimiento — vista interactiva"
+      },
+      {
+        "id": "autor",
+        "tag": "Concepto",
+        "title": "Ver caminos y lagunas",
+        "text": "Para quienes transmiten conocimiento: eliges palabras clave y ves cómo se conectan las tarjetas y dónde aún falta un puente.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Caminos y lagunas — vista interactiva"
+      }
+    ]
   }
 }

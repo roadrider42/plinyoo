@@ -356,10 +356,56 @@
     "right": "Poprawnie:",
     "wrong": "Nie do końca.",
     "retry": "Spróbuj jeszcze raz",
-    "note": "Karty są po niemiecku."
+    "note": "Karty są po niemiecku.",
+    "topics": "Wybierz temat",
+    "topicEic": "East India Company",
+    "topicBorders": "Granice",
+    "topicLisbon": "Lizbona 1941",
+    "source": "Źródło:",
+    "retrieved": "dostęp:",
+    "toSource": "Do źródła",
+    "bookNote": "Te karty towarzyszą książce „{{titel}}” (autor: {{autor}})."
   },
   "views": {
     "title": "Spojrzenie do środka",
-    "subtitle": "Trzy widoki z rozwoju plinyoo. Teksty w widokach są po niemiecku."
+    "subtitle": "Trzy widoki z rozwoju plinyoo. Teksty w widokach są po niemiecku.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Koncepcja",
+        "title": "Twój cel, twoja droga, twój wszechświat wiedzy",
+        "text": "Spojrzenie na pole nauki takie, jak je sobie wyobrażamy: strona startowa z twoim celem, droga do niego i rzut oka wstecz na twoje gwiazdy.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Pole nauki: twój wszechświat i pytanie „Co chcesz umieć?” (zrzut ekranu po niemiecku)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Pole nauki: „To jest twoja droga” z przystankami na drodze do celu (zrzut ekranu po niemiecku)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Pole nauki: „To było dzisiaj” ze zdobytymi gwiazdami (zrzut ekranu po niemiecku)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Koncepcja",
+        "title": "Sieć wiedzy",
+        "text": "Jedenaście kart o miejskim upale, z prawdziwymi powiązaniami, otoczonych innymi tematami. Przeciągnij, by zmienić układ, przewiń, by powiększyć.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "Sieć wiedzy — widok interaktywny"
+      },
+      {
+        "id": "autor",
+        "tag": "Koncepcja",
+        "title": "Zobacz drogi i luki",
+        "text": "Dla wszystkich, którzy przekazują wiedzę: wybierasz słowa kluczowe i widzisz, jak łączą się karty i gdzie wciąż brakuje mostu.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Drogi i luki — widok interaktywny"
+      }
+    ]
   }
 }
