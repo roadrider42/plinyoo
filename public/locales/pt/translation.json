@@ -1,7 +1,8 @@
 {
   "navigation": {
     "cta_primary": "Juntar-se",
-    "cta_secondary": "Investir"
+    "cta_secondary": "Investir",
+    "menu_toggle": "Mostrar ou ocultar o menu principal"
   },
   "hero": {
     "eyebrow": "Plataforma de aprendizagem — coach e companheiro em um",
@@ -150,7 +151,8 @@
   "cta": {
     "title": "Comece com um cartão.",
     "subtitle": "Você não precisa de um plano de curso. Precisa de um primeiro cartão e do vínculo que leva ao próximo.",
-    "button": "Solicitar acesso"
+    "button": "Solicitar acesso",
+    "hinweis": "Nós mesmos entraremos em contato com você."
   },
   "storySketch": {
     "title": "É assim que o conhecimento se torna qualidade de serviço",
@@ -245,6 +247,12 @@
       "subtitle_details": "Responderemos a você.",
       "role_label": "Venho como",
       "role_placeholder": "Por favor, escolha",
+      "role_options": {
+        "learner": "Aprendiz",
+        "curator": "Curador — quero compartilhar conhecimento",
+        "wegbereiter": "Wegbereiter (abre caminhos) — lidero uma equipe",
+        "other": "Outra coisa"
+      },
       "message_label": "O que você quer alcançar com o plinyoo?",
       "message_placeholder": "Por exemplo: quero entender por que minha cidade fica tão quente no verão.",
       "button": "Solicitar acesso",
@@ -270,6 +278,10 @@
       "button": "Contate-nos"
     },
     "books_intro": "Aqui apresentamos livros. Para quatro deles, os cartões já estão no app, cada livro como tópico próprio: “Die Eroberer” (Roger Crowley), “Der Almanach von Naval Ravikant” (Eric Jorgenson), “Gewaltfreie Kommunikation” (Marshall B. Rosenberg) e “Die Macht der Geografie” (Tim Marshall).",
+    "new_badge": "Novo",
+    "book_subtitle": "Apresentação do livro",
+    "book_button": "Ir para a página do livro (em alemão)",
+    "more_books": "Descobrir mais livros (em alemão)",
     "books_title": "Livros para percorrer"
   },
   "footer": {
@@ -308,6 +320,32 @@
       "text": "Por favor, direcione as perguntas sobre direitos de uso para heiko@plinyoo.com."
     },
     "back_to_home": "Voltar à Página Inicial"
+  },
+  "seo": {
+    "start": {
+      "title": "plinyoo: plataforma de aprendizagem, conhecimento e equipes",
+      "description": "Seu caminho de aprendizagem é único. Encontre seu caminho em cartões que remetem uns aos outros — não em um plano de curso."
+    },
+    "zugang": {
+      "title": "Acesso | plinyoo",
+      "description": "Conte-nos brevemente quem você é e o que quer aprender ou compartilhar."
+    },
+    "mitmachen": {
+      "title": "Participar | plinyoo",
+      "description": "Participe do plinyoo: conte-nos se você quer contribuir com Frontend, Backend, Mobile, Product ou Learning Design."
+    },
+    "investieren": {
+      "title": "Investir | plinyoo",
+      "description": "O plinyoo é uma plataforma de aprendizagem para conhecimento, equipes e caminhos próprios."
+    },
+    "urheberrecht": {
+      "title": "Direitos Autorais e Créditos de Imagem | plinyoo",
+      "description": "Os conteúdos deste site pertencem, salvo indicação em contrário, à Plinyoo UG (haftungsbeschränkt) e são protegidos por direitos autorais."
+    },
+    "kontakt": {
+      "title": "Contato | plinyoo",
+      "description": "Descreva-nos sua ideia ou desafio."
+    }
   },
   "hero1": {
     "eyebrow": "Conhecimento que perdura.",

@@ -1,7 +1,8 @@
 {
   "navigation": {
     "cta_primary": "Приєднатися",
-    "cta_secondary": "Інвестувати"
+    "cta_secondary": "Інвестувати",
+    "menu_toggle": "Показати або сховати головне меню"
   },
   "hero": {
     "eyebrow": "Платформа для навчання — коуч і помічник в одному",
@@ -150,7 +151,8 @@
   "cta": {
     "title": "Почни з однієї картки.",
     "subtitle": "Тобі не потрібен план курсу. Тобі потрібна перша картка і посилання, що веде до наступної.",
-    "button": "Запитати доступ"
+    "button": "Запитати доступ",
+    "hinweis": "Ми особисто відповімо тобі."
   },
   "storySketch": {
     "title": "Так знання стає якістю сервісу",
@@ -193,6 +195,10 @@
       "button": "Зв’язатися з нами"
     },
     "books_intro": "Тут ми представляємо книжки. До чотирьох із них картки вже є в застосунку, кожна книжка як окрема тема: «Die Eroberer» (Roger Crowley), «Der Almanach von Naval Ravikant» (Eric Jorgenson), «Gewaltfreie Kommunikation» (Marshall B. Rosenberg) та «Die Macht der Geografie» (Tim Marshall).",
+    "new_badge": "Новинка",
+    "book_subtitle": "Представлення книжки",
+    "book_button": "Перейти на сторінку книжки (німецькою)",
+    "more_books": "Відкрити більше книжок (німецькою)",
     "books_title": "Книжки, які можна пройти"
   },
   "forms": {
@@ -262,6 +268,12 @@
       "subtitle_details": "Ми відповімо тобі.",
       "role_label": "Я приходжу як",
       "role_placeholder": "Будь ласка, обери",
+      "role_options": {
+        "learner": "Той, хто навчається",
+        "curator": "Куратор — хочу ділитися знаннями",
+        "wegbereiter": "Wegbereiter (той, хто прокладає шлях) — я керую командою",
+        "other": "Щось інше"
+      },
       "message_label": "Чого ти хочеш досягти з plinyoo?",
       "message_placeholder": "Наприклад: хочу зрозуміти, чому моє місто влітку так сильно нагрівається.",
       "button": "Запросити доступ",
@@ -308,6 +320,32 @@
       "text": "Запити щодо прав використання надсилай на heiko@plinyoo.com."
     },
     "back_to_home": "Повернутися на головну"
+  },
+  "seo": {
+    "start": {
+      "title": "plinyoo: навчальна платформа — знання та команди",
+      "description": "Твій шлях навчання унікальний. Знайди свій шлях на картках, які посилаються одна на одну, — а не в плані курсу."
+    },
+    "zugang": {
+      "title": "Доступ | plinyoo",
+      "description": "Коротко розкажи нам, хто ти і чого хочеш навчитися або чим хочеш поділитися."
+    },
+    "mitmachen": {
+      "title": "Долучитися | plinyoo",
+      "description": "Бери участь у plinyoo: розкажи нам, чи хочеш долучитися до Frontend, Backend, Mobile, Product або Learning Design."
+    },
+    "investieren": {
+      "title": "Інвестувати | plinyoo",
+      "description": "plinyoo — це навчальна платформа для знань, команд і власних шляхів."
+    },
+    "urheberrecht": {
+      "title": "Авторські права та джерела зображень | plinyoo",
+      "description": "Контент цього сайту належить, якщо не зазначено інше, Plinyoo UG (haftungsbeschränkt) і захищений авторським правом."
+    },
+    "kontakt": {
+      "title": "Контакт | plinyoo",
+      "description": "Опиши нам свою ідею або виклик."
+    }
   },
   "hero1": {
     "eyebrow": "Знання, що залишається.",

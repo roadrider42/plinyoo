@@ -1,7 +1,8 @@
 {
   "navigation": {
     "cta_primary": "Rejoindre",
-    "cta_secondary": "Investir"
+    "cta_secondary": "Investir",
+    "menu_toggle": "Afficher ou masquer le menu principal"
   },
   "hero": {
     "eyebrow": "Plateforme d’apprentissage — coach et compagnon en un",
@@ -150,7 +151,8 @@
   "cta": {
     "title": "Commence par une carte.",
     "subtitle": "Tu n’as pas besoin d’un plan de cours. Tu as besoin d’une première carte et du renvoi qui te mène à la suivante.",
-    "button": "Demander l’accès"
+    "button": "Demander l’accès",
+    "hinweis": "Nous te répondrons personnellement."
   },
   "storySketch": {
     "title": "C'est ainsi que la connaissance devient une qualité de service",
@@ -245,6 +247,12 @@
       "subtitle_details": "Nous te répondrons.",
       "role_label": "Je viens en tant que",
       "role_placeholder": "Merci de choisir",
+      "role_options": {
+        "learner": "Apprenant·e",
+        "curator": "Curateur·rice — je veux transmettre mon savoir",
+        "wegbereiter": "Wegbereiter (ouvreur de chemin) — je dirige une équipe",
+        "other": "Autre chose"
+      },
       "message_label": "Que veux-tu accomplir avec plinyoo ?",
       "message_placeholder": "Par exemple : je veux comprendre pourquoi ma ville devient si chaude l’été.",
       "button": "Demander l’accès",
@@ -270,6 +278,10 @@
       "button": "Contacte-nous"
     },
     "books_intro": "Nous présentons ici des livres. Pour quatre d’entre eux, les cartes sont déjà dans l’application, chaque livre comme sujet à part : « Die Eroberer » (Roger Crowley), « Der Almanach von Naval Ravikant » (Eric Jorgenson), « Gewaltfreie Kommunikation » (Marshall B. Rosenberg) et « Die Macht der Geografie » (Tim Marshall).",
+    "new_badge": "Nouveau",
+    "book_subtitle": "Présentation du livre",
+    "book_button": "Aller à la page du livre (en allemand)",
+    "more_books": "Découvrir d’autres livres (en allemand)",
     "books_title": "Livres à parcourir"
   },
   "footer": {
@@ -308,6 +320,32 @@
       "text": "Adresse les demandes de droits d'utilisation à heiko@plinyoo.com."
     },
     "back_to_home": "Retour à l'accueil"
+  },
+  "seo": {
+    "start": {
+      "title": "plinyoo : plateforme d’apprentissage, savoir et équipes",
+      "description": "Ton parcours d’apprentissage est unique. Trouve ton chemin sur des cartes qui renvoient les unes aux autres — pas dans un plan de cours."
+    },
+    "zugang": {
+      "title": "Accès | plinyoo",
+      "description": "Dis-nous en quelques mots qui tu es et ce que tu veux apprendre ou partager."
+    },
+    "mitmachen": {
+      "title": "Participer | plinyoo",
+      "description": "Participe à plinyoo : dis-nous si tu veux t’impliquer en Frontend, Backend, Mobile, Product ou Learning Design."
+    },
+    "investieren": {
+      "title": "Investir | plinyoo",
+      "description": "plinyoo est une plateforme d’apprentissage pour le savoir, les équipes et les parcours personnels."
+    },
+    "urheberrecht": {
+      "title": "Droit d’auteur et crédits d’image | plinyoo",
+      "description": "Les contenus de ce site appartiennent, sauf mention contraire, à Plinyoo UG (haftungsbeschränkt) et sont protégés par le droit d’auteur."
+    },
+    "kontakt": {
+      "title": "Contact | plinyoo",
+      "description": "Décris-nous ton idée ou ton défi."
+    }
   },
   "hero1": {
     "eyebrow": "Le savoir qui dure.",
