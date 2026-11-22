@@ -71,7 +71,8 @@
     "pruefung:keine-hash-links": "node tests/keine-hash-links-609.mjs",
     "pruefung:vorrendern-inhalt": "node tests/vorrendern-inhalt-609.mjs",
     "pruefung:vorrendern-gleich": "node tests/vorrendern-gleich-609.mjs",
-    "pruefung:hydration": "node tests/hydration-609.mjs"
+    "pruefung:hydration": "node tests/hydration-609.mjs",
+    "pruefung:menue-schliessen": "node tests/menue-schliessen-615.mjs"
   },
   "eslintConfig": {
     "extends": [

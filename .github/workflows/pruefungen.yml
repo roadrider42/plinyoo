@@ -39,6 +39,12 @@
 #                             (vorrendern-inhalt, vorrendern-gleich, alte-adressen,
 #                             keine-hash-links).
 #
+#   pruefung:menue-schliessen tests/menue-schliessen-615.mjs (spoonup #615): auf
+#                             demselben Bau, 390 x 844, je Unterseite mit Kopf.
+#                             Die Umschalt-Schaltfläche liegt über dem offenen
+#                             Menü, misst 44 x 44, zeigt das X; ein Tipp auf
+#                             354/32 und Escape schließen das Menü.
+#
 # NICHT hier: G1 aus derselben Datei. G1 vergleicht die Grenze mit spoonup, und
 # spoonup ist privat -- dieser Ablauf kann es nicht lesen (Heikos Entscheidung
 # E-398: kein Schlüssel). Die Ausgabe sagt dann "G1 NICHT GEMESSEN (lebt in
@@ -107,3 +113,7 @@ jobs:
         env:
           PLAYWRIGHT_MODUL: ${{ github.workspace }}/node_modules/playwright
         run: npm run pruefung:hydration
+      - name: pruefung:menue-schliessen
+        env:
+          PLAYWRIGHT_MODUL: ${{ github.workspace }}/node_modules/playwright
+        run: npm run pruefung:menue-schliessen
