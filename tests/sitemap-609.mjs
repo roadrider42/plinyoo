@@ -22,6 +22,11 @@
 // S5  Keine Adresse trägt "heute", wenn ihre Dateien heute keinen Commit
 //     haben -- ein lastmod, das jeder Bau auf den Bautag setzt, werten
 //     Suchmaschinen als unzuverlässig (Kommentar im Skript, Zeile 15-16).
+// S6  (#609 Vorrendern) Die sieben Seiten der App stehen mit eigener Adresse
+//     und Schrägstrich darin (/zugang/ ...), lastmod wie die Startseite. Vor
+//     dem Vorrendern waren sie alle "/" und standen gar nicht darin.
+//     Gegenprobe 21.11.2026 mit --generator <Skript von origin/main 09c8f32>:
+//     ROT S6 (sieben Adressen fehlen), Exit 1.
 //
 // Die erwarteten Tage rechnet diese Datei selbst aus git log aus, nicht aus
 // dem Skript. Ein flacher Klon kennt nur den letzten Commit: dann "nicht
@@ -78,6 +83,10 @@ if (!canonical) nichtMessbar('index.html ohne <link rel="canonical">.');
 
 const erwartet = new Map(); // loc -> { tag, woher }
 erwartet.set(`${SITE}/`, { tag: commitTag(['index.html', 'src/', 'public/locales/']), woher: 'index.html, src/, public/locales/' });
+// S6 (#609 Vorrendern): die übrigen Seiten der App, je mit eigener Adresse und Schrägstrich, lastmod wie die
+// Startseite (ihr Inhalt liegt an denselben Stellen). Ausgeschrieben, nicht aus src/routes/seiten.ts gelesen.
+const APP_SEITEN = ['/zugang/', '/mitmachen/', '/investieren/', '/impressum/', '/datenschutz/', '/urheberrecht/', '/kontakt/'];
+for (const p of APP_SEITEN) erwartet.set(`${SITE}${p}`, { tag: erwartet.get(`${SITE}/`).tag, woher: 'index.html, src/, public/locales/ (Seite der App)' });
 if (buecher.length) erwartet.set(`${SITE}/buch/`, { tag: buecher.map((b) => b.tag).sort().at(-1), woher: 'jüngstes Buch' });
 for (const b of buecher) erwartet.set(`${SITE}/buch/${b.slug}/`, { tag: b.tag, woher: `content/buecher/${b.slug}` });
 for (const u of unterseiten) erwartet.set(`${SITE}${u.pfad}`, { tag: u.tag, woher: u.datei });
@@ -96,6 +105,9 @@ if (lesenArg > 0) {
   const seite = (teile) => { mkdirSync(join(tmp, ...teile), { recursive: true }); writeFileSync(join(tmp, ...teile, 'index.html'), '<!doctype html><title>Platzhalter</title>'); };
   for (const b of buecher) seite(['buch', b.slug]);
   for (const u of unterseiten) seite(u.pfad.split('/').filter(Boolean));
+  // Seiten der App: das Skript verlangt vorgerenderten Inhalt in #root (#609).
+  const appSeite = (teile) => { mkdirSync(join(tmp, ...teile), { recursive: true }); writeFileSync(join(tmp, ...teile, 'index.html'), '<!doctype html><title>Platzhalter</title><div id="root"><main>Platzhalter</main></div>'); };
+  for (const p of ['/', ...APP_SEITEN]) appSeite(p.split('/').filter(Boolean));
   try {
     // --generator <datei>: anderer Stand des Skripts für die Gegenprobe; er muss in scripts/ liegen (es rechnet von dort die Wurzel).
     const genArg = process.argv.indexOf('--generator');
@@ -125,7 +137,7 @@ if (eintraege.some((x) => x.loc === SITE)) rot.push(`S1 "${SITE}" ohne Schrägst
 
 for (const [loc, e] of erwartet) {
   const x = eintraege.find((y) => y.loc === loc);
-  const kennung = loc === `${SITE}/` ? 'S2' : unterseiten.some((u) => `${SITE}${u.pfad}` === loc) ? 'S3' : 'S4';
+  const kennung = loc === `${SITE}/` ? 'S2' : APP_SEITEN.some((p) => `${SITE}${p}` === loc) ? 'S6' : unterseiten.some((u) => `${SITE}${u.pfad}` === loc) ? 'S3' : 'S4';
   if (!x) { rot.push(`${kennung} ${loc} fehlt`); continue; }
   if (x.lastmod !== e.tag) rot.push(`${kennung} ${loc}: lastmod "${x.lastmod ?? '(keins)'}", letzter Commit auf ${e.woher} ist ${e.tag}`);
   if (HEUTE.has(x.lastmod) && !HEUTE.has(e.tag)) rot.push(`S5 ${loc}: lastmod ist heute (${x.lastmod}), ${e.woher} hat heute keinen Commit`);
@@ -137,4 +149,4 @@ if (rot.length) {
   console.log(`ROT (${rot.length}):\n  ${rot.join('\n  ')}`);
   process.exit(1);
 }
-console.log(`GRUEN S1-S5: ${eintraege.length} Adressen, Startseite ${SITE}/ (${erwartet.get(`${SITE}/`).tag}), ${unterseiten.length} Unterseiten, ${buecher.length} Bücher; jedes lastmod = letzter Commit.`);
+console.log(`GRUEN S1-S6: ${eintraege.length} Adressen, Startseite ${SITE}/ (${erwartet.get(`${SITE}/`).tag}), ${APP_SEITEN.length} Seiten der App, ${unterseiten.length} Unterseiten, ${buecher.length} Bücher; jedes lastmod = letzter Commit.`);

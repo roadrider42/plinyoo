@@ -42,9 +42,14 @@ const STADTHITZE_KANTEN: Kante[] = [
   [5, 6],
 ];
 
-function gemischt<T>(items: T[]): T[] {
+// #609: fester Startwert aus einem Schlüssel (der Frage), nicht Math.random. Die Seite wird beim Bau vorgerendert;
+// mit Zufall stünden die Antworten im Browser in anderer Reihenfolge als im HTML, und React verwürfe die Seite
+// beim Übernehmen. Je Frage bleibt die Reihenfolge gemischt, über die Fragen hinweg verschieden.
+function gemischt<T>(items: T[], schluessel: string): T[] {
+  let s = [...schluessel].reduce((a, c) => (Math.imul(a, 31) + c.charCodeAt(0)) >>> 0, 2166136261);
+  const zufall = () => ((s = (Math.imul(s, 1664525) + 1013904223) >>> 0) / 4294967296);
   return items
-    .map((item) => [Math.random(), item] as const)
+    .map((item) => [zufall(), item] as const)
     .sort((a, b) => a[0] - b[0])
     .map(([, item]) => item);
 }
@@ -108,7 +113,7 @@ export default function Wissensuniversum() {
           {
             frage: c.question,
             // Reihenfolge der Antworten einmal mischen, damit die richtige nicht immer an derselben Stelle steht
-            optionen: gemischt(c.options.map((o) => ({ text: o.text, ok: o.correct, fb: o.why }))),
+            optionen: gemischt(c.options.map((o) => ({ text: o.text, ok: o.correct, fb: o.why })), `${c.question}`),
             beleg: c.beleg,
           },
         ],

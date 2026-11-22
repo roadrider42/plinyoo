@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
@@ -20,8 +20,9 @@ import './index.css';
 import 'modern-normalize/modern-normalize.css';
 
 import { router } from './routes/AppRoutes';
-import { erkannteSprache } from './lib/i18n';
+import i18n, { erkannteSprache } from './lib/i18n';
 import { ladehinweisFuer } from './lib/ladehinweis';
+import { VORGERENDERT_SPRACHE } from './routes/seiten';
 
 // Kein html.loading mehr (spoonup#532): Die Klasse machte den body unsichtbar, bis die Seite
 // fertig war — und damit auch den Suspense-Rückfall unten, der genau für die Wartezeit auf
@@ -33,7 +34,7 @@ const App = () => (
 
 const queryClient = new QueryClient();
 
-createRoot(document.getElementById('root')!).render(
+const seite = (
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <Suspense fallback={
@@ -55,3 +56,20 @@ createRoot(document.getElementById('root')!).render(
     </QueryClientProvider>
   </React.StrictMode>
 );
+
+// #609 (spoonup, Heiko E-521 "B"): Die Seiten liegen vorgerendert in dist/ (scripts/vorrendern.mjs), auf Deutsch.
+// Steht schon Inhalt in #root, wird er übernommen (hydrateRoot), nicht ersetzt: Der Besucher sieht die Seite sofort,
+// und nichts flackert. Damit die erste Zeichnung genau dem HTML entspricht, wartet der Einstieg, bis die deutsche
+// Übersetzung geladen ist (bis dahin steht das vorgerenderte HTML schon da), und wechselt erst NACH dem Übernehmen
+// in die Sprache, die i18next für den Besucher erkennt (Cookie, ?lng=, Browser) — wie bisher.
+// Ohne Inhalt in #root (404.html, npm run dev) wird wie bisher gerendert, mit Ladehinweis (spoonup#532, #548).
+const wurzel = document.getElementById('root')!;
+if (wurzel.firstElementChild) {
+  const besucherSprache = erkannteSprache();
+  i18n.changeLanguage(VORGERENDERT_SPRACHE).then(() => {
+    hydrateRoot(wurzel, seite);
+    if (besucherSprache && besucherSprache !== VORGERENDERT_SPRACHE) i18n.changeLanguage(besucherSprache);
+  });
+} else {
+  createRoot(wurzel).render(seite);
+}

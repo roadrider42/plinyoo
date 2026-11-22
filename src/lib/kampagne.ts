@@ -1,7 +1,8 @@
 // src/lib/kampagne.ts
 // Zweck: Herkunft eines Besuchs (Buchseite, Kanal) lesen und für die Sitzung merken, damit die
-// Zugangsanfrage sagen kann, woher sie kommt. Die Website nutzt einen Hash-Router: Parameter stehen
-// entweder VOR dem '#' (z. B. von der Buchseite) oder dahinter (interne Links) — beide werden gelesen.
+// Zugangsanfrage sagen kann, woher sie kommt. Seit #609 stehen die Angaben in location.search (/zugang/?buch=…);
+// alte Adressen (/?buch=…#/zugang?rolle=…) legt src/lib/alte-adressen.ts vorher dorthin zusammen. Der Hash wird
+// trotzdem weiter gelesen: Fehlt die Umleitung einmal, geht die Herkunft so nicht verloren.
 // Es wird nichts an Dritte gesendet; gespeichert wird nur im sessionStorage des Browsers.
 
 export interface Kampagne {

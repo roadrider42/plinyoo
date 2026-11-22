@@ -1,5 +1,12 @@
 # Ionos Router-Konfiguration für BrowserRouter
 
+> **Überholt (#609, 22.11.2026).** `www.plinyoo.com` liegt auf GitHub Pages
+> (`.github/workflows/deploy.yml`), nicht auf Ionos. GitHub Pages wertet weder
+> `.htaccess` noch `_redirects` aus; beide Dateien sind aus `public/` gelöscht.
+> Jede Adresse ist heute eine vorgerenderte Datei (`scripts/vorrendern.mjs`),
+> unbekannte Pfade bekommen `dist/404.html`, die der Bau aus `dist/index.html`
+> kopiert. Der Text unten beschreibt den Stand davor.
+
 ## 🎯 Was ist das Problem?
 
 **Hash-Router:** URLs wie `/#/zugang` → Suchmaschinen crawlen nicht hinter `#`

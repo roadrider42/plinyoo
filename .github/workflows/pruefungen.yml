@@ -29,6 +29,16 @@
 #                             die volle Historie (fetch-depth: 0 unten); in
 #                             einem flachen Klon meldet sie "nicht messbar".
 #
+#   pruefung:hydration        tests/hydration-609.mjs (spoonup #609): nach npm run
+#                             build liefert ein kleiner Server dist/ aus wie GitHub
+#                             Pages, Chromium oeffnet jede vorgerenderte Seite.
+#                             Rot bei jeder Abweichung beim Uebernehmen (React
+#                             verwirft die Seite), bei ersetztem #root und wenn eine
+#                             alte Adresse /#/zugang?... ihre Herkunft verliert.
+#                             Der Bau selbst faehrt die Pruefungen ohne Browser mit
+#                             (vorrendern-inhalt, vorrendern-gleich, alte-adressen,
+#                             keine-hash-links).
+#
 # NICHT hier: G1 aus derselben Datei. G1 vergleicht die Grenze mit spoonup, und
 # spoonup ist privat -- dieser Ablauf kann es nicht lesen (Heikos Entscheidung
 # E-398: kein Schlüssel). Die Ausgabe sagt dann "G1 NICHT GEMESSEN (lebt in
@@ -36,7 +46,7 @@
 # pruefung:kontakt-grenze-plinyoo), die plinyoo öffentlich holt. Von Hand,
 # ohne den Schalter, fährt die Datei hier weiter mit G1.
 #
-# Alle vier Prüfungen enden mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
+# Alle Prüfungen enden mit 0 grün, 1 rot, 2 nicht messbar. In diesem Ablauf
 # ist alles vorhanden, was sie braucht -- "nicht messbar" ist hier also ein
 # Fehler des Ablaufs und macht den Lauf rot, nicht grün.
 name: Pruefungen
@@ -89,3 +99,11 @@ jobs:
         run: npm run pruefung:impressum-hrb
       - name: pruefung:sitemap
         run: npm run pruefung:sitemap
+      - name: Bau (fuer pruefung:hydration)
+        env:
+          VITE_BASE: /
+        run: npm run build
+      - name: pruefung:hydration
+        env:
+          PLAYWRIGHT_MODUL: ${{ github.workspace }}/node_modules/playwright
+        run: npm run pruefung:hydration

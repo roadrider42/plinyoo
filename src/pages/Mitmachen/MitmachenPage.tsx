@@ -107,7 +107,7 @@ export default function MitmachenPage() {
             </button>
           </div>
           <p className="text-xs text-gray-500 mt-4 text-center">
-            {t('forms.privacy_notice')} <Link to="/datenschutz" className="underline">{t('forms.privacy_link')}</Link>
+            {t('forms.privacy_notice')} <Link to="/datenschutz/" className="underline">{t('forms.privacy_link')}</Link>
           </p>
         </form>
 

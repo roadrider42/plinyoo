@@ -12,6 +12,8 @@
 
 # build output
 dist/
+# #609: Vorrenderbau (vite build --ssr), nur für scripts/vorrendern.mjs, wird nicht ausgeliefert
+dist-server/
 
 # misc
 .DS_Store

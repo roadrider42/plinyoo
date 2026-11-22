@@ -38,7 +38,7 @@ export default function Roles() {
             </p>
             <p className="flex-1 text-sm leading-relaxed text-text-muted">{t(`roles.${key}.description`)}</p>
             <Link
-              to={`/zugang?rolle=${key}`}
+              to={`/zugang/?rolle=${key}`}
               className="mt-2 inline-block text-sm font-semibold text-primary underline-offset-4 hover:underline"
             >
               {t('roles.cta')} &rarr;
