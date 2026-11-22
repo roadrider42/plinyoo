@@ -26,7 +26,7 @@ export default function HeroSection1() {
             rel="noopener noreferrer"
             className="flex h-11 items-center rounded-full border border-border bg-surface-1 px-4 text-sm font-medium text-primary transition-colors hover:bg-surface-2"
           >
-            Login
+            {t('hero.login')}
           </a>
         </div>
       </div>

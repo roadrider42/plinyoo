@@ -46,6 +46,10 @@
 //     Sprache fehlt, in jedem Bereich (journey, forms, hero …), den eine
 //     Sprachseite benutzt. Benutzt = ein Schlüssel des Bereichs steht beim
 //     Rendern mit Marken für BEIDE Sprachen auf einer Sprachseite.
+// R5  Ein Wort aus FEST_VERBOTEN (z. B. „Login“, seit 22.11.2026 hero.login)
+//     steht fest in einer .tsx/.jsx unter src/ -- als JSX-Text oder
+//     Attributwert, Kommentarzeilen ausgenommen. Auch in Dateien, die nicht
+//     vorgerendert werden (HeroSection1-3).
 //
 // Ausgabe: je Sprache die Liste der Schlüssel (mit deutschem Wortlaut und den
 // Seiten, auf denen er steht). Exit 0 grün, 1 rot, 2 nicht messbar.
@@ -117,6 +121,21 @@ for (const [k, belege] of NUR_DEUTSCH) {
     if (!fs.existsSync(quelle) || !fs.readFileSync(quelle, 'utf8').includes(muster)) ohneBeleg.push(`  ${k}  Beleg fehlt: ${datei} „${muster}“`);
   }
 }
+// R5 (22.11.2026): feste Wörter im Quelltext, die eine Sprachdatei tragen muss. R3 sieht nur vorgerenderte Seiten;
+// HeroSection1-3 (HomePage, Variante) werden nicht vorgerendert. Gesucht wird das Wort als JSX-Text (>Login<) oder
+// als Attributwert (="Login"), nicht in Kommentaren. Je Wort der Schlüssel, der es ersetzt.
+const FEST_VERBOTEN = [['Login', 'hero.login']];
+const festImQuelltext = [];
+for (const datei of fs.readdirSync(path.join(WURZEL, 'src'), { recursive: true }).filter((x) => /\.(tsx|jsx)$/.test(x))) {
+  const zeilen = fs.readFileSync(path.join(WURZEL, 'src', datei), 'utf8').split('\n');
+  for (const [wort, schluessel] of FEST_VERBOTEN) {
+    const muster = new RegExp(`(^|>)\\s*${wort}\\s*($|<)|=\\s*["'{]\\s*["']?${wort}["']`);
+    zeilen.forEach((z, i) => {
+      if (/^\s*(\/\/|\*|\{\/\*)/.test(z)) return;
+      if (muster.test(z)) festImQuelltext.push(`  src/${datei}:${i + 1}  „${wort}“ fest -- t('${schluessel}')`);
+    });
+  }
+}
 const nurDeutsch = (schluessel) => NUR_DEUTSCH.some(([k]) => (k.endsWith('.') ? schluessel.startsWith(k) : schluessel === k));
 const ERLAUBT = (schluessel) => KARTEN_BLEIBEN_DEUTSCH && schluessel.startsWith('journey.cards.');
 // nurDeutsch gilt nur in R4 (nicht vorgerendert). Steht ein solcher Schlüssel doch im HTML einer Sprachseite (R1),
@@ -127,7 +146,8 @@ const GLEICH_IN_ALLEN = new Set([
   'plinyoo', 'plinyoo.', // Wortmarke (Kopf, Footer)
   'Instagram: @plinyoo_path', 'X (Twitter): @plinyoo_path', // Kontonamen, src/components/ui/SocialLinks.tsx
   'Instagram @plinyoo_path', 'X (Twitter) @plinyoo_path', // dieselben, Kontaktseite
-  'Login', // src/components/ui/Hero.tsx:42, englisch, fest in allen Sprachen. Randbefund: nicht übersetzt
+  // 'Login' stand hier bis 22.11.2026 (fest in Hero.tsx). Seitdem hero.login (Sprecher :11420); ein festes „Login“
+  // zählt wieder als Rest -- in R3 auf der Seite und in R5 im Quelltext.
   'Notifications (F8)', // Vorgabe von @radix-ui/react-toast (aria-label), englisch. Randbefund: nicht übersetzt
 ]);
 
@@ -251,6 +271,10 @@ const karten = (KARTEN_BLEIBEN_DEUTSCH ? 'journey.cards erlaubt (E-542 A)' : 'jo
 if (ohneBeleg.length) {
   summe += ohneBeleg.length;
   zeilen.push(`Ausnahmen nur Deutsch ohne Beleg (${ohneBeleg.length}) -- Fundstelle prüfen oder Ausnahme streichen:`, ...ohneBeleg);
+}
+if (festImQuelltext.length) {
+  summe += festImQuelltext.length;
+  zeilen.push(`Feste Wörter im Quelltext statt Sprachdatei (R5, ${festImQuelltext.length}):`, ...festImQuelltext);
 }
 if (summe) {
   console.log(`ROT: deutsche Texte auf den Sprachseiten (${gerendert} Seiten gerendert, ${karten}; Heiko E-535 "a": erst übersetzen, dann ausliefern)\n${zeilen.join('\n')}`);
