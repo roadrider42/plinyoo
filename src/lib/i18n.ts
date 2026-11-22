@@ -20,6 +20,9 @@ i18n
     // Sprache fest (null): dort erkennt i18next sie wie bisher (Reihenfolge unten).
     lng: spracheDesPfads(window.location.pathname, SPRACHEN) ?? undefined,
     supportedLngs: [...SPRACHEN],
+    // #609: Ein Browser, der nur "en-US" (oder "pt-BR", "fr-CA" …) meldet, bekommt die Grundsprache. Ohne diese Zeile
+    // passte "en-US" auf keine der supportedLngs, und er bekam Deutsch (gemessen 22.11.2026, tests/hydration-609.mjs).
+    load: 'languageOnly',
     fallbackLng: RUECKFALL_SPRACHE,
     debug: false, // Immer deaktivieren für saubere Console
     detection: {

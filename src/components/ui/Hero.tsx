@@ -6,8 +6,8 @@
 // #503 Zugang (claude/_503cta/entwurf.md, B1–B6): Mit Telefon steht die Zugangsschaltfläche unter 1024 px unter dem
 //   Telefon (nach seiner Bedienzeile), ab 1024 px in der Textspalte unter dem Text; ohne Telefon unter dem Text.
 //   Darunter steht jeweils die Zeile „Wir melden uns persönlich bei dir.“ (ZugangHinweis, nur in Sprachen mit eigenem Text).
-// Gegenbild-Zeile und Faden erscheinen nur, wenn die gewählte Sprache eigene Texte unter hero.faden hat (wie Views.tsx);
-//   sonst bleibt der Hero einspaltig wie bisher, ohne deutsche Beschriftungen in einer fremden Sprache.
+// Gegenbild-Zeile und Faden erscheinen nur auf Deutsch (#609, die Karten sind deutsche Buchtexte) und nur, wenn
+//   hero.faden da ist; sonst bleibt der Hero einspaltig wie bisher, ohne deutsche Texte in einer fremden Sprache.
 
 import React from 'react';
 import { SprachLink } from '@/components/SprachLink';
@@ -22,7 +22,11 @@ const zugangKlassen =
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
-  const mitFaden = Boolean(i18n.getResource(i18n.resolvedLanguage || i18n.language, 'translation', 'hero.faden'));
+  // #609 (Entscheidung Max 22.11.2026): Faden und Gegenbild-Zeile nur auf Deutsch. Die Karten des Fadens sind Buchtexte
+  // (fadenInhalt.ts aus content/buecher, deutsch, Heiko E-536 "a") und wären auf einer Sprachseite deutsche Reste
+  // (E-535 "a") -- auch wenn die Sprache hero.faden übersetzt hat. tests/faden-nur-deutsch-609.mjs hält das fest.
+  const sprache = (i18n.resolvedLanguage || i18n.language || '').split('-')[0];
+  const mitFaden = sprache === 'de' && Boolean(i18n.getResource(sprache, 'translation', 'hero.faden'));
 
   return (
     <div className="bg-main-background text-main-text">

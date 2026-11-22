@@ -50,8 +50,10 @@
 // Beide Richtungen, 22.11.2026, node 22.23.4:
 //   - Sprachdateien des Zweigs: ROT, en 131 Schlüssel, es/fr/pt/uk/pl je 140.
 //   - Attrappe, in der jede Sprache jeden Text hat ("[en] " + deutscher Text):
-//     ROT nur R3, 27 Buchtexte im Faden je Sprache (erscheint, sobald
-//     hero.faden da ist); mit FADEN_BUECHER_DEUTSCH = true GRUEN.
+//     ROT nur R3, 27 Buchtexte im Faden je Sprache (mit Hero.tsx von
+//     3366aa9 erschien er, sobald hero.faden da war); mit
+//     FADEN_BUECHER_DEUTSCH = true GRUEN. Seitdem steht der Faden nur auf
+//     Deutsch (tests/faden-nur-deutsch-609.mjs).
 //   - KARTEN_BLEIBEN_DEUTSCH = true auf den Sprachdateien des Zweigs: en 47
 //     statt 131 (die 84 Kartentexte fallen weg).
 // ===========================================================================
@@ -61,12 +63,13 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 // --- Heiko E-542 (Lernkarten im Wissensuniversum): EINE Zeile. -----------------------
 // A "Karten bleiben deutsch" -> true. B "Karten übersetzen" -> false.
-// Offen (22.11.2026): false -- bis zur Antwort zählt jede deutsche Karte als Rest.
-const KARTEN_BLEIBEN_DEUTSCH = false;
+// Heiko 22.11.2026: "A" -- true. journey.note (en "The cards are in German.") bleibt in allen sechs Sprachen.
+const KARTEN_BLEIBEN_DEUTSCH = true;
 // --- Faden im Kopf der Startseite (HeroFaden): EINE Zeile. ---------------------------
-// Er erscheint in einer Sprache, sobald sie hero.faden hat (Hero.tsx:25), und zeigt Karten aus den Büchern
-// (src/components/ui/fadenInhalt.ts aus content/buecher, deutsch, Heiko E-536 "a"). Ohne Entscheidung (22.11.2026):
-// false -- jeder deutsche Buchtext im Faden einer Sprachseite zählt als Rest. true = Buchtexte dürfen deutsch sein.
+// Er zeigt Karten aus den Büchern (src/components/ui/fadenInhalt.ts aus content/buecher, deutsch, Heiko E-536 "a").
+// Entscheidung Max 22.11.2026: Der Faden steht nur auf der deutschen Seite (Hero.tsx), auch wenn eine Sprache
+// hero.faden hat; tests/faden-nur-deutsch-609.mjs hält das fest. Deshalb bleibt die Zeile false und streng:
+// ein deutscher Buchtext auf einer Sprachseite zählt als Rest.
 const FADEN_BUECHER_DEUTSCH = false;
 // -------------------------------------------------------------------------------------
 

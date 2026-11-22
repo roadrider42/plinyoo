@@ -41,8 +41,11 @@
 //   je Sprachseite  (Schritt 3) /en/, /en/zugang/ … alle 36: Y0-Y3
 //   en-US           "/" mit Browsersprache en-US: Y0-Y3. Seit Schritt 3 legt
 //                   der Pfad die Sprache fest, "/" bleibt deutsch.
-//   en datenschutz  /datenschutz/ (nur deutsch), Browser "en": Y1, Y2, danach
-//                   der englische Hinweis privacy.note (Sprache des Browsers).
+//   en datenschutz  /datenschutz/ (nur deutsch), Browser "en", "en-US" und
+//                   "pt-BR": Y1, Y2, danach der Hinweis privacy.note in der
+//                   Grundsprache des Browsers (en, en, pt).
+//   faden /en/      /en/, der Browser lädt ein übersetztes hero.faden: Y0-Y3,
+//                   kein Faden, keine Gegenbild-Zeile (Faden nur deutsch).
 //   umschalter      /zugang/?rolle=curator, "English" gewählt -> /en/zugang/?rolle=curator,
 //                   englischer Text, Wortmarke führt nach /en/; und zurück.
 //   alte-sprachangabe  /?lng=en&utm_source=x -> /en/?utm_source=x
@@ -62,6 +65,8 @@
 // new Date(): ROT neujahr und neujahr-impressum (Y1-Y3, "© 2027");
 // createRoot statt hydrateRoot: ROT in 14 von 15 Fällen (Y2). Mit allen
 // Fixes GRUEN. Bauordner ohne vorgerenderte Seiten: ROT. Ohne dist/: ROT.
+// Gegenprobe 22.11.2026: i18n.ts ohne load: 'languageOnly' ROT en-US und
+// pt-BR /datenschutz/ (Hinweis deutsch); Hero.tsx von 3366aa9 ROT faden /en/.
 // Ohne Playwright: nicht messbar.
 // Exit 0 grün, 1 rot, 2 nicht messbar.
 // ===========================================================================
@@ -120,12 +125,22 @@ const textAusHtml = async (page, pfad) => {
   return page.evaluate((h) => new DOMParser().parseFromString(h, 'text/html').getElementById('root')?.textContent ?? null, html);
 };
 
-async function fall(name, { pfad, locale = 'de-DE', reducedMotion = 'no-preference', jahrPlus = 0, text = true, huelle = false, nachher, breit = false }) {
+// NUR_FALL=<Teil des Namens>: nur diese Fälle (zum Nachmessen). Ein Teillauf endet nie grün (Exit 2).
+const NUR_FALL = process.env.NUR_FALL;
+async function fall(name, { pfad, locale = 'de-DE', reducedMotion = 'no-preference', jahrPlus = 0, text = true, huelle = false, nachher, breit = false, texte }) {
+  if (NUR_FALL && !name.includes(NUR_FALL)) return true;
   const browser = await chromium.launch({ args: ['--single-process'] });
   const rot = [];
   try {
     const ctx = await browser.newContext({ viewport: breit ? { width: 1280, height: 900 } : { width: 390, height: 844 }, locale, reducedMotion });
     await ctx.route(/^(?!http:\/\/127\.0\.0\.1:)/, (r) => r.abort());
+    // texte: { en: (json) => json } ändert die Übersetzung, die der Browser lädt (nicht die im Bau).
+    for (const [s, f] of Object.entries(texte ?? {})) {
+      await ctx.route(`**/locales/${s}/translation.json`, async (r) => {
+        const echt = await r.fetch();
+        await r.fulfill({ response: echt, json: f(await echt.json()) });
+      });
+    }
     // Die Bücherliste (Examples.tsx) lädt /buecher.json erst NACH dem Übernehmen und ändert dann den Text.
     // Das ist gewollt und keine Abweichung; die Datei wird bis nach der Messung zurückgehalten.
     const gehalten = [];
@@ -183,15 +198,32 @@ ergebnisse.push(await fall('neujahr /impressum/', { pfad: '/impressum/', jahrPlu
 // Seit Schritt 3 legt "/" Deutsch fest: Ein englischer Browser sieht dort die deutsche Seite, unverändert (Y3).
 ergebnisse.push(await fall('en-US /', { pfad: '/', locale: 'en-US' }));
 // Impressum und Datenschutz legen keine Sprache fest: deutsch übernommen (Y1, Y2), danach die Sprache des Browsers.
-// Browsersprache "en", nicht "en-US": Mit navigator.languages = ["en-US"] allein erkennt i18next die Sprache nicht
-// (supportedLngs ohne Regionalform) und bleibt deutsch -- so schon vor #609 Schritt 3 (gemessen 22.11.2026 mit
-// src/lib/i18n.ts von beee666), als Befund gemeldet, nicht Gegenstand dieser Prüfung.
-ergebnisse.push(await fall('en /datenschutz/', {
-  pfad: '/datenschutz/', locale: 'en', text: false,
+// en-US, pt-BR: Ein Browser, der nur die Regionalform meldet (Playwright locale setzt genau einen Eintrag in
+// navigator.languages, so auch oft Safari), bekommt die Grundsprache (src/lib/i18n.ts, load: 'languageOnly').
+// Vorher blieb er deutsch -- gemessen 22.11.2026 mit src/lib/i18n.ts von beee666 und 3366aa9: ROT en-US, pt-BR.
+const privacyNote = (s) => JSON.parse(readFileSync(join(WURZEL, `public/locales/${s}/translation.json`), 'utf8')).privacy?.note;
+for (const [locale, s] of [['en', 'en'], ['en-US', 'en'], ['pt-BR', 'pt']]) {
+  ergebnisse.push(await fall(`${locale} /datenschutz/`, {
+    pfad: '/datenschutz/', locale, text: false,
+    nachher: async (page) => {
+      const note = privacyNote(s);
+      const ok = await page.waitForFunction((t) => document.getElementById('root')?.textContent.includes(t), note, { timeout: 5000 }).then(() => true, () => false);
+      return ok ? [] : [`nach dem Übernehmen steht der Hinweis "${note}" (${s}) nicht da`];
+    },
+  }));
+}
+// Faden nur deutsch (Entscheidung Max 22.11.2026, tests/faden-nur-deutsch-609.mjs): /en/ mit einem übersetzten
+// hero.faden, wie ihn der Browser lädt -- kein Faden, keine Gegenbild-Zeile, und die Seite bleibt wie vorgerendert (Y3).
+const deFaden = deTexte.hero.faden;
+const fadenEn = Object.fromEntries(Object.entries(deFaden).map(([k, v]) => [k, typeof v === 'string' ? `[en] ${v}` : v]));
+ergebnisse.push(await fall('faden /en/ (hero.faden übersetzt)', {
+  pfad: '/en/', breit: true,
+  texte: { en: (j) => ({ ...j, hero: { ...j.hero, faden: fadenEn } }) },
   nachher: async (page) => {
-    const note = enTexte.privacy?.note;
-    const ok = await page.waitForFunction((t) => document.getElementById('root')?.textContent.includes(t), note, { timeout: 5000 }).then(() => true, () => false);
-    return ok ? [] : [`nach dem Übernehmen steht der englische Hinweis "${note}" nicht da`];
+    const r = [];
+    if (await page.locator('[data-ziel="hero-faden"]').count()) r.push('Faden steht auf /en/');
+    if ((await page.evaluate(() => document.getElementById('root')?.textContent ?? '')).includes(fadenEn.contrastFrom)) r.push('Gegenbild-Zeile steht auf /en/');
+    return r;
   },
 }));
 // Sprachumschalter: auf /zugang/ "English" wählen -> /en/zugang/ mit Angaben, Seite englisch.
@@ -202,11 +234,14 @@ ergebnisse.push(await fall('umschalter /zugang/ -> en', {
     await page.getByRole('button', { name: /^de$/i }).click();
     await page.getByRole('menuitem', { name: 'English' }).click();
     await page.waitForURL(/\/en\/zugang\/\?rolle=curator$/, { timeout: 5000 }).catch(() => r.push(`landet auf ${new URL(page.url()).pathname}${new URL(page.url()).search}, erwartet /en/zugang/?rolle=curator`));
+    // Auf den Link der Wortmarke WARTEN, nicht ihn nach dem Text lesen: en "Invest" steckt in de "Investieren",
+    // die Textprobe ist also schon auf der deutschen Seite erfüllt (gemessen 22.11.2026: Link noch "/", ein Wettlauf).
+    const link = await page.waitForFunction(() => document.querySelector('header a')?.getAttribute('href') === '/en/', null, { timeout: 5000 })
+      .then(() => '/en/', () => page.locator('header a').first().getAttribute('href'));
+    if (link !== '/en/') r.push(`Link der Wortmarke ${link}, erwartet /en/`);
     const en = enTexte.navigation.cta_secondary;
     const ok = await page.waitForFunction((t) => document.getElementById('root')?.textContent.includes(t), en, { timeout: 5000 }).then(() => true, () => false);
     if (!ok) r.push(`die Seite zeigt "${en}" (navigation.cta_secondary, en) nicht`);
-    const link = await page.locator('header a').first().getAttribute('href');
-    if (link !== '/en/') r.push(`Link der Wortmarke ${link}, erwartet /en/`);
     return r;
   },
 }));
@@ -260,4 +295,5 @@ ergebnisse.push(await fall('unbekannt', {
 server.close();
 const rotZahl = ergebnisse.filter((x) => !x).length;
 if (rotZahl) { console.log(`ROT: ${rotZahl} von ${ergebnisse.length} Fällen`); process.exit(1); }
+if (NUR_FALL) { console.log(`TEILLAUF (NUR_FALL=${NUR_FALL}): kein Urteil über die Prüfung`); process.exit(2); }
 console.log(`GRUEN Y1-Y3: ${ergebnisse.length} Fälle, keine Abweichung beim Übernehmen, #root nie ersetzt, alte Adresse mit Herkunft`);
