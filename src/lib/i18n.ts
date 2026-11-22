@@ -26,7 +26,9 @@ i18n
     fallbackLng: RUECKFALL_SPRACHE,
     debug: false, // Immer deaktivieren für saubere Console
     detection: {
-      order: ['queryString', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+      // "querystring" klein: So heißt der Erkenner in i18next-browser-languagedetector. Einen unbekannten Namen
+      // ("queryString") übergeht i18next still, ?lng=en wirkte dann nicht (#609, tests/hydration-609.mjs).
+      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       caches: ['cookie'],
     },
     backend: {

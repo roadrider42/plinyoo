@@ -44,6 +44,7 @@
 //   en datenschutz  /datenschutz/ (nur deutsch), Browser "en", "en-US" und
 //                   "pt-BR": Y1, Y2, danach der Hinweis privacy.note in der
 //                   Grundsprache des Browsers (en, en, pt).
+//   ?lng=en datenschutz  /datenschutz/?lng=en, Browser de-DE: englischer Hinweis.
 //   faden /en/      /en/, der Browser lädt ein übersetztes hero.faden: Y0-Y3,
 //                   kein Faden, keine Gegenbild-Zeile (Faden nur deutsch).
 //   umschalter      /zugang/?rolle=curator, "English" gewählt -> /en/zugang/?rolle=curator,
@@ -66,7 +67,8 @@
 // createRoot statt hydrateRoot: ROT in 14 von 15 Fällen (Y2). Mit allen
 // Fixes GRUEN. Bauordner ohne vorgerenderte Seiten: ROT. Ohne dist/: ROT.
 // Gegenprobe 22.11.2026: i18n.ts ohne load: 'languageOnly' ROT en-US und
-// pt-BR /datenschutz/ (Hinweis deutsch); Hero.tsx von 3366aa9 ROT faden /en/.
+// pt-BR /datenschutz/ (Hinweis deutsch); Hero.tsx von 3366aa9 ROT faden /en/;
+// Erkenner "queryString" (d9137d1) ROT ?lng=en /datenschutz/.
 // Ohne Playwright: nicht messbar.
 // Exit 0 grün, 1 rot, 2 nicht messbar.
 // ===========================================================================
@@ -212,6 +214,17 @@ for (const [locale, s] of [['en', 'en'], ['en-US', 'en'], ['pt-BR', 'pt']]) {
     },
   }));
 }
+// ?lng=en auf einer Seite ohne Sprache im Pfad (deutscher Browser): Die Angabe gilt (Erkennung "querystring").
+// Vorher stand in src/lib/i18n.ts "queryString" -- einen Erkenner dieses Namens gibt es nicht, i18next überging ihn
+// still, und der Hinweis blieb deutsch (gemessen 22.11.2026 mit d9137d1: ROT).
+ergebnisse.push(await fall('?lng=en /datenschutz/', {
+  pfad: '/datenschutz/?lng=en', text: false,
+  nachher: async (page) => {
+    const note = privacyNote('en');
+    const ok = await page.waitForFunction((t) => document.getElementById('root')?.textContent.includes(t), note, { timeout: 5000 }).then(() => true, () => false);
+    return ok ? [] : [`nach dem Übernehmen steht der Hinweis "${note}" (en) nicht da`];
+  },
+}));
 // Faden nur deutsch (Entscheidung Max 22.11.2026, tests/faden-nur-deutsch-609.mjs): /en/ mit einem übersetzten
 // hero.faden, wie ihn der Browser lädt -- kein Faden, keine Gegenbild-Zeile, und die Seite bleibt wie vorgerendert (Y3).
 const deFaden = deTexte.hero.faden;
