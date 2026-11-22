@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "cta_primary": "I’d like to be part of it",
+    "cta_primary": "Get involved",
     "cta_secondary": "Invest"
   },
   "hero": {
@@ -247,7 +247,7 @@
       "message_label": "Message"
     },
     "join": {
-      "title": "Join us",
+      "title": "Get involved",
       "subtitle": "100% product. 100% practice. At Plinyoo, we develop learning flows that truly support teams and make service measurably better.",
       "subtitle_details": "Whether Frontend, Backend, Mobile, Product, or Learning Design: What matters is product thinking, responsibility, and a desire to get things done.",
       "role_label": "Role/Skill",
@@ -313,7 +313,7 @@
       "imprint": "Imprint",
       "privacy": "Privacy",
       "copyright": "Copyright",
-      "join": "Join us",
+      "join": "Get involved",
       "invest": "Invest",
       "contact": "Contact"
     },
