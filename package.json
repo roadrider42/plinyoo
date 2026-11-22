@@ -76,7 +76,8 @@
     "pruefung:keine-deutschen-reste": "node tests/keine-deutschen-reste-609.mjs",
     "pruefung:faden-nur-deutsch": "node tests/faden-nur-deutsch-609.mjs",
     "pruefung:ansichten-en": "node tests/ansichten-en-609.mjs",
-    "pruefung:zugang-hinweis": "node tests/zugang-hinweis-609.mjs"
+    "pruefung:zugang-hinweis": "node tests/zugang-hinweis-609.mjs",
+    "pruefung:menue-schliessen": "node tests/menue-schliessen-615.mjs"
   },
   "eslintConfig": {
     "extends": [
