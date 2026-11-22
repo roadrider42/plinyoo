@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "cta_primary": "Join",
+    "cta_primary": "I’d like to be part of it",
     "cta_secondary": "Invest"
   },
   "hero": {
@@ -171,7 +171,8 @@
   "cta": {
     "title": "Start with one card.",
     "subtitle": "You don't need a course plan. You need a first card and the link that takes you to the next.",
-    "button": "I’d like to be part of it"
+    "button": "I’d like to be part of it",
+    "hinweis": "We’ll get back to you personally."
   },
   "storySketch": {
     "title": "This is how knowledge becomes service quality",
@@ -214,7 +215,11 @@
       "button": "Contact us"
     },
     "books_intro": "Here we present books. For four of them, the learning cards are already in the app, each book as its own topic: “Die Eroberer” (Roger Crowley), “Der Almanach von Naval Ravikant” (Eric Jorgenson), “Gewaltfreie Kommunikation” (Marshall B. Rosenberg) and “Die Macht der Geografie” (Tim Marshall).",
-    "books_title": "Books to play through"
+    "books_title": "Books to play through",
+    "new_badge": "New",
+    "book_subtitle": "Book introduction",
+    "book_button": "Go to the book page (in German)",
+    "more_books": "Discover more books (in German)"
   },
   "forms": {
     "validation": {
