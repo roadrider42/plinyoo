@@ -367,10 +367,56 @@
     "right": "Correct:",
     "wrong": "Not quite.",
     "retry": "Try again",
-    "note": "The cards are in German."
+    "note": "The cards are in German.",
+    "topics": "Choose a topic",
+    "topicEic": "East India Company",
+    "topicBorders": "Borders",
+    "topicLisbon": "Lisbon 1941",
+    "source": "Source:",
+    "retrieved": "retrieved",
+    "toSource": "To the source",
+    "bookNote": "These cards go with the book “{{titel}}” by {{autor}}."
   },
   "views": {
     "title": "A look inside",
-    "subtitle": "Three views from the development of plinyoo. The texts in the views are in German."
+    "subtitle": "Three views from the development of plinyoo. The texts in the views are in German.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Concept",
+        "title": "Your goal, your path, your knowledge universe",
+        "text": "A look at the learning field as we imagine it: a start page with your goal, the path towards it, and a look back with your stars.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Learning field: your universe and the question “What do you want to be able to do?” (screenshot in German)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Learning field: “This is your path” with stops on the way to the goal (screenshot in German)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Learning field: “That was today” with collected stars (screenshot in German)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Concept",
+        "title": "The knowledge network",
+        "text": "Eleven cards on urban heat, with real links between them, surrounded by further topics. Drag to rearrange, scroll to zoom.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "The knowledge network — interactive view"
+      },
+      {
+        "id": "autor",
+        "tag": "Concept",
+        "title": "See paths and gaps",
+        "text": "For everyone who passes on knowledge: you choose keywords and see how cards connect and where a bridge is still missing.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Paths and gaps — interactive view"
+      }
+    ]
   }
 }

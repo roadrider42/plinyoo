@@ -31,6 +31,9 @@
 //   - Schlüssel, die kein Text sind (NICHT_TEXT unten: Kennungen, Bildpfade).
 //   - Die Lernkarten journey.cards, wenn KARTEN_BLEIBEN_DEUTSCH = true.
 //   - Buchtexte (content/buecher) im Faden, wenn FADEN_BUECHER_DEUTSCH = true.
+//   - In R4 die Schlüssel aus NUR_DEUTSCH (hero.faden.*, zehn Journey-Schlüssel der
+//     Buchthemen): außerhalb von de nicht gezeichnet, je Schlüssel mit Fundstelle, die
+//     im Code stehen muss -- fehlt sie, ROT. In R1 (im HTML) zählen sie weiter.
 //
 // Was R1 nicht sieht:
 // R3  Deutscher Text, der fest im Code steht statt in den Sprachdateien: ein
@@ -56,6 +59,9 @@
 //     Deutsch (tests/faden-nur-deutsch-609.mjs).
 //   - KARTEN_BLEIBEN_DEUTSCH = true auf den Sprachdateien des Zweigs: en 47
 //     statt 131 (die 84 Kartentexte fallen weg).
+//   - NUR_DEUTSCH (Max 22.11.2026) mit en views/journey (Sprecher :11411):
+//     en 13, es/fr/pt/uk/pl je 36 (vorher en 47, je 56). Eine Fundstelle
+//     verfälscht (": [hitze];" -> ": [hitze, buch];"): ROT, 10 Ausnahmen ohne Beleg.
 // ===========================================================================
 import fs from 'node:fs';
 import path from 'node:path';
@@ -81,7 +87,40 @@ const nichtMessbar = (warum) => { console.log(`NICHT MESSBAR: ${warum}`); proces
 
 // Schlüssel, deren Wert kein Text ist, den ein Mensch liest: Kennungen und Adressen von Bildern/Seiten.
 const NICHT_TEXT = /\.(id|src|href|moreHref|slug)$/;
+// Schlüssel, die außerhalb von de absichtlich nicht gezeichnet werden (Max 22.11.2026, #609): der Faden (Faden A)
+// und die zehn Journey-Schlüssel der Buchthemen (Gestalter faa38965a, Schritt 4). Je Schlüssel die Fundstelle, die
+// das belegt -- als Textstück, das in der Datei stehen MUSS. Fehlt eines, ist die Ausnahme ohne Beleg: ROT.
+// Eine Ausnahme, deren Grund verschwindet, verschwindet damit nicht still, sondern meldet sich.
+const WU = 'src/components/ui/Wissensuniversum.tsx';
+const NUR_DE_THEMEN = [WU, "return sprache === 'de'"]; // Wissensuniversum.tsx:125-132: außer de nur [hitze]
+const NUR_DE_HITZE = [WU, ': [hitze];'];
+const NUR_DEUTSCH = [
+  // Hero.tsx:29 -- der Faden steht nur bei sprache === 'de' (tests/faden-nur-deutsch-609.mjs)
+  ['hero.faden.', [['src/components/ui/Hero.tsx', "const mitFaden = sprache === 'de' &&"]]],
+  // Wissensuniversum.tsx:148 -- Themenwahl nur bei mehr als einem Thema, außer de gibt es nur die Stadthitze
+  ['journey.topics', [NUR_DE_THEMEN, NUR_DE_HITZE, [WU, '{themen.length > 1 && (']]],
+  // Wissensuniversum.tsx:128-130 -- die drei Buchthemen stehen nur im de-Zweig
+  ['journey.topicEic', [NUR_DE_THEMEN, NUR_DE_HITZE, [WU, "buchThema(dalrymple, String(t('journey.topicEic')))"]]],
+  ['journey.topicBorders', [NUR_DE_THEMEN, NUR_DE_HITZE, [WU, "buchThema(marshall, String(t('journey.topicBorders')))"]]],
+  ['journey.topicLisbon', [NUR_DE_THEMEN, NUR_DE_HITZE, [WU, "buchThema(lissabon, String(t('journey.topicLisbon')))"]]],
+  // Wissensuniversum.tsx:476 -- Quellenzeile nur bei k.quelle; quelle setzt nur buchThema (Z. 88), die Stadthitze nicht
+  ...['journey.source', 'journey.retrieved', 'journey.toSource'].map((k) => [k, [NUR_DE_THEMEN, NUR_DE_HITZE, [WU, '{k.quelle && ('], [WU, 'quelle: k.quelle,']]]),
+  // Wissensuniversum.tsx:451 -- deutsche Übersetzung des Belegs nur bei f.belegDe; belegDe steht nur in den Buchfragen
+  ['journey.ownTranslation', [NUR_DE_THEMEN, NUR_DE_HITZE, [WU, '{f.belegDe && (']]],
+  // Wissensuniversum.tsx:491 -- Buchhinweis nur bei thema.buchUrl; buchUrl setzt nur buchThema (Z. 79)
+  ...['journey.bookNote', 'journey.bookLink'].map((k) => [k, [NUR_DE_THEMEN, NUR_DE_HITZE, [WU, '{thema.buchUrl && ('], [WU, 'buchUrl: `/buch/']]]),
+];
+const ohneBeleg = [];
+for (const [k, belege] of NUR_DEUTSCH) {
+  for (const [datei, muster] of belege) {
+    const quelle = path.join(WURZEL, datei);
+    if (!fs.existsSync(quelle) || !fs.readFileSync(quelle, 'utf8').includes(muster)) ohneBeleg.push(`  ${k}  Beleg fehlt: ${datei} „${muster}“`);
+  }
+}
+const nurDeutsch = (schluessel) => NUR_DEUTSCH.some(([k]) => (k.endsWith('.') ? schluessel.startsWith(k) : schluessel === k));
 const ERLAUBT = (schluessel) => KARTEN_BLEIBEN_DEUTSCH && schluessel.startsWith('journey.cards.');
+// nurDeutsch gilt nur in R4 (nicht vorgerendert). Steht ein solcher Schlüssel doch im HTML einer Sprachseite (R1),
+// wird er dort gezeichnet, und die Ausnahme stimmt nicht mehr: Dann zählt er.
 // R3: Textstücke, die in jeder Sprache gleich dastehen und kein deutscher Text sind. Gemessen 22.11.2026 auf allen
 // 36 Sprachseiten; jede Zeile mit Fundstelle. Wer hier etwas einträgt, schreibt dazu, warum es nicht deutsch ist.
 const GLEICH_IN_ALLEN = new Set([
@@ -186,7 +225,7 @@ const NIRGENDS = '(nicht vorgerendert)';
 for (const sprache of SPRACHEN.filter((s) => s !== RUECKFALL_SPRACHE)) {
   const eigen = flach(lies(sprache));
   for (const [k] of deFlach) {
-    if (!bereiche.has(k.split('.')[0]) || eigen.has(k) || NICHT_TEXT.test(k) || ERLAUBT(k)) continue;
+    if (!bereiche.has(k.split('.')[0]) || eigen.has(k) || NICHT_TEXT.test(k) || ERLAUBT(k) || nurDeutsch(k)) continue;
     if (reste.get(sprache)?.has(k)) continue;
     merke(reste, sprache, k, NIRGENDS);
   }
@@ -209,6 +248,10 @@ for (const sprache of SPRACHEN.filter((s) => s !== RUECKFALL_SPRACHE)) {
 
 const karten = (KARTEN_BLEIBEN_DEUTSCH ? 'journey.cards erlaubt (E-542 A)' : 'journey.cards zählen mit (E-542 offen oder B)')
   + (FADEN_BUECHER_DEUTSCH ? ', Buchtexte im Faden erlaubt' : ', Buchtexte im Faden zählen mit');
+if (ohneBeleg.length) {
+  summe += ohneBeleg.length;
+  zeilen.push(`Ausnahmen nur Deutsch ohne Beleg (${ohneBeleg.length}) -- Fundstelle prüfen oder Ausnahme streichen:`, ...ohneBeleg);
+}
 if (summe) {
   console.log(`ROT: deutsche Texte auf den Sprachseiten (${gerendert} Seiten gerendert, ${karten}; Heiko E-535 "a": erst übersetzen, dann ausliefern)\n${zeilen.join('\n')}`);
   // exitCode statt process.exit(1): exit kappt eine lange Ausgabe in eine Pipe (gemessen: die Liste für pl fehlte).
