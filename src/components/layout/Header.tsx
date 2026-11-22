@@ -1,5 +1,5 @@
 // src/components/landing/Navbar.tsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
@@ -7,6 +7,14 @@ import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 export default function Header() {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // #615: Escape schließt das offene Menü. Die Schaltfläche liegt mit z-50 über der Menüebene (z-40).
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const beiTaste = (e: KeyboardEvent) => { if (e.key === 'Escape') setIsMenuOpen(false); };
+    window.addEventListener('keydown', beiTaste);
+    return () => window.removeEventListener('keydown', beiTaste);
+  }, [isMenuOpen]);
 
   const desktopLinkBase = 'px-3 py-2 text-sm font-medium transition-colors border-b-2';
   const desktopLinkInactive = 'text-main-text hover:text-primary border-transparent';
@@ -51,7 +59,7 @@ export default function Header() {
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-accent hover:bg-primary/10 focus:outline-none"
+              className="relative z-50 inline-flex h-11 w-11 items-center justify-center rounded-md text-primary hover:text-accent hover:bg-primary/10 focus:outline-none"
               aria-expanded={isMenuOpen}
               aria-label="Hauptmenü umschalten"
             >
