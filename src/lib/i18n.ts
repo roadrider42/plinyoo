@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import { RUECKFALL_SPRACHE, SPRACHEN } from './sprachen';
+import { spracheDesPfads } from '../routes/seiten';
 
 i18n
   // Lädt Übersetzungen über http -> ermöglicht das Laden von Dateien aus dem public/locales Ordner
@@ -13,6 +14,11 @@ i18n
   .use(initReactI18next)
   // Konfiguriert i18next
   .init({
+    // #609 Schritt 3: Auf einer Sprachseite (/en/zugang/, auch /zugang/ = de) bestimmt der Pfad die Sprache, nicht
+    // der Browser — sonst sähe ein Besucher mit englischem Browser auf /zugang/ Englisch unter einer deutschen
+    // Adresse, und Suchmaschinen läsen etwas anderes als er. Impressum, Datenschutz und unbekannte Pfade legen keine
+    // Sprache fest (null): dort erkennt i18next sie wie bisher (Reihenfolge unten).
+    lng: spracheDesPfads(window.location.pathname, SPRACHEN) ?? undefined,
     supportedLngs: [...SPRACHEN],
     fallbackLng: RUECKFALL_SPRACHE,
     debug: false, // Immer deaktivieren für saubere Console
@@ -37,6 +43,8 @@ i18n
  */
 export function erkannteSprache(): string | undefined {
   if (i18n.language) return i18n.language;
+  // #609 Schritt 3: Legt der Pfad die Sprache fest (init lng), gilt sie, nicht die Erkennung.
+  if (typeof i18n.options?.lng === 'string') return i18n.options.lng;
   const { languageDetector, languageUtils } = i18n.services ?? {};
   const erkannt = languageDetector?.detect?.();
   if (!erkannt || !languageUtils) return undefined;

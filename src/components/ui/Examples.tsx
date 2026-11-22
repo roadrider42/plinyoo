@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 
 // Die Bücher kommen aus /buecher.json. Die Datei erzeugt scripts/buchseiten.mjs beim Bau aus content/buecher/*.json,
@@ -120,9 +120,9 @@ const Examples = () => {
               <h3 className="text-lg font-semibold text-primary">{t('examples.your-use-case.title')}</h3>
               <p className="text-sm text-text-muted mb-2">{t('examples.your-use-case.subtitle')}</p>
               <p className="text-sm text-text-muted flex-grow">{t('examples.your-use-case.desc')}</p>
-              <Link to="/kontakt/" className="mt-4 w-full block text-center bg-primary text-white font-semibold py-2 rounded-lg hover:bg-primary/90 transition-colors">
+              <SprachLink to="/kontakt/" className="mt-4 w-full block text-center bg-primary text-white font-semibold py-2 rounded-lg hover:bg-primary/90 transition-colors">
                 {t('examples.your-use-case.button')}
-              </Link>
+              </SprachLink>
             </div>
           </div>
         </div>

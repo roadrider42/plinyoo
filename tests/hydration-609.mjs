@@ -38,9 +38,14 @@
 //   neujahr         "/" mit der Uhr des Browsers ein Jahr nach dem Bau: Y1-Y3
 //                   (Fußzeile und Impressum lasen das Jahr beim Zeichnen)
 //   neujahr-impressum  dasselbe auf /impressum/
-//   en-US           "/" mit Browsersprache en-US: Y1, Y2. Danach wechselt die
-//                   Seite wie bisher in die erkannte Sprache (Sprachfassungen
-//                   mit eigenem Pfad erst mit Schritt 3), Y3 gilt hier nicht.
+//   je Sprachseite  (Schritt 3) /en/, /en/zugang/ … alle 36: Y0-Y3
+//   en-US           "/" mit Browsersprache en-US: Y0-Y3. Seit Schritt 3 legt
+//                   der Pfad die Sprache fest, "/" bleibt deutsch.
+//   en datenschutz  /datenschutz/ (nur deutsch), Browser "en": Y1, Y2, danach
+//                   der englische Hinweis privacy.note (Sprache des Browsers).
+//   umschalter      /zugang/?rolle=curator, "English" gewählt -> /en/zugang/?rolle=curator,
+//                   englischer Text, Wortmarke führt nach /en/; und zurück.
+//   alte-sprachangabe  /?lng=en&utm_source=x -> /en/?utm_source=x
 //   alte-adresse    /?buch=…&utm_source=…&utm_medium=…&utm_campaign=…&utm_content=…#/zugang?rolle=curator
 //                   -> landet auf /zugang/ mit allen sechs Angaben, ohne Hash,
 //                   und die Seite merkt alle fünf Kampagnenangaben
@@ -103,17 +108,23 @@ const BASIS = `http://127.0.0.1:${server.address().port}`;
 console.log(`dist: ${DIST}, Server ${BASIS}, playwright ${PW}`);
 
 const ABWEICHUNG = /hydrat|did not match|server rendered HTML|Minified React error #(418|423|425)|error #418|error #423|error #425/i;
-const SEITEN = ['/', '/zugang/', '/mitmachen/', '/investieren/', '/impressum/', '/datenschutz/', '/urheberrecht/', '/kontakt/'];
+const DE_SEITEN = ['/', '/zugang/', '/mitmachen/', '/investieren/', '/impressum/', '/datenschutz/', '/urheberrecht/', '/kontakt/'];
+// #609 Schritt 3: dieselben Seiten in den sechs anderen Sprachen, ohne Impressum und Datenschutz (nur deutsch).
+const ANDERE = ['en', 'es', 'fr', 'pt', 'uk', 'pl'];
+const MIT_FASSUNGEN = ['/', '/zugang/', '/mitmachen/', '/investieren/', '/urheberrecht/', '/kontakt/'];
+const SEITEN = [...DE_SEITEN, ...ANDERE.flatMap((s) => MIT_FASSUNGEN.map((p) => `/${s}${p}`))];
+const enTexte = JSON.parse(readFileSync(join(WURZEL, 'public/locales/en/translation.json'), 'utf8'));
+const deTexte = JSON.parse(readFileSync(join(WURZEL, 'public/locales/de/translation.json'), 'utf8'));
 const textAusHtml = async (page, pfad) => {
   const html = readFileSync(join(DIST, ...pfad.split('/').filter(Boolean), 'index.html'), 'utf8');
   return page.evaluate((h) => new DOMParser().parseFromString(h, 'text/html').getElementById('root')?.textContent ?? null, html);
 };
 
-async function fall(name, { pfad, locale = 'de-DE', reducedMotion = 'no-preference', jahrPlus = 0, text = true, huelle = false, nachher }) {
+async function fall(name, { pfad, locale = 'de-DE', reducedMotion = 'no-preference', jahrPlus = 0, text = true, huelle = false, nachher, breit = false }) {
   const browser = await chromium.launch({ args: ['--single-process'] });
   const rot = [];
   try {
-    const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, locale, reducedMotion });
+    const ctx = await browser.newContext({ viewport: breit ? { width: 1280, height: 900 } : { width: 390, height: 844 }, locale, reducedMotion });
     await ctx.route(/^(?!http:\/\/127\.0\.0\.1:)/, (r) => r.abort());
     // Die Bücherliste (Examples.tsx) lädt /buecher.json erst NACH dem Übernehmen und ändert dann den Text.
     // Das ist gewollt und keine Abweichung; die Datei wird bis nach der Messung zurückgehalten.
@@ -169,7 +180,56 @@ for (const s of SEITEN) ergebnisse.push(await fall(`seite ${s}`, { pfad: s }));
 ergebnisse.push(await fall('ruhe /', { pfad: '/', reducedMotion: 'reduce', text: false }));
 ergebnisse.push(await fall('neujahr /', { pfad: '/', jahrPlus: 1 }));
 ergebnisse.push(await fall('neujahr /impressum/', { pfad: '/impressum/', jahrPlus: 1 }));
-ergebnisse.push(await fall('en-US /', { pfad: '/', locale: 'en-US', text: false }));
+// Seit Schritt 3 legt "/" Deutsch fest: Ein englischer Browser sieht dort die deutsche Seite, unverändert (Y3).
+ergebnisse.push(await fall('en-US /', { pfad: '/', locale: 'en-US' }));
+// Impressum und Datenschutz legen keine Sprache fest: deutsch übernommen (Y1, Y2), danach die Sprache des Browsers.
+// Browsersprache "en", nicht "en-US": Mit navigator.languages = ["en-US"] allein erkennt i18next die Sprache nicht
+// (supportedLngs ohne Regionalform) und bleibt deutsch -- so schon vor #609 Schritt 3 (gemessen 22.11.2026 mit
+// src/lib/i18n.ts von beee666), als Befund gemeldet, nicht Gegenstand dieser Prüfung.
+ergebnisse.push(await fall('en /datenschutz/', {
+  pfad: '/datenschutz/', locale: 'en', text: false,
+  nachher: async (page) => {
+    const note = enTexte.privacy?.note;
+    const ok = await page.waitForFunction((t) => document.getElementById('root')?.textContent.includes(t), note, { timeout: 5000 }).then(() => true, () => false);
+    return ok ? [] : [`nach dem Übernehmen steht der englische Hinweis "${note}" nicht da`];
+  },
+}));
+// Sprachumschalter: auf /zugang/ "English" wählen -> /en/zugang/ mit Angaben, Seite englisch.
+ergebnisse.push(await fall('umschalter /zugang/ -> en', {
+  pfad: '/zugang/?rolle=curator', breit: true,
+  nachher: async (page) => {
+    const r = [];
+    await page.getByRole('button', { name: /^de$/i }).click();
+    await page.getByRole('menuitem', { name: 'English' }).click();
+    await page.waitForURL(/\/en\/zugang\/\?rolle=curator$/, { timeout: 5000 }).catch(() => r.push(`landet auf ${new URL(page.url()).pathname}${new URL(page.url()).search}, erwartet /en/zugang/?rolle=curator`));
+    const en = enTexte.navigation.cta_secondary;
+    const ok = await page.waitForFunction((t) => document.getElementById('root')?.textContent.includes(t), en, { timeout: 5000 }).then(() => true, () => false);
+    if (!ok) r.push(`die Seite zeigt "${en}" (navigation.cta_secondary, en) nicht`);
+    const link = await page.locator('header a').first().getAttribute('href');
+    if (link !== '/en/') r.push(`Link der Wortmarke ${link}, erwartet /en/`);
+    return r;
+  },
+}));
+// Zurück: auf /en/zugang/ "Deutsch" wählen -> /zugang/.
+ergebnisse.push(await fall('umschalter /en/zugang/ -> de', {
+  pfad: '/en/zugang/', breit: true,
+  nachher: async (page) => {
+    const r = [];
+    await page.getByRole('button', { name: /^en$/i }).click();
+    await page.getByRole('menuitem', { name: 'Deutsch' }).click();
+    await page.waitForURL(/\/zugang\/$/, { timeout: 5000 }).catch(() => {});
+    if (new URL(page.url()).pathname !== '/zugang/') r.push(`landet auf ${new URL(page.url()).pathname}, erwartet /zugang/`);
+    const de = deTexte.navigation.cta_secondary;
+    const ok = await page.waitForFunction((t) => document.getElementById('root')?.textContent.includes(t), de, { timeout: 5000 }).then(() => true, () => false);
+    if (!ok) r.push(`die Seite zeigt "${de}" nicht`);
+    return r;
+  },
+}));
+// Alte Sprachangabe: /?lng=en (so schrieben die Trainer-Seiten) -> /en/
+ergebnisse.push(await fall('alte-sprachangabe', {
+  pfad: '/?lng=en&utm_source=x',
+  nachher: async (page) => { const u = new URL(page.url()); return u.pathname === '/en/' && !u.searchParams.has('lng') && u.searchParams.get('utm_source') === 'x' ? [] : [`landet auf ${u.pathname}${u.search}, erwartet /en/?utm_source=x`]; },
+}));
 ergebnisse.push(await fall('alte-adresse', {
   pfad: `/?${new URLSearchParams(KAMPAGNE)}#/zugang?rolle=curator`,
   nachher: async (page) => {

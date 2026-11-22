@@ -1,7 +1,8 @@
 {
   "navigation": {
     "cta_primary": "Mitmachen",
-    "cta_secondary": "Investieren"
+    "cta_secondary": "Investieren",
+    "menu_toggle": "Hauptmenü umschalten"
   },
   "hero": {
     "eyebrow": "Lernplattform — Coach und Begleiter in einem",

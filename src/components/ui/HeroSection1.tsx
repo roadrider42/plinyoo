@@ -5,7 +5,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { ArrowRight } from 'lucide-react';
 
 export default function HeroSection1() {
@@ -15,9 +15,9 @@ export default function HeroSection1() {
     <div className="bg-main-background text-main-text">
       {/* Header — wie app.plinyoo.com */}
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link to="/" aria-label={String(t('hero1.title'))} className="text-xl font-bold font-sans text-primary">
+        <SprachLink to="/" aria-label={String(t('hero1.title'))} className="text-xl font-bold font-sans text-primary">
           plinyoo
-        </Link>
+        </SprachLink>
         <div className="flex items-center gap-2.5">
           <LanguageSwitcher />
           <a
@@ -46,13 +46,13 @@ export default function HeroSection1() {
           <p className="mb-12 text-base md:text-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
             {t('hero1.description')}
           </p>
-          <Link
+          <SprachLink
             to="/zugang/"
             className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >
             {t('hero1.cta')}
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </SprachLink>
         </div>
       </section>
     </div>

@@ -39,7 +39,7 @@
 //                 Browser erkennt too_big, zeigt "Ein Feld enthaelt zu viel
 //                 Text", ruft die Randfunktion nicht
 //   zu_lang_text  /kontakt, Nachricht mit 5001 Zeichen: dasselbe
-//   en-*, uk-*    /kontakt in en und uk: 429, 400, zu_lang je im Wortlaut der
+//   en-*, uk-*    /en/kontakt/ und /uk/kontakt/ (seit #609 Schritt 3 die Sprache im Pfad): 429, 400, zu_lang je im Wortlaut der
 //                 Sprache, kein deutscher Satz
 //   uk-rueckfall  uk-Datei ohne die drei Saetze: der en-Satz, nie der Schluessel
 //   *-500, *-netz der allgemeine Satz (Sprecher 70834fc61) in du, in en und uk
@@ -221,7 +221,9 @@ async function fall(seite, ausgang) {
       if (ausgang.antwort === 'abbruch') return route.abort('internetdisconnected');
       return route.fulfill({ status: ausgang.antwort.status, contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(ausgang.antwort.body) });
     });
-    await page.goto(BASIS + seite.pfad, { waitUntil: 'networkidle' });
+    // #609 Schritt 3: Die Sprache steht im Pfad (/en/kontakt/); /kontakt/ ist deutsch, gleich welcher Browser.
+    const pfad = sprache !== 'de' && seite.pfad.startsWith('/') && !seite.pfad.startsWith('/#') ? `/${sprache}${seite.pfad}` : seite.pfad;
+    await page.goto(BASIS + pfad, { waitUntil: 'networkidle' });
     const absenden = page.locator('form button[type=submit]');
     await absenden.waitFor({ timeout: 15000 });
     await seite.fuellen(page, ausgang.email ?? 'wer@example.org', ausgang);
@@ -250,7 +252,8 @@ async function fall(seite, ausgang) {
     const b = [[aufrufe === sollAufrufe, `${aufrufe} Aufruf(e) der Randfunktion, erwartet ${sollAufrufe}`]];
     // #609: Das Formular steht auf der echten Adresse -- auch nach der alten /#/zugang.
     const adresse = new URL(page.url()).pathname;
-    b.push([adresse === `/${seite.id}/`, `Formular auf ${adresse}, erwartet /${seite.id}/`]);
+    const sollAdresse = sprache !== 'de' ? `/${sprache}/${seite.id}/` : `/${seite.id}/`;
+    b.push([adresse === sollAdresse, `Formular auf ${adresse}, erwartet ${sollAdresse}`]);
     if (ausgang.satz) {
       b.push([text.includes(ausgang.satz), `fester Satz fehlt (sichtbar: ${text.replace(/\s+/g, ' ').slice(-240)})`]);
       b.push([erfolg === 0, 'zeigt die Erfolgsansicht']);

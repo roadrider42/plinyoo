@@ -10,7 +10,7 @@
 //   sonst bleibt der Hero einspaltig wie bisher, ohne deutsche Beschriftungen in einer fremden Sprache.
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import HeroFaden from './HeroFaden';
@@ -28,9 +28,9 @@ export default function Hero() {
     <div className="bg-main-background text-main-text">
       {/* Header — wie app.plinyoo.com; Logo-Verweis mindestens 44 px hoch (B11) */}
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link to="/" aria-label={String(t('hero.title'))} className="flex h-11 items-center text-xl font-bold font-sans text-primary">
+        <SprachLink to="/" aria-label={String(t('hero.title'))} className="flex h-11 items-center text-xl font-bold font-sans text-primary">
           plinyoo
-        </Link>
+        </SprachLink>
         <div className="flex items-center gap-2.5">
           <LanguageSwitcher />
           <a
@@ -78,13 +78,13 @@ export default function Hero() {
 
           {/* B1/B2: Mit Telefon steht diese Schaltfläche nur ab 1024 px (lg) hier in der Textspalte, darunter die zweite nach dem Telefon */}
           <div className={`mt-1 flex flex-col gap-2 ${mitFaden ? 'hidden lg:flex' : ''}`}>
-            <Link
+            <SprachLink
               to="/zugang/"
               data-ziel="hero-zugang"
               className={`${zugangKlassen} sm:self-start ${mitFaden ? '' : 'lg:self-center'}`}
             >
               {t('hero.cta')}
-            </Link>
+            </SprachLink>
             <ZugangHinweis />
           </div>
         </section>
@@ -94,9 +94,9 @@ export default function Hero() {
         {/* B1–B3: Unter 1024 px steht die Zugangsschaltfläche nach dem Telefon, unter 640 px spaltenbreit, darüber mittig */}
         {mitFaden && (
           <div className="flex flex-col gap-2 sm:items-center lg:hidden">
-            <Link to="/zugang/" data-ziel="hero-zugang" className={zugangKlassen}>
+            <SprachLink to="/zugang/" data-ziel="hero-zugang" className={zugangKlassen}>
               {t('hero.cta')}
-            </Link>
+            </SprachLink>
             <ZugangHinweis className="text-center" />
           </div>
         )}

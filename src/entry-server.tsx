@@ -16,12 +16,21 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { routen, AUFFANG_ID } from './routes/routen';
 import { RUECKFALL_SPRACHE, SPRACHEN } from './lib/sprachen';
 
-export { SEITEN, VORGERENDERT_SPRACHE } from './routes/seiten';
+export { SEITEN, fassungen } from './routes/seiten';
+export { SPRACHEN, RUECKFALL_SPRACHE, OG_LOCALE } from './lib/sprachen';
 
-/** Rendert den Inhalt von #root für einen Pfad. Wirft, wenn der Pfad keine eigene Seite hat. */
-export async function rendern(pfad: string, sprache: string, texte: Record<string, unknown>): Promise<string> {
+type Texte = Record<string, unknown>;
+
+/**
+ * Rendert den Inhalt von #root für einen Pfad in einer Sprache. Wirft, wenn der Pfad keine eigene Seite hat.
+ * `rueckfall` sind die Texte der Rückfallsprache (de): Fehlt der Sprache ein Text, setzt i18next ihn ein, genau wie
+ * im Browser (i18next-http-backend lädt die Rückfallsprache mit). Ohne sie wiche das HTML beim Übernehmen ab.
+ * #609 Schritt 3, Heiko E-535 "a": Dass der Rückfall greift, macht tests/keine-deutschen-reste-609.mjs im Bau rot.
+ */
+export async function rendern(pfad: string, sprache: string, texte: Texte, rueckfall: Texte): Promise<string> {
   const i18n = createInstance();
-  const resources: Resource = { [sprache]: { translation: texte as Resource[string]['translation'] } };
+  const als = (t: Texte) => ({ translation: t as Resource[string]['translation'] });
+  const resources: Resource = { [RUECKFALL_SPRACHE]: als(rueckfall), [sprache]: als(texte) };
   await i18n.use(initReactI18next).init({
     lng: sprache,
     fallbackLng: RUECKFALL_SPRACHE,

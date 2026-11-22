@@ -1,6 +1,6 @@
 // src/components/landing/Navbar.tsx
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { SprachLink, SprachNavLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
@@ -21,27 +21,27 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-xl font-bold font-sans text-primary">plinyoo</Link>
+            <SprachLink to="/" className="text-xl font-bold font-sans text-primary">plinyoo</SprachLink>
           </div>
 
           <div className="hidden md:flex flex-grow items-center justify-end gap-8">
             <nav className="flex items-center gap-6">
-              <NavLink
+              <SprachNavLink
                 to="/mitmachen/"
                 className={({ isActive }) =>
                   `${desktopLinkBase} ${isActive ? desktopLinkActive : desktopLinkInactive}`
                 }
               >
                 {t('navigation.cta_primary')}
-              </NavLink>
-              <NavLink
+              </SprachNavLink>
+              <SprachNavLink
                 to="/investieren/"
                 className={({ isActive }) =>
                   `${desktopLinkBase} ${isActive ? desktopLinkActive : desktopLinkInactive}`
                 }
               >
                 {t('navigation.cta_secondary')}
-              </NavLink>
+              </SprachNavLink>
             </nav>
             <LanguageSwitcher />
             {/* Anmelde-Buttons entfernt */}
@@ -53,7 +53,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-accent hover:bg-primary/10 focus:outline-none"
               aria-expanded={isMenuOpen}
-              aria-label="Hauptmenü umschalten"
+              aria-label={t('navigation.menu_toggle')}
             >
               {!isMenuOpen ? (
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -73,7 +73,7 @@ export default function Header() {
       {isMenuOpen && (
         <div className="fixed inset-0 z-40 bg-white md:hidden">
           <div className="flex flex-col items-center justify-center h-full space-y-6">
-            <NavLink
+            <SprachNavLink
               to="/mitmachen/"
               className={({ isActive }) =>
                 `${mobileLinkBase} ${isActive ? mobileLinkActive : mobileLinkInactive}`
@@ -81,8 +81,8 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navigation.cta_primary')}
-            </NavLink>
-            <NavLink
+            </SprachNavLink>
+            <SprachNavLink
               to="/investieren/"
               className={({ isActive }) =>
                 `${mobileLinkBase} ${isActive ? mobileLinkActive : mobileLinkInactive}`
@@ -90,7 +90,7 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               {t('navigation.cta_secondary')}
-            </NavLink>
+            </SprachNavLink>
             <div className="mt-8">
               <LanguageSwitcher />
             </div>
