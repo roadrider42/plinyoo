@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "cta_primary": "Dołącz",
+    "cta_primary": "Zaangażuj się",
     "cta_secondary": "Inwestuj",
     "menu_toggle": "Pokaż lub ukryj menu główne"
   },
@@ -227,7 +227,7 @@
       "message_label": "Wiadomość"
     },
     "join": {
-      "title": "Dołącz do nas",
+      "title": "Zaangażuj się",
       "subtitle": "100% produktu. 100% praktyki. W Plinyoo tworzymy procesy nauki, które naprawdę wspierają zespoły i sprawiają, że obsługa staje się mierzalnie lepsza.",
       "subtitle_details": "Czy to Frontend, Backend, Mobile, Product, czy Learning Design: liczy się myślenie produktowe, odpowiedzialność i chęć do działania.",
       "role_label": "Rola / umiejętności",
@@ -293,7 +293,7 @@
       "imprint": "Impressum",
       "privacy": "Polityka prywatności",
       "copyright": "Prawa autorskie",
-      "join": "Dołącz do nas",
+      "join": "Zaangażuj się",
       "invest": "Inwestuj",
       "contact": "Kontakt"
     },

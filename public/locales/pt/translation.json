@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "cta_primary": "Juntar-se",
+    "cta_primary": "Participar",
     "cta_secondary": "Investir",
     "menu_toggle": "Mostrar ou ocultar o menu principal"
   },
@@ -206,7 +206,7 @@
       "message_label": "Mensagem"
     },
     "join": {
-      "title": "Juntar-se",
+      "title": "Participar",
       "subtitle": "100% produto. 100% prática. No Plinyoo, desenvolvemos fluxos de aprendizado que realmente apoiam as equipes e tornam o serviço mensuravelmente melhor.",
       "subtitle_details": "Seja Frontend, Backend, Mobile, Produto ou Design de Aprendizagem: o que importa é o pensamento de produto, a responsabilidade e o desejo de realizar as coisas.",
       "role_label": "Função/Habilidade",
@@ -293,7 +293,7 @@
       "imprint": "Aviso Legal",
       "privacy": "Privacidade",
       "copyright": "Direitos Autorais",
-      "join": "Juntar-se",
+      "join": "Participar",
       "invest": "Investir",
       "contact": "Contato"
     },

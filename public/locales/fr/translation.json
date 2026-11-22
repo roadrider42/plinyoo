@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "cta_primary": "Rejoindre",
+    "cta_primary": "Participer",
     "cta_secondary": "Investir",
     "menu_toggle": "Afficher ou masquer le menu principal"
   },
@@ -206,7 +206,7 @@
       "message_label": "Message"
     },
     "join": {
-      "title": "Rejoindre",
+      "title": "Participer",
       "subtitle": "100% produit. 100% pratique. Chez Plinyoo, nous développons des flux d'apprentissage qui soutiennent réellement les équipes et rendent le service mesurablement meilleur.",
       "subtitle_details": "Que ce soit Frontend, Backend, Mobile, Produit ou Conception d'apprentissage : ce qui compte, c'est la pensée produit, la responsabilité et le désir de faire avancer les choses.",
       "role_label": "Rôle/Compétence",
@@ -293,7 +293,7 @@
       "imprint": "Mentions légales",
       "privacy": "Confidentialité",
       "copyright": "Droit d'auteur",
-      "join": "Rejoindre",
+      "join": "Participer",
       "invest": "Investir",
       "contact": "Contact"
     },
