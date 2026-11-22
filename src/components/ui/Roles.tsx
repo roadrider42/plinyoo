@@ -43,6 +43,10 @@ export default function Roles() {
             >
               {t('roles.cta')} &rarr;
             </SprachLink>
+            {/* #609 V2 (Gestalter 22.11.2026): Am Telefon liegen die Karten gestapelt, der eine Hinweis unter dem Raster
+                ist dort bis zu 750 px weit weg. Darum unter 768 px je Karte direkt unter der Schaltfläche (-mt-1: 8 px statt gap-3),
+                ab 768 px bleibt es bei dem einen Satz unter dem Raster. */}
+            <ZugangHinweis className="-mt-1 md:hidden" />
             {/* Zweiter Link auf die statische Trainer-Seite in der passenden Sprache (kein Router-Link: liegt außerhalb der App) */}
             {key === 'wegbereiter' && (
               <a
@@ -55,8 +59,9 @@ export default function Roles() {
           </div>
         ))}
       </div>
-      {/* #503: Bedingung des Sprechers für „Ich will dabei sein“, einmal unter den drei Türen statt dreimal */}
-      <ZugangHinweis className="mt-4" />
+      {/* #503: Bedingung des Sprechers für „Ich will dabei sein“, einmal unter den drei Türen statt dreimal —
+          ab 768 px; darunter steht er je Karte (#609 V2) */}
+      <ZugangHinweis className="mt-4 hidden md:block" />
     </section>
   );
 }
