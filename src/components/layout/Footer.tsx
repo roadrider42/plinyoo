@@ -14,7 +14,7 @@
  * - Komplexe Interaktionen (reine Präsentationskomponente)
  */
 
-import { Link } from "react-router-dom";
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 import SocialLinks from '@/components/ui/SocialLinks';
 import { BAUJAHR } from '@/lib/baujahr';
@@ -34,12 +34,12 @@ export default function Footer() {
           </div>
           {/* Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-4 text-sm w-full md:w-auto">
-            <Link to="/impressum/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.imprint')}</Link>
-            <Link to="/datenschutz/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.privacy')}</Link>
-            <Link to="/urheberrecht/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.copyright')}</Link>
-            <Link to="/mitmachen/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.join')}</Link>
-            <Link to="/investieren/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.invest')}</Link>
-            <Link to="/kontakt/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.contact')}</Link>
+            <SprachLink to="/impressum/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.imprint')}</SprachLink>
+            <SprachLink to="/datenschutz/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.privacy')}</SprachLink>
+            <SprachLink to="/urheberrecht/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.copyright')}</SprachLink>
+            <SprachLink to="/mitmachen/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.join')}</SprachLink>
+            <SprachLink to="/investieren/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.invest')}</SprachLink>
+            <SprachLink to="/kontakt/" className="text-white/70 hover:text-white transition-colors">{t('footer.links.contact')}</SprachLink>
           </div>
         </div>
         {/* Copyright */}

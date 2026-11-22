@@ -1,9 +1,11 @@
 {
   "navigation": {
-    "cta_primary": "Dołącz",
-    "cta_secondary": "Inwestuj"
+    "cta_primary": "Zaangażuj się",
+    "cta_secondary": "Inwestuj",
+    "menu_toggle": "Pokaż lub ukryj menu główne"
   },
   "hero": {
+    "login": "Zaloguj się",
     "eyebrow": "Platforma do nauki — coach i towarzysz w jednym",
     "title": "Twoja ścieżka nauki jest wyjątkowa.",
     "subtitle": "Wiesz, gdzie dziś jesteś i dokąd chcesz dojść. Drogę pomiędzy znajdziesz na kartach, które odsyłają do siebie nawzajem — nie w planie kursu.",
@@ -150,7 +152,8 @@
   "cta": {
     "title": "Zacznij od jednej karty.",
     "subtitle": "Nie potrzebujesz planu kursu. Potrzebujesz pierwszej karty i odnośnika, który prowadzi do następnej.",
-    "button": "Poproś o dostęp"
+    "button": "Poproś o dostęp",
+    "hinweis": "Odezwiemy się do Ciebie osobiście."
   },
   "storySketch": {
     "title": "Tak wiedza staje się jakością obsługi",
@@ -193,6 +196,10 @@
       "button": "Skontaktuj się z nami"
     },
     "books_intro": "Przedstawiamy tu książki. Do czterech z nich karty są już w aplikacji, każda książka jako osobny temat: „Die Eroberer” (Roger Crowley), „Der Almanach von Naval Ravikant” (Eric Jorgenson), „Gewaltfreie Kommunikation” (Marshall B. Rosenberg) i „Die Macht der Geografie” (Tim Marshall).",
+    "new_badge": "Nowość",
+    "book_subtitle": "Prezentacja książki",
+    "book_button": "Przejdź do strony książki (po niemiecku)",
+    "more_books": "Odkryj więcej książek (po niemiecku)",
     "books_title": "Książki do przejścia"
   },
   "forms": {
@@ -221,7 +228,7 @@
       "message_label": "Wiadomość"
     },
     "join": {
-      "title": "Dołącz do nas",
+      "title": "Zaangażuj się",
       "subtitle": "100% produktu. 100% praktyki. W Plinyoo tworzymy procesy nauki, które naprawdę wspierają zespoły i sprawiają, że obsługa staje się mierzalnie lepsza.",
       "subtitle_details": "Czy to Frontend, Backend, Mobile, Product, czy Learning Design: liczy się myślenie produktowe, odpowiedzialność i chęć do działania.",
       "role_label": "Rola / umiejętności",
@@ -262,6 +269,12 @@
       "subtitle_details": "Odezwiemy się do Ciebie.",
       "role_label": "Przychodzę jako",
       "role_placeholder": "Wybierz",
+      "role_options": {
+        "learner": "Uczący się",
+        "curator": "Kurator — chcę dzielić się wiedzą",
+        "wegbereiter": "Wegbereiter (wytyczający drogę) — prowadzę zespół",
+        "other": "Coś innego"
+      },
       "message_label": "Co chcesz osiągnąć z plinyoo?",
       "message_placeholder": "Na przykład: chcę zrozumieć, dlaczego moje miasto tak się nagrzewa latem.",
       "button": "Poproś o dostęp",
@@ -281,7 +294,7 @@
       "imprint": "Impressum",
       "privacy": "Polityka prywatności",
       "copyright": "Prawa autorskie",
-      "join": "Dołącz do nas",
+      "join": "Zaangażuj się",
       "invest": "Inwestuj",
       "contact": "Kontakt"
     },
@@ -308,6 +321,32 @@
       "text": "Zapytania dotyczące praw do wykorzystania prosimy kierować na heiko@plinyoo.com."
     },
     "back_to_home": "Powrót na stronę główną"
+  },
+  "seo": {
+    "start": {
+      "title": "plinyoo: platforma do nauki — wiedza i zespoły",
+      "description": "Twoja ścieżka nauki jest wyjątkowa. Znajdź swoją drogę na kartach, które odsyłają do siebie nawzajem — nie w planie kursu."
+    },
+    "zugang": {
+      "title": "Dostęp | plinyoo",
+      "description": "Powiedz nam krótko, kim jesteś i czego chcesz się nauczyć lub czym chcesz się podzielić."
+    },
+    "mitmachen": {
+      "title": "Zaangażuj się | plinyoo",
+      "description": "Zaangażuj się w plinyoo: powiedz nam, czy chcesz działać w obszarze Frontend, Backend, Mobile, Product czy Learning Design."
+    },
+    "investieren": {
+      "title": "Inwestuj | plinyoo",
+      "description": "plinyoo to platforma do nauki dla wiedzy, zespołów i własnych ścieżek."
+    },
+    "urheberrecht": {
+      "title": "Prawa autorskie i źródła grafik | plinyoo",
+      "description": "Treści tej strony należą, o ile nie zaznaczono inaczej, do Plinyoo UG (haftungsbeschränkt) i są chronione prawem autorskim."
+    },
+    "kontakt": {
+      "title": "Kontakt | plinyoo",
+      "description": "Opisz nam swój pomysł lub wyzwanie."
+    }
   },
   "hero1": {
     "eyebrow": "Wiedza, która trwa.",
@@ -356,10 +395,56 @@
     "right": "Poprawnie:",
     "wrong": "Nie do końca.",
     "retry": "Spróbuj jeszcze raz",
-    "note": "Karty są po niemiecku."
+    "note": "Karty są po niemiecku.",
+    "topics": "Wybierz temat",
+    "topicEic": "East India Company",
+    "topicBorders": "Granice",
+    "topicLisbon": "Lizbona 1941",
+    "source": "Źródło:",
+    "retrieved": "dostęp:",
+    "toSource": "Do źródła",
+    "bookNote": "Te karty towarzyszą książce „{{titel}}” (autor: {{autor}})."
   },
   "views": {
     "title": "Spojrzenie do środka",
-    "subtitle": "Trzy widoki z rozwoju plinyoo. Teksty w widokach są po niemiecku."
+    "subtitle": "Trzy widoki z rozwoju plinyoo. Teksty w widokach są po niemiecku.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Koncepcja",
+        "title": "Twój cel, twoja droga, twój wszechświat wiedzy",
+        "text": "Spojrzenie na pole nauki takie, jak je sobie wyobrażamy: strona startowa z twoim celem, droga do niego i rzut oka wstecz na twoje gwiazdy.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Pole nauki: twój wszechświat i pytanie „Co chcesz umieć?” (zrzut ekranu po niemiecku)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Pole nauki: „To jest twoja droga” z przystankami na drodze do celu (zrzut ekranu po niemiecku)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Pole nauki: „To było dzisiaj” ze zdobytymi gwiazdami (zrzut ekranu po niemiecku)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Koncepcja",
+        "title": "Sieć wiedzy",
+        "text": "Jedenaście kart o miejskim upale, z prawdziwymi powiązaniami, otoczonych innymi tematami. Przeciągnij, by zmienić układ, przewiń, by powiększyć.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "Sieć wiedzy — widok interaktywny"
+      },
+      {
+        "id": "autor",
+        "tag": "Koncepcja",
+        "title": "Zobacz drogi i luki",
+        "text": "Dla wszystkich, którzy przekazują wiedzę: wybierasz słowa kluczowe i widzisz, jak łączą się karty i gdzie wciąż brakuje mostu.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Drogi i luki — widok interaktywny"
+      }
+    ]
   }
 }

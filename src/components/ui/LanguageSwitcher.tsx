@@ -2,6 +2,9 @@ import React, { Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, Transition } from '@headlessui/react';
 import { Globe, ChevronDown, Check } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { spracheDesPfads, sprachPfad, zerlege } from '@/routes/seiten';
+import { SPRACHEN } from '@/lib/sprachen';
 
 const LANGUAGE_LABELS: Record<string, string> = {
   de: 'Deutsch',
@@ -15,8 +18,17 @@ const LANGUAGE_LABELS: Record<string, string> = {
 
 const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  // #609 Schritt 3: Jede Sprache hat ihre Adresse (/en/zugang/). Der Umschalter führt auf dieselbe Seite in der
+  // anderen Sprache, mit allen Angaben; routen.tsx stellt i18next dann auf die Sprache des Pfads. Impressum und
+  // Datenschutz gibt es nur deutsch: dort bleibt die Adresse, und nur die Sprache wechselt (wie bisher).
+  // i18next merkt die Wahl im Cookie (src/lib/i18n.ts, caches).
   const changeLanguage = (lng: string) => {
+    const { rest } = zerlege(location.pathname, SPRACHEN);
+    const ziel = sprachPfad(lng, rest) + location.search + location.hash;
+    if (spracheDesPfads(location.pathname, SPRACHEN) && ziel !== location.pathname + location.search + location.hash) navigate(ziel);
     i18n.changeLanguage(lng);
   };
 

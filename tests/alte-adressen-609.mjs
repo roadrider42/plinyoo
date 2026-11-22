@@ -16,8 +16,13 @@
 //     dem '#' und gemischt. Je Fall: Ziel-Pfad genau, und jede Angabe der
 //     alten Adresse steht mit ihrem Wert in der neuen (hinter dem '#' gewinnt,
 //     wie bisher in src/lib/kampagne.ts). Nichts kommt dazu.
-// U2  Was keine alte Adresse ist, bleibt: kein '#', eine Sprungmarke (#weiter),
-//     ?lng=en ohne '#' -- neueAdresse gibt null.
+// U2  Was keine alte Adresse ist, bleibt: kein '#', eine Sprungmarke (#weiter)
+//     -- neueAdresse gibt null.
+// U4  (#609 Schritt 3, Sprachfassungen mit eigenem Pfad) "?lng=xx" auf einer
+//     deutschen Adresse führt auf die Sprachfassung (/?lng=en -> /en/), ohne
+//     lng, alle anderen Angaben bleiben. Impressum und Datenschutz (nur
+//     deutsch), ein schon gesetzter Sprachpfad, eine unbekannte Sprache und
+//     Pfade außerhalb der App bleiben. In U1 verbraucht ein Sprachpfad lng.
 // U3  index.html trägt den Platzhalter <!--ALTE-ADRESSEN--> genau einmal, im
 //     <head> und VOR dem Plausible-Skript (sonst zählt Plausible die alte
 //     Adresse "/"), und plausible.init() ohne hashBasedRouting.
@@ -29,6 +34,9 @@
 // (U1 nicht ladbar, U3 kein Platzhalter, hashBasedRouting), Exit 1; mit dem
 // Fix GRUEN. Mutation "Angaben hinter dem # nicht übernehmen": ROT U1 in 8
 // Fällen (rolle, utm_* hinter dem #), Exit 1.
+// Gegenprobe Schritt 3, 22.11.2026: mit src/lib/alte-adressen.ts, seiten.ts
+// und index.html von beee666 (ADRESSEN_WURZEL) ROT, 3 Fälle U1 (lng bleibt,
+// kein Sprachpfad) und 5 Fälle U4, Exit 1. Mit Schritt 3 GRUEN.
 // Exit 0 grün, 1 rot.
 // ===========================================================================
 import fs from 'node:fs';
@@ -59,7 +67,7 @@ const FAELLE = [
   ['Plan: /#/zugang', '', '#/zugang', '/zugang/'],
   ['Plan: Angaben vor und hinter #', '?buch=x&utm_source=a', '#/zugang?rolle=curator', '/zugang/'],
   ['Plan: ?lng=en#/impressum (lng bleibt bis Schritt 3)', '?lng=en', '#/impressum', '/impressum/'],
-  ['Plan: ?lng=en#/zugang', '?lng=en', '#/zugang', '/zugang/'],
+  ['Plan: ?lng=en#/zugang (Schritt 3: Sprachpfad)', '?lng=en', '#/zugang', '/en/zugang/'],
   ['Plan: /#/unbekannt', '', '#/unbekannt', '/'],
   ['/#/ allein', '', '#/', '/'],
   ['Schrägstrich hinter dem #', '', '#/zugang/', '/zugang/'],
@@ -74,16 +82,30 @@ const FAELLE = [
   ['buchseiten: Skript mit utm', '?buch=lissabon-1941&utm_source=s&utm_medium=m&utm_campaign=c', '#/zugang?rolle=team', '/zugang/'],
   ['buchseiten: Fußzeile', '', '#/datenschutz', '/datenschutz/'],
   // Formen, die scripts/seiten.mjs (Trainer-Seiten) bis #609 schrieb
-  ['seiten: zugangHref', '?lng=en&utm_source=website&utm_medium=seite&utm_campaign=trainer&utm_content=abschluss', '#/zugang?rolle=curator', '/zugang/'],
-  ['seiten: Fußzeile', '?lng=uk', '#/urheberrecht', '/urheberrecht/'],
+  ['seiten: zugangHref', '?lng=en&utm_source=website&utm_medium=seite&utm_campaign=trainer&utm_content=abschluss', '#/zugang?rolle=curator', '/en/zugang/'],
+  ['seiten: Fußzeile', '?lng=uk', '#/urheberrecht', '/uk/urheberrecht/'],
+  ['seiten: Fußzeile Datenschutz (nur deutsch, lng bleibt)', '?lng=uk', '#/datenschutz', '/datenschutz/'],
   // jede der sieben Seiten
   ...['zugang', 'mitmachen', 'investieren', 'impressum', 'datenschutz', 'urheberrecht', 'kontakt'].map((s) => [`Seite ${s}`, '', `#/${s}`, `/${s}/`]),
 ];
 const KEIN_UMLEITEN = [
   ['kein #', '', ''],
   ['Sprungmarke', '?buch=x', '#weiter'],
-  ['?lng=en ohne #', '?lng=en', ''],
   ['# allein', '', '#'],
+];
+// U4 (#609 Schritt 3): "?lng=" auf einer deutschen Adresse. [name, search, hash, pathname, erwartet (null = bleibt)]
+const SPRACHANGABE = [
+  ['/?lng=en', '?lng=en', '', '/', '/en/'],
+  ['/zugang/?lng=fr mit utm', '?lng=fr&utm_source=x', '', '/zugang/', '/fr/zugang/?utm_source=x'],
+  ['/zugang ohne Schrägstrich', '?lng=pl', '', '/zugang', '/pl/zugang/'],
+  ['/?lng=de fällt weg', '?lng=de', '', '/', '/'],
+  ['Sprungmarke bleibt', '?lng=en', '#weiter', '/', '/en/#weiter'],
+  ['Impressum nur deutsch', '?lng=en', '', '/impressum/', null],
+  ['Datenschutz nur deutsch', '?lng=uk', '', '/datenschutz/', null],
+  ['schon Sprachpfad', '?lng=fr', '', '/en/zugang/', null],
+  ['unbekannte Sprache', '?lng=xx', '', '/', null],
+  ['keine Seite der App', '?lng=en', '', '/buch/lissabon-1941/', null],
+  ['ohne lng', '?utm_source=x', '', '/zugang/', null],
 ];
 
 const angabenAus = (s) => [...new URLSearchParams(s)];
@@ -100,6 +122,8 @@ if (neueAdresse) {
     const hashQ = hash.includes('?') ? hash.slice(hash.indexOf('?') + 1) : '';
     const soll = new Map(angabenAus(search));
     for (const [k, v] of angabenAus(hashQ)) soll.set(k, v);
+    // Schritt 3: führt lng auf einen Sprachpfad, ist es dort verbraucht
+    if (/^\/[a-z]{2}\//.test(zielPfad)) soll.delete('lng');
     const ist = new Map(angabenAus(u.search));
     for (const [k, v] of soll) if (ist.get(k) !== v) fehler.push(`Angabe ${k}=${JSON.stringify(v)} ${ist.has(k) ? `steht als ${JSON.stringify(ist.get(k))}` : 'fehlt'}`);
     for (const k of ist.keys()) if (!soll.has(k)) fehler.push(`Angabe ${k} kommt dazu`);
@@ -109,6 +133,11 @@ if (neueAdresse) {
   for (const [name, search, hash] of KEIN_UMLEITEN) {
     const aus = neueAdresse(search, hash);
     if (aus !== null) rot.push(`U2 ${name}: neueAdresse(${JSON.stringify(search)}, ${JSON.stringify(hash)}) = ${JSON.stringify(aus)}, erwartet null`);
+  }
+  for (const [name, search, hash, pathname, soll] of SPRACHANGABE) {
+    const aus = neueAdresse(search, hash, pathname);
+    if (aus !== soll) rot.push(`U4 ${name}: neueAdresse(${JSON.stringify(search)}, ${JSON.stringify(hash)}, ${JSON.stringify(pathname)}) = ${JSON.stringify(aus)}, erwartet ${JSON.stringify(soll)}`);
+    else zeilen.push(`grün  ${pathname}${search}${hash} -> ${aus ?? '(bleibt)'}`);
   }
 }
 
@@ -128,4 +157,4 @@ if (rot.length) {
   process.exit(1);
 }
 console.log(zeilen.join('\n'));
-console.log(`GRUEN U1-U3: ${FAELLE.length} alte Adressen ohne Verlust umgeleitet, ${KEIN_UMLEITEN.length} bleiben, Umleitung vor Plausible`);
+console.log(`GRUEN U1-U4: ${FAELLE.length} alte Adressen ohne Verlust umgeleitet, ${KEIN_UMLEITEN.length} bleiben, ${SPRACHANGABE.length} Sprachangaben, Umleitung vor Plausible`);

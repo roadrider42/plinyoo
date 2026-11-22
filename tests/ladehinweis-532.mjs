@@ -88,7 +88,9 @@ const cssFehler = [];
 const vc = new VirtualConsole();
 vc.on('jsdomError', (e) => cssFehler.push(String(e.message || e)));
 vc.on('error', (e) => cssFehler.push(String(e)));
-const dom = new JSDOM(html, { runScripts: 'outside-only', pretendToBeVisual: true, url: 'https://www.plinyoo.com/', virtualConsole: vc });
+// #609 Schritt 3: "/" legt seitdem Deutsch fest (Sprache aus dem Pfad). Leeren #root bekommt der Besucher auf einer
+// unbekannten Adresse (404.html), dort spricht der Hinweis die Browsersprache — dieselbe Lage wie vorher auf "/".
+const dom = new JSDOM(html, { runScripts: 'outside-only', pretendToBeVisual: true, url: 'https://www.plinyoo.com/gibt-es-nicht/', virtualConsole: vc });
 const { window } = dom;
 const { document } = window;
 const stil = document.createElement('style');

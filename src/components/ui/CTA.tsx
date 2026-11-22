@@ -1,6 +1,6 @@
 // src/components/ui/CTA.tsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight } from 'lucide-react';
 import ZugangHinweis from './ZugangHinweis';
@@ -17,13 +17,13 @@ export default function CTA() {
         <p className="text-sm leading-relaxed text-text-muted sm:text-[0.95rem]">
           {t('cta.subtitle')}
         </p>
-        <Link
+        <SprachLink
           to="/zugang/"
           className="mt-1 flex min-h-[50px] w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 text-[0.95rem] font-semibold text-white shadow-sm transition-all duration-200 hover:bg-primary/90 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-main-background sm:w-auto sm:self-start"
         >
           {t('cta.button')}
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </Link>
+        </SprachLink>
         <ZugangHinweis />
       </div>
     </section>

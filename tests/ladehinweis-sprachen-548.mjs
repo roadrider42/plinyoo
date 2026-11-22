@@ -29,7 +29,10 @@
 //      oder navigator.language statt der Erkennung von i18next fragt.
 //
 // Seit #609: gemessen wird der Zweig createRoot (leerer #root: 404.html, npm run dev), wie
-// tests/ladehinweis-532.mjs. Vorgerenderte Seiten zeigen keinen Ladehinweis, ihren Zweig prüft
+// tests/ladehinweis-532.mjs. Seit #609 Schritt 3 auf einer Adresse ohne Sprache (OHNE_SPRACHE),
+// dazu vier Fälle, in denen der Pfad die Sprache festlegt (/en/, /uk/zugang/, /) oder nicht
+// (/datenschutz/, nur deutsch). Gegenprobe 22.11.2026 mit src/lib/i18n.ts von beee666: ROT in
+// den drei Pfadfällen (Hinweis und Laden in der Browser- bzw. Cookie-Sprache), mit Schritt 3 grün. Vorgerenderte Seiten zeigen keinen Ladehinweis, ihren Zweig prüft
 // tests/hydration-609.mjs.
 // Gegenprobe: mit dem Stand von origin/main (367545c) ist die Prüfung rot — F nicht ladbar,
 // A in allen Fällen „Lade Inhalte...“. Ausgang 0 grün, 1 rot.
@@ -69,7 +72,15 @@ const FAELLE = [
   { name: 'it, it, uk', sprachen: ['it-IT', 'it', 'uk'], soll: URTEIL.uk },
   { name: 'Cookie fr', sprachen: ['de-DE', 'de'], cookie: 'i18next=fr', soll: URTEIL.fr },
   { name: 'Speicher es', sprachen: ['de-DE'], speicher: 'es', soll: URTEIL.es },
+  // #609 Schritt 3: Auf einer Sprachseite bestimmt der Pfad die Sprache, nicht der Browser (src/lib/i18n.ts, lng).
+  { name: 'Pfad /en/', pfad: '/en/', sprachen: ['de-DE', 'de'], soll: URTEIL.en },
+  { name: 'Pfad /uk/zugang/', pfad: '/uk/zugang/', sprachen: ['fr-FR'], cookie: 'i18next=es', soll: URTEIL.uk },
+  { name: 'Pfad / (de)', pfad: '/', sprachen: ['en-US', 'en'], soll: URTEIL.de },
+  { name: 'Datenschutz: Browser',pfad: '/datenschutz/', sprachen: ['pl-PL', 'pl'], soll: URTEIL.pl },
 ];
+// Ohne pfad: eine Adresse, die keine Sprache festlegt -- genau dort liefert der Server 404.html mit leerem #root
+// aus. Vor #609 Schritt 3 war das "/", seitdem legt "/" Deutsch fest.
+const OHNE_SPRACHE = '/gibt-es-nicht/';
 
 const befunde = [];
 const zeilen = [];
@@ -136,7 +147,7 @@ const warte = (ms) => new Promise((r) => setTimeout(r, ms));
 
 for (const fall of FAELLE) {
   const dom = new JSDOM(html, { runScripts: 'outside-only', pretendToBeVisual: true,
-    url: 'https://www.plinyoo.com/', virtualConsole: new VirtualConsole() });
+    url: `https://www.plinyoo.com${fall.pfad ?? OHNE_SPRACHE}`, virtualConsole: new VirtualConsole() });
   const { window } = dom;
   Object.defineProperty(window.navigator, 'languages', { get: () => fall.sprachen });
   Object.defineProperty(window.navigator, 'language', { get: () => fall.sprachen[0] });

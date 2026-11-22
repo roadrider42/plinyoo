@@ -36,17 +36,21 @@ if (!existsSync(SERVER)) { console.log(`ROT: ${SERVER} fehlt -- erst vite build 
 
 let mod;
 try { mod = await import(pathToFileURL(SERVER).href); } catch (e) { console.log(`NICHT MESSBAR: ${SERVER} nicht ladbar (${e.message.split('\n')[0]})`); process.exit(2); }
-const { rendern, SEITEN, VORGERENDERT_SPRACHE } = mod;
-const texte = JSON.parse(readFileSync(join(WURZEL, 'public/locales', VORGERENDERT_SPRACHE, 'translation.json'), 'utf8'));
+// #609 Schritt 3: jede Seite in jeder Sprache (fassungen()), mit den deutschen Texten als Rückfall wie im Bau.
+const { rendern, fassungen, SPRACHEN, RUECKFALL_SPRACHE } = mod;
+const lies = (s) => JSON.parse(readFileSync(join(WURZEL, 'public/locales', s, 'translation.json'), 'utf8'));
+const rueckfall = lies(RUECKFALL_SPRACHE);
+const SEITEN = fassungen(SPRACHEN);
 
 const echt = Math.random;
 const zufall = (start) => { let s = start; return () => ((s = (s * 16807) % 2147483647) / 2147483647); };
 const rot = [];
-for (const { pfad } of SEITEN) {
+for (const { pfad, sprache } of SEITEN) {
+  const texte = lies(sprache);
   Math.random = zufall(1);
-  const a = await rendern(pfad, VORGERENDERT_SPRACHE, texte);
+  const a = await rendern(pfad, sprache, texte, rueckfall);
   Math.random = zufall(987654);
-  const b = await rendern(pfad, VORGERENDERT_SPRACHE, texte);
+  const b = await rendern(pfad, sprache, texte, rueckfall);
   Math.random = echt;
   if (a !== b) {
     let i = 0; while (a[i] === b[i]) i++;
@@ -62,4 +66,4 @@ if (rot.length) {
   console.log(`ROT (${rot.length}):\n  ${rot.join('\n  ')}`);
   process.exit(1);
 }
-console.log(`GRUEN G1-G3: ${SEITEN.length} Seiten zweimal gerendert, bytegleich, und genau so in dist/`);
+console.log(`GRUEN G1-G3: ${SEITEN.length} Seiten (alle Sprachen) zweimal gerendert, bytegleich, und genau so in dist/`);

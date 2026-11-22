@@ -1,9 +1,11 @@
 {
   "navigation": {
-    "cta_primary": "Unirse",
-    "cta_secondary": "Invertir"
+    "cta_primary": "Participar",
+    "cta_secondary": "Invertir",
+    "menu_toggle": "Mostrar u ocultar el menú principal"
   },
   "hero": {
+    "login": "Iniciar sesión",
     "eyebrow": "Plataforma de aprendizaje: coach y compañero en uno",
     "title": "Tu camino de aprendizaje es único.",
     "subtitle": "Sabes dónde estás hoy y adónde quieres llegar. El camino entre ambos puntos lo encuentras en tarjetas que se remiten entre sí, no en un plan de curso.",
@@ -150,7 +152,8 @@
   "cta": {
     "title": "Empieza con una tarjeta.",
     "subtitle": "No necesitas un plan de curso. Necesitas una primera tarjeta y el enlace que te lleva a la siguiente.",
-    "button": "Solicitar acceso"
+    "button": "Solicitar acceso",
+    "hinweis": "Nos pondremos en contacto contigo personalmente."
   },
   "storySketch": {
     "title": "Así es como el conocimiento se convierte en calidad de servicio",
@@ -204,7 +207,7 @@
       "message_label": "Mensaje"
     },
     "join": {
-      "title": "Unirse",
+      "title": "Participar",
       "subtitle": "100% producto. 100% práctica. En Plinyoo, desarrollamos flujos de aprendizaje que realmente apoyan a los equipos y mejoran el servicio de manera medible.",
       "subtitle_details": "Ya sea Frontend, Backend, Móvil, Producto o Diseño de Aprendizaje: lo que importa es el pensamiento de producto, la responsabilidad y el deseo de hacer las cosas.",
       "role_label": "Rol/Habilidad",
@@ -245,6 +248,12 @@
       "subtitle_details": "Te responderemos.",
       "role_label": "Vengo como",
       "role_placeholder": "Por favor, elige",
+      "role_options": {
+        "learner": "Aprendiz",
+        "curator": "Curador — quiero compartir conocimiento",
+        "wegbereiter": "Wegbereiter (abre caminos) — dirijo un equipo",
+        "other": "Otra cosa"
+      },
       "message_label": "¿Qué quieres lograr con plinyoo?",
       "message_placeholder": "Por ejemplo: quiero entender por qué mi ciudad se calienta tanto en verano.",
       "button": "Solicitar acceso",
@@ -270,6 +279,10 @@
       "button": "Contáctanos"
     },
     "books_intro": "Aquí presentamos libros. De cuatro de ellos, las tarjetas ya están en la app, cada libro como tema propio: «Die Eroberer» (Roger Crowley), «Der Almanach von Naval Ravikant» (Eric Jorgenson), «Gewaltfreie Kommunikation» (Marshall B. Rosenberg) y «Die Macht der Geografie» (Tim Marshall).",
+    "new_badge": "Nuevo",
+    "book_subtitle": "Presentación del libro",
+    "book_button": "Ir a la página del libro (en alemán)",
+    "more_books": "Descubrir más libros (en alemán)",
     "books_title": "Libros para recorrer"
   },
   "footer": {
@@ -281,7 +294,7 @@
       "imprint": "Aviso legal",
       "privacy": "Privacidad",
       "copyright": "Derechos de autor",
-      "join": "Unirse",
+      "join": "Participar",
       "invest": "Invertir",
       "contact": "Contacto"
     },
@@ -308,6 +321,32 @@
       "text": "Dirige las consultas sobre derechos de uso a heiko@plinyoo.com."
     },
     "back_to_home": "Volver al inicio"
+  },
+  "seo": {
+    "start": {
+      "title": "plinyoo: plataforma de aprendizaje, conocimiento y equipos",
+      "description": "Tu camino de aprendizaje es único. Encuentra tu camino en tarjetas que se remiten entre sí, no en un plan de curso."
+    },
+    "zugang": {
+      "title": "Acceso | plinyoo",
+      "description": "Cuéntanos brevemente quién eres y qué quieres aprender o compartir."
+    },
+    "mitmachen": {
+      "title": "Participar | plinyoo",
+      "description": "Participa en plinyoo: cuéntanos si quieres aportar en Frontend, Backend, Mobile, Product o Learning Design."
+    },
+    "investieren": {
+      "title": "Invertir | plinyoo",
+      "description": "plinyoo es una plataforma de aprendizaje para conocimiento, equipos y caminos propios."
+    },
+    "urheberrecht": {
+      "title": "Derechos de autor y créditos de imagen | plinyoo",
+      "description": "Los contenidos de este sitio web pertenecen, salvo indicación en contrario, a Plinyoo UG (haftungsbeschränkt) y están protegidos por derechos de autor."
+    },
+    "kontakt": {
+      "title": "Contacto | plinyoo",
+      "description": "Descríbenos tu idea o desafío."
+    }
   },
   "hero1": {
     "eyebrow": "Conocimiento que perdura.",
@@ -356,10 +395,56 @@
     "right": "Correcta:",
     "wrong": "No del todo.",
     "retry": "Intentar de nuevo",
-    "note": "Las tarjetas están en alemán."
+    "note": "Las tarjetas están en alemán.",
+    "topics": "Elige un tema",
+    "topicEic": "East India Company",
+    "topicBorders": "Fronteras",
+    "topicLisbon": "Lisboa 1941",
+    "source": "Fuente:",
+    "retrieved": "consultado",
+    "toSource": "Ir a la fuente",
+    "bookNote": "Estas tarjetas acompañan al libro «{{titel}}» de {{autor}}."
   },
   "views": {
     "title": "Una mirada al interior",
-    "subtitle": "Tres vistas del desarrollo de plinyoo. Los textos de las vistas están en alemán."
+    "subtitle": "Tres vistas del desarrollo de plinyoo. Los textos de las vistas están en alemán.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Concepto",
+        "title": "Tu meta, tu camino, tu universo de conocimiento",
+        "text": "Una mirada al campo de aprendizaje tal como lo imaginamos: una página de inicio con tu meta, el camino hacia ella y la mirada atrás con tus estrellas.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Campo de aprendizaje: tu universo y la pregunta «¿Qué quieres saber hacer?» (captura en alemán)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Campo de aprendizaje: «Este es tu camino» con paradas en el camino hacia la meta (captura en alemán)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Campo de aprendizaje: «Esto fue hoy» con estrellas conseguidas (captura en alemán)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Concepto",
+        "title": "La red de conocimiento",
+        "text": "Once tarjetas sobre el calor urbano, con enlaces reales entre ellas, rodeadas de otros temas. Arrastra para reordenar, desplaza para hacer zoom.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "La red de conocimiento — vista interactiva"
+      },
+      {
+        "id": "autor",
+        "tag": "Concepto",
+        "title": "Ver caminos y lagunas",
+        "text": "Para quienes transmiten conocimiento: eliges palabras clave y ves cómo se conectan las tarjetas y dónde aún falta un puente.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Caminos y lagunas — vista interactiva"
+      }
+    ]
   }
 }

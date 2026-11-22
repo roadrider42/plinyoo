@@ -5,7 +5,8 @@
 // Herkunft (Buchseite, Kanal) kommt aus der Adresse und steht ebenfalls als Kopfzeile (src/lib/kampagne.ts).
 
 import React, { useEffect, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 import { useContactForm } from '@/hooks/hook.useContactForm';
 import KontaktFehlerHinweis from '@/components/ui/KontaktFehlerHinweis';
@@ -69,9 +70,9 @@ export default function ZugangPage() {
     <main className="bg-main-background text-main-text">
       <section className="max-w-4xl mx-auto px-6 md:px-12 py-16">
         <div>
-          <Link to="/" className="inline-block mb-8 text-sm text-primary hover:underline">
+          <SprachLink to="/" className="inline-block mb-8 text-sm text-primary hover:underline">
             &larr; {t('forms.back_to_home')}
-          </Link>
+          </SprachLink>
         </div>
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold font-sans text-primary">{t('forms.access.title')}</h1>
@@ -120,15 +121,15 @@ export default function ZugangPage() {
                 {contactMutation.isLoading ? t('forms.button_sending') : t('forms.access.button')}
               </button>
             </div>
-            <p className="text-xs text-gray-500 mt-4 text-center">{t('forms.privacy_notice')} {t('forms.access.origin_note')} <Link to="/datenschutz/" className="underline">{t('forms.privacy_link')}</Link></p>
+            <p className="text-xs text-gray-500 mt-4 text-center">{t('forms.privacy_notice')} {t('forms.access.origin_note')} <SprachLink to="/datenschutz/" className="underline">{t('forms.privacy_link')}</SprachLink></p>
           </form>
         ) : (
           <div className="text-center py-12">
             <h2 className="text-2xl font-bold font-sans text-primary">{t('forms.success.title')}</h2>
             <p className="mt-2 text-lg">{t('forms.success.message')}</p>
-            <Link to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
+            <SprachLink to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
               {t('forms.back_to_home')}
-            </Link>
+            </SprachLink>
           </div>
         )}
       </section>

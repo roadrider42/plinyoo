@@ -45,14 +45,22 @@ async function generateSitemap() {
   // #609: die übrigen Seiten der App, seit dem Vorrendern je eine echte Adresse (scripts/vorrendern.mjs). Dieselbe
   // Liste wie Router und Vorrendern (src/routes/seiten.ts); lastmod wie die Startseite, denn ihr Inhalt liegt an
   // denselben Stellen. Abgleich: Jede steht vorgerendert in dist/, mit Inhalt in #root — sonst Abbruch.
-  const { SEITEN } = await import(path.join(root, 'src/routes/seiten.ts'));
+  // #609 Schritt 3: jede Seite in jeder Sprache (/en/zugang/ …), mit xhtml:link je Sprachfassung und x-default auf
+  // die deutsche — dieselben Verweise wie im Kopf der Seite (scripts/vorrendern.mjs, hreflangVerweise).
+  const { fassungen } = await import(path.join(root, 'src/routes/seiten.ts'));
+  const { SPRACHEN } = await import(path.join(root, 'src/lib/sprachen.ts'));
+  const alle = fassungen(SPRACHEN);
   const RECHTLICH = new Set(['/impressum/', '/datenschutz/', '/urheberrecht/']);
   const ohneInhalt = [];
-  for (const { pfad } of SEITEN) {
+  for (const { pfad, seite } of alle) {
     const html = await readFile(path.join(distDir, ...pfad.split('/').filter(Boolean), 'index.html'), 'utf-8').catch(() => '');
     if (!html.includes('<div id="root">') || html.includes('<div id="root"></div>')) ohneInhalt.push(pfad);
-    if (pfad === '/') continue;
-    urls.push({ loc: `${SITE}${pfad}`, changefreq: 'monthly', priority: RECHTLICH.has(pfad) ? '0.3' : '0.7', lastmod: startTag });
+    const geschwister = seite.nurDeutsch ? [] : alle.filter((f) => f.seite.pfad === seite.pfad);
+    const alternates = geschwister.length
+      ? [...geschwister.map((f) => ({ hreflang: f.sprache, href: `${SITE}${f.pfad}` })), { hreflang: 'x-default', href: `${SITE}${seite.pfad}` }]
+      : [];
+    if (pfad === '/') { urls[0].alternates = alternates; continue; }
+    urls.push({ loc: `${SITE}${pfad}`, changefreq: 'monthly', priority: RECHTLICH.has(seite.pfad) ? '0.3' : '0.7', lastmod: startTag, alternates });
   }
   if (ohneInhalt.length) {
     throw new Error(`Sitemap: Seiten der App ohne vorgerenderten Inhalt in dist/: [${ohneInhalt.join(', ')}]. Erst scripts/vorrendern.mjs. Bau abgebrochen.`);
@@ -143,9 +151,9 @@ async function generateSitemap() {
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.map(u => `  <url>
-    <loc>${u.loc}</loc>
+    <loc>${u.loc}</loc>${(u.alternates ?? []).map((a) => `\n    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}" />`).join('')}
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
     ${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}
