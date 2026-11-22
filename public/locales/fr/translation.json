@@ -6,7 +6,7 @@
   "hero": {
     "eyebrow": "Plateforme d’apprentissage — coach et compagnon en un",
     "title": "Ton parcours d’apprentissage est unique.",
-    "subtitle": "Tu sais où tu en es aujourd’hui et où tu veux aller. Le chemin entre les deux, tu le trouves sur des fiches qui renvoient les unes aux autres — pas dans un plan de cours.",
+    "subtitle": "Tu sais où tu en es aujourd’hui et où tu veux aller. Le chemin entre les deux, tu le trouves sur des cartes qui renvoient les unes aux autres — pas dans un plan de cours.",
     "cta_primary": "Demander l’accès",
     "cta_secondary": "Pour les investisseurs",
     "cta": "Demander l’accès"
@@ -47,7 +47,7 @@
     "steps": [
       {
         "title": "Définir deux langues",
-        "description": "Ta langue maternelle et celle que tu apprends. Les fiches s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
+        "description": "Ta langue maternelle et celle que tu apprends. Les cartes s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
       },
       {
         "title": "Suivre un sujet",
@@ -68,7 +68,7 @@
       },
       {
         "title": "Ta progression brille",
-        "desc": "Chaque fiche apprise devient une étoile dans ton univers."
+        "desc": "Chaque carte apprise devient une étoile dans ton univers."
       },
       {
         "title": "Un outil pour tout l'apprentissage",
@@ -88,26 +88,26 @@
       },
       {
         "kpi": "11",
-        "label": "fiches reliées dans le sujet Chaleur urbaine"
+        "label": "cartes reliées dans le sujet Chaleur urbaine"
       },
       {
         "kpi": "1 ★",
-        "label": "pour chaque fiche acquise"
+        "label": "pour chaque carte acquise"
       }
     ]
   },
   "features": {
-    "title": "Une fiche, une question, des retrouvailles",
-    "subtitle": "Le chemin se fait en marchant. Sous chaque fiche, il y a des suites au lieu d’une liste de chapitres. Lesquelles dépend de la façon dont les fiches sont reliées entre elles — et d’où tu es déjà allé.",
+    "title": "Une carte, une question, des retrouvailles",
+    "subtitle": "Le chemin se fait en marchant. Sous chaque carte, il y a des suites au lieu d’une liste de chapitres. Lesquelles dépend de la façon dont les cartes sont reliées entre elles — et d’où tu es déjà allé.",
     "items": [
       {
-        "title": "Fiche",
+        "title": "Carte",
         "desc": "Une idée, tout l’écran. Pas de chapitre à faire défiler.",
         "category": "1"
       },
       {
         "title": "Question",
-        "desc": "Chaque fiche a ses questions.",
+        "desc": "Chaque carte a ses questions.",
         "category": "2"
       },
       {
@@ -135,21 +135,21 @@
       },
       {
         "q": "Comment j’apprends avec plinyoo ?",
-        "a": "Tu lis une fiche, tu réponds aux questions et tu suis les renvois vers la suivante. Ce qui est acquis revient plus tard, ce qui vacille revient plus tôt."
+        "a": "Tu lis une carte, tu réponds aux questions et tu suis les renvois vers la suivante. Ce qui est acquis revient plus tard, ce qui vacille revient plus tôt."
       },
       {
         "q": "Puis-je apporter mes propres contenus ?",
-        "a": "Oui, dans la zone « Erstellen ». Tu écris et relies tes propres fiches. Tu importes des fiches depuis Obsidian, depuis des fichiers et depuis Wikipédia dans tes propres sujets, ou tu reprends le texte d’une page web avec un signet. À partir de fichiers et de pages Wikipédia, tu peux aussi importer du vocabulaire au lieu de fiches d’apprentissage."
+        "a": "Oui, dans la zone « Erstellen ». Tu écris et relies tes propres cartes. Tu importes des cartes depuis Obsidian, depuis des fichiers et depuis Wikipédia dans tes propres sujets, ou tu reprends le texte d’une page web avec un signet. À partir de fichiers et de pages Wikipédia, tu peux aussi importer du vocabulaire au lieu de cartes d’apprentissage."
       },
       {
         "q": "Dans quelles langues puis-je apprendre ?",
-        "a": "L’interface existe en allemand et en anglais. Tu définis deux langues : ta langue maternelle et celle que tu apprends en ce moment. Dix sont proposées. Les fiches s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
+        "a": "L’interface existe en allemand et en anglais. Tu définis deux langues : ta langue maternelle et celle que tu apprends en ce moment. Dix sont proposées. Les cartes s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
       }
     ]
   },
   "cta": {
-    "title": "Commence par une fiche.",
-    "subtitle": "Tu n’as pas besoin d’un plan de cours. Tu as besoin d’une première fiche et du renvoi qui te mène à la suivante.",
+    "title": "Commence par une carte.",
+    "subtitle": "Tu n’as pas besoin d’un plan de cours. Tu as besoin d’une première carte et du renvoi qui te mène à la suivante.",
     "button": "Demander l’accès"
   },
   "storySketch": {
@@ -269,7 +269,7 @@
       "desc": "Nous développons des solutions individuelles pour tes défis.",
       "button": "Contacte-nous"
     },
-    "books_intro": "Nous présentons ici des livres. Pour quatre d’entre eux, les fiches sont déjà dans l’application, chaque livre comme sujet à part : « Die Eroberer » (Roger Crowley), « Der Almanach von Naval Ravikant » (Eric Jorgenson), « Gewaltfreie Kommunikation » (Marshall B. Rosenberg) et « Die Macht der Geografie » (Tim Marshall).",
+    "books_intro": "Nous présentons ici des livres. Pour quatre d’entre eux, les cartes sont déjà dans l’application, chaque livre comme sujet à part : « Die Eroberer » (Roger Crowley), « Der Almanach von Naval Ravikant » (Eric Jorgenson), « Gewaltfreie Kommunikation » (Marshall B. Rosenberg) et « Die Macht der Geografie » (Tim Marshall).",
     "books_title": "Livres à parcourir"
   },
   "footer": {
@@ -356,7 +356,7 @@
     "right": "Bonne réponse :",
     "wrong": "Pas tout à fait.",
     "retry": "Réessayer",
-    "note": "Les fiches sont en allemand.",
+    "note": "Les cartes sont en allemand.",
     "topics": "Choisis un thème",
     "topicEic": "East India Company",
     "topicBorders": "Frontières",
