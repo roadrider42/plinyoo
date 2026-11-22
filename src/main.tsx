@@ -35,6 +35,21 @@ const App = () => (
 
 const queryClient = new QueryClient();
 
+// #609: Was nach dem Übernehmen geschehen soll (Sprachwechsel auf Impressum und Datenschutz, unten). hydrateRoot
+// übernimmt nicht sofort, sondern in Häppchen; wechselte die Sprache schon nach dem Aufruf, kam die Übersetzung auf
+// einem langsamen Rechner (CI) mitten im Übernehmen an, der Rest zeichnete englisch -> React-Fehler #425, #root neu
+// gebaut. Ein Effekt läuft erst, wenn der ganze Baum übernommen ist. Rendert nichts eigenes: das HTML bleibt gleich.
+// Prüfung: tests/hydration-609.mjs, Fälle "en /datenschutz/".
+let nachDemUebernehmen: (() => void) | undefined;
+const Uebernommen = ({ children }: { children: React.ReactNode }) => {
+  React.useEffect(() => {
+    const tun = nachDemUebernehmen;
+    nachDemUebernehmen = undefined;
+    tun?.();
+  }, []);
+  return <>{children}</>;
+};
+
 const seite = (
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
@@ -52,7 +67,9 @@ const seite = (
           {ladehinweisFuer(erkannteSprache())}
         </div>
       }>
-        <App />
+        <Uebernommen>
+          <App />
+        </Uebernommen>
       </Suspense>
     </QueryClientProvider>
   </React.StrictMode>
@@ -73,8 +90,10 @@ if (wurzel.firstElementChild) {
   const besucherSprache = erkannteSprache();
   const gerendert = pfadSprache ?? RUECKFALL_SPRACHE;
   i18n.changeLanguage(gerendert).then(() => {
+    if (!pfadSprache && besucherSprache && besucherSprache !== gerendert) {
+      nachDemUebernehmen = () => { i18n.changeLanguage(besucherSprache); };
+    }
     hydrateRoot(wurzel, seite);
-    if (!pfadSprache && besucherSprache && besucherSprache !== gerendert) i18n.changeLanguage(besucherSprache);
   });
 } else {
   createRoot(wurzel).render(seite);
