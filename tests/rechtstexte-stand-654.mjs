@@ -15,8 +15,11 @@
 //     Datum aus rechtstexte-stand-654.json.
 //  P  Die Prüfsumme des Texts ist die aus rechtstexte-stand-654.json.
 //  B  Gegen die Basis: Ist der Text dort anders, ist das Datum hier nicht früher.
-//     Dasselbe Datum ist erlaubt (zwei Änderungen am selben Tag). Wer nur die
-//     Prüfsumme nachzieht und das Datum vergisst, bleibt deshalb grün.
+//     Dasselbe Datum ist erlaubt (zwei Änderungen am selben Tag). Ein vergessenes
+//     Datum hält deshalb `--summen` auf: Ist der Text anders als die gespeicherte
+//     Prüfsumme und das Datum weder vorgerückt noch der heutige Tag (Berlin),
+//     gibt es keine Prüfsummen und Exit 1. Wer die Prüfsumme selbst berechnet und
+//     rechtstexte-stand-654.json von Hand ändert, umgeht das und bleibt grün.
 //
 // Basis: gemeinsamer Vorfahr mit origin/main; ist HEAD selbst origin/main (Bau
 // nach dem Merge), der erste Elternteil. Keine Basis, keine Datei oder kein
@@ -24,7 +27,8 @@
 //
 // Wer einen Rechtstext ändert: Datum in der Seite (Impressum) oder in
 // public/locales/de/translation.json setzen, dann `--summen` und beides in
-// rechtstexte-stand-654.json eintragen.
+// rechtstexte-stand-654.json eintragen. Reihenfolge: erst das Datum, dann
+// `--summen`, zuletzt die JSON.
 //
 // NICHT gemessen: die übrigen Sprachen; ob das Datum der Tag der Änderung ist
 // (nur: nicht früher als vorher, nicht in der Zukunft).
@@ -168,7 +172,7 @@ async function pruefen(lies, basis) {
     if (!e?.stand || !e?.pruefsumme) funde.push(`${s}: kein Eintrag mit stand und pruefsumme in ${BASISDATEI}`);
     else {
       if (da && e.stand !== da) funde.push(`${s} S: Seite zeigt ${da}, ${BASISDATEI} nennt ${e.stand}`);
-      if (e.pruefsumme !== summe) funde.push(`${s} P: Text geändert (Prüfsumme ${summe}); Datum und Prüfsumme nachziehen`);
+      if (e.pruefsumme !== summe) funde.push(`${s} P: Text geändert; erst das Datum setzen, dann die Prüfsumme aus --summen eintragen`);
     }
     const vorher = basis.seiten?.[s];
     if (!vorher || vorher.summe === summe) continue;
@@ -179,10 +183,31 @@ async function pruefen(lies, basis) {
   return { funde, html };
 }
 
+const berlin = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Berlin' }).format(new Date());
+/** Die Ausgabe von --summen. Eine verweigerte Seite hält alle Prüfsummen zurück. */
+async function summen(lies, heute) {
+  let soll;
+  try { soll = JSON.parse(lies(BASISDATEI)); } catch { soll = null; }
+  if (!soll) return { code: 1, zeilen: [`VERWEIGERT ${BASISDATEI} fehlt oder ist nicht lesbar`] };
+  const zeilen = [];
+  const verweigert = [];
+  for (const [s, h] of Object.entries(await rendern(lies))) {
+    const { staende, summe } = lesen(h);
+    const da = tag(staende[0]);
+    const e = soll[s];
+    if (staende.length !== 1 || !da) verweigert.push(`VERWEIGERT ${s}: kein eindeutiges Datum auf der Seite`);
+    else if (!e?.stand || !e?.pruefsumme) verweigert.push(`VERWEIGERT ${s}: kein Eintrag mit stand und pruefsumme in ${BASISDATEI}`);
+    else if (e.pruefsumme !== summe && !(da > e.stand) && da !== heute) verweigert.push(`VERWEIGERT ${s}: Text geändert, aber das Datum ${da} ist weder vorgerückt (gespeichert ${e.stand}) noch der heutige Tag (${heute}). Erst das Datum setzen.`);
+    zeilen.push(`${s} ${da} ${summe}`);
+  }
+  return verweigert.length ? { code: 1, zeilen: verweigert } : { code: 0, zeilen };
+}
+
 const arbeitsbaum = (p) => (existsSync(join(WURZEL, p)) ? readFileSync(join(WURZEL, p), 'utf8') : null);
 if (process.argv.includes('--summen')) {
-  for (const [s, h] of Object.entries(await rendern(arbeitsbaum))) { const l = lesen(h); console.log(s, tag(l.staende[0]) ?? l.staende, l.summe); }
-  process.exit(0);
+  const { code, zeilen } = await summen(arbeitsbaum, berlin());
+  for (const z of zeilen) console.log(z);
+  process.exit(code);
 }
 
 let rot = 0;
@@ -229,6 +254,7 @@ if (!rot) {
     };
   };
   const proben = [];
+  const summenProben = []; // [Name, Stand, heutiger Tag, erwartete Zeile]
   for (const s of Object.keys(SEITEN)) {
     const [pfad, wort] = WORT[s];
     const text = ersetzt(pfad, [wort, `${wort} PROBE`]);
@@ -245,6 +271,25 @@ if (!rot) {
       [`${s}: Datum ohne Eintrag geändert`, mitDatum(s, arbeitsbaum, spaeter), / S: /],
       [`${s}: Eintrag fehlt`, anders(arbeitsbaum, (o) => { delete o[s]; }), /kein Eintrag/],
     );
+    const spaeter2 = new Date(Date.parse(alt) + 2 * 864e5).toISOString().slice(0, 10);
+    const weigert = new RegExp(`^VERWEIGERT ${s}: Text geändert`);
+    summenProben.push(
+      [`${s}: Datum vergessen`, text, spaeter, weigert],
+      [`${s}: Datum zurückgesetzt`, mitDatum(s, text, frueher), spaeter, weigert],
+      [`${s}: zweite Änderung am selben Tag`, text, alt, `${s} ${alt} ${summe}`],
+      [`${s}: Datum vorgerückt`, mitDatum(s, text, spaeter), spaeter2, `${s} ${spaeter} ${summe}`],
+      [`${s}: Text unverändert`, arbeitsbaum, spaeter, `${s} ${alt} ${heil.seiten[s].summe}`],
+      [`${s}: Eintrag fehlt`, anders(text, (o) => { delete o[s]; }), spaeter, new RegExp(`^VERWEIGERT ${s}: kein Eintrag`)],
+    );
+  }
+  summenProben.push(['Basisdatei fehlt', (p) => (p === BASISDATEI ? null : arbeitsbaum(p)), berlin(), /^VERWEIGERT .*json fehlt/]);
+  for (const [name, lies, heute, erwartet] of summenProben) {
+    const { code, zeilen } = await summen(lies, heute);
+    const ok = typeof erwartet === 'string'
+      ? code === 0 && zeilen.length === Object.keys(SEITEN).length && zeilen.includes(erwartet)
+      : code !== 0 && zeilen.length === 1 && erwartet.test(zeilen[0]);
+    if (!ok) rot++;
+    console.log(`${ok ? 'GRUEN' : 'ROT  '} Probe --summen ${name}: ${typeof erwartet === 'string' ? 'muss erlaubt sein' : 'muss verweigert werden'}, Exit ${code}`);
   }
   proben.push(
     ['Gestaltung Impressum (Klassen, Gliederung, Linkziel)', ersetzt(SEITEN.impressum, ['text-4xl', 'text-5xl'], ['<p>34121 Kassel</p>', '<p><strong>34121</strong> <em>Kassel</em></p>'], ['to="/datenschutz/"', 'to="/datenschutz"']), null],
@@ -260,7 +305,7 @@ if (!rot) {
     const { funde } = await pruefen(lies, b);
     const ok = erwartet ? funde.some((f) => erwartet.test(f)) : !funde.length;
     if (!ok) rot++;
-    console.log(`${ok ? 'GRUEN' : 'ROT  '} Probe ${name}: ${erwartet ? 'muss rot sein' : 'muss grün sein'}, ${funde.length ? funde.join(' | ').replace(/[0-9a-f]{50,}/g, '…') : 'ohne Befund'}`);
+    console.log(`${ok ? 'GRUEN' : 'ROT  '} Probe ${name}: ${erwartet ? 'muss rot sein' : 'muss grün sein'}, ${funde.length ? funde.join(' | ') : 'ohne Befund'}`);
   }
 }
 console.log(rot ? `ROT (${rot})` : 'GRUEN');
