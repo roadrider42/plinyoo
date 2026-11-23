@@ -612,7 +612,7 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "stand": "Stand: 18. Oktober 2026",
+    "stand": "Stand: 23. November 2026",
     "intro": "Hier steht, welche Daten beim Besuch dieser Website und bei Anfragen über die Formulare entstehen, wozu wir sie nutzen und welche Rechte du hast. Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die Plinyoo UG (haftungsbeschränkt) („plinyoo“, „wir“), Theodor-Fliedner-Str. 1d, 34121 Kassel, erreichbar unter heiko@plinyoo.com. Die Angaben stehen auch im Impressum.",
     "hosting": {
       "title": "Hosting und Verbindungsdaten",
@@ -644,7 +644,7 @@
     },
     "embeddedContent": {
       "title": "Eingebettete Inhalte",
-      "text": "Auf dieser Website sind keine Videos, Karten oder sonstigen Inhalte Dritter eingebettet. Sollte sich das ändern, ergänzen wir diese Erklärung."
+      "text": "Diese Website (www.plinyoo.com) bindet keine Videos, Landkarten oder sonstigen Inhalte Dritter ein. In der App unter app.plinyoo.com zeigen Lernkarten dagegen teils YouTube-Videos. Sobald du eine Karte mit Video öffnest, lädt dein Browser das Video von YouTube. Dazu verbindet er sich mit den Servern von YouTube; YouTube erhält dabei mindestens deine IP-Adresse und die Angabe, welches Video aufgerufen wird. Das gilt auch, wenn du das Video nicht abspielst. In Kartenlisten lädt das Video schon beim Anzeigen der Karte, wenn die Vorschau eingeschaltet ist. Ist sie ausgeschaltet, lädt dein Browser in der Liste nur das Vorschaubild des Videos von YouTube; im Kartenstapel ist es immer nur das Vorschaubild. Wie YouTube die Daten verarbeitet, steht in dessen Datenschutzerklärung."
     },
     "rights": {
       "title": "Deine Rechte",
@@ -658,7 +658,7 @@
   },
   "copyright": {
     "title": "Urheberrecht & Bildnachweise",
-    "stand": "Stand: 2026",
+    "stand": "Stand: 18. November 2026",
     "urheberrecht": {
       "title": "Urheberrecht",
       "text": "Alle auf dieser Website veröffentlichten Inhalte (Texte, Bilder, Grafiken) sind – sofern nicht anders gekennzeichnet – Eigentum der Plinyoo UG (haftungsbeschränkt) und urheberrechtlich geschützt. Jede Art der Nutzung außerhalb der gesetzlichen Schrankenbestimmungen bedarf der vorherigen Zustimmung."

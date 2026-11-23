@@ -4,7 +4,6 @@
  */
 
 import { SprachLink } from '@/components/SprachLink';
-import { BAUJAHR } from '@/lib/baujahr';
 
 export default function Impressum() {
   return (
@@ -12,7 +11,8 @@ export default function Impressum() {
       <section className="max-w-4xl mx-auto px-6 md:px-12 py-16">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-primary mb-2">Impressum</h1>
-          <p className="text-sm text-text-muted">Stand: {BAUJAHR}</p>
+          {/* Tag der letzten Textänderung, nie das Baujahr (BUG-0354); wandert mit dem Text: tests/rechtstexte-stand-654.mjs */}
+          <p className="text-sm text-text-muted">Stand: 18. November 2026</p>
         </div>
 
         <div className="mt-8 space-y-8">
