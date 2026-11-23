@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import { RUECKFALL_SPRACHE, SPRACHEN } from './sprachen';
+import { spracheDesPfads } from '../routes/seiten';
 
 i18n
   // Lädt Übersetzungen über http -> ermöglicht das Laden von Dateien aus dem public/locales Ordner
@@ -13,11 +14,21 @@ i18n
   .use(initReactI18next)
   // Konfiguriert i18next
   .init({
+    // #609 Schritt 3: Auf einer Sprachseite (/en/zugang/, auch /zugang/ = de) bestimmt der Pfad die Sprache, nicht
+    // der Browser — sonst sähe ein Besucher mit englischem Browser auf /zugang/ Englisch unter einer deutschen
+    // Adresse, und Suchmaschinen läsen etwas anderes als er. Impressum, Datenschutz und unbekannte Pfade legen keine
+    // Sprache fest (null): dort erkennt i18next sie wie bisher (Reihenfolge unten).
+    lng: spracheDesPfads(window.location.pathname, SPRACHEN) ?? undefined,
     supportedLngs: [...SPRACHEN],
+    // #609: Ein Browser, der nur "en-US" (oder "pt-BR", "fr-CA" …) meldet, bekommt die Grundsprache. Ohne diese Zeile
+    // passte "en-US" auf keine der supportedLngs, und er bekam Deutsch (gemessen 22.11.2026, tests/hydration-609.mjs).
+    load: 'languageOnly',
     fallbackLng: RUECKFALL_SPRACHE,
     debug: false, // Immer deaktivieren für saubere Console
     detection: {
-      order: ['queryString', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+      // "querystring" klein: So heißt der Erkenner in i18next-browser-languagedetector. Einen unbekannten Namen
+      // ("queryString") übergeht i18next still, ?lng=en wirkte dann nicht (#609, tests/hydration-609.mjs).
+      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       caches: ['cookie'],
     },
     backend: {
@@ -37,6 +48,8 @@ i18n
  */
 export function erkannteSprache(): string | undefined {
   if (i18n.language) return i18n.language;
+  // #609 Schritt 3: Legt der Pfad die Sprache fest (init lng), gilt sie, nicht die Erkennung.
+  if (typeof i18n.options?.lng === 'string') return i18n.options.lng;
   const { languageDetector, languageUtils } = i18n.services ?? {};
   const erkannt = languageDetector?.detect?.();
   if (!erkannt || !languageUtils) return undefined;

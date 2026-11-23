@@ -1,12 +1,14 @@
 {
   "navigation": {
-    "cta_primary": "Rejoindre",
-    "cta_secondary": "Investir"
+    "cta_primary": "Participer",
+    "cta_secondary": "Investir",
+    "menu_toggle": "Afficher ou masquer le menu principal"
   },
   "hero": {
+    "login": "Se connecter",
     "eyebrow": "Plateforme d’apprentissage — coach et compagnon en un",
     "title": "Ton parcours d’apprentissage est unique.",
-    "subtitle": "Tu sais où tu en es aujourd’hui et où tu veux aller. Le chemin entre les deux, tu le trouves sur des fiches qui renvoient les unes aux autres — pas dans un plan de cours.",
+    "subtitle": "Tu sais où tu en es aujourd’hui et où tu veux aller. Le chemin entre les deux, tu le trouves sur des cartes qui renvoient les unes aux autres — pas dans un plan de cours.",
     "cta_primary": "Demander l’accès",
     "cta_secondary": "Pour les investisseurs",
     "cta": "Demander l’accès"
@@ -47,7 +49,7 @@
     "steps": [
       {
         "title": "Définir deux langues",
-        "description": "Ta langue maternelle et celle que tu apprends. Les fiches s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
+        "description": "Ta langue maternelle et celle que tu apprends. Les cartes s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
       },
       {
         "title": "Suivre un sujet",
@@ -68,7 +70,7 @@
       },
       {
         "title": "Ta progression brille",
-        "desc": "Chaque fiche apprise devient une étoile dans ton univers."
+        "desc": "Chaque carte apprise devient une étoile dans ton univers."
       },
       {
         "title": "Un outil pour tout l'apprentissage",
@@ -88,26 +90,26 @@
       },
       {
         "kpi": "11",
-        "label": "fiches reliées dans le sujet Chaleur urbaine"
+        "label": "cartes reliées dans le sujet Chaleur urbaine"
       },
       {
         "kpi": "1 ★",
-        "label": "pour chaque fiche acquise"
+        "label": "pour chaque carte acquise"
       }
     ]
   },
   "features": {
-    "title": "Une fiche, une question, des retrouvailles",
-    "subtitle": "Le chemin se fait en marchant. Sous chaque fiche, il y a des suites au lieu d’une liste de chapitres. Lesquelles dépend de la façon dont les fiches sont reliées entre elles — et d’où tu es déjà allé.",
+    "title": "Une carte, une question, des retrouvailles",
+    "subtitle": "Le chemin se fait en marchant. Sous chaque carte, il y a des suites au lieu d’une liste de chapitres. Lesquelles dépend de la façon dont les cartes sont reliées entre elles — et d’où tu es déjà allé.",
     "items": [
       {
-        "title": "Fiche",
+        "title": "Carte",
         "desc": "Une idée, tout l’écran. Pas de chapitre à faire défiler.",
         "category": "1"
       },
       {
         "title": "Question",
-        "desc": "Chaque fiche a ses questions.",
+        "desc": "Chaque carte a ses questions.",
         "category": "2"
       },
       {
@@ -135,22 +137,23 @@
       },
       {
         "q": "Comment j’apprends avec plinyoo ?",
-        "a": "Tu lis une fiche, tu réponds aux questions et tu suis les renvois vers la suivante. Ce qui est acquis revient plus tard, ce qui vacille revient plus tôt."
+        "a": "Tu lis une carte, tu réponds aux questions et tu suis les renvois vers la suivante. Ce qui est acquis revient plus tard, ce qui vacille revient plus tôt."
       },
       {
         "q": "Puis-je apporter mes propres contenus ?",
-        "a": "Oui, dans la zone « Erstellen ». Tu écris et relies tes propres fiches. Tu importes des fiches depuis Obsidian, depuis des fichiers et depuis Wikipédia dans tes propres sujets, ou tu reprends le texte d’une page web avec un signet. À partir de fichiers et de pages Wikipédia, tu peux aussi importer du vocabulaire au lieu de fiches d’apprentissage."
+        "a": "Oui, dans la zone « Erstellen ». Tu écris et relies tes propres cartes. Tu importes des cartes depuis Obsidian, depuis des fichiers et depuis Wikipédia dans tes propres sujets, ou tu reprends le texte d’une page web avec un signet. À partir de fichiers et de pages Wikipédia, tu peux aussi importer du vocabulaire au lieu de cartes d’apprentissage."
       },
       {
         "q": "Dans quelles langues puis-je apprendre ?",
-        "a": "L’interface existe en allemand et en anglais. Tu définis deux langues : ta langue maternelle et celle que tu apprends en ce moment. Dix sont proposées. Les fiches s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
+        "a": "L’interface existe en allemand et en anglais. Tu définis deux langues : ta langue maternelle et celle que tu apprends en ce moment. Dix sont proposées. Les cartes s’affichent dans la langue d’apprentissage, lorsqu’elles existent dans cette langue."
       }
     ]
   },
   "cta": {
-    "title": "Commence par une fiche.",
-    "subtitle": "Tu n’as pas besoin d’un plan de cours. Tu as besoin d’une première fiche et du renvoi qui te mène à la suivante.",
-    "button": "Demander l’accès"
+    "title": "Commence par une carte.",
+    "subtitle": "Tu n’as pas besoin d’un plan de cours. Tu as besoin d’une première carte et du renvoi qui te mène à la suivante.",
+    "button": "Demander l’accès",
+    "hinweis": "Nous te répondrons personnellement."
   },
   "storySketch": {
     "title": "C'est ainsi que la connaissance devient une qualité de service",
@@ -204,7 +207,7 @@
       "message_label": "Message"
     },
     "join": {
-      "title": "Rejoindre",
+      "title": "Participer",
       "subtitle": "100% produit. 100% pratique. Chez Plinyoo, nous développons des flux d'apprentissage qui soutiennent réellement les équipes et rendent le service mesurablement meilleur.",
       "subtitle_details": "Que ce soit Frontend, Backend, Mobile, Produit ou Conception d'apprentissage : ce qui compte, c'est la pensée produit, la responsabilité et le désir de faire avancer les choses.",
       "role_label": "Rôle/Compétence",
@@ -245,6 +248,12 @@
       "subtitle_details": "Nous te répondrons.",
       "role_label": "Je viens en tant que",
       "role_placeholder": "Merci de choisir",
+      "role_options": {
+        "learner": "Apprenant·e",
+        "curator": "Curateur·rice — je veux transmettre mon savoir",
+        "wegbereiter": "Wegbereiter (ouvreur de chemin) — je dirige une équipe",
+        "other": "Autre chose"
+      },
       "message_label": "Que veux-tu accomplir avec plinyoo ?",
       "message_placeholder": "Par exemple : je veux comprendre pourquoi ma ville devient si chaude l’été.",
       "button": "Demander l’accès",
@@ -269,7 +278,11 @@
       "desc": "Nous développons des solutions individuelles pour tes défis.",
       "button": "Contacte-nous"
     },
-    "books_intro": "Nous présentons ici des livres. Pour quatre d’entre eux, les fiches sont déjà dans l’application, chaque livre comme sujet à part : « Die Eroberer » (Roger Crowley), « Der Almanach von Naval Ravikant » (Eric Jorgenson), « Gewaltfreie Kommunikation » (Marshall B. Rosenberg) et « Die Macht der Geografie » (Tim Marshall).",
+    "books_intro": "Nous présentons ici des livres. Pour quatre d’entre eux, les cartes sont déjà dans l’application, chaque livre comme sujet à part : « Die Eroberer » (Roger Crowley), « Der Almanach von Naval Ravikant » (Eric Jorgenson), « Gewaltfreie Kommunikation » (Marshall B. Rosenberg) et « Die Macht der Geografie » (Tim Marshall).",
+    "new_badge": "Nouveau",
+    "book_subtitle": "Présentation du livre",
+    "book_button": "Aller à la page du livre (en allemand)",
+    "more_books": "Découvrir d’autres livres (en allemand)",
     "books_title": "Livres à parcourir"
   },
   "footer": {
@@ -281,7 +294,7 @@
       "imprint": "Mentions légales",
       "privacy": "Confidentialité",
       "copyright": "Droit d'auteur",
-      "join": "Rejoindre",
+      "join": "Participer",
       "invest": "Investir",
       "contact": "Contact"
     },
@@ -308,6 +321,32 @@
       "text": "Adresse les demandes de droits d'utilisation à heiko@plinyoo.com."
     },
     "back_to_home": "Retour à l'accueil"
+  },
+  "seo": {
+    "start": {
+      "title": "plinyoo : plateforme d’apprentissage, savoir et équipes",
+      "description": "Ton parcours d’apprentissage est unique. Trouve ton chemin sur des cartes qui renvoient les unes aux autres — pas dans un plan de cours."
+    },
+    "zugang": {
+      "title": "Accès | plinyoo",
+      "description": "Dis-nous en quelques mots qui tu es et ce que tu veux apprendre ou partager."
+    },
+    "mitmachen": {
+      "title": "Participer | plinyoo",
+      "description": "Participe à plinyoo : dis-nous si tu veux t’impliquer en Frontend, Backend, Mobile, Product ou Learning Design."
+    },
+    "investieren": {
+      "title": "Investir | plinyoo",
+      "description": "plinyoo est une plateforme d’apprentissage pour le savoir, les équipes et les parcours personnels."
+    },
+    "urheberrecht": {
+      "title": "Droit d’auteur et crédits d’image | plinyoo",
+      "description": "Les contenus de ce site appartiennent, sauf mention contraire, à Plinyoo UG (haftungsbeschränkt) et sont protégés par le droit d’auteur."
+    },
+    "kontakt": {
+      "title": "Contact | plinyoo",
+      "description": "Décris-nous ton idée ou ton défi."
+    }
   },
   "hero1": {
     "eyebrow": "Le savoir qui dure.",
@@ -356,10 +395,56 @@
     "right": "Bonne réponse :",
     "wrong": "Pas tout à fait.",
     "retry": "Réessayer",
-    "note": "Les fiches sont en allemand."
+    "note": "Les cartes sont en allemand.",
+    "topics": "Choisis un thème",
+    "topicEic": "East India Company",
+    "topicBorders": "Frontières",
+    "topicLisbon": "Lisbonne 1941",
+    "source": "Source :",
+    "retrieved": "consulté",
+    "toSource": "Vers la source",
+    "bookNote": "Ces cartes accompagnent le livre « {{titel}} » de {{autor}}."
   },
   "views": {
     "title": "Un regard à l’intérieur",
-    "subtitle": "Trois vues issues du développement de plinyoo. Les textes des vues sont en allemand."
+    "subtitle": "Trois vues issues du développement de plinyoo. Les textes des vues sont en allemand.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Concept",
+        "title": "Ton objectif, ton chemin, ton univers de connaissances",
+        "text": "Un aperçu du champ d’apprentissage tel que nous l’imaginons : une page d’accueil avec ton objectif, le chemin pour y arriver et le retour sur tes étoiles.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Champ d’apprentissage : ton univers et la question « Que veux-tu savoir faire ? » (capture d’écran en allemand)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Champ d’apprentissage : « Voici ton chemin » avec des étapes vers l’objectif (capture d’écran en allemand)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Champ d’apprentissage : « Voilà pour aujourd’hui » avec les étoiles collectées (capture d’écran en allemand)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Concept",
+        "title": "Le réseau de connaissances",
+        "text": "Onze cartes sur la chaleur urbaine, reliées par de vrais liens et entourées d’autres thèmes. Fais glisser pour réorganiser, fais défiler pour zoomer.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "Le réseau de connaissances — vue interactive"
+      },
+      {
+        "id": "autor",
+        "tag": "Concept",
+        "title": "Voir les chemins et les lacunes",
+        "text": "Pour celles et ceux qui transmettent du savoir : tu choisis des mots-clés et tu vois comment les cartes se relient et où il manque encore un pont.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Chemins et lacunes — vue interactive"
+      }
+    ]
   }
 }

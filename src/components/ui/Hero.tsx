@@ -6,11 +6,11 @@
 // #503 Zugang (claude/_503cta/entwurf.md, B1–B6): Mit Telefon steht die Zugangsschaltfläche unter 1024 px unter dem
 //   Telefon (nach seiner Bedienzeile), ab 1024 px in der Textspalte unter dem Text; ohne Telefon unter dem Text.
 //   Darunter steht jeweils die Zeile „Wir melden uns persönlich bei dir.“ (ZugangHinweis, nur in Sprachen mit eigenem Text).
-// Gegenbild-Zeile und Faden erscheinen nur, wenn die gewählte Sprache eigene Texte unter hero.faden hat (wie Views.tsx);
-//   sonst bleibt der Hero einspaltig wie bisher, ohne deutsche Beschriftungen in einer fremden Sprache.
+// Gegenbild-Zeile und Faden erscheinen nur auf Deutsch (#609, die Karten sind deutsche Buchtexte) und nur, wenn
+//   hero.faden da ist; sonst bleibt der Hero einspaltig wie bisher, ohne deutsche Texte in einer fremden Sprache.
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
 import HeroFaden from './HeroFaden';
@@ -22,15 +22,19 @@ const zugangKlassen =
 
 export default function Hero() {
   const { t, i18n } = useTranslation();
-  const mitFaden = Boolean(i18n.getResource(i18n.resolvedLanguage || i18n.language, 'translation', 'hero.faden'));
+  // #609 (Entscheidung Max 22.11.2026): Faden und Gegenbild-Zeile nur auf Deutsch. Die Karten des Fadens sind Buchtexte
+  // (fadenInhalt.ts aus content/buecher, deutsch, Heiko E-536 "a") und wären auf einer Sprachseite deutsche Reste
+  // (E-535 "a") -- auch wenn die Sprache hero.faden übersetzt hat. tests/faden-nur-deutsch-609.mjs hält das fest.
+  const sprache = (i18n.resolvedLanguage || i18n.language || '').split('-')[0];
+  const mitFaden = sprache === 'de' && Boolean(i18n.getResource(sprache, 'translation', 'hero.faden'));
 
   return (
     <div className="bg-main-background text-main-text">
       {/* Header — wie app.plinyoo.com; Logo-Verweis mindestens 44 px hoch (B11) */}
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-5 py-4 sm:px-8">
-        <Link to="/" aria-label={String(t('hero.title'))} className="flex h-11 items-center text-xl font-bold font-sans text-primary">
+        <SprachLink to="/" aria-label={String(t('hero.title'))} className="flex h-11 items-center text-xl font-bold font-sans text-primary">
           plinyoo
-        </Link>
+        </SprachLink>
         <div className="flex items-center gap-2.5">
           <LanguageSwitcher />
           <a
@@ -39,7 +43,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="flex h-11 items-center rounded-full border border-border bg-surface-1 px-4 text-sm font-medium text-primary transition-colors hover:bg-surface-2"
           >
-            Login
+            {t('hero.login')}
           </a>
         </div>
       </div>
@@ -78,13 +82,13 @@ export default function Hero() {
 
           {/* B1/B2: Mit Telefon steht diese Schaltfläche nur ab 1024 px (lg) hier in der Textspalte, darunter die zweite nach dem Telefon */}
           <div className={`mt-1 flex flex-col gap-2 ${mitFaden ? 'hidden lg:flex' : ''}`}>
-            <Link
+            <SprachLink
               to="/zugang/"
               data-ziel="hero-zugang"
               className={`${zugangKlassen} sm:self-start ${mitFaden ? '' : 'lg:self-center'}`}
             >
               {t('hero.cta')}
-            </Link>
+            </SprachLink>
             <ZugangHinweis />
           </div>
         </section>
@@ -94,9 +98,9 @@ export default function Hero() {
         {/* B1–B3: Unter 1024 px steht die Zugangsschaltfläche nach dem Telefon, unter 640 px spaltenbreit, darüber mittig */}
         {mitFaden && (
           <div className="flex flex-col gap-2 sm:items-center lg:hidden">
-            <Link to="/zugang/" data-ziel="hero-zugang" className={zugangKlassen}>
+            <SprachLink to="/zugang/" data-ziel="hero-zugang" className={zugangKlassen}>
               {t('hero.cta')}
-            </Link>
+            </SprachLink>
             <ZugangHinweis className="text-center" />
           </div>
         )}

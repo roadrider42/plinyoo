@@ -3,7 +3,7 @@
  * Gesetzlich vorgeschriebene Angaben gemäß DDG § 5 (früher TMG § 5)
  */
 
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 
 export default function Impressum() {
   return (
@@ -107,9 +107,9 @@ export default function Impressum() {
             </p>
             <p className="text-text-muted leading-relaxed mt-4">
               Weitere Informationen zum Datenschutz finden Sie in unserer{' '}
-              <Link to="/datenschutz/" className="text-primary hover:underline font-medium">
+              <SprachLink to="/datenschutz/" className="text-primary hover:underline font-medium">
                 Datenschutzerklärung
-              </Link>
+              </SprachLink>
               .
             </p>
           </div>
@@ -117,18 +117,18 @@ export default function Impressum() {
           {/* Navigation */}
           <div className="pt-8 border-t border-border">
             <div className="flex flex-wrap gap-4">
-              <Link
+              <SprachLink
                 to="/"
                 className="inline-block rounded-lg bg-primary text-white px-6 py-3 font-semibold hover:bg-primary/90 transition"
               >
                 Zur Startseite
-              </Link>
-              <Link
+              </SprachLink>
+              <SprachLink
                 to="/datenschutz/"
                 className="inline-block rounded-lg border border-primary text-primary px-6 py-3 font-semibold hover:bg-primary hover:text-white transition"
               >
                 Datenschutzerklärung
-              </Link>
+              </SprachLink>
             </div>
           </div>
         </div>

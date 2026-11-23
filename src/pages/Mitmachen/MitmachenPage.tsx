@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useContactForm } from '@/hooks/hook.useContactForm';
 import KontaktFehlerHinweis from '@/components/ui/KontaktFehlerHinweis';
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from "react-i18next";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -46,7 +46,7 @@ export default function MitmachenPage() {
     <main className="bg-main-background text-main-text">
       <section className="max-w-4xl mx-auto px-6 md:px-12 py-16">
         <div>
-          <Link to="/" className="inline-block mb-8 text-sm text-primary hover:underline"> &larr; {t('forms.back_to_home')} </Link>
+          <SprachLink to="/" className="inline-block mb-8 text-sm text-primary hover:underline"> &larr; {t('forms.back_to_home')} </SprachLink>
         </div>
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold font-sans text-primary">{t('forms.join.title')}</h1>
@@ -107,7 +107,7 @@ export default function MitmachenPage() {
             </button>
           </div>
           <p className="text-xs text-gray-500 mt-4 text-center">
-            {t('forms.privacy_notice')} <Link to="/datenschutz/" className="underline">{t('forms.privacy_link')}</Link>
+            {t('forms.privacy_notice')} <SprachLink to="/datenschutz/" className="underline">{t('forms.privacy_link')}</SprachLink>
           </p>
         </form>
 
@@ -115,9 +115,9 @@ export default function MitmachenPage() {
           <div className="text-center py-12">
             <h2 className="text-2xl font-bold font-sans text-primary">{t('forms.success.title')}</h2>
             <p className="mt-2 text-lg">{t('forms.success.message')}</p>
-            <Link to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
+            <SprachLink to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
               {t('forms.back_to_home')}
-            </Link>
+            </SprachLink>
           </div>
         )}
       </section>

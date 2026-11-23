@@ -1,9 +1,11 @@
 {
   "navigation": {
-    "cta_primary": "Join",
-    "cta_secondary": "Invest"
+    "cta_primary": "Get involved",
+    "cta_secondary": "Invest",
+    "menu_toggle": "Show or hide main menu"
   },
   "hero": {
+    "login": "Log in",
     "eyebrow": "Learning platform — coach and companion in one",
     "title": "Your learning path is unique.",
     "subtitle": "You know where you stand today and where you want to go. You find the way in between on cards that point to one another — not in a course plan.",
@@ -171,7 +173,8 @@
   "cta": {
     "title": "Start with one card.",
     "subtitle": "You don't need a course plan. You need a first card and the link that takes you to the next.",
-    "button": "I’d like to be part of it"
+    "button": "I’d like to be part of it",
+    "hinweis": "We’ll get back to you personally."
   },
   "storySketch": {
     "title": "This is how knowledge becomes service quality",
@@ -214,7 +217,11 @@
       "button": "Contact us"
     },
     "books_intro": "Here we present books. For four of them, the learning cards are already in the app, each book as its own topic: “Die Eroberer” (Roger Crowley), “Der Almanach von Naval Ravikant” (Eric Jorgenson), “Gewaltfreie Kommunikation” (Marshall B. Rosenberg) and “Die Macht der Geografie” (Tim Marshall).",
-    "books_title": "Books to play through"
+    "books_title": "Books to play through",
+    "new_badge": "New",
+    "book_subtitle": "Book introduction",
+    "book_button": "Go to the book page (in German)",
+    "more_books": "Discover more books (in German)"
   },
   "forms": {
     "validation": {
@@ -242,7 +249,7 @@
       "message_label": "Message"
     },
     "join": {
-      "title": "Join us",
+      "title": "Get involved",
       "subtitle": "100% product. 100% practice. At Plinyoo, we develop learning flows that truly support teams and make service measurably better.",
       "subtitle_details": "Whether Frontend, Backend, Mobile, Product, or Learning Design: What matters is product thinking, responsibility, and a desire to get things done.",
       "role_label": "Role/Skill",
@@ -308,7 +315,7 @@
       "imprint": "Imprint",
       "privacy": "Privacy",
       "copyright": "Copyright",
-      "join": "Join us",
+      "join": "Get involved",
       "invest": "Invest",
       "contact": "Contact"
     },
@@ -336,6 +343,32 @@
     },
     "back_to_home": "Back to Home"
   },
+  "seo": {
+    "start": {
+      "title": "plinyoo: Learning platform for knowledge and teams",
+      "description": "Your learning path is unique. Find your way on cards that point to one another — not in a course plan."
+    },
+    "zugang": {
+      "title": "Access | plinyoo",
+      "description": "Tell us briefly who you are and what you want to learn or share."
+    },
+    "mitmachen": {
+      "title": "Get involved | plinyoo",
+      "description": "Get involved with plinyoo: Tell us whether you’d like to contribute to Frontend, Backend, Mobile, Product or Learning Design."
+    },
+    "investieren": {
+      "title": "Invest | plinyoo",
+      "description": "plinyoo is a learning platform for knowledge, teams and your own paths."
+    },
+    "urheberrecht": {
+      "title": "Copyright & Image Credits | plinyoo",
+      "description": "Content on this website belongs, unless marked otherwise, to Plinyoo UG (haftungsbeschränkt) and is protected by copyright."
+    },
+    "kontakt": {
+      "title": "Contact | plinyoo",
+      "description": "Describe your idea or challenge to us."
+    }
+  },
   "journey": {
     "title": "Try a path",
     "subtitle": "Every star is a card, every line a link. Pick a star and follow where it leads you — each card with a question and its source, not a course.",
@@ -362,10 +395,56 @@
     "right": "Correct:",
     "wrong": "Not quite.",
     "retry": "Try again",
-    "note": "The cards are in German."
+    "note": "The cards are in German.",
+    "topics": "Choose a topic",
+    "topicEic": "East India Company",
+    "topicBorders": "Borders",
+    "topicLisbon": "Lisbon 1941",
+    "source": "Source:",
+    "retrieved": "retrieved",
+    "toSource": "To the source",
+    "bookNote": "These cards go with the book “{{titel}}” by {{autor}}."
   },
   "views": {
     "title": "A look inside",
-    "subtitle": "Three views from the development of plinyoo. The texts in the views are in German."
+    "subtitle": "Three views from the development of plinyoo. The texts in the views are in German.",
+    "items": [
+      {
+        "id": "lernfeld",
+        "tag": "Concept",
+        "title": "Your goal, your path, your knowledge universe",
+        "text": "A look at the learning field as we imagine it: a start page with your goal, the path towards it, and a look back with your stars.",
+        "images": [
+          {
+            "src": "/ansichten/lernfeld-start.webp",
+            "alt": "Learning field: your universe and the question “What do you want to be able to do?” (screenshot in German)"
+          },
+          {
+            "src": "/ansichten/lernfeld-weg.webp",
+            "alt": "Learning field: “This is your path” with stops on the way to the goal (screenshot in German)"
+          },
+          {
+            "src": "/ansichten/lernfeld-sterne.webp",
+            "alt": "Learning field: “That was today” with collected stars (screenshot in German)"
+          }
+        ]
+      },
+      {
+        "id": "netz",
+        "tag": "Concept",
+        "title": "The knowledge network",
+        "text": "Eleven cards on urban heat, with real links between them, surrounded by further topics. Drag to rearrange, scroll to zoom.",
+        "src": "/ansichten/wissensnetz.html",
+        "frameTitle": "The knowledge network — interactive view"
+      },
+      {
+        "id": "autor",
+        "tag": "Concept",
+        "title": "See paths and gaps",
+        "text": "For everyone who passes on knowledge: you choose keywords and see how cards connect and where a bridge is still missing.",
+        "src": "/ansichten/autorenwerkzeug.html",
+        "frameTitle": "Paths and gaps — interactive view"
+      }
+    ]
   }
 }

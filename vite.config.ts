@@ -15,7 +15,7 @@ function alteAdressenSkript(): string {
     bundle: true, write: false, format: 'iife', globalName: '__alteAdressen', minify: true, target: 'es2017',
   });
   const code = b.outputFiles[0].text.trim();
-  return `<script>${code};(function(){try{var z=__alteAdressen.neueAdresse(location.search,location.hash);if(z)location.replace(z)}catch(e){}})()</script>`;
+  return `<script>${code};(function(){try{var z=__alteAdressen.neueAdresse(location.search,location.hash,location.pathname);if(z)location.replace(z)}catch(e){}})()</script>`;
 }
 function setzeAlteAdressen(html: string): string {
   const anzahl = html.split(ALTE_ADRESSEN).length - 1;

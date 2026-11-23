@@ -27,6 +27,10 @@
 //     dem Vorrendern waren sie alle "/" und standen gar nicht darin.
 //     Gegenprobe 21.11.2026 mit --generator <Skript von origin/main 09c8f32>:
 //     ROT S6 (sieben Adressen fehlen), Exit 1.
+// S7  (#609 Schritt 3) Die 36 Sprachfassungen (/en/, /en/zugang/ … ohne
+//     Impressum und Datenschutz) stehen darin, und jede Fassung einer Seite
+//     nennt mit xhtml:link alle sieben Fassungen und x-default (deutsch).
+//     Impressum und Datenschutz (nur deutsch) tragen keine.
 //
 // Die erwarteten Tage rechnet diese Datei selbst aus git log aus, nicht aus
 // dem Skript. Ein flacher Klon kennt nur den letzten Commit: dann "nicht
@@ -87,6 +91,15 @@ erwartet.set(`${SITE}/`, { tag: commitTag(['index.html', 'src/', 'public/locales
 // Startseite (ihr Inhalt liegt an denselben Stellen). Ausgeschrieben, nicht aus src/routes/seiten.ts gelesen.
 const APP_SEITEN = ['/zugang/', '/mitmachen/', '/investieren/', '/impressum/', '/datenschutz/', '/urheberrecht/', '/kontakt/'];
 for (const p of APP_SEITEN) erwartet.set(`${SITE}${p}`, { tag: erwartet.get(`${SITE}/`).tag, woher: 'index.html, src/, public/locales/ (Seite der App)' });
+// S7 (#609 Schritt 3, Heiko E-528): jede Seite außer Impressum und Datenschutz in den sechs anderen Sprachen, unter
+// /<sprache>/<seite>/, und jede Fassung zählt mit xhtml:link alle sieben Fassungen und x-default (deutsch) auf.
+// Ausgeschrieben wie oben. Impressum und Datenschutz gibt es nur deutsch (E-540 "C"): ohne xhtml:link.
+const SPRACHEN_OHNE_DE = ['en', 'es', 'fr', 'pt', 'uk', 'pl'];
+const MIT_FASSUNGEN = ['/', '/zugang/', '/mitmachen/', '/investieren/', '/urheberrecht/', '/kontakt/'];
+const NUR_DEUTSCH = ['/impressum/', '/datenschutz/'];
+const SPRACH_SEITEN = SPRACHEN_OHNE_DE.flatMap((s) => MIT_FASSUNGEN.map((p) => `/${s}${p}`));
+for (const p of SPRACH_SEITEN) erwartet.set(`${SITE}${p}`, { tag: erwartet.get(`${SITE}/`).tag, woher: 'index.html, src/, public/locales/ (Sprachfassung)' });
+const fassungenVon = (dePfad) => [['de', dePfad], ...SPRACHEN_OHNE_DE.map((s) => [s, `/${s}${dePfad}`]), ['x-default', dePfad]];
 if (buecher.length) erwartet.set(`${SITE}/buch/`, { tag: buecher.map((b) => b.tag).sort().at(-1), woher: 'jüngstes Buch' });
 for (const b of buecher) erwartet.set(`${SITE}/buch/${b.slug}/`, { tag: b.tag, woher: `content/buecher/${b.slug}` });
 for (const u of unterseiten) erwartet.set(`${SITE}${u.pfad}`, { tag: u.tag, woher: u.datei });
@@ -107,7 +120,7 @@ if (lesenArg > 0) {
   for (const u of unterseiten) seite(u.pfad.split('/').filter(Boolean));
   // Seiten der App: das Skript verlangt vorgerenderten Inhalt in #root (#609).
   const appSeite = (teile) => { mkdirSync(join(tmp, ...teile), { recursive: true }); writeFileSync(join(tmp, ...teile, 'index.html'), '<!doctype html><title>Platzhalter</title><div id="root"><main>Platzhalter</main></div>'); };
-  for (const p of ['/', ...APP_SEITEN]) appSeite(p.split('/').filter(Boolean));
+  for (const p of ['/', ...APP_SEITEN, ...SPRACH_SEITEN]) appSeite(p.split('/').filter(Boolean));
   try {
     // --generator <datei>: anderer Stand des Skripts für die Gegenprobe; er muss in scripts/ liegen (es rechnet von dort die Wurzel).
     const genArg = process.argv.indexOf('--generator');
@@ -128,6 +141,7 @@ if (lesenArg > 0) {
 const eintraege = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(([, inhalt]) => ({
   loc: inhalt.match(/<loc>([^<]*)<\/loc>/)?.[1],
   lastmod: inhalt.match(/<lastmod>([^<]*)<\/lastmod>/)?.[1],
+  alternates: [...inhalt.matchAll(/<xhtml:link rel="alternate" hreflang="([^"]+)" href="([^"]+)" \/>/g)].map(([, h, href]) => `${h} ${href}`),
 }));
 const rot = [];
 const start = eintraege[0];
@@ -137,10 +151,23 @@ if (eintraege.some((x) => x.loc === SITE)) rot.push(`S1 "${SITE}" ohne Schrägst
 
 for (const [loc, e] of erwartet) {
   const x = eintraege.find((y) => y.loc === loc);
-  const kennung = loc === `${SITE}/` ? 'S2' : APP_SEITEN.some((p) => `${SITE}${p}` === loc) ? 'S6' : unterseiten.some((u) => `${SITE}${u.pfad}` === loc) ? 'S3' : 'S4';
+  const kennung = loc === `${SITE}/` ? 'S2' : APP_SEITEN.some((p) => `${SITE}${p}` === loc) ? 'S6' : SPRACH_SEITEN.some((p) => `${SITE}${p}` === loc) ? 'S7' : unterseiten.some((u) => `${SITE}${u.pfad}` === loc) ? 'S3' : 'S4';
   if (!x) { rot.push(`${kennung} ${loc} fehlt`); continue; }
   if (x.lastmod !== e.tag) rot.push(`${kennung} ${loc}: lastmod "${x.lastmod ?? '(keins)'}", letzter Commit auf ${e.woher} ist ${e.tag}`);
   if (HEUTE.has(x.lastmod) && !HEUTE.has(e.tag)) rot.push(`S5 ${loc}: lastmod ist heute (${x.lastmod}), ${e.woher} hat heute keinen Commit`);
+}
+// S7: xhtml:link je Fassung
+if (!/<urlset[^>]*xmlns:xhtml="http:\/\/www\.w3\.org\/1999\/xhtml"/.test(xml)) rot.push('S7 <urlset> ohne xmlns:xhtml');
+for (const dePfad of MIT_FASSUNGEN) {
+  const soll = fassungenVon(dePfad).map(([h, p]) => `${h} ${SITE}${p}`).sort().join(' | ');
+  for (const [, p] of fassungenVon(dePfad).slice(0, -1)) {
+    const x = eintraege.find((y) => y.loc === `${SITE}${p}`);
+    if (x && [...x.alternates].sort().join(' | ') !== soll) rot.push(`S7 ${p}: xhtml:link [${x.alternates.join(', ')}], erwartet [${soll}]`);
+  }
+}
+for (const p of NUR_DEUTSCH) {
+  const x = eintraege.find((y) => y.loc === `${SITE}${p}`);
+  if (x?.alternates.length) rot.push(`S7 ${p} gibt es nur deutsch, trägt aber xhtml:link [${x.alternates.join(', ')}]`);
 }
 const fremd = eintraege.filter((x) => !erwartet.has(x.loc)).map((x) => x.loc);
 if (fremd.length) rot.push(`Adressen ohne Erwartung (Prüfung nachziehen): ${fremd.join(', ')}`);
@@ -149,4 +176,4 @@ if (rot.length) {
   console.log(`ROT (${rot.length}):\n  ${rot.join('\n  ')}`);
   process.exit(1);
 }
-console.log(`GRUEN S1-S6: ${eintraege.length} Adressen, Startseite ${SITE}/ (${erwartet.get(`${SITE}/`).tag}), ${APP_SEITEN.length} Seiten der App, ${unterseiten.length} Unterseiten, ${buecher.length} Bücher; jedes lastmod = letzter Commit.`);
+console.log(`GRUEN S1-S7: ${eintraege.length} Adressen, Startseite ${SITE}/ (${erwartet.get(`${SITE}/`).tag}), ${APP_SEITEN.length} Seiten der App, ${SPRACH_SEITEN.length} Sprachfassungen mit hreflang, ${unterseiten.length} Unterseiten, ${buecher.length} Bücher; jedes lastmod = letzter Commit.`);

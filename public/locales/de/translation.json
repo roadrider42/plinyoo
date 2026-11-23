@@ -1,9 +1,11 @@
 {
   "navigation": {
     "cta_primary": "Mitmachen",
-    "cta_secondary": "Investieren"
+    "cta_secondary": "Investieren",
+    "menu_toggle": "Hauptmenü umschalten"
   },
   "hero": {
+    "login": "Anmelden",
     "eyebrow": "Lernplattform — Coach und Begleiter in einem",
     "title": "Dein Lernpfad ist einzigartig.",
     "subtitle": "Du weißt, wo du heute stehst und wohin du willst. Den Weg dazwischen findest du auf Karten, die aufeinander verweisen — nicht in einem Kursplan.",

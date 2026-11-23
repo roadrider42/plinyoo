@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 
 // Reihenfolge der Abschnitte; Texte stehen in public/locales/<sprache>/translation.json unter "privacy".
@@ -34,9 +34,9 @@ export default function Datenschutz() {
         </section>
       ))}
 
-      <Link to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
+      <SprachLink to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
         {t('privacy.back_to_home')}
-      </Link>
+      </SprachLink>
     </div>
   );
 }

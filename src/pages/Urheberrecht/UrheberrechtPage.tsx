@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { SprachLink } from '@/components/SprachLink';
 import { useTranslation } from 'react-i18next';
 
 export default function Urheberrecht() {
@@ -18,9 +18,9 @@ export default function Urheberrecht() {
       <h2 className="text-2xl font-semibold mb-4">{t('copyright.kontakt.title')}</h2>
       <p className="mb-8">{t('copyright.kontakt.text')}</p>
 
-      <Link to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
+      <SprachLink to="/" className="inline-block mt-8 px-6 py-2 text-sm font-semibold text-primary bg-transparent border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
         {t('copyright.back_to_home')}
-      </Link>
+      </SprachLink>
     </div>
   );
 }

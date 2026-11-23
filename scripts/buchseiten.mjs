@@ -486,9 +486,11 @@ async function buecherFuss(sichtbar) {
   const zeile = sichtbar.length ? `<nav class="buecher-fuss" lang="de" aria-label="Bücher" style="background:#1C2A33;color:rgba(255,255,255,.7);font:14px/1.4 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">
 <style>.buecher-fuss .bf{max-width:72rem;margin:0 auto;padding:0 24px 28px;display:flex;flex-wrap:wrap;align-items:center;gap:0 18px}.buecher-fuss a{display:inline-flex;align-items:center;min-height:44px;color:rgba(255,255,255,.7);text-decoration:none}.buecher-fuss a:hover{color:#fff}.buecher-fuss .bt{color:#fff;font-weight:600}</style>
 <div class="bf"><a class="bt" href="/buch/">Alle Bücher</a>${links}<a href="${TRAINER_HREF}">${TRAINER_TEXT}</a></div></nav>` : '';
-  // #609: jede vorgerenderte Seite der App (src/routes/seiten.ts) trägt die Leiste, dazu 404.html (Hülle).
-  const { SEITEN } = await import(path.join(root, 'src/routes/seiten.ts'));
-  const dateien = [...SEITEN.map((s) => path.join(...s.pfad.split('/').filter(Boolean), 'index.html')), '404.html'];
+  // #609: jede vorgerenderte Seite der App (src/routes/seiten.ts) trägt die Leiste, in jeder Sprache (Schritt 3), dazu
+  // 404.html (Hülle). Die Leiste bleibt deutsch beschriftet (lang="de"): Die Bücher sind deutsch (Heiko E-536 "a").
+  const { fassungen } = await import(path.join(root, 'src/routes/seiten.ts'));
+  const { SPRACHEN } = await import(path.join(root, 'src/lib/sprachen.ts'));
+  const dateien = [...fassungen(SPRACHEN).map((f) => path.join(...f.pfad.split('/').filter(Boolean), 'index.html')), '404.html'];
   for (const datei of dateien) {
     const p = path.join(distDir, datei);
     const html = await readFile(p, 'utf8');
