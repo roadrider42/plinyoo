@@ -1,0 +1,1817 @@
+{
+  "slug": "harnish-scaling-up",
+  "draft": false,
+  "nr": 24,
+  "kachelTitel": "Harnish — Scaling Up",
+  "kachelText": "zu Harnishs Werkzeugen für Ziele, Strategie, Verantwortung und Wachstum, mit Wissensgraph und interaktiven Fragen.",
+  "symbol": "📈",
+  "autor": "Verne Harnish",
+  "titel": "Scaling Up. Skalieren auch Sie!",
+  "untertitel": "Weshalb es einige Unternehmen packen … und warum andere stranden",
+  "uebersetzer": "",
+  "verlag": "ScaleUp Institut",
+  "erschienen": "2016",
+  "isbn": "978-3-9818017-0-5",
+  "leitfrage": "Wie führt man ein Unternehmen, das wächst, von Zielen und Rhythmus bis zu Verantwortung und Geld?",
+  "einordnung": "Die Karten stellen Harnishs Werkzeuge für wachsende Unternehmen nebeneinander und geben seine Aussagen wieder.",
+  "kartenIntro": "Alle 16 kannst du unten durchspielen.",
+  "karten": [
+    "Freiheit durch Routine",
+    "Minuten schneller",
+    "Wer, Was, Wann",
+    "Team, Quartalsziel, Rhythmus",
+    "Denken und Umsetzen",
+    "7 Facetten der Strategie",
+    "Marketing und die 4P",
+    "Menschen und Prozesse",
+    "Delegieren in vier Schritten",
+    "Verantwortliche je Zelle",
+    "Jedermann und Niemand",
+    "Feedback und Werte",
+    "Agile Scaleups",
+    "Komplexität und Barrieren",
+    "Blick nach außen und innen",
+    "Cash-Flow im Blick"
+  ],
+  "kartenStatus": "Jede Karte nennt ihre Quelle und hat drei Fragen.",
+  "verlagUrl": "",
+  "leseprobeUrl": "",
+  "amazonUrl": "https://link.amazon/B00VnaGCd",
+  "cover": "cover.jpg",
+  "coverCredit": "Cover der deutschen Ausgabe (ScaleUp Institut, Abbildung von exlibris.ch, unverändert, Stand 2026-11-24)",
+  "naechsteWoche": "",
+  "probeTitel": "Probier es an den Karten aus",
+  "graphTitel": "Der Wissensgraph zu Harnishs Werkzeugen für Wachstum",
+  "knoten": [
+    {
+      "slug": "routine-ziele",
+      "titel": "Freiheit durch Routine"
+    },
+    {
+      "slug": "zeithorizont-minuten-schneller",
+      "titel": "Minuten schneller"
+    },
+    {
+      "slug": "www-rechenschaft",
+      "titel": "Wer, Was, Wann"
+    },
+    {
+      "slug": "kennzeichen-eins-bis-drei",
+      "titel": "Team, Quartalsziel, Rhythmus"
+    },
+    {
+      "slug": "strategie-zwei-aufgaben",
+      "titel": "Denken und Umsetzen"
+    },
+    {
+      "slug": "sieben-facetten",
+      "titel": "7 Facetten der Strategie"
+    },
+    {
+      "slug": "marketing-barriere",
+      "titel": "Marketing und die 4P"
+    },
+    {
+      "slug": "people-process",
+      "titel": "Menschen und Prozesse"
+    },
+    {
+      "slug": "delegation-vier-schritte",
+      "titel": "Delegieren in vier Schritten"
+    },
+    {
+      "slug": "verantwortung-zelle",
+      "titel": "Verantwortliche je Zelle"
+    },
+    {
+      "slug": "jedermann-gedicht",
+      "titel": "Jedermann und Niemand"
+    },
+    {
+      "slug": "kennzeichen-vier-bis-sieben",
+      "titel": "Feedback und Werte"
+    },
+    {
+      "slug": "boss-los-agile-scaleups",
+      "titel": "Agile Scaleups"
+    },
+    {
+      "slug": "komplexitaet-barrieren",
+      "titel": "Komplexität und Barrieren"
+    },
+    {
+      "slug": "fokus-innen-aussen",
+      "titel": "Blick nach außen und innen"
+    },
+    {
+      "slug": "cash-im-blick",
+      "titel": "Cash-Flow im Blick"
+    }
+  ],
+  "kanten": [
+    [
+      0,
+      1,
+      "verwandt"
+    ],
+    [
+      0,
+      2,
+      "verwandt"
+    ],
+    [
+      1,
+      4,
+      "verwandt"
+    ],
+    [
+      2,
+      3,
+      "verwandt"
+    ],
+    [
+      2,
+      9,
+      "verwandt"
+    ],
+    [
+      3,
+      11,
+      "verwandt"
+    ],
+    [
+      4,
+      5,
+      "verwandt"
+    ],
+    [
+      5,
+      6,
+      "verwandt"
+    ],
+    [
+      6,
+      14,
+      "verwandt"
+    ],
+    [
+      7,
+      8,
+      "verwandt"
+    ],
+    [
+      7,
+      13,
+      "verwandt"
+    ],
+    [
+      7,
+      12,
+      "verwandt"
+    ],
+    [
+      8,
+      9,
+      "verwandt"
+    ],
+    [
+      8,
+      12,
+      "verwandt"
+    ],
+    [
+      9,
+      11,
+      "verwandt"
+    ],
+    [
+      9,
+      10,
+      "verwandt"
+    ],
+    [
+      13,
+      14,
+      "verwandt"
+    ],
+    [
+      13,
+      15,
+      "verwandt"
+    ],
+    [
+      14,
+      15,
+      "verwandt"
+    ]
+  ],
+  "beitrag": {
+    "etikett": "",
+    "titel": "Wie gelingt Wachstum? Harnishs Werkzeuge für Gründer und Führungsteams",
+    "anreisser": "Laut Verne Harnish lautet ein Schlüsselprinzip seiner Methoden: Mehr Freiheit durch Routine. Die Karten legen seine Werkzeuge für Ziele, Strategie, Verantwortung und Wachstum nebeneinander.",
+    "absaetze": [
+      "Der US-amerikanische Wirtschaftsautor Verne Harnish, der unter anderem die Entrepreneurs' Organization gegründet hat, beschreibt in „Scaling Up. Skalieren auch Sie!“ Methoden und Werkzeuge für wachsende Unternehmen. Die Karten dieser Seite stammen aus den Markierungen eines Lesers in der deutschen Ausgabe. Eines seiner Schlüsselprinzipien lautet nach Harnish: Mehr Freiheit durch Routine. Ziele ohne Routine seien nur Wünsche, und Routinen ohne Ziel seien nutzlos.",
+      "Harnish erinnert an einen Satz des Microsoft-Mitgründers Bill Gates: Die meisten Menschen überschätzten, was sie in einem Jahr erreichen können, und unterschätzten, was sie in zehn Jahren erreichen können. Alles zwischen dem Quartalsplan und dem großen Ziel in 10 bis 25 Jahren sei nur eine grobe Schätzung. Für Führungskräfte genügt nach Harnish ein Vorsprung von ein paar Minuten vor Markt, Wettbewerb und den eigenen Mitarbeitern.",
+      "Für den Rhythmus im Alltag nennt Harnish das Wer, Was, Wann: Am Ende des wöchentlichen Meetings skizziert man kurz, wer gesagt hat, was er wann tun wird. In einer nummerierten Liste führt er außerdem auf, dass das Führungsteam gesund und auf einer Linie ist, dass sich jeder mit dem Top-Unternehmensziel des laufenden Quartals identifiziert und dass die Kommunikation einen Rhythmus bekommt. Für die Strategie trennt er das strategische Denken von der Planung der Umsetzung; für das Denken trifft sich nach ihm eine Handvoll hochrangiger Führungskräfte wöchentlich in einem Gremium, das der Managementexperte Jim Collins The Council nennt. Das Tool 7 Facetten der Strategie fragt unter anderem nach drei Markenversprechen, einer Garantie darauf und dem Faktor X. Als Nummer 1 unter den funktionalen Barrieren für Wachstum nennt Harnish das Fehlen einer effektiven Marketingabteilung; Schlüssel sei eine Stunde pro Woche für das Marketing.",
+      "Führungskräfte müssen nach Harnish Menschen und Prozesse ins Gleichgewicht bringen. Das Delegieren beschreibt er in vier Schritten: bestimmen, was die Person oder das Team erreichen soll, ein Bewertungssystem schaffen, Feedback geben und rechtzeitig Anerkennung zeigen. Auch der indisch-US-amerikanische Unternehmer und Investor Naval Ravikant (* 1974) spricht über die Arbeit anderer: Nach Ravikant braucht man Hebelung, die es als Personal, Kapital, Software-Code und Medien gibt; mehr dazu im [[buch:der-almanach-von-naval-ravikant|Almanach]].",
+      "Jede Zelle der Organisation braucht nach Harnish einen klar definierten Verantwortlichen, und er empfiehlt einen Unterschied zwischen Rechenschaft, Verantwortung und Entscheidungsbefugnis. Ein von ihm zitiertes Gedicht über Verantwortung erzählt von Jedermann, Jemand, Irgendwer und Niemand, bei denen am Ende niemand den wichtigen Job erledigt. Nach dem US-amerikanischen Journalisten Walter Isaacson fragte Elon Musk (* 1971), Chef von Tesla und SpaceX, bei SpaceX immer wieder, wer eine Anforderung aufgestellt habe; jedes Teil, jeder Prozess und jede Vorgabe brauche einen Namen. Mehr dazu in [[buch:isaacson-elon-musk|„Elon Musk“]]. Harnish nennt außerdem Firmen, die mit einer Organisation ohne Boss experimentieren, und bevorzugt für sie den Begriff agile Scaleups; als Beispiel führt er L. David Marquet an, der ein Atom-U-Boot der US-Navy binnen eines Jahres auf Platz eins führte.",
+      "Wächst ein Unternehmen, entstehen nach Harnish drei fundamentale Barrieren, und eine Person könne etwa sieben bis zehn andere führen. Wächst der Umsatz von 1 auf 10 Millionen Dollar, blickt das Führungsteam tendenziell nach außen, während sich ein stärkerer Fokus auf interne Aufgaben langfristig auszahlen würde; jenseits der 10 Millionen verhält es sich umgekehrt. Für das Geld empfiehlt er eine angepasste Cash-Flow-Übersicht, die man sich täglich vom CFO geben lässt, und er erklärt den Geldumschlag (Cash Conversion Cycle).",
+      "Unsere Einordnung: Die Karten stellen Harnishs Werkzeuge in vier Gruppen nebeneinander: Ziele und Rhythmus, Strategie und Markt, Menschen und Verantwortung, Wachstum und Geld. Es sind seine Methoden und Beispiele; zu Verantwortung und Personal als Hebel liegen auf plinyoo Karten aus anderen Büchern vor.",
+      "Wer die Karten durchspielt, kann erkunden, wie Ziele, Rhythmus, Verantwortung und Geld in Harnishs Darstellung zusammenhängen."
+    ],
+    "autor": "Heiko Miertzsch",
+    "grundlage": "Aus den Markierungen eines Lesers im Buch „Scaling Up. Skalieren auch Sie!“ (deutsche Ausgabe); die Belege sind der Wortlaut der Kindle-Ausgabe."
+  },
+  "kartenvoll": [
+    {
+      "slug": "routine-ziele",
+      "kurz": "Freiheit durch Routine",
+      "titel": "Mehr Freiheit durch Routine",
+      "karte": "Nach Harnish lautet eines der Schlüsselprinzipien seiner Methoden und Tools: Mehr Freiheit durch Routine. Er verbindet Ziele und Routinen miteinander: Ziele ohne Routine seien nur Wünsche, und Routinen ohne Ziel seien nutzlos. Verne Harnish ist ein US-amerikanischer Wirtschaftsautor, der unter anderem die Entrepreneurs' Organization gegründet hat.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welches Schlüsselprinzip nennt Harnish für seine Methoden und Tools?",
+          "beleg": "Mehr Freiheit durch Routine",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Mehr Wachstum durch Disziplin im Team",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish lautet eines der Schlüsselprinzipien seiner Methoden: Mehr Freiheit durch Routine."
+            },
+            {
+              "text": "Mehr Zeit durch klare Delegation",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish lautet eines der Schlüsselprinzipien seiner Methoden: Mehr Freiheit durch Routine."
+            },
+            {
+              "text": "Mehr Erfolg durch Wettbewerb",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish lautet eines der Schlüsselprinzipien seiner Methoden: Mehr Freiheit durch Routine."
+            },
+            {
+              "text": "Mehr Freiheit durch Routine",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish lautet eines der Schlüsselprinzipien seiner Methoden: Mehr Freiheit durch Routine."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie bewertet Harnish Routinen, denen ein Ziel fehlt?",
+          "beleg": "Routinen ohne Ziel sind nutzlos.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Als Grundlage für Wachstum",
+              "ok": false,
+              "fb": "Falsch: Routinen ohne Ziel sind nach Harnish nutzlos."
+            },
+            {
+              "text": "Als nutzlos",
+              "ok": true,
+              "fb": "Richtig: Routinen ohne Ziel sind nach Harnish nutzlos."
+            },
+            {
+              "text": "Als lästig, aber nützlich",
+              "ok": false,
+              "fb": "Falsch: Routinen ohne Ziel sind nach Harnish nutzlos."
+            },
+            {
+              "text": "Als Ersatz für jedes Ziel",
+              "ok": false,
+              "fb": "Falsch: Routinen ohne Ziel sind nach Harnish nutzlos."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was sind Ziele ohne Routine nach Harnish?",
+          "beleg": "Ziele ohne Routine sind nur Wünsche.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Nur Kostenstellen",
+              "ok": false,
+              "fb": "Falsch: Ziele ohne Routine sind nach Harnish nur Wünsche."
+            },
+            {
+              "text": "Nur Statistiken",
+              "ok": false,
+              "fb": "Falsch: Ziele ohne Routine sind nach Harnish nur Wünsche."
+            },
+            {
+              "text": "Nur Verpflichtungen",
+              "ok": false,
+              "fb": "Falsch: Ziele ohne Routine sind nach Harnish nur Wünsche."
+            },
+            {
+              "text": "Nur Wünsche",
+              "ok": true,
+              "fb": "Richtig: Ziele ohne Routine sind nach Harnish nur Wünsche."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "zeithorizont-minuten-schneller",
+      "kurz": "Minuten schneller",
+      "titel": "Vom Quartalsplan zum großen Ziel: ein paar Minuten voraus",
+      "karte": "Harnish erinnert an einen Satz des Microsoft-Mitgründers Bill Gates: Die meisten Menschen überschätzten, was sie in einem Jahr erreichen können, und unterschätzten, was sie in zehn Jahren erreichen können. Alles zwischen dem Quartalsplan und dem großen Ziel in 10 bis 25 Jahren sei nur eine grobe Schätzung. Für Führungskräfte genügt nach Harnish ein Vorsprung von ein paar Minuten vor Markt, Wettbewerb und den eigenen Mitarbeitern.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was überschätzen die meisten Menschen nach dem Satz von Bill Gates, den Harnish nennt?",
+          "beleg": "die meisten Menschen überschätzen, was sie in einem Jahr erreichen können, und unterschätzen, was sie in zehn Jahren erreichen können",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Wie viel Geld sie in einem Jahr verdienen",
+              "ok": false,
+              "fb": "Falsch: Nach dem Gates-Satz bei Harnish überschätzen die meisten Menschen, was sie in einem Jahr erreichen können."
+            },
+            {
+              "text": "Was sie in einem Jahr erreichen können",
+              "ok": true,
+              "fb": "Richtig: Nach dem Gates-Satz bei Harnish überschätzen die meisten Menschen, was sie in einem Jahr erreichen können."
+            },
+            {
+              "text": "Wie lange ein Projekt in der Planung dauert",
+              "ok": false,
+              "fb": "Falsch: Nach dem Gates-Satz bei Harnish überschätzen die meisten Menschen, was sie in einem Jahr erreichen können."
+            },
+            {
+              "text": "Was sie in zehn Jahren erreichen können",
+              "ok": false,
+              "fb": "Falsch: Nach dem Gates-Satz bei Harnish überschätzen die meisten Menschen, was sie in einem Jahr erreichen können."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie bewertet Harnish alles zwischen Quartalsplan und dem Ziel in 10 bis 25 Jahren?",
+          "beleg": "Alles zwischen dem Quartalsplan und dem großen Ziel in 10 bis 25 Jahren ist nur eine grobe Schätzung!",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Als verbindlichen Fahrplan",
+              "ok": false,
+              "fb": "Falsch: Alles zwischen Quartalsplan und großem Ziel ist nach Harnish eine grobe Schätzung."
+            },
+            {
+              "text": "Als wichtigsten Teil der Planung",
+              "ok": false,
+              "fb": "Falsch: Alles zwischen Quartalsplan und großem Ziel ist nach Harnish eine grobe Schätzung."
+            },
+            {
+              "text": "Als Aufgabe für den Vertrieb",
+              "ok": false,
+              "fb": "Falsch: Alles zwischen Quartalsplan und großem Ziel ist nach Harnish eine grobe Schätzung."
+            },
+            {
+              "text": "Als grobe Schätzung",
+              "ok": true,
+              "fb": "Richtig: Alles zwischen Quartalsplan und großem Ziel ist nach Harnish eine grobe Schätzung."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Welchen Vorsprung brauchen Führungskräfte nach Harnish vor Markt und Mitarbeitern?",
+          "beleg": "Führungskräfte müssen nicht mehrere Jahre in die Zukunft blicken, sondern nur ein paar Minuten schneller sein als der Markt, der Wettbewerb und die eigenen Mitarbeiter.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ein paar Minuten vor Markt, Wettbewerb und Mitarbeitern",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish müssen Führungskräfte ein paar Minuten schneller sein als Markt, Wettbewerb und Mitarbeiter."
+            },
+            {
+              "text": "Zehn Jahre vor Markt, Wettbewerb und Mitarbeitern",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish müssen Führungskräfte ein paar Minuten schneller sein als Markt, Wettbewerb und Mitarbeiter."
+            },
+            {
+              "text": "Ein ganzes Quartal vor Markt, Wettbewerb und Mitarbeitern",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish müssen Führungskräfte ein paar Minuten schneller sein als Markt, Wettbewerb und Mitarbeiter."
+            },
+            {
+              "text": "Mehrere Jahre vor Markt, Wettbewerb und Mitarbeitern",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish müssen Führungskräfte ein paar Minuten schneller sein als Markt, Wettbewerb und Mitarbeiter."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "www-rechenschaft",
+      "kurz": "Wer, Was, Wann",
+      "titel": "Wer, Was, Wann: die Kultur der Rechenschaft",
+      "karte": "Nach Harnish lässt sich die Wirkung wöchentlicher Meetings verbessern: Am Ende bleiben ein paar Minuten, um kurz zu skizzieren, wer gesagt hat, was er wann tun wird. Er nennt das Wer, Was, Wann (WWW), die Kultur der Rechenschaft. Es gehe um exzellentes Management, um Klarheit in der Kommunikation und bei den Verantwortlichkeiten.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wofür stehen die drei W bei Harnishs WWW?",
+          "beleg": "Wer, Was, Wann (WWW): Die Kultur der Rechenschaft.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Wo, Wie, Warum",
+              "ok": false,
+              "fb": "Falsch: Die drei W stehen bei Harnish für Wer, Was, Wann."
+            },
+            {
+              "text": "Wann, Wie viel, Wofür",
+              "ok": false,
+              "fb": "Falsch: Die drei W stehen bei Harnish für Wer, Was, Wann."
+            },
+            {
+              "text": "Wer, Was, Wann",
+              "ok": true,
+              "fb": "Richtig: Die drei W stehen bei Harnish für Wer, Was, Wann."
+            },
+            {
+              "text": "Was, Womit, Wohin",
+              "ok": false,
+              "fb": "Falsch: Die drei W stehen bei Harnish für Wer, Was, Wann."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wann hält ein Team nach Harnish fest, wer was wann tut?",
+          "beleg": "Verbessern Sie die Wirkung Ihrer wöchentlichen Meetings, indem Sie sich am Ende ein paar Minuten Zeit nehmen und kurz skizzieren Wer gesagt hat, Was er Wann tun wird.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Einmal im Jahr auf der Strategietagung",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish nimmt man sich am Ende der wöchentlichen Meetings ein paar Minuten für Wer, Was, Wann."
+            },
+            {
+              "text": "Zu Beginn des wöchentlichen Meetings",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish nimmt man sich am Ende der wöchentlichen Meetings ein paar Minuten für Wer, Was, Wann."
+            },
+            {
+              "text": "Am Ende jedes Quartals im Führungsteam",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish nimmt man sich am Ende der wöchentlichen Meetings ein paar Minuten für Wer, Was, Wann."
+            },
+            {
+              "text": "Am Ende des wöchentlichen Meetings",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish nimmt man sich am Ende der wöchentlichen Meetings ein paar Minuten für Wer, Was, Wann."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie ordnet Harnish das WWW ein?",
+          "beleg": "Es geht hier nicht um Mikromanagement, sondern um exzellentes Management, und um Klarheit in der Kommunikation und bei den Verantwortlichkeiten.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Als exzellentes Management mit klaren Verantwortlichkeiten",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish geht es beim WWW um exzellentes Management und Klarheit bei den Verantwortlichkeiten."
+            },
+            {
+              "text": "Als Methode, um die Zahl der Meetings zu senken",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish geht es beim WWW um exzellentes Management und Klarheit bei den Verantwortlichkeiten."
+            },
+            {
+              "text": "Als Pflicht, die allein das Führungsteam betrifft",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish geht es beim WWW um exzellentes Management und Klarheit bei den Verantwortlichkeiten."
+            },
+            {
+              "text": "Als Mikromanagement mit enger Kontrolle jedes Teams",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish geht es beim WWW um exzellentes Management und Klarheit bei den Verantwortlichkeiten."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kennzeichen-eins-bis-drei",
+      "kurz": "Team, Quartalsziel, Rhythmus",
+      "titel": "Führungsteam, Quartalsziel und Rhythmus der Kommunikation",
+      "karte": "In einer nummerierten Liste nennt Harnish unter anderem diese drei Punkte: Das Führungsteam ist gesund und auf einer Linie. Jeder identifiziert sich mit dem Top-Unternehmensziel für das laufende Quartal. Die Kommunikation bekommt einen Rhythmus, und Informationen wandern unverfälscht und schnell durch das gesamte Unternehmen. Als Top-Herausforderung bei der Zusammenarbeit von zwei oder mehr Menschen nennt er die Kommunikation.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was steht an erster Stelle in Harnishs nummerierter Liste?",
+          "beleg": "1. Das Führungsteam ist gesund und auf einer Linie.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Das Führungsteam ist gesund und auf einer Linie",
+              "ok": true,
+              "fb": "Richtig: Punkt 1 der Liste lautet: Das Führungsteam ist gesund und auf einer Linie."
+            },
+            {
+              "text": "Das Führungsteam trifft sich mindestens einmal im Monat",
+              "ok": false,
+              "fb": "Falsch: Punkt 1 der Liste lautet: Das Führungsteam ist gesund und auf einer Linie."
+            },
+            {
+              "text": "Das Führungsteam kennt die Zahlen der Konkurrenz genau",
+              "ok": false,
+              "fb": "Falsch: Punkt 1 der Liste lautet: Das Führungsteam ist gesund und auf einer Linie."
+            },
+            {
+              "text": "Das Führungsteam hat ein Zehnjahresziel für das Unternehmen",
+              "ok": false,
+              "fb": "Falsch: Punkt 1 der Liste lautet: Das Führungsteam ist gesund und auf einer Linie."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Womit soll sich nach Punkt 2 der Liste jeder identifizieren?",
+          "beleg": "2. Jeder identifiziert sich mit dem Top-Unternehmensziel für das laufende Quartal.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Mit dem Zehnjahresziel der Gründer und Gesellschafter",
+              "ok": false,
+              "fb": "Falsch: Nach Punkt 2 identifiziert sich jeder mit dem Top-Unternehmensziel für das laufende Quartal."
+            },
+            {
+              "text": "Mit dem Top-Unternehmensziel des laufenden Quartals",
+              "ok": true,
+              "fb": "Richtig: Nach Punkt 2 identifiziert sich jeder mit dem Top-Unternehmensziel für das laufende Quartal."
+            },
+            {
+              "text": "Mit den Zielen der eigenen Abteilung im laufenden Jahr",
+              "ok": false,
+              "fb": "Falsch: Nach Punkt 2 identifiziert sich jeder mit dem Top-Unternehmensziel für das laufende Quartal."
+            },
+            {
+              "text": "Mit dem Umsatzziel des wichtigsten Kunden im Quartal",
+              "ok": false,
+              "fb": "Falsch: Nach Punkt 2 identifiziert sich jeder mit dem Top-Unternehmensziel für das laufende Quartal."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was nennt Harnish die Top-Herausforderung bei der Zusammenarbeit von zwei oder mehr Menschen?",
+          "beleg": "Die Top-Herausforderung bei der Zusammenarbeit von zwei oder mehr Menschen ist die Kommunikation (irgendwelche Verheiratete unter Ihnen?).",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Die Bezahlung der Beteiligten",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish ist die Kommunikation die Top-Herausforderung bei der Zusammenarbeit von zwei oder mehr Menschen."
+            },
+            {
+              "text": "Die Kommunikation",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish ist die Kommunikation die Top-Herausforderung bei der Zusammenarbeit von zwei oder mehr Menschen."
+            },
+            {
+              "text": "Die Verteilung der Aufgaben",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish ist die Kommunikation die Top-Herausforderung bei der Zusammenarbeit von zwei oder mehr Menschen."
+            },
+            {
+              "text": "Die Auswahl der Werkzeuge",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish ist die Kommunikation die Top-Herausforderung bei der Zusammenarbeit von zwei oder mehr Menschen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "strategie-zwei-aufgaben",
+      "kurz": "Denken und Umsetzen",
+      "titel": "Strategisches Denken und Planung der Umsetzung trennen",
+      "karte": "Harnish hält es für höchste Zeit, einen 50 Jahre alten Businessbegriff aufzubrechen: die Strategieplanung. Er will sie durch zwei getrennte Aufgaben ersetzen, strategisches Denken und Planung der Umsetzung, für die zwei sehr verschiedene Teams und Prozesse nötig seien. Für das strategische Denken sollte nach ihm eine Handvoll hochrangiger Führungskräfte wöchentlich in einem Gremium zusammentreffen, das der Managementexperte Jim Collins The Council nennt.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welchen 50 Jahre alten Businessbegriff will Harnish aufbrechen?",
+          "beleg": "Es ist höchste Zeit, einen 50 Jahre alten Businessbegriff aufzubrechen - Strategieplanung – und durch zwei getrennte Aufgaben zu definieren:",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Das Qualitätsmanagement",
+              "ok": false,
+              "fb": "Falsch: Harnish will den Begriff Strategieplanung durch zwei getrennte Aufgaben ersetzen."
+            },
+            {
+              "text": "Das Beschwerdemanagement",
+              "ok": false,
+              "fb": "Falsch: Harnish will den Begriff Strategieplanung durch zwei getrennte Aufgaben ersetzen."
+            },
+            {
+              "text": "Die Personalentwicklung",
+              "ok": false,
+              "fb": "Falsch: Harnish will den Begriff Strategieplanung durch zwei getrennte Aufgaben ersetzen."
+            },
+            {
+              "text": "Die Strategieplanung",
+              "ok": true,
+              "fb": "Richtig: Harnish will den Begriff Strategieplanung durch zwei getrennte Aufgaben ersetzen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "In welche zwei Aufgaben teilt Harnish die Strategieplanung?",
+          "beleg": "Strategisches Denken und • Planung der Umsetzung.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Marktanalyse und Budgetierung der Abteilungen",
+              "ok": false,
+              "fb": "Falsch: Harnish trennt strategisches Denken und Planung der Umsetzung."
+            },
+            {
+              "text": "Zielsetzung und Kontrolle der Ergebnisse im Quartal",
+              "ok": false,
+              "fb": "Falsch: Harnish trennt strategisches Denken und Planung der Umsetzung."
+            },
+            {
+              "text": "Strategisches Denken und Planung der Umsetzung",
+              "ok": true,
+              "fb": "Richtig: Harnish trennt strategisches Denken und Planung der Umsetzung."
+            },
+            {
+              "text": "Wettbewerbsbeobachtung und Schulung der Teams",
+              "ok": false,
+              "fb": "Falsch: Harnish trennt strategisches Denken und Planung der Umsetzung."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie oft trifft sich das Gremium für strategisches Denken nach Harnish?",
+          "beleg": "Für das strategische Denken sollte eine Handvoll hochrangiger Führungskräfte wöchentlich in einem Gremium zusammentreffen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Vierteljährlich",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish trifft sich das Gremium für strategisches Denken wöchentlich."
+            },
+            {
+              "text": "Wöchentlich",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish trifft sich das Gremium für strategisches Denken wöchentlich."
+            },
+            {
+              "text": "Halbjährlich",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish trifft sich das Gremium für strategisches Denken wöchentlich."
+            },
+            {
+              "text": "Einmal im Jahr",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish trifft sich das Gremium für strategisches Denken wöchentlich."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "sieben-facetten",
+      "kurz": "7 Facetten der Strategie",
+      "titel": "Die 7 Facetten der Strategie: Versprechen, Garantie, Faktor X",
+      "karte": "Das Tool 7 Facetten der Strategie dient nach Harnish dazu, dass ein Unternehmen seine Marktnische dominiert. Es fragt unter anderem: Welche Wörter besitzen Sie, also welchen Begriff verbindet die Zielgruppe mit Ihnen? Welche drei Markenversprechen geben Sie, so wie Southwest Airlines niedrige Preise, viele Strecken und viel Spaß verspricht? Welche Garantie geben Sie darauf? Oracle warb etwa mit der Chance auf einen Gewinn von 10 Millionen Dollar, falls seine Exadata-Server die Konkurrenz nicht übertreffen. Und wie lautet Ihr Faktor X, eine 10- bis 100-fach bessere Ausgangslage?",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viele Markenversprechen soll ein Unternehmen nach den 7 Facetten seinen Kunden geben?",
+          "beleg": "Wo sind Ihre Kunden und welche drei Markenversprechen geben Sie ihnen?",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Drei Markenversprechen",
+              "ok": true,
+              "fb": "Richtig: Die 7 Facetten fragen nach drei Markenversprechen an die Kunden."
+            },
+            {
+              "text": "Sieben Markenversprechen",
+              "ok": false,
+              "fb": "Falsch: Die 7 Facetten fragen nach drei Markenversprechen an die Kunden."
+            },
+            {
+              "text": "Zehn Markenversprechen",
+              "ok": false,
+              "fb": "Falsch: Die 7 Facetten fragen nach drei Markenversprechen an die Kunden."
+            },
+            {
+              "text": "Fünf Markenversprechen",
+              "ok": false,
+              "fb": "Falsch: Die 7 Facetten fragen nach drei Markenversprechen an die Kunden."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Mit welcher Garantie warb Oracle nach Harnishs Beispiel für seine Exadata-Server?",
+          "beleg": "Welche Garantie geben Sie auf Ihre Markenversprechen? (Beispiel: Oracle hat mit der Chance auf einen 10-Millionen- Dollar-Gewinn geworben, falls seine Exadata-Server die Konkurrenz nicht um den Faktor 5 übertreffen.)",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Mit dem Versprechen, jeden Server kostenlos zu tauschen",
+              "ok": false,
+              "fb": "Falsch: Oracle warb nach Harnish mit der Chance auf einen Gewinn von 10 Millionen Dollar, falls die Server die Konkurrenz nicht um den Faktor 5 übertreffen."
+            },
+            {
+              "text": "Mit der Rückerstattung des Kaufpreises nach einem Jahr",
+              "ok": false,
+              "fb": "Falsch: Oracle warb nach Harnish mit der Chance auf einen Gewinn von 10 Millionen Dollar, falls die Server die Konkurrenz nicht um den Faktor 5 übertreffen."
+            },
+            {
+              "text": "Mit einer Wartung ohne Kosten für zehn Jahre",
+              "ok": false,
+              "fb": "Falsch: Oracle warb nach Harnish mit der Chance auf einen Gewinn von 10 Millionen Dollar, falls die Server die Konkurrenz nicht um den Faktor 5 übertreffen."
+            },
+            {
+              "text": "Mit der Chance auf einen Gewinn von 10 Millionen Dollar",
+              "ok": true,
+              "fb": "Richtig: Oracle warb nach Harnish mit der Chance auf einen Gewinn von 10 Millionen Dollar, falls die Server die Konkurrenz nicht um den Faktor 5 übertreffen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was meint Harnish mit dem Faktor X?",
+          "beleg": "Wie lautet Ihr Faktor X – also Ihre 10- bis 100-fach besseren Startbedingungen gegenüber der Konkurrenz – mit dem Sie jeden Rivalen aus dem Feld schlagen?",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Einen Preis, der 10- bis 100-fach unter dem der Konkurrenz liegt",
+              "ok": false,
+              "fb": "Falsch: Der Faktor X sind nach Harnish die 10- bis 100-fach besseren Startbedingungen gegenüber der Konkurrenz."
+            },
+            {
+              "text": "Einen Marktanteil, der 10- bis 100-fach größer ist als der der Konkurrenz",
+              "ok": false,
+              "fb": "Falsch: Der Faktor X sind nach Harnish die 10- bis 100-fach besseren Startbedingungen gegenüber der Konkurrenz."
+            },
+            {
+              "text": "Startbedingungen, die 10- bis 100-fach besser sind als die der Konkurrenz",
+              "ok": true,
+              "fb": "Richtig: Der Faktor X sind nach Harnish die 10- bis 100-fach besseren Startbedingungen gegenüber der Konkurrenz."
+            },
+            {
+              "text": "Eine Kundenzahl, die 10- bis 100-fach über dem Branchenschnitt liegt",
+              "ok": false,
+              "fb": "Falsch: Der Faktor X sind nach Harnish die 10- bis 100-fach besseren Startbedingungen gegenüber der Konkurrenz."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "marketing-barriere",
+      "kurz": "Marketing und die 4P",
+      "titel": "Marketing: eine Stunde pro Woche und die 4P",
+      "karte": "Nach Harnish ist die Nummer 1 unter den funktionalen Barrieren für Wachstum das Fehlen einer effektiven Marketingabteilung, unabhängig vom Vertrieb. Als Schlüssel nennt er erstens eine Stunde pro Woche für das Marketing, also ein Marketing-Meeting, und zweitens eine Liste der Top 25 Influencer. Zweiter wichtiger Tagesordnungspunkt sind die 4P des Marketing-Professors Philip Kotler: Product, Price, Promotion und Place.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was ist nach Harnish die Nr. 1 unter den funktionalen Barrieren für Wachstum?",
+          "beleg": "Die Nr. 1 unter den funktionalen Barrieren für Wachstum ist das Fehlen einer effektiven Marketingabteilung, unabhängig vom Vertrieb",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Das Fehlen eines eigenen Vertriebsteams im Unternehmen",
+              "ok": false,
+              "fb": "Falsch: Die Nr. 1 unter den funktionalen Barrieren für Wachstum ist nach Harnish das Fehlen einer effektiven Marketingabteilung."
+            },
+            {
+              "text": "Das Fehlen eines Finanzchefs mit Branchenerfahrung",
+              "ok": false,
+              "fb": "Falsch: Die Nr. 1 unter den funktionalen Barrieren für Wachstum ist nach Harnish das Fehlen einer effektiven Marketingabteilung."
+            },
+            {
+              "text": "Das Fehlen einer effektiven Marketingabteilung",
+              "ok": true,
+              "fb": "Richtig: Die Nr. 1 unter den funktionalen Barrieren für Wachstum ist nach Harnish das Fehlen einer effektiven Marketingabteilung."
+            },
+            {
+              "text": "Das Fehlen einer klaren Preisliste für alle Kunden",
+              "ok": false,
+              "fb": "Falsch: Die Nr. 1 unter den funktionalen Barrieren für Wachstum ist nach Harnish das Fehlen einer effektiven Marketingabteilung."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie viel Zeit soll ein Unternehmen laut Harnish für das Marketing reservieren?",
+          "beleg": "Erstens: der Schlüssel zu effektivem Marketing ist die Reservierung von einer Stunde pro Woche für das Marketing, d.h. die Einführung eines Marketing-Meetings (haben Sie eins?).",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Einen halben Tag pro Monat",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish ist der Schlüssel zu effektivem Marketing eine reservierte Stunde pro Woche."
+            },
+            {
+              "text": "Eine Stunde pro Jahr bei der Strategietagung",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish ist der Schlüssel zu effektivem Marketing eine reservierte Stunde pro Woche."
+            },
+            {
+              "text": "Eine Stunde pro Woche",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish ist der Schlüssel zu effektivem Marketing eine reservierte Stunde pro Woche."
+            },
+            {
+              "text": "Zwei Stunden pro Quartal",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish ist der Schlüssel zu effektivem Marketing eine reservierte Stunde pro Woche."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wofür stehen die 4P des Marketing nach Harnish?",
+          "beleg": "Dr. Philip Kotlers 4P des Marketing – Product, Price, Promotion und Place (Produkt, Preis, Kommunikation und Distribution/Vertrieb).",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Planning, Pricing, Promotion und Partners",
+              "ok": false,
+              "fb": "Falsch: Die 4P stehen bei Harnish für Product, Price, Promotion und Place."
+            },
+            {
+              "text": "People, Process, Profit und Planning",
+              "ok": false,
+              "fb": "Falsch: Die 4P stehen bei Harnish für Product, Price, Promotion und Place."
+            },
+            {
+              "text": "Purpose, Position, Potential und Performance",
+              "ok": false,
+              "fb": "Falsch: Die 4P stehen bei Harnish für Product, Price, Promotion und Place."
+            },
+            {
+              "text": "Product, Price, Promotion und Place",
+              "ok": true,
+              "fb": "Richtig: Die 4P stehen bei Harnish für Product, Price, Promotion und Place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "people-process",
+      "kurz": "Menschen und Prozesse",
+      "titel": "Menschen und Prozesse im Gleichgewicht",
+      "karte": "Nach Harnish müssen Führungskräfte ein Gleichgewicht zwischen zwei oft miteinander konkurrierenden Anforderungen des Business herstellen: Menschen (People) und Prozessen (Process). Zugleich müssen sie auf eine gute Reputation bei Mitarbeitern, Kunden und Shareholdern achten. Zu den Prozessen zählt er die Art, wie das Unternehmen produziert, einkauft, verkauft und dokumentiert; ihre Verbesserung erhöht die Produktivität.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welche zwei Anforderungen müssen Führungskräfte nach Harnish ins Gleichgewicht bringen?",
+          "beleg": "Führungskräfte müssen ein Gleichgewicht zwischen zwei oft miteinander konkurrierenden Anforderungen des Business herstellen: Menschen (People) und Prozessen (Process).",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Strategie und Planung im Quartal",
+              "ok": false,
+              "fb": "Falsch: Führungskräfte müssen nach Harnish Menschen (People) und Prozesse (Process) ins Gleichgewicht bringen."
+            },
+            {
+              "text": "Menschen und Prozesse",
+              "ok": true,
+              "fb": "Richtig: Führungskräfte müssen nach Harnish Menschen (People) und Prozesse (Process) ins Gleichgewicht bringen."
+            },
+            {
+              "text": "Kunden und Lieferanten im Markt",
+              "ok": false,
+              "fb": "Falsch: Führungskräfte müssen nach Harnish Menschen (People) und Prozesse (Process) ins Gleichgewicht bringen."
+            },
+            {
+              "text": "Kosten und Einnahmen im Jahr",
+              "ok": false,
+              "fb": "Falsch: Führungskräfte müssen nach Harnish Menschen (People) und Prozesse (Process) ins Gleichgewicht bringen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was zählt Harnish zur Produktivität des Unternehmens?",
+          "beleg": "und andererseits die Produktivität verbessern – also die Art, wie das Unternehmen produziert, einkauft, verkauft und dokumentiert.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Wie das Unternehmen produziert, einkauft, verkauft und dokumentiert",
+              "ok": true,
+              "fb": "Richtig: Zur Produktivität zählt Harnish die Art, wie das Unternehmen produziert, einkauft, verkauft und dokumentiert."
+            },
+            {
+              "text": "Wie die Kunden betreut, befragt und zurückgewonnen werden",
+              "ok": false,
+              "fb": "Falsch: Zur Produktivität zählt Harnish die Art, wie das Unternehmen produziert, einkauft, verkauft und dokumentiert."
+            },
+            {
+              "text": "Wie das Führungsteam Ziele setzt, bewertet und belohnt",
+              "ok": false,
+              "fb": "Falsch: Zur Produktivität zählt Harnish die Art, wie das Unternehmen produziert, einkauft, verkauft und dokumentiert."
+            },
+            {
+              "text": "Wie viele Mitarbeiter eingestellt, befördert und entlassen werden",
+              "ok": false,
+              "fb": "Falsch: Zur Produktivität zählt Harnish die Art, wie das Unternehmen produziert, einkauft, verkauft und dokumentiert."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Bei wem müssen Führungskräfte nach Harnish zugleich auf eine gute Reputation achten?",
+          "beleg": "Dabei müssen sie zugleich auf eine gute Reputation bei den Mitarbeitern, Kunden und Shareholdern achten",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Bei Mitarbeitern, Kunden und Shareholdern",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish zählt die Reputation bei Mitarbeitern, Kunden und Shareholdern."
+            },
+            {
+              "text": "Bei Banken, Lieferanten und Behörden vor Ort",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish zählt die Reputation bei Mitarbeitern, Kunden und Shareholdern."
+            },
+            {
+              "text": "Bei Wettbewerbern, Verbänden und Fachpresse",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish zählt die Reputation bei Mitarbeitern, Kunden und Shareholdern."
+            },
+            {
+              "text": "Bei Gründern, Beratern und ehemaligen Kollegen",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish zählt die Reputation bei Mitarbeitern, Kunden und Shareholdern."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "delegation-vier-schritte",
+      "kurz": "Delegieren in vier Schritten",
+      "titel": "Delegieren in vier Schritten",
+      "karte": "Nach Harnish ist die Kunst des Delegierens eine der wichtigsten Fähigkeiten, die ein Leader entwickeln muss. Er nennt vier Schritte: Erstens bestimmen, was die Person oder das Team erreichen soll (Prioritäten, One-Page Strategic Plan). Zweitens ein Bewertungssystem schaffen, das den Fortschritt überwacht (Daten, qualitative und quantitative KPIs). Drittens Feedback geben (Meeting-Rhythmus). Viertens rechtzeitig Anerkennung zeigen und Leistungen honorieren.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was ist der erste Schritt guter Delegation nach Harnish?",
+          "beleg": "1. Bestimmen Sie, was die Person oder das Team erreichen soll (Prioritäten – One-Page Strategic Plan).",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Bestimmen, was die Person oder das Team erreichen soll",
+              "ok": true,
+              "fb": "Richtig: Der erste Schritt guter Delegation ist nach Harnish, zu bestimmen, was die Person oder das Team erreichen soll."
+            },
+            {
+              "text": "Auswählen, wer im Team die Leitung der Aufgabe erhält",
+              "ok": false,
+              "fb": "Falsch: Der erste Schritt guter Delegation ist nach Harnish, zu bestimmen, was die Person oder das Team erreichen soll."
+            },
+            {
+              "text": "Klären, wie viel Budget das Team für die Aufgabe bekommt",
+              "ok": false,
+              "fb": "Falsch: Der erste Schritt guter Delegation ist nach Harnish, zu bestimmen, was die Person oder das Team erreichen soll."
+            },
+            {
+              "text": "Festlegen, welche Aufgaben die Person nicht übernehmen darf",
+              "ok": false,
+              "fb": "Falsch: Der erste Schritt guter Delegation ist nach Harnish, zu bestimmen, was die Person oder das Team erreichen soll."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wozu dient der zweite Schritt, das Bewertungssystem?",
+          "beleg": "2. Schaffen Sie ein Bewertungssystem, um den Fortschritt zu überwachen (Daten – qualitative und quantitative KPIs).",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Um die Aufgaben auf mehrere Teams zu verteilen",
+              "ok": false,
+              "fb": "Falsch: Das Bewertungssystem dient nach Harnish dazu, den Fortschritt zu überwachen."
+            },
+            {
+              "text": "Um die Gehälter der Beteiligten festzulegen",
+              "ok": false,
+              "fb": "Falsch: Das Bewertungssystem dient nach Harnish dazu, den Fortschritt zu überwachen."
+            },
+            {
+              "text": "Um den Fortschritt zu überwachen",
+              "ok": true,
+              "fb": "Richtig: Das Bewertungssystem dient nach Harnish dazu, den Fortschritt zu überwachen."
+            },
+            {
+              "text": "Um die Kosten des Teams zu begrenzen",
+              "ok": false,
+              "fb": "Falsch: Das Bewertungssystem dient nach Harnish dazu, den Fortschritt zu überwachen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was folgt in Harnishs Reihe auf das Feedback als vierter Schritt?",
+          "beleg": "3. Geben Sie der Person oder dem Team Feedback (Meeting-Rhythmus). 4. Zeigen Sie rechtzeitig Ihre Anerkennung und honorieren Sie die Leistungen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Das Ziel für die nächste Periode neu festlegen und verteilen",
+              "ok": false,
+              "fb": "Falsch: Der vierte Schritt ist nach Harnish, rechtzeitig Anerkennung zu zeigen und die Leistungen zu honorieren."
+            },
+            {
+              "text": "Rechtzeitig Anerkennung zeigen und Leistungen honorieren",
+              "ok": true,
+              "fb": "Richtig: Der vierte Schritt ist nach Harnish, rechtzeitig Anerkennung zu zeigen und die Leistungen zu honorieren."
+            },
+            {
+              "text": "Die Aufgabe an eine andere Person zur Prüfung weitergeben",
+              "ok": false,
+              "fb": "Falsch: Der vierte Schritt ist nach Harnish, rechtzeitig Anerkennung zu zeigen und die Leistungen zu honorieren."
+            },
+            {
+              "text": "Das Bewertungssystem für das nächste Team neu aufbauen",
+              "ok": false,
+              "fb": "Falsch: Der vierte Schritt ist nach Harnish, rechtzeitig Anerkennung zu zeigen und die Leistungen zu honorieren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "verantwortung-zelle",
+      "kurz": "Verantwortliche je Zelle",
+      "titel": "Jede Zelle braucht einen Verantwortlichen",
+      "karte": "Nach Harnish braucht jede Zelle innerhalb der Organisation einen klar definierten Verantwortlichen. Er empfiehlt, zwischen Rechenschaft, Verantwortung und Entscheidungsbefugnis zu unterscheiden. Ziel sei es, alle Beteiligten in kleine Teams und so nah wie möglich an ihre Kunden zu bringen. So vergrößere man die äußere Membran des Unternehmens, und jeder Mitarbeiter stehe in engem Austausch mit dem Marktgeschehen.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was braucht nach Harnish jede Zelle innerhalb der Organisation?",
+          "beleg": "Jede Zelle innerhalb der Organisation braucht einen klar definierten Verantwortlichen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Eine geschulte Stellvertretung im Führungsteam",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish braucht jede Zelle einen klar definierten Verantwortlichen."
+            },
+            {
+              "text": "Einen eigenen Etat für die Weiterbildung",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish braucht jede Zelle einen klar definierten Verantwortlichen."
+            },
+            {
+              "text": "Einen festen Platz im Aufsichtsgremium",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish braucht jede Zelle einen klar definierten Verantwortlichen."
+            },
+            {
+              "text": "Einen klar definierten Verantwortlichen",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish braucht jede Zelle einen klar definierten Verantwortlichen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Zwischen welchen Begriffen empfiehlt Harnish einen Unterschied?",
+          "beleg": "Tatsächlich sollten Sie sogar einen Unterschied zwischen Rechenschaft, Verantwortung und Entscheidungsbefugnis machen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Aufgabe, Kompetenz und Haftung im Team",
+              "ok": false,
+              "fb": "Falsch: Harnish empfiehlt einen Unterschied zwischen Rechenschaft, Verantwortung und Entscheidungsbefugnis."
+            },
+            {
+              "text": "Leistung, Anerkennung und Vergütung im Quartal",
+              "ok": false,
+              "fb": "Falsch: Harnish empfiehlt einen Unterschied zwischen Rechenschaft, Verantwortung und Entscheidungsbefugnis."
+            },
+            {
+              "text": "Rechenschaft, Verantwortung und Entscheidungsbefugnis",
+              "ok": true,
+              "fb": "Richtig: Harnish empfiehlt einen Unterschied zwischen Rechenschaft, Verantwortung und Entscheidungsbefugnis."
+            },
+            {
+              "text": "Planung, Umsetzung und Kontrolle der Prozesse",
+              "ok": false,
+              "fb": "Falsch: Harnish empfiehlt einen Unterschied zwischen Rechenschaft, Verantwortung und Entscheidungsbefugnis."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was erreicht man nach Harnish mit kleinen Teams nahe an den Kunden?",
+          "beleg": "Ziel ist es, alle Beteiligten in kleine Teams und so nah wie möglich an ihre jeweiligen Kunden heran zu bringen. Auf diese Weise vergrößern Sie die äußere Membran Ihres Unternehmens und jeder Mitarbeiter steht in engem Austausch mit dem Marktgeschehen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Jeder Mitarbeiter steht in engem Austausch mit dem Marktgeschehen",
+              "ok": true,
+              "fb": "Richtig: Mit kleinen Teams nahe an den Kunden steht nach Harnish jeder Mitarbeiter in engem Austausch mit dem Marktgeschehen."
+            },
+            {
+              "text": "Jeder Mitarbeiter kann Preise ohne Rücksprache selbst festlegen",
+              "ok": false,
+              "fb": "Falsch: Mit kleinen Teams nahe an den Kunden steht nach Harnish jeder Mitarbeiter in engem Austausch mit dem Marktgeschehen."
+            },
+            {
+              "text": "Jeder Mitarbeiter erhält eine eigene Zielvereinbarung vom Vorstand",
+              "ok": false,
+              "fb": "Falsch: Mit kleinen Teams nahe an den Kunden steht nach Harnish jeder Mitarbeiter in engem Austausch mit dem Marktgeschehen."
+            },
+            {
+              "text": "Jeder Mitarbeiter kennt die Zahlen des gesamten Unternehmens",
+              "ok": false,
+              "fb": "Falsch: Mit kleinen Teams nahe an den Kunden steht nach Harnish jeder Mitarbeiter in engem Austausch mit dem Marktgeschehen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "jedermann-gedicht",
+      "kurz": "Jedermann und Niemand",
+      "titel": "Jedermann, Jemand, Irgendwer und Niemand",
+      "karte": "Harnish zitiert eine verkürzte Version von Charles Osgoods Gedicht über Verantwortung, deren Verfasser unbekannt ist. Es gab einen wichtigen Job zu erledigen, und Jedermann war sicher, dass Jemand ihn übernehmen würde. Irgendwer hätte ihn machen können, aber Niemand tat es. Am Ende beschuldigte Jedermann Jemanden, und Niemand tat, was Irgendwer hätte tun können.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wer war nach dem Gedicht sicher, dass Jemand den wichtigen Job übernehmen würde?",
+          "beleg": "Es gab einen wichtigen Job zu erledigen, und Jedermann war sicher, dass Jemand ihn übernehmen würde.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Die Geschäftsleitung",
+              "ok": false,
+              "fb": "Falsch: Nach dem Gedicht war Jedermann sicher, dass Jemand den wichtigen Job übernehmen würde."
+            },
+            {
+              "text": "Irgendwer",
+              "ok": false,
+              "fb": "Falsch: Nach dem Gedicht war Jedermann sicher, dass Jemand den wichtigen Job übernehmen würde."
+            },
+            {
+              "text": "Der Auftraggeber",
+              "ok": false,
+              "fb": "Falsch: Nach dem Gedicht war Jedermann sicher, dass Jemand den wichtigen Job übernehmen würde."
+            },
+            {
+              "text": "Jedermann",
+              "ok": true,
+              "fb": "Richtig: Nach dem Gedicht war Jedermann sicher, dass Jemand den wichtigen Job übernehmen würde."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wen beschuldigte Jedermann am Ende des Gedichts?",
+          "beleg": "Am Ende beschuldigte Jedermann Jemanden, und Niemand tat, was Irgendwer hätte tun können.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Den Vorgesetzten",
+              "ok": false,
+              "fb": "Falsch: Am Ende beschuldigte Jedermann nach dem Gedicht Jemanden."
+            },
+            {
+              "text": "Irgendwen",
+              "ok": false,
+              "fb": "Falsch: Am Ende beschuldigte Jedermann nach dem Gedicht Jemanden."
+            },
+            {
+              "text": "Jemanden",
+              "ok": true,
+              "fb": "Richtig: Am Ende beschuldigte Jedermann nach dem Gedicht Jemanden."
+            },
+            {
+              "text": "Niemanden",
+              "ok": false,
+              "fb": "Falsch: Am Ende beschuldigte Jedermann nach dem Gedicht Jemanden."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was erkannte Niemand nach dem Gedicht nicht?",
+          "beleg": "Jedermann dachte, dass Irgendwer ihn erledigen könnte, aber Niemand realisierte, dass Jedermann sich nicht rührte.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Dass Irgendwer den Job längst erledigt hatte",
+              "ok": false,
+              "fb": "Falsch: Niemand realisierte nach dem Gedicht, dass Jedermann sich nicht rührte."
+            },
+            {
+              "text": "Dass der Job gar nicht wichtig gewesen war",
+              "ok": false,
+              "fb": "Falsch: Niemand realisierte nach dem Gedicht, dass Jedermann sich nicht rührte."
+            },
+            {
+              "text": "Dass Jemand den Job nie übernehmen wollte",
+              "ok": false,
+              "fb": "Falsch: Niemand realisierte nach dem Gedicht, dass Jedermann sich nicht rührte."
+            },
+            {
+              "text": "Dass Jedermann sich nicht rührte",
+              "ok": true,
+              "fb": "Richtig: Niemand realisierte nach dem Gedicht, dass Jedermann sich nicht rührte."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "kennzeichen-vier-bis-sieben",
+      "kurz": "Feedback und Werte",
+      "titel": "Verantwortung, Feedback und gelebte Werte",
+      "karte": "Harnishs nummerierte Liste setzt sich fort: In jeder Einheit der Organisation trägt eine Person die Verantwortung für die Erreichung der gesetzten Ziele. Nach Harnish steht diese Festlegung von Verantwortlichkeiten in Wachstumsunternehmen auf dem zweiten Platz, wenn die Kommunikation die Top-Herausforderung ist. Weiter nennt er das Feedback der Mitarbeiter, Kundenfeedback, das so verlässlich ist wie die wirtschaftlichen Zahlen, und gelebte Core Values samt Unternehmenszweck (Purpose).",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Welchen Platz nimmt die Festlegung von Verantwortlichkeiten in Wachstumsunternehmen nach Harnish ein?",
+          "beleg": "Wenn es stimmt, dass die Kommunikation unsere Top-Herausforderung ist, dann steht die Festlegung von Verantwortlichkeiten in Wachstumsunternehmen auf dem zweiten Platz.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Den dritten Platz hinter Kommunikation und Finanzen",
+              "ok": false,
+              "fb": "Falsch: Die Festlegung von Verantwortlichkeiten steht nach Harnish in Wachstumsunternehmen auf dem zweiten Platz."
+            },
+            {
+              "text": "Den vierten Platz hinter Vertrieb und Kommunikation",
+              "ok": false,
+              "fb": "Falsch: Die Festlegung von Verantwortlichkeiten steht nach Harnish in Wachstumsunternehmen auf dem zweiten Platz."
+            },
+            {
+              "text": "Den ersten Platz vor der Kommunikation",
+              "ok": false,
+              "fb": "Falsch: Die Festlegung von Verantwortlichkeiten steht nach Harnish in Wachstumsunternehmen auf dem zweiten Platz."
+            },
+            {
+              "text": "Den zweiten Platz hinter der Kommunikation",
+              "ok": true,
+              "fb": "Richtig: Die Festlegung von Verantwortlichkeiten steht nach Harnish in Wachstumsunternehmen auf dem zweiten Platz."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Woher soll nach Harnish ein großer Teil der wöchentlichen qualitativen Daten kommen?",
+          "beleg": "Ein großer Teil der wöchentlich gesammelten qualitativen Daten für das Business sollte von den Mitarbeitern kommen – insbesondere aus dem Vertrieb und von Mitarbeitern mit direktem Kundenkontakt.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Von den Gesellschaftern, besonders aus dem Beirat",
+              "ok": false,
+              "fb": "Falsch: Ein großer Teil der qualitativen Daten sollte nach Harnish von den Mitarbeitern kommen, besonders aus dem Vertrieb."
+            },
+            {
+              "text": "Von den Mitarbeitern, besonders aus dem Vertrieb",
+              "ok": true,
+              "fb": "Richtig: Ein großer Teil der qualitativen Daten sollte nach Harnish von den Mitarbeitern kommen, besonders aus dem Vertrieb."
+            },
+            {
+              "text": "Von externen Beratern, besonders aus dem Controlling",
+              "ok": false,
+              "fb": "Falsch: Ein großer Teil der qualitativen Daten sollte nach Harnish von den Mitarbeitern kommen, besonders aus dem Vertrieb."
+            },
+            {
+              "text": "Von Marktforschern, besonders aus Online-Umfragen",
+              "ok": false,
+              "fb": "Falsch: Ein großer Teil der qualitativen Daten sollte nach Harnish von den Mitarbeitern kommen, besonders aus dem Vertrieb."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Woran misst Punkt 6 der Liste die Aufzeichnung von Kundenfeedback?",
+          "beleg": "6. Aufzeichnung und Auswertung von Kundenfeedbacks sind so ergiebig und verlässlich wie die wirtschaftlichen Zahlen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "An den wirtschaftlichen Zahlen des Unternehmens",
+              "ok": true,
+              "fb": "Richtig: Nach Punkt 6 sind Kundenfeedbacks so ergiebig und verlässlich wie die wirtschaftlichen Zahlen."
+            },
+            {
+              "text": "An den Bewertungen auf Vergleichsportalen im Netz",
+              "ok": false,
+              "fb": "Falsch: Nach Punkt 6 sind Kundenfeedbacks so ergiebig und verlässlich wie die wirtschaftlichen Zahlen."
+            },
+            {
+              "text": "An den Rückläufen der Zufriedenheitsumfragen im Jahr",
+              "ok": false,
+              "fb": "Falsch: Nach Punkt 6 sind Kundenfeedbacks so ergiebig und verlässlich wie die wirtschaftlichen Zahlen."
+            },
+            {
+              "text": "An der Zahl der Neukunden im jeweiligen Quartal",
+              "ok": false,
+              "fb": "Falsch: Nach Punkt 6 sind Kundenfeedbacks so ergiebig und verlässlich wie die wirtschaftlichen Zahlen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "boss-los-agile-scaleups",
+      "kurz": "Agile Scaleups",
+      "titel": "Organisationen ohne Boss: agile Scaleups",
+      "karte": "Nach Harnish experimentieren einige Firmen mit einer Boss-losen Organisation, in der im Prinzip jeder sein eigener Anführer ist. Das setze ein enormes Maß an Training, Ausbildung und Reife voraus, damit alle Mitarbeiter und der CEO dieselbe DNA haben. Zudem brauche es technologiegetriebene Systeme. Für solche Firmen bevorzugt er den Begriff agile Scaleups. Als Beispiel nennt er L. David Marquet, der das Atom-U-Boot der US-Navy mit der schlechtesten Performance binnen eines Jahres auf Platz eins führte.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was setzt eine Organisation ohne Boss nach Harnish voraus?",
+          "beleg": "Doch dies setzt ein enormes Maß an Training und Ausbildung und Reife voraus, damit alle Mitarbeiter und der CEO dieselbe DNA haben (Prinzipien und Einstellungen, Ziele, Wissensstand, etc.).",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ein hohes Gehalt für jeden Mitarbeiter im Team",
+              "ok": false,
+              "fb": "Falsch: Eine Organisation ohne Boss setzt nach Harnish ein enormes Maß an Training, Ausbildung und Reife voraus."
+            },
+            {
+              "text": "Eine strenge Kontrolle jeder einzelnen Entscheidung",
+              "ok": false,
+              "fb": "Falsch: Eine Organisation ohne Boss setzt nach Harnish ein enormes Maß an Training, Ausbildung und Reife voraus."
+            },
+            {
+              "text": "Ein möglichst kleines Team mit wenigen Aufgaben",
+              "ok": false,
+              "fb": "Falsch: Eine Organisation ohne Boss setzt nach Harnish ein enormes Maß an Training, Ausbildung und Reife voraus."
+            },
+            {
+              "text": "Ein enormes Maß an Training, Ausbildung und Reife",
+              "ok": true,
+              "fb": "Richtig: Eine Organisation ohne Boss setzt nach Harnish ein enormes Maß an Training, Ausbildung und Reife voraus."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welchen Begriff bevorzugt Harnish für technikgestützte Firmen ohne Boss?",
+          "beleg": "agilen Scaleups",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Selbstführende Konzerne",
+              "ok": false,
+              "fb": "Falsch: Harnish bevorzugt für Firmen ohne Boss, die auf Technik setzen, den Begriff agile Scaleups."
+            },
+            {
+              "text": "Agile Scaleups",
+              "ok": true,
+              "fb": "Richtig: Harnish bevorzugt für Firmen ohne Boss, die auf Technik setzen, den Begriff agile Scaleups."
+            },
+            {
+              "text": "Verteilte Start-ups",
+              "ok": false,
+              "fb": "Falsch: Harnish bevorzugt für Firmen ohne Boss, die auf Technik setzen, den Begriff agile Scaleups."
+            },
+            {
+              "text": "Dezentrale Mittelständler",
+              "ok": false,
+              "fb": "Falsch: Harnish bevorzugt für Firmen ohne Boss, die auf Technik setzen, den Begriff agile Scaleups."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was gelang L. David Marquet nach Harnish mit dem schlechtesten Atom-U-Boot der US-Navy?",
+          "beleg": "führte das Atom- U-Boot der US-Navy mit der schlechtesten Performance binnen eines Jahres auf Platz eins",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Es kam binnen eines Jahres auf Platz eins",
+              "ok": true,
+              "fb": "Richtig: Marquet führte nach Harnish das U-Boot mit der schlechtesten Performance binnen eines Jahres auf Platz eins."
+            },
+            {
+              "text": "Es wurde nach einem Jahr stillgelegt und ersetzt",
+              "ok": false,
+              "fb": "Falsch: Marquet führte nach Harnish das U-Boot mit der schlechtesten Performance binnen eines Jahres auf Platz eins."
+            },
+            {
+              "text": "Es gewann nach zwei Jahren einen Wettbewerb der Navy",
+              "ok": false,
+              "fb": "Falsch: Marquet führte nach Harnish das U-Boot mit der schlechtesten Performance binnen eines Jahres auf Platz eins."
+            },
+            {
+              "text": "Es fuhr ein ganzes Jahr ohne festen Kommandanten",
+              "ok": false,
+              "fb": "Falsch: Marquet führte nach Harnish das U-Boot mit der schlechtesten Performance binnen eines Jahres auf Platz eins."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "komplexitaet-barrieren",
+      "kurz": "Komplexität und Barrieren",
+      "titel": "Komplexität, Führungsspanne und drei Barrieren",
+      "karte": "Nach Harnish sehnen sich viele Geschäftsinhaber nach den Zeiten zurück, als die Firma nur aus ihnen, einer weiteren Person und dem Vertrieb eines einzelnen Produkts bestand. Diese Komplexität erzeuge drei fundamentale Barrieren. Wenn man annehme, dass eine Person etwa sieben bis zehn andere führen kann, erhalte man natürlich Häufungspunkte. Zum Nachlesen nennt er einen Artikel von Larry E. Greiner, Professor für Management und Organisation, aus der Harvard Business Review: Evolution and Revolution as Organizations Grow.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wie viele fundamentale Barrieren erzeugt die Komplexität nach Harnish?",
+          "beleg": "Diese Komplexität erzeugt drei fundamentale Barrieren",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Fünf fundamentale Barrieren",
+              "ok": false,
+              "fb": "Falsch: Die Komplexität erzeugt nach Harnish drei fundamentale Barrieren."
+            },
+            {
+              "text": "Sieben fundamentale Barrieren",
+              "ok": false,
+              "fb": "Falsch: Die Komplexität erzeugt nach Harnish drei fundamentale Barrieren."
+            },
+            {
+              "text": "Vier fundamentale Barrieren",
+              "ok": false,
+              "fb": "Falsch: Die Komplexität erzeugt nach Harnish drei fundamentale Barrieren."
+            },
+            {
+              "text": "Drei fundamentale Barrieren",
+              "ok": true,
+              "fb": "Richtig: Die Komplexität erzeugt nach Harnish drei fundamentale Barrieren."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Wie viele andere Menschen kann eine Person nach Harnishs Annahme etwa führen?",
+          "beleg": "wenn Sie darüber hinaus annehmen, dass eine Person etwa sieben bis zehn andere führen kann, dann erhalten Sie natürlich Häufungspunkte:",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Etwa sieben bis zehn Personen",
+              "ok": true,
+              "fb": "Richtig: Harnish nimmt an, dass eine Person etwa sieben bis zehn andere führen kann."
+            },
+            {
+              "text": "Etwa dreißig bis vierzig Personen",
+              "ok": false,
+              "fb": "Falsch: Harnish nimmt an, dass eine Person etwa sieben bis zehn andere führen kann."
+            },
+            {
+              "text": "Etwa zwei bis vier Personen im Team",
+              "ok": false,
+              "fb": "Falsch: Harnish nimmt an, dass eine Person etwa sieben bis zehn andere führen kann."
+            },
+            {
+              "text": "Etwa fünfzehn bis zwanzig Personen",
+              "ok": false,
+              "fb": "Falsch: Harnish nimmt an, dass eine Person etwa sieben bis zehn andere führen kann."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Wie heißt der Artikel von Larry E. Greiner, auf den Harnish verweist?",
+          "beleg": "Evolution and Revolution as Organizations Grow",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Growth and Decline as Organizations Change Course",
+              "ok": false,
+              "fb": "Falsch: Greiners Artikel in der Harvard Business Review heißt Evolution and Revolution as Organizations Grow."
+            },
+            {
+              "text": "Leadership and Control as Organizations Mature",
+              "ok": false,
+              "fb": "Falsch: Greiners Artikel in der Harvard Business Review heißt Evolution and Revolution as Organizations Grow."
+            },
+            {
+              "text": "Evolution and Revolution as Organizations Grow",
+              "ok": true,
+              "fb": "Richtig: Greiners Artikel in der Harvard Business Review heißt Evolution and Revolution as Organizations Grow."
+            },
+            {
+              "text": "Structure and Strategy as Organizations Expand",
+              "ok": false,
+              "fb": "Falsch: Greiners Artikel in der Harvard Business Review heißt Evolution and Revolution as Organizations Grow."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fokus-innen-aussen",
+      "kurz": "Blick nach außen und innen",
+      "titel": "Blick nach außen oder nach innen: die Marke von 10 Millionen",
+      "karte": "Nach Harnish gibt es in vielen wachsenden Unternehmen eine grausame und kontraintuitive Marktdynamik. Wächst das Geschäft von 1 Million auf 10 Millionen Dollar Umsatz, blickt das Führungsteam tendenziell nach außen auf neue Geschäftsfelder; ein stärkerer Fokus auf interne Aufgaben würde sich dann langfristig auszahlen. Passiert das Unternehmen die Marke von 10 Millionen Dollar, lenken organisatorische Schwierigkeiten den Blick nach innen; dann sollte sich das Team besser extern auf den Markt konzentrieren.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Wohin blickt das Führungsteam nach Harnish, wenn der Umsatz von 1 auf 10 Millionen Dollar wächst?",
+          "beleg": "Wenn Ihr Geschäft sich von $1 Million auf $10 Millionen Umsatz vergrößert, richtet das Führungsteam seinen Blick tendenziell nach außen, auf der Suche nach neuen Geschäftsfeldern.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Nach vorn, auf die Besetzung der nächsten Führungsebene",
+              "ok": false,
+              "fb": "Falsch: Beim Wachstum von 1 auf 10 Millionen Dollar blickt das Führungsteam nach Harnish tendenziell nach außen."
+            },
+            {
+              "text": "Nach innen, auf die Pflege der Organisationskultur",
+              "ok": false,
+              "fb": "Falsch: Beim Wachstum von 1 auf 10 Millionen Dollar blickt das Führungsteam nach Harnish tendenziell nach außen."
+            },
+            {
+              "text": "Nach außen, auf der Suche nach neuen Geschäftsfeldern",
+              "ok": true,
+              "fb": "Richtig: Beim Wachstum von 1 auf 10 Millionen Dollar blickt das Führungsteam nach Harnish tendenziell nach außen."
+            },
+            {
+              "text": "Nach oben, auf die Erwartungen der Geldgeber",
+              "ok": false,
+              "fb": "Falsch: Beim Wachstum von 1 auf 10 Millionen Dollar blickt das Führungsteam nach Harnish tendenziell nach außen."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Was würde sich in dieser Wachstumsphase nach Harnish langfristig auszahlen?",
+          "beleg": "Doch das ist genau der Zeitpunkt, zu dem ein stärkerer Fokus auf unternehmensinterne Aufgaben sich langfristig auszahlen würde – um zum Beispiel eine gesunde Organisationskultur oder eine skalierbare Infrastruktur zu entwickeln.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Ein stärkerer Fokus auf Preisnachlässe für Neukunden",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish würde sich dort ein stärkerer Fokus auf unternehmensinterne Aufgaben langfristig auszahlen."
+            },
+            {
+              "text": "Ein stärkerer Fokus auf unternehmensinterne Aufgaben",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish würde sich dort ein stärkerer Fokus auf unternehmensinterne Aufgaben langfristig auszahlen."
+            },
+            {
+              "text": "Ein stärkerer Fokus auf die Übernahme kleiner Wettbewerber",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish würde sich dort ein stärkerer Fokus auf unternehmensinterne Aufgaben langfristig auszahlen."
+            },
+            {
+              "text": "Ein stärkerer Fokus auf die Erschließung neuer Märkte",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish würde sich dort ein stärkerer Fokus auf unternehmensinterne Aufgaben langfristig auszahlen."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Worauf sollte sich das Team nach Passieren der 10-Millionen-Marke laut Harnish besser konzentrieren?",
+          "beleg": "Doch das ist exakt der Zeitpunkt, zu dem das Team sich besser extern auf den Markt konzentrieren sollte",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Extern auf den Markt",
+              "ok": true,
+              "fb": "Richtig: Nach der Marke von 10 Millionen Dollar sollte sich das Team nach Harnish besser extern auf den Markt konzentrieren."
+            },
+            {
+              "text": "Extern auf die Übernahme kleinerer Wettbewerber",
+              "ok": false,
+              "fb": "Falsch: Nach der Marke von 10 Millionen Dollar sollte sich das Team nach Harnish besser extern auf den Markt konzentrieren."
+            },
+            {
+              "text": "Intern auf das Löschen akuter Brände",
+              "ok": false,
+              "fb": "Falsch: Nach der Marke von 10 Millionen Dollar sollte sich das Team nach Harnish besser extern auf den Markt konzentrieren."
+            },
+            {
+              "text": "Intern auf neue Berichtswege und Formulare",
+              "ok": false,
+              "fb": "Falsch: Nach der Marke von 10 Millionen Dollar sollte sich das Team nach Harnish besser extern auf den Markt konzentrieren."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cash-im-blick",
+      "kurz": "Cash-Flow im Blick",
+      "titel": "Cash-Flow täglich und der Geldumschlag",
+      "karte": "Die schnellste Abhilfe schafft nach Harnish eine angepasste Cash-Flow-Übersicht, die man sich täglich vom CFO geben lässt: eine Auflistung aller Eingänge und Ausgänge der letzten 24 Stunden mit einer kurzen Prognose für die nächsten 30 oder 90 Tage. Wichtig sei auch der Geldumschlag (Cash Conversion Cycle, CCC): die Zeit, die jeder aufgewendete Dollar, Euro oder Yen braucht, um einmal durch das Geschäftsmodell zu laufen und als Erlös zurückzukommen.",
+      "quelle": {
+        "titel": "Scaling Up. Skalieren auch Sie! (Verne Harnish), Kindle-Markierungen",
+        "url": "",
+        "herausgeber": "Verne Harnish: Scaling Up. Skalieren auch Sie! (deutsche Ausgabe, Kindle-Markierungen)",
+        "abgerufen": ""
+      },
+      "fragen": [
+        {
+          "n": 1,
+          "frage": "Was lässt man sich nach Harnish täglich vom CFO geben?",
+          "beleg": "Die schnellste Abhilfe schafft hier eine angepasste Cash-Flow-Übersicht, die Sie sich täglich von Ihrem CFO geben lassen",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Einen Bericht über die Zahl der Neukunden",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish lässt man sich täglich eine angepasste Cash-Flow-Übersicht vom CFO geben."
+            },
+            {
+              "text": "Eine Übersicht der Gehälter im Führungsteam",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish lässt man sich täglich eine angepasste Cash-Flow-Übersicht vom CFO geben."
+            },
+            {
+              "text": "Eine Liste der offenen Rechnungen aller Lieferanten",
+              "ok": false,
+              "fb": "Falsch: Nach Harnish lässt man sich täglich eine angepasste Cash-Flow-Übersicht vom CFO geben."
+            },
+            {
+              "text": "Eine angepasste Cash-Flow-Übersicht",
+              "ok": true,
+              "fb": "Richtig: Nach Harnish lässt man sich täglich eine angepasste Cash-Flow-Übersicht vom CFO geben."
+            }
+          ]
+        },
+        {
+          "n": 2,
+          "frage": "Welche Zeiträume deckt die Prognose der Cash-Flow-Übersicht nach Harnish ab?",
+          "beleg": "mit einer Auflistung aller Eingänge und Ausgänge der letzten 24 Stunden, sowie eine kurze Prognose für die nächsten 30 oder 90 Tage.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Das laufende und das nächste Jahr",
+              "ok": false,
+              "fb": "Falsch: Die Prognose der Cash-Flow-Übersicht reicht nach Harnish 30 oder 90 Tage voraus."
+            },
+            {
+              "text": "Die nächsten 7 oder 14 Tage",
+              "ok": false,
+              "fb": "Falsch: Die Prognose der Cash-Flow-Übersicht reicht nach Harnish 30 oder 90 Tage voraus."
+            },
+            {
+              "text": "Die nächsten 30 oder 90 Tage",
+              "ok": true,
+              "fb": "Richtig: Die Prognose der Cash-Flow-Übersicht reicht nach Harnish 30 oder 90 Tage voraus."
+            },
+            {
+              "text": "Die nächsten 6 oder 12 Monate",
+              "ok": false,
+              "fb": "Falsch: Die Prognose der Cash-Flow-Übersicht reicht nach Harnish 30 oder 90 Tage voraus."
+            }
+          ]
+        },
+        {
+          "n": 3,
+          "frage": "Was beschreibt der Cash Conversion Cycle nach Harnish?",
+          "beleg": "Dies ist einfach ein technischer Ausdruck für die Zeit, die jeder auf Mieten, Betriebsmittel, Gehälter, Inventar, Marketing, etc. aufgewendete Dollar, Euro oder Yen braucht, um einmal durch Ihr Geschäftsmodell zu laufen und als Erlös wieder in Ihrer Tasche zu landen.",
+          "belegDe": "",
+          "optionen": [
+            {
+              "text": "Die Zeit, die eine Rechnung bis zur Buchung im Rechnungswesen braucht",
+              "ok": false,
+              "fb": "Falsch: Der Cash Conversion Cycle ist nach Harnish die Zeit, die ein eingesetzter Betrag braucht, um als Erlös zurückzukommen."
+            },
+            {
+              "text": "Die Zeit, die ein neuer Kunde bis zur ersten Zahlung braucht",
+              "ok": false,
+              "fb": "Falsch: Der Cash Conversion Cycle ist nach Harnish die Zeit, die ein eingesetzter Betrag braucht, um als Erlös zurückzukommen."
+            },
+            {
+              "text": "Die Zeit, die ein eingesetzter Euro bis zum Erlös braucht",
+              "ok": true,
+              "fb": "Richtig: Der Cash Conversion Cycle ist nach Harnish die Zeit, die ein eingesetzter Betrag braucht, um als Erlös zurückzukommen."
+            },
+            {
+              "text": "Die Zeit zwischen Bestellung und Lieferung beim Lieferanten",
+              "ok": false,
+              "fb": "Falsch: Der Cash Conversion Cycle ist nach Harnish die Zeit, die ein eingesetzter Betrag braucht, um als Erlös zurückzukommen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bruecken": [
+    {
+      "von": [
+        9
+      ],
+      "titel": "Isaacson: Jede Vorgabe braucht einen Namen",
+      "url": "/buch/isaacson-elon-musk/",
+      "ziel": "isaacson-elon-musk"
+    },
+    {
+      "von": [
+        8
+      ],
+      "titel": "Ravikant: Personal als Hebel",
+      "url": "/buch/der-almanach-von-naval-ravikant/",
+      "ziel": "der-almanach-von-naval-ravikant"
+    }
+  ],
+  "platzhalter": false,
+  "suchBeschreibung": "Wie führt man ein wachsendes Unternehmen? {n} Lernkarten zu „Scaling Up. Skalieren auch Sie!“ von Verne Harnish, je mit Quelle und {fragen} Fragen.",
+  "coverBreite": 498,
+  "coverHoehe": 740
+}
