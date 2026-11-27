@@ -612,7 +612,7 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "stand": "Stand: 23. November 2026",
+    "stand": "Stand: 25. November 2026",
     "intro": "Hier steht, welche Daten beim Besuch dieser Website und bei Anfragen über die Formulare entstehen, wozu wir sie nutzen und welche Rechte du hast. Verantwortlich im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die Plinyoo UG (haftungsbeschränkt) („plinyoo“, „wir“), Theodor-Fliedner-Str. 1d, 34121 Kassel, erreichbar unter heiko@plinyoo.com. Die Angaben stehen auch im Impressum.",
     "hosting": {
       "title": "Hosting und Verbindungsdaten",
@@ -624,7 +624,7 @@
     },
     "cookiesTracking": {
       "title": "Cookies und Speicher im Browser",
-      "text": "Die Seite setzt ein Cookie namens „i18next“, das deine gewählte Sprache merkt; es ist ein Sitzungs-Cookie und verfällt, wenn du den Browser schließt. Außerdem merkt sich die Seite im Speicher deines Browsers (sessionStorage, nur bis du den Tab schließt), über welchen Link du gekommen bist (Buch, Kanal), damit eine spätere Anfrage das angeben kann. Beides dient der Funktion der Seite, nicht der Werbung und nicht der Verfolgung über Websites hinweg. Plausible setzt kein Cookie (siehe oben). Es gibt keine Werbe- und keine Tracking-Cookies von Dritten; Google Analytics kommt nicht zum Einsatz."
+      "text": "Die Seite setzt ein Cookie namens „i18next“, das deine gewählte Sprache merkt; es ist ein Sitzungs-Cookie und verfällt, wenn du den Browser schließt. Außerdem merkt sich die Seite im Speicher deines Browsers (sessionStorage, nur bis du den Tab schließt), über welchen Link du gekommen bist (Buch, Kanal), damit eine spätere Anfrage das angeben kann. Beides dient der Funktion der Seite, nicht der Werbung und nicht der Verfolgung über Websites hinweg. Plausible setzt kein Cookie (siehe oben). Auf dieser Website (www.plinyoo.com) gibt es keine Werbe- und keine Tracking-Cookies von Dritten; Google Analytics kommt nicht zum Einsatz. Für Webseiten und YouTube-Videos, die dir die App unter app.plinyoo.com zeigt, gilt das nicht; siehe „Eingebettete Inhalte“."
     },
     "fonts": {
       "title": "Schriftarten",
@@ -644,7 +644,7 @@
     },
     "embeddedContent": {
       "title": "Eingebettete Inhalte",
-      "text": "Diese Website (www.plinyoo.com) bindet keine Videos, Landkarten oder sonstigen Inhalte Dritter ein. In der App unter app.plinyoo.com zeigen Lernkarten dagegen teils YouTube-Videos. Sobald du eine Karte mit Video öffnest, lädt dein Browser das Video von YouTube. Dazu verbindet er sich mit den Servern von YouTube; YouTube erhält dabei mindestens deine IP-Adresse und die Angabe, welches Video aufgerufen wird. Das gilt auch, wenn du das Video nicht abspielst. In Kartenlisten lädt das Video schon beim Anzeigen der Karte, wenn die Vorschau eingeschaltet ist. Ist sie ausgeschaltet, lädt dein Browser in der Liste nur das Vorschaubild des Videos von YouTube; im Kartenstapel ist es immer nur das Vorschaubild. Wie YouTube die Daten verarbeitet, steht in dessen Datenschutzerklärung."
+      "text": "Diese Website (www.plinyoo.com) bindet keine Videos, Landkarten oder sonstigen Inhalte Dritter ein. In der App unter app.plinyoo.com zeigen Lernkarten dagegen teils YouTube-Videos. Solange du nicht auf „Video hier zeigen“ tippst, geht keine Anfrage an YouTube hinaus; auch Kartenlisten und Kartenstapel zeigen vorher kein Bild von YouTube. Tippst du darauf, lädt dein Browser das Video von YouTube. Dazu verbindet er sich mit den Servern von YouTube; YouTube erhält dabei mindestens deine IP-Adresse, Angaben zu deinem Browser, die Adresse der App und die Angabe, welches Video aufgerufen wird. Das gilt schon, bevor du das Video abspielst. Welche Karte du liest, schickt dein Browser nicht mit. Die App merkt sich nicht, dass du ein Video gezeigt hast; beim nächsten Mal tippst du wieder. Wie YouTube die Daten verarbeitet, steht in dessen Datenschutzerklärung; das gilt auch, wenn du ein Video mit „Auf YouTube öffnen“ separat öffnest. Bei ausgewählten Webseiten als Quelle einer Lernkarte steht in der App „Website hier zeigen“. Solange du nicht darauf tippst, geht keine Anfrage an die Webseite hinaus. Tippst du darauf, erscheint die Seite in der App. Dabei lädt dein Browser sie direkt vom Anbieter der Website, nicht über plinyoo, und der Anbieter erhält mindestens deine IP-Adresse und Angaben zu deinem Browser. Welche Karte du liest, schickt dein Browser nicht mit. Die gezeigte Seite kann eigene Cookies setzen und eigene Auswertungen laden; darauf hat plinyoo keinen Einfluss. Öffnest du die Quelle stattdessen mit „Original öffnen“, öffnet sie sich separat, und dort gilt die Datenschutzerklärung der Seite."
     },
     "rights": {
       "title": "Deine Rechte",
